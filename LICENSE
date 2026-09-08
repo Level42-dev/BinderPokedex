@@ -1,62 +1,34 @@
-MIT License
+# BinderPokedex licensing scope
 
-Copyright (c) 2026 BinderPokedex Contributors
+BinderPokedex separates its software licence from the rights in material used
+or reproduced by that software. No single licence covers every element of a
+generated PDF, image, or printed binder.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+| Material | Applicable terms |
+| --- | --- |
+| Project program code, including fetchers, rendering code, build scripts, tests, technical configuration, and technical documentation | MIT, unchanged: [LICENSE-CODE](LICENSE-CODE). Commercial use of the software is permitted. Separately identified third-party components retain their own terms. |
+| Original, protectable visual expression in `config/templates/cards/classic.svg`, `config/templates/pages/grid_3x3.svg`, and `config/templates/covers/simple.svg` | These creative aspects are designated under [LICENSE-CONTENT.md](LICENSE-CONTENT.md), solely to the extent the project licensor controls the relevant rights. Functional markup, variables, interfaces, and technical implementation remain MIT. A basic grid, dimensions, or layout idea is not claimed as an exclusive project work. |
+| Other original human-authored project compositions, visual designs, or creative text, including such contributions reproduced in newly marked PDF/image/print releases | CC BY-NC 4.0 only where expressly identified with this licence in the file, its accompanying notice, or its release manifest, and only for rights the licensor can grant. See [LICENSE-CONTENT.md](LICENSE-CONTENT.md). A generated file is not automatically a protected work or wholly CC-licensed. |
+| Pokémon artwork, characters, logos, trademarks, names, factual information, third-party datasets, fonts, and other third-party material | Excluded from the project's content grant. Existing third-party terms and applicable law govern. API availability, a download, or a project notice is not a grant of Pokémon rights. |
+| Purely machine-generated or AI-generated material without protectable human authorship | No project copyright or CC restriction is asserted in those elements. Any independently applicable third-party rights or terms remain unaffected. |
+| Copies or contributions validly received under an earlier MIT or other licence grant | Those grants remain available on their original terms. This notice does not revoke, narrow, or retroactively replace them. |
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+The content licence is the unmodified **Creative Commons
+Attribution-NonCommercial 4.0 International** licence; its full text is in
+[LICENSES/CC-BY-NC-4.0.txt](LICENSES/CC-BY-NC-4.0.txt). Attribution must be given
+in a manner reasonable for the medium and context where that licence applies.
+There is no additional advertising-link or platform-specific requirement.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+These notices apply prospectively to versions distributed with them. Adding
+a notice to an old or unchanged file does not withdraw any valid earlier
+permission. Historical releases must be assessed using their actual contents,
+applicable rights, and the terms under which they were supplied; this update
+does not determine disputed historical licensing questions.
 
----
+The MIT licence on the renderer does not itself license third-party content
+in its output. Conversely, a content notice does not restrict independent use,
+modification, sale, or other commercial use of MIT-licensed code. Uses that do
+not require the licensor's permission, including statutory exceptions and
+limitations, remain unaffected.
 
-## ⚠️ POKÉMON INTELLECTUAL PROPERTY DISCLAIMER
-
-This project uses Pokémon data, images, and names which are:
-- Owned by The Pokémon Company / Nintendo / GameFreak
-- Protected by trademark and copyright law
-- Used here for **educational and personal use only**
-
-**IMPORTANT:** This project is **NOT** officially affiliated with, endorsed by, or related to:
-- The Pokémon Company
-- Nintendo
-- GameFreak
-- any other official Pokémon entity
-
-### Permitted Use
-- Personal, non-commercial use only
-- Educational purposes
-- Private collections and binders
-
-### Prohibited Use
-- Commercial distribution or sale
-- Selling generated PDFs or printed materials
-- Using this tool for profit
-- Redistributing Pokémon artwork outside this tool's scope
-
-### User Responsibility
-Users generating PDFs from this tool are solely responsible for their own use and must comply with:
-- The Pokémon Company's official terms of service
-- Local copyright and trademark laws
-- Nintendo's brand guidelines
-
-The authors and contributors assume no liability for misuse of generated content or legal consequences arising from its use.
-
----
-
-TRADEMARK NOTICE:
-Pokémon is a trademark of The Pokémon Company. This project is a fan-made
-project and is not officially affiliated with or endorsed by The Pokémon
-Company. All Pokémon names, images, and data are used for educational purposes.
+See [NOTICE.md](NOTICE.md) for English/German download and attribution guidance.

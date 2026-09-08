@@ -537,7 +537,7 @@ def test_aggregate_posters_render_into_a_real_two_page_pdf(tmp_path):
     generator._draw_cards_page = MagicMock()
 
     assert generator.generate() is True
-    assert output_path.read_bytes().count(b"/Type /Page\n") == 2
+    assert output_path.read_bytes().count(b"/Type /Page\n") == 3  # Two posters plus notice.
     assert all(
         renderer._prepare_cards.call_count == 1
         for renderer in renderers
@@ -589,7 +589,7 @@ def test_wide_poster_renders_into_a_real_two_page_a4_pdf(tmp_path):
     generator._draw_cards_page = MagicMock()
 
     assert generator.generate() is True
-    assert output_path.read_bytes().count(b"/Type /Page\n") == 2
+    assert output_path.read_bytes().count(b"/Type /Page\n") == 3  # Two poster sheets plus notice.
 
 
 def test_failed_pdf_build_preserves_previous_output_and_cleans_temp(

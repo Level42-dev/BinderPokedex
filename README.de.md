@@ -4,7 +4,8 @@
 
 Drucke 1.025+ Pokémon über 9 Generationen in 9 Sprachen. Alle Varianten, alle Formen, alles startklar. Einfach laden, drucken und sammeln starten.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Code: MIT](https://img.shields.io/badge/Code-MIT-yellow.svg)](LICENSE-CODE)
+[![Ausgewählte Inhalte: CC BY-NC 4.0](https://img.shields.io/badge/Ausgew%C3%A4hlte_Inhalte-CC_BY--NC_4.0-lightgrey.svg)](LICENSE-CONTENT.md)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 ![v9.0](https://img.shields.io/badge/Version-v9.0-green.svg)
 
@@ -73,6 +74,10 @@ Technische Details: [vollständiges Changelog](CHANGELOG.md).
 
 ### Für normale Nutzer - einfach laden & drucken!
 
+Beachte die Hinweise in deinem Download. Für Code und Inhalte gelten
+[getrennte Lizenzbereiche](LICENSE). Neue Inhaltshinweise ändern frühere gültige
+Erlaubnisse nicht rückwirkend, auch nicht für die unten verlinkten v9.0-Dateien.
+Ein verfügbarer Download oder Privatnutzung bedeutet keine Freigabe fremder Rechte.
 
 **Aktuelle Version (v9.0):** [Alle 167 PDFs](https://github.com/DerFlash/BinderPokedex/releases/tag/v9.0) ✨ *Neu: Mach deinen Binder zum Blickfang: Jede Sammlung beginnt jetzt mit einem einzigartigen Pokémon-Panorama, das sich über neun Kartenfächer erstreckt!*
 
@@ -136,12 +141,52 @@ python scripts/pdf/generate_pdf.py --scope all
 
 ## ⚖️ Rechtlicher Hinweis
 
-**Dies ist ein Fan-Projekt ohne kommerzielle Absichten.** Pokémon, Pokédex und alle zugehörigen Marken sind Eigentum von The Pokémon Company, Nintendo und GameFreak.
+**Dies ist ein inoffizielles Fan-Projekt**, ohne Verbindung zu oder Unterstützung
+durch die Pokémon-Rechteinhaber. Pokémon-Artworks, Figuren, Logos, Namen und
+anderes Drittmaterial sind von der Inhaltslizenz des Projekts ausgenommen. Für
+Daten und Bilder aus [PokéAPI](https://pokeapi.co/) und
+[TCGdex](https://www.tcgdex.net/) gelten die jeweils einschlägigen Drittbedingungen
+und Rechte weiter; API-Zugriff bedeutet keine Erlaubnis zur Nutzung jedes Bildes.
 
-✅ **Erlaubt:** Persönliche Nutzung, Bildungszwecke, private Sammlungen  
-❌ **Verboten:** Kommerzielle Nutzung, Verkauf von PDFs oder gedruckten Materialien, gewinnorientierte Weiterverbreitung
+Ein kostenloser Download, Bildungszwecke oder ein persönlicher Binder ersetzen
+keine erforderliche Erlaubnis dieser Rechteinhaber. An Fakten, einfachen
+Layout-Ideen und rein maschinellen/KI-generierten Bestandteilen ohne
+schutzfähige menschliche Urheberschaft beansprucht das Projekt kein Urheberrecht.
+Gesetzliche Schranken und andere gültige Erlaubnisse bleiben unberührt.
+Herkunfts- und Nutzungshinweise stehen in [NOTICE.md](NOTICE.md).
 
-Vollständige Details siehe [LICENSE](LICENSE).
+---
+
+## 📄 Lizenz
+
+- **Code und technische Dokumentation:** [MIT](LICENSE-CODE), einschließlich
+  kommerzieller Softwarenutzung. Für den Rendering-Code und die gerenderten
+  Inhalte gelten getrennte Lizenzbereiche.
+- **Bezeichnete eigene Projektinhalte:** [CC BY-NC 4.0](LICENSE-CONTENT.md) nur
+  für ausdrücklich gekennzeichnete, schutzfähige menschliche Beiträge, die der
+  Lizenzgeber lizenzieren darf. Das ist keine pauschale Lizenz für jede PDF,
+  jedes Bild oder Pokémon-Material.
+- **Frühere Rechte:** Gültige frühere MIT- oder andere Erlaubnisse gelten zu
+  ihren bisherigen Bedingungen fort. Neue Hinweise beschränken ältere Downloads
+  nicht rückwirkend und entziehen keine Rechte an unveränderten Inhalten.
+
+Die Inhaltslizenz erlaubt das nichtkommerzielle Kopieren, Bearbeiten und
+Weitergeben der erfassten Beiträge mit der von CC BY-NC 4.0 verlangten
+Namensnennung. Ein persönlicher Binder ist ein Beispiel; der kommerzielle
+Verkauf erfasster PDFs oder Ausdrucke ist durch diese Lizenz nicht gedeckt.
+Unabhängige Rechte Dritter und andere gültige Erlaubnisse sind weiter zu beachten.
+Die Namensnennung darf dem Medium angemessen sein, etwa auf einer beiliegenden
+Informationskarte bei Ausdrucken. Es gibt keine zusätzliche Pflicht zu einem
+Werbelink in jedem Marktplatzangebot.
+
+Siehe [Lizenzübersicht](LICENSE), [Details und Beispiele](LICENSE-CONTENT.md)
+sowie den [vollständigen CC-Lizenztext](LICENSES/CC-BY-NC-4.0.txt).
+
+Mit dieser Version erzeugte PDFs enthalten eine abschließende Hinweisseite
+mit ausschneidbarer Infokarte (63,5 × 88,9 mm). Neue Sprach-ZIPs enthalten die
+vollständigen Hinweise sowie `SOURCE.json` mit Release-Tag und Quell-Commit.
+Bereits veröffentlichte Downloads werden nicht umgeschrieben. Anleitung zum
+Bauen und Prüfen: [Release-Pakete](docs/RELEASE_PACKAGING.md).
 
 ---
 
@@ -150,6 +195,7 @@ Vollständige Details siehe [LICENSE](LICENSE).
 Dieses Projekt verdankt seinen Erfolg diesen fantastischen Ressourcen und Personen:
 
 - **[PokéAPI](https://pokeapi.co/)** 📊 - Das Rückgrat unseres Pokémon-Wissens
+- **[TCGdex](https://www.tcgdex.net/)** 🎴 - Mehrsprachige TCG-Kartendatenbank
 - **[Bulbapedia](https://bulbapedia.bulbagarden.net/)** 📚 - Das Pokémon-Fan-Wiki, das uns nie im Stich lässt
 - **[The Pokémon Company](https://www.pokemon.com/)** 🎮 - Für 30 Jahre Traum-Erfüllung
 - **ReportLab** 🎨 - Für die Umwandlung von Daten in wunderschöne PDFs ohne Stress
