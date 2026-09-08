@@ -1,0 +1,40 @@
+name: Test project notices
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/pdf/**'
+      - 'scripts/release/**'
+      - 'scripts/tests/**'
+      - 'config/templates/**'
+      - 'LICENSE*'
+      - 'LICENSES/**'
+      - 'NOTICE.md'
+      - 'requirements*.txt'
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements-dev.txt
+      - name: Check generated notices and release packaging without external data
+        run: >-
+          python -m pytest -q
+          scripts/tests/test_project_notices.py
+          scripts/tests/test_release_candidate.py
+          scripts/tests/test_release_workflows.py
+          scripts/tests/test_pdf_rendering.py
+          scripts/tests/test_pdf_generation_options.py
+          scripts/tests/test_poster_pdf.py::test_aggregate_posters_render_into_a_real_two_page_pdf
+          scripts/tests/test_poster_pdf.py::test_wide_poster_renders_into_a_real_two_page_a4_pdf
+          scripts/tests/test_poster_pdf.py::test_failed_pdf_build_preserves_previous_output_and_cleans_temp

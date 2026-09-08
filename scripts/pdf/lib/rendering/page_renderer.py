@@ -19,11 +19,13 @@ from reportlab.lib.units import mm
 from reportlab.lib.colors import HexColor
 
 try:
+    from ..project_notice import FOOTER_TEXT
     from ..constants import (
         PAGE_WIDTH, PAGE_HEIGHT, PAGE_MARGIN, CARD_WIDTH, CARD_HEIGHT,
         CARDS_PER_ROW, CARDS_PER_COLUMN, GAP_X, GAP_Y
     )
 except ImportError:
+    from project_notice import FOOTER_TEXT
     # Fallback for direct imports
     from constants import (
         PAGE_WIDTH, PAGE_HEIGHT, PAGE_MARGIN, CARD_WIDTH, CARD_HEIGHT,
@@ -164,14 +166,14 @@ class PageRenderer:
         """
         Add footer text to a page.
         
-        Default footer is "Binder Pokédex Project | github.com/BinderPokedex"
+        Default footer identifies the project and the final notice page.
         
         Args:
             canvas_obj: ReportLab canvas object
             footer_text: Optional custom footer text
         """
         if footer_text is None:
-            footer_text = "Binder Pokédex Project | github.com/BinderPokedex"
+            footer_text = FOOTER_TEXT
         
         canvas_obj.setFont("Helvetica", self.style.FOOTER_FONT_SIZE)
         canvas_obj.setFillColor(HexColor(self.style.FOOTER_COLOR))

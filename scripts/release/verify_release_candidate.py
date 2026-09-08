@@ -11,8 +11,10 @@ from typing import Any
 
 try:
     from .build_manifest import LANGUAGES
+    from .package_archives import verify_archive_notices
 except ImportError:
     from build_manifest import LANGUAGES
+    from package_archives import verify_archive_notices
 
 
 def _load_manifest(path: Path) -> dict[str, Any]:
@@ -113,6 +115,7 @@ def verify(
         with zipfile.ZipFile(archive_path) as archive:
             if archive.testzip() is not None:
                 raise ValueError(f"Corrupt release archive: {archive_path}")
+            verify_archive_notices(archive, language, str(payload["tag"]))
             pdf_members = [
                 name
                 for name in archive.namelist()

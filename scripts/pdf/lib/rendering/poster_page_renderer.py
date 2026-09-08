@@ -248,6 +248,7 @@ class PosterPageRenderer:
                     mask="auto",
                 )
             page_renderer.draw_cutting_guides(canvas_obj)
+            page_renderer.add_footer(canvas_obj)
             if page_number + 1 < len(pages):
                 canvas_obj.showPage()
 
@@ -281,6 +282,7 @@ class PosterPageRenderer:
             preserveAspectRatio=False,
             mask="auto",
         )
+        page_renderer.add_footer(canvas_obj)
 
     def cleanup(self) -> None:
         if self._temp_dir is not None:

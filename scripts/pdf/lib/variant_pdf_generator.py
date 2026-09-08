@@ -19,6 +19,7 @@ from reportlab.pdfgen import canvas
 
 from .constants import PAGE_HEIGHT, PAGE_WIDTH
 from .log_formatter import PDFStatus
+from .project_notice import append_project_notice, set_document_provenance
 from .rendering import PosterPageCollection
 from .utils import RendererInitializer
 
@@ -130,9 +131,11 @@ class VariantPDFGenerator:
                 str(temporary_output),
                 pagesize=(PAGE_WIDTH, PAGE_HEIGHT),
             )
+            set_document_provenance(c, self.output_file.stem)
             
             # Render all sections
             self._generate_with_sections(c, self._sections_for_rendering(), status)
+            append_project_notice(c, self.language)
             
             c.save()
             temporary_output.replace(self.output_file)
