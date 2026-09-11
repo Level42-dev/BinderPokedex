@@ -278,6 +278,27 @@ class TestCardTransformation:
         assert card['image_url'] is None
         assert isinstance(card['name'], dict)
         assert card['name']['de'] == "Acerola's Mischief"
+
+    def test_transform_preserves_identity_languages_and_blank_number(self):
+        cards = [{
+            'id': 'svp-500',
+            'localId': '500',
+            'printed_number': None,
+            'available_languages': ['de', 'en'],
+            'name': 'Terapagos & Friends',
+            'card_type': 'pokemon',
+            'pokemon_id': 1024,
+            'types': ['Colorless'],
+            'name_de': 'Terapagos & Freunde',
+            'name_en': 'Terapagos & Friends',
+        }]
+
+        [card] = self.step._transform_cards(cards)
+
+        assert card['id'] == 'svp-500'
+        assert card['localId'] == '500'
+        assert card['printed_number'] is None
+        assert card['available_languages'] == ['de', 'en']
     
     def test_transform_multiple_cards(self):
         """Test transformation of multiple cards."""

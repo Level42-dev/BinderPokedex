@@ -16,6 +16,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent / 'fetcher'))
 
 from steps.enrich_tcg_cards_from_pokedex import EnrichTCGCardsFromPokedexStep
+from steps.enrich_tcg_names_multilingual import EnrichTCGNamesMultilingualStep
 
 
 class TestVariantMarkerExtraction:
@@ -331,6 +332,52 @@ class TestCardEnrichment:
         
         assert enriched.get('card_type') == 'unknown'
         assert enriched.get('pokemon_id') is None
+
+
+class TestMultilingualCardAvailability:
+    """A localized PDF may contain only cards observed in that language."""
+
+    def setup_method(self):
+        self.step = EnrichTCGNamesMultilingualStep("test_languages")
+
+    def test_enrichment_records_only_observed_languages(self):
+        card = {
+            'id': 'svp-190',
+            'localId': '190',
+            'name': 'Pikachu',
+        }
+
+        [result] = self.step._enrich_cards(
+            [card],
+            {'190': {'en': 'Pikachu'}},
+        )
+
+        assert result['available_languages'] == ['en']
+        assert result['printed_number'] == '190'
+        assert result['name_en'] == 'Pikachu'
+        assert 'name_de' not in result
+
+    def test_enrichment_marks_every_observed_translation(self):
+        card = {
+            'id': 'sv09-189',
+            'localId': '189',
+            'name': "N's Zorua",
+        }
+
+        [result] = self.step._enrich_cards(
+            [card],
+            {
+                '189': {
+                    'de': 'Ns Zorua',
+                    'en': "N's Zorua",
+                    'fr': 'Zorua de N',
+                    'zh_hans': 'Ｎ的索罗亚',
+                }
+            },
+        )
+
+        assert result['available_languages'] == ['de', 'en', 'fr', 'zh_hans']
+        assert result['printed_number'] == '189'
 
 
 class TestPokemonIndexBuilding:

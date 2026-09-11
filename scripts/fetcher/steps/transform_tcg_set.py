@@ -120,7 +120,16 @@ class TransformTCGSetStep(BaseStep):
                 name_dict = self._build_multilingual_name(card)
                 
                 transformed.append({
+                    'id': card.get('id'),
                     'localId': card['localId'],
+                    'printed_number': card.get(
+                        'printed_number',
+                        card['localId'],
+                    ),
+                    'available_languages': card.get(
+                        'available_languages',
+                        ['en'],
+                    ),
                     'name': name_dict,
                     'type': 'trainer',
                     'trainer_type': card.get('trainer_type', 'Trainer'),
@@ -170,7 +179,16 @@ class TransformTCGSetStep(BaseStep):
                     prefix = ''
                 
                 card_data = {
+                    'id': card.get('id'),
                     'localId': card['localId'],
+                    'printed_number': card.get(
+                        'printed_number',
+                        card['localId'],
+                    ),
+                    'available_languages': card.get(
+                        'available_languages',
+                        ['en'],
+                    ),
                     'name': name_dict,
                     'type': 'pokemon',
                     'pokemon_id': pokemon_id,
@@ -190,7 +208,16 @@ class TransformTCGSetStep(BaseStep):
                 # Unknown or unmapped card
                 logger.warning(f"⚠️  Unknown card: {card.get('name')} (type: {card_type})")
                 transformed.append({
+                    'id': card.get('id'),
                     'localId': card['localId'],
+                    'printed_number': card.get(
+                        'printed_number',
+                        card['localId'],
+                    ),
+                    'available_languages': card.get(
+                        'available_languages',
+                        ['en'],
+                    ),
                     'name': {'en': str(card.get('name', 'Unknown'))},
                     'type': 'unknown',
                     'image_url': ''

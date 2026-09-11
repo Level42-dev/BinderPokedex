@@ -23,6 +23,10 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from steps.base import BaseStep, PipelineContext
 from lib.tcgdex_client import TCGdexClient
+from lib.tcg_card_overrides import (
+    apply_tcg_card_overrides,
+    load_tcg_card_overrides,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -39,7 +43,17 @@ class EnrichTCGNamesMultilingualStep(BaseStep):
     """
     
     # Supported languages (matching i18n/languages.json)
-    LANGUAGES = ['de', 'en', 'fr', 'es', 'it', 'ja', 'ko', 'zh-Hans', 'zh-Hant']
+    LANGUAGES = [
+        'de',
+        'en',
+        'fr',
+        'es',
+        'it',
+        'ja',
+        'ko',
+        'zh_hans',
+        'zh_hant',
+    ]
     
     def execute(self, context: PipelineContext, params: Dict[str, Any]) -> PipelineContext:
         """
@@ -86,6 +100,15 @@ class EnrichTCGNamesMultilingualStep(BaseStep):
         data['set_names'] = set_names
         data['logo_urls'] = logo_urls
         data['available_languages'] = available_languages
+        overrides_path = (
+            Path(__file__).resolve().parents[3]
+            / 'enrichments'
+            / 'tcg_card_overrides.json'
+        )
+        data = apply_tcg_card_overrides(
+            data,
+            load_tcg_card_overrides(overrides_path),
+        )
         context.data['tcg_set_source'] = data
         
         return context
@@ -309,17 +332,27 @@ class EnrichTCGNamesMultilingualStep(BaseStep):
         for card in cards:
             enriched_card = card.copy()
             local_id = card.get('localId', '')
+            enriched_card['printed_number'] = card.get(
+                'printed_number',
+                local_id,
+            )
             
             if local_id in multilingual_names:
                 # Add all available language names
                 for lang, name in multilingual_names[local_id].items():
                     enriched_card[f'name_{lang}'] = name
+                enriched_card['available_languages'] = [
+                    lang
+                    for lang in self.LANGUAGES
+                    if lang in multilingual_names[local_id]
+                ]
                 cards_with_names += 1
             else:
-                # Fallback: use English name for all languages
+                # The master source is English. Do not present it as a native
+                # translation in languages where this card was not observed.
                 english_name = card.get('name', '')
-                for lang in ['de', 'en', 'fr', 'es', 'it', 'ja', 'ko', 'zh_hans', 'zh_hant']:
-                    enriched_card[f'name_{lang}'] = english_name
+                enriched_card['name_en'] = english_name
+                enriched_card['available_languages'] = ['en']
                 cards_missing_names += 1
                 logger.warning(f"⚠️  No multilingual names for card {local_id}")
             
