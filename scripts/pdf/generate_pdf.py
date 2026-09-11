@@ -27,6 +27,7 @@ Usage:
     python generate_pdf.py --scope ExGen1_All --language en --test
 """
 
+import copy
 import json
 import sys
 import argparse
@@ -80,6 +81,44 @@ logging.basicConfig(
 logging.getLogger('reportlab.pdfbase.ttfonts').setLevel(logging.ERROR)
 
 logger = logging.getLogger(__name__)
+
+
+def filter_variant_data_for_language(variant_data, language):
+    """Return render data containing only cards observed in ``language``.
+
+    Older non-TCG data has no per-card availability marker and remains
+    unchanged.  The source object is never mutated when filtering is needed.
+    """
+    sections = variant_data.get("sections")
+    if not isinstance(sections, dict):
+        return variant_data
+
+    has_language_scoped_cards = any(
+        isinstance(card.get("available_languages"), list)
+        for section in sections.values()
+        if isinstance(section, dict)
+        for card in section.get("cards", [])
+        if isinstance(card, dict)
+    )
+    if not has_language_scoped_cards:
+        return variant_data
+
+    filtered = copy.deepcopy(variant_data)
+    for section in filtered["sections"].values():
+        if not isinstance(section, dict):
+            continue
+        cards = section.get("cards")
+        if not isinstance(cards, list):
+            continue
+        section["cards"] = [
+            card
+            for card in cards
+            if not isinstance(card, dict)
+            or not isinstance(card.get("available_languages"), list)
+            or language in card["available_languages"]
+        ]
+
+    return filtered
 
 
 def get_all_scopes(data_dir: Path) -> list:
@@ -723,8 +762,12 @@ def _generate_variant_pdf(
         test_mode=test_mode,
     )
     
-    prepared_variant_data = prepare_variant_data(
+    language_variant_data = filter_variant_data_for_language(
         variant_data,
+        language,
+    )
+    prepared_variant_data = prepare_variant_data(
+        language_variant_data,
         skip_images=skip_images,
         test_mode=test_mode,
     )

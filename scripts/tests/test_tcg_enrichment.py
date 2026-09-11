@@ -219,6 +219,15 @@ class TestCardEnrichment:
                     'fr': 'Absol'
                 },
                 'types': ['Darkness']
+            },
+            571: {
+                'pokemon_id': 571,
+                'names': {
+                    'de': 'Zoroark',
+                    'en': 'Zoroark',
+                    'fr': 'Zoroark'
+                },
+                'types': ['Darkness']
             }
         }
     
@@ -296,6 +305,28 @@ class TestCardEnrichment:
         assert enriched['dexId'] == [1]
         assert enriched['pokemon_id'] == 1
         assert enriched['name_en'] == 'Bulbasaur'
+
+    def test_enrich_card_preserves_observed_trainer_owned_names(self):
+        """TCG card titles remain authoritative over canonical Pokédex names."""
+        card = {
+            'id': 'sv09-189',
+            'localId': '189',
+            'name': "N's Zoroark ex",
+            'name_de': 'Ns Zoroark-ex',
+            'name_en': "N's Zoroark ex",
+            'available_languages': ['de', 'en'],
+            'category': 'Pokemon',
+            'dexId': [571],
+            'types': ['Darkness'],
+        }
+
+        enriched = self.step._enrich_card(card, self.pokemon_by_id)
+
+        assert enriched['pokemon_id'] == 571
+        assert enriched['name_de'] == 'Ns Zoroark-ex'
+        assert enriched['name_en'] == "N's Zoroark ex"
+        assert 'name_fr' not in enriched
+        assert self.pokemon_by_id[571]['names']['de'] == 'Zoroark'
     
     def test_enrich_trainer_card(self):
         """Test enrichment of trainer card."""

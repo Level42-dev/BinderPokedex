@@ -25,6 +25,80 @@ def test_no_options_preserve_original_mapping():
     assert prepare_variant_data(source) is source
 
 
+def test_language_filter_keeps_only_observed_cards_without_mutating_source():
+    source = {
+        "sections": {
+            "all": {
+                "cards": [
+                    {
+                        **_card(1),
+                        "available_languages": ["de", "en"],
+                    },
+                    {
+                        **_card(2),
+                        "available_languages": ["en"],
+                    },
+                    _card(3),
+                ]
+            }
+        }
+    }
+
+    filtered = generate_pdf.filter_variant_data_for_language(source, "de")
+
+    assert [
+        card["pokemon_id"]
+        for card in filtered["sections"]["all"]["cards"]
+    ] == [1, 3]
+    assert [
+        card["pokemon_id"]
+        for card in source["sections"]["all"]["cards"]
+    ] == [1, 2, 3]
+
+
+def test_variant_pdf_generation_filters_language_specific_cards(
+    monkeypatch,
+    tmp_path,
+):
+    source = {
+        "set_id": "SVP",
+        "sections": {
+            "all": {
+                "cards": [
+                    {
+                        **_card(1),
+                        "available_languages": ["de", "en"],
+                    },
+                    {
+                        **_card(2),
+                        "available_languages": ["en"],
+                    },
+                ]
+            }
+        },
+    }
+    generator = MagicMock()
+    generator.generate.return_value = True
+    generator_factory = MagicMock(return_value=generator)
+    monkeypatch.setattr(generate_pdf, "VariantPDFGenerator", generator_factory)
+
+    result = generate_pdf._generate_variant_pdf(
+        variant_data=source,
+        language="de",
+        output_dir=tmp_path,
+        script_dir=tmp_path,
+        scope_name="SVP",
+    )
+
+    prepared = generator_factory.call_args.kwargs["variant_data"]
+    assert result is True
+    assert [
+        card["pokemon_id"]
+        for card in prepared["sections"]["all"]["cards"]
+    ] == [1]
+    assert generator_factory.call_args.kwargs["poster_source_data"] is source
+
+
 def test_pdf_output_filename_keeps_diagnostic_runs_separate():
     assert pdf_output_filename("Base1", "de") == "Base1_DE.pdf"
     assert (

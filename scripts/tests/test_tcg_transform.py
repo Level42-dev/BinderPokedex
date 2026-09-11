@@ -214,6 +214,25 @@ class TestCardTransformation:
         assert card['suffix'] == '[EX_NEW]'
         assert card['prefix'] == 'Mega'
 
+    def test_transform_retains_trainer_owner_while_extracting_ex_suffix(self):
+        cards = [{
+            'id': 'sv09-189',
+            'localId': '189',
+            'name': "N's Zoroark ex",
+            'card_type': 'pokemon',
+            'pokemon_id': 571,
+            'types': ['Darkness'],
+            'name_de': 'Ns Zoroark-ex',
+            'name_en': "N's Zoroark ex",
+            'available_languages': ['de', 'en'],
+        }]
+
+        [card] = self.step._transform_cards(cards)
+
+        assert card['name']['de'] == 'Ns Zoroark'
+        assert card['name']['en'] == "N's Zoroark"
+        assert card['suffix'] == '[EX_NEW]'
+
     def test_transform_corrected_mega_absol_never_requests_castform_mega(
         self,
         monkeypatch,
