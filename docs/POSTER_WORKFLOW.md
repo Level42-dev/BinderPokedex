@@ -497,12 +497,14 @@ unapproved.
 
 Because `joint_scene` deliberately redraws all pixels, an opaque-source-pixel
 equality audit is not applicable. Its hard gates are a complete generation
-fingerprint and explicit human review of both the actual raw file and the
-deterministically scaled text-free print artwork. All 41 enabled poster bundles
-have passed that gate: 39 with avoidance-first individual-spatial v9,
+fingerprint and explicit visual review of both the actual raw file and the
+deterministically scaled text-free print artwork, plus all physical card crops.
+New approvals require `--reviewer-kind human` or `--reviewer-kind agent`;
+agent inspection must never be recorded as human approval. All 42 enabled
+poster bundles have passed that gate: 38 with avoidance-first individual-spatial v9,
 `ExGen2/sections/primal` with its reviewed `landscape_first_v1` prompt profile
-on the same individual-spatial graph, and `SV04.5` with its reviewed mask-free
-spatial-identity v7 contract.
+on the same individual-spatial graph, and `SV04.5`, `ME05`, and `SV08` with
+their reviewed mask-free spatial-identity v7 contracts.
 Candidate-specific seeds, hashes, and rejected bounded tests remain recorded
 in the status and experiment log.
 
@@ -568,7 +570,7 @@ python scripts/poster_assets/promote_comfyui_poster.py \
   --artwork <printed-text-free-artwork.png> \
   --run-metadata <matching.run.json> \
   --name flux2 \
-  --approve-joint-scene
+  --approve-joint-scene --reviewer-kind human
 
 python scripts/poster_assets/validate_promoted_poster.py --scope SV04
 ```
@@ -587,7 +589,7 @@ A `joint_scene` candidate follows a separate fail-closed review contract. Its
 run must contain the complete current generation fingerprint, exact source
 identity records, raw-artwork hashes, and deterministic text-free print hashes.
 After comparing both artifacts and every subject crop with the reviewed
-cutouts, the `--approve-joint-scene` flag above records a timestamped approval
+cutouts, the `--approve-joint-scene` flag and explicit reviewer kind above record a timestamped approval
 bound to those exact pixels and source
 identities; it is not a generic bypass. Promotion still rejects a candidate
 whose recorded generation contract differs from `poster.yaml`. Generation VII
@@ -722,7 +724,7 @@ python scripts/poster_assets/promote_comfyui_poster.py \
   --run-metadata <reported-run-metadata.json> \
   --language de \
   --name flux2 \
-  --approve-joint-scene
+  --approve-joint-scene --reviewer-kind human
 
 python scripts/pdf/generate_pdf.py \
   --scope Pokedex \

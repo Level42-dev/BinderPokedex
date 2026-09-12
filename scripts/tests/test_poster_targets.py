@@ -17,6 +17,7 @@ from scripts.poster_assets.finalize_comfyui_poster import (
     title_logo_file,
 )
 from scripts.poster_assets.fetch_title_logos import resolve_logo_downloads
+from scripts.poster_assets.fetch_cutouts import select_pokemon
 from scripts.poster_assets.typography import load_font, wrap_text
 from scripts.poster_assets.init_poster_scope import (
     build_section_manifest,
@@ -31,27 +32,30 @@ from scripts.poster_assets.poster_config import build_identity_lock_prompt
 from scripts.poster_assets.provenance import sha256_file
 from scripts.poster_assets.scene_catalog import section_scenes_for_scope
 from scripts.poster_assets.validate_promoted_poster import enabled_poster_scopes
+from scripts.pdf.lib.rendering.poster_page_renderer import PosterPageCollection
 
 
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def test_me05_stays_disabled_until_a_candidate_passes_visual_review():
-    manifest_path = ROOT / "config" / "posters" / "ME05" / "poster.yaml"
-
-    assert manifest_path.is_file()
-    manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
-    assert manifest["scope"] == "ME05"
-    assert manifest["pdf"]["enabled"] is False
-
-
-def test_sv08_stays_disabled_while_promoted_artwork_has_stale_kyurem_form():
-    manifest_path = ROOT / "config" / "posters" / "SV08" / "poster.yaml"
-
-    assert manifest_path.is_file()
-    manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
-    assert manifest["scope"] == "SV08"
-    assert manifest["pdf"]["enabled"] is False
+@pytest.mark.parametrize(
+    "scope_path",
+    sorted((ROOT / "data" / "output").glob("*.json")),
+    ids=lambda path: path.stem,
+)
+def test_every_release_section_routes_to_a_real_panorama(scope_path):
+    """Missing/disabled artwork must not silently ship a cover-only section."""
+    source = json.loads(scope_path.read_text(encoding="utf-8"))
+    collection = PosterPageCollection.from_scope(scope_path.stem, source, "de")
+    try:
+        for index, section_id in enumerate(source["sections"]):
+            posters = collection.for_section(section_id, index)
+            assert len(posters) == 1, (
+                f"{scope_path.stem}/{section_id} needs one reviewed panorama"
+            )
+            assert posters[0].artwork_path.is_file()
+    finally:
+        collection.cleanup()
 
 
 def test_sv07_rejects_the_known_three_ear_candidate_seed():
@@ -59,6 +63,21 @@ def test_sv07_rejects_the_known_three_ear_candidate_seed():
     manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
 
     assert manifest["artwork"]["generation"]["seed"] != 260726008
+
+
+def test_sv08_panorama_uses_pikachu_without_changing_the_kyurem_card():
+    bundle = poster_bundle("SV08")
+    source = load_poster_scope_data(bundle)
+    subjects = select_pokemon(bundle.manifest, source, 3, {})
+
+    assert [item["pokemon_id"] for item in subjects] == [250, 909, 25]
+    kyurem = next(
+        card for card in source["sections"]["all"]["cards"]
+        if card["id"] == "sv08-048"
+    )
+    assert kyurem["pokemon_id"] == 646
+
+
 POSTER_CONFIG_ROOT = POSTER_CONFIGS
 
 

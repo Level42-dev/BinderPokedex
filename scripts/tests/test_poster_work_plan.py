@@ -140,6 +140,24 @@ def save_yaml(path, payload):
     )
 
 
+def test_planner_subject_selection_honors_explicit_poster_slots():
+    configured = manifest("Example", scene("Example"))
+    configured["pokemon"]["fallback_candidates"] = [
+        {"pokemon_id": 25, "slot": 3},
+    ]
+    source = {"sections": {"all": source_section([250, 909, 646])}}
+
+    subjects, _layout = poster_work_plan._expected_subject_identities(
+        configured, source,
+    )
+
+    assert [subject[1] for subject in subjects] == [250, 909, 25]
+
+    configured["pokemon"]["fallback_candidates"][0]["slot"] = 4
+    with pytest.raises(ValueError, match="slot must be between"):
+        poster_work_plan._expected_subject_identities(configured, source)
+
+
 def save_json(path, payload):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(

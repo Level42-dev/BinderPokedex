@@ -2860,3 +2860,75 @@ This closes the configured rollout at 41 of 41 reviewed and enabled targets.
 The cover implementation remains available for missing/disabled assets and
 explicit `--skip-poster` builds, but no current configured target needs that
 fallback in the normal build.
+
+### v10 missing-set completion and review attribution (2026-09-12)
+
+The operator requires a panorama for every set. ME05 and SV08 cover-only
+outputs were an incomplete intermediate state, not an accepted v10 fallback.
+The active workspace's existing renderer configuration was reused. Every
+immutable job returned its `run.json`, `comfyui.log`, and complete output set;
+private connection/runtime values remain only in the ignored workspace marker.
+
+All probes below use joint scene synthesis. Default individual-spatial inputs
+proved unstable for Miraidon/Black Kyurem and sometimes transferred anatomy
+between simpler subjects. The comparison changed one factor at a time before
+returning to the existing 4B BF16 model. The shared spatial cast plus three
+large identity references is the retained mask-free v7 graph, not a new model
+or post-generation character composite. Four steps are the distilled model's
+configured sampling contract.
+
+| Scope / probe | Seed | Raw SHA-256 | Review result |
+| --- | ---: | --- | --- |
+| ME05, original cast / 4B individual | 260765584 | `58c870cd18ed276c6ea78dd823e7577b5401c4f6d018ef1d9d70c8319840cfdc` | Rejected: malformed Miraidon |
+| ME05, original cast / 4B individual | 260912505 | `9a4ec1c7ed619d2da58817b964e91782db5d14eb42cf07b6a0207235c29f5dbe` | Rejected: malformed Miraidon |
+| ME05, Morpeko cast / 4B individual | 260765584 | `58365daf3552f51a8a013ecb345fee577eacdca549a159d2197a9b49e8e48f83` | Rejected: Robball flipper transferred to Marshadow |
+| ME05, Morpeko cast / 4B individual | 260912506 | `4ccce41a9bbae6b3761741f1ea605f308d9c79986b740a3d6281a5a6fedbfe2c` | Rejected: extra fourth creature |
+| ME05, 4B individual / 2 MP | 260912506 | `59cf94ef34e2120e844138f021df28c61330e678a2dfbf4d52597d40634b1080` | Rejected: flipper transfer remains |
+| ME05, 9B individual / 1 MP | 260912506 | `720245bc44dd40855c95efdcf75141ed321be7da091f9c8f888c7c1d95861aa9` | Rejected: Robball eye/flipper drift |
+| ME05, 9B spatial / 1 MP | 260912506 | `83ca4d6bd2d22f866f6c7e5b697d89007449a76db3b8c26ba615ecee5161cd23` | Passed visual comparison; superseded by 4B before commit |
+| ME05, 4B spatial / 1 MP | 260912506 | `57747266f564e24e8bce5627122e0fc69038ac969be8a79ed8d80ad198be3d76` | Rejected: extra fourth creature |
+| ME05, 4B spatial / 1 MP | 260912507 | `ef5f102c94cb37375db4c5d0643d10fdd8ad89917f7fe7f8c2bbb14aa49f6298` | Accepted after full raw/master and nine-crop agent review |
+| SV08, Kyurem cast / 4B individual | 260912008 | `560a50403fb7086b0e6dcf8e801a4e44ca3939cfc133c7b7c2179f3958e08475` | Rejected: Kyurem form/containment |
+| SV08, Kyurem cast / 4B individual | 260912108 | `80e81b66a5d1deeb54144c386de838a42137745597ce52b180da656a7ba34d4f` | Rejected: Kyurem form/containment |
+| SV08, 9B individual / 1 MP | 260912108 | `943515215bfbe2fb33c1c4a8ac0a7d795317f4e0725a264718b8f5568fe079e1` | Rejected: missing Kyurem and misplaced Ho-Oh |
+| SV08, 9B spatial / 1 MP | 260912108 | `e90d05671d27a9f7f7e313fdf0640e04d02221130a22cc1c8a190789d02a90e6` | Rejected: Kyurem form/clipping and foreground conflict |
+| SV08, Pikachu cast / 4B spatial | 260912108 | `60f250311d23e9faf27303af28a20778f73b20ffe4973f987f61e94544f81f83` | Rejected: grass crosses Ho-Oh tail and Pikachu belly |
+| SV08, Pikachu cast / clear foreground / 4B spatial | 260912109 | `038d4f2e3df89aa08644e57d9bb1bbd1649b386eed25fb74636bda62241dc73c` | Accepted after full raw/master and nine-crop agent review |
+
+ME05 retains Robball (728), Morpeko (877), and Marshadow (802). SV08 now uses
+Ho-Oh (250), Krokel (909), and Pikachu (25); the poster-only third-slot choice
+references actual set card `sv08-057`. Black Kyurem card `sv08-048` remains
+unchanged in the data. The final SV08 constraint requests a clear low foreground
+so all figures retain exposed silhouettes. No failed candidate enters a PDF.
+
+The earlier v10 SV07 replacement at seed `260912007`, raw SHA-256
+`649b8976c1a032d646b21bc22aaf2a38916789ba128073ca40fe7f15af314720`,
+retains exactly two Hopplo ears after full-image and nine-crop agent review.
+The exact final print masters are:
+
+| Target | 2368 x 3268 text-free SHA-256 |
+| --- | --- |
+| ME05 | `3120f1f07526c80d74f5cd83aa6bbb09dbc256e423f4d1c3c7ee3ecbf8f95732` |
+| SV07 | `876c1c23d1bd31ee832c419845e2f0469b069e0e596e7171b438246c56a4c8ef` |
+| SV08 | `d931776dc062cc9f9db4b632fab658ce678ad6fe2afcc73d33e363f1e51fe7f8` |
+
+All active assets remain FLUX.2 Klein 4B BF16, 1-MP raw generation and exact
+300-dpi Lanczos print output. The 9B comparison is ignored experiment evidence,
+not a production model dependency or a claim about third-party image rights.
+
+Independent code review exposed a pre-existing provenance bug: the promotion
+helper labeled every explicit review as human review. New approvals now require
+an explicit `human` or `agent` reviewer kind, preserving all pixel/hash gates
+and historical human records. The three v10 replacements truthfully record
+agent review under the operator's autonomous implementation request, not a
+human aesthetic approval. No source-cache image or private worker marker is
+committed. A real `PosterPageCollection` regression checks all 31 release scopes
+and their 42 sections so missing/disabled panoramas cannot silently satisfy the
+normal release gate with an ordinary cover.
+
+The full suite also exposed duplicated subject-selection logic in the read-only
+work planner: it appended fallback candidates but ignored explicit slots, so it
+incorrectly expected Kyurem after the importer had correctly selected Pikachu.
+A failing regression reproduces the disagreement; the planner now delegates to
+the same `select_pokemon` function as import and generation, including invalid
+slot validation. No cache falsification or alternate selection path is added.

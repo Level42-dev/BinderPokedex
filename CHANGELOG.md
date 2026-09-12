@@ -48,8 +48,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   inside their card and cutting boundaries.
 - Added exact German title logos for Schwarze Blitze and Weiße Flammen and
   corrected the Stellarkrone panorama with anatomically correct Hopplo artwork.
-- Withheld unapproved ME05 and SV08 panorama artwork; their PDFs use the clean
-  standard set cover until a candidate passes full-page and nine-crop review.
+- Added the reviewed Dunkelnacht panorama and replaced the Stürmische Funken
+  panorama after bounded reference, resolution, model, and seed comparisons.
+  All 42 set and aggregate-section targets now have enabled panoramas.
 
 ### 🔧 Release Quality
 
@@ -58,6 +59,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   printed promo numbers, German logos, and safe label geometry.
 - Release builds consume the committed data snapshot instead of silently
   fetching mutable card data during publication.
+- Regression tests exercise real PDF poster routing for every release section;
+  a disabled panorama or cover-only route fails the normal release test gate.
+- New visual-review records explicitly distinguish agent inspection from human
+  approval while retaining the same source, raw, print, and crop checks.
+- The poster planner uses the importer's canonical subject selection, including
+  explicit card slots, instead of incorrectly flagging a valid curated cast as stale.
 
 ## [9.0.0] - 2026-08-11
 

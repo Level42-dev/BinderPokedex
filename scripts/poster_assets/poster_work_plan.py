@@ -22,8 +22,7 @@ try:
     from .fetch_cutouts import (
         cutout_filename,
         resolve_requested_count,
-        scope_featured_elements,
-        unique_by_poster_subject,
+        select_pokemon,
         validate_png,
     )
     from .fetch_title_logos import resolve_logo_downloads
@@ -70,8 +69,7 @@ except ImportError:  # Direct script execution
     from fetch_cutouts import (
         cutout_filename,
         resolve_requested_count,
-        scope_featured_elements,
-        unique_by_poster_subject,
+        select_pokemon,
         validate_png,
     )
     from fetch_title_logos import resolve_logo_downloads
@@ -545,22 +543,10 @@ def _expected_subject_identities(
         str(manifest.get("layout", {}).get("name", "standard_3x3"))
     )
     count = resolve_requested_count(manifest, layout)
-    selected = unique_by_poster_subject(scope_featured_elements(scope_data))
-    fallback = manifest.get("pokemon", {}).get("fallback_candidates", [])
-    for candidate in fallback:
-        if isinstance(candidate, dict) and isinstance(
-            candidate.get("pokemon_id"), int
-        ):
-            selected.append(dict(candidate))
-    selected = unique_by_poster_subject(selected)
-    if len(selected) < count:
-        raise ValueError(
-            f"Layout needs {count} Pokemon, but only {len(selected)} "
-            "were resolved"
-        )
+    selected = select_pokemon(manifest, scope_data, count, {})
     return [
         resolve_poster_subject(item).selection_key()
-        for item in selected[:count]
+        for item in selected
     ], layout
 
 

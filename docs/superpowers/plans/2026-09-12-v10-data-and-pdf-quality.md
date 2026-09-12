@@ -583,12 +583,14 @@ Report exact test totals, snapshot boundary and reviewed count changes, poster c
 | Area | Status | Verified result |
 | --- | --- | --- |
 | Tasks 1-6: identity, localization, layout, logos, snapshot, refresh | Complete | All 31 scopes refreshed; the 63-file snapshot is locked to the 2026-09-12 boundary and verifies without drift. ME05 is included with 120 cards. |
-| Task 7: poster artwork | Complete with two deliberate standard-cover fallbacks | The corrected SV07 candidate was promoted after full-page and nine-crop review. Four ME05 candidates were rejected for anatomy or subject-count defects. The refresh also exposed a stale Kyurem form in SV08; two replacement candidates were rejected. ME05 and SV08 therefore keep `pdf.enabled: false`, and their PDFs use the deterministic set cover. All 40 enabled poster bundles validate at 2368 x 3268 px, nine cards, and 300 dpi. |
-| Task 8: German PDFs | Complete | All 31 German PDFs were rebuilt (776 A4 pages). Text assertions and fresh Poppler renders confirm the Energy names, owner-qualified SV09 names, safe SV04/SV05 wrapping, German SV10.5 logos, corrected SV07 Hopplo, SVP numbering plus the unnumbered card, and MEP numbers 064/079. |
-| Task 9: local release candidate | Complete | The full nine-language build produced 168 PDFs and 4,613 pages. Nine archives pass manifest/file-set verification and independent ZIP CRC tests. The full test suite passes with 665 passed and 1 skipped. |
+| Task 7: poster artwork | Complete | SV07, ME05, and SV08 passed raw/master and all nine physical-crop agent review. All 42 targets are promoted, enabled, and validated. Bounded resolution/model/reference comparisons and every accepted/rejected raw hash are recorded in the experiment log; all production assets remain 4B BF16. Provenance now distinguishes agent review from human approval. |
+| Task 8: German PDFs | Rebuilding final panorama revision | The prior 31-PDF build (807 A4 pages, including project notices) passed text and Poppler checks for Energy names, owner-qualified SV09 names, safe SV04/SV05 wrapping, German SV10.5 logos, corrected SV07 Hopplo, SVP numbering plus the unnumbered card, and MEP numbers 064/079. ME05/SV08 first-page checks are being repeated for the new panorama assets. |
+| Task 9: local release candidate | Rebuilding final panorama revision | The full test suite now passes with 719 passed and 1 skipped, and independent code review has no remaining findings. The previous nine-language candidate contains 168 PDFs / 4,781 pages and nine verified archives. Those archives predate the final panorama changes and must be rebuilt from the updated source commit before being described as the final candidate. |
 
-The local v10.0 candidate is complete. Publication remains intentionally out of
-scope: no push, tag, or GitHub release was created. ME05 and SV08 can receive a
-panorama in a later release only after a new candidate passes the same full-page
-and nine-crop visual gate; their current standard covers are release-safe and do
-not block v10.0.
+ME05 and SV08 now also have reviewed panoramas. The ordinary cover remains a
+diagnostic/explicit skip option, not an
+accepted substitute for these release targets. A regression test now exercises
+the real PDF poster routing for every current section and rejects a missing or
+disabled panorama. The final remaining step is to rebuild and check the localized
+PDFs and refresh release archives. The branch has been pushed and PR #17 opened
+with subsequent operator authorization; no tag or GitHub release was created.

@@ -6,7 +6,7 @@ live in [Poster Workflow](POSTER_WORKFLOW.md), durable product requirements in
 [Poster Architecture](POSTER_ARTWORK_CONCEPT.md), and rejected or superseded
 evidence in [Poster Experiment Log](POSTER_ARTWORK_EXPERIMENT_LOG.md).
 
-Last audited: 2026-08-11
+Last audited: 2026-09-12
 
 ## Current decision
 
@@ -15,16 +15,18 @@ The production generator supports one model family and two generation modes.
 
 | Role | Contract | Current use |
 | --- | --- | --- |
-| Default | FLUX.2 `joint_scene` / avoidance-first `individual_spatial_joint` pipeline v9 | One poster-shaped identity-and-position reference per subject, invisible no-crossing character volumes, empty target, one sampler, one decode, deterministic 300-dpi Lanczos output; 39 active promotions |
+| Default | FLUX.2 `joint_scene` / avoidance-first `individual_spatial_joint` pipeline v9 | One poster-shaped identity-and-position reference per subject, invisible no-crossing character volumes, empty target, one sampler, one decode, deterministic 300-dpi Lanczos output; 38 active promotions |
 | Scope-specific accepted profile | FLUX.2 `joint_scene` / `individual_spatial_joint` with `landscape_first_v1` | The two-subject Primal target uses the same references and graph, but a reviewed compact landscape-first prompt that makes the canvas hierarchy and outer silhouette extents primary; one active promotion |
-| Reproducible legacy | FLUX.2 `joint_scene` / `spatial_identity_joint` pipeline v7 | One shared spatial cast plus unscaled identity references; retained by the approved `SV04.5` promotion |
+| Scope-specific accepted profile | FLUX.2 `joint_scene` / `spatial_identity_joint` pipeline v7 | One shared spatial cast plus unscaled identity references; used by reviewed `SV04.5`, `ME05`, and `SV08` promotions |
 | Scope-specific legacy | FLUX.2 `joint_scene` / `regional_identity_joint` pipeline v6 | One regional identity branch per physical card; retained for historical reproduction and bounded diagnostics, with no active promotion |
 | Explicit fallback | FLUX.2 `identity_lock` | Two-pass scene, immutable source figures, exact opaque-pixel audit, and 300-dpi model upscale; currently no active scope uses it |
 
 New manifests default to `individual_spatial_joint`. A manifest and provenance
 describe exactly one active contract. Switching to a legacy topology or the
-fallback requires a deliberate manifest change, a new candidate, human review,
-and a new promotion; there is no automatic dual-active registry.
+fallback requires a deliberate manifest change, a new candidate, explicit visual review,
+and a new promotion; there is no automatic dual-active registry. New review
+records explicitly identify the reviewer as `human` or `agent`; agent inspection
+does not claim operator aesthetic approval.
 
 ## Generation environment
 
@@ -41,7 +43,9 @@ managed external cache owns model weights. Packaging preserves the cache as a
 symbolic link, and validated destruction removes only the runtime.
 
 The reviewed rollout now uses the unquantized BF16 FLUX.2 Klein 4B checkpoint
-for all current v9 promotions. Native Klein 4B/9B, Base 4B, corrected Kontext
+for all current promotions. The v10 ME05/SV08 comparison also tested 9B and
+2-MP rendering; neither became a production dependency. Native Klein 4B/9B,
+Base 4B, corrected Kontext
 BF16, the earlier Dev 32B candidate, 2-MP spatial references, and an abstract
 box guide remain experiment evidence rather than competing active contracts.
 
@@ -84,10 +88,11 @@ foreground crossings need an explicit reviewed foreground layer. See
 
 ## Promoted scope state
 
-All 41 bundles are promoted and enabled. Thirty-nine use the reviewed
+All 42 bundles are promoted and enabled. Thirty-eight use the reviewed
 avoidance-first individual-spatial v9 contract, `ExGen2/sections/primal` uses
-the accepted landscape-first individual-spatial profile, and `SV04.5`
-deliberately uses its reviewed mask-free spatial-identity v7 contract. Every
+the accepted landscape-first individual-spatial profile, and `SV04.5`, `ME05`,
+and `SV08` deliberately use their reviewed mask-free spatial-identity v7
+contracts. Every
 bundle is 2368 x 3268 px, is sliced into nine physical cards, carries effective
 299.99-dpi PNG metadata, and binds its approval to the exact raw and print
 pixels plus the exact Official Artwork identities.
@@ -104,6 +109,13 @@ Stable `poster-flux2*` filenames keep PDF routing unchanged. Logos, localized
 information panels, card slicing, and PDF placement remain deterministic and
 are not model-generated.
 
+The v10 agent-reviewed replacements are `SV07` (two-ear Hopplo), `ME05`
+(Robball, Morpeko, Marshadow), and `SV08` (Ho-Oh, Krokel, Pikachu). SV08 uses
+the existing poster-only slot selection for Pikachu `sv08-057`; Black Kyurem
+`sv08-048` remains unchanged in the card data. Full raw/master and all nine
+physical crops were inspected before promotion. Their provenance records
+agent inspection, not a new human approval.
+
 ## Configured target and language coverage
 
 Every current target has a checked-in manifest and a configured creative brief.
@@ -112,17 +124,17 @@ visual approval.
 
 | Scope family | Configured | Promoted and enabled | Disabled / awaiting activation |
 | --- | ---: | ---: | ---: |
-| Individual TCG sets | 26 | 26 | 0 |
+| Individual TCG sets | 27 | 27 | 0 |
 | Pokédex generations | 9 | 9 | 0 |
 | ExGen1 sections | 1 | 1 | 0 |
 | ExGen2 sections | 3 | 3 | 0 |
 | ExGen3 sections | 2 | 2 | 0 |
-| **Total** | **41** | **41** | **0** |
+| **Total** | **42** | **42** | **0** |
 
 Every configured target now has one reviewed promotion. Rejected candidates
 remain experiment evidence and never enter PDF routing.
 
-The deterministic overlay contract is complete for all 266 language outputs
+The deterministic overlay contract is complete for all 267 language outputs
 currently implied by those targets. Aggregate sections contain title,
 subtitle/region, Pokémon count, and description/range in all nine PDF languages.
 Individual TCG sets define localized set copy and logo routes for every
@@ -162,7 +174,7 @@ For each subject, `individual_spatial_joint`:
    300-dpi print raster;
 8. adds localized logo and information only in deterministic post-processing.
 
-Human review remains mandatory because generated identity cannot be proven by
+Explicit visual review remains mandatory because generated identity cannot be proven by
 pixel equality. Review covers exact cast count and form, anatomy, face,
 markings, silhouette, pose, card fit, padding, grounding, shadows, coherent
 depth, safe text cells, and every physical card crop.
@@ -192,13 +204,14 @@ texture, character pixels, or a post-decode composite.
 - Only promoted, tracked artwork can enter a normal PDF.
 - `--skip-poster` remains an explicit build bypass.
 - A disabled or absent poster route leaves the existing section cover and card
-  pages intact.
+  pages intact for diagnostics; the all-section regression test rejects such
+  a route for any normal release target.
 - Enabled A4 posters default to nine physical cards; `--poster-page-mode
   full-page` emits the same localized poster once at 200.5 × 276.7 mm, centered
   on A4 without cutting guides.
 - Aggregate scopes route independent section manifests and promotions through
   `posters.yaml`, then replace each matching section cover with its poster.
-- All 41 current individual and aggregate targets are configured, promoted,
+- All 42 current individual and aggregate targets are configured, promoted,
   enabled, and provenance-validated.
 - Pull requests validate every enabled promotion and build a complete release
   candidate as a temporary artifact only.
@@ -206,7 +219,7 @@ texture, character pixels, or a post-decode composite.
 
 ## Remaining work
 
-1. Run representative multilingual PDF QA across the 41 enabled promotions.
+1. Keep representative multilingual PDF QA current across the 42 enabled promotions.
 2. Keep `wide_4x3` and `wide_4x4` modeled but disabled for PDF production until
    matching physical page formats, memory tests, and visual QA exist.
 
@@ -229,7 +242,20 @@ python -m scripts.poster_assets.validate_promoted_poster --all-enabled
 python -m scripts.poster_assets.poster_work_plan --all-configured
 ```
 
-Core branch verification rerun on 2026-08-12:
+Core branch verification rerun on 2026-09-12:
+
+- the complete project suite passes with `719 passed, 1 skipped`;
+- all 42 enabled poster bundles validate at 2368 x 3268 px and effective 300 dpi;
+- all 31 release scopes / 42 section routes require a real panorama;
+- the work planner uses the same slot-aware subject selection as generation;
+- ME05/SV08 raw masters, print masters, all nine crops, and freshly rendered
+  German PDF opening pages pass agent visual review;
+- ME05, SV07, and SV08 record agent review, while existing human records remain
+  valid and are not rewritten;
+- the 63-file data snapshot remains unchanged and verifies at 2026-09-12;
+- Python compilation, whitespace checks, and independent code review pass.
+
+Historical branch verification on 2026-08-12:
 
 - the project suite passes with `568 passed, 1 skipped`;
 - all 41 enabled poster bundles validate;

@@ -3,24 +3,24 @@
   "kind": "promoted_poster",
   "outputs": {
     "artwork": {
-      "bytes": 7308673,
+      "bytes": 5386628,
       "dpi": [
         299.9994,
         299.9994
       ],
-      "file": "assets/posters/SV07/poster-flux2-artwork.png",
+      "file": "assets/posters/SV08/poster-flux2-artwork.png",
       "height": 3268,
       "mode": "RGBA",
-      "pixel_sha256": "183bf7a2cf41f8ce75c564d27f6d02b6cc7ecfc94bfe568aee262f343246b746",
-      "sha256": "876c1c23d1bd31ee832c419845e2f0469b069e0e596e7171b438246c56a4c8ef",
+      "pixel_sha256": "7a2ada1a736a9805c5d25f1c337c326038261a5382b4902c5068890a2ee238a2",
+      "sha256": "d931776dc062cc9f9db4b632fab658ce678ad6fe2afcc73d33e363f1e51fe7f8",
       "width": 2368
     }
   },
-  "poster_id": "SV07",
-  "promoted_at": "2026-09-12T11:39:56.747794+00:00",
+  "poster_id": "SV08",
+  "promoted_at": "2026-09-12T11:37:57.316767+00:00",
   "review_language": "de",
   "run": {
-    "created_at": "2026-09-12T01:56:28.540749+00:00",
+    "created_at": "2026-09-12T11:25:29.471384+00:00",
     "generation": {
       "encoder": "qwen_3_4b.safetensors",
       "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
@@ -31,44 +31,44 @@
       "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
       "output_dpi": 300,
       "output_method": "lanczos",
-      "reference_mode": "individual_spatial_joint",
-      "seed": 260912007,
+      "reference_mode": "spatial_identity_joint",
+      "seed": 260912109,
       "steps": 4,
       "vae": "flux2-vae.safetensors",
       "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
     },
     "inputs": {
       "cutout_manifest": {
-        "bytes": 1725,
-        "file": "tmp/poster-workspaces/SV07/sources/cutouts/manifest.json",
-        "sha256": "524ee0e430994f2dc557583acd51d1c501b6ad55dd3fb1da9ff203b947a8f26c"
+        "bytes": 1714,
+        "file": "tmp/poster-workspaces/SV08/sources/cutouts/manifest.json",
+        "sha256": "9943ca316201c6343e4940e650fb751d81f5d6b3c49078101f34e037859495b2"
       },
       "cutouts": [
         {
-          "bytes": 206887,
-          "file": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_001_bulbasaur.png",
+          "bytes": 158849,
+          "file": "tmp/poster-workspaces/SV08/sources/cutouts/pokemon_250_ho_oh.png",
           "height": 475,
           "mode": "RGBA",
-          "pixel_sha256": "f96cfeddc294c4efbbdf1b35cd816341d950e3051dec2128c03f652448b04d10",
-          "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a",
+          "pixel_sha256": "27c1eb01dc8b91b25c89dd2c948aafa26722d2b563e8c00728926b10ff077f4c",
+          "sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274",
           "width": 475
         },
         {
-          "bytes": 157107,
-          "file": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_007_squirtle.png",
+          "bytes": 115180,
+          "file": "tmp/poster-workspaces/SV08/sources/cutouts/pokemon_909_fuecoco.png",
           "height": 475,
           "mode": "RGBA",
-          "pixel_sha256": "72949f5da5c7b8cf45d409ded073e210e1f7b27330d7625b993a3de4e584c2e1",
-          "sha256": "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290",
+          "pixel_sha256": "6f87f462a8639a983688199cd116cbbe580a356acf62ca1f46a4eb805a268d1e",
+          "sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b",
           "width": 475
         },
         {
-          "bytes": 65679,
-          "file": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_813_scorbunny.png",
+          "bytes": 120225,
+          "file": "tmp/poster-workspaces/SV08/sources/cutouts/pokemon_025_pikachu.png",
           "height": 475,
           "mode": "RGBA",
-          "pixel_sha256": "f88fc484d3b27caaf14d4bb02b3e9df6dc534154404af128db1597fe5f8e609e",
-          "sha256": "0099f4bb576966efc872c03c69616f954c8474d12608a2fd7e91304a9d271167",
+          "pixel_sha256": "e1100eee7248e696797b553f2151ad8e62c0eb83df473d0d9151cceb2e61c76c",
+          "sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
           "width": 475
         }
       ],
@@ -78,28 +78,28 @@
             {
               "height": 475,
               "mode": "RGBA",
-              "pixel_sha256": "f96cfeddc294c4efbbdf1b35cd816341d950e3051dec2128c03f652448b04d10",
-              "pokemon_id": 1,
+              "pixel_sha256": "27c1eb01dc8b91b25c89dd2c948aafa26722d2b563e8c00728926b10ff077f4c",
+              "pokemon_id": 250,
               "width": 475
             },
             {
               "height": 475,
               "mode": "RGBA",
-              "pixel_sha256": "72949f5da5c7b8cf45d409ded073e210e1f7b27330d7625b993a3de4e584c2e1",
-              "pokemon_id": 7,
+              "pixel_sha256": "6f87f462a8639a983688199cd116cbbe580a356acf62ca1f46a4eb805a268d1e",
+              "pokemon_id": 909,
               "width": 475
             },
             {
               "height": 475,
               "mode": "RGBA",
-              "pixel_sha256": "f88fc484d3b27caaf14d4bb02b3e9df6dc534154404af128db1597fe5f8e609e",
-              "pokemon_id": 813,
+              "pixel_sha256": "e1100eee7248e696797b553f2151ad8e62c0eb83df473d0d9151cceb2e61c76c",
+              "pokemon_id": 25,
               "width": 475
             }
           ],
           "effective_prompt": {
             "encoding": "utf-8",
-            "sha256": "5adbacea3bcc10de17176478e77d709944b402966ad0c233018f2bcc3ffcea29"
+            "sha256": "6863786d45bc33cbd7f1441da93062c73986aa70818bfc26fc711658a663e47c"
           },
           "generation": {
             "encoder": "qwen_3_4b.safetensors",
@@ -111,21 +111,22 @@
             "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
             "output_dpi": 300,
             "output_method": "lanczos",
-            "reference_mode": "individual_spatial_joint",
-            "seed": 260912007,
+            "reference_mode": "spatial_identity_joint",
+            "seed": 260912109,
             "steps": 4,
             "vae": "flux2-vae.safetensors",
             "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
           },
           "joint_scene_conditioning": {
-            "identity_source_resampling": "canonical_card_fit",
-            "reference_megapixels": 0.5,
+            "cast_max_megapixels": 0.5,
+            "identity_canvas_px": 512,
+            "identity_source_resampling": "none",
             "reference_neutral_rgb": [
               226,
               224,
               211
             ],
-            "reference_strategy": "individual_spatial_identity_per_subject"
+            "reference_strategy": "spatial_cast_plus_unscaled_identity"
           },
           "layout": {
             "columns": 3,
@@ -212,14 +213,17 @@
           },
           "pipeline_contract": {
             "name": "poster_generation",
-            "version": 9
+            "version": 7
           },
           "pokemon": {
             "count": "auto_from_layout_columns",
             "cutout_source": "pokeapi_official_artwork",
             "fallback_candidates": [
               {
-                "pokemon_id": 25
+                "card_id": "sv08-057",
+                "pokemon_id": 25,
+                "pokemon_name": "Pikachu",
+                "slot": 3
               },
               {
                 "pokemon_id": 1
@@ -241,164 +245,167 @@
             "strategy": "featured_from_scope"
           },
           "scene": {
-            "concept": "the Stellar Crown expansion",
+            "concept": "the Surging Sparks expansion",
+            "constraints": [
+              "Keep the entire lower third as clear, very short grass. No tall blades, flowers, reeds, or large leaves anywhere in front of or beside the three subjects. Build foreground depth from terrain and cast shadows only; every wing, tail, foot, and body outline must remain completely exposed."
+            ],
             "ground_noun": "highland grass",
-            "lighting": "Brilliant white-gold stellar light enters from the upper left.",
-            "rendering": "Use refined trading-card linework, restrained crystalline highlights, rich blue depth, and a spacious celestial atmosphere.",
-            "setting": "The artwork contains an open crystal highland beneath a star-filled daytime sky, distant faceted cliffs, pale grass, and crown-like rays of refracted light high above the horizon."
+            "lighting": "Electric storm light flashes behind warm sunlight from the upper left.",
+            "rendering": "Use energetic cel-painted linework, controlled yellow-violet contrast, and strongly layered storm depth.",
+            "setting": "The artwork contains a storm-charged tropical highland, distant volcanic ridges, wind-swept trees, and branching golden illumination contained in the upper clouds."
           },
           "source_subject_ids": [
-            1,
-            7,
-            813
+            250,
+            909,
+            25
           ]
         },
         "schema_version": 1,
-        "sha256": "3800e5d3433bdabee20517843bfdb43354a254b0e25c69f1acc967240ad5941a"
+        "sha256": "3946bcc5e72945854feb7fc7f69c0ae081fb6e86078a2db86b92237c027f040e"
       },
       "overlay_fingerprint": {
         "components": {
           "languages": {
             "de": {
               "information": [
-                "Stellarkrone",
-                "175 Karten",
+                "Stürmische Funken",
+                "252 Karten",
                 "Veröffentlicht",
-                "13. September 2024"
+                "8. November 2024"
               ],
               "title": {
                 "kind": "logo",
-                "pixel_sha256": "66f5956b529d1cb430f97511778ad9004bb1d0feb682532471a8d9e5c4a26161"
+                "pixel_sha256": "45f4dea3a4458e412ac7c6025ce749c7fdf98fb1f13e0484cf8e9c750d55d449"
               }
             },
             "en": {
               "information": [
-                "Stellar Crown",
-                "175 cards",
+                "Surging Sparks",
+                "252 cards",
                 "Released",
-                "September 13, 2024"
+                "November 8, 2024"
               ],
               "title": {
                 "kind": "logo",
-                "pixel_sha256": "9cf628107a81349be61eecbea291ad50d32c6dbacf499b1a108dced6048b34dd"
+                "pixel_sha256": "5804d9bb63ebb011d3829f327c39b3d6d434db2facf6417e8bfbc1f3a194e19e"
               }
             },
             "es": {
               "information": [
-                "Corona Astral",
-                "175 cartas",
+                "Chispas Fulgurantes",
+                "252 cartas",
                 "Publicado",
-                "13 septiembre 2024"
+                "8 noviembre 2024"
               ],
               "title": {
                 "kind": "logo",
-                "pixel_sha256": "8db5633808f06ceea3fa7a1c2d78138317ec2f889ec322c6b6b4e11fc40f6412"
+                "pixel_sha256": "7926869fc9c32160cb0fbafc6f3e20564738bb745843471a1ca2f03b4aeb7281"
               }
             },
             "fr": {
               "information": [
-                "Couronne Stellaire",
-                "175 cartes",
+                "Étincelles Déferlantes",
+                "252 cartes",
                 "Sortie",
-                "13 septembre 2024"
+                "8 novembre 2024"
               ],
               "title": {
                 "kind": "logo",
-                "pixel_sha256": "d9a3b1f73f6e579086d7710c492712dbd69d94a7696aca208a2ee9570fcc89a0"
+                "pixel_sha256": "b78d662f1b7b93e78cd9f4a374dca9e66c8fa0c889b6fb0210e86184efbe4b92"
               }
             },
             "it": {
               "information": [
-                "Corona Astrale",
-                "175 carte",
+                "Scintille Folgoranti",
+                "252 carte",
                 "Pubblicato",
-                "13 settembre 2024"
+                "8 novembre 2024"
               ],
               "title": {
                 "kind": "logo",
-                "pixel_sha256": "a73decad65b13f219ec03dbc6737b292c084b11236f7ddb6d10cc5b7256238bd"
+                "pixel_sha256": "8b4ca8bacfd7b70684f28d93d0e7087615187bc91e1a2541d4456f57159ebce5"
               }
             },
             "ja": {
               "information": [
-                "175 枚",
+                "252 枚",
                 "発売日",
-                "2024年9月13日"
+                "2024年11月8日"
               ],
               "title": {
                 "kind": "text",
                 "renderer": "direct_outlined_v1",
-                "value": "Stellar Crown"
+                "value": "Surging Sparks"
               }
             },
             "ko": {
               "information": [
-                "175 장",
+                "252 장",
                 "출시일",
-                "2024년 9월 13일"
+                "2024년 11월 8일"
               ],
               "title": {
                 "kind": "text",
                 "renderer": "direct_outlined_v1",
-                "value": "Stellar Crown"
+                "value": "Surging Sparks"
               }
             },
             "zh_hans": {
               "information": [
-                "175 张",
+                "252 张",
                 "发行日期",
-                "2024年9月13日"
+                "2024年11月8日"
               ],
               "title": {
                 "kind": "text",
                 "renderer": "direct_outlined_v1",
-                "value": "Stellar Crown"
+                "value": "Surging Sparks"
               }
             },
             "zh_hant": {
               "information": [
-                "175 張",
+                "252 張",
                 "發行日期",
-                "2024年9月13日"
+                "2024年11月8日"
               ],
               "title": {
                 "kind": "text",
                 "renderer": "direct_outlined_v1",
-                "value": "Stellar Crown"
+                "value": "Surging Sparks"
               }
             }
           },
           "layout_name": "standard_3x3",
           "logo_pixels": {
             "de": {
-              "height": 180,
+              "height": 360,
               "mode": "RGBA",
-              "pixel_sha256": "66f5956b529d1cb430f97511778ad9004bb1d0feb682532471a8d9e5c4a26161",
-              "width": 448
+              "pixel_sha256": "45f4dea3a4458e412ac7c6025ce749c7fdf98fb1f13e0484cf8e9c750d55d449",
+              "width": 896
             },
             "en": {
-              "height": 180,
+              "height": 360,
               "mode": "RGBA",
-              "pixel_sha256": "9cf628107a81349be61eecbea291ad50d32c6dbacf499b1a108dced6048b34dd",
-              "width": 448
+              "pixel_sha256": "5804d9bb63ebb011d3829f327c39b3d6d434db2facf6417e8bfbc1f3a194e19e",
+              "width": 896
             },
             "es": {
-              "height": 180,
+              "height": 360,
               "mode": "RGBA",
-              "pixel_sha256": "8db5633808f06ceea3fa7a1c2d78138317ec2f889ec322c6b6b4e11fc40f6412",
-              "width": 448
+              "pixel_sha256": "7926869fc9c32160cb0fbafc6f3e20564738bb745843471a1ca2f03b4aeb7281",
+              "width": 896
             },
             "fr": {
-              "height": 180,
+              "height": 360,
               "mode": "RGBA",
-              "pixel_sha256": "d9a3b1f73f6e579086d7710c492712dbd69d94a7696aca208a2ee9570fcc89a0",
-              "width": 448
+              "pixel_sha256": "b78d662f1b7b93e78cd9f4a374dca9e66c8fa0c889b6fb0210e86184efbe4b92",
+              "width": 896
             },
             "it": {
-              "height": 180,
+              "height": 360,
               "mode": "RGBA",
-              "pixel_sha256": "a73decad65b13f219ec03dbc6737b292c084b11236f7ddb6d10cc5b7256238bd",
-              "width": 448
+              "pixel_sha256": "8b4ca8bacfd7b70684f28d93d0e7087615187bc91e1a2541d4456f57159ebce5",
+              "width": 896
             }
           },
           "pipeline_contract": {
@@ -420,81 +427,90 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "45101ad6f395b86a80e954dbec8a3c6ab8cb591510995d005c02f6d82aa10668"
+        "sha256": "8617a736ce28e17718022874dcab049c6502257b798c0d92483cd0083ab5e198"
       },
       "prompt": {
-        "bytes": 5726,
-        "file": "tmp/poster-workspaces/SV07/comfyui_poster/individual_spatial_joint_prompt.generated.txt",
-        "sha256": "c89bfc2fd42effab9db69f0a757159f9def1690af57504e09b5847da599a5e8b"
+        "bytes": 6334,
+        "file": "tmp/render-jobs/v10-sv08-pikachu-clear-4b-spatial-seed-260912109/joint_scene_prompt.generated.txt",
+        "sha256": "9e7058f86b412196e31e387bf5950705f912ab6ce8a7e50fa32a888a2a25256d"
       },
       "references": [
         {
-          "bytes": 36691,
-          "file": "tmp/poster-workspaces/SV07/comfyui_poster/individual_spatial_reference_1.png",
+          "bytes": 65365,
+          "file": "tmp/poster-workspaces/SV08/comfyui_poster/joint_scene_cast_reference.png",
           "height": 832,
           "mode": "RGBA",
-          "pixel_sha256": "974c85b442122f71717054da49460bf0e46125ca70b7599d91d755a803988de3",
-          "sha256": "b589d1e80fb63ba393a5f7de3bd996c211f1d2bd8d6a4d121f65a8f459236c5d",
+          "pixel_sha256": "42dddaed70fa26219186a7df4ce94f37eae695428a4656982b5b32915f4abcee",
+          "sha256": "2ec837d6590f33a32d0d63ff443d555460e248434c0c88851e64509e37e7609f",
           "width": 608
         },
         {
-          "bytes": 29658,
-          "file": "tmp/poster-workspaces/SV07/comfyui_poster/individual_spatial_reference_2.png",
-          "height": 832,
+          "bytes": 128309,
+          "file": "tmp/poster-workspaces/SV08/comfyui_poster/identity_reference_1.png",
+          "height": 512,
           "mode": "RGBA",
-          "pixel_sha256": "32e3fe88022690404f9383f6bb47d144af1ecdecbfb0df13d51867fc684658f0",
-          "sha256": "42fedb7b70d491dbb7fed25f3bce4426c134c08160c20688c42c924ad3c26aa8",
-          "width": 608
+          "pixel_sha256": "d10f7f059a39aa5a2a1091a2bd0e3886cb51e67e5a0347e78a956dfb207a7a8c",
+          "sha256": "0d5982a899bb987ddd9361304b8933759111ba95a10b0af8186481f6e820fa79",
+          "width": 512
         },
         {
-          "bytes": 16606,
-          "file": "tmp/poster-workspaces/SV07/comfyui_poster/individual_spatial_reference_3.png",
-          "height": 832,
+          "bytes": 97957,
+          "file": "tmp/poster-workspaces/SV08/comfyui_poster/identity_reference_2.png",
+          "height": 512,
           "mode": "RGBA",
-          "pixel_sha256": "0d8d27144453970670118edad7c0a20c06ad0115e0b6e914af0536bd8d66957b",
-          "sha256": "b6d57d7231b33559f9d58cdddcc452503435a65e77debd8887d8568c180c4a67",
-          "width": 608
+          "pixel_sha256": "1e80b4d08bddbc5d6d9fb2e68f55df1ee2b9d69b7dd8a644ab0968cd8e2fdfca",
+          "sha256": "09da8d57778d3cb4e4d99f521283e40203c550d5f878e2d93dacb85ee511a1cf",
+          "width": 512
+        },
+        {
+          "bytes": 108656,
+          "file": "tmp/poster-workspaces/SV08/comfyui_poster/identity_reference_3.png",
+          "height": 512,
+          "mode": "RGBA",
+          "pixel_sha256": "a79256fef83b5559f126af582879d0f5ec657a4cb6dba3c3438d61b1100d99f3",
+          "sha256": "d1404eafb0a493052e4182b49ce954f2ae400fdeeda3f569db8428391de19b16",
+          "width": 512
         }
       ],
       "scope_manifest": {
-        "bytes": 2177,
-        "file": "config/posters/SV07/poster.yaml",
-        "sha256": "ac7526fead813b7b24d7d7094e88c347be60435370193307291c8869ab017c88"
+        "bytes": 2534,
+        "file": "config/posters/SV08/poster.yaml",
+        "sha256": "2201d6f6af0fcf1aa6c728638b33279ffdc5f2930993c979111b90bd2eee3191"
       },
       "workflow": {
-        "bytes": 9749,
-        "file": "tmp/poster-workspaces/SV07/comfyui_poster/workflow_api_joint_scene_individual_spatial_joint_1mp_260912007.json",
-        "sha256": "c278a8872d10f8d1d9837577b5662f2d85d259bc2b9838ece6d85543eeb7a765"
+        "bytes": 10958,
+        "file": "tmp/render-jobs/v10-sv08-pikachu-clear-4b-spatial-seed-260912109/workflow_api.json",
+        "sha256": "525ed314bb7db685c54431e4243872a0fa876c6a834e8eda90220c2609849c13"
       }
     },
     "kind": "poster_generation_run",
-    "poster_id": "SV07",
+    "poster_id": "SV08",
     "raw_artwork": {
-      "bytes": 1671273,
-      "file": "tmp/render-jobs/v10-sv07-seed-260912007/output/sv07_flux2_joint_scene_individual_spatial_1mp_seed_260912007_00001_.png",
+      "bytes": 1399554,
+      "file": "tmp/render-jobs/v10-sv08-pikachu-clear-4b-spatial-seed-260912109/output/sv08_flux2_joint_scene_1mp_seed_260912109_00001_.png",
       "height": 1168,
       "mode": "RGBA",
-      "pixel_sha256": "e912321c7fb885bb517cbda6f8fea3455aa9ee6db294898d66304e254c870065",
-      "sha256": "649b8976c1a032d646b21bc22aaf2a38916789ba128073ca40fe7f15af314720",
+      "pixel_sha256": "9d5f534dd96150ca80a06c5f5e04cf0e8cbee0d52e0361d5f81926a4c0b8944b",
+      "sha256": "038d4f2e3df89aa08644e57d9bb1bbd1649b386eed25fb74636bda62241dc73c",
       "width": 848
     },
     "schema_version": 1,
-    "scope": "SV07",
+    "scope": "SV08",
     "section_id": null,
     "source_artwork": {
-      "bytes": 7308673,
+      "bytes": 5386628,
       "dpi": [
         299.9994,
         299.9994
       ],
-      "file": "tmp/poster-workspaces/SV07/comfyui_poster/temp/sv07_flux2_joint_scene_individual_spatial_1mp_seed_260912007_to_300dpi.png",
+      "file": "tmp/render-jobs/v10-sv08-pikachu-clear-4b-spatial-seed-260912109/review/sv08_flux2_joint_scene_1mp_seed_260912109_00001__300dpi.png",
       "height": 3268,
       "mode": "RGBA",
-      "pixel_sha256": "183bf7a2cf41f8ce75c564d27f6d02b6cc7ecfc94bfe568aee262f343246b746",
-      "sha256": "876c1c23d1bd31ee832c419845e2f0469b069e0e596e7171b438246c56a4c8ef",
+      "pixel_sha256": "7a2ada1a736a9805c5d25f1c337c326038261a5382b4902c5068890a2ee238a2",
+      "sha256": "d931776dc062cc9f9db4b632fab658ce678ad6fe2afcc73d33e363f1e51fe7f8",
       "width": 2368
     },
-    "source_scope": "SV07",
+    "source_scope": "SV08",
     "validation": {
       "joint_scene_visual_review": {
         "approval_source": "explicit_promotion_flag",
@@ -510,37 +526,37 @@
           "natural_scene_integration",
           "coherent_landscape_occlusion"
         ],
-        "generation_fingerprint_sha256": "3800e5d3433bdabee20517843bfdb43354a254b0e25c69f1acc967240ad5941a",
+        "generation_fingerprint_sha256": "3946bcc5e72945854feb7fc7f69c0ae081fb6e86078a2db86b92237c027f040e",
         "method": "agent_identity_and_scene_review",
         "passed": true,
-        "raw_artwork_pixel_sha256": "e912321c7fb885bb517cbda6f8fea3455aa9ee6db294898d66304e254c870065",
-        "raw_artwork_sha256": "649b8976c1a032d646b21bc22aaf2a38916789ba128073ca40fe7f15af314720",
-        "reviewed_artwork_pixel_sha256": "183bf7a2cf41f8ce75c564d27f6d02b6cc7ecfc94bfe568aee262f343246b746",
-        "reviewed_artwork_sha256": "876c1c23d1bd31ee832c419845e2f0469b069e0e596e7171b438246c56a4c8ef",
-        "reviewed_at": "2026-09-12T11:39:40.061854+00:00",
+        "raw_artwork_pixel_sha256": "9d5f534dd96150ca80a06c5f5e04cf0e8cbee0d52e0361d5f81926a4c0b8944b",
+        "raw_artwork_sha256": "038d4f2e3df89aa08644e57d9bb1bbd1649b386eed25fb74636bda62241dc73c",
+        "reviewed_artwork_pixel_sha256": "7a2ada1a736a9805c5d25f1c337c326038261a5382b4902c5068890a2ee238a2",
+        "reviewed_artwork_sha256": "d931776dc062cc9f9db4b632fab658ce678ad6fe2afcc73d33e363f1e51fe7f8",
+        "reviewed_at": "2026-09-12T11:37:44.499590+00:00",
         "source_cutout_pixel_sha256": [
-          "f96cfeddc294c4efbbdf1b35cd816341d950e3051dec2128c03f652448b04d10",
-          "72949f5da5c7b8cf45d409ded073e210e1f7b27330d7625b993a3de4e584c2e1",
-          "f88fc484d3b27caaf14d4bb02b3e9df6dc534154404af128db1597fe5f8e609e"
+          "27c1eb01dc8b91b25c89dd2c948aafa26722d2b563e8c00728926b10ff077f4c",
+          "6f87f462a8639a983688199cd116cbbe580a356acf62ca1f46a4eb805a268d1e",
+          "e1100eee7248e696797b553f2151ad8e62c0eb83df473d0d9151cceb2e61c76c"
         ],
         "source_cutout_sha256": [
-          "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a",
-          "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290",
-          "0099f4bb576966efc872c03c69616f954c8474d12608a2fd7e91304a9d271167"
+          "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274",
+          "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b",
+          "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f"
         ],
         "source_subject_ids": [
-          1,
-          7,
-          813
+          250,
+          909,
+          25
         ],
         "stage": "raw_and_text_free_print_artwork"
       }
     }
   },
   "schema_version": 2,
-  "scope": "SV07",
+  "scope": "SV08",
   "section_id": null,
-  "source_scope": "SV07",
+  "source_scope": "SV08",
   "storage": {
     "derivatives": "regenerated_in_ignored_workspace",
     "durable_outputs": [

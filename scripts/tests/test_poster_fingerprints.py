@@ -803,8 +803,9 @@ def test_regional_joint_scene_input_records_do_not_include_a_cast(
     assert "source_pixel_audit_reference" not in records
 
 
-def test_joint_scene_human_review_is_bound_to_artwork_and_source_identities(
-    tmp_path,
+@pytest.mark.parametrize("reviewer_kind", ["human", "agent"])
+def test_joint_scene_review_is_bound_to_artwork_and_source_identities(
+    tmp_path, reviewer_kind,
 ):
     artwork_path = tmp_path / "artwork.png"
     raw_artwork_path = tmp_path / "raw.png"
@@ -865,8 +866,10 @@ def test_joint_scene_human_review_is_bound_to_artwork_and_source_identities(
         run,
         artwork_path=artwork_path,
         raw_artwork_path=raw_artwork_path,
+        reviewer_kind=reviewer_kind,
     )
 
+    assert record["method"] == f"{reviewer_kind}_identity_and_scene_review"
     assert record["passed"] is True
     assert record["criteria"] == list(JOINT_SCENE_REVIEW_CRITERIA)
     assert record["reviewed_artwork_sha256"] == artwork_record["sha256"]
@@ -893,6 +896,7 @@ def test_joint_scene_human_review_is_bound_to_artwork_and_source_identities(
             missing_raw_digest,
             artwork_path=artwork_path,
             raw_artwork_path=raw_artwork_path,
+            reviewer_kind=reviewer_kind,
         )
 
     stale_cutout_pixels = copy.deepcopy(run)
@@ -902,7 +906,24 @@ def test_joint_scene_human_review_is_bound_to_artwork_and_source_identities(
             stale_cutout_pixels,
             artwork_path=artwork_path,
             raw_artwork_path=raw_artwork_path,
+            reviewer_kind=reviewer_kind,
         )
+
+    for invalid_kind in (None, "", "automated"):
+        with pytest.raises(ValueError, match="reviewer kind"):
+            approve_joint_scene_visual_review(
+                copy.deepcopy(run),
+                artwork_path=artwork_path,
+                raw_artwork_path=raw_artwork_path,
+                reviewer_kind=invalid_kind,
+            )
+
+    unknown_review = copy.deepcopy(run)
+    unknown_review["validation"][JOINT_SCENE_REVIEW_KEY]["method"] = (
+        "automated_identity_and_scene_review"
+    )
+    with pytest.raises(ValueError, match="incomplete or stale"):
+        require_joint_scene_visual_review(unknown_review)
 
     run["source_artwork"]["sha256"] = "f" * 64
     with pytest.raises(ValueError, match="incomplete or stale"):
@@ -918,7 +939,7 @@ def test_joint_scene_human_review_is_bound_to_artwork_and_source_identities(
         )
 
 
-def test_joint_scene_cannot_promote_without_explicit_human_review():
+def test_joint_scene_cannot_promote_without_explicit_visual_review():
     with pytest.raises(ValueError, match="lacks explicit visual identity"):
         require_joint_scene_visual_review(
             {
@@ -1432,9 +1453,11 @@ def _promotion_fixture(
     )
 
 
+@pytest.mark.parametrize("reviewer_kind", ["human", "agent"])
 def test_joint_scene_requires_review_then_promotes_and_validates(
     tmp_path,
     monkeypatch,
+    reviewer_kind,
 ):
     generation = copy.deepcopy(_manifest()["artwork"]["generation"])
     generation.update(
@@ -1470,10 +1493,17 @@ def test_joint_scene_requires_review_then_promotes_and_validates(
             run_metadata_path=run_metadata,
         )
 
+    with pytest.raises(ValueError, match="reviewer kind"):
+        promotion.promote(
+            "Example", candidate, approve_joint_scene=True,
+            run_metadata_path=run_metadata,
+        )
+
     artwork, _preview, _cards, provenance_path = promotion.promote(
         "Example",
         candidate,
         approve_joint_scene=True,
+        reviewer_kind=reviewer_kind,
         run_metadata_path=run_metadata,
     )
     promoted = load_json(provenance_path)
@@ -1484,7 +1514,7 @@ def test_joint_scene_requires_review_then_promotes_and_validates(
     result = validator.validate("Example")
     assert result["generation_fingerprint_current"] is True
     assert result["identity_validation_method"] == (
-        "human_identity_and_scene_review"
+        f"{reviewer_kind}_identity_and_scene_review"
     )
 
     promoted["run"]["inputs"].pop("generation_fingerprint")
