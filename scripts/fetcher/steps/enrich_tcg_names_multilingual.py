@@ -30,6 +30,46 @@ from lib.tcg_card_overrides import (
 
 logger = logging.getLogger(__name__)
 
+CURATED_LOGO_SOURCES_PATH = (
+    Path(__file__).resolve().parents[3]
+    / 'enrichments'
+    / 'tcg_set_logo_sources.json'
+)
+
+
+def load_curated_logo_sources(
+    path: Path = CURATED_LOGO_SOURCES_PATH,
+) -> Dict[str, Dict[str, str]]:
+    """Load reviewed, exact-language set-logo sources."""
+    payload = json.loads(path.read_text(encoding='utf-8'))
+    if payload.get('schema_version') != 1:
+        raise ValueError(f"Unsupported set-logo source schema: {path}")
+    sets = payload.get('sets')
+    if not isinstance(sets, dict):
+        raise ValueError(f"Set-logo sources must contain a sets mapping: {path}")
+
+    result = {}
+    for set_id, languages in sets.items():
+        if not isinstance(set_id, str) or set_id != set_id.casefold():
+            raise ValueError(f"Set-logo source key must be lowercase: {set_id!r}")
+        if not isinstance(languages, dict) or not languages:
+            raise ValueError(f"Set-logo source languages must be a mapping: {set_id}")
+        result[set_id] = {}
+        for language, source in languages.items():
+            if not isinstance(language, str) or language not in {
+                'de', 'en', 'fr', 'es', 'it', 'ja', 'ko',
+                'zh_hans', 'zh_hant',
+            }:
+                raise ValueError(
+                    f"Unsupported set-logo language {language!r}: {set_id}"
+                )
+            if not isinstance(source, str) or not source.startswith('https://'):
+                raise ValueError(
+                    f"Set-logo source must be an HTTPS URL: {set_id}/{language}"
+                )
+            result[set_id][language] = source
+    return result
+
 
 class EnrichTCGNamesMultilingualStep(BaseStep):
     """
@@ -184,7 +224,7 @@ class EnrichTCGNamesMultilingualStep(BaseStep):
         elapsed = time.time() - start_time
         logger.info(f"✅ Fetched all languages in {elapsed:.1f}s ({len(self.LANGUAGES)} API calls)")
         
-        # If no logo URLs were found, check for local fallback logo
+        # If no logo URLs were found, check for a language-neutral local logo.
         if not logo_urls:
             local_logo = self._check_local_logo(set_id)
             if local_logo:
@@ -192,17 +232,27 @@ class EnrichTCGNamesMultilingualStep(BaseStep):
                 # Add local logo for all available languages
                 for lang in available_languages:
                     logo_urls[lang] = local_logo
-        # If we have logo URLs but not for all available languages, try to generate them
+        # If we have logo URLs but not for all available languages, probe only
+        # the matching-language paths.  Never label an English logo as German.
         elif len(logo_urls) < len(available_languages):
             logo_urls = self._generate_missing_logo_urls(logo_urls, available_languages)
+
+        # Reviewed official sources override incomplete or incorrect upstream
+        # metadata for their exact language only.
+        curated_sources = load_curated_logo_sources().get(set_id.casefold(), {})
+        for language, source in curated_sources.items():
+            if language in available_languages:
+                logo_urls[language] = source
         
         return names_by_card, set_names, logo_urls, available_languages
     
     def _generate_missing_logo_urls(self, logo_urls: Dict[str, str], 
                                      available_languages: List[str]) -> Dict[str, str]:
         """
-        Generate logo URLs for missing languages by replacing language code in existing URL.
-        Validates each URL with a HEAD request and falls back to English if unavailable.
+        Probe exact-language logo URLs by replacing the language path segment.
+
+        A failed probe remains absent.  Cross-language logo fallback is
+        forbidden because it produces linguistically incorrect products.
         
         For example, if we have 'it': 'https://assets.tcgdex.net/it/me/me02.5/logo.png',
         we can generate 'de': 'https://assets.tcgdex.net/de/me/me02.5/logo.png'.
@@ -217,52 +267,33 @@ class EnrichTCGNamesMultilingualStep(BaseStep):
         if not logo_urls:
             return logo_urls
         
-        # Take the first available logo URL as template
-        template_lang = list(logo_urls.keys())[0]
-        template_url = logo_urls[template_lang]
+        resolved_logo_urls = dict(logo_urls)
+
+        # Take the first available logo URL as a path template.
+        template_lang = list(resolved_logo_urls.keys())[0]
+        template_url = resolved_logo_urls[template_lang]
         
         logger.info(f"🔧 Generating missing logo URLs from template ({template_lang}): {template_url}")
         
-        # Try to find English URL as fallback (either existing or generated)
-        fallback_url = None
-        if 'en' in logo_urls:
-            fallback_url = logo_urls['en']
-        else:
-            # Generate English URL as potential fallback
-            fallback_url = template_url.replace(f'/{template_lang}/', '/en/')
-            # Validate English URL
-            if self._validate_url(fallback_url):
-                logger.info(f"   ℹ️  Using English as fallback: {fallback_url}")
-            else:
-                fallback_url = None  # English doesn't exist either
-        
         generated_count = 0
-        fallback_count = 0
         
         for lang in available_languages:
-            if lang not in logo_urls:
+            if lang not in resolved_logo_urls:
                 # Replace language code in URL (e.g., /it/ -> /de/)
                 generated_url = template_url.replace(f'/{template_lang}/', f'/{lang}/')
                 
                 # Validate URL with HEAD request
                 if self._validate_url(generated_url):
-                    logo_urls[lang] = generated_url
+                    resolved_logo_urls[lang] = generated_url
                     logger.info(f"   ✓ Validated {lang}: {generated_url}")
                     generated_count += 1
-                elif fallback_url and lang != 'en':
-                    # Use English as fallback
-                    logo_urls[lang] = fallback_url
-                    logger.info(f"   → Fallback {lang}: {fallback_url} (404 for lang-specific URL)")
-                    fallback_count += 1
                 else:
                     logger.warning(f"   ✗ Skipped {lang}: URL not available (404)")
         
         if generated_count > 0:
             logger.info(f"✅ Generated {generated_count} logo URLs")
-        if fallback_count > 0:
-            logger.info(f"📎 Used English fallback for {fallback_count} languages")
         
-        return logo_urls
+        return resolved_logo_urls
     
     def _check_local_logo(self, set_id: str) -> str:
         """

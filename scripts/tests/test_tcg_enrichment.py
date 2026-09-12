@@ -17,6 +17,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent / 'fetcher'))
 
 from steps.enrich_tcg_cards_from_pokedex import EnrichTCGCardsFromPokedexStep
 from steps.enrich_tcg_names_multilingual import EnrichTCGNamesMultilingualStep
+from steps import enrich_tcg_names_multilingual as multilingual_module
 
 
 class TestVariantMarkerExtraction:
@@ -409,6 +410,34 @@ class TestMultilingualCardAvailability:
 
         assert result['available_languages'] == ['de', 'en', 'fr', 'zh_hans']
         assert result['printed_number'] == '189'
+
+
+class TestLocalizedSetLogos:
+    """Set logos may never cross language boundaries implicitly."""
+
+    def setup_method(self):
+        self.step = EnrichTCGNamesMultilingualStep("test_logos")
+
+    def test_missing_german_logo_never_uses_english_url(self, monkeypatch):
+        monkeypatch.setattr(self.step, "_validate_url", lambda _url: False)
+        english_url = "https://assets.example/en/sv10.5b/logo.png"
+
+        result = self.step._generate_missing_logo_urls(
+            {"en": english_url},
+            ["de", "en"],
+        )
+
+        assert result == {"en": english_url}
+
+    def test_curated_german_logos_use_official_localized_assets(self):
+        logos = multilingual_module.load_curated_logo_sources()
+
+        assert logos["sv10.5b"]["de"].endswith(
+            "/sv10pt5/blk/sv10pt5_logo_169_de.png"
+        )
+        assert logos["sv10.5w"]["de"].endswith(
+            "/sv10pt5/wht/sv10pt5_logo_169_de.png"
+        )
 
 
 class TestPokemonIndexBuilding:

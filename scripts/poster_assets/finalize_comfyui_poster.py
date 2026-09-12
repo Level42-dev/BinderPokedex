@@ -148,14 +148,11 @@ def draw_title_logo(canvas: Image.Image, cell, logo_path: Path) -> None:
 
 
 def title_logo_file(manifest: dict, language: str) -> str | None:
-    """Resolve a localized title logo with an English/default fallback."""
+    """Resolve only a title logo explicitly configured for this language."""
     config = manifest.get("title_logo", {})
     files = config.get("files")
     if isinstance(files, dict):
-        return files.get(language) or files.get("en") or next(
-            (value for value in files.values() if value),
-            None,
-        )
+        return files.get(language)
     return config.get("file")
 
 
