@@ -32,7 +32,7 @@ artwork:
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
     reference_mode: individual_spatial_joint
-    seed: 260726008
+    seed: 260912007
     steps: 4
     generation_megapixels: 1.0
     output_dpi: 300

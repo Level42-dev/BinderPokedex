@@ -43,6 +43,13 @@ def test_me05_has_an_enabled_poster_target():
     manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
     assert manifest["scope"] == "ME05"
     assert manifest["pdf"]["enabled"] is True
+
+
+def test_sv07_rejects_the_known_three_ear_candidate_seed():
+    manifest_path = ROOT / "config" / "posters" / "SV07" / "poster.yaml"
+    manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+
+    assert manifest["artwork"]["generation"]["seed"] != 260726008
 POSTER_CONFIG_ROOT = POSTER_CONFIGS
 
 
