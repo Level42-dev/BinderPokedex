@@ -38,6 +38,24 @@ The Data Fetcher is a config-driven, step-based system for fetching and processi
 **US5: Manuelle Anpassungen erhalten**
 - Nur API-generierte Daten werden aktualisiert
 
+## Canonical reviewed refresh
+
+Release builds never fetch mutable API data. A maintainer refreshes and reviews
+the complete snapshot in one ordered path before committing it:
+
+```bash
+python scripts/fetcher/fetch.py --scope all
+python scripts/data/audit_data_refresh.py --baseline-ref HEAD --output tmp/v10-data-refresh-audit.json
+python scripts/data/build_snapshot_manifest.py --boundary 2026-09-12 --output data/snapshot.json
+python scripts/release/verify_data_snapshot.py --manifest data/snapshot.json
+```
+
+The audit records additions, removals, localized field changes and metadata
+changes per file. Duplicate card identities, duplicate printed numbers within a
+language, and localized names that were not observed for that card are blocking
+errors. Review the complete audit before rebuilding the manifest; do not edit
+generated JSON around a failed fetch.
+
 ## Architecture: Fetcher Pattern
 
 **Implementation**: Config → Fetcher Steps → Target

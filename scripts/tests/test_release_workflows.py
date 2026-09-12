@@ -55,6 +55,13 @@ def test_reusable_release_build_only_creates_a_candidate_artifact():
     assert "softprops/action-gh-release" not in source
 
 
+def test_release_build_uses_verified_snapshot_instead_of_mutable_fetch():
+    source = (WORKFLOWS / "build-release.yml").read_text(encoding="utf-8")
+
+    assert "fetch.py --scope all" not in source
+    assert "verify_data_snapshot.py" in source
+
+
 def test_tag_release_reuses_candidate_build_before_publishing():
     workflow = _load_workflow("release.yml")
     source = (WORKFLOWS / "release.yml").read_text(encoding="utf-8")
