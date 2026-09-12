@@ -1,6 +1,6 @@
 {
   "boundary": "2026-09-12",
-  "fetched_at": "2026-09-12T01:45:38Z",
+  "fetched_at": "2026-09-12T02:09:58Z",
   "file_count": 63,
   "files": [
     {
@@ -60,8 +60,8 @@
     },
     {
       "path": "data/output/ME05.json",
-      "sha256": "83d29c4b7e7a7a204ffadd7ad297da022ca20466a448d91427ec819bcb1bbbfd",
-      "size_bytes": 85118
+      "sha256": "07dee751625a950c6908aa83702664e7217673ea2f23d75d156662b3abf17ab7",
+      "size_bytes": 85111
     },
     {
       "path": "data/output/MEP.json",
@@ -200,7 +200,7 @@
     },
     {
       "path": "data/source/me05.json",
-      "sha256": "bb7a930b883f060726eb86e9637580de8b338013492eeea1b1f5f6431b4698a1",
+      "sha256": "506b48e8e49db58d64aebe9f31bb58727489abc3532208ffe891e44c6cd8f8a2",
       "size_bytes": 33665
     },
     {

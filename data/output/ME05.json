@@ -3075,20 +3075,20 @@
           }
         },
         {
-          "pokemon_id": 1008,
-          "pokemon_name": "Miraidon",
-          "card_id": "me05-028",
+          "pokemon_id": 877,
+          "pokemon_name": "Morpeko",
+          "card_id": "me05-055",
           "set_name": "Pitch Black",
-          "image_url": "https://assets.tcgdex.net/en/me/me05/028/high.png",
-          "local_image_path": "data/section_artwork/pokemon_1008_me05-028.png",
+          "image_url": "https://assets.tcgdex.net/en/me/me05/055/high.png",
+          "local_image_path": "data/section_artwork/pokemon_877_me05-055.png",
           "rarity": null,
           "hp": null,
           "poster_subject": {
             "source": "pokeapi_official_artwork",
-            "species_id": 1008,
-            "official_artwork_id": 1008,
-            "subject_key": "pokeapi:official-artwork:1008",
-            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1008.png"
+            "species_id": 877,
+            "official_artwork_id": 877,
+            "subject_key": "pokeapi:official-artwork:877",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/877.png"
           }
         },
         {

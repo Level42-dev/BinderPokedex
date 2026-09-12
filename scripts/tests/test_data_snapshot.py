@@ -241,6 +241,19 @@ def test_trainer_owned_name_stays_in_tcg_set_but_not_pokedex():
     assert zoroark_pokedex["name"]["de"] == "Zoroark"
 
 
+def test_me05_uses_render_safe_curated_featured_cards():
+    featured = _load_output_scope("ME05")["sections"]["all"][
+        "featured_elements"
+    ]
+
+    assert [item["card_id"] for item in featured] == [
+        "me05-018",
+        "me05-055",
+        "me05-040",
+    ]
+    assert [item["pokemon_id"] for item in featured] == [728, 877, 802]
+
+
 @pytest.mark.parametrize("scope_name", ("ME02.5", "ME03", "ME04", "ME05"))
 def test_mega_scopes_do_not_retain_obsolete_missing_dex_id_workaround(scope_name):
     source = json.loads(
