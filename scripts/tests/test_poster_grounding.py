@@ -204,6 +204,44 @@ def test_build_masks_use_inverse_alpha_and_exclude_every_visible_source_pixel(
         ).hexdigest()
 
 
+def test_positive_feather_starts_at_zero_and_rises_inward_without_a_seam(
+    tmp_path: Path,
+):
+    source = Image.new("RGBA", (21, 21), (0, 0, 0, 0))
+    source.putpixel((10, 10), (255, 0, 0, 1))
+    _grounding().build_grounding_masks(
+        100,
+        100,
+        [_placement(image=source)],
+        _manifest(feather_ratio=0.02),
+        tmp_path,
+    )
+
+    mask = Image.open(tmp_path / "grounding_mask.png").convert("RGBA")
+    # A two-pixel inward ramp is hand-derived as 0, 128, 255 edit weight.
+    edit_weights = [255 - mask.getpixel((x, 80))[3] for x in (40, 41, 42)]
+    assert edit_weights == [0, 128, 255]
+    assert edit_weights == sorted(edit_weights)
+    # The alpha=1 source pixel stays protected even in the full-weight interior.
+    assert 255 - mask.getpixel((50, 80))[3] == 0
+
+
+def test_zero_feather_uses_the_binary_sampling_mask(tmp_path: Path):
+    _grounding().build_grounding_masks(
+        100,
+        100,
+        [_placement()],
+        _manifest(feather_ratio=0),
+        tmp_path,
+    )
+
+    feather = Image.open(tmp_path / "grounding_mask.png").convert("RGBA")
+    sampling = Image.open(tmp_path / "grounding_sampling_mask.png").convert(
+        "RGBA"
+    )
+    assert feather.tobytes() == sampling.tobytes()
+
+
 def test_build_masks_resolves_exact_form_subject_identity(tmp_path: Path):
     subject = PosterSubject(6, 10034)
     region = _region(subject.subject_key)
@@ -271,6 +309,24 @@ def test_build_masks_rejects_source_coverage_that_leaves_no_editable_ground(
             100,
             [_placement(image=source, x=0, y=0)],
             _manifest(),
+            tmp_path,
+        )
+
+
+def test_build_masks_rejects_anchor_rounded_outside_its_region_raster(
+    tmp_path: Path,
+):
+    region = _region(
+        polygon=[[0.12, 0.507], [0.779, 0.46], [0.483, 0.667]],
+        anchors=[[0.4495, 0.4835]],
+    )
+
+    with pytest.raises(ValueError, match="anchor.*raster"):
+        _grounding().build_grounding_masks(
+            1280,
+            720,
+            [_placement()],
+            _manifest(region),
             tmp_path,
         )
 

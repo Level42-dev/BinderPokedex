@@ -7,7 +7,7 @@ import math
 from pathlib import Path
 from typing import Any
 
-from PIL import Image, ImageChops, ImageDraw, ImageFilter
+from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageOps
 
 try:
     from .poster_subject import resolve_poster_subject
@@ -235,6 +235,12 @@ def _inverse_alpha_rgba(editable: Image.Image) -> Image.Image:
     return result
 
 
+def _erode_binary(image: Image.Image) -> Image.Image:
+    padded = ImageOps.expand(image, border=1, fill=0)
+    eroded = padded.filter(ImageFilter.MinFilter(3))
+    return eroded.crop((1, 1, image.width + 1, image.height + 1))
+
+
 def build_grounding_masks(
     width: int,
     height: int,
@@ -291,19 +297,30 @@ def build_grounding_masks(
         )
 
     polygon_union = Image.new("L", (width, height), 0)
-    draw = ImageDraw.Draw(polygon_union)
     anchor_pixels = []
     for region in config["regions"]:
         polygon_pixels = [
             _pixel_point(point, width, height) for point in region["polygon"]
         ]
-        draw.polygon(polygon_pixels, fill=255)
+        region_raster = Image.new("L", (width, height), 0)
+        ImageDraw.Draw(region_raster).polygon(polygon_pixels, fill=255)
+        region_anchor_pixels = [
+            _pixel_point(anchor, width, height) for anchor in region["anchors"]
+        ]
+        if any(
+            region_raster.getpixel(anchor) == 0
+            for anchor in region_anchor_pixels
+        ):
+            raise ValueError(
+                f"Grounding anchor for {region['subject_key']} lies outside "
+                "its region raster after coordinate rounding"
+            )
+        polygon_union = ImageChops.lighter(polygon_union, region_raster)
         anchor_pixels.append(
             {
                 "subject_key": region["subject_key"],
                 "pixels": [
-                    list(_pixel_point(anchor, width, height))
-                    for anchor in region["anchors"]
+                    list(anchor) for anchor in region_anchor_pixels
                 ],
             }
         )
@@ -316,10 +333,16 @@ def build_grounding_masks(
     if allowed.getbbox() is None:
         raise ValueError("Grounding masks leave no editable ground")
     radius = min(width, height) * config["feather_ratio"]
-    feathered = ImageChops.multiply(
-        polygon_union.filter(ImageFilter.GaussianBlur(radius)),
-        polygon_union,
-    )
+    feathered = polygon_union.copy()
+    if radius > 0:
+        feathered = Image.new("L", polygon_union.size, 0)
+        inner = polygon_union.copy()
+        steps = max(1, math.ceil(radius))
+        for step in range(1, steps + 1):
+            inner = _erode_binary(inner)
+            level = round(255 * step / steps)
+            layer = inner.point(lambda value: level if value else 0)
+            feathered = ImageChops.lighter(feathered, layer)
     editable = ImageChops.multiply(feathered, inverse_source)
     if editable.getbbox() is None:
         raise ValueError("Grounding masks leave no editable ground")
