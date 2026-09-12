@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "SV10.5W",
-  "promoted_at": "2026-08-06T23:55:08.153609+00:00",
+  "promoted_at": "2026-09-12T03:12:13.456835+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T19:03:48.701454+00:00",
@@ -268,7 +268,7 @@
               ],
               "title": {
                 "kind": "logo",
-                "pixel_sha256": "0d0548f6bd5724ad8fce0132e3fbc574fbc01ebb6dd3b71cb6c93fac4129d70b"
+                "pixel_sha256": "c4b50e0a6a6702718e3affc11d6a98a962d8e5f993ad35353138d6f7711d9a24"
               }
             },
             "en": {
@@ -285,14 +285,14 @@
             },
             "es": {
               "information": [
-                "Llama Blanca",
                 "173 cartas",
                 "Publicado",
                 "17 julio 2025"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "0d0548f6bd5724ad8fce0132e3fbc574fbc01ebb6dd3b71cb6c93fac4129d70b"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Llama Blanca"
               }
             },
             "fr": {
@@ -309,80 +309,74 @@
             },
             "it": {
               "information": [
-                "Fuoco Bianco",
                 "173 carte",
                 "Pubblicato",
                 "17 luglio 2025"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "0d0548f6bd5724ad8fce0132e3fbc574fbc01ebb6dd3b71cb6c93fac4129d70b"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Fuoco Bianco"
               }
             },
             "ja": {
               "information": [
-                "White Flare",
                 "173 枚",
                 "発売日",
                 "2025年7月17日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "0d0548f6bd5724ad8fce0132e3fbc574fbc01ebb6dd3b71cb6c93fac4129d70b"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "White Flare"
               }
             },
             "ko": {
               "information": [
-                "White Flare",
                 "173 장",
                 "출시일",
                 "2025년 7월 17일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "0d0548f6bd5724ad8fce0132e3fbc574fbc01ebb6dd3b71cb6c93fac4129d70b"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "White Flare"
               }
             },
             "zh_hans": {
               "information": [
-                "White Flare",
                 "173 张",
                 "发行日期",
                 "2025年7月17日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "0d0548f6bd5724ad8fce0132e3fbc574fbc01ebb6dd3b71cb6c93fac4129d70b"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "White Flare"
               }
             },
             "zh_hant": {
               "information": [
-                "White Flare",
                 "173 張",
                 "發行日期",
                 "2025年7月17日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "0d0548f6bd5724ad8fce0132e3fbc574fbc01ebb6dd3b71cb6c93fac4129d70b"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "White Flare"
               }
             }
           },
           "layout_name": "standard_3x3",
           "logo_pixels": {
             "de": {
-              "height": 274,
+              "height": 327,
               "mode": "RGBA",
-              "pixel_sha256": "0d0548f6bd5724ad8fce0132e3fbc574fbc01ebb6dd3b71cb6c93fac4129d70b",
-              "width": 448
+              "pixel_sha256": "c4b50e0a6a6702718e3affc11d6a98a962d8e5f993ad35353138d6f7711d9a24",
+              "width": 578
             },
             "en": {
-              "height": 274,
-              "mode": "RGBA",
-              "pixel_sha256": "0d0548f6bd5724ad8fce0132e3fbc574fbc01ebb6dd3b71cb6c93fac4129d70b",
-              "width": 448
-            },
-            "es": {
               "height": 274,
               "mode": "RGBA",
               "pixel_sha256": "0d0548f6bd5724ad8fce0132e3fbc574fbc01ebb6dd3b71cb6c93fac4129d70b",
@@ -393,36 +387,6 @@
               "mode": "RGBA",
               "pixel_sha256": "d56664d6e21d77912697fecbdfd53b1eed3014bf14e8364d1e523af86b01a496",
               "width": 467
-            },
-            "it": {
-              "height": 274,
-              "mode": "RGBA",
-              "pixel_sha256": "0d0548f6bd5724ad8fce0132e3fbc574fbc01ebb6dd3b71cb6c93fac4129d70b",
-              "width": 448
-            },
-            "ja": {
-              "height": 274,
-              "mode": "RGBA",
-              "pixel_sha256": "0d0548f6bd5724ad8fce0132e3fbc574fbc01ebb6dd3b71cb6c93fac4129d70b",
-              "width": 448
-            },
-            "ko": {
-              "height": 274,
-              "mode": "RGBA",
-              "pixel_sha256": "0d0548f6bd5724ad8fce0132e3fbc574fbc01ebb6dd3b71cb6c93fac4129d70b",
-              "width": 448
-            },
-            "zh_hans": {
-              "height": 274,
-              "mode": "RGBA",
-              "pixel_sha256": "0d0548f6bd5724ad8fce0132e3fbc574fbc01ebb6dd3b71cb6c93fac4129d70b",
-              "width": 448
-            },
-            "zh_hant": {
-              "height": 274,
-              "mode": "RGBA",
-              "pixel_sha256": "0d0548f6bd5724ad8fce0132e3fbc574fbc01ebb6dd3b71cb6c93fac4129d70b",
-              "width": 448
             }
           },
           "pipeline_contract": {
@@ -444,7 +408,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "31a56df3d0002bbb4df89f11b8318967ace17473faa963660462c297cabaaefb"
+        "sha256": "0b41a265c0dc3e1be82592ee8b18860f6573c00897b55264a1185d65b825fd60"
       },
       "prompt": {
         "bytes": 5707,

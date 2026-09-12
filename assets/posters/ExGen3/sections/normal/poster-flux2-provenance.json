@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "normal",
-  "promoted_at": "2026-08-06T23:50:02.706632+00:00",
+  "promoted_at": "2026-09-12T03:08:42.168949+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T18:24:29.895805+00:00",
@@ -246,7 +246,7 @@
             "de": {
               "information": [
                 "Moderne Pokémon-ex-Ära (seit 2023)",
-                "192 Pokémon",
+                "220 Pokémon",
                 "2023–heute • Pokémon ex ohne Mega-Entwicklung"
               ],
               "title": {
@@ -259,7 +259,7 @@
             "en": {
               "information": [
                 "Modern Pokémon ex era (since 2023)",
-                "192 Pokémon",
+                "220 Pokémon",
                 "2023–present • non-Mega Pokémon ex"
               ],
               "title": {
@@ -272,7 +272,7 @@
             "es": {
               "information": [
                 "Era moderna de Pokémon ex (desde 2023)",
-                "192 Pokémon",
+                "220 Pokémon",
                 "2023–presente • Pokémon ex sin Megaevolución"
               ],
               "title": {
@@ -285,7 +285,7 @@
             "fr": {
               "information": [
                 "Ère moderne des Pokémon ex (depuis 2023)",
-                "192 Pokémon",
+                "220 Pokémon",
                 "2023–aujourd’hui • Pokémon ex hors Méga-Évolution"
               ],
               "title": {
@@ -298,7 +298,7 @@
             "it": {
               "information": [
                 "Era moderna dei Pokémon ex (dal 2023)",
-                "192 Pokémon",
+                "220 Pokémon",
                 "2023–presente • Pokémon ex non megaevoluti"
               ],
               "title": {
@@ -311,7 +311,7 @@
             "ja": {
               "information": [
                 "現代のポケモン ex 時代（2023年～）",
-                "192 ポケモン",
+                "220 ポケモン",
                 "2023年～ • メガシンカ以外のポケモンex"
               ],
               "title": {
@@ -324,7 +324,7 @@
             "ko": {
               "information": [
                 "현대 포켓몬 ex 시대 (2023년~)",
-                "192 포켓몬",
+                "220 포켓몬",
                 "2023년~ • 메가진화가 아닌 포켓몬 ex"
               ],
               "title": {
@@ -337,7 +337,7 @@
             "zh_hans": {
               "information": [
                 "现代宝可梦 ex 时代（2023年至今）",
-                "192 宝可梦",
+                "220 宝可梦",
                 "2023年至今 • 非超级进化宝可梦ex"
               ],
               "title": {
@@ -350,7 +350,7 @@
             "zh_hant": {
               "information": [
                 "現代寶可夢 ex 時代（2023年至今）",
-                "192 寶可夢",
+                "220 寶可夢",
                 "2023年至今 • 非超級進化寶可夢ex"
               ],
               "title": {
@@ -391,7 +391,7 @@
           }
         },
         "schema_version": 1,
-        "sha256": "58834727b8c265c3196838344868579b8ad3f5d3391f76d4bcee2c20e3bd01b0"
+        "sha256": "2198d6a84d8aefdf56b3b6e9aedd97def1735ab27140f8b086b03db7a3874382"
       },
       "prompt": {
         "bytes": 6060,

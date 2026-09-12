@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "ME04",
-  "promoted_at": "2026-08-06T23:50:55.864152+00:00",
+  "promoted_at": "2026-09-12T03:09:39.716333+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T18:31:48.393911+00:00",
@@ -321,50 +321,50 @@
             },
             "ja": {
               "information": [
-                "Chaos Rising",
                 "122 枚",
                 "発売日",
                 "2026年5月22日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "80258f0ef6917967f24f8caf07b114aa56420e423e47d21b1b66a1fcca29b2d7"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Chaos Rising"
               }
             },
             "ko": {
               "information": [
-                "Chaos Rising",
                 "122 장",
                 "출시일",
                 "2026년 5월 22일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "80258f0ef6917967f24f8caf07b114aa56420e423e47d21b1b66a1fcca29b2d7"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Chaos Rising"
               }
             },
             "zh_hans": {
               "information": [
-                "Chaos Rising",
                 "122 张",
                 "发行日期",
                 "2026年5月22日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "80258f0ef6917967f24f8caf07b114aa56420e423e47d21b1b66a1fcca29b2d7"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Chaos Rising"
               }
             },
             "zh_hant": {
               "information": [
-                "Chaos Rising",
                 "122 張",
                 "發行日期",
                 "2026年5月22日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "80258f0ef6917967f24f8caf07b114aa56420e423e47d21b1b66a1fcca29b2d7"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Chaos Rising"
               }
             }
           },
@@ -399,30 +399,6 @@
               "mode": "RGBA",
               "pixel_sha256": "191ff8dad61f6e358aab866ff76b47ed8a0620117e5f9a891a82de3f9bdebbb4",
               "width": 732
-            },
-            "ja": {
-              "height": 210,
-              "mode": "RGBA",
-              "pixel_sha256": "80258f0ef6917967f24f8caf07b114aa56420e423e47d21b1b66a1fcca29b2d7",
-              "width": 732
-            },
-            "ko": {
-              "height": 210,
-              "mode": "RGBA",
-              "pixel_sha256": "80258f0ef6917967f24f8caf07b114aa56420e423e47d21b1b66a1fcca29b2d7",
-              "width": 732
-            },
-            "zh_hans": {
-              "height": 210,
-              "mode": "RGBA",
-              "pixel_sha256": "80258f0ef6917967f24f8caf07b114aa56420e423e47d21b1b66a1fcca29b2d7",
-              "width": 732
-            },
-            "zh_hant": {
-              "height": 210,
-              "mode": "RGBA",
-              "pixel_sha256": "80258f0ef6917967f24f8caf07b114aa56420e423e47d21b1b66a1fcca29b2d7",
-              "width": 732
             }
           },
           "pipeline_contract": {
@@ -444,7 +420,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "2fafc2968f24b6214ca5966d6897e626a176fb47a5fcdef943ea0ce5ffe258e3"
+        "sha256": "0d055e5fd5b6cd62e98b500f64816013164a2ac76c5ae540d2f8f6da9b1dad0f"
       },
       "prompt": {
         "bytes": 5716,

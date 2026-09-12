@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "SV10.5B",
-  "promoted_at": "2026-08-06T23:54:56.772051+00:00",
+  "promoted_at": "2026-09-12T03:12:02.381795+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T19:02:34.694364+00:00",
@@ -268,7 +268,7 @@
               ],
               "title": {
                 "kind": "logo",
-                "pixel_sha256": "bdccfb8bb5a4a504d40de274c059a7c0293f032cc2f0f5c9c36bd9dae6d4def9"
+                "pixel_sha256": "5b277a3f58a4841232df344cc06934128b5e968db50f711bf3cf5b61e9eda9a9"
               }
             },
             "en": {
@@ -285,14 +285,14 @@
             },
             "es": {
               "information": [
-                "Fulgor Negro",
                 "172 cartas",
                 "Publicado",
                 "17 julio 2025"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "bdccfb8bb5a4a504d40de274c059a7c0293f032cc2f0f5c9c36bd9dae6d4def9"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Fulgor Negro"
               }
             },
             "fr": {
@@ -309,80 +309,74 @@
             },
             "it": {
               "information": [
-                "Luce Nera",
                 "172 carte",
                 "Pubblicato",
                 "17 luglio 2025"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "bdccfb8bb5a4a504d40de274c059a7c0293f032cc2f0f5c9c36bd9dae6d4def9"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Luce Nera"
               }
             },
             "ja": {
               "information": [
-                "Black Bolt",
                 "172 枚",
                 "発売日",
                 "2025年7月17日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "bdccfb8bb5a4a504d40de274c059a7c0293f032cc2f0f5c9c36bd9dae6d4def9"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Black Bolt"
               }
             },
             "ko": {
               "information": [
-                "Black Bolt",
                 "172 장",
                 "출시일",
                 "2025년 7월 17일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "bdccfb8bb5a4a504d40de274c059a7c0293f032cc2f0f5c9c36bd9dae6d4def9"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Black Bolt"
               }
             },
             "zh_hans": {
               "information": [
-                "Black Bolt",
                 "172 张",
                 "发行日期",
                 "2025年7月17日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "bdccfb8bb5a4a504d40de274c059a7c0293f032cc2f0f5c9c36bd9dae6d4def9"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Black Bolt"
               }
             },
             "zh_hant": {
               "information": [
-                "Black Bolt",
                 "172 張",
                 "發行日期",
                 "2025年7月17日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "bdccfb8bb5a4a504d40de274c059a7c0293f032cc2f0f5c9c36bd9dae6d4def9"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Black Bolt"
               }
             }
           },
           "layout_name": "standard_3x3",
           "logo_pixels": {
             "de": {
-              "height": 274,
+              "height": 327,
               "mode": "RGBA",
-              "pixel_sha256": "bdccfb8bb5a4a504d40de274c059a7c0293f032cc2f0f5c9c36bd9dae6d4def9",
-              "width": 448
+              "pixel_sha256": "5b277a3f58a4841232df344cc06934128b5e968db50f711bf3cf5b61e9eda9a9",
+              "width": 578
             },
             "en": {
-              "height": 274,
-              "mode": "RGBA",
-              "pixel_sha256": "bdccfb8bb5a4a504d40de274c059a7c0293f032cc2f0f5c9c36bd9dae6d4def9",
-              "width": 448
-            },
-            "es": {
               "height": 274,
               "mode": "RGBA",
               "pixel_sha256": "bdccfb8bb5a4a504d40de274c059a7c0293f032cc2f0f5c9c36bd9dae6d4def9",
@@ -393,36 +387,6 @@
               "mode": "RGBA",
               "pixel_sha256": "283dc70d3d7df50f63e5fa37ecae03fec99b30d7b8a84677166704b53514aef7",
               "width": 388
-            },
-            "it": {
-              "height": 274,
-              "mode": "RGBA",
-              "pixel_sha256": "bdccfb8bb5a4a504d40de274c059a7c0293f032cc2f0f5c9c36bd9dae6d4def9",
-              "width": 448
-            },
-            "ja": {
-              "height": 274,
-              "mode": "RGBA",
-              "pixel_sha256": "bdccfb8bb5a4a504d40de274c059a7c0293f032cc2f0f5c9c36bd9dae6d4def9",
-              "width": 448
-            },
-            "ko": {
-              "height": 274,
-              "mode": "RGBA",
-              "pixel_sha256": "bdccfb8bb5a4a504d40de274c059a7c0293f032cc2f0f5c9c36bd9dae6d4def9",
-              "width": 448
-            },
-            "zh_hans": {
-              "height": 274,
-              "mode": "RGBA",
-              "pixel_sha256": "bdccfb8bb5a4a504d40de274c059a7c0293f032cc2f0f5c9c36bd9dae6d4def9",
-              "width": 448
-            },
-            "zh_hant": {
-              "height": 274,
-              "mode": "RGBA",
-              "pixel_sha256": "bdccfb8bb5a4a504d40de274c059a7c0293f032cc2f0f5c9c36bd9dae6d4def9",
-              "width": 448
             }
           },
           "pipeline_contract": {
@@ -444,7 +408,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "97b3bfca5d1b04fa513c1e3e61be3f41a2365e4d376c6637315b5cd9e726d616"
+        "sha256": "c2b3da14325faedc3f5edb7f3134fe4dd6ccec1ba691c1ab726352ce076e57fa"
       },
       "prompt": {
         "bytes": 5699,

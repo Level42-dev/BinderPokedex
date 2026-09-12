@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "SV08.5",
-  "promoted_at": "2026-08-06T23:54:24.069237+00:00",
+  "promoted_at": "2026-09-12T03:11:31.421022+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T18:58:52.151023+00:00",
@@ -292,7 +292,7 @@
               ],
               "title": {
                 "kind": "logo",
-                "pixel_sha256": "a45c65c1c89eb8c75af396ff53e41529d00fb49bb65838b6c9e5d926fc5a9746"
+                "pixel_sha256": "fb76a200df42a5b2108d58419666645a4b3dae3ec475327f221b1e8b4419ef52"
               }
             },
             "fr": {
@@ -321,50 +321,50 @@
             },
             "ja": {
               "information": [
-                "Prismatic Evolutions",
                 "180 枚",
                 "発売日",
                 "2025年1月17日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "0e5fe851bcc3fcb1deb85483a81a40167abb1db70e97d8c23c8c1d71427c60a4"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Prismatic Evolutions"
               }
             },
             "ko": {
               "information": [
-                "Prismatic Evolutions",
                 "180 장",
                 "출시일",
                 "2025년 1월 17일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "0e5fe851bcc3fcb1deb85483a81a40167abb1db70e97d8c23c8c1d71427c60a4"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Prismatic Evolutions"
               }
             },
             "zh_hans": {
               "information": [
-                "Prismatic Evolutions",
                 "180 张",
                 "发行日期",
                 "2025年1月17日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "0e5fe851bcc3fcb1deb85483a81a40167abb1db70e97d8c23c8c1d71427c60a4"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Prismatic Evolutions"
               }
             },
             "zh_hant": {
               "information": [
-                "Prismatic Evolutions",
                 "180 張",
                 "發行日期",
                 "2025年1月17日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "0e5fe851bcc3fcb1deb85483a81a40167abb1db70e97d8c23c8c1d71427c60a4"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Prismatic Evolutions"
               }
             }
           },
@@ -385,7 +385,7 @@
             "es": {
               "height": 189,
               "mode": "RGBA",
-              "pixel_sha256": "a45c65c1c89eb8c75af396ff53e41529d00fb49bb65838b6c9e5d926fc5a9746",
+              "pixel_sha256": "fb76a200df42a5b2108d58419666645a4b3dae3ec475327f221b1e8b4419ef52",
               "width": 410
             },
             "fr": {
@@ -398,30 +398,6 @@
               "height": 189,
               "mode": "RGBA",
               "pixel_sha256": "07c04e2639b4aa6e5a64d6fb30af8064631319737b54479ee44916dcb89ab05c",
-              "width": 410
-            },
-            "ja": {
-              "height": 189,
-              "mode": "RGBA",
-              "pixel_sha256": "0e5fe851bcc3fcb1deb85483a81a40167abb1db70e97d8c23c8c1d71427c60a4",
-              "width": 410
-            },
-            "ko": {
-              "height": 189,
-              "mode": "RGBA",
-              "pixel_sha256": "0e5fe851bcc3fcb1deb85483a81a40167abb1db70e97d8c23c8c1d71427c60a4",
-              "width": 410
-            },
-            "zh_hans": {
-              "height": 189,
-              "mode": "RGBA",
-              "pixel_sha256": "0e5fe851bcc3fcb1deb85483a81a40167abb1db70e97d8c23c8c1d71427c60a4",
-              "width": 410
-            },
-            "zh_hant": {
-              "height": 189,
-              "mode": "RGBA",
-              "pixel_sha256": "0e5fe851bcc3fcb1deb85483a81a40167abb1db70e97d8c23c8c1d71427c60a4",
               "width": 410
             }
           },
@@ -444,7 +420,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "4191ea238bc32afd05985be9f81bcf936deb4c76d735032654f677b48436423c"
+        "sha256": "e59a3dcc01dac78deaacc4f32fd3a5eb02ce4785abff655e38e2308f6ecf6dc9"
       },
       "prompt": {
         "bytes": 5685,

@@ -45,6 +45,15 @@ def test_me05_stays_disabled_until_a_candidate_passes_visual_review():
     assert manifest["pdf"]["enabled"] is False
 
 
+def test_sv08_stays_disabled_while_promoted_artwork_has_stale_kyurem_form():
+    manifest_path = ROOT / "config" / "posters" / "SV08" / "poster.yaml"
+
+    assert manifest_path.is_file()
+    manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+    assert manifest["scope"] == "SV08"
+    assert manifest["pdf"]["enabled"] is False
+
+
 def test_sv07_rejects_the_known_three_ear_candidate_seed():
     manifest_path = ROOT / "config" / "posters" / "SV07" / "poster.yaml"
     manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))

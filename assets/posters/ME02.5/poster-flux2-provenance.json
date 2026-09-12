@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "ME02.5",
-  "promoted_at": "2026-08-06T23:50:36.693075+00:00",
+  "promoted_at": "2026-09-12T03:09:22.688025+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T18:29:23.776557+00:00",
@@ -321,50 +321,50 @@
             },
             "ja": {
               "information": [
-                "Ascended Heroes",
                 "295 枚",
                 "発売日",
                 "2026年1月30日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "0278404450ecb51147a408caeca52a788bfc17af7a376e958fe8ff1a34733c60"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Ascended Heroes"
               }
             },
             "ko": {
               "information": [
-                "Ascended Heroes",
                 "295 장",
                 "출시일",
                 "2026년 1월 30일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "0278404450ecb51147a408caeca52a788bfc17af7a376e958fe8ff1a34733c60"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Ascended Heroes"
               }
             },
             "zh_hans": {
               "information": [
-                "Ascended Heroes",
                 "295 张",
                 "发行日期",
                 "2026年1月30日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "0278404450ecb51147a408caeca52a788bfc17af7a376e958fe8ff1a34733c60"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Ascended Heroes"
               }
             },
             "zh_hant": {
               "information": [
-                "Ascended Heroes",
                 "295 張",
                 "發行日期",
                 "2026年1月30日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "0278404450ecb51147a408caeca52a788bfc17af7a376e958fe8ff1a34733c60"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Ascended Heroes"
               }
             }
           },
@@ -399,30 +399,6 @@
               "mode": "RGBA",
               "pixel_sha256": "7aa87c97cfaf4e45e2920b0ca4373eac21b27d165a74e3acd65f736d3268022d",
               "width": 604
-            },
-            "ja": {
-              "height": 250,
-              "mode": "RGBA",
-              "pixel_sha256": "0278404450ecb51147a408caeca52a788bfc17af7a376e958fe8ff1a34733c60",
-              "width": 490
-            },
-            "ko": {
-              "height": 250,
-              "mode": "RGBA",
-              "pixel_sha256": "0278404450ecb51147a408caeca52a788bfc17af7a376e958fe8ff1a34733c60",
-              "width": 490
-            },
-            "zh_hans": {
-              "height": 250,
-              "mode": "RGBA",
-              "pixel_sha256": "0278404450ecb51147a408caeca52a788bfc17af7a376e958fe8ff1a34733c60",
-              "width": 490
-            },
-            "zh_hant": {
-              "height": 250,
-              "mode": "RGBA",
-              "pixel_sha256": "0278404450ecb51147a408caeca52a788bfc17af7a376e958fe8ff1a34733c60",
-              "width": 490
             }
           },
           "pipeline_contract": {
@@ -444,7 +420,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "657358b11a224b178f98b60e8fec04444cd013cdd8efc1ee3dc7ccd8be027537"
+        "sha256": "663e8a7954057ca7948fe412f5a16aa0a143dd7cba46c497481d97a47c49291a"
       },
       "prompt": {
         "bytes": 5682,
