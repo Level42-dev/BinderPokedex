@@ -11,6 +11,7 @@ from PIL import Image, PngImagePlugin
 from scripts.poster_assets import create_comfyui_poster_workflow as workflow
 from scripts.poster_assets import prepare_comfyui_poster as preparation
 from scripts.poster_assets import provenance, run_comfyui_poster as runner
+from scripts.poster_assets import validate_promoted_poster as validator
 from scripts.poster_assets.generation_contract import requires_generation_fingerprint
 from scripts.tests.test_poster_fingerprints import _write_fixture
 
@@ -277,3 +278,53 @@ def test_runner_audits_grounded_outputs_before_upscale(grounded, monkeypatch, co
         loaded = provenance.load_run_metadata(sidecar, artwork)
         assert loaded["validation"]["grounding"]["passed"] is True
         assert loaded["generation"]["output_method"] == "model_upscale"
+
+
+def test_grounded_consumption_rejects_replaced_master_with_updated_output_record(
+    grounded, monkeypatch,
+):
+    bundle, output = grounded
+    generation = bundle.manifest["artwork"]["generation"]
+    generation["output_dpi"] = 300
+    bundle.manifest_path.write_text(yaml.safe_dump(bundle.manifest))
+    bundle, workflow_path, outputs = _outputs(grounded)
+    roles = runner.select_generation_outputs(
+        outputs, workflow_path, bundle.work_dir, generation,
+    )
+    run = provenance.audit_grounded_generation(
+        "Example", workflow_path, generation, roles["final"], roles["baseline"],
+    )
+    master_path = bundle.asset_dir / bundle.artwork_file
+    layout = validator.build_generation_output_layout("standard_3x3", generation)
+    with Image.open(roles["final"]) as raw:
+        raw.convert("RGB").resize((layout.width_px, layout.height_px)).save(
+            master_path, dpi=(300, 300),
+        )
+    run["source_artwork"] = provenance.file_record(master_path, image=True)
+    provenance.approve_joint_scene_visual_review(
+        run, artwork_path=master_path, raw_artwork_path=roles["final"],
+        reviewer_kind="human",
+    )
+    payload = provenance.promoted_provenance(
+        scope="Example", name="flux2", language="de", run_metadata=run,
+        artwork_path=master_path,
+    )
+    provenance_path = bundle.asset_dir / "poster-flux2-provenance.json"
+    provenance_path.write_text(json.dumps(payload))
+    monkeypatch.setattr(validator, "ROOT", provenance.ROOT)
+    monkeypatch.setattr(
+        validator, "load_poster_scope_data",
+        lambda _: json.loads((output / "Example.json").read_text()),
+    )
+    result = validator.validate(bundle)
+    assert result["identity_validation_method"] == "exact_opaque_source_pixels"
+    assert result["identity_pixels"] > 0
+
+    with Image.open(master_path) as master:
+        replacement = master.copy()
+    replacement.putpixel((0, 0), (1, 2, 3))
+    replacement.save(master_path, dpi=(300, 300))
+    payload["outputs"]["artwork"] = provenance.file_record(master_path, image=True)
+    provenance_path.write_text(json.dumps(payload))
+    with pytest.raises(ValueError, match="no longer matches its reviewed"):
+        validator.validate(bundle)

@@ -23,6 +23,7 @@ try:
     from .generation_contract import (
         is_joint_scene_generation,
         requires_generation_fingerprint,
+        requires_visual_review,
         validate_promotable_generation_contract,
     )
     from .layout import (
@@ -69,6 +70,7 @@ except ImportError:
     from generation_contract import (
         is_joint_scene_generation,
         requires_generation_fingerprint,
+        requires_visual_review,
         validate_promotable_generation_contract,
     )
     from layout import (
@@ -414,13 +416,15 @@ def validate(target: str | PosterBundle) -> dict[str, Any]:
             f"Missing promoted model hashes: {', '.join(missing_hashes)}"
         )
     is_joint_scene = is_joint_scene_generation(recorded_generation)
+    needs_visual_review = requires_visual_review(recorded_generation)
+    visual_validation = (
+        require_joint_scene_visual_review(payload.get("run", {}))
+        if needs_visual_review else None
+    )
     if is_grounded_generation(recorded_generation):
         require_grounding_pixel_validation(payload.get("run", {}))
-        require_joint_scene_visual_review(payload.get("run", {}))
     if is_joint_scene:
-        identity_validation = require_joint_scene_visual_review(
-            payload.get("run", {})
-        )
+        identity_validation = visual_validation
         identity_pixels = None
     else:
         identity_validation = require_exact_source_pixel_validation(
@@ -479,18 +483,18 @@ def validate(target: str | PosterBundle) -> dict[str, Any]:
         outputs["artwork"],
         expected_path=promoted_artwork_path,
     )
-    if is_joint_scene:
+    if needs_visual_review:
         promoted_pixel_hash = image_pixel_record(
             artwork_path,
         )["pixel_sha256"]
         output_pixel_hash = outputs["artwork"].get("pixel_sha256")
         if (
             output_pixel_hash != promoted_pixel_hash
-            or identity_validation.get("reviewed_artwork_pixel_sha256")
+            or visual_validation.get("reviewed_artwork_pixel_sha256")
             != promoted_pixel_hash
         ):
             raise ValueError(
-                "Promoted joint-scene artwork no longer matches its reviewed "
+                "Promoted artwork no longer matches its reviewed "
                 "text-free pixels"
             )
     routed_artwork_path = bundle.asset_dir / bundle.artwork_file
