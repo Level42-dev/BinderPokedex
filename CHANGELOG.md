@@ -35,6 +35,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   untranslated card as if it had been released in the selected language.
 - Preserved localized TCG identities such as `Ns Zoroark-ex` while keeping the
   National Pokédex on canonical owner-free species names.
+- Kept the ex logo in its localized position when the Trainer name follows the
+  species, fixing duplicate ex labels in French, Spanish, and Italian cards.
 
 ### 🐛 German PDF and Promo Corrections
 

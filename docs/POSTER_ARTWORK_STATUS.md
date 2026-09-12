@@ -213,8 +213,11 @@ texture, character pixels, or a post-decode composite.
   `posters.yaml`, then replace each matching section cover with its poster.
 - All 42 current individual and aggregate targets are configured, promoted,
   enabled, and provenance-validated.
-- Pull requests validate every enabled promotion and build a complete release
-  candidate as a temporary artifact only.
+- Full release verification (manual runs, release/hotfix branches, or pull
+  requests labeled `full-release-check`) validates every enabled promotion and
+  builds a complete release candidate as a temporary artifact only. Ordinary
+  pull-request checks exercise the scoped notice/PDF/packaging tests; they do
+  not imply a complete release build.
 - Only a successful `v*` tag job may publish a GitHub Release.
 
 ## Remaining work
@@ -244,7 +247,7 @@ python -m scripts.poster_assets.poster_work_plan --all-configured
 
 Core branch verification rerun on 2026-09-12:
 
-- the complete project suite passes with `719 passed, 1 skipped`;
+- the complete project suite passes with `725 passed, 1 skipped`;
 - all 42 enabled poster bundles validate at 2368 x 3268 px and effective 300 dpi;
 - all 31 release scopes / 42 section routes require a real panorama;
 - the work planner uses the same slot-aware subject selection as generation;

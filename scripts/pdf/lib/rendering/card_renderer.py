@@ -16,6 +16,7 @@ Features:
 
 import json
 import logging
+import re
 from pathlib import Path
 from typing import Dict, Optional
 
@@ -441,6 +442,20 @@ class CardRenderer:
                 # Mega X/Y forms: add X or Y after name, before suffix
                 name = f"{name} {variant_form.upper()}"
         
+        # Some localized TCG names put the owner after ex ("Zoroark-ex de N").
+        # Keep the marker in that position instead of appending a second one.
+        # Match a complete marker, never the letters inside a species name.
+        if suffix == '[EX_NEW]':
+            name, embedded_ex = re.subn(
+                r'(?<=\S)[-\s]ex(?=\s|$)',
+                ' [EX_NEW]',
+                name,
+                count=1,
+                flags=re.IGNORECASE,
+            )
+            if embedded_ex:
+                suffix = ''
+
         # Add suffix (if present)
         if suffix:
             name = f"{name} {suffix}"
