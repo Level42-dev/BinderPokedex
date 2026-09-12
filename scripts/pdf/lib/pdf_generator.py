@@ -28,6 +28,7 @@ from io import BytesIO
 from PIL import Image
 
 try:
+    from .project_notice import append_project_notice, set_document_provenance
     from .fonts import FontManager
     from .utils import TranslationHelper, TextRenderer
     from .constants import (
@@ -38,6 +39,7 @@ try:
     )
     from .rendering import CardRenderer, CoverRenderer, PageRenderer
 except ImportError:
+    from project_notice import append_project_notice, set_document_provenance
     # Fallback for direct imports (testing)
     from fonts import FontManager
     from utils import TranslationHelper, TextRenderer
@@ -458,15 +460,7 @@ class PDFGenerator:
         canvas_obj.setFillColor(HexColor("#CCCCCC"))
         
         # Build footer text with translations
-        footer_parts = [
-            self.translations.get('cover_follow_cutting', ''),
-            "Binder Pokédex Project",  # Keep project name in English
-            datetime.now().strftime('%Y-%m-%d')
-        ]
-        footer_text = " • ".join(footer_parts)
-        text_width = canvas_obj.stringWidth(footer_text, canvas_obj._fontname, 6) if hasattr(canvas_obj, '_fontname') else len(footer_text) * 2
-        x_pos = (PAGE_WIDTH - text_width) / 2
-        canvas_obj.drawString(x_pos, 2.5 * mm, footer_text)
+        self.page_renderer.add_footer(canvas_obj)
     
     @staticmethod
     def _darken_color(hex_color: str, factor: float = 0.6) -> str:
@@ -520,6 +514,7 @@ class PDFGenerator:
         try:
             # Create canvas
             c = canvas.Canvas(str(pdf_file_path), pagesize=A4)
+            set_document_provenance(c, pdf_filename)
             
             # Draw cover page using legacy Pokedex cover renderer
             self._draw_cover_page(c)
@@ -566,12 +561,13 @@ class PDFGenerator:
             c.showPage()
             
             # Save and close the PDF
+            append_project_notice(c, self.language)
             c.save()
             
             print()  # Newline after progress bar
             
             file_size_mb = pdf_file_path.stat().st_size / 1024 / 1024
-            total_pages = self.page_renderer.get_total_pages(card_count, include_cover=True)
+            total_pages = self.page_renderer.get_total_pages(card_count, include_cover=True) + 1
             self.page_count = total_pages  # Store for testing/reporting
             
             logger.info(f"✓ PDF generated successfully: {pdf_file_path}")

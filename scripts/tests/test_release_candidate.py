@@ -1,25 +1,33 @@
 import json
+import shutil
 import zipfile
 from pathlib import Path
 
 import pytest
 
 from scripts.release.build_manifest import LANGUAGES
+from scripts.release.package_archives import package_archives
 from scripts.release.verify_release_candidate import verify
 
 
 def _release_candidate(tmp_path: Path) -> Path:
+    repo = Path(__file__).resolve().parents[2]
+    for name in ("NOTICE.md", "LICENSE", "LICENSE-CODE", "LICENSE-CONTENT.md", "LICENSES/CC-BY-NC-4.0.txt"):
+        target = tmp_path / name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(repo / name, target)
+    for language in LANGUAGES:
+        output_dir = tmp_path / "output" / language
+        output_dir.mkdir(parents=True)
+        (output_dir / "scope.pdf").write_bytes(b"%PDF-1.4\n%%EOF\n")
+    package_archives(tmp_path, "pr-42-deadbeef", "a" * 40)
     assets = []
     pdf_counts = {}
     for language, info in LANGUAGES.items():
         output_dir = tmp_path / "output" / language
-        output_dir.mkdir(parents=True)
         pdf_path = output_dir / "scope.pdf"
-        pdf_path.write_bytes(b"%PDF-1.4\n%%EOF\n")
 
         archive_path = tmp_path / info["zip"]
-        with zipfile.ZipFile(archive_path, "w") as archive:
-            archive.write(pdf_path, f"{language}/{pdf_path.name}")
 
         pdf_counts[language] = 1
         assets.append(
@@ -98,3 +106,43 @@ def test_verify_release_candidate_rejects_notes_for_another_tag(tmp_path: Path):
 
     with pytest.raises(ValueError, match="do not match the release tag"):
         verify(manifest_path, release_notes_path)
+
+
+def test_release_downloads_include_offline_notices_and_exact_source(tmp_path):
+    _release_candidate(tmp_path)
+    for language, info in LANGUAGES.items():
+        with zipfile.ZipFile(tmp_path / info["zip"]) as archive:
+            assert archive.read(f"{language}/scope.pdf").startswith(b"%PDF")
+            for name in ("NOTICE.md", "LICENSE", "LICENSE-CODE", "LICENSE-CONTENT.md", "LICENSES/CC-BY-NC-4.0.txt"):
+                assert archive.read(f"{language}/{name}") == (tmp_path / name).read_bytes()
+            source = json.loads(archive.read(f"{language}/SOURCE.json"))
+            assert source["repository"] == "https://github.com/Level42-dev/BinderPokedex"
+            assert source["commit"] == "a" * 40
+            assert source["tag"] == "pr-42-deadbeef"
+
+
+@pytest.mark.parametrize("missing", ["NOTICE.md", "LICENSES/CC-BY-NC-4.0.txt", "SOURCE.json"])
+def test_verification_rejects_stripped_notices(tmp_path, missing):
+    manifest_path = _release_candidate(tmp_path)
+    path = tmp_path / LANGUAGES["de"]["zip"]
+    with zipfile.ZipFile(path) as archive:
+        members = {name: archive.read(name) for name in archive.namelist()}
+    del members[f"de/{missing}"]
+    with zipfile.ZipFile(path, "w") as archive:
+        for name, content in members.items():
+            archive.writestr(name, content)
+    manifest = json.loads(manifest_path.read_text())
+    next(asset for asset in manifest["assets"] if asset["language"] == "de")["size_bytes"] = path.stat().st_size
+    manifest_path.write_text(json.dumps(manifest))
+    with pytest.raises(ValueError, match="Missing release notice"):
+        verify(manifest_path)
+
+
+def test_packaging_refuses_missing_license_before_writing_archives(tmp_path):
+    _release_candidate(tmp_path)
+    for info in LANGUAGES.values():
+        (tmp_path / info["zip"]).unlink()
+    (tmp_path / "LICENSE-CONTENT.md").unlink()
+    with pytest.raises(ValueError, match="Missing or empty notice"):
+        package_archives(tmp_path, "test", "b" * 40)
+    assert not list(tmp_path.glob("*.zip"))

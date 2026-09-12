@@ -12,10 +12,14 @@ Features:
 """
 
 import logging
-from datetime import datetime
 
 from reportlab.lib.units import mm
 from reportlab.lib.colors import HexColor
+
+try:
+    from ..project_notice import FOOTER_TEXT
+except ImportError:
+    from project_notice import FOOTER_TEXT
 
 logger = logging.getLogger(__name__)
 
@@ -54,15 +58,7 @@ class FooterRenderer:
         canvas_obj.setFont(font_name, font_size)
         canvas_obj.setFillColor(HexColor(color))
         
-        # Build footer text with translations
-        cutting_text = translation_getter('cover_follow_cutting', 'Follow cutting guides')
-        
-        footer_parts = [
-            cutting_text,
-            "Binder Pokédex Project",  # Keep project name in English
-            datetime.now().strftime('%Y-%m-%d')
-        ]
-        footer_text = " • ".join(footer_parts)
+        footer_text = FOOTER_TEXT
         
         # Calculate centered position
         text_width = (canvas_obj.stringWidth(footer_text, canvas_obj._fontname, font_size) 

@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Licensing: technical markup/code MIT (LICENSE-CODE).
+     Identified original, protectable project visual expression: CC BY-NC 4.0,
+     only within the rights and exclusions described in LICENSE-CONTENT.md.
+     Credit: Björn Teichmann / BinderPokedex; retain other supplied credits.
+     Earlier valid grants remain available. Third-party content is excluded.
+     Source: https://github.com/Level42-dev/BinderPokedex -->
 <svg xmlns="http://www.w3.org/2000/svg" 
      width="210mm" height="297mm" 
      viewBox="0 0 210 297"
@@ -62,7 +68,7 @@
   <!-- Footer -->
   <text id="footer" x="105" y="294.5" 
         font-family="Helvetica" 
-        font-size="6" 
+        font-size="2.1"
         fill="#CCCCCC" 
         text-anchor="middle">[Footer Text]</text>
   

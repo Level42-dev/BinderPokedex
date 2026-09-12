@@ -23,6 +23,7 @@ from reportlab.lib.colors import HexColor
 from reportlab.lib.utils import ImageReader
 
 try:
+    from ..project_notice import FOOTER_TEXT
     from ..fonts import FontManager
     from ..constants import PAGE_WIDTH, PAGE_HEIGHT, GENERATION_COLORS
     from ..utils import TranslationHelper
@@ -30,6 +31,7 @@ try:
     from .title_renderer import TitleRenderer
     from .footer_renderer import FooterRenderer
 except ImportError:
+    from project_notice import FOOTER_TEXT
     # Fallback for direct imports
     from fonts import FontManager
     from constants import PAGE_WIDTH, PAGE_HEIGHT, GENERATION_COLORS
@@ -207,7 +209,7 @@ class CoverRenderer:
         else:
             description_text = str(description) if description else ''
         
-        footer_text = "Binder Pokédex Project | github.com/BinderPokedex"
+        footer_text = FOOTER_TEXT
         
         # Manipulate SVG content via XML
         replacements = {

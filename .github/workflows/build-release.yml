@@ -59,15 +59,19 @@ jobs:
         run: python scripts/poster_assets/validate_promoted_poster.py --all-enabled
 
       - name: Generate all PDFs
+        env:
+          BINDER_POKEDEX_BUILD_VERSION: ${{ inputs.release_tag }}
+          BINDER_POKEDEX_BUILD_REF: ${{ github.sha }}
         run: python scripts/pdf/generate_pdf.py --scope all
 
       - name: Create language-specific PDF archives
-        working-directory: output
-        run: |
-          for lang in de en fr es it ja ko zh_hans zh_hant; do
-            test -d "$lang"
-            zip -r "../binder-pokedex-${lang}.zip" "$lang" -x ".*"
-          done
+        env:
+          RELEASE_TAG: ${{ inputs.release_tag }}
+          SOURCE_REF: ${{ github.sha }}
+        run: >-
+          python scripts/release/package_archives.py
+          --tag "$RELEASE_TAG"
+          --source-ref "$SOURCE_REF"
 
       - name: Build release manifest
         run: |
