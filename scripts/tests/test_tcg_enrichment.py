@@ -528,6 +528,32 @@ class TestLocalizedSetLogos:
 
         assert result == {"en": english_url}
 
+    def test_bare_tcgdex_logo_uses_webp_when_png_is_missing(self, monkeypatch):
+        checked = []
+
+        def fake_validate(url):
+            checked.append(url)
+            return url.endswith(".webp")
+
+        monkeypatch.setattr(self.step, "_validate_url", fake_validate)
+
+        result = self.step._resolve_logo_url(
+            "https://assets.tcgdex.net/en/sv/sv01/logo"
+        )
+
+        assert result == "https://assets.tcgdex.net/en/sv/sv01/logo.webp"
+        assert checked == [
+            "https://assets.tcgdex.net/en/sv/sv01/logo.png",
+            "https://assets.tcgdex.net/en/sv/sv01/logo.webp",
+        ]
+
+    def test_invalid_reported_logo_is_omitted(self, monkeypatch):
+        monkeypatch.setattr(self.step, "_validate_url", lambda _url: False)
+
+        assert self.step._resolve_logo_url(
+            "https://assets.tcgdex.net/en/sv/missing/logo.png"
+        ) == ""
+
     def test_curated_german_logos_use_official_localized_assets(self):
         logos = multilingual_module.load_curated_logo_sources()
 

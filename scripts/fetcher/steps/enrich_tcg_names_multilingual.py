@@ -208,10 +208,14 @@ class EnrichTCGNamesMultilingualStep(BaseStep):
                 if set_name:
                     set_names[storage_lang] = set_name
                 if logo_url:
-                    # Ensure logo URL has .png extension
-                    if not logo_url.endswith('.png'):
-                        logo_url += '.png'
-                    logo_urls[storage_lang] = logo_url
+                    resolved_logo_url = self._resolve_logo_url(logo_url)
+                    if resolved_logo_url:
+                        logo_urls[storage_lang] = resolved_logo_url
+                    else:
+                        logger.warning(
+                            "   ✗ Skipped %s logo: no supported asset exists",
+                            storage_lang,
+                        )
                 
                 # Index cards by localId
                 for card in cards:
@@ -291,10 +295,11 @@ class EnrichTCGNamesMultilingualStep(BaseStep):
                 # Replace language code in URL (e.g., /it/ -> /de/)
                 generated_url = template_url.replace(f'/{template_lang}/', f'/{lang}/')
                 
-                # Validate URL with HEAD request
-                if self._validate_url(generated_url):
-                    resolved_logo_urls[lang] = generated_url
-                    logger.info(f"   ✓ Validated {lang}: {generated_url}")
+                # Resolve the actual upstream image extension and validate it.
+                resolved_url = self._resolve_logo_url(generated_url)
+                if resolved_url:
+                    resolved_logo_urls[lang] = resolved_url
+                    logger.info(f"   ✓ Validated {lang}: {resolved_url}")
                     generated_count += 1
                 else:
                     logger.warning(f"   ✗ Skipped {lang}: URL not available (404)")
@@ -303,6 +308,44 @@ class EnrichTCGNamesMultilingualStep(BaseStep):
             logger.info(f"✅ Generated {generated_count} logo URLs")
         
         return resolved_logo_urls
+
+    def _resolve_logo_url(self, logo_url: str) -> str:
+        """Return the first existing supported representation of a logo URL.
+
+        TCGdex commonly reports extensionless logo URLs.  Older sets may only
+        expose WebP while newer assets also expose PNG, so callers must probe
+        both rather than manufacturing an unverified ``.png`` URL.
+        """
+        if not logo_url:
+            return ""
+
+        supported_extensions = ('.png', '.webp')
+        matched_extension = next(
+            (
+                extension
+                for extension in supported_extensions
+                if logo_url.casefold().endswith(extension)
+            ),
+            None,
+        )
+        if matched_extension:
+            base_url = logo_url[:-len(matched_extension)]
+            candidates = [logo_url]
+            candidates.extend(
+                f"{base_url}{extension}"
+                for extension in supported_extensions
+                if extension != matched_extension
+            )
+        else:
+            candidates = [
+                f"{logo_url}{extension}"
+                for extension in supported_extensions
+            ]
+
+        for candidate in candidates:
+            if self._validate_url(candidate):
+                return candidate
+        return ""
     
     def _check_local_logo(self, set_id: str) -> str:
         """

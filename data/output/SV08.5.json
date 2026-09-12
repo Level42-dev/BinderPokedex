@@ -16,7 +16,7 @@
     "de": "https://assets.tcgdex.net/de/sv/sv08.5/logo.png",
     "en": "https://assets.tcgdex.net/en/sv/sv08.5/logo.png",
     "fr": "https://assets.tcgdex.net/fr/sv/sv08.5/logo.png",
-    "es": "https://assets.tcgdex.net/es/sv/sv08.5/logo.png",
+    "es": "https://assets.tcgdex.net/es/sv/sv08.5/logo.webp",
     "it": "https://assets.tcgdex.net/it/sv/sv08.5/logo.png"
   },
   "sections": {
@@ -39,7 +39,7 @@
         "de": "[image]https://assets.tcgdex.net/de/sv/sv08.5/logo.png[/image]",
         "en": "[image]https://assets.tcgdex.net/en/sv/sv08.5/logo.png[/image]",
         "fr": "[image]https://assets.tcgdex.net/fr/sv/sv08.5/logo.png[/image]",
-        "es": "[image]https://assets.tcgdex.net/es/sv/sv08.5/logo.png[/image]",
+        "es": "[image]https://assets.tcgdex.net/es/sv/sv08.5/logo.webp[/image]",
         "it": "[image]https://assets.tcgdex.net/it/sv/sv08.5/logo.png[/image]"
       },
       "cards": [

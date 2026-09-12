@@ -14,7 +14,7 @@
   "release_date": "2023-03-31",
   "logo_urls": {
     "de": "https://assets.tcgdex.net/de/sv/sv01/logo.png",
-    "en": "https://assets.tcgdex.net/en/sv/sv01/logo.png",
+    "en": "https://assets.tcgdex.net/en/sv/sv01/logo.webp",
     "fr": "https://assets.tcgdex.net/fr/sv/sv01/logo.png",
     "es": "https://assets.tcgdex.net/es/sv/sv01/logo.png",
     "it": "https://assets.tcgdex.net/it/sv/sv01/logo.png"
@@ -37,7 +37,7 @@
       },
       "subtitle": {
         "de": "[image]https://assets.tcgdex.net/de/sv/sv01/logo.png[/image]",
-        "en": "[image]https://assets.tcgdex.net/en/sv/sv01/logo.png[/image]",
+        "en": "[image]https://assets.tcgdex.net/en/sv/sv01/logo.webp[/image]",
         "fr": "[image]https://assets.tcgdex.net/fr/sv/sv01/logo.png[/image]",
         "es": "[image]https://assets.tcgdex.net/es/sv/sv01/logo.png[/image]",
         "it": "[image]https://assets.tcgdex.net/it/sv/sv01/logo.png[/image]"
