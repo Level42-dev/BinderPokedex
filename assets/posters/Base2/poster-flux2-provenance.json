@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "Base2",
-  "promoted_at": "2026-09-12T03:08:21.720049+00:00",
+  "promoted_at": "2026-09-12T14:08:18.697643+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T18:12:29.330749+00:00",
@@ -288,7 +288,7 @@
             },
             "es": {
               "information": [
-                "64 cartas",
+                "0 cartas",
                 "Publicado",
                 "16 junio 1999"
               ],
@@ -324,7 +324,7 @@
             },
             "ja": {
               "information": [
-                "64 枚",
+                "0 枚",
                 "発売日",
                 "1999年6月16日"
               ],
@@ -336,7 +336,7 @@
             },
             "ko": {
               "information": [
-                "64 장",
+                "0 장",
                 "출시일",
                 "1999년 6월 16일"
               ],
@@ -348,7 +348,7 @@
             },
             "zh_hans": {
               "information": [
-                "64 张",
+                "0 张",
                 "发行日期",
                 "1999年6月16日"
               ],
@@ -360,7 +360,7 @@
             },
             "zh_hant": {
               "information": [
-                "64 張",
+                "0 張",
                 "發行日期",
                 "1999年6月16日"
               ],
@@ -405,7 +405,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "e65c0ef33bc64ae1fec0d7364ea50fd9a0275394aaee6699a5d43646e0aed7a4"
+        "sha256": "fc6dca5b61f27f1fb7beec80caabefeaa1219556db38cd0d968e90dc8d9ea1e7"
       },
       "prompt": {
         "bytes": 5887,

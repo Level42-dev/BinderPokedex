@@ -15,6 +15,7 @@ try:
         load_poster_scope_data,
         poster_bundle,
     )
+    from .scope_language import filter_variant_data_for_language
     from .typography import (
         draw_text_centered,
         load_font,
@@ -23,6 +24,7 @@ try:
 except ImportError:
     from layout import build_image_layout
     from poster_io import POSTER_ASSETS, load_poster_scope_data, poster_bundle
+    from scope_language import filter_variant_data_for_language
     from typography import (
         draw_text_centered,
         load_font,
@@ -227,6 +229,7 @@ def info_panel_values(
     header_text: str | None = None,
 ) -> tuple[str, ...]:
     """Resolve the deterministic text rows for one poster overlay profile."""
+    scope_data = filter_variant_data_for_language(scope_data, language)
     if content_mode == "set_summary":
         values = (
             localized_set_name(scope_data, language),

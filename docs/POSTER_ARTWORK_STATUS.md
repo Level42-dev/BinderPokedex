@@ -147,6 +147,9 @@ The overlay infers complete logo, inline token logo, or text rendering and
 draws plain text directly without a title panel. It removes an identical title
 row automatically. Cover count labels use the scope
 type, so TCG-set totals are cards while Pokédex and variant totals are Pokémon.
+Both panorama counts and card pages use the same per-card language filter.
+Unnumbered cards count as one insert, and cards available only in other
+languages do not inflate a localized information panel.
 
 The poster contains all semantic cover information: collection/set title,
 section title where applicable, subtitle/region, collection count, description
@@ -247,9 +250,12 @@ python -m scripts.poster_assets.poster_work_plan --all-configured
 
 Core branch verification rerun on 2026-09-12:
 
-- the complete project suite passes with `725 passed, 1 skipped`;
+- the complete project suite passes with `733 passed, 1 skipped`;
 - all 42 enabled poster bundles validate at 2368 x 3268 px and effective 300 dpi;
 - all 31 release scopes / 42 section routes require a real panorama;
+- all 267 target/language information-panel counts match their card-page selection;
+- all 27 TCG overlay fingerprints are current; all 42 master files and their
+  generation/review records are unchanged by the localized-count correction;
 - the work planner uses the same slot-aware subject selection as generation;
 - ME05/SV08 raw masters, print masters, all nine crops, and freshly rendered
   German PDF opening pages pass agent visual review;

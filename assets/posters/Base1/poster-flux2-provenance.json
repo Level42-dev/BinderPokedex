@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "Base1",
-  "promoted_at": "2026-09-12T03:01:41.056264+00:00",
+  "promoted_at": "2026-09-12T14:08:26.498662+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T18:06:51.588891+00:00",
@@ -278,7 +278,7 @@
             "es": {
               "information": [
                 "Base Set",
-                "102 cartas",
+                "0 cartas",
                 "Publicado",
                 "9 enero 1999"
               ],
@@ -314,7 +314,7 @@
             "ja": {
               "information": [
                 "Base Set",
-                "102 枚",
+                "0 枚",
                 "発売日",
                 "1999年1月9日"
               ],
@@ -326,7 +326,7 @@
             "ko": {
               "information": [
                 "Base Set",
-                "102 장",
+                "0 장",
                 "출시일",
                 "1999년 1월 9일"
               ],
@@ -338,7 +338,7 @@
             "zh_hans": {
               "information": [
                 "Base Set",
-                "102 张",
+                "0 张",
                 "发行日期",
                 "1999年1月9日"
               ],
@@ -350,7 +350,7 @@
             "zh_hant": {
               "information": [
                 "Base Set",
-                "102 張",
+                "0 張",
                 "發行日期",
                 "1999年1月9日"
               ],
@@ -436,7 +436,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "932bd3d7b6da464ad4ba9acdf0cccbd29a6d97d6b4b6be494b906e24c0d799d8"
+        "sha256": "5538d6e5312239ca3ffdaeb831f45de0544326540b918f344ee74ade9d2bc46c"
       },
       "prompt": {
         "bytes": 5970,

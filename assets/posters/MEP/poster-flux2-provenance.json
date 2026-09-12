@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "MEP",
-  "promoted_at": "2026-09-12T03:09:49.288174+00:00",
+  "promoted_at": "2026-09-12T14:08:45.278973+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T19:20:06.602320+00:00",
@@ -262,7 +262,7 @@
             "de": {
               "information": [
                 "MEP Black Star Promos",
-                "89 Karten",
+                "88 Karten",
                 "Veröffentlicht",
                 "26. September 2025"
               ],
@@ -286,7 +286,7 @@
             "es": {
               "information": [
                 "MEP Black Star Promos",
-                "89 cartas",
+                "88 cartas",
                 "Publicado",
                 "26 septiembre 2025"
               ],
@@ -298,7 +298,7 @@
             "fr": {
               "information": [
                 "MEP Black Star Promos",
-                "89 cartes",
+                "88 cartes",
                 "Sortie",
                 "26 septembre 2025"
               ],
@@ -310,7 +310,7 @@
             "it": {
               "information": [
                 "MEP Black Star Promos",
-                "89 carte",
+                "88 carte",
                 "Pubblicato",
                 "26 settembre 2025"
               ],
@@ -321,7 +321,7 @@
             },
             "ja": {
               "information": [
-                "89 枚",
+                "0 枚",
                 "発売日",
                 "2025年9月26日"
               ],
@@ -333,7 +333,7 @@
             },
             "ko": {
               "information": [
-                "89 장",
+                "0 장",
                 "출시일",
                 "2025년 9월 26일"
               ],
@@ -345,7 +345,7 @@
             },
             "zh_hans": {
               "information": [
-                "89 张",
+                "0 张",
                 "发行日期",
                 "2025年9月26日"
               ],
@@ -357,7 +357,7 @@
             },
             "zh_hant": {
               "information": [
-                "89 張",
+                "0 張",
                 "發行日期",
                 "2025年9月26日"
               ],
@@ -420,7 +420,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "21fae60761c91a07ba540a80a4bcf27e9b430e4910936a6e90fd85c36863265c"
+        "sha256": "9985a7a6a78614e78064785f278cb26527dbd31a434fd54a51160eae90dc659e"
       },
       "prompt": {
         "bytes": 5722,

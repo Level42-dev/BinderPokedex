@@ -217,6 +217,10 @@ Using promoted provenance as `--run-metadata` is an overlay-only refresh. It
 revalidates the unchanged generation inputs against their recorded supported
 graph contract, then rebuilds the localized preview, card slices, overlay
 fingerprint, and output hashes without starting ComfyUI.
+If the original promotion re-encoded its PNG, the refresh verifies the exact
+registered promoted output and its equality to the reviewed source pixels.
+Different PNG compression alone does not require a new render or approval;
+changed pixels or an unregistered output still fail validation.
 
 Legacy promotions can be upgraded while their original full-manifest,
 cutout-hash, output, and regenerated-overlay checks still pass:

@@ -41,11 +41,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### 🐛 German PDF and Promo Corrections
 
 - Corrected the German Basic Energy names in SV01, SV02, SV03, and SV06.5.
-- Reconciled SVP with 216 numbered German cards through `#224`, the eight real
-  number gaps, and the unnumbered `Terapagos & Freunde` promo for 217 German
+- Reconciled SVP with 216 numbered German cards through `#224`, the eight
+  number gaps in the German snapshot, and the unnumbered `Terapagos & Freunde` promo for 217 German
   inserts in total.
 - Rebuilt MEP from its original promo identities, including `Serpiroyal #064`
   and `Glutexo #079`, instead of renumbering the selected cards sequentially.
+- Panorama information cards now use the exact same language selection as the
+  card pages, including unnumbered promos; their counts no longer include cards
+  available only in another language.
 - Added measured one- or two-line label fitting so long Trainer names stay
   inside their card and cutting boundaries.
 - Added exact German title logos for Schwarze Blitze and Weiße Flammen and
@@ -67,6 +70,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   approval while retaining the same source, raw, print, and crop checks.
 - The poster planner uses the importer's canonical subject selection, including
   explicit card slots, instead of incorrectly flagging a valid curated cast as stale.
+- Overlay refresh accepts an existing promotion's registered PNG encoding only
+  when its decoded pixels still match the reviewed source; fresh renders retain
+  their exact source-byte requirement.
 
 ## [9.0.0] - 2026-08-11
 

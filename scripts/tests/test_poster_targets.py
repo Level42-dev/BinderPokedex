@@ -7,6 +7,8 @@ import yaml
 from PIL import Image, ImageChops
 
 from scripts.poster_assets.finalize_comfyui_poster import (
+    CARD_LABELS,
+    POKEMON_LABELS,
     SUPPORTED_LANGUAGES,
     canonical_overlay_text,
     finalize,
@@ -33,6 +35,7 @@ from scripts.poster_assets.provenance import sha256_file
 from scripts.poster_assets.scene_catalog import section_scenes_for_scope
 from scripts.poster_assets.validate_promoted_poster import enabled_poster_scopes
 from scripts.pdf.lib.rendering.poster_page_renderer import PosterPageCollection
+from scripts.pdf.generate_pdf import filter_variant_data_for_language
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -79,6 +82,30 @@ def test_sv08_panorama_uses_pikachu_without_changing_the_kyurem_card():
 
 
 POSTER_CONFIG_ROOT = POSTER_CONFIGS
+
+
+@pytest.mark.parametrize(
+    ("language", "expected_count"),
+    [("de", "2 Karten"), ("en", "3 cards"), ("fr", "1 cartes")],
+)
+def test_info_panel_counts_only_the_language_selection_including_unnumbered_cards(
+    language, expected_count,
+):
+    source = {
+        "name": "Promos", "release_date": "2026-01-01",
+        "sections": {"all": {"cards": [
+            {"id": "unnumbered", "printed_number": None,
+             "available_languages": ["de", "en"]},
+            {"id": "english-only", "available_languages": ["en"]},
+            {"id": "legacy-without-language-marker"},
+        ]}},
+    }
+    original = deepcopy(source)
+
+    values = info_panel_values(source, language, "set_summary")
+
+    assert values[1] == expected_count
+    assert source == original
 
 
 def test_every_current_poster_target_has_a_checked_in_manifest():
@@ -200,6 +227,15 @@ def test_every_generated_pdf_language_has_complete_poster_copy():
                     scope_data,
                     language,
                     content_mode,
+                )
+                pdf_source = filter_variant_data_for_language(scope_data, language)
+                pdf_count = sum(
+                    len(section["cards"])
+                    for section in pdf_source["sections"].values()
+                )
+                labels = CARD_LABELS if content_mode == "set_summary" else POKEMON_LABELS
+                assert f"{pdf_count} {labels[language]}" in complete_values, (
+                    f"{bundle.asset_key}/{language}: panorama count must match PDF cards"
                 )
                 visible_values = info_panel_values(
                     scope_data,

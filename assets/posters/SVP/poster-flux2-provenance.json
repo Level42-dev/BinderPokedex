@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "SVP",
-  "promoted_at": "2026-09-12T03:12:22.765406+00:00",
+  "promoted_at": "2026-09-12T14:09:35.697329+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T19:24:26.662777+00:00",
@@ -262,7 +262,7 @@
             "de": {
               "information": [
                 "SVP Black Star Promos",
-                "226 Karten",
+                "217 Karten",
                 "Veröffentlicht",
                 "31. März 2023"
               ],
@@ -286,7 +286,7 @@
             "es": {
               "information": [
                 "SVP Black Star Promos",
-                "226 cartas",
+                "216 cartas",
                 "Publicado",
                 "31 marzo 2023"
               ],
@@ -298,7 +298,7 @@
             "fr": {
               "information": [
                 "SVP Black Star Promos",
-                "226 cartes",
+                "220 cartes",
                 "Sortie",
                 "31 mars 2023"
               ],
@@ -310,7 +310,7 @@
             "it": {
               "information": [
                 "SVP Black Star Promos",
-                "226 carte",
+                "216 carte",
                 "Pubblicato",
                 "31 marzo 2023"
               ],
@@ -321,7 +321,7 @@
             },
             "ja": {
               "information": [
-                "226 枚",
+                "0 枚",
                 "発売日",
                 "2023年3月31日"
               ],
@@ -333,7 +333,7 @@
             },
             "ko": {
               "information": [
-                "226 장",
+                "0 장",
                 "출시일",
                 "2023년 3월 31일"
               ],
@@ -345,7 +345,7 @@
             },
             "zh_hans": {
               "information": [
-                "226 张",
+                "0 张",
                 "发行日期",
                 "2023年3月31日"
               ],
@@ -357,7 +357,7 @@
             },
             "zh_hant": {
               "information": [
-                "226 張",
+                "0 張",
                 "發行日期",
                 "2023年3月31日"
               ],
@@ -420,7 +420,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "edfa8c4fdb1bd97f8b89c3f4b6b9fa6ad1cd27945e6869c1b197c56ebe5d96e2"
+        "sha256": "34bfe02cf84610a3639815b8d710ffbb0a8bab97df0689549501bc07f6f67620"
       },
       "prompt": {
         "bytes": 5728,

@@ -1241,6 +1241,49 @@ def test_load_run_metadata_accepts_promoted_provenance_for_overlay_refresh(
     assert load_run_metadata(provenance_path, artwork) == run
 
 
+@pytest.mark.parametrize(
+    "case",
+    ["same_pixels", "changed_pixels", "wrong_output_hash", "missing_output", "new_run"],
+)
+def test_overlay_refresh_accepts_only_registered_pixel_identical_reencoding(
+    tmp_path, case,
+):
+    original = tmp_path / "original.png"
+    promoted = tmp_path / "promoted.png"
+    image = Image.new("RGB", (10, 10), (20, 30, 40))
+    image.save(original, compress_level=0)
+    if case == "changed_pixels":
+        image.putpixel((0, 0), (200, 30, 40))
+    image.save(promoted, compress_level=9)
+    assert sha256_file(original) != sha256_file(promoted)
+    run = {
+        "schema_version": 1,
+        "kind": "poster_generation_run",
+        "source_artwork": file_record(original, image=True),
+    }
+    output = file_record(promoted, image=True)
+    if case == "wrong_output_hash":
+        output["sha256"] = "0" * 64
+    payload = {
+        "schema_version": 1,
+        "kind": "promoted_poster",
+        "run": run,
+        "outputs": {"artwork": output},
+    }
+    if case == "missing_output":
+        payload.pop("outputs")
+    elif case == "new_run":
+        payload = run
+    path = tmp_path / "provenance.json"
+    path.write_text(json.dumps(payload), encoding="utf-8")
+
+    if case == "same_pixels":
+        assert load_run_metadata(path, promoted) == run
+    else:
+        with pytest.raises(ValueError):
+            load_run_metadata(path, promoted)
+
+
 def _promotion_fixture(
     tmp_path: Path,
     monkeypatch,

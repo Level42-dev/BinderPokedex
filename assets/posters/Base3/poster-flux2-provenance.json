@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "Base3",
-  "promoted_at": "2026-09-12T03:08:34.658081+00:00",
+  "promoted_at": "2026-09-12T14:08:25.150608+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T19:40:13.845516+00:00",
@@ -288,7 +288,7 @@
             },
             "es": {
               "information": [
-                "62 cartas",
+                "0 cartas",
                 "Publicado",
                 "10 octubre 1999"
               ],
@@ -312,7 +312,7 @@
             },
             "it": {
               "information": [
-                "62 carte",
+                "0 carte",
                 "Pubblicato",
                 "10 ottobre 1999"
               ],
@@ -324,7 +324,7 @@
             },
             "ja": {
               "information": [
-                "62 枚",
+                "0 枚",
                 "発売日",
                 "1999年10月10日"
               ],
@@ -336,7 +336,7 @@
             },
             "ko": {
               "information": [
-                "62 장",
+                "0 장",
                 "출시일",
                 "1999년 10월 10일"
               ],
@@ -348,7 +348,7 @@
             },
             "zh_hans": {
               "information": [
-                "62 张",
+                "0 张",
                 "发行日期",
                 "1999年10月10日"
               ],
@@ -360,7 +360,7 @@
             },
             "zh_hant": {
               "information": [
-                "62 張",
+                "0 張",
                 "發行日期",
                 "1999年10月10日"
               ],
@@ -405,7 +405,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "918d63166984a5fa2fc314973ae3167777b231eb47c2ab130d3bec855beb3f0c"
+        "sha256": "5a17490bcb063029e48fa7ae2b4489b7b19efe9d440738076179b0a1c97731d9"
       },
       "prompt": {
         "bytes": 5918,

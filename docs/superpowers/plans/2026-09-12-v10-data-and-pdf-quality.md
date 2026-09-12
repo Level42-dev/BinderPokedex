@@ -584,8 +584,8 @@ Report exact test totals, snapshot boundary and reviewed count changes, poster c
 | --- | --- | --- |
 | Tasks 1-6: identity, localization, layout, logos, snapshot, refresh | Complete | All 31 scopes refreshed; the 63-file snapshot is locked to the 2026-09-12 boundary and verifies without drift. ME05 is included with 120 cards. |
 | Task 7: poster artwork | Complete | SV07, ME05, and SV08 passed raw/master and all nine physical-crop agent review. All 42 targets are promoted, enabled, and validated. Bounded resolution/model/reference comparisons and every accepted/rejected raw hash are recorded in the experiment log; all production assets remain 4B BF16. Provenance now distinguishes agent review from human approval. |
-| Task 8: German PDFs | Rebuilding final panorama revision | The prior 31-PDF build (807 A4 pages, including project notices) passed text and Poppler checks for Energy names, owner-qualified SV09 names, safe SV04/SV05 wrapping, German SV10.5 logos, corrected SV07 Hopplo, SVP numbering plus the unnumbered card, and MEP numbers 064/079. ME05/SV08 first-page checks are being repeated for the new panorama assets. |
-| Task 9: local release candidate | Rebuilding final panorama and localized-name revision | The full test suite now passes with 725 passed and 1 skipped, and independent code review has no remaining findings. The previous nine-language candidate contains 168 PDFs / 4,781 pages and nine verified archives. Those archives predate the final panorama and localized-name changes and must be rebuilt from the updated source commit before being described as the final candidate. |
+| Task 8: German PDFs | Rebuilding final localized-count revision | The prior 31-PDF build (807 A4 pages, including project notices) passed text and Poppler checks for Energy names, owner-qualified SV09 names, safe SV04/SV05 wrapping, German SV10.5 logos, corrected SV07 Hopplo, SVP numbering plus the unnumbered card, and MEP numbers 064/079. Panorama counts now match the German card selection; refreshed SVP/MEP previews visibly show 217/88. |
+| Task 9: local release candidate | Rebuilding final localized-count revision | The full test suite now passes with 733 passed and 1 skipped, and independent code review has no remaining findings. All 42 bundles are current without planner actions and all 267 language counts agree with their card selection. The previous nine-language candidate contains 168 PDFs / 4,781 pages and nine verified archives. Those archives predate the final count correction and must be rebuilt from the updated source commit before being described as the final candidate. |
 
 ME05 and SV08 now also have reviewed panoramas. The ordinary cover remains a
 diagnostic/explicit skip option, not an
@@ -605,3 +605,29 @@ full snapshot scan finds 201 affected labels in twelve PDF targets (ME02.5,
 SV09, SV10, and SVP, each in FR/ES/IT). No source card data or poster pixels
 change. Independent review accepts the correction; all PDFs are being rebuilt
 from one new source revision so their notices and archive provenance agree.
+
+The subsequent raster review caught one more Task 8 mismatch: German SVP and
+MEP card pages correctly contained 217 and 88 inserts, but their panorama
+information panels counted all languages (226 and 89). Japanese SV10 similarly
+showed 244 instead of 132. The existing card-page language selector is now a
+shared pure helper used by the panorama finalizer as well. Three regressions
+were observed failing before the fix; 33 focused tests now pass, including all
+267 configured target/language counts. Only deterministic overlays and their
+provenance need refreshing; no artwork regeneration or new visual approval is
+implied. Full validation and a source-consistent candidate rebuild follow.
+
+That canonical refresh also exposed a legacy serialization case in ME02,
+SV01, SV02, and SV04: promotion had re-encoded the reviewed PNG. The loader
+compared the stable output against the pre-promotion byte hash even though its
+registered output hash and reviewed pixel hash both matched. It now accepts
+only that exact registered, pixel-identical promoted encoding; new generation
+runs, changed pixels, missing output records, and wrong output hashes remain
+rejected. The valid re-encoding test failed before the correction, and all six
+focused loader cases now pass. Generation history and visual reviews are kept
+unchanged.
+
+Final pre-build gate: `733 passed, 1 skipped`; all 42 bundles are current with
+no planner actions, the 63-file snapshot verifies, and independent review has
+no findings for either follow-up. All 42 master SHA-256 values are unchanged;
+across all provenance records only 27 overlay fingerprints and their refresh
+timestamps changed. The source-consistent 168-PDF rebuild is the next gate.
