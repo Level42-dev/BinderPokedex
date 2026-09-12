@@ -5,10 +5,10 @@
     "release_date": "2026-05-22",
     "card_count": {
       "firstEd": 0,
-      "holo": 0,
-      "normal": 122,
+      "holo": 62,
+      "normal": 69,
       "official": 86,
-      "reverse": 0,
+      "reverse": 76,
       "total": 122
     },
     "logo": "https://assets.tcgdex.net/en/me/me04/logo.png",
@@ -1629,7 +1629,7 @@
   "metadata": {
     "total_cards": 122,
     "set_id": "me04",
-    "date_fetched": "2026-07-01T14:43:33.020297Z",
+    "date_fetched": "2026-09-12T02:39:34.706435Z",
     "source": "TCGdex API v2",
     "language": "en"
   }

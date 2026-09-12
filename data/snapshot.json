@@ -1,0 +1,323 @@
+{
+  "boundary": "2026-09-12",
+  "fetched_at": "2026-09-12T02:58:16Z",
+  "file_count": 63,
+  "files": [
+    {
+      "path": "data/output/Base1.json",
+      "sha256": "414888cdcb680c748288b2adf648ff13cffa2686bdd324b8004ede718005cd55",
+      "size_bytes": 64943
+    },
+    {
+      "path": "data/output/Base2.json",
+      "sha256": "ce3804ed5674ccbebceec8616eb022ab020a3a2b1574f70c1ee1d95d9a378e15",
+      "size_bytes": 42974
+    },
+    {
+      "path": "data/output/Base3.json",
+      "sha256": "a7b968fa6492ca21290a66b53aa62a65b04bf334c9b5811a5ed8eccdb0b7aad2",
+      "size_bytes": 38268
+    },
+    {
+      "path": "data/output/ExGen1.json",
+      "sha256": "ea12cdec5f82359062d4cec07d30ff52cf6173c03f88c603bef8c0aed8cda794",
+      "size_bytes": 87533
+    },
+    {
+      "path": "data/output/ExGen2.json",
+      "sha256": "ef19e0522558e942eebe41f17972726c73bd801db9c23f19c694d5d8d711e198",
+      "size_bytes": 156631
+    },
+    {
+      "path": "data/output/ExGen3.json",
+      "sha256": "29a193a5fc3c2cf04bd9aad552ea0213c4fd75a36afad179f19051fef3b92c7b",
+      "size_bytes": 316897
+    },
+    {
+      "path": "data/output/ME01.json",
+      "sha256": "3588df0d35e217e0772d76735fa2a6101ea8b1814bc4e0f9b9739e154f351031",
+      "size_bytes": 130943
+    },
+    {
+      "path": "data/output/ME02.5.json",
+      "sha256": "1333b47a24b031dfedd00ce6c256728eb2a05f45df7ba178e3c6ec4431de1c13",
+      "size_bytes": 208330
+    },
+    {
+      "path": "data/output/ME02.json",
+      "sha256": "785df1dfb1cd63c1cfad6dc6e622637da371dac104d33ab585a37731327438fa",
+      "size_bytes": 91466
+    },
+    {
+      "path": "data/output/ME03.json",
+      "sha256": "4fdae90f280b0730f5a9b59f6deabd82668a285927b1add6c8f6e055c64c360d",
+      "size_bytes": 86928
+    },
+    {
+      "path": "data/output/ME04.json",
+      "sha256": "8a58f84d2a7fb95268450073f6a6836c7e131d7d608ec30d8a2e05b603ccb184",
+      "size_bytes": 86105
+    },
+    {
+      "path": "data/output/ME05.json",
+      "sha256": "07dee751625a950c6908aa83702664e7217673ea2f23d75d156662b3abf17ab7",
+      "size_bytes": 85111
+    },
+    {
+      "path": "data/output/MEP.json",
+      "sha256": "d7a72e603ba1d5448c288c24e9882d6c2a7b26a990255f44fbbc9869a0d17107",
+      "size_bytes": 64161
+    },
+    {
+      "path": "data/output/Pokedex.json",
+      "sha256": "91569a25cdfa4df51b3b73b105490519d98f82ef021e0d36302d313041e51ab2",
+      "size_bytes": 672701
+    },
+    {
+      "path": "data/output/SV01.json",
+      "sha256": "f12a4876461d6264f8454c3513f1b8e116ee6b1f8b0c5552fef9ecf40592eadf",
+      "size_bytes": 176328
+    },
+    {
+      "path": "data/output/SV02.json",
+      "sha256": "a2f96c9e6d1e9de405ca2b368a9aea1c4c47959e1e3adc89d9f57d5df74efc27",
+      "size_bytes": 192030
+    },
+    {
+      "path": "data/output/SV03.5.json",
+      "sha256": "8c6ccc9c48815acfdf8e083ffee59c58f3838fa225afed3fdcfa2f476d8c5171",
+      "size_bytes": 142996
+    },
+    {
+      "path": "data/output/SV03.json",
+      "sha256": "cccffb8d4474a34f806f2f26ac6b30eca184dcf4e70b5c4fda7c8eb14328b7b6",
+      "size_bytes": 158682
+    },
+    {
+      "path": "data/output/SV04.5.json",
+      "sha256": "98a58b158f5ddf31fbda3b8bfc6b9b066c3afb3b5cb6e8c2c7e2b5c375a85b6f",
+      "size_bytes": 169037
+    },
+    {
+      "path": "data/output/SV04.json",
+      "sha256": "139c992d597758f81b5c5d17d15483d73b409aa0181d8a4bf7b79d6980fac663",
+      "size_bytes": 183215
+    },
+    {
+      "path": "data/output/SV05.json",
+      "sha256": "eb3403312966f033b66126c8075c68fded1e182e7a29dd57ff0c5ef46c7b4bd3",
+      "size_bytes": 151188
+    },
+    {
+      "path": "data/output/SV06.5.json",
+      "sha256": "f83375298fd0dcd1eb83b03377d4647f81015982ec55519229e1b03e917cbd04",
+      "size_bytes": 70893
+    },
+    {
+      "path": "data/output/SV06.json",
+      "sha256": "0957c586308dd23b585d5aed685aec29d4e9a638cf4c2a89f1632bbdeea1750f",
+      "size_bytes": 156745
+    },
+    {
+      "path": "data/output/SV07.json",
+      "sha256": "93eb51d71d2bc3c1494d4c9e3faa8e307feb5072c78ef34378075385ce9b30e4",
+      "size_bytes": 121152
+    },
+    {
+      "path": "data/output/SV08.5.json",
+      "sha256": "b944a289a3a15ccd9d27dbe5938467cff4e801fcda48abff88e50a1d9427cbad",
+      "size_bytes": 126214
+    },
+    {
+      "path": "data/output/SV08.json",
+      "sha256": "2ce18b16b7536791b7d0d86c8f06b679c8c5f92b6741f7424e799ae48aaba38e",
+      "size_bytes": 173564
+    },
+    {
+      "path": "data/output/SV09.json",
+      "sha256": "5c65162c258e3ec262415d86157fe6a78768b88657450987c87a80bae8aadf9a",
+      "size_bytes": 134129
+    },
+    {
+      "path": "data/output/SV10.5B.json",
+      "sha256": "4c96e6d217147a90469cd0242d086dcd61cfcce866decbbe48abeb20d1954292",
+      "size_bytes": 120184
+    },
+    {
+      "path": "data/output/SV10.5W.json",
+      "sha256": "ee3cbdd6b5fe51bc42a5576ca0c4d2cce7f4bd9ffe8b8cb221f61fe5877560da",
+      "size_bytes": 120915
+    },
+    {
+      "path": "data/output/SV10.json",
+      "sha256": "d2f29fea33ba45031332ca2a17f48f23aa89a9f9a2a846cac8011612ff3e2a75",
+      "size_bytes": 185787
+    },
+    {
+      "path": "data/output/SVP.json",
+      "sha256": "b719c52e82f260202231462fdfa75f94c7c248dbfb06153d3cf2d899eb3b0b42",
+      "size_bytes": 157453
+    },
+    {
+      "path": "data/source/base1.json",
+      "sha256": "3187182b5e2964074e82494e8e761b055095ef41da6b05d23c61de7401946fa7",
+      "size_bytes": 27866
+    },
+    {
+      "path": "data/source/base2.json",
+      "sha256": "5d2c786f255f7005c2085fbc2fe9bf146f19e752cfc76ba97bfafff5be6b2335",
+      "size_bytes": 18526
+    },
+    {
+      "path": "data/source/base3.json",
+      "sha256": "708fbe0af66cfae40e6a7ad6d85d5924420589ef7d2a8ac1ace38acb30f94e60",
+      "size_bytes": 17733
+    },
+    {
+      "path": "data/source/me01.json",
+      "sha256": "bafeb02551cd65631f2a8149a5ef69d09fa2b7964928139883f395d8c5926d82",
+      "size_bytes": 52425
+    },
+    {
+      "path": "data/source/me02.5.json",
+      "sha256": "ca3bdfebad43e58715fa99cb0e651c519be0d1c245c58138186df5169a88fb96",
+      "size_bytes": 83956
+    },
+    {
+      "path": "data/source/me02.json",
+      "sha256": "a242e2ce27568890589d625be75f364fde14223672d255973292b1ec543cac9c",
+      "size_bytes": 36457
+    },
+    {
+      "path": "data/source/me03.json",
+      "sha256": "e66cccf2a428a978bdad37f88c9f0d49127c084038672ca0447d9e6c695e3ac3",
+      "size_bytes": 34397
+    },
+    {
+      "path": "data/source/me04.json",
+      "sha256": "6a9e78be01f1c69170275b4e156c61c20a29e9764b304783d0e5fe2f9c15ceed",
+      "size_bytes": 34106
+    },
+    {
+      "path": "data/source/me05.json",
+      "sha256": "14f8c210362259d61d6372aa343732cd369b0bbe2547c7ab41d738df5c1bd7a3",
+      "size_bytes": 33665
+    },
+    {
+      "path": "data/source/mep.json",
+      "sha256": "0f580f72063b48ea181a866c9b0695756f86bf9268d4f29ee90a678e13c0810a",
+      "size_bytes": 21871
+    },
+    {
+      "path": "data/source/mep_supplement.json",
+      "sha256": "85897f8e008c9ecc51da3d03bba736e65335a1ecec1f4b91fe12aad896436658",
+      "size_bytes": 10984
+    },
+    {
+      "path": "data/source/pokedex.json",
+      "sha256": "90c3891add88adbfdea07853d548e09d34c2fdce84b4bc38b94f607b57d81907",
+      "size_bytes": 2505240
+    },
+    {
+      "path": "data/source/sv01.json",
+      "sha256": "90fb42db0edffcb8b3f12961721bdf38d6cec5a4e7a0aa421acac8a8805fc9ae",
+      "size_bytes": 71478
+    },
+    {
+      "path": "data/source/sv02.json",
+      "sha256": "996be183ba385c16be47069fcc8a2f43d37f46d5cbf7db3be3abe5c124e84de5",
+      "size_bytes": 77795
+    },
+    {
+      "path": "data/source/sv03.5.json",
+      "sha256": "82969cfead144937bafb0483201c2f92b7b3f5324e169ac61b6e621139f720bd",
+      "size_bytes": 58717
+    },
+    {
+      "path": "data/source/sv03.json",
+      "sha256": "4894b94254c274030c76530bd84643ab04e26e11f91cae16f3aee9b4a7fc06b3",
+      "size_bytes": 64551
+    },
+    {
+      "path": "data/source/sv04.5.json",
+      "sha256": "2adc7574761401516b2fc40540bdf1cf58d163d2029249597ac9d48d336f5b1b",
+      "size_bytes": 69576
+    },
+    {
+      "path": "data/source/sv04.json",
+      "sha256": "60f07854077cec44f107875a87c38b9241d0a2bb6dbec4710e4a183203845501",
+      "size_bytes": 74061
+    },
+    {
+      "path": "data/source/sv05.json",
+      "sha256": "6acc7616ce852117736eb9acfd8bfaacd0b220415b05b89ffeef72311f75958d",
+      "size_bytes": 60928
+    },
+    {
+      "path": "data/source/sv06.5.json",
+      "sha256": "0d2dc6a6a97bec6a881b7fe3239b18d627cb3b357965f7cab3ae8caabb01f2b7",
+      "size_bytes": 28306
+    },
+    {
+      "path": "data/source/sv06.json",
+      "sha256": "49236af1dafcd79eb60eef1c920610f7dea6f0d9c4156e4fd91e6873cd6f4078",
+      "size_bytes": 62928
+    },
+    {
+      "path": "data/source/sv07.json",
+      "sha256": "1bff046dd836270f34be69077b0db1d9179c65d6a403616a82033daac88214b8",
+      "size_bytes": 48978
+    },
+    {
+      "path": "data/source/sv08.5.json",
+      "sha256": "508a9211b66999702348e785202021a1b0e6e2570fd74b4e92941acfb5cb508e",
+      "size_bytes": 50410
+    },
+    {
+      "path": "data/source/sv08.json",
+      "sha256": "b4ae3f2b9e5114a036890f2d68ae8fa57a4dde9a2eb54bc738fd01b0594258c5",
+      "size_bytes": 69968
+    },
+    {
+      "path": "data/source/sv09.json",
+      "sha256": "005f9db47ca19ec2cdad35f1df7fc278469cedb2f8072a2769c40ec2c01faa22",
+      "size_bytes": 53678
+    },
+    {
+      "path": "data/source/sv10.5b.json",
+      "sha256": "f882812a2e19b18f34d01874985c23a0d8f9441fa0fc4cdbcf5179acaa2e9f77",
+      "size_bytes": 49535
+    },
+    {
+      "path": "data/source/sv10.5w.json",
+      "sha256": "d73217988bb2692216de6d936fc47f49e3c65dd0ce184d3bf099cc89dffd8668",
+      "size_bytes": 49831
+    },
+    {
+      "path": "data/source/sv10.json",
+      "sha256": "d6506b87c83624dec828501a4b6caa73a14ca3d4fa4667393b5b466258588845",
+      "size_bytes": 69586
+    },
+    {
+      "path": "data/source/svp.json",
+      "sha256": "154a5e2c7bce8d070023058ea7f623d2697287e2aae12053b9fcbea0a33f848e",
+      "size_bytes": 62408
+    },
+    {
+      "path": "data/source/tcg_bw_ex.json",
+      "sha256": "2ff1cab3dc3cdd66758e13e7466a853eb6c1fa8673b72776bcec93f5f7c204ca",
+      "size_bytes": 778724
+    },
+    {
+      "path": "data/source/tcg_classic_ex.json",
+      "sha256": "78b7673c31be6f9e845c4c5a963d41cc4d584e290c553995c8fe62a3ed196165",
+      "size_bytes": 48022
+    },
+    {
+      "path": "data/source/tcg_sv_ex.json",
+      "sha256": "0f18e3e7c7b6f6f0115e71350bc9c2bf3d2b9e8b1cbf9a214e7433f0b9d156dd",
+      "size_bytes": 3092197
+    }
+  ],
+  "schema_version": 1
+}

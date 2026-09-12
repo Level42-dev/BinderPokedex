@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "SV03.5",
-  "promoted_at": "2026-08-06T23:53:13.699396+00:00",
+  "promoted_at": "2026-09-12T14:08:52.702765+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T18:48:49.380516+00:00",
@@ -313,50 +313,50 @@
             },
             "ja": {
               "information": [
-                "151",
-                "207 枚",
+                "0 枚",
                 "発売日",
                 "2023年9月22日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "d3cc94670d3ec48e858e832c99b1820e4fc1d2a9fd23fbd4758877a6b321b8a7"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "151"
               }
             },
             "ko": {
               "information": [
-                "151",
-                "207 장",
+                "0 장",
                 "출시일",
                 "2023년 9월 22일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "d3cc94670d3ec48e858e832c99b1820e4fc1d2a9fd23fbd4758877a6b321b8a7"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "151"
               }
             },
             "zh_hans": {
               "information": [
-                "151",
-                "207 张",
+                "0 张",
                 "发行日期",
                 "2023年9月22日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "d3cc94670d3ec48e858e832c99b1820e4fc1d2a9fd23fbd4758877a6b321b8a7"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "151"
               }
             },
             "zh_hant": {
               "information": [
-                "151",
-                "207 張",
+                "0 張",
                 "發行日期",
                 "2023年9月22日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "d3cc94670d3ec48e858e832c99b1820e4fc1d2a9fd23fbd4758877a6b321b8a7"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "151"
               }
             }
           },
@@ -391,30 +391,6 @@
               "mode": "RGBA",
               "pixel_sha256": "1b40e3a560b3a55ce2079f01902ed735a202de458ab37ffae928df36ec2fe847",
               "width": 220
-            },
-            "ja": {
-              "height": 167,
-              "mode": "RGBA",
-              "pixel_sha256": "d3cc94670d3ec48e858e832c99b1820e4fc1d2a9fd23fbd4758877a6b321b8a7",
-              "width": 220
-            },
-            "ko": {
-              "height": 167,
-              "mode": "RGBA",
-              "pixel_sha256": "d3cc94670d3ec48e858e832c99b1820e4fc1d2a9fd23fbd4758877a6b321b8a7",
-              "width": 220
-            },
-            "zh_hans": {
-              "height": 167,
-              "mode": "RGBA",
-              "pixel_sha256": "d3cc94670d3ec48e858e832c99b1820e4fc1d2a9fd23fbd4758877a6b321b8a7",
-              "width": 220
-            },
-            "zh_hant": {
-              "height": 167,
-              "mode": "RGBA",
-              "pixel_sha256": "d3cc94670d3ec48e858e832c99b1820e4fc1d2a9fd23fbd4758877a6b321b8a7",
-              "width": 220
             }
           },
           "pipeline_contract": {
@@ -436,7 +412,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "5d43ee865edb918f9fe811aae8b47d2e5b7a6b58c08d1ada08ee2ba5d2d5b434"
+        "sha256": "f1c42a187569424983446ba00eb94ab4278b145f52b9916990f786d991b78ecd"
       },
       "prompt": {
         "bytes": 5487,

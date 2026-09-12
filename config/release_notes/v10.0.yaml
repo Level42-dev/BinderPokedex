@@ -1,0 +1,27 @@
+display_date:
+  en: "September 2026"
+  de: "September 2026"
+summary:
+  en: "Freshly updated collections, corrected labels, and the latest Mega Evolution sets make BinderPokedex v10.0 more complete and dependable."
+  de: "Frisch aktualisierte Sammlungen, korrigierte Beschriftungen und die neuesten Mega-Entwicklungs-Sets machen BinderPokedex v10.0 vollständiger und verlässlicher."
+whats_new:
+  en:
+    title: "Fresh Lists. Correct Labels. More Mega Evolution."
+    body:
+      - "Every collection was rebuilt from the reviewed 2026-09-12 data snapshot, with the available languages checked card by card."
+      - "The Mega Evolution era now reaches ME05 Dunkelnacht, alongside the six existing Mega collections."
+      - "German Basic Energy labels now match the cards, and trainer-owned names such as Ns Zoroark-ex remain intact in their TCG sets."
+      - "The German promo selection keeps original numbers: 216 numbered SVP cards plus the unnumbered Terapagos & Freunde, and 88 MEP cards."
+      - "Schwarze Blitze and Weiße Flammen use their German set logos, while long card names stay safely inside their cutting areas."
+      - "Stellarkrone opens with a corrected Hopplo panorama."
+      - "Dunkelnacht has a new panorama, Stürmische Funken has a reviewed replacement, and every current set and collection section opens with its own panorama."
+  de:
+    title: "Aktuelle Listen. Korrekte Beschriftungen. Mehr Mega-Entwicklung."
+    body:
+      - "Alle Sammlungen wurden aus dem geprüften Datenstand vom 12. September 2026 neu aufgebaut; die verfügbaren Sprachen wurden Karte für Karte abgeglichen."
+      - "Die Mega-Entwicklungs-Ära reicht jetzt bis ME05 Dunkelnacht und ergänzt die sechs bestehenden Mega-Sammlungen."
+      - "Deutsche Basis-Energien tragen jetzt die Namen der echten Karten; Trainerzuordnungen wie Ns Zoroark-ex bleiben in ihren TCG-Sets erhalten."
+      - "Der deutsche Promo-Stand umfasst 216 nummerierte SVP-Karten plus die unnummerierte Karte Terapagos & Freunde sowie 88 MEP-Karten, jeweils mit ihren ursprünglichen Nummern."
+      - "Schwarze Blitze und Weiße Flammen verwenden ihre deutschen Setlogos, während lange Kartennamen sicher innerhalb der Schnittflächen bleiben."
+      - "Stellarkrone beginnt mit einem korrigierten Hopplo-Panorama."
+      - "Dunkelnacht erhält ein neues Panorama, Stürmische Funken ein geprüftes Ersatzmotiv; jedes aktuelle Set und jeder Sammlungsabschnitt beginnt mit einem eigenen Panorama."

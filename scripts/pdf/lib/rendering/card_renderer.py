@@ -16,6 +16,7 @@ Features:
 
 import json
 import logging
+import re
 from pathlib import Path
 from typing import Dict, Optional
 
@@ -63,6 +64,9 @@ class CardStyle:
     
     # Fonts - Increased sizes for better readability on printed A4
     FONT_SIZE_NAME = 11          # Increased from 8
+    FONT_SIZE_NAME_MIN = 8
+    NAME_HORIZONTAL_PADDING = 3 * mm
+    NAME_LINE_LEADING = 0.95
     FONT_SIZE_TYPE = 6           # Increased from 5
     FONT_SIZE_ID = 16
     FONT_SIZE_SUBTITLE = 7       # Increased from 4
@@ -118,7 +122,8 @@ class CardRenderer:
         return f"#{r:02x}{g:02x}{b:02x}"
     
     def _draw_card_name_with_ex_logo(self, canvas_obj, name: str, x: float, card_width: float,
-                                     name_y: float, font_name: str, logo_type: str = 'ex') -> None:
+                                     name_y: float, font_name: str, font_size: float = None,
+                                     logo_type: str = 'ex') -> None:
         """
         Draw card name with EX or special variant logos.
         
@@ -135,7 +140,9 @@ class CardRenderer:
             font_name: Font to use
             logo_type: Type of logo ('ex', 'm_ex', 'ex_new', 'ex_tera')
         """
-        canvas_obj.setFont(font_name, self.style.FONT_SIZE_NAME)
+        if font_size is None:
+            font_size = self.style.FONT_SIZE_NAME
+        canvas_obj.setFont(font_name, font_size)
         canvas_obj.setFillColor(HexColor(self.style.TEXT_DARK))
         
         # Use unified LogoRenderer with card context
@@ -145,10 +152,76 @@ class CardRenderer:
             x + card_width / 2,
             name_y,
             font_name,
-            self.style.FONT_SIZE_NAME,
+            font_size,
             context='card',
-            text_color=self.style.TEXT_DARK
+            text_color=self.style.TEXT_DARK,
+            language=self.language,
         )
+
+    def _draw_fitted_name_line(
+        self,
+        canvas_obj,
+        name: str,
+        x: float,
+        card_width: float,
+        name_y: float,
+        font_name: str,
+        font_size: float,
+    ) -> None:
+        """Draw one already-fitted title line with special glyph support."""
+        if any(
+            token in name
+            for token in ('[EX_TERA]', '[EX_NEW]', '[M]', '[EX]')
+        ):
+            self._draw_card_name_with_ex_logo(
+                canvas_obj,
+                name,
+                x,
+                card_width,
+                name_y,
+                font_name,
+                font_size=font_size,
+            )
+        elif ('♂' in name or '♀' in name) and font_name == 'Helvetica-Bold':
+            TextRenderer.draw_name_with_symbol_fallback(
+                canvas_obj,
+                name,
+                x,
+                card_width,
+                name_y,
+                font_name,
+                font_size,
+                self.style.TEXT_DARK,
+                symbol_font=FontManager.get_symbol_font_name(),
+            )
+        else:
+            canvas_obj.setFont(font_name, font_size)
+            canvas_obj.setFillColor(HexColor(self.style.TEXT_DARK))
+            canvas_obj.drawCentredString(x + card_width / 2, name_y, name)
+
+    @staticmethod
+    def _format_card_number(pokemon_data: dict) -> Optional[str]:
+        """Format the printed identity without inventing a TCG set number."""
+        if 'printed_number' in pokemon_data:
+            value = pokemon_data['printed_number']
+        elif 'localId' in pokemon_data:
+            # Legacy TCG snapshots predate ``printed_number`` but still carry
+            # their original set-local identity.  Never substitute the
+            # renderer's compact section position for such cards.
+            value = pokemon_data['localId']
+        else:
+            value = (
+                pokemon_data.get('num')
+                or pokemon_data.get('id')
+                or pokemon_data.get('section_index')
+            )
+
+        if value is None or value == '':
+            return None
+        if isinstance(value, int):
+            return f"#{value:03d}"
+        value = str(value)
+        return value if value.startswith('#') else f"#{value}"
     
     def render_card(self, canvas_obj, pokemon_data: dict, x: float, y: float,
                    card_width: float = None, card_height: float = None,
@@ -248,7 +321,9 @@ class CardRenderer:
         
         canvas_obj.setFillColor(HexColor(self.style.TEXT_GRAY))
         type_x: float = x + card_width - 3  # Right edge with margin
-        type_y: float = y + card_height - header_height + 6
+        # Keep the small type label below the two-line title band.  The image
+        # area intentionally leaves a 4 mm gap below the header.
+        type_y: float = y + card_height - header_height - 2 * mm
         canvas_obj.drawRightString(type_x, type_y, type_translated)
         
         # ===== NAME RENDERING =====
@@ -268,50 +343,48 @@ class CardRenderer:
         
         try:
             font_name: str = FontManager.get_font_name(self.language, bold=True)
-            canvas_obj.setFont(font_name, self.style.FONT_SIZE_NAME)
-            canvas_obj.setFillColor(HexColor(self.style.TEXT_DARK))
-            # Position Pokémon name centered vertically in header area
-            # Header goes from (y + card_height - header_height) to (y + card_height)
-            # Center name vertically in header
-            name_y: float = y + card_height - header_height / 2 - 1 * mm
-            
-            # Check for special rendering needs (logo tokens in name)
-            if '[EX_TERA]' in name:
-                self._draw_card_name_with_ex_logo(canvas_obj, name, x, card_width, name_y, font_name, logo_type='ex_tera')
-            elif '[EX_NEW]' in name:
-                self._draw_card_name_with_ex_logo(canvas_obj, name, x, card_width, name_y, font_name, logo_type='ex_new')
-            elif '[M]' in name and '[EX]' in name:
-                self._draw_card_name_with_ex_logo(canvas_obj, name, x, card_width, name_y, font_name, logo_type='m_ex')
-            elif '[EX]' in name:
-                self._draw_card_name_with_ex_logo(canvas_obj, name, x, card_width, name_y, font_name, logo_type='ex')
-            elif '[M]' in name:
-                self._draw_card_name_with_ex_logo(canvas_obj, name, x, card_width, name_y, font_name, logo_type='ex')
-            elif ('♂' in name or '♀' in name) and font_name == 'Helvetica-Bold':
-                TextRenderer.draw_name_with_symbol_fallback(canvas_obj, name, x, card_width, name_y, font_name, 
-                                                           self.style.FONT_SIZE_NAME, self.style.TEXT_DARK)
-            else:
-                canvas_obj.drawCentredString(x + card_width / 2, name_y, name)
-        
-        except Exception as e:
-            logger.warning(f"Could not render name '{name}': {e}")
-            # Fallback to Helvetica
-            canvas_obj.setFont("Helvetica-Bold", self.style.FONT_SIZE_NAME)
-            canvas_obj.setFillColor(HexColor(self.style.TEXT_DARK))
-            canvas_obj.drawCentredString(x + card_width / 2, y + card_height - header_height + 11, name)
+        except Exception:
+            font_name = "Helvetica-Bold"
+
+        safe_name_width = card_width - 2 * self.style.NAME_HORIZONTAL_PADDING
+        name_lines, name_font_size = TextRenderer.fit_name_lines(
+            name,
+            font_name,
+            self.style.FONT_SIZE_NAME,
+            self.style.FONT_SIZE_NAME_MIN,
+            safe_name_width,
+        )
+        name_y: float = y + card_height - header_height / 2 - 1 * mm
+        line_leading = name_font_size * self.style.NAME_LINE_LEADING
+        first_line_y = name_y + (line_leading / 2 if len(name_lines) == 2 else 0)
+        for line_index, line in enumerate(name_lines):
+            self._draw_fitted_name_line(
+                canvas_obj,
+                line,
+                x,
+                card_width,
+                first_line_y - line_index * line_leading,
+                font_name,
+                name_font_size,
+            )
         
         # ===== IMAGE AREA =====
         image_height: float = card_height - header_height - 4 * mm
         canvas_obj.setFillColor(HexColor(self.style.CARD_BACKGROUND))
         canvas_obj.rect(x, y, card_width, image_height, fill=True, stroke=False)
         
-        # Draw index number at bottom
-        # Use real Pokédex num if available (e.g. '#152'), otherwise fall back to section_index (for variants)
-        poke_num = pokemon_data.get('num') or pokemon_data.get('id') or pokemon_data.get('section_index', '???')
-        poke_num_str: str = f"#{poke_num:03d}" if isinstance(poke_num, int) else (f"#{poke_num}" if not str(poke_num).startswith('#') else str(poke_num))
-        darkened_color: str = self._darken_color(header_color, factor=0.6)
-        canvas_obj.setFont("Helvetica-Bold", self.style.FONT_SIZE_ID)
-        canvas_obj.setFillColor(HexColor(darkened_color))
-        canvas_obj.drawCentredString(x + card_width / 2, y + 4 * mm, poke_num_str)
+        # Draw the physical card's number.  An explicit null value is a real
+        # unnumbered card and must never fall back to its list position.
+        poke_num_str = self._format_card_number(pokemon_data)
+        if poke_num_str is not None:
+            darkened_color: str = self._darken_color(header_color, factor=0.6)
+            canvas_obj.setFont("Helvetica-Bold", self.style.FONT_SIZE_ID)
+            canvas_obj.setFillColor(HexColor(darkened_color))
+            canvas_obj.drawCentredString(
+                x + card_width / 2,
+                y + 4 * mm,
+                poke_num_str,
+            )
         
         # ===== IMAGE RENDERING =====
         image_source = pokemon_data.get('image_path') or pokemon_data.get('image_url')
@@ -369,6 +442,20 @@ class CardRenderer:
                 # Mega X/Y forms: add X or Y after name, before suffix
                 name = f"{name} {variant_form.upper()}"
         
+        # Some localized TCG names put the owner after ex ("Zoroark-ex de N").
+        # Keep the marker in that position instead of appending a second one.
+        # Match a complete marker, never the letters inside a species name.
+        if suffix == '[EX_NEW]':
+            name, embedded_ex = re.subn(
+                r'(?<=\S)[-\s]ex(?=\s|$)',
+                ' [EX_NEW]',
+                name,
+                count=1,
+                flags=re.IGNORECASE,
+            )
+            if embedded_ex:
+                suffix = ''
+
         # Add suffix (if present)
         if suffix:
             name = f"{name} {suffix}"

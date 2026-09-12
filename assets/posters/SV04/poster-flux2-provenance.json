@@ -12,12 +12,12 @@
       "height": 3268,
       "mode": "RGBA",
       "pixel_sha256": "c48508601a3e28c2a4000ef0d1df6230edff3580da1d95c5f696be2c2dc11575",
-      "sha256": "a346e68bc33d02a1fa64a0ee1c02b21949c2d9a42aeafed3c61d54d4faf56e91",
+      "sha256": "fbef96b80f577acaa02915ea6b789c447df4a5b28dcac369070ff711a413c30a",
       "width": 2368
     }
   },
   "poster_id": "SV04",
-  "promoted_at": "2026-08-06T23:53:25.336300+00:00",
+  "promoted_at": "2026-09-12T14:16:30.190900+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T18:50:08.121908+00:00",
@@ -321,50 +321,50 @@
             },
             "ja": {
               "information": [
-                "Paradox Rift",
-                "266 枚",
+                "0 枚",
                 "発売日",
                 "2023年11月3日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "d04dc8a148e4967c7114a418ca5aa295a44a88c4ec7405d3ff03b98195051dea"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Paradox Rift"
               }
             },
             "ko": {
               "information": [
-                "Paradox Rift",
-                "266 장",
+                "0 장",
                 "출시일",
                 "2023년 11월 3일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "d04dc8a148e4967c7114a418ca5aa295a44a88c4ec7405d3ff03b98195051dea"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Paradox Rift"
               }
             },
             "zh_hans": {
               "information": [
-                "Paradox Rift",
-                "266 张",
+                "0 张",
                 "发行日期",
                 "2023年11月3日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "d04dc8a148e4967c7114a418ca5aa295a44a88c4ec7405d3ff03b98195051dea"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Paradox Rift"
               }
             },
             "zh_hant": {
               "information": [
-                "Paradox Rift",
-                "266 張",
+                "0 張",
                 "發行日期",
                 "2023年11月3日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "d04dc8a148e4967c7114a418ca5aa295a44a88c4ec7405d3ff03b98195051dea"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Paradox Rift"
               }
             }
           },
@@ -399,30 +399,6 @@
               "mode": "RGBA",
               "pixel_sha256": "8614f6c48ffb6402e1cd7316ecd681441c1f327716883050308dfb02ab54b0a8",
               "width": 451
-            },
-            "ja": {
-              "height": 167,
-              "mode": "RGBA",
-              "pixel_sha256": "d04dc8a148e4967c7114a418ca5aa295a44a88c4ec7405d3ff03b98195051dea",
-              "width": 451
-            },
-            "ko": {
-              "height": 167,
-              "mode": "RGBA",
-              "pixel_sha256": "d04dc8a148e4967c7114a418ca5aa295a44a88c4ec7405d3ff03b98195051dea",
-              "width": 451
-            },
-            "zh_hans": {
-              "height": 167,
-              "mode": "RGBA",
-              "pixel_sha256": "d04dc8a148e4967c7114a418ca5aa295a44a88c4ec7405d3ff03b98195051dea",
-              "width": 451
-            },
-            "zh_hant": {
-              "height": 167,
-              "mode": "RGBA",
-              "pixel_sha256": "d04dc8a148e4967c7114a418ca5aa295a44a88c4ec7405d3ff03b98195051dea",
-              "width": 451
             }
           },
           "pipeline_contract": {
@@ -444,7 +420,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "b70acd3c69a51cab1444a98c89f3e069211425f2a8623836174c8e10a6212532"
+        "sha256": "2a757cd881d2b8ec61f9b3538e92f971ee08873a1f9d40626d011fb4b5c878a9"
       },
       "prompt": {
         "bytes": 5695,

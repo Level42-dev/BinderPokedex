@@ -15,9 +15,9 @@
   - Iconic Pokémon on covers (Charizard X, Mewtwo X, Gengar)
 
 ### Full TCG Support ✅ COMPLETE (v7.0+)
-- 29 TCG scopes across the original Base era, 3 EX generations, Mega
+- 30 TCG scopes across the original Base era, 3 EX generations, Mega
   Evolution, and the full Scarlet & Violet era
-- 30 total scopes (1 Pokédex + 29 TCG scopes)
+- 31 total scopes (1 Pokédex + 30 TCG scopes)
 
 ### SVG Template System ✅ COMPLETE (v8.0)
 - Full SVG-based card, page, and cover templates

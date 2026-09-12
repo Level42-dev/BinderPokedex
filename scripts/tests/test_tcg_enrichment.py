@@ -16,6 +16,12 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent / 'fetcher'))
 
 from steps.enrich_tcg_cards_from_pokedex import EnrichTCGCardsFromPokedexStep
+from steps.enrich_tcg_names_multilingual import EnrichTCGNamesMultilingualStep
+from steps.fetch_tcgdex_ex_gen3 import FetchTCGdexScarletVioletEXStep
+from steps.fetch_tcgdex_set import FetchTCGdexSetStep
+from steps import enrich_tcg_names_multilingual as multilingual_module
+from steps import fetch_tcgdex_ex_gen3 as exgen3_module
+from steps.base import PipelineContext
 
 
 class TestVariantMarkerExtraction:
@@ -218,6 +224,15 @@ class TestCardEnrichment:
                     'fr': 'Absol'
                 },
                 'types': ['Darkness']
+            },
+            571: {
+                'pokemon_id': 571,
+                'names': {
+                    'de': 'Zoroark',
+                    'en': 'Zoroark',
+                    'fr': 'Zoroark'
+                },
+                'types': ['Darkness']
             }
         }
     
@@ -295,6 +310,28 @@ class TestCardEnrichment:
         assert enriched['dexId'] == [1]
         assert enriched['pokemon_id'] == 1
         assert enriched['name_en'] == 'Bulbasaur'
+
+    def test_enrich_card_preserves_observed_trainer_owned_names(self):
+        """TCG card titles remain authoritative over canonical Pokédex names."""
+        card = {
+            'id': 'sv09-189',
+            'localId': '189',
+            'name': "N's Zoroark ex",
+            'name_de': 'Ns Zoroark-ex',
+            'name_en': "N's Zoroark ex",
+            'available_languages': ['de', 'en'],
+            'category': 'Pokemon',
+            'dexId': [571],
+            'types': ['Darkness'],
+        }
+
+        enriched = self.step._enrich_card(card, self.pokemon_by_id)
+
+        assert enriched['pokemon_id'] == 571
+        assert enriched['name_de'] == 'Ns Zoroark-ex'
+        assert enriched['name_en'] == "N's Zoroark ex"
+        assert 'name_fr' not in enriched
+        assert self.pokemon_by_id[571]['names']['de'] == 'Zoroark'
     
     def test_enrich_trainer_card(self):
         """Test enrichment of trainer card."""
@@ -331,6 +368,201 @@ class TestCardEnrichment:
         
         assert enriched.get('card_type') == 'unknown'
         assert enriched.get('pokemon_id') is None
+
+
+class TestMultilingualCardAvailability:
+    """A localized PDF may contain only cards observed in that language."""
+
+    def setup_method(self):
+        self.step = EnrichTCGNamesMultilingualStep("test_languages")
+
+    def test_enrichment_records_only_observed_languages(self):
+        card = {
+            'id': 'svp-190',
+            'localId': '190',
+            'name': 'Pikachu',
+        }
+
+        [result] = self.step._enrich_cards(
+            [card],
+            {'190': {'en': 'Pikachu'}},
+        )
+
+        assert result['available_languages'] == ['en']
+        assert result['printed_number'] == '190'
+        assert result['name_en'] == 'Pikachu'
+        assert 'name_de' not in result
+
+    def test_enrichment_marks_every_observed_translation(self):
+        card = {
+            'id': 'sv09-189',
+            'localId': '189',
+            'name': "N's Zorua",
+        }
+
+        [result] = self.step._enrich_cards(
+            [card],
+            {
+                '189': {
+                    'de': 'Ns Zorua',
+                    'en': "N's Zorua",
+                    'fr': 'Zorua de N',
+                    'zh_hans': 'Ｎ的索罗亚',
+                }
+            },
+        )
+
+        assert result['available_languages'] == ['de', 'en', 'fr', 'zh_hans']
+        assert result['printed_number'] == '189'
+
+    def test_empty_localized_set_is_not_marked_available(self, monkeypatch):
+        class FakeClient:
+            def __init__(self, language):
+                self.language = language
+
+            def get_set(self, _set_id):
+                if self.language == 'de':
+                    return {
+                        'name': 'Leerer Platzhalter',
+                        'logo': 'https://assets.example/de/logo',
+                        'cards': [],
+                    }
+                if self.language == 'en':
+                    return {
+                        'name': 'Complete Set',
+                        'cards': [{'localId': '001', 'name': 'Bulbasaur'}],
+                    }
+                return None
+
+        monkeypatch.setattr(multilingual_module, 'TCGdexClient', FakeClient)
+        monkeypatch.setattr(self.step, '_check_local_logo', lambda _set_id: '')
+
+        names, set_names, logo_urls, languages = (
+            self.step._fetch_multilingual_names('unit-test-empty')
+        )
+
+        assert names == {'001': {'en': 'Bulbasaur'}}
+        assert set_names == {'en': 'Complete Set'}
+        assert logo_urls == {}
+        assert languages == ['en']
+
+
+def test_complete_set_fetch_fails_closed_on_partial_card_details():
+    class IncompleteClient:
+        def get_card(self, _card_id):
+            return None
+
+    step = FetchTCGdexSetStep('test_complete_cards')
+
+    with pytest.raises(RuntimeError, match='complete card data'):
+        step._fetch_complete_cards(
+            IncompleteClient(),
+            [{'id': 'sv07-139', 'localId': '139', 'name': 'Lacey'}],
+        )
+
+
+def test_exgen3_catalog_covers_every_configured_modern_tcg_scope():
+    configured_set_ids = set()
+    scope_root = Path(__file__).resolve().parents[2] / 'config' / 'scopes'
+    for path in scope_root.glob('*.yaml'):
+        if not path.stem.startswith(('SV', 'ME')):
+            continue
+        source = path.read_text(encoding='utf-8')
+        for set_id in (
+            'sv01', 'sv02', 'sv03', 'sv03.5', 'sv04', 'sv04.5',
+            'sv05', 'sv06', 'sv06.5', 'sv07', 'sv08', 'sv08.5',
+            'sv09', 'sv10', 'sv10.5b', 'sv10.5w', 'svp',
+            'me01', 'me02', 'me02.5', 'me03', 'me04', 'me05', 'mep',
+        ):
+            if f'set_id: {set_id}' in source:
+                configured_set_ids.add(set_id)
+
+    assert set(
+        FetchTCGdexScarletVioletEXStep.SV_SETS
+        + FetchTCGdexScarletVioletEXStep.ME_SETS
+    ) == configured_set_ids
+
+
+def test_exgen3_fetch_fails_closed_on_missing_card_details(monkeypatch):
+    class IncompleteClient:
+        def __init__(self, language):
+            self.language = language
+
+        def get_set(self, _set_id):
+            return {
+                'cards': [
+                    {
+                        'id': 'sv-test-001',
+                        'localId': '001',
+                        'name': 'Pikachu ex',
+                    }
+                ]
+            }
+
+        def get_card(self, _card_id):
+            return None
+
+    monkeypatch.setattr(exgen3_module, 'TCGdexClient', IncompleteClient)
+    step = FetchTCGdexScarletVioletEXStep('test_complete_ex_cards')
+    monkeypatch.setattr(step, 'SV_SETS', ['sv-test'])
+    monkeypatch.setattr(step, 'ME_SETS', [])
+
+    with pytest.raises(RuntimeError, match='complete ex card data'):
+        step.execute(PipelineContext({}), {})
+
+
+class TestLocalizedSetLogos:
+    """Set logos may never cross language boundaries implicitly."""
+
+    def setup_method(self):
+        self.step = EnrichTCGNamesMultilingualStep("test_logos")
+
+    def test_missing_german_logo_never_uses_english_url(self, monkeypatch):
+        monkeypatch.setattr(self.step, "_validate_url", lambda _url: False)
+        english_url = "https://assets.example/en/sv10.5b/logo.png"
+
+        result = self.step._generate_missing_logo_urls(
+            {"en": english_url},
+            ["de", "en"],
+        )
+
+        assert result == {"en": english_url}
+
+    def test_bare_tcgdex_logo_uses_webp_when_png_is_missing(self, monkeypatch):
+        checked = []
+
+        def fake_validate(url):
+            checked.append(url)
+            return url.endswith(".webp")
+
+        monkeypatch.setattr(self.step, "_validate_url", fake_validate)
+
+        result = self.step._resolve_logo_url(
+            "https://assets.tcgdex.net/en/sv/sv01/logo"
+        )
+
+        assert result == "https://assets.tcgdex.net/en/sv/sv01/logo.webp"
+        assert checked == [
+            "https://assets.tcgdex.net/en/sv/sv01/logo.png",
+            "https://assets.tcgdex.net/en/sv/sv01/logo.webp",
+        ]
+
+    def test_invalid_reported_logo_is_omitted(self, monkeypatch):
+        monkeypatch.setattr(self.step, "_validate_url", lambda _url: False)
+
+        assert self.step._resolve_logo_url(
+            "https://assets.tcgdex.net/en/sv/missing/logo.png"
+        ) == ""
+
+    def test_curated_german_logos_use_official_localized_assets(self):
+        logos = multilingual_module.load_curated_logo_sources()
+
+        assert logos["sv10.5b"]["de"].endswith(
+            "/sv10pt5/blk/sv10pt5_logo_169_de.png"
+        )
+        assert logos["sv10.5w"]["de"].endswith(
+            "/sv10pt5/wht/sv10pt5_logo_169_de.png"
+        )
 
 
 class TestPokemonIndexBuilding:

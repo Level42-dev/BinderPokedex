@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "SVP",
-  "promoted_at": "2026-08-06T23:55:18.045516+00:00",
+  "promoted_at": "2026-09-12T14:09:35.697329+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T19:24:26.662777+00:00",
@@ -262,7 +262,7 @@
             "de": {
               "information": [
                 "SVP Black Star Promos",
-                "219 Karten",
+                "217 Karten",
                 "Veröffentlicht",
                 "31. März 2023"
               ],
@@ -274,7 +274,7 @@
             "en": {
               "information": [
                 "SVP Black Star Promos",
-                "219 cards",
+                "226 cards",
                 "Released",
                 "March 31, 2023"
               ],
@@ -286,7 +286,7 @@
             "es": {
               "information": [
                 "SVP Black Star Promos",
-                "219 cartas",
+                "216 cartas",
                 "Publicado",
                 "31 marzo 2023"
               ],
@@ -298,7 +298,7 @@
             "fr": {
               "information": [
                 "SVP Black Star Promos",
-                "219 cartes",
+                "220 cartes",
                 "Sortie",
                 "31 mars 2023"
               ],
@@ -310,7 +310,7 @@
             "it": {
               "information": [
                 "SVP Black Star Promos",
-                "219 carte",
+                "216 carte",
                 "Pubblicato",
                 "31 marzo 2023"
               ],
@@ -321,50 +321,50 @@
             },
             "ja": {
               "information": [
-                "SVP Black Star Promos",
-                "219 枚",
+                "0 枚",
                 "発売日",
                 "2023年3月31日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "6dccaf2994b99f8096f3116e2e1c2693adef6ad80161181d76fb64b2a26822ff"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "SVP Black Star Promos"
               }
             },
             "ko": {
               "information": [
-                "SVP Black Star Promos",
-                "219 장",
+                "0 장",
                 "출시일",
                 "2023년 3월 31일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "6dccaf2994b99f8096f3116e2e1c2693adef6ad80161181d76fb64b2a26822ff"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "SVP Black Star Promos"
               }
             },
             "zh_hans": {
               "information": [
-                "SVP Black Star Promos",
-                "219 张",
+                "0 张",
                 "发行日期",
                 "2023年3月31日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "6dccaf2994b99f8096f3116e2e1c2693adef6ad80161181d76fb64b2a26822ff"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "SVP Black Star Promos"
               }
             },
             "zh_hant": {
               "information": [
-                "SVP Black Star Promos",
-                "219 張",
+                "0 張",
                 "發行日期",
                 "2023年3月31日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "6dccaf2994b99f8096f3116e2e1c2693adef6ad80161181d76fb64b2a26822ff"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "SVP Black Star Promos"
               }
             }
           },
@@ -399,30 +399,6 @@
               "mode": "RGBA",
               "pixel_sha256": "6dccaf2994b99f8096f3116e2e1c2693adef6ad80161181d76fb64b2a26822ff",
               "width": 514
-            },
-            "ja": {
-              "height": 466,
-              "mode": "RGBA",
-              "pixel_sha256": "6dccaf2994b99f8096f3116e2e1c2693adef6ad80161181d76fb64b2a26822ff",
-              "width": 514
-            },
-            "ko": {
-              "height": 466,
-              "mode": "RGBA",
-              "pixel_sha256": "6dccaf2994b99f8096f3116e2e1c2693adef6ad80161181d76fb64b2a26822ff",
-              "width": 514
-            },
-            "zh_hans": {
-              "height": 466,
-              "mode": "RGBA",
-              "pixel_sha256": "6dccaf2994b99f8096f3116e2e1c2693adef6ad80161181d76fb64b2a26822ff",
-              "width": 514
-            },
-            "zh_hant": {
-              "height": 466,
-              "mode": "RGBA",
-              "pixel_sha256": "6dccaf2994b99f8096f3116e2e1c2693adef6ad80161181d76fb64b2a26822ff",
-              "width": 514
             }
           },
           "pipeline_contract": {
@@ -444,7 +420,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "06502aea3383c9dd8da41b56d44e167d51283b7194b343bfd72e3ac6ba213d1a"
+        "sha256": "34bfe02cf84610a3639815b8d710ffbb0a8bab97df0689549501bc07f6f67620"
       },
       "prompt": {
         "bytes": 5728,

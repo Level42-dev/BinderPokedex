@@ -169,6 +169,7 @@ def promote(
     name: str = "flux2",
     force: bool = False,
     approve_joint_scene: bool = False,
+    reviewer_kind: str | None = None,
     run_metadata_path: Path,
 ) -> tuple[Path, Path, list[Path], Path]:
     """Persist a reviewed master; keep reproducible QA derivatives ignored."""
@@ -302,6 +303,7 @@ def promote(
                     run_metadata,
                     artwork_path=artwork,
                     raw_artwork_path=raw_artwork_path,
+                    reviewer_kind=reviewer_kind,
                 )
             require_joint_scene_visual_review(
                 run_metadata,
@@ -429,6 +431,11 @@ def main() -> int:
         ),
     )
     parser.add_argument("--run-metadata", required=True, type=Path)
+    parser.add_argument(
+        "--reviewer-kind",
+        choices=("human", "agent"),
+        help="Required with --approve-joint-scene; records who inspected the artwork",
+    )
     args = parser.parse_args()
 
     artwork_path, final_path, cards, provenance_path = promote(
@@ -438,6 +445,7 @@ def main() -> int:
         name=args.name,
         force=args.force,
         approve_joint_scene=args.approve_joint_scene,
+        reviewer_kind=args.reviewer_kind,
         run_metadata_path=args.run_metadata,
     )
     print(f"Artwork: {artwork_path}")

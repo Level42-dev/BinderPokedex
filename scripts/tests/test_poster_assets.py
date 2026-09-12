@@ -1731,7 +1731,7 @@ def test_runner_cli_resolves_production_defaults_from_the_scope(
     )
 
 
-def test_localized_title_logo_falls_back_to_english():
+def test_localized_title_logo_requires_an_exact_language_file():
     manifest = {
         "title_logo": {
             "files": {
@@ -1742,7 +1742,7 @@ def test_localized_title_logo_falls_back_to_english():
     }
 
     assert title_logo_file(manifest, "de") == "logo-de.png"
-    assert title_logo_file(manifest, "fr") == "logo-en.png"
+    assert title_logo_file(manifest, "fr") is None
 
 
 def test_title_logo_downloads_use_scope_language_urls():

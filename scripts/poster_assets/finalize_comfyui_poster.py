@@ -15,6 +15,7 @@ try:
         load_poster_scope_data,
         poster_bundle,
     )
+    from .scope_language import filter_variant_data_for_language
     from .typography import (
         draw_text_centered,
         load_font,
@@ -23,6 +24,7 @@ try:
 except ImportError:
     from layout import build_image_layout
     from poster_io import POSTER_ASSETS, load_poster_scope_data, poster_bundle
+    from scope_language import filter_variant_data_for_language
     from typography import (
         draw_text_centered,
         load_font,
@@ -148,14 +150,11 @@ def draw_title_logo(canvas: Image.Image, cell, logo_path: Path) -> None:
 
 
 def title_logo_file(manifest: dict, language: str) -> str | None:
-    """Resolve a localized title logo with an English/default fallback."""
+    """Resolve only a title logo explicitly configured for this language."""
     config = manifest.get("title_logo", {})
     files = config.get("files")
     if isinstance(files, dict):
-        return files.get(language) or files.get("en") or next(
-            (value for value in files.values() if value),
-            None,
-        )
+        return files.get(language)
     return config.get("file")
 
 
@@ -230,6 +229,7 @@ def info_panel_values(
     header_text: str | None = None,
 ) -> tuple[str, ...]:
     """Resolve the deterministic text rows for one poster overlay profile."""
+    scope_data = filter_variant_data_for_language(scope_data, language)
     if content_mode == "set_summary":
         values = (
             localized_set_name(scope_data, language),

@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "SV04.5",
-  "promoted_at": "2026-08-08T08:08:03.735843+00:00",
+  "promoted_at": "2026-09-12T14:08:58.214052+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-07T11:20:58.810190+00:00",
@@ -322,50 +322,50 @@
             },
             "ja": {
               "information": [
-                "Paldean Fates",
-                "245 枚",
+                "0 枚",
                 "発売日",
                 "2024年1月26日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "5f2f6948f12e611c506e075319870338a6d4e2be7ac5959229852c20cd6b093e"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Paldean Fates"
               }
             },
             "ko": {
               "information": [
-                "Paldean Fates",
-                "245 장",
+                "0 장",
                 "출시일",
                 "2024년 1월 26일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "5f2f6948f12e611c506e075319870338a6d4e2be7ac5959229852c20cd6b093e"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Paldean Fates"
               }
             },
             "zh_hans": {
               "information": [
-                "Paldean Fates",
-                "245 张",
+                "0 张",
                 "发行日期",
                 "2024年1月26日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "5f2f6948f12e611c506e075319870338a6d4e2be7ac5959229852c20cd6b093e"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Paldean Fates"
               }
             },
             "zh_hant": {
               "information": [
-                "Paldean Fates",
-                "245 張",
+                "0 張",
                 "發行日期",
                 "2024年1月26日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "5f2f6948f12e611c506e075319870338a6d4e2be7ac5959229852c20cd6b093e"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Paldean Fates"
               }
             }
           },
@@ -400,30 +400,6 @@
               "mode": "RGBA",
               "pixel_sha256": "b1c6e3701b2a15f6288ffdda2661e4df4613a9621be34246f83c2b0c0cabee89",
               "width": 465
-            },
-            "ja": {
-              "height": 240,
-              "mode": "RGBA",
-              "pixel_sha256": "5f2f6948f12e611c506e075319870338a6d4e2be7ac5959229852c20cd6b093e",
-              "width": 438
-            },
-            "ko": {
-              "height": 240,
-              "mode": "RGBA",
-              "pixel_sha256": "5f2f6948f12e611c506e075319870338a6d4e2be7ac5959229852c20cd6b093e",
-              "width": 438
-            },
-            "zh_hans": {
-              "height": 240,
-              "mode": "RGBA",
-              "pixel_sha256": "5f2f6948f12e611c506e075319870338a6d4e2be7ac5959229852c20cd6b093e",
-              "width": 438
-            },
-            "zh_hant": {
-              "height": 240,
-              "mode": "RGBA",
-              "pixel_sha256": "5f2f6948f12e611c506e075319870338a6d4e2be7ac5959229852c20cd6b093e",
-              "width": 438
             }
           },
           "pipeline_contract": {
@@ -445,7 +421,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "dd79f29ba56ccc3aac6f7af299ea67e932454b5c01ecb05effc8041cabab3701"
+        "sha256": "26ee5a6b89b87465a41d7bbd16c0c5e9975ddb3151ed67170ee4cc3b96420ead"
       },
       "prompt": {
         "bytes": 6078,

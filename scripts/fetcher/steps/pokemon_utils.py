@@ -5,6 +5,7 @@ Shared utility functions for Pokemon data processing across different pipeline s
 """
 
 import logging
+import re
 import requests
 
 logger = logging.getLogger(__name__)
@@ -51,7 +52,18 @@ def get_mega_artwork_url(
     # For Mega Evolutions, need to fetch the form-specific Pokemon ID
     try:
         # Construct form name: "charizard-mega-x" or "lopunny-mega"
-        base_name = pokemon_name.lower().replace(' ', '-')
+        base_name = pokemon_name.strip()
+        if form_suffix:
+            # The exact TCG title may already retain the X/Y form marker
+            # ("Charizard X").  PokeAPI places that marker after "mega", so
+            # remove it from the species portion before composing the slug.
+            base_name = re.sub(
+                rf"(?:[\s-]+{re.escape(form_suffix)})$",
+                "",
+                base_name,
+                flags=re.IGNORECASE,
+            )
+        base_name = base_name.lower().replace(' ', '-')
         form_name = f"{base_name}-mega"
         if form_suffix:
             form_name += f"-{form_suffix}"

@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "ME01",
-  "promoted_at": "2026-08-06T23:50:12.650752+00:00",
+  "promoted_at": "2026-09-12T14:08:20.295292+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T18:26:54.415509+00:00",
@@ -321,50 +321,50 @@
             },
             "ja": {
               "information": [
-                "Mega Evolution",
-                "188 枚",
+                "0 枚",
                 "発売日",
                 "2025年9月26日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "ff0901c34d54d831959b4b59ccbd45cb9b5d935fabf18f7c1c0b093f8bb5bb6e"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Mega Evolution"
               }
             },
             "ko": {
               "information": [
-                "Mega Evolution",
-                "188 장",
+                "0 장",
                 "출시일",
                 "2025년 9월 26일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "ff0901c34d54d831959b4b59ccbd45cb9b5d935fabf18f7c1c0b093f8bb5bb6e"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Mega Evolution"
               }
             },
             "zh_hans": {
               "information": [
-                "Mega Evolution",
-                "188 张",
+                "0 张",
                 "发行日期",
                 "2025年9月26日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "ff0901c34d54d831959b4b59ccbd45cb9b5d935fabf18f7c1c0b093f8bb5bb6e"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Mega Evolution"
               }
             },
             "zh_hant": {
               "information": [
-                "Mega Evolution",
-                "188 張",
+                "0 張",
                 "發行日期",
                 "2025年9月26日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "ff0901c34d54d831959b4b59ccbd45cb9b5d935fabf18f7c1c0b093f8bb5bb6e"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Mega Evolution"
               }
             }
           },
@@ -399,30 +399,6 @@
               "mode": "RGBA",
               "pixel_sha256": "0703bd01df40db86c0158c7daabbd184171794eef3bf3e40fc065947a250bbef",
               "width": 684
-            },
-            "ja": {
-              "height": 158,
-              "mode": "RGBA",
-              "pixel_sha256": "ff0901c34d54d831959b4b59ccbd45cb9b5d935fabf18f7c1c0b093f8bb5bb6e",
-              "width": 684
-            },
-            "ko": {
-              "height": 158,
-              "mode": "RGBA",
-              "pixel_sha256": "ff0901c34d54d831959b4b59ccbd45cb9b5d935fabf18f7c1c0b093f8bb5bb6e",
-              "width": 684
-            },
-            "zh_hans": {
-              "height": 158,
-              "mode": "RGBA",
-              "pixel_sha256": "ff0901c34d54d831959b4b59ccbd45cb9b5d935fabf18f7c1c0b093f8bb5bb6e",
-              "width": 684
-            },
-            "zh_hant": {
-              "height": 158,
-              "mode": "RGBA",
-              "pixel_sha256": "ff0901c34d54d831959b4b59ccbd45cb9b5d935fabf18f7c1c0b093f8bb5bb6e",
-              "width": 684
             }
           },
           "pipeline_contract": {
@@ -444,7 +420,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "382eee1b7d19762220ecdcf0b039eac9bb8c199c6a9d8025ad83ebc21497e23b"
+        "sha256": "58372bf55b39cbe55a89daf82ff4083dfe247f2c0e173200e63b8c2b0167c186"
       },
       "prompt": {
         "bytes": 5732,

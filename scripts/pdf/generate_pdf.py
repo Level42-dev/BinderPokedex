@@ -55,19 +55,28 @@ except ImportError as e:
     print("\n".join(lines))
     sys.exit(1)
 
-# Add lib to path for imports
-sys.path.insert(0, str(Path(__file__).parent))
+# Use the repository package path so another top-level ``lib`` imported by the
+# fetcher cannot change which PDF modules resolve during a full test run.
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
-from lib.fonts import FontManager
-from lib.variant_pdf_generator import VariantPDFGenerator
-from lib.cli_formatter import CLIFormatter
-from lib.cli_validator import GenerationValidator, LanguageValidator, VariantValidator, DirectoryValidator
-from lib.constants import LANGUAGES
-from lib.generation_options import (
+from scripts.pdf.lib.fonts import FontManager
+from scripts.pdf.lib.variant_pdf_generator import VariantPDFGenerator
+from scripts.pdf.lib.cli_formatter import CLIFormatter
+from scripts.pdf.lib.cli_validator import (
+    GenerationValidator,
+    LanguageValidator,
+    VariantValidator,
+    DirectoryValidator,
+)
+from scripts.pdf.lib.constants import LANGUAGES
+from scripts.pdf.lib.generation_options import (
     POSTER_PAGE_MODES,
     pdf_output_filename,
     prepare_variant_data,
 )
+from scripts.poster_assets.scope_language import filter_variant_data_for_language
 
 # Configure logging - suppress INFO during generation for clean output
 logging.basicConfig(
@@ -700,7 +709,7 @@ def _generate_variant_pdf(
     poster_page_mode="cards",
 ):
     """Generate a PDF for a scope (variant or pokedex)."""
-    from lib.pdf_generator import ImageCache
+    from scripts.pdf.lib.pdf_generator import ImageCache
     
     # Ensure output directory exists
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -723,8 +732,12 @@ def _generate_variant_pdf(
         test_mode=test_mode,
     )
     
-    prepared_variant_data = prepare_variant_data(
+    language_variant_data = filter_variant_data_for_language(
         variant_data,
+        language,
+    )
+    prepared_variant_data = prepare_variant_data(
+        language_variant_data,
         skip_images=skip_images,
         test_mode=test_mode,
     )

@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "ME03",
-  "promoted_at": "2026-08-06T23:50:44.970380+00:00",
+  "promoted_at": "2026-09-12T14:08:31.933788+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T19:19:01.614627+00:00",
@@ -331,50 +331,50 @@
             },
             "ja": {
               "information": [
-                "Perfect Order",
-                "124 枚",
+                "0 枚",
                 "発売日",
                 "2026年3月27日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "5b94c56207ae0cc9ee310fb4db5e425aa8f65acf1d953e3ac7e985f5fa912c95"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Perfect Order"
               }
             },
             "ko": {
               "information": [
-                "Perfect Order",
-                "124 장",
+                "0 장",
                 "출시일",
                 "2026년 3월 27일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "5b94c56207ae0cc9ee310fb4db5e425aa8f65acf1d953e3ac7e985f5fa912c95"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Perfect Order"
               }
             },
             "zh_hans": {
               "information": [
-                "Perfect Order",
-                "124 张",
+                "0 张",
                 "发行日期",
                 "2026年3月27日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "5b94c56207ae0cc9ee310fb4db5e425aa8f65acf1d953e3ac7e985f5fa912c95"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Perfect Order"
               }
             },
             "zh_hant": {
               "information": [
-                "Perfect Order",
-                "124 張",
+                "0 張",
                 "發行日期",
                 "2026年3月27日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "5b94c56207ae0cc9ee310fb4db5e425aa8f65acf1d953e3ac7e985f5fa912c95"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Perfect Order"
               }
             }
           },
@@ -409,30 +409,6 @@
               "mode": "RGBA",
               "pixel_sha256": "b1007bbb77a9b7301a3bbd3d91572afd7bacb6ef8a47913788cf7c961ac77a90",
               "width": 604
-            },
-            "ja": {
-              "height": 242,
-              "mode": "RGBA",
-              "pixel_sha256": "5b94c56207ae0cc9ee310fb4db5e425aa8f65acf1d953e3ac7e985f5fa912c95",
-              "width": 604
-            },
-            "ko": {
-              "height": 242,
-              "mode": "RGBA",
-              "pixel_sha256": "5b94c56207ae0cc9ee310fb4db5e425aa8f65acf1d953e3ac7e985f5fa912c95",
-              "width": 604
-            },
-            "zh_hans": {
-              "height": 242,
-              "mode": "RGBA",
-              "pixel_sha256": "5b94c56207ae0cc9ee310fb4db5e425aa8f65acf1d953e3ac7e985f5fa912c95",
-              "width": 604
-            },
-            "zh_hant": {
-              "height": 242,
-              "mode": "RGBA",
-              "pixel_sha256": "5b94c56207ae0cc9ee310fb4db5e425aa8f65acf1d953e3ac7e985f5fa912c95",
-              "width": 604
             }
           },
           "pipeline_contract": {
@@ -454,7 +430,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "969617bd213db814238f273e057a83704c1f68e11707be7429a3661438ae92b0"
+        "sha256": "457578912c53f22aac5850d667a58fd24622c2bcf82ce082557fbbb8b63bce38"
       },
       "prompt": {
         "bytes": 5731,

@@ -500,8 +500,11 @@ def approve_joint_scene_visual_review(
     *,
     artwork_path: Path,
     raw_artwork_path: Path,
+    reviewer_kind: str,
 ) -> dict[str, Any]:
     """Bind explicit review of both raw and output joint-scene artwork."""
+    if reviewer_kind not in ("human", "agent"):
+        raise ValueError("Joint-scene reviewer kind must be human or agent")
     bound = _joint_scene_review_inputs(
         run_metadata,
         artwork_path=artwork_path,
@@ -513,7 +516,7 @@ def approve_joint_scene_visual_review(
     artwork = bound["artwork"]
     raw_artwork = bound["raw_artwork"]
     record = {
-        "method": "human_identity_and_scene_review",
+        "method": f"{reviewer_kind}_identity_and_scene_review",
         "passed": True,
         "stage": "raw_and_text_free_print_artwork",
         "approval_source": "explicit_promotion_flag",
@@ -557,7 +560,10 @@ def require_joint_scene_visual_review(
     artwork = bound["artwork"]
     raw_artwork = bound["raw_artwork"]
     if (
-        record.get("method") != "human_identity_and_scene_review"
+        record.get("method") not in (
+            "human_identity_and_scene_review",
+            "agent_identity_and_scene_review",
+        )
         or record.get("passed") is not True
         or record.get("stage") != "raw_and_text_free_print_artwork"
         or record.get("approval_source") != "explicit_promotion_flag"
@@ -1580,7 +1586,11 @@ def load_run_metadata(path: Path, artwork_path: Path) -> dict[str, Any]:
     """
     payload = json.loads(path.read_text(encoding="utf-8"))
     is_promoted_container = payload.get("kind") == "promoted_poster"
+    promoted_artwork = None
     if is_promoted_container:
+        outputs = payload.get("outputs")
+        if isinstance(outputs, dict):
+            promoted_artwork = outputs.get("artwork")
         payload = payload.get("run")
         if not isinstance(payload, dict):
             raise ValueError(
@@ -1592,6 +1602,16 @@ def load_run_metadata(path: Path, artwork_path: Path) -> dict[str, Any]:
         raise ValueError(f"Unsupported poster run metadata: {path}")
     expected_hash = payload.get("source_artwork", {}).get("sha256")
     actual_hash = sha256_file(artwork_path)
+    if expected_hash != actual_hash and isinstance(promoted_artwork, dict):
+        # Promotion may re-encode a PNG without changing its reviewed pixels.
+        # Accept only the registered output bytes and the original pixel hash;
+        # a fresh generation run still requires the original byte hash below.
+        actual = _verify_recorded_image(
+            promoted_artwork, artwork_path, label="promoted artwork",
+        )
+        if actual["pixel_sha256"] != payload.get("source_artwork", {}).get("pixel_sha256"):
+            raise ValueError("Promoted artwork pixels differ from the reviewed source")
+        expected_hash = promoted_artwork["sha256"]
     if expected_hash != actual_hash:
         raise ValueError(
             f"Run metadata does not describe {artwork_path}: "

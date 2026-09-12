@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "SV10",
-  "promoted_at": "2026-08-06T23:54:44.253192+00:00",
+  "promoted_at": "2026-09-12T14:09:33.036999+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T19:01:19.731224+00:00",
@@ -321,50 +321,50 @@
             },
             "ja": {
               "information": [
-                "ロケット団の栄光",
-                "244 枚",
+                "132 枚",
                 "発売日",
                 "2025年5月30日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "87e453b138244c7beaa24b2753dbb5f3c0c8e4e09c8e74f5b36b8ed4c36b1554"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "ロケット団の栄光"
               }
             },
             "ko": {
               "information": [
-                "Destined Rivals",
-                "244 장",
+                "0 장",
                 "출시일",
                 "2025년 5월 30일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "87e453b138244c7beaa24b2753dbb5f3c0c8e4e09c8e74f5b36b8ed4c36b1554"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Destined Rivals"
               }
             },
             "zh_hans": {
               "information": [
-                "Destined Rivals",
-                "244 张",
+                "0 张",
                 "发行日期",
                 "2025年5月30日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "87e453b138244c7beaa24b2753dbb5f3c0c8e4e09c8e74f5b36b8ed4c36b1554"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Destined Rivals"
               }
             },
             "zh_hant": {
               "information": [
-                "Destined Rivals",
-                "244 張",
+                "0 張",
                 "發行日期",
                 "2025年5月30日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "87e453b138244c7beaa24b2753dbb5f3c0c8e4e09c8e74f5b36b8ed4c36b1554"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Destined Rivals"
               }
             }
           },
@@ -399,30 +399,6 @@
               "mode": "RGBA",
               "pixel_sha256": "001c72ca654e009a5ca90d3e6f6b358471eeca8d00ad0558a1b2e2308f9aab68",
               "width": 604
-            },
-            "ja": {
-              "height": 178,
-              "mode": "RGBA",
-              "pixel_sha256": "87e453b138244c7beaa24b2753dbb5f3c0c8e4e09c8e74f5b36b8ed4c36b1554",
-              "width": 445
-            },
-            "ko": {
-              "height": 178,
-              "mode": "RGBA",
-              "pixel_sha256": "87e453b138244c7beaa24b2753dbb5f3c0c8e4e09c8e74f5b36b8ed4c36b1554",
-              "width": 445
-            },
-            "zh_hans": {
-              "height": 178,
-              "mode": "RGBA",
-              "pixel_sha256": "87e453b138244c7beaa24b2753dbb5f3c0c8e4e09c8e74f5b36b8ed4c36b1554",
-              "width": 445
-            },
-            "zh_hant": {
-              "height": 178,
-              "mode": "RGBA",
-              "pixel_sha256": "87e453b138244c7beaa24b2753dbb5f3c0c8e4e09c8e74f5b36b8ed4c36b1554",
-              "width": 445
             }
           },
           "pipeline_contract": {
@@ -444,7 +420,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "e09812cf55440d46b10aca9150dd910570c0571c11807f29b8511fee1e480f89"
+        "sha256": "8ab9c3df7e0269f5279cab8c1f2eccd2100b3cc098a9f1351a56034b4366b74f"
       },
       "prompt": {
         "bytes": 5696,

@@ -26,6 +26,10 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from steps.base import BaseStep, PipelineContext
 from steps.pokemon_utils import get_mega_artwork_url
+from scripts.poster_assets.poster_subject import (
+    OFFICIAL_ARTWORK_URL,
+    official_artwork_id_for_card_name,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -120,7 +124,16 @@ class TransformTCGSetStep(BaseStep):
                 name_dict = self._build_multilingual_name(card)
                 
                 transformed.append({
+                    'id': card.get('id'),
                     'localId': card['localId'],
+                    'printed_number': card.get(
+                        'printed_number',
+                        card['localId'],
+                    ),
+                    'available_languages': card.get(
+                        'available_languages',
+                        ['en'],
+                    ),
                     'name': name_dict,
                     'type': 'trainer',
                     'trainer_type': card.get('trainer_type', 'Trainer'),
@@ -143,6 +156,9 @@ class TransformTCGSetStep(BaseStep):
                 
                 # Get sprite URL - only if pokemon_id exists
                 if pokemon_id:
+                    original_name = card.get('name', '')
+                    if isinstance(original_name, dict):
+                        original_name = original_name.get('en', '')
                     suffix, prefix = self._determine_variant_suffix_and_prefix(card)
                     
                     # Remove suffix from name if it's already in the name
@@ -154,23 +170,35 @@ class TransformTCGSetStep(BaseStep):
                         name_dict = self._strip_prefix_from_name(name_dict, prefix)
                     
                     if prefix == 'Mega':
-                        original_name = card.get('name', '')
-                        if isinstance(original_name, dict):
-                            original_name = original_name.get('en', '')
                         sprite_url = get_mega_artwork_url(
                             pokemon_name=name_dict.get('en', ''),
                             base_id=pokemon_id,
                             original_card_name=original_name
                         )
                     else:
-                        sprite_url = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{pokemon_id}.png"
+                        artwork_id = official_artwork_id_for_card_name(
+                            pokemon_id,
+                            original_name,
+                        )
+                        sprite_url = OFFICIAL_ARTWORK_URL.format(
+                            artwork_id=artwork_id,
+                        )
                 else:
                     sprite_url = ''
                     suffix = ''
                     prefix = ''
                 
                 card_data = {
+                    'id': card.get('id'),
                     'localId': card['localId'],
+                    'printed_number': card.get(
+                        'printed_number',
+                        card['localId'],
+                    ),
+                    'available_languages': card.get(
+                        'available_languages',
+                        ['en'],
+                    ),
                     'name': name_dict,
                     'type': 'pokemon',
                     'pokemon_id': pokemon_id,
@@ -190,7 +218,16 @@ class TransformTCGSetStep(BaseStep):
                 # Unknown or unmapped card
                 logger.warning(f"⚠️  Unknown card: {card.get('name')} (type: {card_type})")
                 transformed.append({
+                    'id': card.get('id'),
                     'localId': card['localId'],
+                    'printed_number': card.get(
+                        'printed_number',
+                        card['localId'],
+                    ),
+                    'available_languages': card.get(
+                        'available_languages',
+                        ['en'],
+                    ),
                     'name': {'en': str(card.get('name', 'Unknown'))},
                     'type': 'unknown',
                     'image_url': ''

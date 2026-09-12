@@ -5,11 +5,11 @@
     "release_date": "2023-03-31",
     "card_count": {
       "firstEd": 0,
-      "holo": 24,
-      "normal": 12,
-      "official": 0,
+      "holo": 280,
+      "normal": 48,
+      "official": 225,
       "reverse": 1,
-      "total": 219
+      "total": 226
     },
     "logo": "",
     "symbol": "",
@@ -1198,7 +1198,9 @@
       "types": [
         "Lightning"
       ],
-      "dexId": [],
+      "dexId": [
+        25
+      ],
       "trainerType": ""
     },
     {
@@ -2436,6 +2438,34 @@
       "trainerType": ""
     },
     {
+      "id": "svp-175",
+      "localId": "175",
+      "name": "Espeon ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Psychic"
+      ],
+      "dexId": [
+        196
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "svp-176",
+      "localId": "176",
+      "name": "Umbreon ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Darkness"
+      ],
+      "dexId": [
+        197
+      ],
+      "trainerType": ""
+    },
+    {
       "id": "svp-177",
       "localId": "177",
       "name": "Bloodmoon Ursaluna ex",
@@ -2704,7 +2734,7 @@
     {
       "id": "svp-196",
       "localId": "196",
-      "name": "Charizard EX",
+      "name": "Charizard ex",
       "image": "",
       "category": "Pokemon",
       "types": [
@@ -2918,7 +2948,7 @@
       "image": "",
       "category": "Pokemon",
       "types": [
-        "Colorless"
+        "Psychic"
       ],
       "dexId": [
         576
@@ -3024,6 +3054,56 @@
       "trainerType": ""
     },
     {
+      "id": "svp-219",
+      "localId": "219",
+      "name": "Black Belt's Training",
+      "image": "",
+      "category": "Trainer",
+      "types": [],
+      "dexId": [],
+      "trainerType": "Supporter"
+    },
+    {
+      "id": "svp-220",
+      "localId": "220",
+      "name": "Black Belt's Training",
+      "image": "",
+      "category": "Trainer",
+      "types": [],
+      "dexId": [],
+      "trainerType": "Supporter"
+    },
+    {
+      "id": "svp-221",
+      "localId": "221",
+      "name": "Professor's Research",
+      "image": "",
+      "category": "Trainer",
+      "types": [],
+      "dexId": [],
+      "trainerType": "Supporter"
+    },
+    {
+      "id": "svp-222",
+      "localId": "222",
+      "name": "Professor's Research",
+      "image": "",
+      "category": "Trainer",
+      "types": [],
+      "dexId": [],
+      "trainerType": "Supporter"
+    },
+    {
+      "id": "svp-223",
+      "localId": "223",
+      "name": "Professor's Research",
+      "image": "",
+      "category": "Trainer",
+      "types": [],
+      "dexId": [],
+      "trainerType": "Supporter"
+    },
+    {
       "id": "svp-224",
       "localId": "224",
       "name": "Paradise Resort",
@@ -3031,7 +3111,7 @@
       "category": "Trainer",
       "types": [],
       "dexId": [],
-      "trainerType": ""
+      "trainerType": "Stadium"
     },
     {
       "id": "svp-225",
@@ -3061,15 +3141,15 @@
         25,
         906,
         909,
-        9012
+        912
       ],
       "trainerType": ""
     }
   ],
   "metadata": {
-    "total_cards": 219,
+    "total_cards": 226,
     "set_id": "svp",
-    "date_fetched": "2026-03-31T22:11:37.604779Z",
+    "date_fetched": "2026-09-12T02:54:41.632381Z",
     "source": "TCGdex API v2",
     "language": "en"
   }

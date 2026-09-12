@@ -3,9 +3,12 @@ from copy import deepcopy
 from pathlib import Path
 
 import pytest
+import yaml
 from PIL import Image, ImageChops
 
 from scripts.poster_assets.finalize_comfyui_poster import (
+    CARD_LABELS,
+    POKEMON_LABELS,
     SUPPORTED_LANGUAGES,
     canonical_overlay_text,
     finalize,
@@ -16,6 +19,7 @@ from scripts.poster_assets.finalize_comfyui_poster import (
     title_logo_file,
 )
 from scripts.poster_assets.fetch_title_logos import resolve_logo_downloads
+from scripts.poster_assets.fetch_cutouts import select_pokemon
 from scripts.poster_assets.typography import load_font, wrap_text
 from scripts.poster_assets.init_poster_scope import (
     build_section_manifest,
@@ -30,17 +34,85 @@ from scripts.poster_assets.poster_config import build_identity_lock_prompt
 from scripts.poster_assets.provenance import sha256_file
 from scripts.poster_assets.scene_catalog import section_scenes_for_scope
 from scripts.poster_assets.validate_promoted_poster import enabled_poster_scopes
+from scripts.pdf.lib.rendering.poster_page_renderer import PosterPageCollection
+from scripts.pdf.generate_pdf import filter_variant_data_for_language
 
 
 ROOT = Path(__file__).resolve().parents[2]
+
+
+@pytest.mark.parametrize(
+    "scope_path",
+    sorted((ROOT / "data" / "output").glob("*.json")),
+    ids=lambda path: path.stem,
+)
+def test_every_release_section_routes_to_a_real_panorama(scope_path):
+    """Missing/disabled artwork must not silently ship a cover-only section."""
+    source = json.loads(scope_path.read_text(encoding="utf-8"))
+    collection = PosterPageCollection.from_scope(scope_path.stem, source, "de")
+    try:
+        for index, section_id in enumerate(source["sections"]):
+            posters = collection.for_section(section_id, index)
+            assert len(posters) == 1, (
+                f"{scope_path.stem}/{section_id} needs one reviewed panorama"
+            )
+            assert posters[0].artwork_path.is_file()
+    finally:
+        collection.cleanup()
+
+
+def test_sv07_rejects_the_known_three_ear_candidate_seed():
+    manifest_path = ROOT / "config" / "posters" / "SV07" / "poster.yaml"
+    manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+
+    assert manifest["artwork"]["generation"]["seed"] != 260726008
+
+
+def test_sv08_panorama_uses_pikachu_without_changing_the_kyurem_card():
+    bundle = poster_bundle("SV08")
+    source = load_poster_scope_data(bundle)
+    subjects = select_pokemon(bundle.manifest, source, 3, {})
+
+    assert [item["pokemon_id"] for item in subjects] == [250, 909, 25]
+    kyurem = next(
+        card for card in source["sections"]["all"]["cards"]
+        if card["id"] == "sv08-048"
+    )
+    assert kyurem["pokemon_id"] == 646
+
+
 POSTER_CONFIG_ROOT = POSTER_CONFIGS
+
+
+@pytest.mark.parametrize(
+    ("language", "expected_count"),
+    [("de", "2 Karten"), ("en", "3 cards"), ("fr", "1 cartes")],
+)
+def test_info_panel_counts_only_the_language_selection_including_unnumbered_cards(
+    language, expected_count,
+):
+    source = {
+        "name": "Promos", "release_date": "2026-01-01",
+        "sections": {"all": {"cards": [
+            {"id": "unnumbered", "printed_number": None,
+             "available_languages": ["de", "en"]},
+            {"id": "english-only", "available_languages": ["en"]},
+            {"id": "legacy-without-language-marker"},
+        ]}},
+    }
+    original = deepcopy(source)
+
+    values = info_panel_values(source, language, "set_summary")
+
+    assert values[1] == expected_count
+    assert source == original
 
 
 def test_every_current_poster_target_has_a_checked_in_manifest():
     manifests = list(POSTER_CONFIG_ROOT.glob("*/poster.yaml"))
     manifests.extend(POSTER_CONFIG_ROOT.glob("*/sections/*/poster.yaml"))
 
-    assert len(manifests) == 41
+    assert len(manifests) == 42
 
 
 def test_poster_storage_classes_are_separate_and_complete():
@@ -54,7 +126,7 @@ def test_poster_storage_classes_are_separate_and_complete():
         for bundle in poster_bundles_for_scope(scope)
     ]
 
-    assert len(bundles) == 41
+    assert len(bundles) == 42
     assert all(
         bundle.config_dir.is_relative_to(POSTER_CONFIG_ROOT)
         for bundle in bundles
@@ -156,6 +228,15 @@ def test_every_generated_pdf_language_has_complete_poster_copy():
                     language,
                     content_mode,
                 )
+                pdf_source = filter_variant_data_for_language(scope_data, language)
+                pdf_count = sum(
+                    len(section["cards"])
+                    for section in pdf_source["sections"].values()
+                )
+                labels = CARD_LABELS if content_mode == "set_summary" else POKEMON_LABELS
+                assert f"{pdf_count} {labels[language]}" in complete_values, (
+                    f"{bundle.asset_key}/{language}: panorama count must match PDF cards"
+                )
                 visible_values = info_panel_values(
                     scope_data,
                     language,
@@ -175,7 +256,7 @@ def test_every_generated_pdf_language_has_complete_poster_copy():
                     ) == 1
                 checked.append(f"{bundle.asset_key}/{language}")
 
-    assert len(checked) == 266
+    assert len(checked) == 267
 
 
 def test_standalone_poster_manifests_remain_isolated_single_bundles():

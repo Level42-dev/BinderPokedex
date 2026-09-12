@@ -3,7 +3,7 @@
   "kind": "promoted_poster",
   "outputs": {
     "artwork": {
-      "bytes": 4523389,
+      "bytes": 4523390,
       "dpi": [
         299.9994,
         299.9994
@@ -12,12 +12,12 @@
       "height": 3268,
       "mode": "RGBA",
       "pixel_sha256": "c2259050139354d2407b4f263b23d001c0b974e729b7aae36f04bd75480c8b9d",
-      "sha256": "e4804b3b15e7c5498d6f795319989f2cee000c91aafea7dd6216a7d270c7e73b",
+      "sha256": "0c5b398a2b5bd52cc7e255d291e76dbfe840078a5931ddf9bf527db512509bfe",
       "width": 2368
     }
   },
   "poster_id": "SV01",
-  "promoted_at": "2026-08-06T23:52:43.295560+00:00",
+  "promoted_at": "2026-09-12T14:16:23.264494+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T18:45:08.602981+00:00",
@@ -280,7 +280,7 @@
               ],
               "title": {
                 "kind": "logo",
-                "pixel_sha256": "11a0e31a32ae15ff9f9038541863a29db2b23daa338c41013c972f80e43582b1"
+                "pixel_sha256": "bff020cdaa603b29dee772c3c0315a08b352cf35bdaf0b2159fc4e015ad94675"
               }
             },
             "es": {
@@ -321,50 +321,50 @@
             },
             "ja": {
               "information": [
-                "Scarlet & Violet",
-                "258 枚",
+                "0 枚",
                 "発売日",
                 "2023年3月31日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "11a0e31a32ae15ff9f9038541863a29db2b23daa338c41013c972f80e43582b1"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Scarlet & Violet"
               }
             },
             "ko": {
               "information": [
-                "Scarlet & Violet",
-                "258 장",
+                "0 장",
                 "출시일",
                 "2023년 3월 31일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "11a0e31a32ae15ff9f9038541863a29db2b23daa338c41013c972f80e43582b1"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Scarlet & Violet"
               }
             },
             "zh_hans": {
               "information": [
-                "Scarlet & Violet",
-                "258 张",
+                "0 张",
                 "发行日期",
                 "2023年3月31日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "11a0e31a32ae15ff9f9038541863a29db2b23daa338c41013c972f80e43582b1"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Scarlet & Violet"
               }
             },
             "zh_hant": {
               "information": [
-                "Scarlet & Violet",
-                "258 張",
+                "0 張",
                 "發行日期",
                 "2023年3月31日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "11a0e31a32ae15ff9f9038541863a29db2b23daa338c41013c972f80e43582b1"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Scarlet & Violet"
               }
             }
           },
@@ -379,7 +379,7 @@
             "en": {
               "height": 177,
               "mode": "RGBA",
-              "pixel_sha256": "11a0e31a32ae15ff9f9038541863a29db2b23daa338c41013c972f80e43582b1",
+              "pixel_sha256": "bff020cdaa603b29dee772c3c0315a08b352cf35bdaf0b2159fc4e015ad94675",
               "width": 620
             },
             "es": {
@@ -399,30 +399,6 @@
               "mode": "RGBA",
               "pixel_sha256": "aa8b96e95584c5c8f952cd3affebe12067c406633093d8dd2acba8a381fc31de",
               "width": 448
-            },
-            "ja": {
-              "height": 177,
-              "mode": "RGBA",
-              "pixel_sha256": "11a0e31a32ae15ff9f9038541863a29db2b23daa338c41013c972f80e43582b1",
-              "width": 620
-            },
-            "ko": {
-              "height": 177,
-              "mode": "RGBA",
-              "pixel_sha256": "11a0e31a32ae15ff9f9038541863a29db2b23daa338c41013c972f80e43582b1",
-              "width": 620
-            },
-            "zh_hans": {
-              "height": 177,
-              "mode": "RGBA",
-              "pixel_sha256": "11a0e31a32ae15ff9f9038541863a29db2b23daa338c41013c972f80e43582b1",
-              "width": 620
-            },
-            "zh_hant": {
-              "height": 177,
-              "mode": "RGBA",
-              "pixel_sha256": "11a0e31a32ae15ff9f9038541863a29db2b23daa338c41013c972f80e43582b1",
-              "width": 620
             }
           },
           "pipeline_contract": {
@@ -444,7 +420,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "a8d657b9449e9e8aa8eddcc37ac95a2285b4187f31d96870c053804e550ffc04"
+        "sha256": "39d7a9c6ca428c339bb4fc5c3cb18bfcb35ee418c6d2be03284d7e9807a42a11"
       },
       "prompt": {
         "bytes": 5727,

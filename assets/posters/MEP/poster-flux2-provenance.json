@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "MEP",
-  "promoted_at": "2026-08-06T23:51:06.421446+00:00",
+  "promoted_at": "2026-09-12T14:08:45.278973+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T19:20:06.602320+00:00",
@@ -262,7 +262,7 @@
             "de": {
               "information": [
                 "MEP Black Star Promos",
-                "55 Karten",
+                "88 Karten",
                 "Veröffentlicht",
                 "26. September 2025"
               ],
@@ -274,7 +274,7 @@
             "en": {
               "information": [
                 "MEP Black Star Promos",
-                "55 cards",
+                "89 cards",
                 "Released",
                 "September 26, 2025"
               ],
@@ -286,7 +286,7 @@
             "es": {
               "information": [
                 "MEP Black Star Promos",
-                "55 cartas",
+                "88 cartas",
                 "Publicado",
                 "26 septiembre 2025"
               ],
@@ -298,7 +298,7 @@
             "fr": {
               "information": [
                 "MEP Black Star Promos",
-                "55 cartes",
+                "88 cartes",
                 "Sortie",
                 "26 septembre 2025"
               ],
@@ -310,7 +310,7 @@
             "it": {
               "information": [
                 "MEP Black Star Promos",
-                "55 carte",
+                "88 carte",
                 "Pubblicato",
                 "26 settembre 2025"
               ],
@@ -321,50 +321,50 @@
             },
             "ja": {
               "information": [
-                "MEP Black Star Promos",
-                "55 枚",
+                "0 枚",
                 "発売日",
                 "2025年9月26日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "6dccaf2994b99f8096f3116e2e1c2693adef6ad80161181d76fb64b2a26822ff"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "MEP Black Star Promos"
               }
             },
             "ko": {
               "information": [
-                "MEP Black Star Promos",
-                "55 장",
+                "0 장",
                 "출시일",
                 "2025년 9월 26일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "6dccaf2994b99f8096f3116e2e1c2693adef6ad80161181d76fb64b2a26822ff"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "MEP Black Star Promos"
               }
             },
             "zh_hans": {
               "information": [
-                "MEP Black Star Promos",
-                "55 张",
+                "0 张",
                 "发行日期",
                 "2025年9月26日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "6dccaf2994b99f8096f3116e2e1c2693adef6ad80161181d76fb64b2a26822ff"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "MEP Black Star Promos"
               }
             },
             "zh_hant": {
               "information": [
-                "MEP Black Star Promos",
-                "55 張",
+                "0 張",
                 "發行日期",
                 "2025年9月26日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "6dccaf2994b99f8096f3116e2e1c2693adef6ad80161181d76fb64b2a26822ff"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "MEP Black Star Promos"
               }
             }
           },
@@ -399,30 +399,6 @@
               "mode": "RGBA",
               "pixel_sha256": "6dccaf2994b99f8096f3116e2e1c2693adef6ad80161181d76fb64b2a26822ff",
               "width": 514
-            },
-            "ja": {
-              "height": 466,
-              "mode": "RGBA",
-              "pixel_sha256": "6dccaf2994b99f8096f3116e2e1c2693adef6ad80161181d76fb64b2a26822ff",
-              "width": 514
-            },
-            "ko": {
-              "height": 466,
-              "mode": "RGBA",
-              "pixel_sha256": "6dccaf2994b99f8096f3116e2e1c2693adef6ad80161181d76fb64b2a26822ff",
-              "width": 514
-            },
-            "zh_hans": {
-              "height": 466,
-              "mode": "RGBA",
-              "pixel_sha256": "6dccaf2994b99f8096f3116e2e1c2693adef6ad80161181d76fb64b2a26822ff",
-              "width": 514
-            },
-            "zh_hant": {
-              "height": 466,
-              "mode": "RGBA",
-              "pixel_sha256": "6dccaf2994b99f8096f3116e2e1c2693adef6ad80161181d76fb64b2a26822ff",
-              "width": 514
             }
           },
           "pipeline_contract": {
@@ -444,7 +420,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "99aed296f0bbb945f558494a07fd185c57e22f6080d9559e6b4c6fdbc1f6d4a2"
+        "sha256": "9985a7a6a78614e78064785f278cb26527dbd31a434fd54a51160eae90dc659e"
       },
       "prompt": {
         "bytes": 5722,

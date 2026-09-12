@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "SV06.5",
-  "promoted_at": "2026-08-06T23:54:01.065743+00:00",
+  "promoted_at": "2026-09-12T14:09:08.190657+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T19:23:24.247362+00:00",
@@ -321,50 +321,50 @@
             },
             "ja": {
               "information": [
-                "Shrouded Fable",
-                "99 枚",
+                "0 枚",
                 "発売日",
                 "2024年8月2日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "851bc9121d0957b622127cfa7c24aa914ebef18da7b6c19903f340264314621b"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Shrouded Fable"
               }
             },
             "ko": {
               "information": [
-                "Shrouded Fable",
-                "99 장",
+                "0 장",
                 "출시일",
                 "2024년 8월 2일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "851bc9121d0957b622127cfa7c24aa914ebef18da7b6c19903f340264314621b"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Shrouded Fable"
               }
             },
             "zh_hans": {
               "information": [
-                "Shrouded Fable",
-                "99 张",
+                "0 张",
                 "发行日期",
                 "2024年8月2日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "851bc9121d0957b622127cfa7c24aa914ebef18da7b6c19903f340264314621b"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Shrouded Fable"
               }
             },
             "zh_hant": {
               "information": [
-                "Shrouded Fable",
-                "99 張",
+                "0 張",
                 "發行日期",
                 "2024年8月2日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "851bc9121d0957b622127cfa7c24aa914ebef18da7b6c19903f340264314621b"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Shrouded Fable"
               }
             }
           },
@@ -399,30 +399,6 @@
               "mode": "RGBA",
               "pixel_sha256": "9f3c319b45f6dff59fdbaaa2c2955129a1a5775dd4a1b503225b0d19056c6466",
               "width": 990
-            },
-            "ja": {
-              "height": 430,
-              "mode": "RGBA",
-              "pixel_sha256": "851bc9121d0957b622127cfa7c24aa914ebef18da7b6c19903f340264314621b",
-              "width": 915
-            },
-            "ko": {
-              "height": 430,
-              "mode": "RGBA",
-              "pixel_sha256": "851bc9121d0957b622127cfa7c24aa914ebef18da7b6c19903f340264314621b",
-              "width": 915
-            },
-            "zh_hans": {
-              "height": 430,
-              "mode": "RGBA",
-              "pixel_sha256": "851bc9121d0957b622127cfa7c24aa914ebef18da7b6c19903f340264314621b",
-              "width": 915
-            },
-            "zh_hant": {
-              "height": 430,
-              "mode": "RGBA",
-              "pixel_sha256": "851bc9121d0957b622127cfa7c24aa914ebef18da7b6c19903f340264314621b",
-              "width": 915
             }
           },
           "pipeline_contract": {
@@ -444,7 +420,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "3f57490b0e7d4e5cf7a4b10dc4613bad8acfc4159f7166306ec0462d1ce0a174"
+        "sha256": "dada2cccbe2bf3ad6320d2d29c254a893098357394c3562659ad40bb91068e99"
       },
       "prompt": {
         "bytes": 5679,

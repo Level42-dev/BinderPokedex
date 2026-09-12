@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "SV03",
-  "promoted_at": "2026-08-06T23:53:04.391744+00:00",
+  "promoted_at": "2026-09-12T14:08:49.073179+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T18:47:36.806358+00:00",
@@ -321,50 +321,50 @@
             },
             "ja": {
               "information": [
-                "Obsidian Flames",
-                "230 枚",
+                "0 枚",
                 "発売日",
                 "2023年8月11日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "d1c75d86758f44973dbdb1e55a9e7557c4425d6f886de2f59a494ae9fb1df41f"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Obsidian Flames"
               }
             },
             "ko": {
               "information": [
-                "Obsidian Flames",
-                "230 장",
+                "0 장",
                 "출시일",
                 "2023년 8월 11일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "d1c75d86758f44973dbdb1e55a9e7557c4425d6f886de2f59a494ae9fb1df41f"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Obsidian Flames"
               }
             },
             "zh_hans": {
               "information": [
-                "Obsidian Flames",
-                "230 张",
+                "0 张",
                 "发行日期",
                 "2023年8月11日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "d1c75d86758f44973dbdb1e55a9e7557c4425d6f886de2f59a494ae9fb1df41f"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Obsidian Flames"
               }
             },
             "zh_hant": {
               "information": [
-                "Obsidian Flames",
-                "230 張",
+                "0 張",
                 "發行日期",
                 "2023年8月11日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "d1c75d86758f44973dbdb1e55a9e7557c4425d6f886de2f59a494ae9fb1df41f"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Obsidian Flames"
               }
             }
           },
@@ -399,30 +399,6 @@
               "mode": "RGBA",
               "pixel_sha256": "35c71d31369f9eb6960fbc83e63691bf681184a0be961faf672e2d0cf7d4180e",
               "width": 451
-            },
-            "ja": {
-              "height": 167,
-              "mode": "RGBA",
-              "pixel_sha256": "d1c75d86758f44973dbdb1e55a9e7557c4425d6f886de2f59a494ae9fb1df41f",
-              "width": 451
-            },
-            "ko": {
-              "height": 167,
-              "mode": "RGBA",
-              "pixel_sha256": "d1c75d86758f44973dbdb1e55a9e7557c4425d6f886de2f59a494ae9fb1df41f",
-              "width": 451
-            },
-            "zh_hans": {
-              "height": 167,
-              "mode": "RGBA",
-              "pixel_sha256": "d1c75d86758f44973dbdb1e55a9e7557c4425d6f886de2f59a494ae9fb1df41f",
-              "width": 451
-            },
-            "zh_hant": {
-              "height": 167,
-              "mode": "RGBA",
-              "pixel_sha256": "d1c75d86758f44973dbdb1e55a9e7557c4425d6f886de2f59a494ae9fb1df41f",
-              "width": 451
             }
           },
           "pipeline_contract": {
@@ -444,7 +420,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "5268f43bc249d5d170bfd46b1bb89fceabf0457650ec152b32a40d33f7dd6a47"
+        "sha256": "a23153b0825d8871f8633257134034c94e40eeae1a0d4a35386356304bf6c3c6"
       },
       "prompt": {
         "bytes": 5683,

@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "SV05",
-  "promoted_at": "2026-08-06T23:53:36.770504+00:00",
+  "promoted_at": "2026-09-12T14:08:58.740745+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T18:52:39.220035+00:00",
@@ -273,14 +273,14 @@
             },
             "en": {
               "information": [
-                "Temporal Forces",
                 "218 cards",
                 "Released",
                 "March 22, 2024"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "d5452d2db6cbc1c0b64404a75ad41e352cca94de4c0157d74a9ba5aa3606ed44"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Temporal Forces"
               }
             },
             "es": {
@@ -309,74 +309,68 @@
             },
             "it": {
               "information": [
-                "Cronoforze",
                 "218 carte",
                 "Pubblicato",
                 "22 marzo 2024"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "d5452d2db6cbc1c0b64404a75ad41e352cca94de4c0157d74a9ba5aa3606ed44"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Cronoforze"
               }
             },
             "ja": {
               "information": [
-                "Temporal Forces",
-                "218 枚",
+                "0 枚",
                 "発売日",
                 "2024年3月22日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "d5452d2db6cbc1c0b64404a75ad41e352cca94de4c0157d74a9ba5aa3606ed44"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Temporal Forces"
               }
             },
             "ko": {
               "information": [
-                "Temporal Forces",
-                "218 장",
+                "0 장",
                 "출시일",
                 "2024년 3월 22일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "d5452d2db6cbc1c0b64404a75ad41e352cca94de4c0157d74a9ba5aa3606ed44"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Temporal Forces"
               }
             },
             "zh_hans": {
               "information": [
-                "Temporal Forces",
-                "218 张",
+                "0 张",
                 "发行日期",
                 "2024年3月22日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "d5452d2db6cbc1c0b64404a75ad41e352cca94de4c0157d74a9ba5aa3606ed44"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Temporal Forces"
               }
             },
             "zh_hant": {
               "information": [
-                "Temporal Forces",
-                "218 張",
+                "0 張",
                 "發行日期",
                 "2024年3月22日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "d5452d2db6cbc1c0b64404a75ad41e352cca94de4c0157d74a9ba5aa3606ed44"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Temporal Forces"
               }
             }
           },
           "layout_name": "standard_3x3",
           "logo_pixels": {
             "de": {
-              "height": 235,
-              "mode": "RGBA",
-              "pixel_sha256": "d5452d2db6cbc1c0b64404a75ad41e352cca94de4c0157d74a9ba5aa3606ed44",
-              "width": 566
-            },
-            "en": {
               "height": 235,
               "mode": "RGBA",
               "pixel_sha256": "d5452d2db6cbc1c0b64404a75ad41e352cca94de4c0157d74a9ba5aa3606ed44",
@@ -392,36 +386,6 @@
               "height": 184,
               "mode": "RGBA",
               "pixel_sha256": "8138ceaf1f920e6f4017f4b66a021d6337f5381b9f03916a0ceeff7a26591626",
-              "width": 566
-            },
-            "it": {
-              "height": 235,
-              "mode": "RGBA",
-              "pixel_sha256": "d5452d2db6cbc1c0b64404a75ad41e352cca94de4c0157d74a9ba5aa3606ed44",
-              "width": 566
-            },
-            "ja": {
-              "height": 235,
-              "mode": "RGBA",
-              "pixel_sha256": "d5452d2db6cbc1c0b64404a75ad41e352cca94de4c0157d74a9ba5aa3606ed44",
-              "width": 566
-            },
-            "ko": {
-              "height": 235,
-              "mode": "RGBA",
-              "pixel_sha256": "d5452d2db6cbc1c0b64404a75ad41e352cca94de4c0157d74a9ba5aa3606ed44",
-              "width": 566
-            },
-            "zh_hans": {
-              "height": 235,
-              "mode": "RGBA",
-              "pixel_sha256": "d5452d2db6cbc1c0b64404a75ad41e352cca94de4c0157d74a9ba5aa3606ed44",
-              "width": 566
-            },
-            "zh_hant": {
-              "height": 235,
-              "mode": "RGBA",
-              "pixel_sha256": "d5452d2db6cbc1c0b64404a75ad41e352cca94de4c0157d74a9ba5aa3606ed44",
               "width": 566
             }
           },
@@ -444,7 +408,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "1679c0ef1300be1f5254bd1ae8fe263e820d95cb2a82b65896641708235775ed"
+        "sha256": "ec31dfb4fdaab2ee7ecb6c7d233e1bb036bba316c8b94c789fdefc4620625b36"
       },
       "prompt": {
         "bytes": 5698,

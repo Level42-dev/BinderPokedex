@@ -3,7 +3,7 @@
   "kind": "promoted_poster",
   "outputs": {
     "artwork": {
-      "bytes": 6266001,
+      "bytes": 6266002,
       "dpi": [
         299.9994,
         299.9994
@@ -12,12 +12,12 @@
       "height": 3268,
       "mode": "RGBA",
       "pixel_sha256": "69f92217363344d0dd154692160deef48af27a92089a289563d520c9ad3ecce2",
-      "sha256": "faa77cd8f5fe82166874abd19fc30de4987dcbc8827ea74bfb7e901853d1c912",
+      "sha256": "54aff4959b4c408246342318956805918bd8676d26518cc8d1f4cca8dc47ec6a",
       "width": 2368
     }
   },
   "poster_id": "SV02",
-  "promoted_at": "2026-08-06T23:52:53.780379+00:00",
+  "promoted_at": "2026-09-12T14:16:27.912302+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T18:46:23.978723+00:00",
@@ -321,50 +321,50 @@
             },
             "ja": {
               "information": [
-                "Paldea Evolved",
-                "279 枚",
+                "0 枚",
                 "発売日",
                 "2023年6月9日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "d41526083e5b1f75a56b020371748990f0f85d9a113aba9c73bc2ba3139d102f"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Paldea Evolved"
               }
             },
             "ko": {
               "information": [
-                "Paldea Evolved",
-                "279 장",
+                "0 장",
                 "출시일",
                 "2023년 6월 9일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "d41526083e5b1f75a56b020371748990f0f85d9a113aba9c73bc2ba3139d102f"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Paldea Evolved"
               }
             },
             "zh_hans": {
               "information": [
-                "Paldea Evolved",
-                "279 张",
+                "0 张",
                 "发行日期",
                 "2023年6月9日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "d41526083e5b1f75a56b020371748990f0f85d9a113aba9c73bc2ba3139d102f"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Paldea Evolved"
               }
             },
             "zh_hant": {
               "information": [
-                "Paldea Evolved",
-                "279 張",
+                "0 張",
                 "發行日期",
                 "2023年6月9日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "d41526083e5b1f75a56b020371748990f0f85d9a113aba9c73bc2ba3139d102f"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Paldea Evolved"
               }
             }
           },
@@ -399,30 +399,6 @@
               "mode": "RGBA",
               "pixel_sha256": "9f7837f1e6a4b16199f7aed7cfae5263af9bcf30a6018cf8d18c29e4aedea408",
               "width": 451
-            },
-            "ja": {
-              "height": 147,
-              "mode": "RGBA",
-              "pixel_sha256": "d41526083e5b1f75a56b020371748990f0f85d9a113aba9c73bc2ba3139d102f",
-              "width": 451
-            },
-            "ko": {
-              "height": 147,
-              "mode": "RGBA",
-              "pixel_sha256": "d41526083e5b1f75a56b020371748990f0f85d9a113aba9c73bc2ba3139d102f",
-              "width": 451
-            },
-            "zh_hans": {
-              "height": 147,
-              "mode": "RGBA",
-              "pixel_sha256": "d41526083e5b1f75a56b020371748990f0f85d9a113aba9c73bc2ba3139d102f",
-              "width": 451
-            },
-            "zh_hant": {
-              "height": 147,
-              "mode": "RGBA",
-              "pixel_sha256": "d41526083e5b1f75a56b020371748990f0f85d9a113aba9c73bc2ba3139d102f",
-              "width": 451
             }
           },
           "pipeline_contract": {
@@ -444,7 +420,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "9886cf9ec1c057b9e4081a91a1376dc0a74f8cc40a9a5603eb20921e60f27bac"
+        "sha256": "8a9c476d2583c718cbfee7f1b5a86808fbb11b37f23659234a3ee6620f68be5b"
       },
       "prompt": {
         "bytes": 5682,

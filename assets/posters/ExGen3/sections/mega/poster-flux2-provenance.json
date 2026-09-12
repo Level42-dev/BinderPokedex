@@ -12,12 +12,12 @@
       "height": 3268,
       "mode": "RGBA",
       "pixel_sha256": "f3853ce711489955113d2b88151a9b8637edfcbd552f9e1d692acdffc5d5b58d",
-      "sha256": "a77e9ace78a641ba167674ad2a2a528a903d4312c4dc5baa116da8f7e8505402",
+      "sha256": "e630635438acc3a00aeb286ff287a28c3e3839767b256851d889884b6190c354",
       "width": 2368
     }
   },
   "poster_id": "mega",
-  "promoted_at": "2026-08-06T23:49:54.326033+00:00",
+  "promoted_at": "2026-09-12T03:08:51.877448+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T19:16:54.975110+00:00",
@@ -276,7 +276,7 @@
             "de": {
               "information": [
                 "Mega-Entwicklung",
-                "26 Pokémon",
+                "41 Pokémon",
                 "2025–heute • Mega-Entwicklungen als Pokémon ex"
               ],
               "title": {
@@ -289,7 +289,7 @@
             "en": {
               "information": [
                 "Mega Evolution",
-                "26 Pokémon",
+                "41 Pokémon",
                 "2025–present • Mega Evolutions as Pokémon ex"
               ],
               "title": {
@@ -302,7 +302,7 @@
             "es": {
               "information": [
                 "Megaevolución",
-                "26 Pokémon",
+                "41 Pokémon",
                 "2025–presente • Megaevoluciones como Pokémon ex"
               ],
               "title": {
@@ -315,7 +315,7 @@
             "fr": {
               "information": [
                 "Méga-Évolution",
-                "26 Pokémon",
+                "41 Pokémon",
                 "2025–présent • Méga-Évolutions en Pokémon ex"
               ],
               "title": {
@@ -328,7 +328,7 @@
             "it": {
               "information": [
                 "Megaevoluzione",
-                "26 Pokémon",
+                "41 Pokémon",
                 "2025–presente • Megaevoluzioni come Pokémon ex"
               ],
               "title": {
@@ -341,7 +341,7 @@
             "ja": {
               "information": [
                 "メガシンカ",
-                "26 ポケモン",
+                "41 ポケモン",
                 "2025年～ • メガシンカしたポケモンex"
               ],
               "title": {
@@ -354,7 +354,7 @@
             "ko": {
               "information": [
                 "메가진화",
-                "26 포켓몬",
+                "41 포켓몬",
                 "2025년~ • 메가진화 포켓몬 ex"
               ],
               "title": {
@@ -367,7 +367,7 @@
             "zh_hans": {
               "information": [
                 "超级进化",
-                "26 宝可梦",
+                "41 宝可梦",
                 "2025年至今 • 超级进化宝可梦ex"
               ],
               "title": {
@@ -380,7 +380,7 @@
             "zh_hant": {
               "information": [
                 "超級進化",
-                "26 寶可夢",
+                "41 寶可夢",
                 "2025年至今 • 超級進化寶可夢ex"
               ],
               "title": {
@@ -421,7 +421,7 @@
           }
         },
         "schema_version": 1,
-        "sha256": "91d6ba5b9397d26e20f348bda65a5da950de0291c1bf5ab11c4282ea6495ba44"
+        "sha256": "cae1fb443e49e781cb8dc58094ace8b41354c2e8e1fc5f9f86abed0b30110932"
       },
       "prompt": {
         "bytes": 6081,

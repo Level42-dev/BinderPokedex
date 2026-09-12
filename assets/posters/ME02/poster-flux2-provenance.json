@@ -12,12 +12,12 @@
       "height": 3268,
       "mode": "RGBA",
       "pixel_sha256": "54051e9d38aa807933a432cf84d45600922656690462145aacca1a5fb9981a4a",
-      "sha256": "9c166009f5ab5dbe1c4618c659b4828255e97ea31b8e167a8e686b0175f0f4ab",
+      "sha256": "f20acc0f58cc0f21ed7c81567d15ecb34afe5f45c5bfcc3f649bf1e83d8cf28a",
       "width": 2368
     }
   },
   "poster_id": "ME02",
-  "promoted_at": "2026-08-06T23:50:25.849054+00:00",
+  "promoted_at": "2026-09-12T14:16:33.083271+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T19:17:58.656965+00:00",
@@ -309,7 +309,7 @@
             },
             "it": {
               "information": [
-                "Flamme Spettrali",
+                "Fiamme Spettrali",
                 "130 carte",
                 "Pubblicato",
                 "14 novembre 2025"
@@ -321,50 +321,50 @@
             },
             "ja": {
               "information": [
-                "Phantasmal Flames",
-                "130 枚",
+                "0 枚",
                 "発売日",
                 "2025年11月14日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "3fb4b5f9ffddcd1684ad9200652c8ea324a23bc61bad47e8fc124aa5a4d83a0e"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Phantasmal Flames"
               }
             },
             "ko": {
               "information": [
-                "Phantasmal Flames",
-                "130 장",
+                "0 장",
                 "출시일",
                 "2025년 11월 14일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "3fb4b5f9ffddcd1684ad9200652c8ea324a23bc61bad47e8fc124aa5a4d83a0e"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Phantasmal Flames"
               }
             },
             "zh_hans": {
               "information": [
-                "Phantasmal Flames",
-                "130 张",
+                "0 张",
                 "发行日期",
                 "2025年11月14日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "3fb4b5f9ffddcd1684ad9200652c8ea324a23bc61bad47e8fc124aa5a4d83a0e"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Phantasmal Flames"
               }
             },
             "zh_hant": {
               "information": [
-                "Phantasmal Flames",
-                "130 張",
+                "0 張",
                 "發行日期",
                 "2025年11月14日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "3fb4b5f9ffddcd1684ad9200652c8ea324a23bc61bad47e8fc124aa5a4d83a0e"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Phantasmal Flames"
               }
             }
           },
@@ -399,30 +399,6 @@
               "mode": "RGBA",
               "pixel_sha256": "0531691996ccfd886cd8bb790e22fab09b7fbdf4528a2e3f3cf2613801285d22",
               "width": 5000
-            },
-            "ja": {
-              "height": 833,
-              "mode": "RGBA",
-              "pixel_sha256": "3fb4b5f9ffddcd1684ad9200652c8ea324a23bc61bad47e8fc124aa5a4d83a0e",
-              "width": 1920
-            },
-            "ko": {
-              "height": 833,
-              "mode": "RGBA",
-              "pixel_sha256": "3fb4b5f9ffddcd1684ad9200652c8ea324a23bc61bad47e8fc124aa5a4d83a0e",
-              "width": 1920
-            },
-            "zh_hans": {
-              "height": 833,
-              "mode": "RGBA",
-              "pixel_sha256": "3fb4b5f9ffddcd1684ad9200652c8ea324a23bc61bad47e8fc124aa5a4d83a0e",
-              "width": 1920
-            },
-            "zh_hant": {
-              "height": 833,
-              "mode": "RGBA",
-              "pixel_sha256": "3fb4b5f9ffddcd1684ad9200652c8ea324a23bc61bad47e8fc124aa5a4d83a0e",
-              "width": 1920
             }
           },
           "pipeline_contract": {
@@ -444,7 +420,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "448641dabef5771cfc9a7a5447f03dce8b2c5fb3c76ad2be636e696849b21aad"
+        "sha256": "2b04171b99af6711e95444a5da2b56de5eae5b143daf5087c221c96654d76769"
       },
       "prompt": {
         "bytes": 5724,

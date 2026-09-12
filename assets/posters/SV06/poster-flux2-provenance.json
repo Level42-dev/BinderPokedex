@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "SV06",
-  "promoted_at": "2026-08-06T23:53:49.147083+00:00",
+  "promoted_at": "2026-09-12T14:09:04.551890+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T19:22:18.550239+00:00",
@@ -321,50 +321,50 @@
             },
             "ja": {
               "information": [
-                "Twilight Masquerade",
-                "226 枚",
+                "0 枚",
                 "発売日",
                 "2024年5月24日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "2350826db14c42657ac8f492ba72ce79d8e2be0616de98bdd769496b9258ae03"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Twilight Masquerade"
               }
             },
             "ko": {
               "information": [
-                "Twilight Masquerade",
-                "226 장",
+                "0 장",
                 "출시일",
                 "2024년 5월 24일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "2350826db14c42657ac8f492ba72ce79d8e2be0616de98bdd769496b9258ae03"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Twilight Masquerade"
               }
             },
             "zh_hans": {
               "information": [
-                "Twilight Masquerade",
-                "226 张",
+                "0 张",
                 "发行日期",
                 "2024年5月24日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "2350826db14c42657ac8f492ba72ce79d8e2be0616de98bdd769496b9258ae03"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Twilight Masquerade"
               }
             },
             "zh_hant": {
               "information": [
-                "Twilight Masquerade",
-                "226 張",
+                "0 張",
                 "發行日期",
                 "2024年5月24日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "2350826db14c42657ac8f492ba72ce79d8e2be0616de98bdd769496b9258ae03"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Twilight Masquerade"
               }
             }
           },
@@ -399,30 +399,6 @@
               "mode": "RGBA",
               "pixel_sha256": "4cc332d73f361eafee11f8a5fb298683e515dcb3b40645ea07b71e87c76db1ce",
               "width": 661
-            },
-            "ja": {
-              "height": 262,
-              "mode": "RGBA",
-              "pixel_sha256": "2350826db14c42657ac8f492ba72ce79d8e2be0616de98bdd769496b9258ae03",
-              "width": 613
-            },
-            "ko": {
-              "height": 262,
-              "mode": "RGBA",
-              "pixel_sha256": "2350826db14c42657ac8f492ba72ce79d8e2be0616de98bdd769496b9258ae03",
-              "width": 613
-            },
-            "zh_hans": {
-              "height": 262,
-              "mode": "RGBA",
-              "pixel_sha256": "2350826db14c42657ac8f492ba72ce79d8e2be0616de98bdd769496b9258ae03",
-              "width": 613
-            },
-            "zh_hant": {
-              "height": 262,
-              "mode": "RGBA",
-              "pixel_sha256": "2350826db14c42657ac8f492ba72ce79d8e2be0616de98bdd769496b9258ae03",
-              "width": 613
             }
           },
           "pipeline_contract": {
@@ -444,7 +420,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "20366d056e53dba9b995a8d4ee6d13426f53ddaa95af023557e7e5a0aef7419d"
+        "sha256": "f2b9c9ccb81a7e7fc8f620b71157439cb7ebc1c3cc408839f74753d7416caec7"
       },
       "prompt": {
         "bytes": 5729,
