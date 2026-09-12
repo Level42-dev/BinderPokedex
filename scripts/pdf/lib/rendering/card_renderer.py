@@ -191,6 +191,7 @@ class CardRenderer:
                 font_name,
                 font_size,
                 self.style.TEXT_DARK,
+                symbol_font=FontManager.get_symbol_font_name(),
             )
         else:
             canvas_obj.setFont(font_name, font_size)

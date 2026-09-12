@@ -71,6 +71,22 @@ class TestCardRenderer:
             renderer = CardRenderer(language=lang)
             assert renderer.language == lang
 
+    def test_gender_symbols_use_explicit_registered_fallback_font(self):
+        canvas_obj = MagicMock()
+        canvas_obj.stringWidth.return_value = 5
+
+        TextRenderer.draw_name_with_symbol_fallback(
+            canvas_obj,
+            "Nidoran♀",
+            0,
+            CARD_WIDTH,
+            10,
+            "Helvetica-Bold",
+            symbol_font="STSong-Light",
+        )
+
+        assert canvas_obj.setFont.call_args_list[-1].args[0] == "STSong-Light"
+
     @pytest.mark.parametrize(
         "name",
         (

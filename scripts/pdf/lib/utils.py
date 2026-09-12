@@ -8,7 +8,7 @@ import json
 import logging
 import re
 from pathlib import Path
-from typing import List
+from typing import List, Optional
 from reportlab.lib.colors import HexColor
 from reportlab.pdfbase import pdfmetrics
 
@@ -88,12 +88,13 @@ class TextRenderer:
     @staticmethod
     def draw_name_with_symbol_fallback(canvas_obj, name: str, x: float, width: float, 
                                        y: float, primary_font: str, font_size: float = 8,
-                                       text_color: str = "#2D2D2D") -> None:
+                                       text_color: str = "#2D2D2D",
+                                       symbol_font: Optional[str] = None) -> None:
         """
         Draw text with gender symbol fallback.
         
-        If name contains ♂/♀ symbols, renders text parts with primary font and 
-        symbols with SongtiBold for better Unicode support.
+        If name contains ♂/♀ symbols, renders text parts with primary font and
+        symbols with an explicitly supplied registered Unicode font.
         
         This is the canonical implementation replacing:
         - card_template._draw_name_with_symbol_fallback
@@ -108,7 +109,11 @@ class TextRenderer:
             primary_font: Primary font name (e.g., 'Helvetica-Bold')
             font_size: Font size in points (default 8)
             text_color: Hex color for text (default black)
+            symbol_font: Registered Unicode font for ♂/♀. Defaults to the
+                primary font for callers that do not need a separate fallback.
         """
+        symbol_font = symbol_font or primary_font
+
         # Split name into parts and symbols
         parts: List[tuple] = []
         current_part: str = ""
@@ -131,7 +136,7 @@ class TextRenderer:
             if part_type == 'text':
                 total_width += canvas_obj.stringWidth(part_text, primary_font, font_size)
             else:  # symbol
-                total_width += canvas_obj.stringWidth(part_text, 'SongtiBold', font_size)
+                total_width += canvas_obj.stringWidth(part_text, symbol_font, font_size)
         
         # Draw centered
         start_x = x + width / 2 - total_width / 2
@@ -144,10 +149,10 @@ class TextRenderer:
                 canvas_obj.drawString(current_x, y, part_text)
                 current_x += canvas_obj.stringWidth(part_text, primary_font, font_size)
             else:  # symbol
-                canvas_obj.setFont('SongtiBold', font_size)
+                canvas_obj.setFont(symbol_font, font_size)
                 canvas_obj.setFillColor(HexColor(text_color))
                 canvas_obj.drawString(current_x, y, part_text)
-                current_x += canvas_obj.stringWidth(part_text, 'SongtiBold', font_size)
+                current_x += canvas_obj.stringWidth(part_text, symbol_font, font_size)
 
 
 class TranslationHelper:

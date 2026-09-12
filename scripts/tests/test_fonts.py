@@ -8,6 +8,9 @@ import sys
 import logging
 from pathlib import Path
 
+import pytest
+from reportlab.pdfbase import pdfmetrics
+
 # Add lib to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent / 'lib'))
 
@@ -62,6 +65,63 @@ def test_get_font_names():
 def test_japanese_uses_complete_cid_font():
     assert FontManager.get_font_name('ja') == 'HeiseiKakuGo-W5'
     assert FontManager._font_cache['HeiseiKakuGo-W5'] is True
+
+
+@pytest.mark.parametrize(
+    ('language', 'fallback_font'),
+    (
+        ('ja', 'HeiseiKakuGo-W5'),
+        ('ko', 'HYGothic-Medium'),
+        ('zh_hans', 'STSong-Light'),
+        ('zh_hant', 'MSung-Light'),
+    ),
+)
+def test_platform_neutral_cjk_fallbacks_are_registered(language, fallback_font):
+    assert FontManager.CJK_CID_FALLBACKS[language] == fallback_font
+    assert FontManager._font_cache[fallback_font] is True
+    assert pdfmetrics.getFont(fallback_font) is not None
+
+
+@pytest.mark.parametrize('language', ('ko', 'zh_hans', 'zh_hant'))
+def test_missing_system_font_uses_language_specific_cid_fallback(
+    monkeypatch,
+    language,
+):
+    configured_font = FontManager.LANGUAGE_FONTS[language]['font']
+    monkeypatch.setitem(FontManager._font_cache, configured_font, False)
+
+    assert (
+        FontManager.get_font_name(language)
+        == FontManager.CJK_CID_FALLBACKS[language]
+    )
+
+
+def test_symbol_font_is_registered():
+    symbol_font = FontManager.get_symbol_font_name()
+
+    assert FontManager._font_cache[symbol_font] is True
+    assert pdfmetrics.getFont(symbol_font) is not None
+
+
+def test_minimal_linux_environment_uses_only_built_in_cid_fonts(
+    monkeypatch,
+    tmp_path,
+):
+    missing_font = tmp_path / 'missing-font.ttf'
+    monkeypatch.setattr(FontManager, '_fonts_registered', False)
+    monkeypatch.setattr(FontManager, '_font_cache', {})
+    monkeypatch.setattr(FontManager, 'SONGTI_PATH', missing_font)
+    monkeypatch.setattr(FontManager, 'STHEITI_PATH', missing_font)
+    monkeypatch.setattr(FontManager, 'APPLEGOTHIC_PATH', missing_font)
+    monkeypatch.setattr(FontManager, 'NOTO_CJK_PATHS', [])
+
+    FontManager.register_fonts()
+
+    assert {
+        language: FontManager.get_font_name(language)
+        for language in FontManager.CJK_LANGUAGES
+    } == FontManager.CJK_CID_FALLBACKS
+    assert FontManager.get_symbol_font_name() == 'STSong-Light'
 
 
 
