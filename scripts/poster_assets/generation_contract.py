@@ -10,7 +10,9 @@ CANONICAL_REFERENCE_MODES = {
     ("flux", "joint_scene"): "individual_spatial_joint",
 }
 SUPPORTED_REFERENCE_MODES = {
-    ("flux", "identity_lock"): frozenset({"two_pass_source_pixels"}),
+    ("flux", "identity_lock"): frozenset(
+        {"two_pass_source_pixels", "grounded_source_pixels"}
+    ),
     ("flux", "joint_scene"): frozenset(
         {
             "individual_spatial_joint",
@@ -57,6 +59,25 @@ def validate_generation_reference_contract(
             f"{key[0]}/{key[1]}: expected one of {expected}, got "
             f"{actual!r}"
         )
+    if is_grounded_generation(generation) and generation.get("steps", 4) != 4:
+        raise ValueError("Grounded source pixels requires four sampling steps")
+
+
+def is_grounded_generation(generation: Mapping[str, Any]) -> bool:
+    """Identify the source-protected ground-edit graph independently of upscale."""
+    return (
+        generation.get("engine") == "flux"
+        and generation.get("mode") == "identity_lock"
+        and generation.get("reference_mode") == "grounded_source_pixels"
+    )
+
+
+def requires_visual_review(generation: Mapping[str, Any]) -> bool:
+    """Keep visual eligibility separate from joint-scene upscale semantics."""
+    return (
+        is_joint_scene_generation(generation)
+        or is_grounded_generation(generation)
+    )
 
 
 def validate_generation_output_contract(
@@ -181,4 +202,4 @@ def requires_generation_fingerprint(
     generation: Mapping[str, Any],
 ) -> bool:
     """Return whether legacy, unfingerprinted provenance is impossible."""
-    return is_joint_scene_generation(generation)
+    return requires_visual_review(generation)

@@ -10,6 +10,8 @@ from typing import Any
 from PIL import Image, ImageDraw
 
 try:
+    from .grounding import build_grounding_masks
+    from .poster_config import GROUNDED_PROMPT_FILE, build_grounded_prompt_snapshot
     from .composition import (
         cutout_placements,
         joint_scene_canvas_placements,
@@ -34,6 +36,8 @@ try:
     )
     from .poster_io import POSTER_ASSETS, load_poster_scope_data, poster_bundle
 except ImportError:
+    from grounding import build_grounding_masks
+    from poster_config import GROUNDED_PROMPT_FILE, build_grounded_prompt_snapshot
     from composition import (
         cutout_placements,
         joint_scene_canvas_placements,
@@ -147,6 +151,8 @@ def build_identity_lock_references(
     scope: str,
     megapixels: float,
     output_dir: Path | None = None,
+    *,
+    reference_mode: str = "two_pass_source_pixels",
 ) -> Path:
     """Write only the assets consumed by the identity-lock workflow."""
     bundle = poster_bundle(scope, poster_assets=POSTER_ASSETS)
@@ -178,7 +184,11 @@ def build_identity_lock_references(
         )
     path = reference_dir / "inpaint_reference.png"
     reference.save(path, format="PNG", optimize=True)
-    build_upper_context_mask(
+    mask_builder = (
+        build_grounding_masks if reference_mode == "grounded_source_pixels"
+        else build_upper_context_mask
+    )
+    mask_builder(
         width,
         height,
         placements,
@@ -186,8 +196,14 @@ def build_identity_lock_references(
         reference_dir,
     )
     scope_data = load_poster_scope_data(bundle)
-    (reference_dir / IDENTITY_LOCK_PROMPT_FILE).write_text(
-        build_identity_lock_prompt(manifest, scope_data) + "\n",
+    grounded = reference_mode == "grounded_source_pixels"
+    prompt_file = GROUNDED_PROMPT_FILE if grounded else IDENTITY_LOCK_PROMPT_FILE
+    prompt = (
+        build_grounded_prompt_snapshot(manifest, scope_data)
+        if grounded else build_identity_lock_prompt(manifest, scope_data)
+    )
+    (reference_dir / prompt_file).write_text(
+        prompt + "\n",
         encoding="utf-8",
     )
     return path
@@ -458,7 +474,20 @@ def prepare(
                 REGIONAL_JOINT_SCENE_PROMPT_FILE,
             ),
         )
-        build_identity_lock_references(scope, megapixels, work_dir)
+        _remove_stale(
+            work_dir,
+            (
+                "upper_context_mask.png", "upper_context_generation_mask.png",
+                IDENTITY_LOCK_PROMPT_FILE,
+            ) if effective_reference_mode == "grounded_source_pixels" else (
+                "grounding_mask.png", "grounding_sampling_mask.png",
+                "grounding_mask.json", GROUNDED_PROMPT_FILE,
+            ),
+        )
+        build_identity_lock_references(
+            scope, megapixels, work_dir,
+            reference_mode=effective_reference_mode,
+        )
     return work_dir
 
 
@@ -478,6 +507,7 @@ def main() -> int:
             "spatial_identity_joint",
             "regional_identity_joint",
             "two_pass_source_pixels",
+            "grounded_source_pixels",
         ),
     )
     args = parser.parse_args()

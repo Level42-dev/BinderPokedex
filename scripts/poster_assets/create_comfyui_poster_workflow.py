@@ -7,6 +7,8 @@ import json
 from pathlib import Path
 
 try:
+    from .grounding import grounding_config
+    from .poster_config import GROUNDED_PROMPT_FILE, build_grounded_prompt_snapshot
     from .composition import (
         joint_scene_canvas_placements,
         normalized_visible_placement_contract,
@@ -42,6 +44,8 @@ try:
         poster_bundle,
     )
 except ImportError:
+    from grounding import grounding_config
+    from poster_config import GROUNDED_PROMPT_FILE, build_grounded_prompt_snapshot
     from composition import (
         joint_scene_canvas_placements,
         normalized_visible_placement_contract,
@@ -763,6 +767,53 @@ def build_workflow(
             resize_source=False,
             mask=["18", 0],
         )
+        if effective_reference_mode == "grounded_source_pixels":
+            if steps != 4:
+                raise ValueError("Grounded source pixels requires four sampling steps")
+            workflow.update(
+                {
+                    "20": node("LoadImage", image="grounding_mask.png"),
+                    "28": node("LoadImage", image="grounding_sampling_mask.png"),
+                    "21": node("VAEEncode", pixels=["19", 0], vae=["3", 0]),
+                    "22": node("RandomNoise", noise_seed=seed + 1),
+                    "29": node(
+                        "SetLatentNoiseMask", samples=["21", 0], mask=["28", 1],
+                    ),
+                    "30": node(
+                        "CLIPTextEncode", text=grounding_config(manifest)["prompt"],
+                        clip=["2", 0],
+                    ),
+                    "31": node(
+                        "ReferenceLatent", conditioning=["30", 0], latent=["21", 0],
+                    ),
+                    "32": node(
+                        "CFGGuider", model=["1", 0], positive=["31", 0],
+                        negative=["5", 0], cfg=1.0,
+                    ),
+                    "23": node(
+                        "SamplerCustomAdvanced", noise=["22", 0],
+                        guider=["32", 0], sampler=["10", 0], sigmas=["26", 0],
+                        latent_image=["29", 0],
+                    ),
+                    "24": node("VAEDecode", samples=["23", 0], vae=["3", 0]),
+                    "25": node(
+                        "ImageCompositeMasked", destination=["19", 0],
+                        source=["24", 0], x=0, y=0, resize_source=False,
+                        mask=["20", 1],
+                    ),
+                }
+            )
+            prefix = (
+                f"{poster_asset_slug(scope)}_flux2_grounded_source_pixels_"
+                f"{megapixel_marker(megapixels)}_seed_{seed}"
+            )
+            workflow["13"] = node(
+                "SaveImage", images=["25", 0], filename_prefix=prefix + "_final",
+            )
+            workflow["33"] = node(
+                "SaveImage", images=["19", 0], filename_prefix=prefix + "_baseline",
+            )
+            return workflow
         workflow["20"] = node(
             "LoadImage", image="upper_context_mask.png"
         )
@@ -831,6 +882,8 @@ def write_workflow(
         else CANONICAL_REFERENCE_MODES[key]
     )
     workflow_marker = generation_mode
+    if effective_reference_mode == "grounded_source_pixels":
+        workflow_marker += "_grounded_source_pixels"
     if (
         generation_mode == "joint_scene"
         and effective_reference_mode != "spatial_identity_joint"
@@ -851,7 +904,15 @@ def write_workflow(
         clip_name=clip_name,
         vae_name=vae_name,
     )
-    if generation_mode == "identity_lock":
+    if effective_reference_mode == "grounded_source_pixels":
+        bundle = poster_bundle(scope, poster_assets=POSTER_ASSETS)
+        (target_dir / GROUNDED_PROMPT_FILE).write_text(
+            build_grounded_prompt_snapshot(
+                bundle.manifest, load_poster_scope_data(bundle),
+            ) + "\n",
+            encoding="utf-8",
+        )
+    elif generation_mode == "identity_lock":
         (target_dir / IDENTITY_LOCK_PROMPT_FILE).write_text(
             str(workflow["4"]["inputs"]["text"]).strip() + "\n",
             encoding="utf-8",
@@ -922,6 +983,7 @@ def main() -> int:
             "spatial_identity_joint",
             "regional_identity_joint",
             "two_pass_source_pixels",
+            "grounded_source_pixels",
         ),
     )
     parser.add_argument("--model", default="flux-2-klein-4b-fp8.safetensors")

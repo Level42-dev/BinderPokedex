@@ -11,6 +11,9 @@ from typing import Any
 from PIL import Image
 
 try:
+    from .generation_contract import is_grounded_generation
+    from .poster_config import build_grounded_prompt_snapshot
+    from .provenance import require_grounding_pixel_validation
     from .fetch_cutouts import (
         resolve_requested_count,
         select_pokemon,
@@ -54,6 +57,9 @@ try:
         subject_fingerprint_identity,
     )
 except ImportError:
+    from generation_contract import is_grounded_generation
+    from poster_config import build_grounded_prompt_snapshot
+    from provenance import require_grounding_pixel_validation
     from fetch_cutouts import (
         resolve_requested_count,
         select_pokemon,
@@ -408,6 +414,9 @@ def validate(target: str | PosterBundle) -> dict[str, Any]:
             f"Missing promoted model hashes: {', '.join(missing_hashes)}"
         )
     is_joint_scene = is_joint_scene_generation(recorded_generation)
+    if is_grounded_generation(recorded_generation):
+        require_grounding_pixel_validation(payload.get("run", {}))
+        require_joint_scene_visual_review(payload.get("run", {}))
     if is_joint_scene:
         identity_validation = require_joint_scene_visual_review(
             payload.get("run", {})
@@ -426,7 +435,9 @@ def validate(target: str | PosterBundle) -> dict[str, Any]:
             .get("prompt", {})
         )
         current_prompt = (
-            build_identity_lock_prompt(manifest, scope_data) + "\n"
+            (build_grounded_prompt_snapshot(manifest, scope_data)
+             if is_grounded_generation(recorded_generation)
+             else build_identity_lock_prompt(manifest, scope_data)) + "\n"
         ).encode("utf-8")
         current_prompt_hash = hashlib.sha256(current_prompt).hexdigest()
         if prompt_record.get("sha256") != current_prompt_hash:

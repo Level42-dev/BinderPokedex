@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -10,6 +11,12 @@ from typing import Any
 from PIL import Image
 
 try:
+    from .grounding import grounding_config, build_grounding_masks, audit_grounding_pixels
+    from .generation_contract import is_grounded_generation, requires_visual_review
+    from .poster_config import GROUNDED_PROMPT_FILE, build_grounded_prompt_snapshot
+    from .composition import cutout_placements
+    from .layout import build_source_layout
+    from .source_pixel_audit import audit_exact_source_pixels
     from .composition import (
         joint_scene_canvas_placements,
         normalized_visible_placement_contract,
@@ -52,6 +59,12 @@ try:
         subject_fingerprint_identity,
     )
 except ImportError:
+    from grounding import grounding_config, build_grounding_masks, audit_grounding_pixels
+    from generation_contract import is_grounded_generation, requires_visual_review
+    from poster_config import GROUNDED_PROMPT_FILE, build_grounded_prompt_snapshot
+    from composition import cutout_placements
+    from layout import build_source_layout
+    from source_pixel_audit import audit_exact_source_pixels
     from composition import (
         joint_scene_canvas_placements,
         normalized_visible_placement_contract,
@@ -104,6 +117,7 @@ GENERATION_PIPELINE_CONTRACT_VERSION = 3
 # deterministic overlay v2 outputs.
 OVERLAY_PIPELINE_CONTRACT_VERSION = 3
 CURRENT_GENERATION_PIPELINE_CONTRACT_VERSIONS = {
+    ("flux", "identity_lock", "grounded_source_pixels"): 4,
     (
         "flux",
         "identity_lock",
@@ -114,6 +128,7 @@ CURRENT_GENERATION_PIPELINE_CONTRACT_VERSIONS = {
     ("flux", "joint_scene", "individual_spatial_joint"): 9,
 }
 SUPPORTED_GENERATION_PIPELINE_CONTRACT_VERSIONS = {
+    ("flux", "identity_lock", "grounded_source_pixels"): frozenset({4}),
     (
         "flux",
         "identity_lock",
@@ -394,12 +409,13 @@ def _joint_scene_review_inputs(
     if not isinstance(generation, dict):
         raise ValueError("Joint-scene candidate lacks generation metadata")
     validate_generation_contract(generation)
-    if (
-        generation.get("engine") != "flux"
-        or generation.get("mode") != "joint_scene"
-    ):
+    if not requires_visual_review(generation):
         raise ValueError(
-            "Joint-scene visual approval applies only to flux/joint_scene"
+            "Visual approval applies only to joint-scene or grounded candidates"
+        )
+    if is_grounded_generation(generation):
+        require_grounding_pixel_validation(
+            run_metadata, verify_files=artwork_path is not None,
         )
     artwork = run_metadata.get("source_artwork")
     raw_artwork = run_metadata.get("raw_artwork")
@@ -449,6 +465,9 @@ def _joint_scene_review_inputs(
             "Joint-scene candidate requires a valid generation fingerprint"
         )
     components = fingerprint.get("components", {})
+    if is_grounded_generation(generation):
+        if components.get("generation") != generation:
+            raise ValueError("Grounding visual review has another graph's generation contract")
     subjects = components.get("source_subject_ids")
     fingerprint_cutouts = components.get("cutouts")
     cutouts = inputs.get("cutouts")
@@ -531,6 +550,9 @@ def approve_joint_scene_visual_review(
         "source_cutout_pixel_sha256": bound["source_pixel_hashes"],
         "criteria": list(JOINT_SCENE_REVIEW_CRITERIA),
     }
+    if is_grounded_generation(run_metadata["generation"]):
+        record["baseline_sha256"] = run_metadata["baseline_artwork"]["sha256"]
+        record["workflow_sha256"] = run_metadata["inputs"]["workflow"]["sha256"]
     validation[JOINT_SCENE_REVIEW_KEY] = record
     return record
 
@@ -585,6 +607,12 @@ def require_joint_scene_visual_review(
         raise ValueError(
             "Joint-scene visual identity approval is incomplete or stale"
         )
+    if is_grounded_generation(run_metadata["generation"]):
+        if (
+            record.get("baseline_sha256") != run_metadata["baseline_artwork"]["sha256"]
+            or record.get("workflow_sha256") != run_metadata["inputs"]["workflow"]["sha256"]
+        ):
+            raise ValueError("Grounding visual review has stale baseline or workflow binding")
     return record
 
 
@@ -1005,6 +1033,8 @@ def _effective_generation_prompt(
     engine = str(generation.get("engine", ""))
     mode = str(generation.get("mode", ""))
     if engine == "flux" and mode == "identity_lock":
+        if is_grounded_generation(generation):
+            return build_grounded_prompt_snapshot(bundle.manifest, scope_data)
         return build_identity_lock_prompt(bundle.manifest, scope_data)
     if engine == "flux" and mode == "joint_scene":
         generation_megapixels = generation.get("generation_megapixels")
@@ -1169,7 +1199,15 @@ def build_generation_fingerprint(
         effective_generation.get("engine") == "flux"
         and effective_generation.get("mode") == "joint_scene"
     )
-    if not is_joint_scene:
+    if is_grounded_generation(effective_generation):
+        components["identity_lock"] = {
+            "overscan_ratio": identity_lock_config(manifest)["overscan_ratio"],
+            "grounding": grounding_config(manifest),
+        }
+        components["grounding_inputs"] = derive_grounding_inputs(
+            bundle, effective_generation,
+        )
+    elif not is_joint_scene:
         components["conditioning"] = manifest.get("conditioning", {})
         components["identity_lock"] = identity_lock_config(manifest)
     else:
@@ -1237,7 +1275,11 @@ def rebuild_generation_fingerprint_from_recorded_sources(
     engine = str(generation.get("engine", ""))
     mode = str(generation.get("mode", ""))
     if engine == "flux" and mode == "identity_lock":
-        prompt = build_identity_lock_prompt(bundle.manifest, scope_data)
+        prompt = (
+            build_grounded_prompt_snapshot(bundle.manifest, scope_data)
+            if is_grounded_generation(generation)
+            else build_identity_lock_prompt(bundle.manifest, scope_data)
+        )
         effective_prompt = {
             "encoding": "utf-8",
             "sha256": hashlib.sha256(prompt.encode("utf-8")).hexdigest(),
@@ -1266,7 +1308,15 @@ def rebuild_generation_fingerprint_from_recorded_sources(
         "source_subject_ids": expected_subjects,
         "cutouts": cutouts,
     }
-    if engine == "flux" and mode == "joint_scene":
+    if is_grounded_generation(generation):
+        current_components["identity_lock"] = {
+            "overscan_ratio": identity_lock_config(bundle.manifest)["overscan_ratio"],
+            "grounding": grounding_config(bundle.manifest),
+        }
+        # Durable consumption retains reviewed derived hashes, while current
+        # configuration, prompt, subjects and layout are rebuilt above.
+        current_components["grounding_inputs"] = components.get("grounding_inputs")
+    elif engine == "flux" and mode == "joint_scene":
         current_components["joint_scene_conditioning"] = (
             joint_scene_conditioning_contract(
                 bundle.manifest,
@@ -1416,6 +1466,276 @@ def build_overlay_fingerprint(
     return fingerprint_record(components)
 
 
+def derive_grounding_inputs(
+    bundle: PosterBundle,
+    generation: dict[str, Any],
+    *,
+    verify_dir: Path | None = None,
+) -> dict[str, Any]:
+    """Rebuild reviewed masks from current source geometry, never stale files."""
+    width, height = latent_canvas_dimensions(
+        str(bundle.manifest.get("layout", {}).get("name", "standard_3x3")),
+        float(generation["generation_megapixels"]),
+    )
+    placements = cutout_placements(
+        build_source_layout(
+            bundle.manifest.get("layout", {}).get("name", "standard_3x3"),
+            width_px=width, height_px=height,
+        ),
+        bundle.source_dir,
+    )
+    with tempfile.TemporaryDirectory(prefix="poster-grounding-") as temporary:
+        directory = Path(temporary)
+        metadata = build_grounding_masks(
+            width, height, placements, bundle.manifest, directory,
+        )
+        reference = Image.new("RGBA", (width, height), (226, 224, 211, 0))
+        for placement in placements:
+            reference.alpha_composite(
+                placement["image"], (placement["x"], placement["y"]),
+            )
+        reference.save(
+            directory / "inpaint_reference.png", format="PNG", optimize=True,
+        )
+        hashes = {
+            name: sha256_file(directory / name)
+            for name in (
+                "inpaint_reference.png", "grounding_mask.png",
+                "grounding_sampling_mask.png", "grounding_mask.json",
+            )
+        }
+        if verify_dir is not None:
+            for name, digest in hashes.items():
+                candidate = verify_dir / name
+                if not candidate.is_file() or sha256_file(candidate) != digest:
+                    raise ValueError(f"Grounding input is missing or stale: {name}")
+        return {
+            "metadata": metadata,
+            "hashes": hashes,
+            "opaque_source_pixels": reference.getchannel("A").histogram()[255],
+        }
+
+
+def grounded_output_record(
+    path: Path, workflow_path: Path, role: str,
+) -> dict[str, Any]:
+    """Bind a labeled PNG output to the exact embedded ComfyUI job graph."""
+    if role not in {"final", "baseline"}:
+        raise ValueError("Unknown grounding output role")
+    workflow = load_json(workflow_path)
+    saves = [
+        (key, value) for key, value in workflow.items()
+        if value.get("class_type") == "SaveImage"
+    ]
+    matching = [
+        (key, value) for key, value in saves
+        if str(value.get("inputs", {}).get("filename_prefix", "")).endswith("_" + role)
+    ]
+    if len(saves) != 2 or len(matching) != 1:
+        raise ValueError("Grounding workflow must save one final and one baseline output")
+    node_id, save = matching[0]
+    prefix = save["inputs"]["filename_prefix"]
+    if not path.name.startswith(Path(prefix).name + "_"):
+        raise ValueError("Grounding output filename does not belong to this job")
+    with Image.open(path) as image:
+        try:
+            embedded = json.loads(image.info.get("prompt", "null"))
+        except (TypeError, ValueError) as error:
+            raise ValueError("Grounding output has an invalid workflow binding") from error
+    if embedded != workflow:
+        raise ValueError("Grounding output does not contain this job's workflow")
+    return {
+        **file_record(path, image=True), "role": role,
+        "save_node": node_id, "workflow_sha256": sha256_file(workflow_path),
+    }
+
+
+def require_grounding_pixel_validation(
+    run_metadata: dict[str, Any], *, verify_files: bool = False,
+) -> dict[str, Any]:
+    """Shared fail-closed raw-stage ground and source protection gate."""
+    generation = run_metadata.get("generation", {})
+    if not is_grounded_generation(generation):
+        raise ValueError("Grounding pixel validation requires the grounded generation contract")
+    validate_generation_contract(generation)
+    source = require_exact_source_pixel_validation(run_metadata)
+    inputs = run_metadata.get("inputs", {})
+    fingerprint = inputs.get("generation_fingerprint")
+    if not fingerprint_record_is_valid(fingerprint):
+        raise ValueError("Grounding candidate requires its generation fingerprint")
+    generation_fingerprint_pipeline_contract_version(fingerprint, generation)
+    components = fingerprint["components"]
+    evidence = inputs.get("grounding")
+    if (
+        not isinstance(evidence, dict)
+        or evidence != components.get("grounding_inputs")
+        or components.get("generation") != generation
+    ):
+        raise ValueError("Grounding inputs do not match the generation fingerprint")
+    metadata = evidence.get("metadata", {})
+    if metadata.get("configuration") != components.get("identity_lock", {}).get("grounding"):
+        raise ValueError("Grounding mask configuration differs from the fingerprint")
+    hashes = evidence.get("hashes", {})
+    metadata_digest = hashlib.sha256(
+        (json.dumps(metadata, indent=2, sort_keys=True) + "\n").encode("utf-8")
+    ).hexdigest()
+    if metadata_digest != hashes.get("grounding_mask.json"):
+        raise ValueError("Grounding metadata contents do not match their hash")
+    dimensions = metadata.get("dimensions", {})
+    width, height = dimensions.get("width"), dimensions.get("height")
+    if type(width) is not int or width <= 0 or type(height) is not int or height <= 0:
+        raise ValueError("Grounding dimensions are invalid")
+    references = inputs.get("references", [])
+    expected_names = {
+        "inpaint_reference.png", "grounding_mask.png", "grounding_sampling_mask.png",
+    }
+    if (
+        len(references) != 3
+        or {Path(r.get("file", "")).name for r in references} != expected_names
+    ):
+        raise ValueError("Grounding reference set is incomplete")
+    for reference in references:
+        if (
+            reference.get("sha256") != hashes.get(Path(reference.get("file", "")).name)
+            or reference.get("width") != width
+            or reference.get("height") != height
+        ):
+            raise ValueError("Grounding reference hashes or dimensions differ")
+    if inputs.get("grounding_metadata", {}).get("sha256") != hashes.get("grounding_mask.json"):
+        raise ValueError("Grounding mask metadata hash differs")
+    if (
+        metadata.get("grounding_mask_sha256") != hashes.get("grounding_mask.png")
+        or metadata.get("grounding_sampling_mask_sha256") != hashes.get("grounding_sampling_mask.png")
+    ):
+        raise ValueError("Grounding mask hashes differ")
+    raw = run_metadata.get("raw_artwork", {})
+    baseline = run_metadata.get("baseline_artwork", {})
+    workflow_hash = inputs.get("workflow", {}).get("sha256")
+    if not _valid_sha256(workflow_hash):
+        raise ValueError("Grounding workflow binding is missing")
+    for record, role in ((raw, "final"), (baseline, "baseline")):
+        if (
+            not isinstance(record, dict) or record.get("role") != role
+            or record.get("workflow_sha256") != workflow_hash
+            or not record.get("save_node")
+        ):
+            raise ValueError("Grounding output lacks its labeled job binding")
+        if (
+            not _valid_sha256(record.get("sha256"))
+            or not _valid_sha256(record.get("pixel_sha256"))
+            or type(record.get("bytes")) is not int or record["bytes"] <= 0
+            or not record.get("file")
+            or record.get("width") != width or record.get("height") != height
+        ):
+            raise ValueError("Grounding output file record is incomplete")
+    if raw["save_node"] == baseline["save_node"] or raw["sha256"] == baseline["sha256"]:
+        raise ValueError("Grounding output roles must be distinct")
+    audit = run_metadata.get("validation", {}).get("grounding")
+    if not isinstance(audit, dict):
+        raise ValueError("Grounding protected-pixel validation is missing")
+    counts = metadata.get("counts", {})
+    visible = counts.get("source_visible_pixels")
+    opaque = evidence.get("opaque_source_pixels")
+    if (
+        type(visible) is not int or not 0 < visible <= width * height
+        or type(opaque) is not int or not 0 < opaque <= visible
+    ):
+        raise ValueError("Grounding source protection counts are invalid")
+    expected = {
+        "method": "exact_grounding_protected_pixels", "passed": True,
+        "dimensions": dimensions, "reference_sha256": hashes.get("inpaint_reference.png"),
+        "baseline_sha256": baseline["sha256"], "artwork_sha256": raw["sha256"],
+        "mask_sha256": hashes.get("grounding_mask.png"),
+        "editable_pixels": counts.get("editable_pixels"),
+        "source_visible_pixels": counts.get("source_visible_pixels"),
+        "changed_source_pixels": 0, "changed_outside_mask_pixels": 0,
+    }
+    editable = counts.get("editable_pixels")
+    if type(editable) is not int or not 0 < editable < width * height:
+        raise ValueError("Grounding editable count is invalid")
+    expected["outside_mask_pixels"] = width * height - editable
+    if any(
+        audit.get(key) != value or type(audit.get(key)) is not type(value)
+        for key, value in expected.items()
+    ):
+        raise ValueError("Grounding protected-pixel validation bindings or counts differ")
+    changed = audit.get("changed_editable_pixels")
+    if type(changed) is not int or not 0 < changed <= editable:
+        raise ValueError("Grounding edit is empty or has invalid changed counts")
+    if (
+        source["opaque_pixels"] != evidence.get("opaque_source_pixels")
+        or source["reference_sha256"] != hashes.get("inpaint_reference.png")
+    ):
+        raise ValueError("Grounding source-pixel counts or reference differ")
+    if verify_files:
+        for reference_record in references:
+            _verify_recorded_image(
+                reference_record, recorded_repository_path(reference_record),
+                label="grounding reference",
+            )
+        metadata_record = inputs["grounding_metadata"]
+        if sha256_file(recorded_repository_path(metadata_record)) != metadata_record["sha256"]:
+            raise ValueError("Grounding metadata file has changed")
+        workflow_path = recorded_repository_path(inputs["workflow"])
+        for record, role in ((raw, "final"), (baseline, "baseline")):
+            actual = grounded_output_record(
+                recorded_repository_path(record), workflow_path, role,
+            )
+            if actual != record:
+                raise ValueError("Grounding output file differs from its recorded job")
+        reference_path = recorded_repository_path(inputs["source_pixel_audit_reference"])
+        mask_path = recorded_repository_path(next(
+            r for r in references if Path(r["file"]).name == "grounding_mask.png"
+        ))
+        actual_audit = audit_grounding_pixels(
+            reference_path, recorded_repository_path(baseline),
+            recorded_repository_path(raw), mask_path,
+        )
+        if actual_audit != audit:
+            raise ValueError("Grounding pixel audit differs from the actual images")
+        actual_source = audit_exact_source_pixels(
+            reference_path, recorded_repository_path(raw), require_match=True,
+        )
+        if actual_source["opaque_pixels"] != source["opaque_pixels"]:
+            raise ValueError("Grounding source count differs from the actual image")
+    return audit
+
+
+def audit_grounded_generation(
+    scope: str, workflow_path: Path, generation: dict,
+    raw_path: Path, baseline_path: Path,
+) -> dict:
+    """Build and check both pixel audits before any learned upscaling."""
+    bundle = poster_bundle(scope, poster_assets=POSTER_ASSETS)
+    inputs = generation_input_records(scope, workflow_path, generation)
+    inputs["generation_fingerprint"] = build_generation_fingerprint(
+        bundle, generation=generation,
+    )
+    reference = bundle.work_dir / "inpaint_reference.png"
+    source = audit_exact_source_pixels(reference, raw_path, require_match=True)
+    raw = grounded_output_record(raw_path, workflow_path, "final")
+    source.update(
+        stage="raw_generation", reference_sha256=sha256_file(reference),
+        artwork_sha256=raw["sha256"], width=raw["width"], height=raw["height"],
+    )
+    run = {
+        "generation": generation, "inputs": inputs, "raw_artwork": raw,
+        "source_artwork": file_record(raw_path, image=True),
+        "baseline_artwork": grounded_output_record(
+            baseline_path, workflow_path, "baseline",
+        ),
+        "validation": {
+            "source_pixels": source,
+            "grounding": audit_grounding_pixels(
+                reference, baseline_path, raw_path,
+                bundle.work_dir / "grounding_mask.png",
+            ),
+        },
+    }
+    require_grounding_pixel_validation(run)
+    return run
+
+
 def prompt_path_for_generation(
     work_dir: Path,
     generation: dict[str, Any],
@@ -1423,6 +1743,9 @@ def prompt_path_for_generation(
 ) -> Path:
     engine = str(generation.get("engine", ""))
     mode = str(generation.get("mode", ""))
+    if is_grounded_generation(generation):
+        prompt_dir = workflow_path.parent if workflow_path is not None else work_dir
+        return prompt_dir / GROUNDED_PROMPT_FILE
     if engine == "flux" and mode == "identity_lock":
         prompt_dir = workflow_path.parent if workflow_path is not None else work_dir
         return prompt_dir / IDENTITY_LOCK_PROMPT_FILE
@@ -1458,7 +1781,39 @@ def generation_input_records(
     if not cutouts:
         raise ValueError(f"No cutouts listed in {cutout_manifest_path}")
 
-    if (
+    if is_grounded_generation(generation):
+        # Compare the consumed API graph with the versioned renderer, including
+        # model names, both prompts, masks, seed, and every restored edge.
+        try:
+            from .create_comfyui_poster_workflow import build_workflow
+        except ImportError:
+            from create_comfyui_poster_workflow import build_workflow
+        expected_workflow = build_workflow(
+            scope, int(generation["seed"]), float(generation["generation_megapixels"]),
+            generation_mode="identity_lock", reference_mode="grounded_source_pixels",
+            unet_name=str(generation["model"]), clip_name=str(generation["encoder"]),
+            vae_name=str(generation["vae"]), steps=int(generation["steps"]),
+        )
+        if load_json(workflow_path) != expected_workflow:
+            raise ValueError("Grounding workflow does not match the current versioned contract")
+        expected_prompt = build_grounded_prompt_snapshot(
+            bundle.manifest,
+            load_poster_scope_data(bundle, scope_data_dir=SCOPE_DATA),
+        ) + "\n"
+        prompt_path = prompt_path_for_generation(work_dir, generation, workflow_path)
+        if prompt_path.read_text(encoding="utf-8") != expected_prompt:
+            raise ValueError("Grounding prompt snapshot is missing or stale")
+        grounding_inputs = derive_grounding_inputs(
+            bundle, generation, verify_dir=work_dir,
+        )
+        references = [
+            file_record(work_dir / filename, image=True)
+            for filename in (
+                "inpaint_reference.png", "grounding_mask.png",
+                "grounding_sampling_mask.png",
+            )
+        ]
+    elif (
         generation.get("engine") == "flux"
         and generation.get("mode") == "identity_lock"
     ):
@@ -1520,6 +1875,9 @@ def generation_input_records(
         "references": references,
         "workflow": file_record(workflow_path),
     }
+    if is_grounded_generation(generation):
+        records["grounding"] = grounding_inputs
+        records["grounding_metadata"] = file_record(work_dir / "grounding_mask.json")
     if not (
         generation.get("engine") == "flux"
         and generation.get("mode") == "joint_scene"
@@ -1539,6 +1897,7 @@ def write_run_metadata(
     output_path: Path | None = None,
     *,
     raw_artwork_path: Path | None = None,
+    baseline_artwork_path: Path | None = None,
     additional_workflows: dict[str, Path] | None = None,
     validation: dict[str, Any] | None = None,
 ) -> Path:
@@ -1567,8 +1926,18 @@ def write_run_metadata(
     }
     if raw_artwork_path is not None:
         payload["raw_artwork"] = file_record(raw_artwork_path, image=True)
+    if baseline_artwork_path is not None:
+        payload["baseline_artwork"] = grounded_output_record(
+            baseline_artwork_path, workflow_path, "baseline",
+        )
+    if is_grounded_generation(generation) and raw_artwork_path is not None:
+        payload["raw_artwork"] = grounded_output_record(
+            raw_artwork_path, workflow_path, "final",
+        )
     if validation:
         payload["validation"] = validation
+    if is_grounded_generation(generation):
+        require_grounding_pixel_validation(payload)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(
         json.dumps(payload, indent=2, ensure_ascii=False, sort_keys=True) + "\n",
@@ -1620,8 +1989,7 @@ def load_run_metadata(path: Path, artwork_path: Path) -> dict[str, Any]:
     generation = payload.get("generation")
     if (
         isinstance(generation, dict)
-        and generation.get("engine") == "flux"
-        and generation.get("mode") == "joint_scene"
+        and requires_visual_review(generation)
         and not is_promoted_container
     ):
         source_record = payload.get("source_artwork")
@@ -1645,6 +2013,8 @@ def load_run_metadata(path: Path, artwork_path: Path) -> dict[str, Any]:
             raw_path,
             label="raw artwork",
         )
+        if is_grounded_generation(generation):
+            require_grounding_pixel_validation(payload, verify_files=True)
     return payload
 
 

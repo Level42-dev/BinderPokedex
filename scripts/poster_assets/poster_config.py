@@ -5,6 +5,7 @@ import math
 from typing import Any
 
 try:
+    from .grounding import grounding_config
     from .generation_contract import (
         INDIVIDUAL_SPATIAL_REFERENCE_MEGAPIXELS,
         JOINT_SCENE_CAST_MAX_MEGAPIXELS,
@@ -13,6 +14,7 @@ try:
     from .layout import resolve_layout_name
     from .poster_subject import resolve_poster_subject
 except ImportError:
+    from grounding import grounding_config
     from generation_contract import (
         INDIVIDUAL_SPATIAL_REFERENCE_MEGAPIXELS,
         JOINT_SCENE_CAST_MAX_MEGAPIXELS,
@@ -23,6 +25,7 @@ except ImportError:
 
 
 IDENTITY_LOCK_PROMPT_FILE = "identity_lock_prompt.generated.txt"
+GROUNDED_PROMPT_FILE = "grounded_source_pixels_prompt.generated.txt"
 JOINT_SCENE_PROMPT_FILE = "joint_scene_prompt.generated.txt"
 INDIVIDUAL_SPATIAL_JOINT_PROMPT_FILE = (
     "individual_spatial_joint_prompt.generated.txt"
@@ -36,6 +39,14 @@ DEFAULT_IDENTITY_LOCK = {
     "transition_ratio": 0.10,
     "subject_clearance_ratio": 0.02,
 }
+
+
+def build_grounded_prompt_snapshot(manifest: dict, scope_data: dict) -> str:
+    """Audit the two independently encoded prompts in their graph order."""
+    return (
+        "SCENE PROMPT\n" + build_identity_lock_prompt(manifest, scope_data)
+        + "\n\nGROUNDING PROMPT\n" + grounding_config(manifest)["prompt"]
+    )
 
 
 def _mapping(value: object, path: str) -> dict[str, Any]:
