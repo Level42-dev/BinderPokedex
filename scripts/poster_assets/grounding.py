@@ -298,6 +298,7 @@ def build_grounding_masks(
 
     polygon_union = Image.new("L", (width, height), 0)
     anchor_pixels = []
+    region_rasters = []
     for region in config["regions"]:
         polygon_pixels = [
             _pixel_point(point, width, height) for point in region["polygon"]
@@ -316,6 +317,7 @@ def build_grounding_masks(
                 "its region raster after coordinate rounding"
             )
         polygon_union = ImageChops.lighter(polygon_union, region_raster)
+        region_rasters.append((region["subject_key"], region_raster))
         anchor_pixels.append(
             {
                 "subject_key": region["subject_key"],
@@ -346,6 +348,14 @@ def build_grounding_masks(
     editable = ImageChops.multiply(feathered, inverse_source)
     if editable.getbbox() is None:
         raise ValueError("Grounding masks leave no editable ground")
+    if radius > 0:
+        for subject_key, region_raster in region_rasters:
+            region_editable = ImageChops.multiply(editable, region_raster)
+            if region_editable.getextrema()[1] != 255:
+                raise ValueError(
+                    f"Grounding region {subject_key} has no full edit weight "
+                    "after feathering and source exclusion"
+                )
 
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)

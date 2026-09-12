@@ -313,6 +313,32 @@ def test_build_masks_rejects_source_coverage_that_leaves_no_editable_ground(
         )
 
 
+def test_positive_feather_rejects_each_region_without_full_edit_weight(
+    tmp_path: Path,
+):
+    thin = _region(
+        polygon=[[0.40, 0.70], [0.43, 0.70], [0.43, 0.90], [0.40, 0.90]],
+        anchors=[[0.42, 0.80]],
+    )
+    wide = _region(
+        "pokeapi:official-artwork:6",
+        polygon=[[0.05, 0.05], [0.15, 0.05], [0.15, 0.15], [0.05, 0.15]],
+        anchors=[[0.10, 0.10]],
+    )
+
+    with pytest.raises(
+        ValueError,
+        match="pokeapi:official-artwork:25.*full edit weight",
+    ):
+        _grounding().build_grounding_masks(
+            100,
+            100,
+            [_placement(), _placement(6, x=0, y=0)],
+            _manifest(thin, wide, feather_ratio=0.02),
+            tmp_path,
+        )
+
+
 def test_build_masks_rejects_anchor_rounded_outside_its_region_raster(
     tmp_path: Path,
 ):
