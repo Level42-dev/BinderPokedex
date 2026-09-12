@@ -6,15 +6,84 @@ Consolidates common functionality used across pdf_generator.py and variant_pdf_g
 
 import json
 import logging
+import re
 from pathlib import Path
 from typing import List
 from reportlab.lib.colors import HexColor
+from reportlab.pdfbase import pdfmetrics
 
 logger = logging.getLogger(__name__)
 
 
 class TextRenderer:
     """Unified text rendering utilities for handling special characters."""
+
+    @staticmethod
+    def fit_name_lines(
+        text: str,
+        font_name: str,
+        normal_size: float,
+        minimum_size: float,
+        max_width: float,
+    ) -> tuple[List[str], float]:
+        """Fit a card title into one or two bounded lines.
+
+        The largest usable font size wins.  At each size a single line is
+        preferred; otherwise all whitespace and hyphen boundaries are scored
+        deterministically by their widest line and visual imbalance.
+        """
+        if not isinstance(text, str) or not text.strip():
+            raise ValueError("card title must be a non-empty string")
+        if minimum_size <= 0 or normal_size < minimum_size:
+            raise ValueError("invalid card title font-size bounds")
+        if max_width <= 0:
+            raise ValueError("card title width must be positive")
+
+        normalized = re.sub(r"\s+", " ", text.strip())
+        split_positions = {
+            match.end()
+            for match in re.finditer(r"\s+", normalized)
+        }
+        split_positions.update(
+            index + 1
+            for index, character in enumerate(normalized)
+            if character == "-" and index + 1 < len(normalized)
+        )
+
+        step = 0.25
+        step_count = int(round((normal_size - minimum_size) / step))
+        sizes = [normal_size - index * step for index in range(step_count + 1)]
+        if not sizes or sizes[-1] > minimum_size:
+            sizes.append(minimum_size)
+
+        for size in sizes:
+            if pdfmetrics.stringWidth(normalized, font_name, size) <= max_width:
+                return [normalized], size
+
+            candidates = []
+            for position in sorted(split_positions):
+                first = normalized[:position].rstrip()
+                second = normalized[position:].lstrip()
+                if not first or not second:
+                    continue
+                widths = (
+                    pdfmetrics.stringWidth(first, font_name, size),
+                    pdfmetrics.stringWidth(second, font_name, size),
+                )
+                if max(widths) > max_width:
+                    continue
+                imbalance = abs(widths[0] - widths[1])
+                score = max(widths) + imbalance * 0.25
+                candidates.append((score, max(widths), imbalance, first, second))
+
+            if candidates:
+                _, _, _, first, second = min(candidates)
+                return [first, second], size
+
+        raise ValueError(
+            f"card title does not fit within {max_width:.2f} points at "
+            f"{minimum_size:.2f} points: {normalized!r}"
+        )
     
     @staticmethod
     def draw_name_with_symbol_fallback(canvas_obj, name: str, x: float, width: float, 

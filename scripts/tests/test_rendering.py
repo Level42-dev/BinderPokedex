@@ -4,11 +4,14 @@ Comprehensive test suite for rendering modules.
 Tests CardRenderer, CoverRenderer, PageRenderer, and TranslationLoader.
 """
 
+import json
+
 import pytest
 import tempfile
 from pathlib import Path
 from unittest.mock import MagicMock
 from reportlab.lib.units import mm
+from reportlab.pdfbase import pdfmetrics
 
 # Import rendering modules
 from scripts.pdf.lib.rendering import (
@@ -31,6 +34,11 @@ from scripts.pdf.lib.constants import (
     CARDS_PER_ROW,
     CARDS_PER_COLUMN
 )
+from scripts.pdf.lib.fonts import FontManager
+from scripts.pdf.lib.text_renderer import TextRenderer
+
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
 
 
 class TestCardStyle:
@@ -62,6 +70,124 @@ class TestCardRenderer:
         for lang in ['de', 'en', 'fr', 'ja']:
             renderer = CardRenderer(language=lang)
             assert renderer.language == lang
+
+    @pytest.mark.parametrize(
+        "name",
+        (
+            "Technische Maschine: Heiterer Himmel",
+            "Technische Maschine: Rückentwicklung",
+            "Energiekapsel aus der Vergangenheit",
+            "Schubenergie",
+        ),
+    )
+    def test_long_card_name_fits_safe_width(self, name):
+        safe_width = CARD_WIDTH - 6 * mm
+
+        lines, size = TextRenderer.fit_name_lines(
+            name,
+            "Helvetica-Bold",
+            11,
+            8,
+            safe_width,
+        )
+
+        assert 1 <= len(lines) <= 2
+        assert size >= 8
+        assert all(
+            pdfmetrics.stringWidth(line, "Helvetica-Bold", size)
+            <= safe_width
+            for line in lines
+        )
+
+    def test_unnumbered_card_does_not_fall_back_to_section_index(self):
+        renderer = CardRenderer(language="de")
+        canvas_obj = MagicMock()
+
+        renderer.render_card(
+            canvas_obj,
+            {
+                "printed_number": None,
+                "section_index": 217,
+                "name": {"de": "Terapagos & Freunde"},
+                "types": ["Colorless"],
+                "type": "pokemon",
+            },
+            0,
+            0,
+            variant_mode=True,
+        )
+
+        centred_strings = [
+            call.args[-1]
+            for call in canvas_obj.drawCentredString.call_args_list
+        ]
+        assert "#217" not in centred_strings
+
+    def test_tcg_card_draws_its_original_printed_number(self):
+        renderer = CardRenderer(language="de")
+        canvas_obj = MagicMock()
+
+        renderer.render_card(
+            canvas_obj,
+            {
+                "printed_number": "224",
+                "section_index": 216,
+                "name": {"de": "Pikachu"},
+                "types": ["Electric"],
+                "type": "pokemon",
+            },
+            0,
+            0,
+            variant_mode=True,
+        )
+
+        centred_strings = [
+            call.args[-1]
+            for call in canvas_obj.drawCentredString.call_args_list
+        ]
+        assert "#224" in centred_strings
+        assert "#216" not in centred_strings
+
+    def test_legacy_tcg_card_uses_local_id_not_section_index(self):
+        assert CardRenderer._format_card_number({
+            "localId": "079",
+            "section_index": 55,
+        }) == "#079"
+
+    def test_every_checked_in_german_tcg_title_fits_the_safe_band(self):
+        safe_width = CARD_WIDTH - 6 * mm
+        font_name = FontManager.get_font_name("de", bold=True)
+        failures = []
+
+        for data_path in sorted((REPO_ROOT / "data" / "output").glob("*.json")):
+            scope_data = json.loads(data_path.read_text(encoding="utf-8"))
+            if scope_data.get("type") != "tcg_set":
+                continue
+            if "de" not in scope_data.get("available_languages", []):
+                continue
+
+            renderer = CardRenderer(language="de")
+            for section in scope_data.get("sections", {}).values():
+                for card in section.get("cards", []):
+                    name = renderer._construct_variant_name(
+                        card,
+                        section.get("prefix"),
+                        section.get("suffix"),
+                    )
+                    try:
+                        TextRenderer.fit_name_lines(
+                            name,
+                            font_name,
+                            11,
+                            8,
+                            safe_width,
+                        )
+                    except ValueError:
+                        failures.append(
+                            f"{data_path.stem}/{card.get('localId')}: {name}"
+                        )
+
+        assert failures == []
 
 
 class TestCoverStyle:
