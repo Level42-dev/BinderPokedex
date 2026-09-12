@@ -141,6 +141,43 @@
           }
         },
         {
+          "pokemon_id": 15,
+          "types": [
+            "Grass"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/15.png",
+          "name": {
+            "ko": "독침붕",
+            "zh_hant": "大針蜂",
+            "fr": "Dardargnan",
+            "de": "Bibor",
+            "es": "Beedrill",
+            "it": "Beedrill",
+            "en": "Beedrill",
+            "ja": "スピアー",
+            "zh_hans": "大针蜂"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#015_EX3",
+          "tcg_card": {
+            "id": "me04-003",
+            "localId": "003",
+            "set": {
+              "cardCount": {
+                "official": 86,
+                "total": 122
+              },
+              "id": "me04",
+              "logo": "https://assets.tcgdex.net/en/me/me04/logo",
+              "name": "Chaos Rising",
+              "symbol": "https://assets.tcgdex.net/univ/me/me04/symbol"
+            },
+            "hp": 310,
+            "rarity": "Double rare"
+          }
+        },
+        {
           "pokemon_id": 18,
           "types": [
             "Colorless"
@@ -504,6 +541,43 @@
             "en": "Vileplume",
             "ja": "ラフレシア",
             "zh_hans": "霸王花"
+          }
+        },
+        {
+          "pokemon_id": 52,
+          "types": [
+            "Colorless"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/52.png",
+          "name": {
+            "ko": "나옹",
+            "zh_hant": "喵喵",
+            "fr": "Miaouss",
+            "de": "Mauzi",
+            "es": "Meowth",
+            "it": "Meowth",
+            "en": "Meowth",
+            "ja": "ニャース",
+            "zh_hans": "喵喵"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#052_EX3",
+          "tcg_card": {
+            "id": "me03-062",
+            "localId": "062",
+            "set": {
+              "cardCount": {
+                "official": 88,
+                "total": 124
+              },
+              "id": "me03",
+              "logo": "https://assets.tcgdex.net/en/me/me03/logo",
+              "name": "Perfect Order",
+              "symbol": "https://assets.tcgdex.net/univ/me/me03/symbol"
+            },
+            "hp": 170,
+            "rarity": "Double rare"
           }
         },
         {
@@ -917,18 +991,19 @@
           "suffix": "[EX_NEW]",
           "form_code": "#131_EX3",
           "tcg_card": {
-            "id": "sv07-032",
-            "localId": "032",
+            "id": "me03-022",
+            "localId": "022",
             "set": {
               "cardCount": {
-                "official": 142,
-                "total": 175
+                "official": 88,
+                "total": 124
               },
-              "id": "sv07",
-              "logo": "https://assets.tcgdex.net/en/sv/sv07/logo",
-              "name": "Stellar Crown"
+              "id": "me03",
+              "logo": "https://assets.tcgdex.net/en/me/me03/logo",
+              "name": "Perfect Order",
+              "symbol": "https://assets.tcgdex.net/univ/me/me03/symbol"
             },
-            "hp": 220,
+            "hp": 210,
             "rarity": "Double rare"
           }
         },
@@ -1365,6 +1440,41 @@
             "en": "Crobat",
             "ja": "クロバット",
             "zh_hans": "叉字蝠"
+          }
+        },
+        {
+          "pokemon_id": 181,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/181.png",
+          "name": {
+            "ko": "전룡",
+            "zh_hant": "電龍",
+            "fr": "Pharamp",
+            "de": "Ampharos",
+            "es": "Ampharos",
+            "it": "Ampharos",
+            "en": "Ampharos",
+            "ja": "デンリュウ",
+            "zh_hans": "电龙"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#181_EX3",
+          "tcg_card": {
+            "id": "svp-016",
+            "localId": "016",
+            "set": {
+              "cardCount": {
+                "official": 225,
+                "total": 226
+              },
+              "id": "svp",
+              "name": "SVP Black Star Promos"
+            },
+            "hp": 330,
+            "rarity": "Promo"
           }
         },
         {
@@ -2002,6 +2112,43 @@
           }
         },
         {
+          "pokemon_id": 321,
+          "types": [
+            "Water"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/321.png",
+          "name": {
+            "ko": "고래왕",
+            "zh_hant": "吼鯨王",
+            "fr": "Wailord",
+            "de": "Wailord",
+            "es": "Wailord",
+            "it": "Wailord",
+            "en": "Wailord",
+            "ja": "ホエルオー",
+            "zh_hans": "吼鲸王"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#321_EX3",
+          "tcg_card": {
+            "id": "me05-016",
+            "localId": "016",
+            "set": {
+              "cardCount": {
+                "official": 84,
+                "total": 120
+              },
+              "id": "me05",
+              "logo": "https://assets.tcgdex.net/en/me/me05/logo",
+              "name": "Pitch Black",
+              "symbol": "https://assets.tcgdex.net/univ/me/me05/symbol"
+            },
+            "hp": 380,
+            "rarity": "Double rare"
+          }
+        },
+        {
           "pokemon_id": 330,
           "types": [
             "Fighting"
@@ -2454,6 +2601,41 @@
           }
         },
         {
+          "pokemon_id": 382,
+          "types": [
+            "Water"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/382.png",
+          "name": {
+            "ko": "가이오가",
+            "zh_hant": "蓋歐卡",
+            "fr": "Kyogre",
+            "de": "Kyogre",
+            "es": "Kyogre",
+            "it": "Kyogre",
+            "en": "Kyogre",
+            "ja": "カイオーガ",
+            "zh_hans": "盖欧卡"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#382_EX3",
+          "tcg_card": {
+            "id": "svp-178",
+            "localId": "178",
+            "set": {
+              "cardCount": {
+                "official": 225,
+                "total": 226
+              },
+              "id": "svp",
+              "name": "SVP Black Star Promos"
+            },
+            "hp": 230,
+            "rarity": "Promo"
+          }
+        },
+        {
           "pokemon_id": 389,
           "types": [
             "Grass"
@@ -2559,6 +2741,43 @@
               "symbol": "https://assets.tcgdex.net/univ/sv/sv06/symbol"
             },
             "hp": 310,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 409,
+          "types": [
+            "Fighting"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/409.png",
+          "name": {
+            "ko": "램펄드",
+            "zh_hant": "戰槌龍",
+            "fr": "Charkos",
+            "de": "Rameidon",
+            "es": "Rampardos",
+            "it": "Rampardos",
+            "en": "Rampardos",
+            "ja": "ラムパルド",
+            "zh_hans": "战槌龙"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#409_EX3",
+          "tcg_card": {
+            "id": "me05-045",
+            "localId": "045",
+            "set": {
+              "cardCount": {
+                "official": 84,
+                "total": 120
+              },
+              "id": "me05",
+              "logo": "https://assets.tcgdex.net/en/me/me05/logo",
+              "name": "Pitch Black",
+              "symbol": "https://assets.tcgdex.net/univ/me/me05/symbol"
+            },
+            "hp": 330,
             "rarity": "Double rare"
           }
         },
@@ -3050,6 +3269,76 @@
           }
         },
         {
+          "pokemon_id": 483,
+          "types": [
+            "Metal"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/483.png",
+          "name": {
+            "ko": "디아루가",
+            "zh_hant": "帝牙盧卡",
+            "fr": "Dialga",
+            "de": "Dialga",
+            "es": "Dialga",
+            "it": "Dialga",
+            "en": "Dialga",
+            "ja": "ディアルガ",
+            "zh_hans": "帝牙卢卡"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#483_EX3",
+          "tcg_card": {
+            "id": "svp-180",
+            "localId": "180",
+            "set": {
+              "cardCount": {
+                "official": 225,
+                "total": 226
+              },
+              "id": "svp",
+              "name": "SVP Black Star Promos"
+            },
+            "hp": 220,
+            "rarity": "Promo"
+          }
+        },
+        {
+          "pokemon_id": 491,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/491.png",
+          "name": {
+            "ko": "다크라이",
+            "zh_hant": "達克萊伊",
+            "fr": "Darkrai",
+            "de": "Darkrai",
+            "es": "Darkrai",
+            "it": "Darkrai",
+            "en": "Darkrai",
+            "ja": "ダークライ",
+            "zh_hans": "达克莱伊"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#491_EX3",
+          "tcg_card": {
+            "id": "svp-110",
+            "localId": "110",
+            "set": {
+              "cardCount": {
+                "official": 225,
+                "total": 226
+              },
+              "id": "svp",
+              "name": "SVP Black Star Promos"
+            },
+            "hp": 210,
+            "rarity": "Promo"
+          }
+        },
+        {
           "pokemon_id": 494,
           "types": [
             "Fire"
@@ -3083,6 +3372,154 @@
               "symbol": "https://assets.tcgdex.net/univ/sv/sv03/symbol"
             },
             "hp": 190,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 497,
+          "types": [
+            "Grass"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/497.png",
+          "name": {
+            "ko": "샤로다",
+            "zh_hant": "君主蛇",
+            "fr": "Majaspic",
+            "de": "Serpiroyal",
+            "es": "Serperior",
+            "it": "Serperior",
+            "en": "Serperior",
+            "ja": "ジャローダ",
+            "zh_hans": "君主蛇"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#497_EX3",
+          "tcg_card": {
+            "id": "sv10.5b-003",
+            "localId": "003",
+            "set": {
+              "cardCount": {
+                "official": 86,
+                "total": 172
+              },
+              "id": "sv10.5b",
+              "logo": "https://assets.tcgdex.net/en/sv/sv10.5b/logo",
+              "name": "Black Bolt",
+              "symbol": "https://assets.tcgdex.net/univ/sv/sv10.5b/symbol"
+            },
+            "hp": 320,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 530,
+          "types": [
+            "Fighting"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/530.png",
+          "name": {
+            "ko": "몰드류",
+            "zh_hant": "龍頭地鼠",
+            "fr": "Minotaupe",
+            "de": "Stalobor",
+            "es": "Excadrill",
+            "it": "Excadrill",
+            "en": "Excadrill",
+            "ja": "ドリュウズ",
+            "zh_hans": "龙头地鼠"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#530_EX3",
+          "tcg_card": {
+            "id": "sv10.5b-046",
+            "localId": "046",
+            "set": {
+              "cardCount": {
+                "official": 86,
+                "total": 172
+              },
+              "id": "sv10.5b",
+              "logo": "https://assets.tcgdex.net/en/sv/sv10.5b/logo",
+              "name": "Black Bolt",
+              "symbol": "https://assets.tcgdex.net/univ/sv/sv10.5b/symbol"
+            },
+            "hp": 270,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 547,
+          "types": [
+            "Grass"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/547.png",
+          "name": {
+            "ko": "엘풍",
+            "zh_hant": "風妖精",
+            "fr": "Farfaduvet",
+            "de": "Elfun",
+            "es": "Whimsicott",
+            "it": "Whimsicott",
+            "en": "Whimsicott",
+            "ja": "エルフーン",
+            "zh_hans": "风妖精"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#547_EX3",
+          "tcg_card": {
+            "id": "sv10.5w-005",
+            "localId": "005",
+            "set": {
+              "cardCount": {
+                "official": 86,
+                "total": 173
+              },
+              "id": "sv10.5w",
+              "logo": "https://assets.tcgdex.net/en/sv/sv10.5w/logo",
+              "name": "White Flare",
+              "symbol": "https://assets.tcgdex.net/univ/sv/sv10.5w/symbol"
+            },
+            "hp": 230,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 553,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/553.png",
+          "name": {
+            "ko": "악비아르",
+            "zh_hant": "流氓鱷",
+            "fr": "Crocorible",
+            "de": "Rabigator",
+            "es": "Krookodile",
+            "it": "Krookodile",
+            "en": "Krookodile",
+            "ja": "ワルビアル",
+            "zh_hans": "流氓鳄"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#553_EX3",
+          "tcg_card": {
+            "id": "me04-055",
+            "localId": "055",
+            "set": {
+              "cardCount": {
+                "official": 86,
+                "total": 122
+              },
+              "id": "me04",
+              "logo": "https://assets.tcgdex.net/en/me/me04/logo",
+              "name": "Chaos Rising",
+              "symbol": "https://assets.tcgdex.net/univ/me/me04/symbol"
+            },
+            "hp": 320,
             "rarity": "Double rare"
           }
         },
@@ -3172,6 +3609,43 @@
           }
         },
         {
+          "pokemon_id": 573,
+          "types": [
+            "Colorless"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/573.png",
+          "name": {
+            "ko": "치라치노",
+            "zh_hant": "奇諾栗鼠",
+            "fr": "Pashmilla",
+            "de": "Chillabell",
+            "es": "Cinccino",
+            "it": "Cinccino",
+            "en": "Cinccino",
+            "ja": "チラチーノ",
+            "zh_hans": "奇诺栗鼠"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#573_EX3",
+          "tcg_card": {
+            "id": "me04-073",
+            "localId": "073",
+            "set": {
+              "cardCount": {
+                "official": 86,
+                "total": 122
+              },
+              "id": "me04",
+              "logo": "https://assets.tcgdex.net/en/me/me04/logo",
+              "name": "Chaos Rising",
+              "symbol": "https://assets.tcgdex.net/univ/me/me04/symbol"
+            },
+            "hp": 240,
+            "rarity": "Double rare"
+          }
+        },
+        {
           "pokemon_id": 591,
           "types": [
             "Grass"
@@ -3205,6 +3679,43 @@
               "symbol": "https://assets.tcgdex.net/univ/sv/sv09/symbol"
             },
             "hp": 260,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 593,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/593.png",
+          "name": {
+            "ko": "탱탱겔",
+            "zh_hant": "胖嘟嘟",
+            "fr": "Moyade",
+            "de": "Apoquallyp",
+            "es": "Jellicent",
+            "it": "Jellicent",
+            "en": "Jellicent",
+            "ja": "ブルンゲル",
+            "zh_hans": "胖嘟嘟"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#593_EX3",
+          "tcg_card": {
+            "id": "sv10.5w-045",
+            "localId": "045",
+            "set": {
+              "cardCount": {
+                "official": 86,
+                "total": 173
+              },
+              "id": "sv10.5w",
+              "logo": "https://assets.tcgdex.net/en/sv/sv10.5w/logo",
+              "name": "White Flare",
+              "symbol": "https://assets.tcgdex.net/univ/sv/sv10.5w/symbol"
+            },
+            "hp": 270,
             "rarity": "Double rare"
           }
         },
@@ -3278,6 +3789,43 @@
               "symbol": "https://assets.tcgdex.net/univ/me/me02.5/symbol"
             },
             "hp": 210,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 626,
+          "types": [
+            "Colorless"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/626.png",
+          "name": {
+            "ko": "버프론",
+            "zh_hant": "爆炸頭水牛",
+            "fr": "Frison",
+            "de": "Bisofank",
+            "es": "Bouffalant",
+            "it": "Bouffalant",
+            "en": "Bouffalant",
+            "ja": "バッフロン",
+            "zh_hans": "爆炸头水牛"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#626_EX3",
+          "tcg_card": {
+            "id": "sv10.5w-077",
+            "localId": "077",
+            "set": {
+              "cardCount": {
+                "official": 86,
+                "total": 173
+              },
+              "id": "sv10.5w",
+              "logo": "https://assets.tcgdex.net/en/sv/sv10.5w/logo",
+              "name": "White Flare",
+              "symbol": "https://assets.tcgdex.net/univ/sv/sv10.5w/symbol"
+            },
+            "hp": 220,
             "rarity": "Double rare"
           }
         },
@@ -3391,6 +3939,43 @@
           }
         },
         {
+          "pokemon_id": 638,
+          "types": [
+            "Metal"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/638.png",
+          "name": {
+            "ko": "코바르온",
+            "zh_hant": "勾帕路翁",
+            "fr": "Cobaltium",
+            "de": "Kobalium",
+            "es": "Cobalion",
+            "it": "Cobalion",
+            "en": "Cobalion",
+            "ja": "コバルオン",
+            "zh_hans": "勾帕路翁"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#638_EX3",
+          "tcg_card": {
+            "id": "me04-064",
+            "localId": "064",
+            "set": {
+              "cardCount": {
+                "official": 86,
+                "total": 122
+              },
+              "id": "me04",
+              "logo": "https://assets.tcgdex.net/en/me/me04/logo",
+              "name": "Chaos Rising",
+              "symbol": "https://assets.tcgdex.net/univ/me/me04/symbol"
+            },
+            "hp": 210,
+            "rarity": "Double rare"
+          }
+        },
+        {
           "pokemon_id": 643,
           "types": [
             "Fire"
@@ -3424,6 +4009,80 @@
               "symbol": "https://assets.tcgdex.net/univ/sv/sv09/symbol"
             },
             "hp": 220,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 644,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/644.png",
+          "name": {
+            "ko": "제크로무",
+            "zh_hant": "捷克羅姆",
+            "fr": "Zekrom",
+            "de": "Zekrom",
+            "es": "Zekrom",
+            "it": "Zekrom",
+            "en": "Zekrom",
+            "ja": "ゼクロム",
+            "zh_hans": "捷克罗姆"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#644_EX3",
+          "tcg_card": {
+            "id": "sv10.5b-034",
+            "localId": "034",
+            "set": {
+              "cardCount": {
+                "official": 86,
+                "total": 172
+              },
+              "id": "sv10.5b",
+              "logo": "https://assets.tcgdex.net/en/sv/sv10.5b/logo",
+              "name": "Black Bolt",
+              "symbol": "https://assets.tcgdex.net/univ/sv/sv10.5b/symbol"
+            },
+            "hp": 230,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 646,
+          "types": [
+            "Water"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/646.png",
+          "name": {
+            "ko": "큐레무",
+            "zh_hant": "酋雷姆",
+            "fr": "Kyurem",
+            "de": "Kyurem",
+            "es": "Kyurem",
+            "it": "Kyurem",
+            "en": "Kyurem",
+            "ja": "キュレム",
+            "zh_hans": "酋雷姆"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#646_EX3",
+          "tcg_card": {
+            "id": "sv10.5b-028",
+            "localId": "028",
+            "set": {
+              "cardCount": {
+                "official": 86,
+                "total": 172
+              },
+              "id": "sv10.5b",
+              "logo": "https://assets.tcgdex.net/en/sv/sv10.5b/logo",
+              "name": "Black Bolt",
+              "symbol": "https://assets.tcgdex.net/univ/sv/sv10.5b/symbol"
+            },
+            "hp": 230,
             "rarity": "Double rare"
           }
         },
@@ -3472,6 +4131,117 @@
             "en": "Kyurem",
             "ja": "キュレム",
             "zh_hans": "酋雷姆"
+          }
+        },
+        {
+          "pokemon_id": 647,
+          "types": [
+            "Water"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/647.png",
+          "name": {
+            "ko": "케르디오",
+            "zh_hant": "凱路迪歐",
+            "fr": "Keldeo",
+            "de": "Keldeo",
+            "es": "Keldeo",
+            "it": "Keldeo",
+            "en": "Keldeo",
+            "ja": "ケルディオ",
+            "zh_hans": "凯路迪欧"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#647_EX3",
+          "tcg_card": {
+            "id": "sv10.5w-030",
+            "localId": "030",
+            "set": {
+              "cardCount": {
+                "official": 86,
+                "total": 173
+              },
+              "id": "sv10.5w",
+              "logo": "https://assets.tcgdex.net/en/sv/sv10.5w/logo",
+              "name": "White Flare",
+              "symbol": "https://assets.tcgdex.net/univ/sv/sv10.5w/symbol"
+            },
+            "hp": 210,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 648,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/648.png",
+          "name": {
+            "ko": "메로엣타",
+            "zh_hant": "美洛耶塔",
+            "fr": "Meloetta",
+            "de": "Meloetta",
+            "es": "Meloetta",
+            "it": "Meloetta",
+            "en": "Meloetta",
+            "ja": "メロエッタ",
+            "zh_hans": "美洛耶塔"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#648_EX3",
+          "tcg_card": {
+            "id": "sv10.5b-044",
+            "localId": "044",
+            "set": {
+              "cardCount": {
+                "official": 86,
+                "total": 172
+              },
+              "id": "sv10.5b",
+              "logo": "https://assets.tcgdex.net/en/sv/sv10.5b/logo",
+              "name": "Black Bolt",
+              "symbol": "https://assets.tcgdex.net/univ/sv/sv10.5b/symbol"
+            },
+            "hp": 200,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 649,
+          "types": [
+            "Metal"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/649.png",
+          "name": {
+            "ko": "게노세크트",
+            "zh_hant": "蓋諾賽克特",
+            "fr": "Genesect",
+            "de": "Genesect",
+            "es": "Genesect",
+            "it": "Genesect",
+            "en": "Genesect",
+            "ja": "ゲノセクト",
+            "zh_hans": "盖诺赛克特"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#649_EX3",
+          "tcg_card": {
+            "id": "sv10.5b-067",
+            "localId": "067",
+            "set": {
+              "cardCount": {
+                "official": 86,
+                "total": 172
+              },
+              "id": "sv10.5b",
+              "logo": "https://assets.tcgdex.net/en/sv/sv10.5b/logo",
+              "name": "Black Bolt",
+              "symbol": "https://assets.tcgdex.net/univ/sv/sv10.5b/symbol"
+            },
+            "hp": 220,
+            "rarity": "Double rare"
           }
         },
         {
@@ -3621,6 +4391,43 @@
           }
         },
         {
+          "pokemon_id": 711,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/711.png",
+          "name": {
+            "ko": "펌킨인",
+            "zh_hant": "南瓜怪人",
+            "fr": "Banshitrouye",
+            "de": "Pumpdjinn",
+            "es": "Gourgeist",
+            "it": "Gourgeist",
+            "en": "Gourgeist",
+            "ja": "パンプジン",
+            "zh_hans": "南瓜怪人"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#711_EX3",
+          "tcg_card": {
+            "id": "me04-041",
+            "localId": "041",
+            "set": {
+              "cardCount": {
+                "official": 86,
+                "total": 122
+              },
+              "id": "me04",
+              "logo": "https://assets.tcgdex.net/en/me/me04/logo",
+              "name": "Chaos Rising",
+              "symbol": "https://assets.tcgdex.net/univ/me/me04/symbol"
+            },
+            "hp": 270,
+            "rarity": "Double rare"
+          }
+        },
+        {
           "pokemon_id": 715,
           "types": [
             "Dragon"
@@ -3654,6 +4461,78 @@
               "symbol": "https://assets.tcgdex.net/univ/sv/sv02/symbol"
             },
             "hp": 260,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 716,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/716.png",
+          "name": {
+            "ko": "제르네아스",
+            "zh_hant": "哲爾尼亞斯",
+            "fr": "Xerneas",
+            "de": "Xerneas",
+            "es": "Xerneas",
+            "it": "Xerneas",
+            "en": "Xerneas",
+            "ja": "ゼルネアス",
+            "zh_hans": "哲尔尼亚斯"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#716_EX3",
+          "tcg_card": {
+            "id": "svp-179",
+            "localId": "179",
+            "set": {
+              "cardCount": {
+                "official": 225,
+                "total": 226
+              },
+              "id": "svp",
+              "name": "SVP Black Star Promos"
+            },
+            "hp": 210,
+            "rarity": "Promo"
+          }
+        },
+        {
+          "pokemon_id": 717,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/717.png",
+          "name": {
+            "ko": "이벨타르",
+            "zh_hant": "伊裴爾塔爾",
+            "fr": "Yveltal",
+            "de": "Yveltal",
+            "es": "Yveltal",
+            "it": "Yveltal",
+            "en": "Yveltal",
+            "ja": "イベルタル",
+            "zh_hans": "伊裴尔塔尔"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#717_EX3",
+          "tcg_card": {
+            "id": "me03-053",
+            "localId": "053",
+            "set": {
+              "cardCount": {
+                "official": 88,
+                "total": 124
+              },
+              "id": "me03",
+              "logo": "https://assets.tcgdex.net/en/me/me03/logo",
+              "name": "Perfect Order",
+              "symbol": "https://assets.tcgdex.net/univ/me/me03/symbol"
+            },
+            "hp": 210,
             "rarity": "Double rare"
           }
         },
@@ -3825,19 +4704,18 @@
           "suffix": "[EX_NEW]",
           "form_code": "#741_EX3",
           "tcg_card": {
-            "id": "me02-018",
-            "localId": "018",
+            "id": "mep-024",
+            "localId": "024",
             "set": {
               "cardCount": {
-                "official": 94,
-                "total": 130
+                "official": 0,
+                "total": 89
               },
-              "id": "me02",
-              "logo": "https://assets.tcgdex.net/en/me/me02/logo",
-              "name": "Phantasmal Flames"
+              "id": "mep",
+              "name": "MEP Black Star Promos"
             },
             "hp": 190,
-            "rarity": "Double rare"
+            "rarity": "Promo"
           }
         },
         {
@@ -3872,6 +4750,80 @@
               "logo": "https://assets.tcgdex.net/en/sv/sv02/logo",
               "name": "Paldea Evolved",
               "symbol": "https://assets.tcgdex.net/univ/sv/sv02/symbol"
+            },
+            "hp": 260,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 754,
+          "types": [
+            "Grass"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/754.png",
+          "name": {
+            "ko": "라란티스",
+            "zh_hant": "蘭螳花",
+            "fr": "Floramantis",
+            "de": "Mantidea",
+            "es": "Lurantis",
+            "it": "Lurantis",
+            "en": "Lurantis",
+            "ja": "ラランテス",
+            "zh_hans": "兰螳花"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#754_EX3",
+          "tcg_card": {
+            "id": "me05-004",
+            "localId": "004",
+            "set": {
+              "cardCount": {
+                "official": 84,
+                "total": 120
+              },
+              "id": "me05",
+              "logo": "https://assets.tcgdex.net/en/me/me05/logo",
+              "name": "Pitch Black",
+              "symbol": "https://assets.tcgdex.net/univ/me/me05/symbol"
+            },
+            "hp": 260,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 758,
+          "types": [
+            "Fire"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/758.png",
+          "name": {
+            "ko": "염뉴트",
+            "zh_hant": "焰后蜥",
+            "fr": "Malamandre",
+            "de": "Amfira",
+            "es": "Salazzle",
+            "it": "Salazzle",
+            "en": "Salazzle",
+            "ja": "エンニュート",
+            "zh_hans": "焰后蜥"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#758_EX3",
+          "tcg_card": {
+            "id": "me03-016",
+            "localId": "016",
+            "set": {
+              "cardCount": {
+                "official": 88,
+                "total": 124
+              },
+              "id": "me03",
+              "logo": "https://assets.tcgdex.net/en/me/me03/logo",
+              "name": "Perfect Order",
+              "symbol": "https://assets.tcgdex.net/univ/me/me03/symbol"
             },
             "hp": 260,
             "rarity": "Double rare"
@@ -4413,6 +5365,43 @@
               "symbol": "https://assets.tcgdex.net/univ/sv/sv03/symbol"
             },
             "hp": 210,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 877,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/877.png",
+          "name": {
+            "ko": "모르페코",
+            "zh_hant": "莫魯貝可",
+            "fr": "Morpeko",
+            "de": "Morpeko",
+            "es": "Morpeko",
+            "it": "Morpeko",
+            "en": "Morpeko",
+            "ja": "モルペコ",
+            "zh_hans": "莫鲁贝可"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#877_EX3",
+          "tcg_card": {
+            "id": "me05-055",
+            "localId": "055",
+            "set": {
+              "cardCount": {
+                "official": 84,
+                "total": 120
+              },
+              "id": "me05",
+              "logo": "https://assets.tcgdex.net/en/me/me05/logo",
+              "name": "Pitch Black",
+              "symbol": "https://assets.tcgdex.net/univ/me/me05/symbol"
+            },
+            "hp": 180,
             "rarity": "Double rare"
           }
         },
@@ -5230,6 +6219,41 @@
             "en": "Mabosstiff",
             "ja": "マフィティフ",
             "zh_hans": "獒教父"
+          }
+        },
+        {
+          "pokemon_id": 945,
+          "types": [
+            "Colorless"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/945.png",
+          "name": {
+            "ko": "태깅구르",
+            "zh_hant": "塗標客",
+            "fr": "Tag-Tag",
+            "de": "Affiti",
+            "es": "Grafaiai",
+            "it": "Grafaiai",
+            "en": "Grafaiai",
+            "ja": "タギングル",
+            "zh_hans": "涂标客"
+          },
+          "prefix": null,
+          "suffix": "[EX_NEW]",
+          "form_code": "#945_EX3",
+          "tcg_card": {
+            "id": "svp-100",
+            "localId": "100",
+            "set": {
+              "cardCount": {
+                "official": 225,
+                "total": 226
+              },
+              "id": "svp",
+              "name": "SVP Black Star Promos"
+            },
+            "hp": 250,
+            "rarity": "Promo"
           }
         },
         {
@@ -7152,19 +8176,18 @@
           "suffix": "[EX_NEW]",
           "form_code": "#1020_EX3",
           "tcg_card": {
-            "id": "sv05-038",
-            "localId": "038",
+            "id": "svp-144",
+            "localId": "144",
             "set": {
               "cardCount": {
-                "official": 162,
-                "total": 218
+                "official": 225,
+                "total": 226
               },
-              "id": "sv05",
-              "name": "Temporal Forces",
-              "symbol": "https://assets.tcgdex.net/univ/sv/sv05/symbol"
+              "id": "svp",
+              "name": "SVP Black Star Promos"
             },
             "hp": 230,
-            "rarity": "Double rare"
+            "rarity": "Promo"
           }
         },
         {
@@ -7211,32 +8234,31 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1022.png",
           "name": {
             "ko": "무쇠암석",
-            "zh_hant": "铁磐岩",
+            "zh_hant": "鐵磐岩",
             "fr": "Roc-de-Fer",
             "de": "Eisenfels",
             "es": "Ferromole",
             "it": "Massoferreo",
             "en": "Iron Boulder",
             "ja": "テツノイワオ",
-            "zh_hans": "鐵磐岩"
+            "zh_hans": "铁磐岩"
           },
           "prefix": null,
           "suffix": "[EX_NEW]",
           "form_code": "#1022_EX3",
           "tcg_card": {
-            "id": "sv05-099",
-            "localId": "099",
+            "id": "svp-147",
+            "localId": "147",
             "set": {
               "cardCount": {
-                "official": 162,
-                "total": 218
+                "official": 225,
+                "total": 226
               },
-              "id": "sv05",
-              "name": "Temporal Forces",
-              "symbol": "https://assets.tcgdex.net/univ/sv/sv05/symbol"
+              "id": "svp",
+              "name": "SVP Black Star Promos"
             },
             "hp": 240,
-            "rarity": "Double rare"
+            "rarity": "Promo"
           }
         },
         {
@@ -7247,14 +8269,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1023.png",
           "name": {
             "ko": "무쇠감투",
-            "zh_hant": "铁头壳",
+            "zh_hant": "鐵頭殼",
             "fr": "Chef-de-Fer",
             "de": "Eisenhaupt",
             "es": "Ferrotesta",
             "it": "Capoferreo",
             "en": "Iron Crown",
             "ja": "テツノカシラ",
-            "zh_hans": "鐵頭殼"
+            "zh_hans": "铁头壳"
           },
           "prefix": null,
           "suffix": "[EX_NEW]",
@@ -7499,19 +8521,18 @@
           "suffix": "[EX_NEW]",
           "form_code": "#006_EX3",
           "tcg_card": {
-            "id": "me02-013",
-            "localId": "013",
+            "id": "mep-023",
+            "localId": "023",
             "set": {
               "cardCount": {
-                "official": 94,
-                "total": 130
+                "official": 0,
+                "total": 89
               },
-              "id": "me02",
-              "logo": "https://assets.tcgdex.net/en/me/me02/logo",
-              "name": "Phantasmal Flames"
+              "id": "mep",
+              "name": "MEP Black Star Promos"
             },
             "hp": 360,
-            "rarity": "Double rare"
+            "rarity": "Promo"
           },
           "base_name": {
             "ko": "리자몽",
@@ -7571,6 +8592,78 @@
             "en": "Charizard",
             "ja": "リザードン",
             "zh_hans": "喷火龙"
+          }
+        },
+        {
+          "pokemon_id": 36,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10278.png",
+          "name": {
+            "ko": "픽시",
+            "zh_hant": "皮可西",
+            "fr": "Mélodelfe",
+            "de": "Pixi",
+            "es": "Clefable",
+            "it": "Clefable",
+            "en": "Clefable",
+            "ja": "ピクシー",
+            "zh_hans": "皮可西"
+          },
+          "prefix": "Mega",
+          "suffix": "[EX_NEW]",
+          "form_code": "#036_EX3",
+          "tcg_card": {
+            "id": "mep-072",
+            "localId": "072",
+            "set": {
+              "cardCount": {
+                "official": 0,
+                "total": 89
+              },
+              "id": "mep",
+              "name": "MEP Black Star Promos"
+            },
+            "hp": 320,
+            "rarity": "Promo"
+          }
+        },
+        {
+          "pokemon_id": 80,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10071.png",
+          "name": {
+            "ko": "야도란",
+            "zh_hant": "呆殼獸",
+            "fr": "Flagadoss",
+            "de": "Lahmus",
+            "es": "Slowbro",
+            "it": "Slowbro",
+            "en": "Slowbro",
+            "ja": "ヤドラン",
+            "zh_hans": "呆壳兽"
+          },
+          "prefix": "Mega",
+          "suffix": "[EX_NEW]",
+          "form_code": "#080_EX3",
+          "tcg_card": {
+            "id": "me05-031",
+            "localId": "031",
+            "set": {
+              "cardCount": {
+                "official": 84,
+                "total": 120
+              },
+              "id": "me05",
+              "logo": "https://assets.tcgdex.net/en/me/me05/logo",
+              "name": "Pitch Black",
+              "symbol": "https://assets.tcgdex.net/univ/me/me05/symbol"
+            },
+            "hp": 330,
+            "rarity": "Double rare"
           }
         },
         {
@@ -7644,6 +8737,43 @@
               "symbol": "https://assets.tcgdex.net/univ/me/me01/symbol"
             },
             "hp": 300,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 121,
+          "types": [
+            "Water"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10280.png",
+          "name": {
+            "ko": "아쿠스타",
+            "zh_hant": "寶石海星",
+            "fr": "Staross",
+            "de": "Starmie",
+            "es": "Starmie",
+            "it": "Starmie",
+            "en": "Starmie",
+            "ja": "スターミー",
+            "zh_hans": "宝石海星"
+          },
+          "prefix": "Mega",
+          "suffix": "[EX_NEW]",
+          "form_code": "#121_EX3",
+          "tcg_card": {
+            "id": "me03-021",
+            "localId": "021",
+            "set": {
+              "cardCount": {
+                "official": 88,
+                "total": 124
+              },
+              "id": "me03",
+              "logo": "https://assets.tcgdex.net/en/me/me03/logo",
+              "name": "Perfect Order",
+              "symbol": "https://assets.tcgdex.net/univ/me/me03/symbol"
+            },
+            "hp": 330,
             "rarity": "Double rare"
           }
         },
@@ -7791,6 +8921,43 @@
               "name": "Phantasmal Flames"
             },
             "hp": 280,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 227,
+          "types": [
+            "Metal"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10284.png",
+          "name": {
+            "ko": "무장조",
+            "zh_hant": "盔甲鳥",
+            "fr": "Airmure",
+            "de": "Panzaeron",
+            "es": "Skarmory",
+            "it": "Skarmory",
+            "en": "Skarmory",
+            "ja": "エアームド",
+            "zh_hans": "盔甲鸟"
+          },
+          "prefix": "Mega",
+          "suffix": "[EX_NEW]",
+          "form_code": "#227_EX3",
+          "tcg_card": {
+            "id": "me03-055",
+            "localId": "055",
+            "set": {
+              "cardCount": {
+                "official": 88,
+                "total": 124
+              },
+              "id": "me03",
+              "logo": "https://assets.tcgdex.net/en/me/me03/logo",
+              "name": "Perfect Order",
+              "symbol": "https://assets.tcgdex.net/univ/me/me03/symbol"
+            },
+            "hp": 260,
             "rarity": "Double rare"
           }
         },
@@ -8163,6 +9330,43 @@
           }
         },
         {
+          "pokemon_id": 475,
+          "types": [
+            "Fighting"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10068.png",
+          "name": {
+            "ko": "엘레이드",
+            "zh_hant": "艾路雷朵",
+            "fr": "Gallame",
+            "de": "Galagladi",
+            "es": "Gallade",
+            "it": "Gallade",
+            "en": "Gallade",
+            "ja": "エルレイド",
+            "zh_hans": "艾路雷朵"
+          },
+          "prefix": "Mega",
+          "suffix": "[EX_NEW]",
+          "form_code": "#475_EX3",
+          "tcg_card": {
+            "id": "me04-048",
+            "localId": "048",
+            "set": {
+              "cardCount": {
+                "official": 86,
+                "total": 122
+              },
+              "id": "me04",
+              "logo": "https://assets.tcgdex.net/en/me/me04/logo",
+              "name": "Chaos Rising",
+              "symbol": "https://assets.tcgdex.net/univ/me/me04/symbol"
+            },
+            "hp": 350,
+            "rarity": "Double rare"
+          }
+        },
+        {
           "pokemon_id": 478,
           "types": [
             "Water"
@@ -8200,6 +9404,43 @@
           }
         },
         {
+          "pokemon_id": 491,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10312.png",
+          "name": {
+            "ko": "다크라이",
+            "zh_hant": "達克萊伊",
+            "fr": "Darkrai",
+            "de": "Darkrai",
+            "es": "Darkrai",
+            "it": "Darkrai",
+            "en": "Darkrai",
+            "ja": "ダークライ",
+            "zh_hans": "达克莱伊"
+          },
+          "prefix": "Mega",
+          "suffix": "[EX_NEW]",
+          "form_code": "#491_EX3",
+          "tcg_card": {
+            "id": "me05-048",
+            "localId": "048",
+            "set": {
+              "cardCount": {
+                "official": 84,
+                "total": 120
+              },
+              "id": "me05",
+              "logo": "https://assets.tcgdex.net/en/me/me05/logo",
+              "name": "Pitch Black",
+              "symbol": "https://assets.tcgdex.net/univ/me/me05/symbol"
+            },
+            "hp": 280,
+            "rarity": "Double rare"
+          }
+        },
+        {
           "pokemon_id": 500,
           "types": [
             "Fire"
@@ -8233,6 +9474,43 @@
               "symbol": "https://assets.tcgdex.net/univ/me/me02.5/symbol"
             },
             "hp": 380,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 530,
+          "types": [
+            "Metal"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10287.png",
+          "name": {
+            "ko": "몰드류",
+            "zh_hant": "龍頭地鼠",
+            "fr": "Minotaupe",
+            "de": "Stalobor",
+            "es": "Excadrill",
+            "it": "Excadrill",
+            "en": "Excadrill",
+            "ja": "ドリュウズ",
+            "zh_hans": "龙头地鼠"
+          },
+          "prefix": "Mega",
+          "suffix": "[EX_NEW]",
+          "form_code": "#530_EX3",
+          "tcg_card": {
+            "id": "me05-065",
+            "localId": "065",
+            "set": {
+              "cardCount": {
+                "official": 84,
+                "total": 120
+              },
+              "id": "me05",
+              "logo": "https://assets.tcgdex.net/en/me/me05/logo",
+              "name": "Pitch Black",
+              "symbol": "https://assets.tcgdex.net/univ/me/me05/symbol"
+            },
+            "hp": 340,
             "rarity": "Double rare"
           }
         },
@@ -8348,6 +9626,228 @@
           }
         },
         {
+          "pokemon_id": 609,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10291.png",
+          "name": {
+            "ko": "샹델라",
+            "zh_hant": "水晶燈火靈",
+            "fr": "Lugulabre",
+            "de": "Skelabra",
+            "es": "Chandelure",
+            "it": "Chandelure",
+            "en": "Chandelure",
+            "ja": "シャンデラ",
+            "zh_hans": "水晶灯火灵"
+          },
+          "prefix": "Mega",
+          "suffix": "[EX_NEW]",
+          "form_code": "#609_EX3",
+          "tcg_card": {
+            "id": "me05-038",
+            "localId": "038",
+            "set": {
+              "cardCount": {
+                "official": 84,
+                "total": 120
+              },
+              "id": "me05",
+              "logo": "https://assets.tcgdex.net/en/me/me05/logo",
+              "name": "Pitch Black",
+              "symbol": "https://assets.tcgdex.net/univ/me/me05/symbol"
+            },
+            "hp": 350,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 655,
+          "types": [
+            "Fire"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10293.png",
+          "name": {
+            "ko": "마폭시",
+            "zh_hant": "妖火紅狐",
+            "fr": "Goupelin",
+            "de": "Fennexis",
+            "es": "Delphox",
+            "it": "Delphox",
+            "en": "Delphox",
+            "ja": "マフォクシー",
+            "zh_hans": "妖火红狐"
+          },
+          "prefix": "Mega",
+          "suffix": "[EX_NEW]",
+          "form_code": "#655_EX3",
+          "tcg_card": {
+            "id": "me05-008",
+            "localId": "008",
+            "set": {
+              "cardCount": {
+                "official": 84,
+                "total": 120
+              },
+              "id": "me05",
+              "logo": "https://assets.tcgdex.net/en/me/me05/logo",
+              "name": "Pitch Black",
+              "symbol": "https://assets.tcgdex.net/univ/me/me05/symbol"
+            },
+            "hp": 350,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 658,
+          "types": [
+            "Water"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10294.png",
+          "name": {
+            "ko": "개굴닌자",
+            "zh_hant": "甲賀忍蛙",
+            "fr": "Amphinobi",
+            "de": "Quajutsu",
+            "es": "Greninja",
+            "it": "Greninja",
+            "en": "Greninja",
+            "ja": "ゲッコウガ",
+            "zh_hans": "甲贺忍蛙"
+          },
+          "prefix": "Mega",
+          "suffix": "[EX_NEW]",
+          "form_code": "#658_EX3",
+          "tcg_card": {
+            "id": "me04-022",
+            "localId": "022",
+            "set": {
+              "cardCount": {
+                "official": 86,
+                "total": 122
+              },
+              "id": "me04",
+              "logo": "https://assets.tcgdex.net/en/me/me04/logo",
+              "name": "Chaos Rising",
+              "symbol": "https://assets.tcgdex.net/univ/me/me04/symbol"
+            },
+            "hp": 350,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 668,
+          "types": [
+            "Fire"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10295.png",
+          "name": {
+            "ko": "화염레오",
+            "zh_hant": "火炎獅",
+            "fr": "Némélios",
+            "de": "Pyroleo",
+            "es": "Pyroar",
+            "it": "Pyroar",
+            "en": "Pyroar",
+            "ja": "カエンジシ",
+            "zh_hans": "火炎狮"
+          },
+          "prefix": "Mega",
+          "suffix": "[EX_NEW]",
+          "form_code": "#668_EX3",
+          "tcg_card": {
+            "id": "me04-015",
+            "localId": "015",
+            "set": {
+              "cardCount": {
+                "official": 86,
+                "total": 122
+              },
+              "id": "me04",
+              "logo": "https://assets.tcgdex.net/en/me/me04/logo",
+              "name": "Chaos Rising",
+              "symbol": "https://assets.tcgdex.net/univ/me/me04/symbol"
+            },
+            "hp": 340,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 670,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10296.png",
+          "name": {
+            "ko": "플라엣테",
+            "zh_hant": "花葉蒂",
+            "fr": "Floette",
+            "de": "Floette",
+            "es": "Floette",
+            "it": "Floette",
+            "en": "Floette",
+            "ja": "フラエッテ",
+            "zh_hans": "花叶蒂"
+          },
+          "prefix": "Mega",
+          "suffix": "[EX_NEW]",
+          "form_code": "#670_EX3",
+          "tcg_card": {
+            "id": "me04-035",
+            "localId": "035",
+            "set": {
+              "cardCount": {
+                "official": 86,
+                "total": 122
+              },
+              "id": "me04",
+              "logo": "https://assets.tcgdex.net/en/me/me04/logo",
+              "name": "Chaos Rising",
+              "symbol": "https://assets.tcgdex.net/univ/me/me04/symbol"
+            },
+            "hp": 250,
+            "rarity": "Double rare"
+          }
+        },
+        {
+          "pokemon_id": 691,
+          "types": [
+            "Dragon"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10299.png",
+          "name": {
+            "ko": "드래캄",
+            "zh_hant": "毒藻龍",
+            "fr": "Kravarech",
+            "de": "Tandrak",
+            "es": "Dragalge",
+            "it": "Dragalge",
+            "en": "Dragalge",
+            "ja": "ドラミドロ",
+            "zh_hans": "毒藻龙"
+          },
+          "prefix": "Mega",
+          "suffix": "[EX_NEW]",
+          "form_code": "#691_EX3",
+          "tcg_card": {
+            "id": "me04-065",
+            "localId": "065",
+            "set": {
+              "cardCount": {
+                "official": 86,
+                "total": 122
+              },
+              "id": "me04",
+              "logo": "https://assets.tcgdex.net/en/me/me04/logo",
+              "name": "Chaos Rising",
+              "symbol": "https://assets.tcgdex.net/univ/me/me04/symbol"
+            },
+            "hp": 330,
+            "rarity": "Double rare"
+          }
+        },
+        {
           "pokemon_id": 701,
           "types": [
             "Fighting"
@@ -8385,6 +9885,41 @@
           }
         },
         {
+          "pokemon_id": 718,
+          "types": [
+            "Fighting"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10301.png",
+          "name": {
+            "ko": "지가르데",
+            "zh_hant": "基格爾德",
+            "fr": "Zygarde",
+            "de": "Zygarde",
+            "es": "Zygarde",
+            "it": "Zygarde",
+            "en": "Zygarde",
+            "ja": "ジガルデ",
+            "zh_hans": "基格尔德"
+          },
+          "prefix": "Mega",
+          "suffix": "[EX_NEW]",
+          "form_code": "#718_EX3",
+          "tcg_card": {
+            "id": "mep-071",
+            "localId": "071",
+            "set": {
+              "cardCount": {
+                "official": 0,
+                "total": 89
+              },
+              "id": "mep",
+              "name": "MEP Black Star Promos"
+            },
+            "hp": 310,
+            "rarity": "Promo"
+          }
+        },
+        {
           "pokemon_id": 719,
           "types": [
             "Psychic"
@@ -8419,6 +9954,43 @@
             },
             "hp": 270,
             "rarity": "Ultra Rare"
+          }
+        },
+        {
+          "pokemon_id": 807,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10319.png",
+          "name": {
+            "ko": "제라오라",
+            "zh_hant": "捷拉奧拉",
+            "fr": "Zeraora",
+            "de": "Zeraora",
+            "es": "Zeraora",
+            "it": "Zeraora",
+            "en": "Zeraora",
+            "ja": "ゼラオラ",
+            "zh_hans": "捷拉奥拉"
+          },
+          "prefix": "Mega",
+          "suffix": "[EX_NEW]",
+          "form_code": "#807_EX3",
+          "tcg_card": {
+            "id": "me05-027",
+            "localId": "027",
+            "set": {
+              "cardCount": {
+                "official": 84,
+                "total": 120
+              },
+              "id": "me05",
+              "logo": "https://assets.tcgdex.net/en/me/me05/logo",
+              "name": "Pitch Black",
+              "symbol": "https://assets.tcgdex.net/univ/me/me05/symbol"
+            },
+            "hp": 270,
+            "rarity": "Double rare"
           }
         }
       ],

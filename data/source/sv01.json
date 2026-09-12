@@ -5,10 +5,10 @@
     "release_date": "2023-03-31",
     "card_count": {
       "firstEd": 0,
-      "holo": 2,
-      "normal": 0,
+      "holo": 93,
+      "normal": 165,
       "official": 198,
-      "reverse": 2,
+      "reverse": 186,
       "total": 258
     },
     "logo": "https://assets.tcgdex.net/en/sv/sv01/logo.png",
@@ -3441,7 +3441,7 @@
   "metadata": {
     "total_cards": 258,
     "set_id": "sv01",
-    "date_fetched": "2026-03-31T21:59:50.794888Z",
+    "date_fetched": "2026-09-12T01:25:50.839096Z",
     "source": "TCGdex API v2",
     "language": "en"
   }

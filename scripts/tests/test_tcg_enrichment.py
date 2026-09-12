@@ -17,7 +17,11 @@ sys.path.insert(0, str(Path(__file__).parent.parent / 'fetcher'))
 
 from steps.enrich_tcg_cards_from_pokedex import EnrichTCGCardsFromPokedexStep
 from steps.enrich_tcg_names_multilingual import EnrichTCGNamesMultilingualStep
+from steps.fetch_tcgdex_ex_gen3 import FetchTCGdexScarletVioletEXStep
+from steps.fetch_tcgdex_set import FetchTCGdexSetStep
 from steps import enrich_tcg_names_multilingual as multilingual_module
+from steps import fetch_tcgdex_ex_gen3 as exgen3_module
+from steps.base import PipelineContext
 
 
 class TestVariantMarkerExtraction:
@@ -410,6 +414,101 @@ class TestMultilingualCardAvailability:
 
         assert result['available_languages'] == ['de', 'en', 'fr', 'zh_hans']
         assert result['printed_number'] == '189'
+
+    def test_empty_localized_set_is_not_marked_available(self, monkeypatch):
+        class FakeClient:
+            def __init__(self, language):
+                self.language = language
+
+            def get_set(self, _set_id):
+                if self.language == 'de':
+                    return {
+                        'name': 'Leerer Platzhalter',
+                        'logo': 'https://assets.example/de/logo',
+                        'cards': [],
+                    }
+                if self.language == 'en':
+                    return {
+                        'name': 'Complete Set',
+                        'cards': [{'localId': '001', 'name': 'Bulbasaur'}],
+                    }
+                return None
+
+        monkeypatch.setattr(multilingual_module, 'TCGdexClient', FakeClient)
+        monkeypatch.setattr(self.step, '_check_local_logo', lambda _set_id: '')
+
+        names, set_names, logo_urls, languages = (
+            self.step._fetch_multilingual_names('unit-test-empty')
+        )
+
+        assert names == {'001': {'en': 'Bulbasaur'}}
+        assert set_names == {'en': 'Complete Set'}
+        assert logo_urls == {}
+        assert languages == ['en']
+
+
+def test_complete_set_fetch_fails_closed_on_partial_card_details():
+    class IncompleteClient:
+        def get_card(self, _card_id):
+            return None
+
+    step = FetchTCGdexSetStep('test_complete_cards')
+
+    with pytest.raises(RuntimeError, match='complete card data'):
+        step._fetch_complete_cards(
+            IncompleteClient(),
+            [{'id': 'sv07-139', 'localId': '139', 'name': 'Lacey'}],
+        )
+
+
+def test_exgen3_catalog_covers_every_configured_modern_tcg_scope():
+    configured_set_ids = set()
+    scope_root = Path(__file__).resolve().parents[2] / 'config' / 'scopes'
+    for path in scope_root.glob('*.yaml'):
+        if not path.stem.startswith(('SV', 'ME')):
+            continue
+        source = path.read_text(encoding='utf-8')
+        for set_id in (
+            'sv01', 'sv02', 'sv03', 'sv03.5', 'sv04', 'sv04.5',
+            'sv05', 'sv06', 'sv06.5', 'sv07', 'sv08', 'sv08.5',
+            'sv09', 'sv10', 'sv10.5b', 'sv10.5w', 'svp',
+            'me01', 'me02', 'me02.5', 'me03', 'me04', 'me05', 'mep',
+        ):
+            if f'set_id: {set_id}' in source:
+                configured_set_ids.add(set_id)
+
+    assert set(
+        FetchTCGdexScarletVioletEXStep.SV_SETS
+        + FetchTCGdexScarletVioletEXStep.ME_SETS
+    ) == configured_set_ids
+
+
+def test_exgen3_fetch_fails_closed_on_missing_card_details(monkeypatch):
+    class IncompleteClient:
+        def __init__(self, language):
+            self.language = language
+
+        def get_set(self, _set_id):
+            return {
+                'cards': [
+                    {
+                        'id': 'sv-test-001',
+                        'localId': '001',
+                        'name': 'Pikachu ex',
+                    }
+                ]
+            }
+
+        def get_card(self, _card_id):
+            return None
+
+    monkeypatch.setattr(exgen3_module, 'TCGdexClient', IncompleteClient)
+    step = FetchTCGdexScarletVioletEXStep('test_complete_ex_cards')
+    monkeypatch.setattr(step, 'SV_SETS', ['sv-test'])
+    monkeypatch.setattr(step, 'ME_SETS', [])
+
+    with pytest.raises(RuntimeError, match='complete ex card data'):
+        step.execute(PipelineContext({}), {})
 
 
 class TestLocalizedSetLogos:

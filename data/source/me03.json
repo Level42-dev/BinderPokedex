@@ -5,8 +5,8 @@
     "release_date": "2026-03-27",
     "card_count": {
       "firstEd": 0,
-      "holo": 56,
-      "normal": 68,
+      "holo": 71,
+      "normal": 87,
       "official": 88,
       "reverse": 79,
       "total": 124
@@ -1625,7 +1625,7 @@
   "metadata": {
     "total_cards": 124,
     "set_id": "me03",
-    "date_fetched": "2026-07-01T14:42:51.830269Z",
+    "date_fetched": "2026-09-12T01:23:37.183790Z",
     "source": "TCGdex API v2",
     "language": "en"
   }

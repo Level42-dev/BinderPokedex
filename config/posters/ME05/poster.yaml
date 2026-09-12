@@ -1,4 +1,4 @@
-scope: Base2
+scope: ME05
 layout:
   name: standard_3x3
 text_cells:
@@ -32,23 +32,24 @@ artwork:
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
     reference_mode: individual_spatial_joint
-    seed: 260764516
+    seed: 260765584
     steps: 4
     generation_megapixels: 1.0
     output_dpi: 300
     output_method: lanczos
   scene:
-    concept: the nostalgic 1999 Jungle expansion and its untamed woodland life
-    setting: The artwork contains a lush late-1990s cel-painted jungle clearing with layered
-      broadleaf canopy, mossy outer rock shelves, distant hanging vines, and a small sunlit
-      river glimpse deep in the background.
-    lighting: Warm humid daylight filters through the upper-left canopy.
-    rendering: Use nostalgic hand-painted cel-animation linework, rich but restrained natural
-      greens, and soft layered woodland depth.
-    ground_noun: jungle grass
-    constraints:
-    - Keep dense leaves, vines, rocks, and the river in the distance or at the outer edges
-      so the protected subject silhouettes remain readable.
+    concept: the Dunkelnacht expansion and its mysterious nocturnal energy
+    setting: >-
+      The artwork contains a broad moonlit valley with layered indigo woodland,
+      dark crystalline ridges, quiet reflective pools, and distant violet cloud
+      ribbons crossing an open midnight sky.
+    lighting: >-
+      Cool moonlight enters from the upper left with restrained violet and
+      silver highlights.
+    rendering: >-
+      Use polished trading-card illustration, clean cel-painted linework, deep
+      but readable nocturnal colors, and spacious atmospheric depth.
+    ground_noun: moonlit grass
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns
@@ -73,5 +74,4 @@ conditioning:
     bottom_padding_px: 24
 title_logo:
   files:
-    en: logos/logo-en.png
-    fr: logos/logo-fr.png
+    de: logos/logo-de.png

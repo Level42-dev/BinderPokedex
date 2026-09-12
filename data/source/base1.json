@@ -4,9 +4,9 @@
     "name": "Base Set",
     "release_date": "1999-01-09",
     "card_count": {
-      "firstEd": 102,
+      "firstEd": 103,
       "holo": 64,
-      "normal": 344,
+      "normal": 351,
       "official": 102,
       "reverse": 0,
       "total": 102
@@ -1317,7 +1317,7 @@
   "metadata": {
     "total_cards": 102,
     "set_id": "base1",
-    "date_fetched": "2026-07-12T10:33:21.639415Z",
+    "date_fetched": "2026-09-12T01:15:31.548912Z",
     "source": "TCGdex API v2",
     "language": "en"
   }

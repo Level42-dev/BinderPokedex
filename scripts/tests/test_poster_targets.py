@@ -3,6 +3,7 @@ from copy import deepcopy
 from pathlib import Path
 
 import pytest
+import yaml
 from PIL import Image, ImageChops
 
 from scripts.poster_assets.finalize_comfyui_poster import (
@@ -33,6 +34,15 @@ from scripts.poster_assets.validate_promoted_poster import enabled_poster_scopes
 
 
 ROOT = Path(__file__).resolve().parents[2]
+
+
+def test_me05_has_an_enabled_poster_target():
+    manifest_path = ROOT / "config" / "posters" / "ME05" / "poster.yaml"
+
+    assert manifest_path.is_file()
+    manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+    assert manifest["scope"] == "ME05"
+    assert manifest["pdf"]["enabled"] is True
 POSTER_CONFIG_ROOT = POSTER_CONFIGS
 
 
@@ -40,7 +50,7 @@ def test_every_current_poster_target_has_a_checked_in_manifest():
     manifests = list(POSTER_CONFIG_ROOT.glob("*/poster.yaml"))
     manifests.extend(POSTER_CONFIG_ROOT.glob("*/sections/*/poster.yaml"))
 
-    assert len(manifests) == 41
+    assert len(manifests) == 42
 
 
 def test_poster_storage_classes_are_separate_and_complete():
@@ -54,7 +64,7 @@ def test_poster_storage_classes_are_separate_and_complete():
         for bundle in poster_bundles_for_scope(scope)
     ]
 
-    assert len(bundles) == 41
+    assert len(bundles) == 42
     assert all(
         bundle.config_dir.is_relative_to(POSTER_CONFIG_ROOT)
         for bundle in bundles
@@ -175,7 +185,7 @@ def test_every_generated_pdf_language_has_complete_poster_copy():
                     ) == 1
                 checked.append(f"{bundle.asset_key}/{language}")
 
-    assert len(checked) == 266
+    assert len(checked) == 267
 
 
 def test_standalone_poster_manifests_remain_isolated_single_bundles():

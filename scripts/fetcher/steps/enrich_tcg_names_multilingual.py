@@ -190,6 +190,15 @@ class EnrichTCGNamesMultilingualStep(BaseStep):
                 set_name = set_data.get('name', '')
                 logo_url = set_data.get('logo', '')
                 logger.info(f"     ✓ Got {len(cards)} cards in {api_lang}")
+
+                # Some TCGdex language endpoints expose set metadata before
+                # any localized card records exist.  Such placeholders must
+                # not make an empty localized PDF look like a released set.
+                if not cards:
+                    logger.warning(
+                        f"⚠️  No card data for {api_lang}, skipping"
+                    )
+                    continue
                 
                 # Track this language as available
                 available_languages.append(lang)

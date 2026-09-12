@@ -1,20 +1,20 @@
-scope: ME03
-description: 'TCG Set: Perfect Order (me03) - Complete set with all cards'
-target_file: data/output/ME03.json
+scope: ME05
+description: 'TCG Set: Mega Evolution ME05 (me05) - Complete set with all cards'
+target_file: data/output/ME05.json
 pipeline:
 - step: validate_pokedex_exists
   params:
     pokedex_file: data/output/Pokedex.json
 - step: load_tcg_set
   params:
-    source_file: data/source/me03.json
+    source_file: data/source/me05.json
 - step: fetch_tcgdex_set
   params:
-    set_id: me03
-    output_file: data/source/me03.json
+    set_id: me05
+    output_file: data/source/me05.json
 - step: enrich_tcg_names_multilingual
   params:
-    set_id: me03
+    set_id: me05
 - step: enrich_tcg_cards_from_pokedex
   params:
     pokedex_file: data/output/Pokedex.json
@@ -23,7 +23,7 @@ pipeline:
     images_dir: images/special_cards
 - step: transform_tcg_set
   params:
-    set_id: ME03
+    set_id: ME05
 - step: transform_to_sections_format
 - step: enrich_featured_elements
   params:
@@ -32,7 +32,7 @@ pipeline:
     cache_dir: data/section_artwork
 - step: save_output
   params:
-    output_file: data/output/ME03.json
+    output_file: data/output/ME05.json
 - step: cache_pokemon_images
   params:
     cache_dir: data/pokemon_images_cache

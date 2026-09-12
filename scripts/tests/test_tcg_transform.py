@@ -177,6 +177,37 @@ class TestCardTransformation:
         assert card['name']['fr'] == 'Bulbizarre'
         assert 'suffix' not in card  # No suffix for base card
         assert 'prefix' not in card
+
+    @pytest.mark.parametrize(
+        ('pokemon_id', 'name', 'artwork_id'),
+        [
+            (901, 'Bloodmoon Ursaluna', 10272),
+            (646, 'Black Kyurem ex', 10022),
+            (1017, 'Hearthflame Mask Ogerpon ex', 10274),
+        ],
+    )
+    def test_transform_uses_exact_named_form_artwork(
+        self,
+        pokemon_id,
+        name,
+        artwork_id,
+    ):
+        cards = [{
+            'localId': '001',
+            'name': name,
+            'card_type': 'pokemon',
+            'pokemon_id': pokemon_id,
+            'types': ['Colorless'],
+            'name_en': name,
+        }]
+
+        [card] = self.step._transform_cards(cards)
+
+        assert card['image_url'] == PosterSubject(
+            pokemon_id,
+            artwork_id,
+        ).image_url
+        assert poster_subject_from_card(card)['official_artwork_id'] == artwork_id
     
     def test_transform_variant_pokemon_card(self, monkeypatch):
         """Test transformation of variant Pokemon card."""

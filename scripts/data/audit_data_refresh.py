@@ -149,6 +149,8 @@ def validate_scope(scope: dict[str, Any]) -> list[str]:
     numbers: dict[tuple[str, str], list[str]] = {}
     for index, card in enumerate(cards):
         identity = _display_id(card, f"position:{index}")
+        if card.get("type") == "unknown":
+            blockers.append(f"unknown card classification {identity}")
         stable_id = card.get("id")
         if stable_id:
             identities.setdefault(str(stable_id), []).append(identity)
