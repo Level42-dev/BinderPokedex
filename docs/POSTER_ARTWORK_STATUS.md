@@ -264,6 +264,24 @@ Core branch verification rerun on 2026-09-12:
 - the 63-file data snapshot remains unchanged and verifies at 2026-09-12;
 - Python compilation, whitespace checks, and independent code review pass.
 
+The final local v10.0 candidate was rebuilt from source commit
+`48f82439bf7aa1272fe7d877ebb25919287c4d93`: 168 PDFs / 4,781 pages in nine
+languages, including 31 German PDFs / 807 pages. Every PDF's version and source
+notice were checked. All nine language archives pass the canonical integrity
+verifier and an independent byte-for-byte PDF, license, and source-commit check.
+
+Final Poppler review covers the reported SV04/SV05 overflow pages, German
+SV09 ownership labels, both German SV10.5 logos, SV07 Hopplo, SVP numbers and
+the unnumbered card, MEP numbers 064/079, and the ME05/SV08 panorama openings.
+The corrected raster information panels show SVP/de 217, MEP/de 88, and
+SV10/ja 132. Thirty previously reviewed comparison pages are pixel-identical;
+only the two German promo opener counts changed, with the Japanese opener
+added to this check. This is targeted visual QA plus complete programmatic
+artifact verification, not a claim that all 4,781 pages received manual review.
+
+PR #17 contains the implementation and candidate metadata. External PR approval
+remains a separate gate; no merge, tag, or GitHub Release was performed.
+
 Historical branch verification on 2026-08-12:
 
 - the project suite passes with `568 passed, 1 skipped`;

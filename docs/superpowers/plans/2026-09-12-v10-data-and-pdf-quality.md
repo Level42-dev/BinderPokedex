@@ -580,20 +580,23 @@ Report exact test totals, snapshot boundary and reviewed count changes, poster c
 
 ## Execution status (2026-09-12)
 
+The checklists above retain the original plan. This table and the final
+verification record below describe actual execution and supersede interim states.
+
 | Area | Status | Verified result |
 | --- | --- | --- |
 | Tasks 1-6: identity, localization, layout, logos, snapshot, refresh | Complete | All 31 scopes refreshed; the 63-file snapshot is locked to the 2026-09-12 boundary and verifies without drift. ME05 is included with 120 cards. |
 | Task 7: poster artwork | Complete | SV07, ME05, and SV08 passed raw/master and all nine physical-crop agent review. All 42 targets are promoted, enabled, and validated. Bounded resolution/model/reference comparisons and every accepted/rejected raw hash are recorded in the experiment log; all production assets remain 4B BF16. Provenance now distinguishes agent review from human approval. |
-| Task 8: German PDFs | Rebuilding final localized-count revision | The prior 31-PDF build (807 A4 pages, including project notices) passed text and Poppler checks for Energy names, owner-qualified SV09 names, safe SV04/SV05 wrapping, German SV10.5 logos, corrected SV07 Hopplo, SVP numbering plus the unnumbered card, and MEP numbers 064/079. Panorama counts now match the German card selection; refreshed SVP/MEP previews visibly show 217/88. |
-| Task 9: local release candidate | Rebuilding final localized-count revision | The full test suite now passes with 733 passed and 1 skipped, and independent code review has no remaining findings. All 42 bundles are current without planner actions and all 267 language counts agree with their card selection. The previous nine-language candidate contains 168 PDFs / 4,781 pages and nine verified archives. Those archives predate the final count correction and must be rebuilt from the updated source commit before being described as the final candidate. |
+| Task 8: German PDFs | Complete | All 31 PDFs / 807 pages were rebuilt from the final source revision. Text and Poppler checks pass for Energy names, owner-qualified SV09 names, safe SV04/SV05 wrapping, German SV10.5 logos, corrected SV07 Hopplo, SVP numbering plus the unnumbered card, and MEP numbers 064/079. The actual PDF panorama counts visibly show SVP 217 and MEP 88. |
+| Task 9: local release candidate | Complete locally; external PR approval pending | 733 tests passed and 1 skipped; independent code review has no remaining findings. All 42 bundles are current without planner actions and all 267 language counts agree with their card selection. All 168 PDFs / 4,781 pages were rebuilt from one source commit, and all nine archives pass integrity, exact PDF content, notices, and source checks. Manifest and release notes were regenerated from these final artifacts. No release was published. |
 
 ME05 and SV08 now also have reviewed panoramas. The ordinary cover remains a
 diagnostic/explicit skip option, not an
 accepted substitute for these release targets. A regression test now exercises
 the real PDF poster routing for every current section and rejects a missing or
-disabled panorama. The final remaining step is to rebuild and check the localized
-PDFs and refresh release archives. The branch has been pushed and PR #17 opened
-with subsequent operator authorization; no tag or GitHub release was created.
+disabled panorama. The final localized PDFs and release archives have now been
+rebuilt and checked. The branch has been pushed and PR #17 opened with subsequent
+operator authorization; no merge, tag, or GitHub release was created.
 
 The additional French page-22 QA exposed a localization gap in Task 2: names
 such as `Zoroark-ex de N` retained their embedded marker but the renderer added
@@ -630,4 +633,27 @@ Final pre-build gate: `733 passed, 1 skipped`; all 42 bundles are current with
 no planner actions, the 63-file snapshot verifies, and independent review has
 no findings for either follow-up. All 42 master SHA-256 values are unchanged;
 across all provenance records only 27 overlay fingerprints and their refresh
-timestamps changed. The source-consistent 168-PDF rebuild is the next gate.
+timestamps changed. The source-consistent 168-PDF rebuild subsequently passed.
+
+### Final artifact verification
+
+- PDF and archive source: `48f82439bf7aa1272fe7d877ebb25919287c4d93`, version `v10.0`.
+- 168 PDFs / 4,781 A4 pages across nine languages; German: 31 PDFs / 807 pages.
+- Every final PDF has the correct version, exact source commit, and project
+  notice. All nine ZIPs pass CRC/integrity checks and contain byte-identical
+  copies of the final PDFs, exact license files, and matching `SOURCE.json`.
+- Final Poppler checks confirm all reported label, number, logo, and panorama
+  corrections. Thirty previous comparison pages are pixel-identical; SVP/de
+  and MEP/de openers have only the intended count correction, and SV10/ja now
+  visibly shows 132. ME05/SV08 opening pages retain their checked appearance
+  in every configured language. Visual QA is targeted, not a manual review of
+  every one of the 4,781 pages.
+- All 63 locked data files still verify. Nine additional release-note/workflow
+  tests pass against the final metadata.
+- Local audit evidence: `tmp/v10-language-build/verification.json`,
+  `tmp/v10-language-build/archive-verification.json`, and
+  `tmp/pdfs/v10-panorama-final/`. Public candidate metadata is generated in
+  `release-manifest.json`; ZIPs and rendered PDFs remain local artifacts.
+- Required external PR review remains pending. Scoped GitHub checks pass for
+  the source revision; the full Linux artifact job was intentionally skipped
+  without `full-release-check` or manual dispatch. No merge or release is implied.
