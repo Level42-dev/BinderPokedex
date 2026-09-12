@@ -21,6 +21,44 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   transferred or directly bootstrapped runtimes can be removed without touching
   the external models.
 
+## [10.0.0] - 2026-09-12
+
+### ✨ Current Collections and Data
+
+- Refreshed all 31 configured scopes from their current sources, reviewed every
+  changed output, and locked the accepted 63-file dataset with a reproducible
+  snapshot manifest and drift audit.
+- Added the complete ME05 Dunkelnacht collection and updated the Mega Evolution
+  era to seven scopes. Energy-only subsets remain intentionally outside the
+  printable set collection.
+- Recorded exact per-card language availability so a PDF no longer presents an
+  untranslated card as if it had been released in the selected language.
+- Preserved localized TCG identities such as `Ns Zoroark-ex` while keeping the
+  National Pokédex on canonical owner-free species names.
+
+### 🐛 German PDF and Promo Corrections
+
+- Corrected the German Basic Energy names in SV01, SV02, SV03, and SV06.5.
+- Reconciled SVP with 216 numbered German cards through `#224`, the eight real
+  number gaps, and the unnumbered `Terapagos & Freunde` promo for 217 German
+  inserts in total.
+- Rebuilt MEP from its original promo identities, including `Serpiroyal #064`
+  and `Glutexo #079`, instead of renumbering the selected cards sequentially.
+- Added measured one- or two-line label fitting so long Trainer names stay
+  inside their card and cutting boundaries.
+- Added exact German title logos for Schwarze Blitze and Weiße Flammen and
+  corrected the Stellarkrone panorama with anatomically correct Hopplo artwork.
+- Withheld unapproved ME05 and SV08 panorama artwork; their PDFs use the clean
+  standard set cover until a candidate passes full-page and nine-crop review.
+
+### 🔧 Release Quality
+
+- Added fail-closed refresh behavior, change classification, release snapshot
+  verification, and regression coverage for localized names, language filters,
+  printed promo numbers, German logos, and safe label geometry.
+- Release builds consume the committed data snapshot instead of silently
+  fetching mutable card data during publication.
+
 ## [9.0.0] - 2026-08-11
 
 ### ✨ Major Feature: Poster Artwork for Every Binder

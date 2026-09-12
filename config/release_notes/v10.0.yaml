@@ -1,0 +1,27 @@
+display_date:
+  en: "September 2026"
+  de: "September 2026"
+summary:
+  en: "Freshly updated collections, corrected labels, and the latest Mega Evolution sets make BinderPokedex v10.0 more complete and dependable."
+  de: "Frisch aktualisierte Sammlungen, korrigierte Beschriftungen und die neuesten Mega-Entwicklungs-Sets machen BinderPokedex v10.0 vollständiger und verlässlicher."
+whats_new:
+  en:
+    title: "Fresh Lists. Correct Labels. More Mega Evolution."
+    body:
+      - "Every collection was rebuilt from refreshed card data, with the available languages checked card by card."
+      - "The Mega Evolution era now reaches ME05 Dunkelnacht, alongside the six existing Mega collections."
+      - "German Basic Energy labels now match the cards, and trainer-owned names such as Ns Zoroark-ex remain intact in their TCG sets."
+      - "SVP and MEP promo numbers now follow the cards themselves; the unnumbered Terapagos & Freunde is included without an invented number."
+      - "Schwarze Blitze and Weiße Flammen use their German set logos, while long card names stay safely inside their cutting areas."
+      - "Stellarkrone opens with a corrected Hopplo panorama."
+      - "Collections whose panorama is not yet ready open with a clean set cover instead."
+  de:
+    title: "Aktuelle Listen. Korrekte Beschriftungen. Mehr Mega-Entwicklung."
+    body:
+      - "Alle Sammlungen wurden mit frisch aktualisierten Kartendaten neu aufgebaut; die verfügbaren Sprachen wurden Karte für Karte abgeglichen."
+      - "Die Mega-Entwicklungs-Ära reicht jetzt bis ME05 Dunkelnacht und ergänzt die sechs bestehenden Mega-Sammlungen."
+      - "Deutsche Basis-Energien tragen jetzt die Namen der echten Karten; Trainerzuordnungen wie Ns Zoroark-ex bleiben in ihren TCG-Sets erhalten."
+      - "Die Promonummern in SVP und MEP folgen jetzt den Karten selbst; Terapagos & Freunde ist ohne erfundene Nummer enthalten."
+      - "Schwarze Blitze und Weiße Flammen verwenden ihre deutschen Setlogos, während lange Kartennamen sicher innerhalb der Schnittflächen bleiben."
+      - "Stellarkrone beginnt mit einem korrigierten Hopplo-Panorama."
+      - "Sammlungen, deren Panorama noch nicht bereit ist, beginnen stattdessen mit einem sauberen Set-Einleger."

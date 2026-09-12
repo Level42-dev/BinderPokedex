@@ -33,6 +33,7 @@ def test_pull_request_release_check_is_read_only_and_never_publishes():
     assert candidate["uses"] == (
         "./.github/workflows/build-release.yml"
     )
+    assert candidate["with"]["release_notes_tag"] == "v10.0"
     condition = candidate["if"]
     assert "github.event_name == 'workflow_dispatch'" in condition
     assert "startsWith(github.head_ref, 'release/')" in condition

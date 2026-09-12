@@ -4,67 +4,71 @@
       "exists": true,
       "language": "de",
       "name": "binder-pokedex-de.zip",
-      "size_bytes": 139591178
+      "size_bytes": 567107321
     },
     {
       "exists": true,
       "language": "en",
       "name": "binder-pokedex-en.zip",
-      "size_bytes": 136453778
+      "size_bytes": 568084218
     },
     {
       "exists": true,
       "language": "fr",
       "name": "binder-pokedex-fr.zip",
-      "size_bytes": 135364342
+      "size_bytes": 566773221
     },
     {
       "exists": true,
       "language": "es",
       "name": "binder-pokedex-es.zip",
-      "size_bytes": 135376463
+      "size_bytes": 520997298
     },
     {
       "exists": true,
       "language": "it",
       "name": "binder-pokedex-it.zip",
-      "size_bytes": 140539960
+      "size_bytes": 553474045
     },
     {
       "exists": true,
       "language": "ja",
       "name": "binder-pokedex-ja.zip",
-      "size_bytes": 32669168
+      "size_bytes": 199774635
     },
     {
       "exists": true,
       "language": "ko",
       "name": "binder-pokedex-ko.zip",
-      "size_bytes": 27599983
+      "size_bytes": 186155403
     },
     {
       "exists": true,
       "language": "zh_hans",
       "name": "binder-pokedex-zh_hans.zip",
-      "size_bytes": 27840596
+      "size_bytes": 186519822
     },
     {
       "exists": true,
       "language": "zh_hant",
       "name": "binder-pokedex-zh_hant.zip",
-      "size_bytes": 27871107
+      "size_bytes": 186870884
     }
   ],
   "card_counts": {
+    "Base1": 102,
+    "Base2": 64,
+    "Base3": 62,
     "ExGen1": 94,
-    "ExGen2": 125,
-    "ExGen3": 216,
+    "ExGen2": 127,
+    "ExGen3": 261,
     "ME01": 188,
     "ME02": 130,
     "ME02.5": 295,
     "ME03": 124,
     "ME04": 122,
-    "MEP": 55,
+    "ME05": 120,
+    "MEP": 89,
     "Pokedex": 1025,
     "SV01": 258,
     "SV02": 279,
@@ -84,7 +88,7 @@
     "SV10.5W": 173,
     "SVP": 226
   },
-  "generated_at": "2026-07-01T19:34:02.580195+00:00",
+  "generated_at": "2026-09-12T05:05:55.923066+00:00",
   "languages": {
     "de": {
       "name": "Deutsch",
@@ -125,42 +129,57 @@
   },
   "pdfs": {
     "by_language": {
-      "de": 27,
-      "en": 27,
-      "es": 27,
-      "fr": 27,
-      "it": 27,
+      "de": 31,
+      "en": 31,
+      "es": 28,
+      "fr": 31,
+      "it": 30,
       "ja": 5,
       "ko": 4,
       "zh_hans": 4,
       "zh_hant": 4
     },
-    "total": 152
+    "total": 168
   },
   "release_notes": {
+    "display_date": {
+      "de": "September 2026",
+      "en": "September 2026"
+    },
     "summary": {
-      "de": "ME03 Perfect Order und ME04 Chaos Rising",
-      "en": "ME03 Perfect Order and ME04 Chaos Rising"
+      "de": "Frisch aktualisierte Sammlungen, korrigierte Beschriftungen und die neuesten Mega-Entwicklungs-Sets machen BinderPokedex v10.0 vollständiger und verlässlicher.",
+      "en": "Freshly updated collections, corrected labels, and the latest Mega Evolution sets make BinderPokedex v10.0 more complete and dependable."
     },
     "whats_new": {
       "de": {
         "body": [
-          "ME03 Perfect Order und ME04 Chaos Rising mit Quelldaten, Scope-Konfigurationen, angereicherten Ausgabedaten und Featured-Section-Artwork ergänzt",
-          "Release-Builds erkennen Scopes jetzt automatisch aus config/scopes/*.yaml"
+          "Alle Sammlungen wurden mit frisch aktualisierten Kartendaten neu aufgebaut; die verfügbaren Sprachen wurden Karte für Karte abgeglichen.",
+          "Die Mega-Entwicklungs-Ära reicht jetzt bis ME05 Dunkelnacht und ergänzt die sechs bestehenden Mega-Sammlungen.",
+          "Deutsche Basis-Energien tragen jetzt die Namen der echten Karten; Trainerzuordnungen wie Ns Zoroark-ex bleiben in ihren TCG-Sets erhalten.",
+          "Die Promonummern in SVP und MEP folgen jetzt den Karten selbst; Terapagos & Freunde ist ohne erfundene Nummer enthalten.",
+          "Schwarze Blitze und Weiße Flammen verwenden ihre deutschen Setlogos, während lange Kartennamen sicher innerhalb der Schnittflächen bleiben.",
+          "Stellarkrone beginnt mit einem korrigierten Hopplo-Panorama.",
+          "Sammlungen, deren Panorama noch nicht bereit ist, beginnen stattdessen mit einem sauberen Set-Einleger."
         ],
-        "title": "Mega-Evolution-Set-Erweiterung"
+        "title": "Aktuelle Listen. Korrekte Beschriftungen. Mehr Mega-Entwicklung."
       },
       "en": {
         "body": [
-          "Added ME03 Perfect Order and ME04 Chaos Rising source data, scope configs, enriched output data, and featured section artwork",
-          "Release builds now discover scopes from config/scopes/*.yaml"
+          "Every collection was rebuilt from refreshed card data, with the available languages checked card by card.",
+          "The Mega Evolution era now reaches ME05 Dunkelnacht, alongside the six existing Mega collections.",
+          "German Basic Energy labels now match the cards, and trainer-owned names such as Ns Zoroark-ex remain intact in their TCG sets.",
+          "SVP and MEP promo numbers now follow the cards themselves; the unnumbered Terapagos & Freunde is included without an invented number.",
+          "Schwarze Blitze and Weiße Flammen use their German set logos, while long card names stay safely inside their cutting areas.",
+          "Stellarkrone opens with a corrected Hopplo panorama.",
+          "Collections whose panorama is not yet ready open with a clean set cover instead."
         ],
-        "title": "Mega Evolution Set Expansion"
+        "title": "Fresh Lists. Correct Labels. More Mega Evolution."
       }
     }
   },
+  "release_notes_tag": "v10.0",
   "schema_version": 1,
-  "scope_count": 27,
+  "scope_count": 31,
   "scope_groups": {
     "ex": [
       "ExGen1",
@@ -173,6 +192,7 @@
       "ME02.5",
       "ME03",
       "ME04",
+      "ME05",
       "MEP"
     ],
     "pokedex": [
@@ -200,6 +220,9 @@
   },
   "scopes": [
     "Pokedex",
+    "Base1",
+    "Base2",
+    "Base3",
     "ExGen1",
     "ExGen2",
     "ExGen3",
@@ -208,6 +231,7 @@
     "ME02.5",
     "ME03",
     "ME04",
+    "ME05",
     "MEP",
     "SV01",
     "SV02",
@@ -227,5 +251,5 @@
     "SV10.5W",
     "SVP"
   ],
-  "tag": "v8.2"
+  "tag": "v10.0"
 }

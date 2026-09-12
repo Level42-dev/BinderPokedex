@@ -577,3 +577,18 @@ git commit -m "docs: prepare Binder Pokédex v10.0 candidate"
 - [ ] **Step 8: Report the local candidate without publishing**
 
 Report exact test totals, snapshot boundary and reviewed count changes, poster candidate provenance hashes, generated PDF paths, and any remaining blocker. Do not push, tag, create a GitHub release, or claim visual approval for an image that was not inspected.
+
+## Execution status (2026-09-12)
+
+| Area | Status | Verified result |
+| --- | --- | --- |
+| Tasks 1-6: identity, localization, layout, logos, snapshot, refresh | Complete | All 31 scopes refreshed; the 63-file snapshot is locked to the 2026-09-12 boundary and verifies without drift. ME05 is included with 120 cards. |
+| Task 7: poster artwork | Complete with two deliberate standard-cover fallbacks | The corrected SV07 candidate was promoted after full-page and nine-crop review. Four ME05 candidates were rejected for anatomy or subject-count defects. The refresh also exposed a stale Kyurem form in SV08; two replacement candidates were rejected. ME05 and SV08 therefore keep `pdf.enabled: false`, and their PDFs use the deterministic set cover. All 40 enabled poster bundles validate at 2368 x 3268 px, nine cards, and 300 dpi. |
+| Task 8: German PDFs | Complete | All 31 German PDFs were rebuilt (776 A4 pages). Text assertions and fresh Poppler renders confirm the Energy names, owner-qualified SV09 names, safe SV04/SV05 wrapping, German SV10.5 logos, corrected SV07 Hopplo, SVP numbering plus the unnumbered card, and MEP numbers 064/079. |
+| Task 9: local release candidate | Complete | The full nine-language build produced 168 PDFs and 4,613 pages. Nine archives pass manifest/file-set verification and independent ZIP CRC tests. The full test suite passes with 665 passed and 1 skipped. |
+
+The local v10.0 candidate is complete. Publication remains intentionally out of
+scope: no push, tag, or GitHub release was created. ME05 and SV08 can receive a
+panorama in a later release only after a new candidate passes the same full-page
+and nine-crop visual gate; their current standard covers are release-safe and do
+not block v10.0.

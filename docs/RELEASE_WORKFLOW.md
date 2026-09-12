@@ -108,7 +108,7 @@ and therefore builds:
 - the exact file set consumed by the publish job.
 
 The temporary manifest keeps its `pr-<number>-<sha>` build label while loading
-the explicitly configured upcoming release-news contract (`v9.0` for the
+the explicitly configured upcoming release-news contract (`v10.0` for the
 current feature branch). A tagged release instead uses its own tag for both
 fields. This makes missing or malformed major-release news fail before merge.
 
