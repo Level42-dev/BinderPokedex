@@ -26,6 +26,65 @@ artwork:
     max_protected_start_ratio: 0.7
     transition_ratio: 0.1
     subject_clearance_ratio: 0.02
+    grounding:
+      schema_version: 1
+      prompt: >-
+        Preserve this exact highland meadow scene and the three unchanged figures.
+        Add only coherent shadows onto the existing grass beneath them. Silver-gold
+        daylight comes from the upper left, so the shadows project toward the lower
+        right in the image. The standing blue and yellow Mega Lucario on the right
+        needs narrow dark contact shadows touching both red soles and one connected
+        soft body-cast shadow extending a short distance to the lower right across
+        the grass. The floating purple Mega Latias on the left and floating pink
+        Mega Diancie in the center each need a separate soft, lighter ground shadow
+        below and slightly to their lower right, establishing a small hovering gap.
+        Follow the meadow's perspective, existing cel-painted light and grass texture.
+        Keep shadows darkest and sharpest immediately at Lucario's soles, becoming
+        softer and lighter with distance. Change no figure, body part, marking,
+        pose, outline, sky, tree, stone, terrain geometry or distant lighting.
+        Add no creature, text, decoration, object, glow or new grass over a figure.
+      feather_ratio: 0.004
+      regions:
+        - subject_key: pokeapi:official-artwork:10062
+          contact: hover
+          anchors:
+            - [0.181604, 0.950342]
+          polygon:
+            - [0.088443, 0.933219]
+            - [0.141509, 0.931507]
+            - [0.182783, 0.937500]
+            - [0.291274, 0.963185]
+            - [0.306604, 0.981164]
+            - [0.266509, 0.984589]
+            - [0.188679, 0.974315]
+            - [0.104953, 0.955479]
+        - subject_key: pokeapi:official-artwork:10075
+          contact: hover
+          anchors:
+            - [0.524764, 0.950342]
+          polygon:
+            - [0.428066, 0.936644]
+            - [0.495283, 0.932363]
+            - [0.555425, 0.940068]
+            - [0.613208, 0.962329]
+            - [0.630896, 0.980308]
+            - [0.575472, 0.986301]
+            - [0.485849, 0.976027]
+            - [0.424528, 0.958048]
+        - subject_key: pokeapi:official-artwork:10059
+          contact: grounded
+          anchors:
+            - [0.770047, 0.934075]
+            - [0.870283, 0.935788]
+          polygon:
+            - [0.742925, 0.917808]
+            - [0.882075, 0.917808]
+            - [0.924528, 0.941781]
+            - [0.982311, 0.971747]
+            - [0.982311, 0.984589]
+            - [0.937500, 0.986301]
+            - [0.851415, 0.954623]
+            - [0.755896, 0.941781]
   scene:
     concept: the Mega Evolution chapter and its controlled transformed energy
     setting: The artwork contains an expansive highland basin with a calm low meadow, distant

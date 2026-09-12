@@ -1516,6 +1516,37 @@ def derive_grounding_inputs(
         }
 
 
+def _grounded_embedded_workflow_matches(
+    embedded: Any, workflow: dict[str, Any],
+) -> bool:
+    """Ignore only ComfyUI's validated LoadImage cache annotation."""
+    if not isinstance(embedded, dict) or embedded.keys() != workflow.keys():
+        return False
+    for node_id, expected in workflow.items():
+        actual = embedded.get(node_id)
+        if actual == expected:
+            continue
+        if (
+            not isinstance(actual, dict)
+            or not isinstance(expected, dict)
+            or expected.get("class_type") != "LoadImage"
+            or actual.keys() != expected.keys() | {"is_changed"}
+        ):
+            return False
+        annotation = actual.get("is_changed")
+        if (
+            not isinstance(annotation, list)
+            or len(annotation) != 1
+            or not isinstance(annotation[0], str)
+            or len(annotation[0]) != 64
+            or any(character not in "0123456789abcdef" for character in annotation[0])
+        ):
+            return False
+        if {key: value for key, value in actual.items() if key != "is_changed"} != expected:
+            return False
+    return True
+
+
 def grounded_output_record(
     path: Path, workflow_path: Path, role: str,
 ) -> dict[str, Any]:
@@ -1542,7 +1573,7 @@ def grounded_output_record(
             embedded = json.loads(image.info.get("prompt", "null"))
         except (TypeError, ValueError) as error:
             raise ValueError("Grounding output has an invalid workflow binding") from error
-    if embedded != workflow:
+    if not _grounded_embedded_workflow_matches(embedded, workflow):
         raise ValueError("Grounding output does not contain this job's workflow")
     return {
         **file_record(path, image=True), "role": role,

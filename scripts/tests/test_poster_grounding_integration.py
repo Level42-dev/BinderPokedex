@@ -135,6 +135,14 @@ def _outputs(grounded):
     return bundle, path, list(reversed(outputs))
 
 
+def _rewrite_png_prompt(path, graph):
+    with Image.open(path) as opened:
+        image = opened.copy()
+    pnginfo = PngImagePlugin.PngInfo()
+    pnginfo.add_text("prompt", json.dumps(graph))
+    image.save(path, pnginfo=pnginfo)
+
+
 def test_grounded_output_roles_bind_baseline_to_this_graph(grounded):
     bundle, path, outputs = _outputs(grounded)
     roles = runner.select_generation_outputs(outputs, path, bundle.work_dir, bundle.manifest["artwork"]["generation"])
@@ -143,6 +151,43 @@ def test_grounded_output_roles_bind_baseline_to_this_graph(grounded):
     Image.new("RGB", (20, 20)).save(roles["baseline"])
     with pytest.raises(ValueError, match="[Ww]orkflow|[Jj]ob"):
         runner.select_generation_outputs(outputs, path, bundle.work_dir, bundle.manifest["artwork"]["generation"])
+
+
+def test_grounded_output_roles_accept_real_worker_loadimage_cache_annotations(grounded):
+    bundle, path, outputs = _outputs(grounded)
+    graph = json.loads(path.read_text())
+    for node in graph.values():
+        if node["class_type"] == "LoadImage":
+            node["is_changed"] = [provenance.sha256_file(bundle.work_dir / node["inputs"]["image"])]
+    for output in outputs:
+        _rewrite_png_prompt(bundle.work_dir / "output" / output["filename"], graph)
+    roles = runner.select_generation_outputs(
+        outputs, path, bundle.work_dir, bundle.manifest["artwork"]["generation"],
+    )
+    assert set(roles) == {"final", "baseline"}
+
+
+@pytest.mark.parametrize("mutation", [
+    "altered-input", "unknown-node-field", "invalid-cache", "non-load-cache",
+])
+def test_grounded_output_roles_reject_non_cache_prompt_changes(grounded, mutation):
+    bundle, path, outputs = _outputs(grounded)
+    graph = json.loads(path.read_text())
+    load_id = next(key for key, node in graph.items() if node["class_type"] == "LoadImage")
+    if mutation == "altered-input":
+        graph[load_id]["inputs"]["image"] = "different.png"
+    elif mutation == "unknown-node-field":
+        graph[load_id]["runtime_extra"] = True
+    elif mutation == "invalid-cache":
+        graph[load_id]["is_changed"] = ["A" * 64]
+    else:
+        save_id = next(key for key, node in graph.items() if node["class_type"] == "SaveImage")
+        graph[save_id]["is_changed"] = ["a" * 64]
+    _rewrite_png_prompt(bundle.work_dir / "output" / outputs[0]["filename"], graph)
+    with pytest.raises(ValueError, match="workflow"):
+        runner.select_generation_outputs(
+            outputs, path, bundle.work_dir, bundle.manifest["artwork"]["generation"],
+        )
 
 
 def test_grounded_pixel_evidence_is_bound_and_still_requires_visual_review(grounded):
