@@ -30,19 +30,23 @@ artwork:
       schema_version: 1
       prompt: >-
         Preserve this exact highland meadow scene and the three unchanged figures.
-        Add only coherent shadows onto the existing grass beneath them. Silver-gold
-        daylight comes from the upper left, so the shadows project toward the lower
-        right in the image. The standing blue and yellow Mega Lucario on the right
-        needs narrow dark contact shadows touching both red soles and one connected
-        soft body-cast shadow extending a short distance to the lower right across
-        the grass. The floating purple Mega Latias on the left and floating pink
-        Mega Diancie in the center each need a separate soft, lighter ground shadow
-        below and slightly to their lower right, establishing a small hovering gap.
-        Follow the meadow's perspective, existing cel-painted light and grass texture.
-        Keep shadows darkest and sharpest immediately at Lucario's soles, becoming
-        softer and lighter with distance. Change no figure, body part, marking,
-        pose, outline, sky, tree, stone, terrain geometry or distant lighting.
-        Add no creature, text, decoration, object, glow or new grass over a figure.
+        Add only restrained shadows onto the existing grass beneath them. Silver-gold
+        daylight comes from the upper left, so every shadow projects toward the lower
+        right in the image. Beneath the hovering Mega Latias on the left and Mega
+        Diancie in the center, paint separate modest, low-contrast, diffuse ground
+        projections that remain non-recognizable and preserve a clear hovering gap.
+        Do not trace or echo wings, crowns, gems, veils, limbs or other anatomy in
+        those projections; create no sharp silhouette, angular spike, pointed prong,
+        straight cutout edge or notch. Immediately beneath the standing Mega Lucario
+        on the right, paint two very narrow, precise contact shadows touching the
+        grass directly under the two red soles and following the grass surface. Let
+        those contacts transition naturally into one soft, short, low-contrast body
+        shadow extending toward the lower right. Preserve the meadow's perspective,
+        cel-painted lighting, grass color, texture and visible blade detail through
+        every shadow. Create no smeared dark slab, halo or ring. Change no figure,
+        body part, marking, pose, outline, sky, tree, stone, terrain geometry or
+        distant lighting. Add no creature, text, decoration, object, glow or new
+        grass over a figure.
       feather_ratio: 0.004
       regions:
         - subject_key: pokeapi:official-artwork:10062
