@@ -317,6 +317,7 @@ def test_gen2_one_shot_prompt_binds_starter_anatomy_to_exact_references():
     prompt = build_source_detail_prompt(manifest, items, placement_contract=placements)
     assert "IMAGE 2: exact individual detail reference for Chikorita (pokeapi:official-artwork:152)." in prompt
     assert "leaf stem separate from the green collar buds" in prompt
+    assert "three round front collar buds" in prompt
     assert "IMAGE 3: exact individual detail reference for Cyndaquil (pokeapi:official-artwork:155)." in prompt
     assert "IMAGE 4: exact individual detail reference for Totodile (pokeapi:official-artwork:158)." in prompt
-    assert "one broad planted foot with two blunt toe lobes" in prompt
+    assert "one broad planted foot with three rounded toe lobes" in prompt
