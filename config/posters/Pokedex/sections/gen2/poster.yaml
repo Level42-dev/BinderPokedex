@@ -23,6 +23,41 @@ text_content:
   mode: section_summary
 
 artwork:
+  source_details:
+    "pokeapi:official-artwork:152":
+      sha256: 3ffc2eeee9139b0281ab5493b1a6d4b5c1329de5ddf5361f5ee3c93d12c05659
+      traits: >-
+        Match this exact pale yellow-green Chikorita source pose, its rounded
+        head and body, two separate reddish oval eyes, tiny smiling mouth,
+        four short legs and small pointed rear bud. Preserve the single broad
+        green leaf arching up and toward image-right from its narrow head stem,
+        with the leaf stem separate from the green collar buds. Keep the four
+        small round dark-green collar buds individually visible along the
+        neck and upper body. Do not fuse a grass blade, collar bud or leaf
+        stem into an extra appendage or change the source's gentle expression.
+    "pokeapi:official-artwork:155":
+      sha256: 9532b237ef088f8032024b95459303495e261eb2f7f024b79511522e551a9bcd
+      traits: >-
+        Match this exact Cyndaquil right-facing side pose. Preserve the long
+        narrow pale-cream snout, one simple closed-eye arc, deep blue-teal
+        cap and back, cream belly and short separate limbs with tiny light
+        toe tips. The single orange-and-yellow flame is a broad jagged fan
+        emerging from the back toward image-left, not an extra tail or limb.
+        Keep the source's compact body, curved back-to-snout outline and
+        quiet closed-eye expression; do not add an open eye or new markings.
+    "pokeapi:official-artwork:158":
+      sha256: a0ce9f06497dc2a9a3d34174ff89e0ee1a0745ce8007cc89257e379d9be49525
+      traits: >-
+        Match this exact upright bright-cyan Totodile source pose with its
+        head tipped back, wide open pink mouth, distinct small white teeth,
+        one large red-iris eye, pale yellow pointed chest patch and dark red
+        dorsal spikes. Keep both short arms separate, the large nearer hand
+        drawn across its belly and the long low tail pointing image-right.
+        At the bottom, preserve one broad planted foot with two blunt toe
+        lobes separated by one short notch, exactly as in the source. Do not
+        replace that foot with three or more thin splayed claws, or invent a
+        second visible supporting foot. Preserve the source's cheerful pose,
+        body proportions and silhouette.
   promoted_file: poster-flux2-artwork.png
   provenance_file: poster-flux2-provenance.json
   identity_lock:
@@ -50,10 +85,10 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
+    reference_mode: spatial_source_detail_joint
     seed: 260753030
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
 

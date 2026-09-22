@@ -294,3 +294,29 @@ def test_fresh_historical_fingerprint_uses_v10_prompt(detailed):
     assert new["components"]["pipeline_contract"]["version"] == 11
     assert old["components"]["effective_prompt"] != new["components"]["effective_prompt"]
     assert {k: v for k, v in old["components"].items() if k not in {"effective_prompt", "pipeline_contract"}} == {k: v for k, v in new["components"].items() if k not in {"effective_prompt", "pipeline_contract"}}
+
+
+def test_gen2_one_shot_prompt_binds_starter_anatomy_to_exact_references():
+    from scripts.poster_assets.poster_io import load_yaml
+    from scripts.poster_assets.source_detail import build_source_detail_prompt
+
+    manifest = load_yaml(Path("config/posters/Pokedex/sections/gen2/poster.yaml"))
+    generation = manifest["artwork"]["generation"]
+    assert generation["reference_mode"] == MODE
+    assert generation["generation_megapixels"] == 2.0
+    items = [
+        {"pokemon_id": 152, "name_en": "Chikorita"},
+        {"pokemon_id": 155, "name_en": "Cyndaquil"},
+        {"pokemon_id": 158, "name_en": "Totodile"},
+    ]
+    placements = [
+        {"left_per_mille": 50, "right_per_mille": 290, "top_per_mille": 750, "bottom_per_mille": 940},
+        {"left_per_mille": 380, "right_per_mille": 620, "top_per_mille": 750, "bottom_per_mille": 940},
+        {"left_per_mille": 710, "right_per_mille": 950, "top_per_mille": 750, "bottom_per_mille": 940},
+    ]
+    prompt = build_source_detail_prompt(manifest, items, placement_contract=placements)
+    assert "IMAGE 2: exact individual detail reference for Chikorita (pokeapi:official-artwork:152)." in prompt
+    assert "leaf stem separate from the green collar buds" in prompt
+    assert "IMAGE 3: exact individual detail reference for Cyndaquil (pokeapi:official-artwork:155)." in prompt
+    assert "IMAGE 4: exact individual detail reference for Totodile (pokeapi:official-artwork:158)." in prompt
+    assert "one broad planted foot with two blunt toe lobes" in prompt
