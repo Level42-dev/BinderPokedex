@@ -344,20 +344,13 @@ def _write_unscaled_identity_references(
             / str(placement["item"]["file"])
         )
         source = Image.open(source_path).convert("RGBA")
-        if (
-            source.width > JOINT_SCENE_IDENTITY_CANVAS_PX
-            or source.height > JOINT_SCENE_IDENTITY_CANVAS_PX
-        ):
-            raise ValueError(
-                f"Joint-scene identity source {source_path} exceeds the "
-                f"{JOINT_SCENE_IDENTITY_CANVAS_PX}px unscaled canvas"
-            )
+        canvas_px = max(
+            JOINT_SCENE_IDENTITY_CANVAS_PX,
+            ((max(source.size) + 63) // 64) * 64,
+        )
         detail = Image.new(
             "RGB",
-            (
-                JOINT_SCENE_IDENTITY_CANVAS_PX,
-                JOINT_SCENE_IDENTITY_CANVAS_PX,
-            ),
+            (canvas_px, canvas_px),
             neutral,
         )
         detail.paste(

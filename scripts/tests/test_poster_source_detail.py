@@ -69,6 +69,25 @@ def test_real_reference_preparation_and_one_shot_graph(detailed):
     assert "foreground overlaps" in text
 
 
+def test_large_exact_source_is_padded_without_resampling(detailed):
+    bundle, _ = detailed
+    source_path = bundle.source_dir / "cutouts/pokemon_001.png"
+    source = Image.new("RGBA", (534, 534), (40, 90, 140, 255))
+    source.putpixel((0, 0), (11, 22, 33, 255))
+    source.putpixel((533, 533), (201, 202, 203, 255))
+    source.save(source_path)
+    bundle.manifest["artwork"]["source_details"]["pokeapi:official-artwork:1"]["sha256"] = hashlib.sha256(source_path.read_bytes()).hexdigest()
+
+    preparation.prepare("Example", 2.0, generation_mode="joint_scene", reference_mode=MODE)
+    with Image.open(bundle.work_dir / "identity_reference_1.png") as loaded:
+        detail = loaded.convert("RGB")
+        assert detail.size == (576, 576)
+        assert detail.getpixel((0, 0)) == (226, 224, 211)
+        assert detail.crop((21, 21, 555, 555)).tobytes() == source.convert("RGB").tobytes()
+    with Image.open(bundle.work_dir / "identity_reference_2.png") as loaded:
+        assert loaded.size == (512, 512)
+
+
 @pytest.mark.parametrize("problem", ["missing", "extra", "empty", "hash", "source", "duplicate"])
 def test_invalid_source_details_fail_before_preparation_or_graph(detailed, problem):
     bundle, _ = detailed
