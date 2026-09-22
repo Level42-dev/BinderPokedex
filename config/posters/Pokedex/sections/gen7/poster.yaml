@@ -23,6 +23,48 @@ text_content:
   mode: section_summary
 
 artwork:
+  source_details:
+    "pokeapi:official-artwork:722":
+      sha256: 5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36
+      traits: >-
+        Rowlet must match this exact round tan owl source pose. Preserve the
+        two joined white facial discs, two separate dark oval eyes with white
+        highlights, and the central white upper beak with its orange lower
+        section. Keep the two distinct green leaves of the bow tie, the pale
+        lower belly, both folded side wings, and the two small orange-brown
+        feet in their original positions. Copy the source proportions, face
+        spacing and clean rounded silhouette; do not add ears or extra limbs.
+    "pokeapi:official-artwork:725":
+      sha256: 02391ac457888baf123accfc5ce446fc75df4790b3b000865a21c0f21b622600
+      traits: >-
+        Litten must match this exact dark charcoal walking cat source pose.
+        Copy the precise overlapping outlines immediately below the chin
+        in IMAGE 3. The long planted left foreleg has red bands and one
+        rounded divided paw. Just to its image-left, a tiny diagonal strip
+        of charcoal with one red band peeks out beneath the chin; this is
+        the visible part of the right foreleg. This short triangular strip
+        ends by disappearing behind the upper part of the long planted
+        leg. Below the upper red band, the image-left edge of the long leg
+        is one uninterrupted contour down to its own paw, without any
+        separate rounded bump beside it. Match this exact strip-and-overlap
+        geometry rather than drawing another foot. Preserve the separate
+        curved red-banded rear limb at the
+        image-right, the one raised curved tail with its pointed tuft, two
+        triangular pale inner ears, red double-bar forehead marking, yellow
+        eyes with narrow dark pupils and warm inner accents, red muzzle and
+        pointed red cheek tufts. Keep the exact head angle and compact body.
+    "pokeapi:official-artwork:728":
+      sha256: 3bfa3104b894f212985122732497b17c78979c6bc9304bd7396e781677f2d7a3
+      traits: >-
+        Popplio must match this exact cheerful blue sea-lion source pose
+        facing upward toward the image-right. Preserve the shiny round pink
+        nose, pale muzzle with short dark strokes, tall dark eye with white
+        highlight, and open mouth with a distinct pink tongue. Keep both
+        small rounded side ears, the wavy pale blue neck frill, the raised
+        image-left foreflipper and lowered image-right foreflipper with
+        their separate pale tip stripes, plus the two smaller rear flippers
+        at the base. Copy the source flipper silhouette, body lean and
+        expression; do not add limbs or change the pose.
   promoted_file: poster-flux2-artwork.png
   provenance_file: poster-flux2-provenance.json
   identity_lock:
@@ -50,10 +92,10 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
+    reference_mode: spatial_source_detail_joint
     seed: 260726058
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
 

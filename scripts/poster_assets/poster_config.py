@@ -897,6 +897,7 @@ def joint_scene_conditioning_contract(
     if not items:
         raise ValueError("Joint-scene conditioning needs at least one subject")
     if reference_mode not in {
+        "spatial_source_detail_joint",
         "individual_spatial_joint",
         "spatial_identity_joint",
         "regional_identity_joint",

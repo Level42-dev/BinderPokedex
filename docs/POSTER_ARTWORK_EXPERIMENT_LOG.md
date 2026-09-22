@@ -8,7 +8,13 @@ Commands and implementation names below describe their historical checkpoints;
 rejected builders were removed from the production tree during the 2026-07-29
 KISS cleanup and remain recoverable through Git history.
 
-## Non-negotiable review rules
+## Historical joint-scene review rules
+
+The following rules describe the joint-scene experiments recorded below. The
+current source-faithful pilot exception approved on 2026-09-12 is specified in
+[`POSTER_ARTWORK_REQUIREMENTS.md`](POSTER_ARTWORK_REQUIREMENTS.md) and the final
+entry in this log. Historical acceptance statements are not current approval;
+the complete September re-audit supersedes 41 of them.
 
 - The final artwork is synthesized by the model as one coherent scene. No
   character cutout is composited or restored after the final model pass.
@@ -2932,3 +2938,509 @@ incorrectly expected Kyurem after the importer had correctly selected Pikachu.
 A failing regression reproduces the disagreement; the planner now delegates to
 the same `select_pokemon` function as import and generation, including invalid
 slot validation. No cache falsification or alternate selection path is added.
+
+### Complete source re-audit and ExGen3 correction probes (2026-09-12)
+
+The operator identified malformed Mega Lucario and requested inspection and
+direct correction of every panorama. The complete re-audit inspected 42
+masters, 125 source instances and all 378 physical cards. It rejects 41
+installed panoramas; only ME05 passes, also independently second-reviewed.
+Across the final per-subject decisions, 86 reject, 22 pass and 17 remain
+uncertain. SV07 and SV08 approvals above are superseded by this detailed
+source comparison. Reports and precise hash bindings are in
+[`reviews/2026-09-12-panorama-audit.md`](reviews/2026-09-12-panorama-audit.md).
+
+The first correction probes reused the active workspace's configured remote
+worker, Klein 4B BF16, four steps and 1-MP generation. Every job returned
+`run.json`, `comfyui.log` and all output images; input/model/workflow/output
+hashes were verified. Both raw panoramas were actually viewed against the
+three original ExGen3 Mega references and rejected before promotion:
+
+| Probe | Seed | Raw SHA-256 | Rejection |
+| --- | ---: | --- | --- |
+| ExGen3 Mega, individual-spatial v9 | 260751036 | `579a4a4b2c8fc3b44507eb0a1b84e5aef85336be96f58a2f5a215054b40be4f4` | Lucario still loses its source chest spikes; merely changing the seed does not pass identity. |
+| ExGen3 Mega, spatial-identity v7 | 260751036 | `5d7c18652dbfc220c08e22d62d83b08490272a5232fd6fee141bd3e5680e5f5d` | Two lateral spike ends return, but the central chest spike is still missing. Diancie's face/crown remains oversimplified. |
+
+No complete nine-crop approval is claimed for these already-rejected probes.
+Neither joint-scene probe changed a manifest, production artwork, PDF or
+archive. The subsequent bounded tests used the documented identity-lock
+fallback with exact source pixels and mandatory model upscale. Pixel equality
+was not treated as visual approval.
+
+#### Identity-lock correction trials and structural grounding limit
+
+Both identity-lock trials reused the same references, model, seed `260751036`,
+four-step sampling and 1-MP geometry. Each ran the documented source-pixel
+check before the separate learned-upscale job. All 40,345 opaque source pixels
+were unchanged in both raw images; the reference SHA-256 was
+`615cab2fb3ee9f98993dcdc77a3081c8646d6613c853ecfcbf25ae997d27ae79`.
+Each immutable job returned its run metadata, log and complete output set,
+with package/input/workflow/model/output hashes checked. The 848 x 1168 raw
+images became 2368 x 3268 print-size masters; no candidate was promoted.
+
+| Identity-lock trial | Raw SHA-256 | Print-size master SHA-256 | Decision |
+| --- | --- | --- | --- |
+| Default upper-transition boundary, maximum protected start ratio 0.70 | `d6bdfe74f3b766f2551346a04f2b0f4c903a13435df25b5cca49514cd7381022` | `a869257670470b301d870079e822ed698a9b166ffe37b5d1cfac971dd12de9a3` | Anatomy passes after upscale, including Lucario's source chest/foot spikes. Reject doubled terrain/tree transitions and inadequate ground contact. |
+| Earlier upper-transition boundary, maximum protected start ratio 0.45 | `5eae0a0b7115529c22dcb4c883927def74bb77be3a3fcb2113fd0e177f5d8740` | `9717b9a6757228b2536996a419c6accae6db561f1a2f28548535cecfbd4dc0bb` | Major transition ghosts reduced, but faint transition traces and ungrounded Lucario remain. Reject. |
+
+The first trial received an independent direct review of all three original
+sources, raw image, complete master/localized preview and all nine native-size
+physical card crops. Its detailed hash-bound report is
+[`reviews/2026-09-12-exgen3-mega-identity-lock-trial-1.json`](reviews/2026-09-12-exgen3-mega-identity-lock-trial-1.json).
+The second trial was rejected after root inspection of the complete master
+and Lucario crop plus the pixel comparison below; no complete second
+nine-crop review or approval is claimed. The temporary manifest ratio change
+was restored to 0.70 after the comparison.
+
+The existing workflow generates the landscape without the figures, then
+composites exact source figures and permits edits only in the upper image.
+The ExGen3 figures occupy raw-image y875–1092, below the visibly editable
+region ending at y817 in trial 1 and y525 in trial 2. Every raw pixel in the
+rectangle `(0, 818, 848, 1168)` is byte-identical between the two candidates.
+Changing this upper-transition scalar cannot add figure-dependent shadows
+to that protected ground. Lucario lacks a convincing foot/body shadow;
+the hovering figures also lack clear individual ground-projection cues.
+
+The required public upscaler was absent from the configured cache. The
+official [Real-ESRGAN anime model](https://github.com/xinntao/Real-ESRGAN/blob/master/docs/anime_model.md)
+release asset `RealESRGAN_x4plus_anime_6B.pth` was fetched from the official
+`v0.2.2.4` release and installed without overwriting any existing file.
+Its 17,938,799 bytes have computed SHA-256
+`f872d837d3c90ed2e05227bed711af5671a6fd1c9f7d7e91c911a61f155e99da`;
+local and worker hashes match. The release API did not supply a publisher
+digest, so this is a measured transfer identity, not a publisher checksum.
+
+The narrowly scoped next proposal is a source-pixel-protected contact/cast
+shadow pass over separately approved ground masks, not more blind seed or
+upper-transition tuning. It needs explicit support/projection anchors,
+outside-mask restoration, mask provenance, a versioned graph/fingerprint
+contract and regression tests. Existing masked-edit research in this log is
+evidence for testing that boundary, not proof that a new shadow pass will
+meet the visual gate. Start with ExGen3 only; do not expand until its raw,
+master and all physical crops pass both identity and scene review.
+
+At the conclusion of those four probes, the renderer extension awaited design
+approval. The 41 rejected installed approvals were revoked with hash-bound agent re-audit
+evidence; the existing canonical validation gate rejects exactly those 41
+and accepts only ME05. Production images, PDFs and archives remain unchanged.
+
+#### Approved source-locked grounding prototype (2026-09-12, in progress)
+
+The operator subsequently approved implementing the targeted change and asked
+for its advantages and disadvantages. The approved approach generates a clean
+landscape once, composites the exact cast, and permits only reviewed ground
+polygons to change in a separately prompted shadow pass. This explicit
+`grounded_source_pixels` contract replaces the former upper-context blend;
+historical graph contracts remain reproducible. See the
+[`implementation plan`](superpowers/plans/2026-09-12-source-locked-grounding.md)
+and the German
+[`pilot explanation and review status`](reviews/2026-09-12-exgen3-grounding-pilot.md).
+
+The mask/protected-pixel module has 34 passing focused tests and passed
+independent review after boundary feathering, raster-anchor rounding and
+too-thin regions were corrected. The reviewed ExGen3 mask protects all 54,119
+nonzero-alpha source pixels and permits 18,400 edits on an 848x1168 canvas.
+The active worker's installed `VAEEncode`, `SetLatentNoiseMask`,
+`ReferenceLatent` and `ImageCompositeMasked` interfaces were confirmed
+read-only; the four existing model artifacts are available. Renderer and
+provenance integration is in progress. No pilot job has been queued and no
+new artwork is approved at this checkpoint.
+
+The versioned renderer and pixel/visual provenance gates subsequently passed
+112 focused tests and independent review. A real retained worker-output check
+then exposed a boundary not represented by the initial synthetic PNG fixtures:
+ComfyUI adds one input-file SHA-256 under top-level `is_changed` for LoadImage
+nodes in saved prompt metadata. The original semantic graph is unchanged.
+The pinned runtime's cache implementation and all three actual input hashes
+confirm that origin. The pilot task now includes narrowly accommodating that
+runtime annotation in the shared graph comparison, with negative tests for
+semantic changes and unexpected metadata; returned PNGs and sealed jobs remain
+unaltered. No extra seed or GPU attempt was spent discovering this mismatch.
+
+The helper/configuration and strict runtime-annotation compatibility change
+subsequently passed independent code review with no open findings. A stable
+full local suite at `2f918b0` reports 814 passed, 3 failed, 1 skipped and 4 passing
+subtests. The same three retained production-approval failures remain intentional
+blockers; this is not a green release check. The first immutable grounded trial,
+`audit-exgen3-mega-grounded-v4-260751036`, was prepared without submission and its
+graph/input/mask hashes checked. Execution and complete retrieval have now been
+started once with the existing worker and pinned models. Visual acceptance is
+still pending.
+
+### ExGen3: operator-directed one-shot restart (2026-09-14)
+
+The operator reaffirmed true one-shot generation as primary and retained the
+multi-stage approach only as a justified last resort. Plausible, scene-specific
+foreground overlap is explicitly desired and does not count as altered
+character identity. The proposed depth-analysis extension of the fallback was
+not implemented.
+
+Three isolated jobs reused the selected worker, existing pinned Klein 4B BF16
+stack, seed `260751036`, four steps and the same four spatial/detail references.
+Every job returned its complete metadata, log and output; package, input,
+workflow, model and output bindings were checked. No model or runtime change
+was made.
+
+| Candidate | Isolated change | Raw SHA-256 | Outcome |
+| --- | --- | --- | --- |
+| A | Replace generic avoidance-first prompt with concrete source-detail and scene-appropriate occlusion instructions | `71cc2c6df4accddde135c21b97f77c02835c7e9eca81a30c86a87001f1cbc153` | Better visible identity details, but greatly enlarged cast violates card containment; reject |
+| B | Add an explicit landscape-first size/placement priority prefix to A | `83f183ae577f8cec754d800e58860f5b20bbaf5c55fa92ac99d330db74fe0bd1` | Restores card fit; small face/facet details remain soft; superseded by C |
+| C | Raise only target/scheduler raster from 848 × 1168 to 1200 × 1664 | `a1f96425dc1b7beb7f7cb3d5c35c62cb6e9dd708a2d8187cca2f7b2cb9cc813c` | All nine cards viewed by agent; subsequently visually accepted by user with minor deviations on 14 September; not promoted |
+
+C remains one empty target, one sampler and one decode, without post-decode
+character restoration, compositing or learned upscaling. Its deterministically
+resampled 2368 × 3268 text-free master has SHA-256
+`eb61f272fd22bd400b2c2555cb2a490fad47c85b3947087a88b96b2e9dce3ebd`.
+Lucario's central chest cone and both pale shoulder features are present.
+Small foreground overlaps occur at Lucario's feet and Latias's lower tip.
+Fine contours and Diancie's crystal facets remain interpreted rather than
+pixel-identical; no unconditional fidelity or sales-readiness claim is made.
+
+The direct source/raw/master/nine-crop review, actual raster versus inherited
+filename-prefix caveat and all evidence hashes are retained in
+[the comparison](reviews/2026-09-14-exgen3-oneshot-restart.md) and
+[the candidate report](reviews/2026-09-14-exgen3-oneshot-c.json).
+The focused render-job suite passes all seven tests. Production generation
+manifests, images, PDFs and archives remain unchanged. No additional set,
+fourth trial, fallback render or promotion was started.
+
+The operator then accepted the shown candidate C, explicitly considering a
+small missing black eye stroke/dot/pupil detail acceptable. This human decision
+is recorded separately from the agent inspection and is bound to master
+`eb61f272fd22bd400b2c2555cb2a490fad47c85b3947087a88b96b2e9dce3ebd`.
+The source/raw/master identities were rechecked when recording acceptance.
+The first-example gate is satisfied, but the exception applies only to this
+candidate; it does not waive source-fidelity review for other sets. No extra
+render or production promotion accompanied the approval record. Canonical
+integration and rebuilt-output validation remain outstanding.
+
+### Base1: source-detail one-shot transfer test (2026-09-14)
+
+The operator requested a second-set test with special attention to Mewtwo in
+the lower-left card. Two isolated jobs reused the ExGen3-C graph, Klein 4B
+BF16, four steps, 2-MP target and the existing Base1 seed `260726503`, with
+Base1's original Mewtwo, Bulbasaur and Charmander sources and meadow brief.
+
+A improves Mewtwo's source likeness but adds a fourth, malformed Bulbasaur in
+the raw middle landscape. Its raw SHA-256 is
+`27ec786a699c8b210e8278da42bb6bc39dbfe785cda32d2bf8178941cda5a887`;
+the full raw/master and native Mewtwo card were viewed, but no complete
+nine-card visual review or approval is claimed for this rejected candidate.
+
+B changes only the positive prompt's leading inventory/placement instruction;
+all other graph nodes, reference images, models, seed and raster are identical.
+It shows only the intended three figures. All three original sources, B raw,
+full master, German preview and all nine native physical cards were viewed.
+Mewtwo's angular eye, three round fingertips, slender limbs and continuous
+tail are close to the source. Small eye, foot, mouth and other fine contours
+remain interpreted. Scene-appropriate grass crosses small lower edges; the
+user's ExGen3-C acceptance does not automatically approve this different image.
+
+B raw: `f655c8a01f8b8f2d4a26b978a29db89ced62e01a5b3dc61d3d7a48eefd16134a`.
+B print master: `d06f69eb6e010b2670987a2209d3aec50848ac694aaefec64dc70d342ce0d9b4`.
+The existing English logo subtitle remains in the deterministic German preview
+and is not newly approved by this artwork test. Both complete jobs and logs,
+15 artwork/source hashes per job and 18 physical crop rectangles were verified;
+the focused render-job suite reports seven passes. See
+[the comparison](reviews/2026-09-14-base1-oneshot.md) and
+[the hash-bound report](reviews/2026-09-14-base1-oneshot.json).
+
+No promotion, production configuration/image/PDF/archive change, third trial,
+other-set render or fallback was performed. B was presented as a user-comparison
+candidate, not a sale-ready release. No model or runtime was installed.
+
+The operator subsequently responded "das sieht super aus!" to the shown
+text-free Base1 B panorama. Its own human visual acceptance is recorded against
+master `d06f69eb6e010b2670987a2209d3aec50848ac694aaefec64dc70d342ce0d9b4`,
+with raw/master/preview hashes rechecked when recording the decision. Agent
+findings and the English-logo caveat are retained separately. Both ExGen3 C
+and Base1 B now have scoped user acceptance, not blanket approval for other
+artwork. No new render or production change accompanies this decision;
+canonical integration, technical promotion and release validation remain open.
+
+### Base2: operator-directed foreground repair spike (2026-09-14)
+
+The operator accepted Pikachu's existing appearance but marked two bottom-left
+foreground grass blades that must continue in front of its extended arm and
+lower-left belly. One-shot remains primary. This separate post-processing
+experiment does not replace the agreed generation path or restore source
+character cutouts.
+
+Three isolated jobs reused the configured worker, pinned Klein 4B BF16 stack,
+four-step Euler sampler, seed `260914201` and original native physical card.
+Agent visual analysis, checked against the operator annotation, supplied two
+narrow repair masks; no autonomous depth-error detector was implemented.
+
+| Trial | Changed control | Outcome |
+| --- | --- | --- |
+| A | Text-guided masked latent inpainting | Belly blade extends in front, but retains the old body outline; arm blade remains behind. Reject |
+| B | Add the operator's annotated crop as a second image reference and explain the annotations | Arm remains behind; belly extension is too short. Reject |
+| C | Change only B's sampling latent to an empty target; keep final masked restoration | Raw image creates a long, misplaced blade and orange guide residue; bounded output has clipped geometry and pale seams. Reject |
+
+Every variant changed zero pixels outside the 13,866-pixel allowed region in
+the complete 7,738,624-pixel master. All 27 physical crop rectangles and DPI
+values were checked; the eight other cards per variant remain pixel-identical.
+All three complete jobs, logs, six outputs, seals and frozen inputs were
+verified. The focused safety/render-job suite passed 12 tests. Raw output,
+native Pikachu card and full text-free master were viewed for each trial;
+the exact Pikachu source was compared. No complete nine-card visual approval
+is claimed for these rejected trials.
+
+The three-control experiment stops without promotion. All original artwork,
+production configuration/code, PDFs and archives remain unchanged. The current
+renderer has not demonstrated a precise repair of both crossings; a further
+attempt needs different contour control, not indefinite prompt/seed retries.
+The [comparison and full prompts](reviews/2026-09-14-base2-foreground-repair.md)
+and [hash-bound verdicts](reviews/2026-09-14-base2-foreground-repair.json) retain
+the partial result and failures. The operator's original Pikachu acceptance
+does not grant acceptance to any repaired candidate.
+
+### Base2: contour-guided continuation (2026-09-14)
+
+After the operator requested continuation, D/E tested a different spatial
+control mechanism: agent-traced continuation of the two existing leaf contours,
+textured from those leaves, used as input to an actual masked harmonization
+pass. No Pokemon cutouts were inserted. D achieved both crossings but repeated
+donor texture created transverse bands. E changes only the donor-row mapping to
+one continuous stretch; graph, prompt, geometry, masks, seed and model pins are
+identical. E keeps both crossings without D's periodic bands and is presented
+for local operator review, with a minor contour irregularity noted.
+
+E master SHA-256:
+`70766e8307e73b36e0d5ff6be18f24c0df0efaae35cc7fb9355eb6948ee291aa`.
+Both complete render jobs and four outputs were retrieved and verified. All
+18 physical crop rectangles and DPI values passed; the eight other cards per
+variant remain pixel-identical. E changed 10,783 pixels inside its 10,787-pixel
+mask and zero outside it. The focused suite passed 17 tests. Failed initial
+job reservations were retried only after read-only proof that no job existed;
+exactly one completed render per variant was retrieved.
+
+See the [source/crop comparison and full prompts](reviews/2026-09-14-base2-contour-repair.md)
+and [hash-bound review](reviews/2026-09-14-base2-contour-repair.json). No promotion,
+original/PDF/archive replacement or general automatic depth detector was added.
+The inherited preview still contains English Jungle metadata despite its local
+filename; localization and complete panorama/release approval remain separate.
+
+Subsequent operator response on 2026-09-14: "das sieht prima aus!". This grants
+scoped visual acceptance of Pikachu and the two foreground grass-blade crossings
+in candidate E, after the minor contour irregularity was disclosed. Acceptance
+is bound to the E master above, the shown physical-card crop
+`d92ab3abb30aaeaffed2d128891ef69cdff7b329ef82252b0c36c753117002b4`
+and its exact identity source in the review report. Relaxo, Evoli, the complete
+panorama, localization, production promotion and release remain separate gates.
+Only review records were updated; original artwork, sealed creation-time
+evidence, PDFs and archives were not replaced.
+
+### SV07: canonical source-detail one-shot pilot (2026-09-15)
+
+After the operator approved the next-step plan and explicitly required new
+Hopplo (P01), Mega-Latios (P15) and Miraidon (P40), the accepted 2-MP
+spatial-layout plus individual-detail recipe was integrated into the canonical
+renderer as an opt-in contract. Exact source traits are bound to their source
+PNG hashes and generation fingerprints. Initial pipeline 10 is retained for
+reconstruction; current pipeline 11 strengthens only the first two count and
+layout prompt paragraphs. Older contracts and the bulk initializer are
+unchanged. Both scoped implementation reviews passed without findings.
+
+Only SV07 was activated. Both jobs use the existing Klein 4B BF16 model pins,
+four steps, seed `260915007`, four identical reference images, one empty
+1200 × 1664 target, one sampler and one decode. No source paste, mask, restore
+or learned-upscale stage was introduced. A/B differ only in the versioned
+leading count/layout prompt; the source traits and landscape/depth tail are
+identical. Actual A history is covered by an exact prompt/fingerprint fixture.
+
+| Trial | Raw SHA-256 | Visual outcome |
+| --- | --- | --- |
+| A / pipeline 10 | `ab6bbdc1c634d6ade7dc41a5292a9c45aa7b8135a3af660c64f053198ad7f513` | Reject: extra Bulbasaur, Squirtle in the middle row, clipped oversized Scorbunny and three upper teeth instead of one |
+| B / pipeline 11 | `4bb09429f81f13718db12f89b5361dc9045bb53aeff7279b9e95b8ce744e5086` | Exactly three source-close figures, all physically contained; not release-ready because Scorbunny/Squirtle exceed the configured smaller size bounds and Scorbunny has a narrow leftward ground-shadow inconsistency |
+
+B text-free master:
+`3d44b64f29b99898f150a4a5bee5cf62d6e928f1658dd9396a4464e76dda2799`.
+The source/master/raw images and all nine actual cards were viewed for each
+trial. B additionally received an independent full raw/master/preview/nine-card
+and exact-source review. Both reviewers distinguish the size-contract failure
+from physical clipping: no figure is clipped in B. No definite vegetation
+depth reversal was established; no speculative foreground edit was made.
+
+Complete sealed jobs, `run.json`, `comfyui.log` and every output were retrieved.
+The deterministic 2368 × 3268 master, all nine 750 × 1050 physical card
+rectangles, DPI and hashes were verified. The controller reran the covering
+suite: **356 passed, three pre-existing revoked/stale-approval failures**.
+The 27 new focused tests pass. Approval records were not changed to turn the
+suite green.
+
+See [A's rejection](reviews/2026-09-15-sv07-source-detail-a.json),
+[B's hash-bound findings](reviews/2026-09-15-sv07-source-detail-b.json) and
+[the full image plus all three original/card pairs](reviews/2026-09-15-sv07-source-detail-review.md).
+B is shown for identity/composition feedback with its unresolved layout and
+shadow issues, not submitted as a finished replacement. Further generation
+waits at the agreed P01 checkpoint. P15/P40 source inspection is recorded in
+[the next-pilot source notes](reviews/2026-09-15-p15-p40-source-notes.md);
+neither target was rendered. All 42 production masters, previous scoped human
+acceptances, PDFs and ZIPs remain unchanged. No promotion, commit or push.
+
+The operator subsequently responded "alles perfekt. der neue Flow scheint sehr gut zu greifen!"
+to B and the three source/card pairs. After a fresh canonical B verification,
+identity and composition acceptance (including the disclosed larger figures)
+was recorded against the exact master, raw, card and source hashes. Original
+agent findings and sealed creation-time evidence remain unchanged. The
+previously reserved narrow-shadow correction is still open before technical
+promotion. The P01 feedback checkpoint is satisfied; this does not approve
+P15/P40 or any other new image.
+
+### P15/P40: source-detail transfer A/B pairs (2026-09-15)
+
+Following P01's identity/composition checkpoint, the two other explicitly
+requested targets were activated with source-detail pipeline 11 and a 2-MP
+target. All six original PNGs and prepared references were inspected. A bounded
+ignored adapter uses the canonical immutable job, graph, prompt, sidecar,
+finalization and slicing functions; independent review found and then verified
+a fail-closed review-evidence correction. The controller's current covering
+adapter/source-detail/render-job run reports **60 passed**.
+
+The existing workspace renderer marker and configured worker/model pins were
+verified and reused. Four jobs ran serially, with no runtime bootstrap. Each
+returned `run.json`, `comfyui.log` and its sole output. The one-shot graph uses
+one shared spatial cast plus three detail references, one empty 1200 × 1664
+target, four steps, one sampler and one decode. Print preparation is
+deterministic Lanczos at 300 dpi. No source paste or fallback was used.
+
+| Trial | Raw SHA-256 | Visual outcome |
+| --- | --- | --- |
+| P15-A | `1876b0544ebf4de5c4d454a6e06c5a81f5f512a14f587f374605079d575bc13f` | Reject: duplicated Mega-Mewtwo X tail, red eye surround, extra large Mega-Latios wing marking and size drift |
+| P15-B | `66b4136825266cf6b6166599d2980d4e4fc184d15ffadd2757d8eb59e41d311d` | Corrected tail/face and single small Latios root-wing mark; physically contained, but smaller target-layout bounds not met and Rayquaza close to the left cut edge |
+| P40-A | `8aa17831853b07e3a00b3320ac865a8c06df9a8cc35176acb855777bab48e188` | Reject: oversize/high cast and left lightning-tip edge-contact concern; the early claim that both tips were proven cut was too strong |
+| P40-B | `73992687c05670f2b89bcbe41689eb9c8ecd9ee24de3c15a7b43e554ee068cff` | Both visible Miraidon lightning tips inside the card with narrow clearance; all source identities close, but target-layout size still fails and building remains central |
+
+P15-B changes only the Mewtwo X and Latios source-trait paragraphs. The root's
+initial Latios description incorrectly placed its triangular marking on the
+long upper wing. Re-viewing the exact source established one small marking at
+the wing root and a plain upper wing; the consumed B prompt corrects that
+description. The historical A brief and exact manifest snapshot are retained.
+P40-B changes only one final scene-layout reminder covering full silhouettes,
+including lightning glow. All four reference hashes, original source bytes,
+model pins, graph topology and seeds (`260736802` / `260711318`) remain
+identical within each A/B pair. Only text node 4 differs.
+
+For every A/B trial, root and an independent reviewer viewed the raw, full
+master, German preview, all nine real card crops and all three exact source
+originals. Both B verifiers pass for immutable evidence, hashes, all nine
+750 × 1050 crops, pixel rectangles and DPI. The output masters are
+2368 × 3268; no deterministic crop was changed to hide a generated failure.
+Selected visible energy/glow pixels prove source-layout noncompliance while
+remaining inside the physical cards; these observations are not full
+silhouette segmentation or precise outermost-clearance measurements.
+
+P15-B master: `6904f2a6792461f6066721c9089a44fed613b2ab12a12c9c0bc6203d66164d84`.
+P40-B master: `0ec6eb54e7e0797021497ade7a624b025b797fe03217117322199413770befa4`.
+Independent review regards P15 as a conditional review candidate and rejects
+P40 for promotion due to the binding small-cast layout. Neither file is
+release-ready or human-approved. Both are shown only for explicit
+identity/composition feedback with the unresolved size and clearance limits.
+
+See [all six exact card/source pairs](reviews/2026-09-15-p15-p40-source-detail-review.md),
+[P15-B hash-bound findings](reviews/2026-09-15-p15-source-detail-b.json) and
+[P40-B hash-bound findings](reviews/2026-09-15-p40-source-detail-b.json).
+P01's acceptance and other earlier image-specific decisions do not transfer.
+All 42 installed masters and previous accepted candidates remain unchanged.
+No third attempt, bulk generation, promotion, PDF/ZIP rebuild, commit or push.
+
+### P15: explicit user-requested Rayquaza clearance trial C (2026-09-15)
+
+The user accepted P40-B and P15-B's identities/remaining scene, requesting only
+more space around Rayquaza. Both B evidence sets were verified before recording
+those exact-image decisions. P40 was not regenerated. The exact P15-B manifest
+was archived before C; its SHA-256 is
+`784180894d124e6982267f495ced4015fe5f08cb3b911fb006535599178949b4`.
+
+C changes only one appended scene constraint requesting the whole Rayquaza
+silhouette inside its existing target bounds, with at least 8% of physical
+card width (60 px, about 5 mm at 300 dpi) as landscape on both sides.
+All four references, all three exact source PNGs/trait paragraphs, seed,
+model pins, graph nodes except prompt node 4, and print slicing are unchanged.
+The existing configured worker passed a fresh owner-only-marker, Darwin
+arm64/MPS and three-model-hash probe. One C job completed and all evidence
+was retrieved. The log reports MPS and a 66.93-second prompt, with no
+traceback or token-truncation warning. The focused covering suite passed 60 tests.
+
+**Visual result: rejected — requested clearance not achieved.** A fixed
+distinctive-teal-interior-pixel check over card rows 110–899 has inclusive
+bounds B `[10,228,735,817]`, C `[10,240,720,818]`. Left padding stays at
+10 px; right padding improves from 14 to 29 px. These are interior-color
+proxies, not complete silhouette bounds; outlines/glow reach farther out.
+Already the interior pixels disprove the requested 60 px clear strip.
+The full physical card visibly remains too tight on the left.
+
+Root viewed raw/master/German preview, all nine actual cards, all three exact
+originals and all four prepared references. No decisive new identity break was
+found in Mewtwo X, Rayquaza or Latios, but other C pixels and landscape details
+changed; B's approvals do not transfer. No independent agent review was used
+for this already-failing bounded C candidate.
+
+Raw C: `edc86206fda9e650ab6204eacd2bdb2f310e88777289f12fa111d6bf410bcc1b`.
+Master C: `3e7ae11ec1e76dcae3038f8288225b4def0afe6cb62de44f2b0849ff4bfdea52`.
+C manifest snapshot: `070bc1241c6f9d101f716369c20deb7146f4659d2eb4d0d72eaf396de871a43f`.
+Canonical verification passed with C's manifest active. That exact manifest
+and the immutable job remain evidence. The ineffective new constraint was
+then removed, restoring active P15 config exactly to B, not rewriting C.
+Later C preflight against active B is expected to reject historical drift.
+
+The comparison and all three C/source pairs are in
+[the clearance review](reviews/2026-09-15-p15-clearance-review.md), with
+[hash-bound C findings](reviews/2026-09-15-p15-clearance-c.json) and the actual
+consumed prompt linked there. A proposed per-subject spatial-reference size
+control for Rayquaza is awaiting the user's choice. No fourth automatic
+prompt-only trial, multistage fallback, promotion, PDF/ZIP rebuild, commit or
+push. All 42 installed masters and all earlier accepted files are unchanged.
+
+### P15-D: approved Rayquaza-only spatial size control (2026-09-15)
+
+After C failed, the user explicitly approved continuing with a smaller
+Rayquaza position reference. An opt-in exact-canonical-subject scale map was
+added test-first, independently reviewed and corrected for asymmetric-alpha
+center preservation and special-form source-less fingerprint reconstruction.
+All three individual detail PNGs and original source bytes remain unchanged.
+Default/empty overrides preserve exact old references/prompts/fingerprints;
+real P15-B and P40-B were rebuilt and compared byte-for-byte before activation.
+The additive spatial-reference fingerprint contract is version 1; historical
+source-detail prompt contracts 10/11 are unchanged.
+
+D uses only `pokeapi:official-artwork:10079: 0.8`. The shared position-image
+delta is confined to Rayquaza's rectangle [223,634,384,779]. His derived target
+bounds become x39.3–60.5%, y79.9–93.6%, height13.7%; other target bounds, source
+traits, scene/depth paragraphs, seed260736802 and all model pins are unchanged.
+One canonical empty-target/sampler/decode job ran on the freshly verified
+configured MPS worker. No post-generation subject paste, local retouch or
+multistage fallback. All logs/output returned; prompt65.12s, no traceback or
+truncation warning. Root canonical D verification passed, including all nine
+pixel-exact physical 300-dpi crops and 42 unchanged installed master hashes.
+Covering tests119 pass; broader regression246 pass and the same two existing
+revoked-production-approval tests fail. No approval was altered to hide them.
+
+**Result: improved clearance, exact-image user-review candidate.** Root and
+independent reviewer inspected raw/master/German preview/all nine cards/all
+three sources/all four references. No definite new anatomical blocker or
+cropped appendage was found. Rayquaza's small rear-coil/claw/ribbon connections
+remain uncertain at card scale. Mewtwo's one tail and gray face, and Latios's
+small root marking/plain long wing remain recognizable; Latios's nose stays
+near the left cut edge, as in accepted B.
+
+The identical interior-teal-pixel proxy changes B [10,228,735,817] to
+D [73,324,710,848], left/right73/39px versus10/14px. This is not complete
+outline/glow segmentation. Right-side clearance remains below C's60px aim.
+The teal body point card(351,324), RGB(58,93,79), lies at canvas y77.78%, above
+the new79.9% target top while inside the actual card. Therefore no exact
+small-cast-layout pass or release-ready claim is made. Present D for the user's
+qualitative spacing and identity decision; B approval does not transfer.
+
+Raw D: `21a4db1b8c1f760d7c3718b1fa1cda9b830bbb1218d90e8b1151ceb79704a953`.
+Master D: `ae8d7afad5051c47117650ae03c1b4cbc30c7da8b7083a10f9e7da3d801b55bb`.
+Manifest snapshot: `952126b7e2d5a8d26de0945f5661d53706969a5f7d4cf244d417354c6bbd4db6`.
+Fingerprint: `844c54cb4094414e7b6395e8e3786fedb5ce98641cb1a51cd9463527ff85f98d`.
+
+[D, B and all three exact card/source pairs](reviews/2026-09-15-p15-scale-review.md)
+and [hash-bound D findings](reviews/2026-09-15-p15-scale-d.json) retain this
+checkpoint. Historical frozen-code B/C preflight is expected to reject the
+intentional renderer revision; original seals and accepted images are never
+rewritten. P40 and installed masters/PDFs/ZIPs remain unchanged. No E, commit,
+push, promotion or further generation before D feedback.

@@ -9,9 +9,11 @@ from PIL import Image
 try:
     from .layout import PageLayout, build_source_layout
     from .poster_io import load_cutout_items
+    from .poster_subject import resolve_poster_subject
 except ImportError:
     from layout import PageLayout, build_source_layout
     from poster_io import load_cutout_items
+    from poster_subject import resolve_poster_subject
 
 
 def fit_image(image: Image.Image, max_width: int, max_height: int) -> Image.Image:
@@ -102,6 +104,7 @@ def cutout_placements(
     max_width_ratio: float = 0.84,
     max_height_ratio: float = 0.68,
     baseline_ratio: float = 0.80,
+    subject_scales: dict[str, float] | None = None,
 ) -> list[dict[str, Any]]:
     """Place one complete cutout inside each bottom-row physical card."""
     for name, value in (
@@ -138,15 +141,29 @@ def cutout_placements(
             round(cell.width * max_width_ratio),
             round(cell.height * max_height_ratio),
         )
-        prepared.append((cell, item, target))
+        original_target = target
+        if subject_scales:
+            scale = subject_scales.get(resolve_poster_subject(item).subject_key, 1.0)
+            if scale != 1.0:
+                size = (round(target.width * scale), round(target.height * scale))
+                if min(size) < 1:
+                    raise ValueError("spatial_reference_scales produces a zero-sized reference")
+                # Resize from the original once, not from the already fitted image.
+                target = cutout.resize(size, Image.Resampling.LANCZOS)
+        prepared.append((cell, item, target, original_target))
 
     placements = []
     baseline = cells[0].y + round(cells[0].height * baseline_ratio)
-    for cell, item, target in prepared:
-        x = cell.x + (cell.width - target.width) // 2
+    for cell, item, target, original_target in prepared:
+        x = cell.x + (cell.width - original_target.width) // 2
         alpha_box = target.getchannel("A").getbbox()
         if alpha_box is None:
             raise ValueError(f"Cutout has no visible pixels: {item['file']}")
+        if target is not original_target:
+            original_alpha = original_target.getchannel("A").getbbox()
+            if original_alpha is None:
+                raise ValueError(f"Cutout has no visible pixels: {item['file']}")
+            x += (original_alpha[0] + original_alpha[2] - alpha_box[0] - alpha_box[2]) // 2
         y = baseline - alpha_box[3]
         placements.append(
             {
@@ -167,9 +184,11 @@ def cutout_placements(
 def joint_scene_cutout_placements(
     layout: PageLayout,
     scope_dir: Path,
+    *,
+    subject_scales: dict[str, float] | None = None,
 ) -> list[dict[str, Any]]:
     """Reuse the proven card-safe placement contract for the joint scene."""
-    return cutout_placements(layout, scope_dir)
+    return cutout_placements(layout, scope_dir, subject_scales=subject_scales)
 
 
 def joint_scene_canvas_placements(
@@ -177,6 +196,7 @@ def joint_scene_canvas_placements(
     *,
     layout_name: str,
     canvas_size: tuple[int, int],
+    subject_scales: dict[str, float] | None = None,
 ) -> list[dict[str, Any]]:
     """Build the canonical joint-scene placements for one raster canvas."""
     width, height = canvas_size
@@ -185,4 +205,4 @@ def joint_scene_canvas_placements(
         width_px=width,
         height_px=height,
     )
-    return joint_scene_cutout_placements(layout, scope_dir)
+    return joint_scene_cutout_placements(layout, scope_dir, subject_scales=subject_scales)

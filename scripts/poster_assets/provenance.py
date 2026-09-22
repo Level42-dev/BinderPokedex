@@ -11,6 +11,7 @@ from typing import Any
 from PIL import Image
 
 try:
+    from .source_detail import spatial_reference_scales
     from .grounding import grounding_config, build_grounding_masks, audit_grounding_pixels
     from .generation_contract import is_grounded_generation, requires_visual_review
     from .poster_config import GROUNDED_PROMPT_FILE, build_grounded_prompt_snapshot
@@ -59,6 +60,7 @@ try:
         subject_fingerprint_identity,
     )
 except ImportError:
+    from source_detail import spatial_reference_scales
     from grounding import grounding_config, build_grounding_masks, audit_grounding_pixels
     from generation_contract import is_grounded_generation, requires_visual_review
     from poster_config import GROUNDED_PROMPT_FILE, build_grounded_prompt_snapshot
@@ -117,6 +119,7 @@ GENERATION_PIPELINE_CONTRACT_VERSION = 3
 # deterministic overlay v2 outputs.
 OVERLAY_PIPELINE_CONTRACT_VERSION = 3
 CURRENT_GENERATION_PIPELINE_CONTRACT_VERSIONS = {
+    ("flux", "joint_scene", "spatial_source_detail_joint"): 11,
     ("flux", "identity_lock", "grounded_source_pixels"): 4,
     (
         "flux",
@@ -128,6 +131,7 @@ CURRENT_GENERATION_PIPELINE_CONTRACT_VERSIONS = {
     ("flux", "joint_scene", "individual_spatial_joint"): 9,
 }
 SUPPORTED_GENERATION_PIPELINE_CONTRACT_VERSIONS = {
+    ("flux", "joint_scene", "spatial_source_detail_joint"): frozenset({10, 11}),
     ("flux", "identity_lock", "grounded_source_pixels"): frozenset({4}),
     (
         "flux",
@@ -929,10 +933,10 @@ def _layout_generation_contract(
     return contract
 
 
-def _expected_subject_ids(
+def _selected_subject_items(
     manifest: dict[str, Any],
     scope_data: dict[str, Any],
-) -> list[int | dict[str, Any]]:
+) -> list[dict[str, Any]]:
     pokemon = manifest.get("pokemon", {})
     if not isinstance(pokemon, dict):
         raise ValueError("pokemon must be a mapping")
@@ -952,16 +956,19 @@ def _expected_subject_ids(
             "pokemon.count must be a positive integer or "
             "'auto_from_layout_columns'"
         )
-    selected = select_pokemon(
+    return select_pokemon(
         manifest,
         scope_data,
         requested,
         {},
     )
-    return [
-        subject_fingerprint_identity(item)
-        for item in selected
-    ]
+
+
+def _expected_subject_ids(
+    manifest: dict[str, Any], scope_data: dict[str, Any],
+) -> list[int | dict[str, Any]]:
+    return [subject_fingerprint_identity(item)
+            for item in _selected_subject_items(manifest, scope_data)]
 
 
 def _cutout_components(
@@ -1056,15 +1063,34 @@ def _effective_generation_prompt(
             layout_name,
             float(generation_megapixels),
         )
+        reference_mode = generation.get("reference_mode")
+        subject_scales = spatial_reference_scales(
+            bundle.manifest, cutout_items, reference_mode=reference_mode,
+        )
         placement_contract = normalized_visible_placement_contract(
             joint_scene_canvas_placements(
                 bundle.source_dir,
                 layout_name=layout_name,
                 canvas_size=(width, height),
+                subject_scales=subject_scales,
             ),
             canvas_size=(width, height),
         )
         reference_mode = generation.get("reference_mode")
+        if reference_mode == "spatial_source_detail_joint":
+            try:
+                from .source_detail import validate_source_details, build_source_detail_prompt, format_prompt_snapshot
+            except ImportError:
+                from source_detail import validate_source_details, build_source_detail_prompt, format_prompt_snapshot
+            validate_source_details(bundle.manifest, cutout_items, bundle.source_dir)
+            return format_prompt_snapshot(
+                build_source_detail_prompt(
+                    bundle.manifest, cutout_items,
+                    placement_contract=placement_contract,
+                    pipeline_contract_version=pipeline_contract_version,
+                ),
+                pipeline_contract_version=pipeline_contract_version,
+            )
         family = _generation_pipeline_family(generation)
         separation_minimum = NATURAL_SEPARATION_PIPELINE_MINIMUM.get(family)
         prefer_natural_separation = (
@@ -1158,6 +1184,10 @@ def build_generation_fingerprint(
         contract_version,
     )
     cutouts, raw_cutout_items = _cutout_components(bundle)
+    subject_scales = spatial_reference_scales(
+        manifest, raw_cutout_items,
+        reference_mode=effective_generation.get("reference_mode"),
+    )
     expected_subjects = _expected_subject_ids(manifest, scope_data)
     actual_subjects = [
         subject_fingerprint_identity(item)
@@ -1220,6 +1250,10 @@ def build_generation_fingerprint(
                 ),
             )
         )
+    if effective_generation.get("reference_mode") == "spatial_source_detail_joint":
+        components["source_details"] = artwork["source_details"]
+    if subject_scales:
+        components["spatial_reference"] = {"version": 1, "subject_scales": subject_scales}
     return fingerprint_record(components)
 
 
@@ -1332,6 +1366,14 @@ def rebuild_generation_fingerprint_from_recorded_sources(
         current_components["identity_lock"] = identity_lock_config(
             bundle.manifest
         )
+    if generation.get("reference_mode") == "spatial_source_detail_joint":
+        current_components["source_details"] = bundle.manifest.get("artwork", {}).get("source_details")
+    subject_scales = spatial_reference_scales(
+        bundle.manifest, _selected_subject_items(bundle.manifest, scope_data),
+        reference_mode=generation.get("reference_mode"),
+    )
+    if subject_scales:
+        current_components["spatial_reference"] = {"version": 1, "subject_scales": subject_scales}
     return fingerprint_record(
         current_components,
         schema_version=int(recorded["schema_version"]),
@@ -1783,6 +1825,12 @@ def prompt_path_for_generation(
     if engine == "flux" and mode == "joint_scene":
         prompt_dir = workflow_path.parent if workflow_path is not None else work_dir
         reference_mode = generation.get("reference_mode")
+        if reference_mode == "spatial_source_detail_joint":
+            try:
+                from .source_detail import PROMPT_FILE
+            except ImportError:
+                from source_detail import PROMPT_FILE
+            return prompt_dir / PROMPT_FILE
         if reference_mode == "individual_spatial_joint":
             return prompt_dir / INDIVIDUAL_SPATIAL_JOINT_PROMPT_FILE
         if reference_mode == "regional_identity_joint":
@@ -1811,6 +1859,25 @@ def generation_input_records(
     ]
     if not cutouts:
         raise ValueError(f"No cutouts listed in {cutout_manifest_path}")
+
+    if generation.get("reference_mode") == "spatial_source_detail_joint":
+        try:
+            from .create_comfyui_poster_workflow import build_workflow
+            from .source_detail import format_prompt_snapshot
+        except ImportError:
+            from create_comfyui_poster_workflow import build_workflow
+            from source_detail import format_prompt_snapshot
+        expected_workflow = build_workflow(
+            scope, int(generation["seed"]), float(generation["generation_megapixels"]),
+            generation_mode="joint_scene", reference_mode="spatial_source_detail_joint",
+            unet_name=str(generation["model"]), clip_name=str(generation["encoder"]),
+            vae_name=str(generation["vae"]), steps=int(generation["steps"]),
+        )
+        if load_json(workflow_path) != expected_workflow:
+            raise ValueError("Source detail workflow does not match the versioned contract")
+        expected_prompt = format_prompt_snapshot(expected_workflow["4"]["inputs"]["text"]) + "\n"
+        if prompt_path_for_generation(work_dir, generation, workflow_path).read_text(encoding="utf-8") != expected_prompt:
+            raise ValueError("Source detail prompt snapshot is missing or stale")
 
     if is_grounded_generation(generation):
         # Compare the consumed API graph with the versioned renderer, including
@@ -1871,7 +1938,7 @@ def generation_input_records(
             ]
         else:
             references = []
-        if reference_mode == "spatial_identity_joint":
+        if reference_mode in {"spatial_identity_joint", "spatial_source_detail_joint"}:
             references.append(
                 file_record(
                     work_dir / "joint_scene_cast_reference.png",

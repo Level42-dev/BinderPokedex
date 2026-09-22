@@ -334,6 +334,12 @@ def run(
     )
     workflow_options["flux_reference_mode"] = effective_reference_mode
     joint_scene = is_joint_scene_generation(generation_metadata)
+    if effective_reference_mode == "spatial_source_detail_joint":
+        validate_generation_contract({
+            **generation_metadata, "generation_megapixels": megapixels,
+            "output_method": "lanczos", "output_dpi": output_dpi,
+            "output_megapixels": output_megapixels,
+        })
     work_dir = prepare(
         scope,
         megapixels,
@@ -563,6 +569,7 @@ def main() -> int:
     parser.add_argument(
         "--flux-reference-mode",
         choices=(
+            "spatial_source_detail_joint",
             "individual_spatial_joint",
             "spatial_identity_joint",
             "regional_identity_joint",

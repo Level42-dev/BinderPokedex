@@ -15,6 +15,16 @@ pdf:
   artwork_file: poster-flux2-artwork.png
   insertion: after_first_section_cover
 artwork:
+  source_details:
+    "pokeapi:official-artwork:1":
+      sha256: 8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a
+      traits: "Bulbasaur must match this exact low, broad, four-legged pose facing slightly left: turquoise skin, angular dark green spots with the same shapes and positions, wide red eyes with distinct white outer areas and oval white highlights, tiny nostril marks, a wide open pink mouth with the small white upper fangs visible at the corners. Preserve the large folded green bulb and its pointed overlapping leaf contours. Preserve each visible foot, the exact visible white claw tips and the separate small angular foreleg spots; do not add a claw or replace spots with rounded dots. Keep the original body proportions, gaze, expression and open spaces between the legs."
+    "pokeapi:official-artwork:7":
+      sha256: 8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290
+      traits: "Squirtle must match this exact upright blue turtle pose facing slightly left, with the arms extended as in the reference and two separate standing legs. Preserve the large dark burgundy-black eyes, clear white highlights and pale eye borders; preserve the small smiling closed mouth and nostril. The pale cream chest shell has this exact dark segmented panel pattern and white side rim, with the brown back shell visible at the right. Preserve the rounded blue tail extending to the right with its inward spiral line. Copy the distinct pointed finger and toe contours from the source; do not merge hands with the shell, add claws or change the limb pose."
+    "pokeapi:official-artwork:813":
+      sha256: 0099f4bb576966efc872c03c69616f954c8474d12608a2fd7e91304a9d271167
+      traits: "Scorbunny must match this exact slender white rabbit in its energetic one-legged kicking pose. Exactly TWO long upright ears with orange tips and pale yellow narrow inner-ear shapes; the yellow shapes are inside those same two ears, never extra ears. Preserve BOTH separate dark eyes with bright white highlights and orange lower iris areas, the pale tan rectangular nose bandage, the tiny orange triangular nose and the open mauve mouth with its prominent SINGLE white upper front tooth. Preserve TWO separate small orange oval marks at the base of the neck, separated by white fur, never a continuous red collar. Preserve the white cheek tufts, both outstretched arms, the raised foot pointing its sole toward the viewer with orange toe divisions and tan sole patch, and the long supporting leg with orange toe tips. Keep exact limb count, pose, thin body proportions, expression and spacing."
   promoted_file: poster-flux2-artwork.png
   provenance_file: poster-flux2-provenance.json
   identity_lock:
@@ -31,10 +41,10 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260912007
+    reference_mode: spatial_source_detail_joint
+    seed: 260915007
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
   scene:

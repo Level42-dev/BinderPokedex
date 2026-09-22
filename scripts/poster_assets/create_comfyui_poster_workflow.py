@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 
 try:
+    from .source_detail import spatial_reference_scales
     from .grounding import grounding_config
     from .poster_config import GROUNDED_PROMPT_FILE, build_grounded_prompt_snapshot
     from .composition import (
@@ -44,6 +45,7 @@ try:
         poster_bundle,
     )
 except ImportError:
+    from source_detail import spatial_reference_scales
     from grounding import grounding_config
     from poster_config import GROUNDED_PROMPT_FILE, build_grounded_prompt_snapshot
     from composition import (
@@ -306,12 +308,33 @@ def build_joint_scene_workflow(
     clip_name: str,
     vae_name: str,
     steps: int,
+    source_detail: bool = False,
 ) -> dict[str, object]:
     """Build one whole-image pass from spatial and identity references."""
     bundle = poster_bundle(scope, poster_assets=POSTER_ASSETS)
     manifest = bundle.manifest
     scope_data = load_poster_scope_data(bundle)
     items = load_cutout_items(bundle.source_dir)
+    subject_scales = spatial_reference_scales(
+        manifest, items,
+        reference_mode="spatial_source_detail_joint" if source_detail else "spatial_identity_joint",
+    )
+    if source_detail:
+        try:
+            from .source_detail import validate_source_details, build_source_detail_prompt
+            from .generation_contract import validate_generation_contract
+        except ImportError:
+            from source_detail import validate_source_details, build_source_detail_prompt
+            from generation_contract import validate_generation_contract
+        if megapixels != 2.0 or steps != 4:
+            raise ValueError("Source detail requires exactly 2 MP and four sampling steps")
+        validate_generation_contract({
+            **manifest.get("artwork", {}).get("generation", {}),
+            "engine": "flux", "mode": "joint_scene",
+            "reference_mode": "spatial_source_detail_joint",
+            "generation_megapixels": megapixels, "steps": steps,
+        })
+        validate_source_details(manifest, items, bundle.source_dir)
     width, height = output_dimensions(scope, megapixels)
     placement_contract = normalized_visible_placement_contract(
         joint_scene_canvas_placements(
@@ -323,15 +346,16 @@ def build_joint_scene_workflow(
                 )
             ),
             canvas_size=(width, height),
+            subject_scales=subject_scales,
         ),
         canvas_size=(width, height),
     )
-    final_prompt = build_joint_scene_prompt(
-        manifest,
-        scope_data,
-        items,
-        placement_contract=placement_contract,
-    )
+    if source_detail:
+        final_prompt = build_source_detail_prompt(manifest, items, placement_contract=placement_contract)
+    else:
+        final_prompt = build_joint_scene_prompt(
+            manifest, scope_data, items, placement_contract=placement_contract,
+        )
 
     reference_names = (
         "joint_scene_cast_reference.png",
@@ -655,7 +679,19 @@ def build_workflow(
             f"Unsupported reference mode for {generation_mode}: "
             f"{effective_reference_mode!r}; expected one of {expected}"
         )
+    bundle = poster_bundle(scope, poster_assets=POSTER_ASSETS)
+    if "spatial_reference_scales" in bundle.manifest.get("artwork", {}):
+        spatial_reference_scales(
+            bundle.manifest, load_cutout_items(bundle.source_dir),
+            reference_mode=effective_reference_mode,
+        )
     if generation_mode == "joint_scene":
+        if effective_reference_mode == "spatial_source_detail_joint":
+            return build_joint_scene_workflow(
+                scope, seed, megapixels, unet_name=unet_name,
+                clip_name=clip_name, vae_name=vae_name, steps=steps,
+                source_detail=True,
+            )
         if effective_reference_mode == "individual_spatial_joint":
             return build_individual_spatial_joint_workflow(
                 scope,
@@ -904,7 +940,13 @@ def write_workflow(
         clip_name=clip_name,
         vae_name=vae_name,
     )
-    if effective_reference_mode == "grounded_source_pixels":
+    if effective_reference_mode == "spatial_source_detail_joint":
+        try:
+            from .source_detail import PROMPT_FILE, format_prompt_snapshot
+        except ImportError:
+            from source_detail import PROMPT_FILE, format_prompt_snapshot
+        (target_dir / PROMPT_FILE).write_text(format_prompt_snapshot(str(workflow["4"]["inputs"]["text"])) + "\n", encoding="utf-8")
+    elif effective_reference_mode == "grounded_source_pixels":
         bundle = poster_bundle(scope, poster_assets=POSTER_ASSETS)
         (target_dir / GROUNDED_PROMPT_FILE).write_text(
             build_grounded_prompt_snapshot(
@@ -979,6 +1021,7 @@ def main() -> int:
     parser.add_argument(
         "--reference-mode",
         choices=(
+            "spatial_source_detail_joint",
             "individual_spatial_joint",
             "spatial_identity_joint",
             "regional_identity_joint",

@@ -1,0 +1,504 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-12",
+  "reviewer": "independent aggregate audit agent, second review",
+  "scope": "ME05 and SV08 only",
+  "method": "Direct visual examination of all six exact provenance source files, both full committed text-free masters and all eighteen individual physical crops. Original-pixel detail crops additionally checked for SV08 Ho-Oh eye and Pikachu hands. No inherited approval flags used as visual evidence.",
+  "prior_report": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+  "counts": {
+    "targets": 2,
+    "target_pass": 1,
+    "target_reject": 1,
+    "target_uncertain": 0,
+    "subjects": 6,
+    "subject_pass": 4,
+    "subject_reject": 1,
+    "subject_uncertain": 1,
+    "sources_actually_viewed": 6,
+    "full_masters_actually_viewed": 2,
+    "physical_crops_actually_viewed": 18
+  },
+  "source_or_cache_gaps": [],
+  "changes": "Report only; no master/provenance/manifest/PDF/code changes or generation. Temporary lossless diagnostic head/hand crops were used solely for visual comparison.",
+  "detail_inspections": [
+    {
+      "subject": "SV08 Ho-Oh",
+      "source_rectangle_xyxy": [
+        240,
+        100,
+        380,
+        230
+      ],
+      "output_card": "r3_c1",
+      "output_rectangle_xyxy": [
+        410,
+        310,
+        610,
+        490
+      ],
+      "actually_viewed": true,
+      "scale": "Native parent pixels, not resized",
+      "exact_pixel_equality_verified": true,
+      "result": "Source red iris/dark pupil absent in output white oval; reject."
+    },
+    {
+      "subject": "SV08 Pikachu",
+      "source_rectangle_xyxy": [
+        10,
+        225,
+        250,
+        350
+      ],
+      "output_card": "r3_c3",
+      "output_rectangle_xyxy": [
+        40,
+        510,
+        390,
+        670
+      ],
+      "actually_viewed": true,
+      "scale": "Native parent pixels, not resized",
+      "result": "Finger boundaries too degraded for confident source-fidelity pass; uncertain."
+    }
+  ],
+  "targets": [
+    {
+      "asset_key": "ME05",
+      "verdict": "pass",
+      "prior_target_verdict": "pass",
+      "second_review_conclusion": "Confirms all-pass after independent source-by-source inspection.",
+      "master_file": "assets/posters/ME05/poster-flux2-artwork.png",
+      "master_sha256": "3120f1f07526c80d74f5cd83aa6bbb09dbc256e423f4d1c3c7ee3ecbf8f95732",
+      "master_matches_provenance": true,
+      "provenance_file": "assets/posters/ME05/poster-flux2-provenance.json",
+      "provenance_sha256": "ff4b92fe78b7d0bcfae9eb9556dcc2a8c303b1472d53782d01f85e1d66ca1ea3",
+      "master_actually_viewed": true,
+      "master_view": "Full 2368x3268 master shown as 1343x1854 overview; fine anatomy inspected on separate native 750x1050 physical cards.",
+      "physical_geometry": {
+        "canvas": [
+          2368,
+          3268
+        ],
+        "column_spans": [
+          [
+            0,
+            750
+          ],
+          [
+            809,
+            1559
+          ],
+          [
+            1618,
+            2368
+          ]
+        ],
+        "row_spans": [
+          [
+            0,
+            1050
+          ],
+          [
+            1109,
+            2159
+          ],
+          [
+            2218,
+            3268
+          ]
+        ]
+      },
+      "physical_cards": [
+        {
+          "cell": "r1_c1",
+          "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "88ce9d2bb95bfd8a6a41a2d4ec4b8b8a7446a5321f8c2f8485ebc19d286b27cd",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true,
+          "equals_localized_preview_geometry_pixels": true
+        },
+        {
+          "cell": "r1_c2",
+          "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "c3d3285eae393e089916040527f46d21a8e48f1beb5a1bbabb907eb6b9b287df",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true,
+          "equals_localized_preview_geometry_pixels": true
+        },
+        {
+          "cell": "r1_c3",
+          "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "39b95d27feb51d105e2ac2cf720079924fe32b9f7ee69aa6ecbf10a81e06efaf",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true,
+          "equals_localized_preview_geometry_pixels": true
+        },
+        {
+          "cell": "r2_c1",
+          "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "c3efdc3d461e284b8451a03d7fc2adec775f726600497f596a8e6badfb463d1c",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true,
+          "equals_localized_preview_geometry_pixels": true
+        },
+        {
+          "cell": "r2_c2",
+          "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "f5588be32939076162e2a33008022b3b5861e14aa7bbc717a705959f971bd7d1",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true,
+          "equals_localized_preview_geometry_pixels": true
+        },
+        {
+          "cell": "r2_c3",
+          "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "a7e36640507dd8b422178f00aff4dbe7a059b453403be7bf5e790b0683338c10",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true,
+          "equals_localized_preview_geometry_pixels": true
+        },
+        {
+          "cell": "r3_c1",
+          "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "bd6ee274c3e65b6ba2dda6c0b5894a2711a72eff97bc96e84c0aabc2331ffd01",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true,
+          "equals_localized_preview_geometry_pixels": true
+        },
+        {
+          "cell": "r3_c2",
+          "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "fd6a81cca2b078e5856876dcdb7a26d1fd26c89bb614041ec55c9f66b5f1d4be",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true,
+          "equals_localized_preview_geometry_pixels": true
+        },
+        {
+          "cell": "r3_c3",
+          "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "c348ef3aac1e140603b9e3eb4e53eb2b4840f58ae7f42c166c3d2f52141aa61e",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true,
+          "equals_localized_preview_geometry_pixels": true
+        }
+      ],
+      "all_subject_regions_equal_master_pixels": true,
+      "master_comparison_region_in_each_bottom_card": [
+        0,
+        0,
+        750,
+        950
+      ],
+      "localized_overlay_coverage": "All nine localized card files visually inspected, including top-center logo, central information block and bottom-right branding. Full localized panorama not separately displayed; PDF not inspected. No overlay clipping observed; dates/count factual correctness not researched.",
+      "scene_observations": "Continuous moonlit river valley; no unexpected creatures. All three figures occupy bottom cells without crossing card edges; ground/shadows remain coherent.",
+      "sources": [
+        {
+          "subject_id": 728,
+          "file": "tmp/poster-workspaces/ME05/sources/cutouts/pokemon_728_popplio.png",
+          "sha256": "3bfa3104b894f212985122732497b17c78979c6bc9304bd7396e781677f2d7a3",
+          "provenance_sha256": "3bfa3104b894f212985122732497b17c78979c6bc9304bd7396e781677f2d7a3",
+          "matches_provenance": true,
+          "identity": "Popplio",
+          "source_actually_viewed": true,
+          "source_view": "Entire exact original at 475x475 pixels",
+          "cell": "r3_c1",
+          "artwork_file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "artwork_sha256": "bd6ee274c3e65b6ba2dda6c0b5894a2711a72eff97bc96e84c0aabc2331ffd01",
+          "physical_crop_actually_viewed": true,
+          "verdict": "pass",
+          "feature_observations": [
+            "The single visible eye retains its black pupil and white highlight; the round pink nose, two short muzzle lines, open mouth and pink tongue are present.",
+            "Both ear-like flaps, scalloped cyan neck ruff, two front flippers with two white stripe marks on each, and both rear flipper lobes remain distinguishable. No invented digits or lost flipper tips found.",
+            "Body and flippers are wholly inside r3c1, with clean separation from the foreground leaves and a grounded shadow."
+          ]
+        },
+        {
+          "subject_id": 877,
+          "file": "tmp/poster-workspaces/ME05/sources/cutouts/pokemon_877_morpeko.png",
+          "sha256": "897a6b183f7e57c17be9db7979f299cccb386b0169e3961fba34244cfbe33c31",
+          "provenance_sha256": "897a6b183f7e57c17be9db7979f299cccb386b0169e3961fba34244cfbe33c31",
+          "matches_provenance": true,
+          "identity": "Morpeko (source form)",
+          "source_actually_viewed": true,
+          "source_view": "Entire exact original at 475x475 pixels",
+          "cell": "r3_c2",
+          "artwork_file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "artwork_sha256": "fd6a81cca2b078e5856876dcdb7a26d1fd26c89bb614041ec55c9f66b5f1d4be",
+          "physical_crop_actually_viewed": true,
+          "verdict": "pass",
+          "feature_observations": [
+            "Brown left panel, charcoal right panel and yellow jagged middle remain correctly separated; both two-lobed ears, both pink cheeks, black eyes with white highlights and small nose remain present.",
+            "Single upper tooth is smaller/rounder than the source but visibly retained, rather than missing. Two arms, two oval feet and the pale held seed remain identifiable.",
+            "Complete contained silhouette with no grass crossing a limb and a coherent ground shadow."
+          ]
+        },
+        {
+          "subject_id": 802,
+          "file": "tmp/poster-workspaces/ME05/sources/cutouts/pokemon_802_marshadow.png",
+          "sha256": "4ef2e2ff9af561949c7e315b9b266e561b8ba30c07a906240aa2ba177035ed41",
+          "provenance_sha256": "4ef2e2ff9af561949c7e315b9b266e561b8ba30c07a906240aa2ba177035ed41",
+          "matches_provenance": true,
+          "identity": "Marshadow (source form)",
+          "source_actually_viewed": true,
+          "source_view": "Entire exact original at 475x475 pixels",
+          "cell": "r3_c3",
+          "artwork_file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "artwork_sha256": "c348ef3aac1e140603b9e3eb4e53eb2b4840f58ae7f42c166c3d2f52141aa61e",
+          "physical_crop_actually_viewed": true,
+          "verdict": "pass",
+          "feature_observations": [
+            "Both spiral side plumes and the central curling plume are retained; paired black eye surrounds contain yellow upper flecks and orange eyes with pale yellow centers. Small downturned mouth is visible.",
+            "Scalloped neck ruff, two mitten-like arms with oval upper markings, two short separated legs and trailing shadow-like extension match the source arrangement; no added digits.",
+            "A few grass tips meet the foot baseline, but neither foot is lost, and the inter-leg gap remains legible. All body/plume/tail boundaries are contained within the card."
+          ]
+        }
+      ]
+    },
+    {
+      "asset_key": "SV08",
+      "verdict": "reject",
+      "prior_target_verdict": "uncertain",
+      "second_review_conclusion": "Changes target uncertainty to rejection: Ho-Oh eye defect confirmed; also narrows Pikachu hand review to uncertain.",
+      "master_file": "assets/posters/SV08/poster-flux2-artwork.png",
+      "master_sha256": "d931776dc062cc9f9db4b632fab658ce678ad6fe2afcc73d33e363f1e51fe7f8",
+      "master_matches_provenance": true,
+      "provenance_file": "assets/posters/SV08/poster-flux2-provenance.json",
+      "provenance_sha256": "70f34f69e25bf5ef20a2ce2544a8f42a78171c4edf6f4f6dd217d1ab3613cd39",
+      "master_actually_viewed": true,
+      "master_view": "Full 2368x3268 master shown as 1343x1854 overview; fine anatomy inspected on separate native 750x1050 physical cards.",
+      "physical_geometry": {
+        "canvas": [
+          2368,
+          3268
+        ],
+        "column_spans": [
+          [
+            0,
+            750
+          ],
+          [
+            809,
+            1559
+          ],
+          [
+            1618,
+            2368
+          ]
+        ],
+        "row_spans": [
+          [
+            0,
+            1050
+          ],
+          [
+            1109,
+            2159
+          ],
+          [
+            2218,
+            3268
+          ]
+        ]
+      },
+      "physical_cards": [
+        {
+          "cell": "r1_c1",
+          "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "3d971a0cbc0df95fa04e8993d830827783a76f5bcca88a3803cfc179471e54de",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true,
+          "equals_localized_preview_geometry_pixels": true
+        },
+        {
+          "cell": "r1_c2",
+          "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "9375d8483143ff16c13141e06e664c24054d7b64447577261d79434933f312f1",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true,
+          "equals_localized_preview_geometry_pixels": true
+        },
+        {
+          "cell": "r1_c3",
+          "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "de50743fcf442ed8dbe2a84e6c86d55a48c32cbf5b3d29526a1e4e970bf7d5cf",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true,
+          "equals_localized_preview_geometry_pixels": true
+        },
+        {
+          "cell": "r2_c1",
+          "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "25505ca1b5b0daa45bf343d4b9c6b18e05eebd5c9b348dfccde24220c78c2dd4",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true,
+          "equals_localized_preview_geometry_pixels": true
+        },
+        {
+          "cell": "r2_c2",
+          "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "ea4e494d260bcdf50716f464b76962b5aa3fc927f2d2baf2e006cd9ae9e697ff",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true,
+          "equals_localized_preview_geometry_pixels": true
+        },
+        {
+          "cell": "r2_c3",
+          "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "d3b573e130b23d90406dbb931ae9c8643ad5806a8123588d38372a7668a7e61c",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true,
+          "equals_localized_preview_geometry_pixels": true
+        },
+        {
+          "cell": "r3_c1",
+          "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "783b34d1e30f2c2ba9a9712dd00e6bc53c0bc0474487cc3b24f6d0c6655c62cf",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true,
+          "equals_localized_preview_geometry_pixels": true
+        },
+        {
+          "cell": "r3_c2",
+          "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "e45272daf5eb81dcd2ff6b24911670104d27c5948508282e4587c5cd2287dc70",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true,
+          "equals_localized_preview_geometry_pixels": true
+        },
+        {
+          "cell": "r3_c3",
+          "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "644019c208f14b3688b76a1ec697a075bd9d9cdb29428eb0a67aa526d2891e99",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true,
+          "equals_localized_preview_geometry_pixels": true
+        }
+      ],
+      "all_subject_regions_equal_master_pixels": true,
+      "master_comparison_region_in_each_bottom_card": [
+        0,
+        0,
+        750,
+        950
+      ],
+      "localized_overlay_coverage": "All nine localized card files visually inspected, including top-center logo, central information block and bottom-right branding. Full localized panorama not separately displayed; PDF not inspected. No overlay clipping observed; dates/count factual correctness not researched.",
+      "scene_observations": "Continuous storm-lit valley; lightning stays in upper scenery. No extra creatures or scenery/body crossings observed. All three figures are in their bottom cards.",
+      "sources": [
+        {
+          "subject_id": 250,
+          "file": "tmp/poster-workspaces/SV08/sources/cutouts/pokemon_250_ho_oh.png",
+          "sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274",
+          "provenance_sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274",
+          "matches_provenance": true,
+          "identity": "Ho-Oh",
+          "source_actually_viewed": true,
+          "source_view": "Entire exact original at 475x475 pixels",
+          "cell": "r3_c1",
+          "artwork_file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "artwork_sha256": "783b34d1e30f2c2ba9a9712dd00e6bc53c0bc0474487cc3b24f6d0c6655c62cf",
+          "physical_crop_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": [
+            "Native-pixel head comparison confirms a defining facial loss: the exact source has a clearly visible red iris/dark pupil inside its eye; the output replaces it with an almost white oval with only a diffuse gray speck. This is not merely different lighting or contact-sheet downsampling.",
+            "Open yellow beak, orange crest, green neck band, white breast, paired broad wing fans with green/white edging, gold tail feathers and two blue feet are retained. Rejection is specifically anchored to the eye, not an invented anatomy count.",
+            "Both wings and the tail are physically contained; the subject is clear of foreground vegetation and has a ground shadow."
+          ]
+        },
+        {
+          "subject_id": 909,
+          "file": "tmp/poster-workspaces/SV08/sources/cutouts/pokemon_909_fuecoco.png",
+          "sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b",
+          "provenance_sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b",
+          "matches_provenance": true,
+          "identity": "Fuecoco",
+          "source_actually_viewed": true,
+          "source_view": "Entire exact original at 475x475 pixels",
+          "cell": "r3_c2",
+          "artwork_file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "artwork_sha256": "e45272daf5eb81dcd2ff6b24911670104d27c5948508282e4587c5cd2287dc70",
+          "physical_crop_actually_viewed": true,
+          "verdict": "pass",
+          "feature_observations": [
+            "White facial plate retains both vertical eyes and two triangular nostrils; open mouth contains the visible upper fang, two lower teeth and tongue.",
+            "Two yellow head plumes, yellow belly rectangle and back marking, both short arms, two feet with paired blue claws, pale underside and tapered tail match the source. No missing defining part observed.",
+            "Figure sits inside r3c2 with separated limb/ground outlines and a connected shadow; plants do not cut across its body."
+          ]
+        },
+        {
+          "subject_id": 25,
+          "file": "tmp/poster-workspaces/SV08/sources/cutouts/pokemon_025_pikachu.png",
+          "sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+          "provenance_sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+          "matches_provenance": true,
+          "identity": "Pikachu",
+          "source_actually_viewed": true,
+          "source_view": "Entire exact original at 475x475 pixels",
+          "cell": "r3_c3",
+          "artwork_file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "artwork_sha256": "644019c208f14b3688b76a1ec697a075bd9d9cdb29428eb0a67aa526d2891e99",
+          "physical_crop_actually_viewed": true,
+          "verdict": "uncertain",
+          "feature_observations": [
+            "Both black-tipped ears, highlighted black eyes, two red cheek patches, open mouth/tongue, two feet and the angular tail with brown base are retained; no obvious face/ear/tail failure.",
+            "Native-pixel hand comparison is less conclusive: the source's pointed fingertips are crisp and individually bounded, while the output's extended-hand tips are mottled and its raised-hand contour merges into blunt irregular lobes. I cannot reliably certify the same digit boundaries or assert an exact missing-digit count.",
+            "Body is contained and unobscured by grass, with a ground shadow; uncertainty is restricted to hand fidelity, not overall identity."
+          ]
+        }
+      ]
+    }
+  ]
+}

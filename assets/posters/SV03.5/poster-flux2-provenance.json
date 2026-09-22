@@ -504,7 +504,22 @@
         ],
         "generation_fingerprint_sha256": "1d29f215bac6169481d4b26f2a1d199a13ca613120bba1a946af962f1566ebb1",
         "method": "human_identity_and_scene_review",
-        "passed": true,
+        "passed": false,
+        "reaudit_revocation": {
+          "date": "2026-09-12",
+          "reviewer_kind": "agent",
+          "method": "source_by_source_visual_reaudit",
+          "previously_passed": true,
+          "verdict": "reject",
+          "master_sha256": "727efeda4772538dc294fe0e458600a371e8fef643cd75c8fc603a1ab126acd8",
+          "reports": [
+            {
+              "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+              "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+            }
+          ],
+          "reason": "Current exact artwork has rejected or unresolved source-fidelity findings. Historical review fields are retained; the prior approval is withdrawn pending a corrected candidate."
+        },
         "raw_artwork_pixel_sha256": "c1bc251cf3f57d11d33d62076063c6960cce57f29448104d2d28bb32ab739d4f",
         "raw_artwork_sha256": "38a7d4bead061daed8001bbf53e75d01cf97dbdf2387cc2fed6e336585dea8e0",
         "reviewed_artwork_pixel_sha256": "5ab8a5d5714f86e1c120693d42812db15954d01a2c2b2729e68d4c4deca3f650",

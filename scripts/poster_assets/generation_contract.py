@@ -15,6 +15,7 @@ SUPPORTED_REFERENCE_MODES = {
     ),
     ("flux", "joint_scene"): frozenset(
         {
+            "spatial_source_detail_joint",
             "individual_spatial_joint",
             "spatial_identity_joint",
             "regional_identity_joint",
@@ -61,6 +62,9 @@ def validate_generation_reference_contract(
         )
     if is_grounded_generation(generation) and generation.get("steps", 4) != 4:
         raise ValueError("Grounded source pixels requires four sampling steps")
+    if actual == "spatial_source_detail_joint":
+        if generation.get("steps", 4) != 4 or generation.get("generation_megapixels", 2.0) != 2.0:
+            raise ValueError("Source detail requires exactly 2 MP and four sampling steps")
 
 
 def is_grounded_generation(generation: Mapping[str, Any]) -> bool:
@@ -87,6 +91,9 @@ def validate_generation_output_contract(
     if not is_joint_scene_generation(generation):
         return
     output_method = generation.get("output_method")
+    if generation.get("reference_mode") == "spatial_source_detail_joint":
+        if output_method != "lanczos" or generation.get("output_dpi") != 300 or generation.get("output_megapixels") is not None:
+            raise ValueError("Source detail requires deterministic Lanczos output at 300 dpi")
     if output_method is None:
         conflicting = tuple(
             field

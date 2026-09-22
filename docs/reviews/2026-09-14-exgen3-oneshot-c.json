@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-14",
+  "reviewer_kind": "agent",
+  "reviewed_by": "root",
+  "status": "candidate_c_user_accepted_pending_canonical_integration_and_promotion",
+  "scope": "ExGen3/sections/mega",
+  "operator_acceptance": {
+    "reviewer_kind": "human",
+    "review_date": "2026-09-14",
+    "source": "direct user message in this task",
+    "decision": "visual_candidate_accepted",
+    "candidate": "exgen3-source-detail-20260914-c",
+    "user_statement": "Sieht wirklich gut aus. Nur noch leichte Abweichungen, zb im Auge fehlt der schwarz Strich/Punkt/Pupille. Aber das halte ich für vertretbar!",
+    "accepted_deviations": "Minor visual deviations in the shown candidate, explicitly including a missing black eye stroke/dot/pupil detail. The user did not identify which subject's eye.",
+    "accepted_master_sha256": "eb61f272fd22bd400b2c2555cb2a490fad47c85b3947087a88b96b2e9dce3ebd",
+    "related_raw_sha256": "a1f96425dc1b7beb7f7cb3d5c35c62cb6e9dd708a2d8187cca2f7b2cb9cc813c",
+    "related_preview_sha256": "046e402de4be80e6cebe4d7008eebf17137835526050ee8dc5883722e69709bb",
+    "review_extent": "Acceptance of the shown overall candidate; no claim that the user separately inspected every physical card crop. The agent's source and nine-crop review remains attributed separately below.",
+    "scope_limit": "This exact candidate only; not a blanket waiver for missing pupils, defining traits or anatomy defects in other artwork.",
+    "first_example_review_gate_satisfied": true,
+    "canonical_integration_completed": false,
+    "production_promotion_completed": false,
+    "release_approval_granted": false
+  },
+  "method": "Direct inspection of all three original artwork sources, C raw at native resolution, text-free master and German preview at displayed full-frame size, and all nine 750x1050 physical card crops at native resolution. B was also fully viewed including all nine crops. A was rejected after its raw and full preview; no complete native-card review is claimed for A.",
+  "evidence": {
+    "cards": [
+      {
+        "path": "tmp/oneshot-trials/exgen3-source-detail-20260914-c/review/cards/card_r1_c1.png",
+        "rectangle": [
+          0,
+          0,
+          750,
+          1050
+        ],
+        "sha256": "e389145591a65a848f97abd9dbc8c678ccb3b93a8a2c2809058d404df6dc45c1"
+      },
+      {
+        "path": "tmp/oneshot-trials/exgen3-source-detail-20260914-c/review/cards/card_r1_c2.png",
+        "rectangle": [
+          809,
+          0,
+          1559,
+          1050
+        ],
+        "sha256": "f4f56e60cd04e47ce568e66818f06a915e44a11865629bdd551040fdab77cc6c"
+      },
+      {
+        "path": "tmp/oneshot-trials/exgen3-source-detail-20260914-c/review/cards/card_r1_c3.png",
+        "rectangle": [
+          1618,
+          0,
+          2368,
+          1050
+        ],
+        "sha256": "0b934d3276e447d313829796587c246286a7087505b89b6b429250f651e2b08d"
+      },
+      {
+        "path": "tmp/oneshot-trials/exgen3-source-detail-20260914-c/review/cards/card_r2_c1.png",
+        "rectangle": [
+          0,
+          1109,
+          750,
+          2159
+        ],
+        "sha256": "3cc04ef5070f02a966aa4ddcbeb048f59718f7ee32624f22ffa805a69fa17537"
+      },
+      {
+        "path": "tmp/oneshot-trials/exgen3-source-detail-20260914-c/review/cards/card_r2_c2.png",
+        "rectangle": [
+          809,
+          1109,
+          1559,
+          2159
+        ],
+        "sha256": "077348d272250bca63ff06ff6c6b78c0e220686eb020fd613ca25a932a73d199"
+      },
+      {
+        "path": "tmp/oneshot-trials/exgen3-source-detail-20260914-c/review/cards/card_r2_c3.png",
+        "rectangle": [
+          1618,
+          1109,
+          2368,
+          2159
+        ],
+        "sha256": "b7973c2324246f930b6b2bb7798693ede3546be1eba9865e7fa8633ad988a1ee"
+      },
+      {
+        "path": "tmp/oneshot-trials/exgen3-source-detail-20260914-c/review/cards/card_r3_c1.png",
+        "rectangle": [
+          0,
+          2218,
+          750,
+          3268
+        ],
+        "sha256": "6eda6a610f570d41a4951dc6ff8b7583cdc3ce04afae3fc90f29f004549cf75e"
+      },
+      {
+        "path": "tmp/oneshot-trials/exgen3-source-detail-20260914-c/review/cards/card_r3_c2.png",
+        "rectangle": [
+          809,
+          2218,
+          1559,
+          3268
+        ],
+        "sha256": "61bea4e6507df08480f6e233fc163f2a99cfdf8d7e0959a09d07778fcf362b9a"
+      },
+      {
+        "path": "tmp/oneshot-trials/exgen3-source-detail-20260914-c/review/cards/card_r3_c3.png",
+        "rectangle": [
+          1618,
+          2218,
+          2368,
+          3268
+        ],
+        "sha256": "99dde4711583ca2c50a3c69d854b54e19592b052d3eb57f137b8093d61071836"
+      }
+    ],
+    "deterministic_resampling": "Lanczos",
+    "elapsed_seconds": 66.35135412216187,
+    "master": {
+      "path": "tmp/oneshot-trials/exgen3-source-detail-20260914-c/review/artwork-300dpi.png",
+      "sha256": "eb61f272fd22bd400b2c2555cb2a490fad47c85b3947087a88b96b2e9dce3ebd"
+    },
+    "model_upscale_used": false,
+    "original_sources": [
+      {
+        "path": "tmp/poster-workspaces/ExGen3/sections/mega/sources/cutouts/pokemon_380_artwork_10062_mega_latias.png",
+        "sha256": "73d1e516779d7106f2c39c8cdfbe0d74b83127a296f6f5927b9432673dc83787"
+      },
+      {
+        "path": "tmp/poster-workspaces/ExGen3/sections/mega/sources/cutouts/pokemon_719_artwork_10075_mega_diancie.png",
+        "sha256": "96abacb8a7430bf4d242c9ee694c937eb86aa3e1f8154ab0755e4e615868d48e"
+      },
+      {
+        "path": "tmp/poster-workspaces/ExGen3/sections/mega/sources/cutouts/pokemon_448_artwork_10059_mega_lucario.png",
+        "sha256": "d51cd3b0051ffc2fe17b14c423c883831a8723b0da904bbc1f51367d15a6e85c"
+      }
+    ],
+    "post_generation_character_compositing": false,
+    "preview": {
+      "path": "tmp/oneshot-trials/exgen3-source-detail-20260914-c/review/poster-de.png",
+      "sha256": "046e402de4be80e6cebe4d7008eebf17137835526050ee8dc5883722e69709bb"
+    },
+    "print_dimensions": [
+      2368,
+      3268
+    ],
+    "raw": {
+      "path": "tmp/oneshot-trials/exgen3-source-detail-20260914-c/retrieved/oneshot-x6lvroot/output/exgen3__sections__mega_flux2_joint_scene_1mp_seed_260751036_00001_.png",
+      "sha256": "a1f96425dc1b7beb7f7cb3d5c35c62cb6e9dd708a2d8187cca2f7b2cb9cc813c"
+    },
+    "raw_dimensions": [
+      1200,
+      1664
+    ],
+    "raw_filename_note": "Immutable inherited SaveImage prefix says 1mp; actual raster and generation metadata are 2 MP.",
+    "scope": "ExGen3/sections/mega",
+    "variant": "exgen3-source-detail-20260914-c",
+    "visual_review": "completed_by_agent_user_acceptance_recorded_separately"
+  },
+  "verdicts": {
+    "genuine_one_shot": "pass: one empty target, one sampler, one decode; no post-decode character restoration/compositing, no learned upscale",
+    "physical_card_containment": "pass: all three complete figures remain within their assigned bottom-row cards with visible padding",
+    "source_identity": "close visual candidate; not pixel-identical and not an unconditional source-fidelity approval",
+    "subjects": [
+      {
+        "name": "Mega Latias",
+        "finding": "Source pose, purple-white design, forked head fins, yellow eye, wing claws and major appendages remain recognizable and close. Fine contour and shading lines are interpreted. A foreground blade partly overlaps the bottom pointed fin."
+      },
+      {
+        "name": "Mega Diancie",
+        "finding": "Source face colors, head diamond/crown, chest diamond, slender arms, scalloped dress, lower crystals and two veils remain present. Small facet boundaries and some curved outlines differ. These agent findings are retained alongside the subsequent operator acceptance of the shown candidate."
+      },
+      {
+        "name": "Mega Lucario",
+        "finding": "Two ears, facial mask/eye, three pale chest/shoulder features including the central cone, head ribbons, red hands/feet and pale spikes are present. Fine fur, face and thigh contours differ slightly from the source. Ground grass and a foreground leaf overlap small foot-edge areas."
+      }
+    ],
+    "scene_depth": "Plausible small foreground overlaps at Latias's lower tip and Lucario's feet; defining face/chest features remain visible. Shadows and a continuous scene integrate the cast. This review does not assert full physical photometric accuracy.",
+    "typography_and_other_cards": "All nine crops actually viewed; no lettering cut off or unrequested character elsewhere observed.",
+    "release_approval": "not granted; visual user acceptance is recorded above, but canonical integration of the experimental prompt, production promotion and release validation remain outstanding"
+  },
+  "compared_trials": [
+    {
+      "variant": "exgen3-source-detail-20260914-a",
+      "raw_sha256": "71cc2c6df4accddde135c21b97f77c02835c7e9eca81a30c86a87001f1cbc153",
+      "result": "reject: cast greatly enlarged, outside bottom cards"
+    },
+    {
+      "variant": "exgen3-source-detail-20260914-b",
+      "raw_sha256": "83f183ae577f8cec754d800e58860f5b20bbaf5c55fa92ac99d330db74fe0bd1",
+      "result": "superseded by C: correct containment but softer small identity details at 1 MP"
+    },
+    {
+      "variant": "exgen3-source-detail-20260914-c",
+      "raw_sha256": "a1f96425dc1b7beb7f7cb3d5c35c62cb6e9dd708a2d8187cca2f7b2cb9cc813c",
+      "result": "visually accepted by user with minor deviations: 2 MP, improved small-detail legibility and scene-specific edge occlusions; canonical integration and promotion pending"
+    }
+  ],
+  "verification": {
+    "immutable_jobs_returned": 3,
+    "technical_physical_crop_checks": 27,
+    "root_native_cards_actually_viewed": {
+      "A": 0,
+      "B": 9,
+      "C": 9
+    },
+    "focused_pytest_command": "tmp/v10-artwork-audit-env/bin/python -m pytest scripts/tests/test_render_job.py -q",
+    "focused_pytest_result": "7 passed in 1.04s",
+    "full_release_check": "not run; no release-readiness claim"
+  },
+  "boundaries": {
+    "production_artwork_changed": false,
+    "production_generation_manifests_changed": false,
+    "pdfs_or_archives_changed": false,
+    "additional_sets_generated": [],
+    "fallback_used": false,
+    "worker_models_or_runtime_changed": false,
+    "automatic_followup_render": false
+  }
+}

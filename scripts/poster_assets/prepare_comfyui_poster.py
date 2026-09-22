@@ -10,6 +10,7 @@ from typing import Any
 from PIL import Image, ImageDraw
 
 try:
+    from .source_detail import spatial_reference_scales
     from .grounding import build_grounding_masks
     from .poster_config import GROUNDED_PROMPT_FILE, build_grounded_prompt_snapshot
     from .composition import (
@@ -36,6 +37,7 @@ try:
     )
     from .poster_io import POSTER_ASSETS, load_poster_scope_data, poster_bundle
 except ImportError:
+    from source_detail import spatial_reference_scales
     from grounding import build_grounding_masks
     from poster_config import GROUNDED_PROMPT_FILE, build_grounded_prompt_snapshot
     from composition import (
@@ -237,6 +239,7 @@ def build_joint_scene_references(
     *,
     megapixels: float = 1.0,
     include_cast: bool = True,
+    subject_scales: dict[str, float] | None = None,
 ) -> None:
     """Write unscaled identities and, when requested, the spatial cast."""
     bundle = poster_bundle(scope, poster_assets=POSTER_ASSETS)
@@ -256,6 +259,7 @@ def build_joint_scene_references(
             "standard_3x3",
         ),
         canvas_size=(width, height),
+        subject_scales=subject_scales,
     )
     neutral = _joint_scene_neutral_rgb(manifest)
     cast_path = reference_dir / "joint_scene_cast_reference.png"
@@ -411,6 +415,26 @@ def prepare(
             raise FileNotFoundError(path)
 
     cutout_manifest = json.loads(required[-1].read_text(encoding="utf-8"))
+    subject_scales = spatial_reference_scales(
+        bundle.manifest, cutout_manifest.get("items", []),
+        reference_mode=effective_reference_mode,
+    )
+    if effective_reference_mode == "spatial_source_detail_joint":
+        try:
+            from .source_detail import validate_source_details
+            from .generation_contract import validate_generation_contract
+        except ImportError:
+            from source_detail import validate_source_details
+            from generation_contract import validate_generation_contract
+        if megapixels != 2.0:
+            raise ValueError("Source detail requires exactly 2 MP")
+        validate_generation_contract({
+            **bundle.manifest.get("artwork", {}).get("generation", {}),
+            "engine": "flux", "mode": "joint_scene",
+            "reference_mode": effective_reference_mode,
+            "generation_megapixels": megapixels,
+        })
+        validate_source_details(bundle.manifest, cutout_manifest.get("items", []), scope_dir)
     cutout_files = [
         scope_dir / "cutouts" / item["file"]
         for item in cutout_manifest.get("items", [])
@@ -458,8 +482,9 @@ def prepare(
                 scope,
                 work_dir,
                 megapixels=megapixels,
+                subject_scales=subject_scales,
                 include_cast=(
-                    effective_reference_mode == "spatial_identity_joint"
+                    effective_reference_mode in {"spatial_identity_joint", "spatial_source_detail_joint"}
                 ),
             )
     else:
@@ -503,6 +528,7 @@ def main() -> int:
     parser.add_argument(
         "--reference-mode",
         choices=(
+            "spatial_source_detail_joint",
             "individual_spatial_joint",
             "spatial_identity_joint",
             "regional_identity_joint",

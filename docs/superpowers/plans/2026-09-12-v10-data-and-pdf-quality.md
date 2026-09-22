@@ -586,9 +586,13 @@ verification record below describe actual execution and supersede interim states
 | Area | Status | Verified result |
 | --- | --- | --- |
 | Tasks 1-6: identity, localization, layout, logos, snapshot, refresh | Complete | All 31 scopes refreshed; the 63-file snapshot is locked to the 2026-09-12 boundary and verifies without drift. ME05 is included with 120 cards. |
-| Task 7: poster artwork | Complete | SV07, ME05, and SV08 passed raw/master and all nine physical-crop agent review. All 42 targets are promoted, enabled, and validated. Bounded resolution/model/reference comparisons and every accepted/rejected raw hash are recorded in the experiment log; all production assets remain 4B BF16. Provenance now distinguishes agent review from human approval. |
-| Task 8: German PDFs | Complete | All 31 PDFs / 807 pages were rebuilt from the final source revision. Text and Poppler checks pass for Energy names, owner-qualified SV09 names, safe SV04/SV05 wrapping, German SV10.5 logos, corrected SV07 Hopplo, SVP numbering plus the unnumbered card, and MEP numbers 064/079. The actual PDF panorama counts visibly show SVP 217 and MEP 88. |
-| Task 9: local release candidate | Complete locally; external PR approval pending | 733 tests passed and 1 skipped; independent code review has no remaining findings. All 42 bundles are current without planner actions and all 267 language counts agree with their card selection. All 168 PDFs / 4,781 pages were rebuilt from one source commit, and all nine archives pass integrity, exact PDF content, notices, and source checks. Manifest and release notes were regenerated from these final artifacts. No release was published. |
+| Task 7: poster artwork | Reopened; targeted renderer implementation approved | The complete 42-target / 125-source audit rejects 41 panoramas; ME05 alone passes. Two joint-scene retries still fail anatomy. Two identity-lock trials preserve exact source pixels but fail grounding. Existing upper-only masks cannot create subject-aware shadows; the approved ExGen3-first extension is tracked in `2026-09-12-source-locked-grounding.md`. Hash-bound reports are in `docs/reviews/`; no rejected rerender has been promoted. |
+| Task 8: German PDFs | Data/layout verified; artwork acceptance reopened | The existing 31 PDFs / 807 pages retain the verified energy names, owner-qualified SV09 names, SV04/SV05 wrapping, German SV10.5 logos, SVP numbering plus the unnumbered card, and MEP numbers 064/079. Panorama anatomy, including SV07 Hopplo, is not approved by those text/layout checks. Rebuild and visual checks must follow accepted artwork replacements. |
+| Task 9: local release candidate | Blocked on artwork corrections and external PR approval | The prior 733-pass / 1-skip test run and the 168-PDF / 4,781-page archive checks remain historical technical evidence, not current visual acceptance. Existing files are retained as unapproved candidates. No release was published. |
+
+The complete source re-audit supersedes earlier visual completion claims in
+the historical execution narrative below. Data, numbering and print geometry
+checks are separate from artwork anatomy approval.
 
 ME05 and SV08 now also have reviewed panoramas. The ordinary cover remains a
 diagnostic/explicit skip option, not an

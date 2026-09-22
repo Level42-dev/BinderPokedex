@@ -1,0 +1,61 @@
+{
+  "inspected_on": "2026-09-15",
+  "status": "historical_a_source_briefs_not_image_approval_p15_wording_superseded",
+  "correction_notice": {
+    "P15": "The original consumed Latios description incorrectly placed the triangular mark on the long upper wing. Direct re-view confirms one small root-wing mark and a plain long wing. The current manifest and p15-source-detail-20260915-b prompt correct this and clarify Mewtwo's single connected tail. Original A wording below remains as historical evidence, not the current source brief.",
+    "P40": "Source descriptions remain unchanged for B; only a final scene-layout reminder was added after A clipped Miraidon's upper lightning at the physical card boundary."
+  },
+  "mode": "canonical_source_detail_oneshot",
+  "pipeline_contract_version": 11,
+  "actual_generation_megapixels": 2,
+  "source_images_viewed_by_controller": true,
+  "pilots": [
+    {
+      "scope": "ExGen2/sections/mega",
+      "review_id": "P15",
+      "variant": "p15-source-detail-20260915-a",
+      "seed": 260736802,
+      "source_details": {
+        "pokeapi:official-artwork:10043": {
+          "sha256": "5dd98bb485cf51eb4ede5189d28aeb9c6e426bd08d9abbc37187c02268b188d9",
+          "traits": "Mega Mewtwo X must match this exact upright muscular source pose, not ordinary Mewtwo or Mega Mewtwo Y. Preserve the angular light gray head with two pointed horns and the visible narrow blue eye with dark pupil. Preserve the large pink-violet shoulder arcs and belly, the image-left fist on its hip and the raised image-right hand with three distinct round fingertips. Keep both long pale legs and the separated rounded toes exactly as shown. Preserve the single pink-violet tail rising behind the image-left shoulder and curling inward at its tip. Copy the source's limb count, open spaces, proportions, expression and viewing direction."
+        },
+        "pokeapi:official-artwork:10079": {
+          "sha256": "28a9f35caa69df85cde05fcb5e7785d7581b30910b2cd6df508d35fca2a789f4",
+          "traits": "Mega Rayquaza must match this exact long green serpentine body in its single continuous curled loop, with its head facing down-left and its tapering tail continuing toward the right. Preserve the angular layered head plates, the narrow visible eye, open mouth and separate pale pointed teeth. Copy the two small clawed arms, the geometric body fins, dark panel outlines and circular orange-yellow markings in their source locations. The long gold-orange appendages with diamond-shaped sections are slender flowing energy ribbons, not additional snakes, heads or arms. Preserve the source's complete body path and all distinct head, jaw, claw and fin contours."
+        },
+        "pokeapi:official-artwork:10063": {
+          "sha256": "ea327ac2ac56cb1a90153bad84f66bd62d25f8c25093733ed1aef9a5411b8054",
+          "traits": "Mega Latios must match this exact elongated white-and-lavender flying pose with the real head at the far LEFT. Preserve the visible red eye, blue forehead area, narrow beak-like mouth, long pale neck and two jagged pale head crests. The large upper lavender wing extends toward the RIGHT and bears a white hollow triangular marking with a dark outline and a plain gray-lavender center. This wing triangle is a flat marking: absolutely NO eyeball, pupil or second head there. Preserve the dark purple upper wing surface, lighter lavender base, separate lower fins and all sharp white source contours. Keep the original wing/body proportions, orientation and spaces between appendages."
+        }
+      }
+    },
+    {
+      "scope": "ExGen3/sections/normal",
+      "review_id": "P40",
+      "variant": "p40-source-detail-20260915-a",
+      "seed": 260711318,
+      "source_details": {
+        "pokeapi:official-artwork:1007": {
+          "sha256": "a292ff6c8c43f3f2c2df404ad14fc84e4ba0db33107692068d70e30ea9b44962",
+          "traits": "Koraidon must match this exact strong red upright standing pose, with the small reptilian face clearly visible at the TOP and the narrow yellow eye. Preserve the white, pink and blue feather crest and the long segmented pale head tendril curving behind it. The large dark grooved chest-throat wheel is a body structure with red and white edge points, NOT a face; do not put eyes or a mouth on the wheel. Preserve both separate arms and pale pointed hand claws, the broad red-and-white standing feet, pale belly, white back spikes and long red tail with white triangular edges. Copy the exact source silhouette, anatomy, pose and gaze."
+        },
+        "pokeapi:official-artwork:25": {
+          "sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+          "traits": "Pikachu must match this exact cheerful yellow source pose: exactly two long black-tipped ears, two separate dark round eyes with white highlights, red cheek circles and the open pink mouth with distinct tongue. Preserve the image-left arm extended outward and the image-right arm bent toward the chest with its separate small pointed finger contours. Copy the two small standing feet and one continuous large yellow zigzag tail with its brown base. Preserve the source's body proportions, expression, eye spacing, ear angles and hand pose; no extra fingers, ears, tails or facial marks. Scene-appropriate foreground overlap is allowed without changing these defining features."
+        },
+        "pokeapi:official-artwork:1008": {
+          "sha256": "282add1c4774047944a6c9d377ee0ed739744d2d23bb18ac32133534190a022a",
+          "traits": "Miraidon must match this exact upright floating violet-blue source pose. Preserve the small angular pale face, its separate narrow eye and the tall dark central head crest. Exactly two long head appendages branch into jagged white, violet and pale yellow ELECTRIC LIGHTNING shapes, never feathers or leaf-shaped fans. Preserve the source's pale chest with sharp cyan-white zigzag bands and the yellow border; do not replace it with a smooth oval shield or generic diagonal stripes. Keep the two separate arms with pale segmented fingers, bent lower limbs, violet body panels and the long lower curved yellow-white-violet tail and energy shapes in their exact source arrangement. The chest is not a second head."
+        }
+      }
+    }
+  ],
+  "review_constraints": [
+    "All sources and prepared references must be directly viewed.",
+    "Retain original scope landscape and model pins.",
+    "Exactly three intended special-form/source identities per image; preserve card containment and disclose size deviations.",
+    "Raw, full master, German preview and all nine physical cards must be inspected before user review.",
+    "No approval transfer from P01 and no automatic promotion or fallback."
+  ]
+}
