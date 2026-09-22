@@ -36,11 +36,16 @@ verdeckt. P04 wird separat auf seine exakte neue Version geprüft.
 
 Checkpoint `82b23a9` schützt Code, Konfiguration, Prüfberichte und regulär
 übernommene textfreie Master samt Herkunftsnachweisen und wurde gepusht.
-Zusätzlich werden die exakten Master von Basis-Set B, ExGen3 Mega C, Dschungel E
+Commit `6b1513a` sichert zusätzlich den regulär übernommenen P04-B-Master.
+Außerdem enthält er die exakten Master von Basis-Set B, ExGen3 Mega C, Dschungel E
 und Stellarkrone B samt unverändert abgegrenzten Review-Entscheidungen im
-[Review-Archiv](../../assets/reviewed-candidates/README.md) gesichert. Das Archiv
+[Review-Archiv](../../assets/reviewed-candidates/README.md). Das Archiv
 aktiviert keine Produktionsroute und macht insbesondere Teilfreigaben nicht zu
 Gesamtfreigaben. Die reguläre technische Übernahme dieser Kandidaten bleibt offen.
+Auch `6b1513a` wurde gepusht; eine unabhängige Remote-Abfrage bestätigte exakt
+`6b1513a7acc11df3d22fec28e5e229d26da64674`. Alle fünf Master entsprechen
+bytegenau den gespeicherten Git-Blobs. Der abschließende Dokumentations-Commit
+ändert keine Bildpixel, Produktionsdaten oder Renderer-Funktionen.
 
 Dies ist keine vollständige Sicherung sämtlicher ignorierter Render-Versuche.
 Deren Rohbilder, Protokolle, Versuchshilfen und reproduzierbare Quellen bleiben

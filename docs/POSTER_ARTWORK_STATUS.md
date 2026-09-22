@@ -9,7 +9,7 @@ evidence in [Poster Experiment Log](POSTER_ARTWORK_EXPERIMENT_LOG.md).
 Installed-artwork audit reopened: 2026-09-12. Full target retriage: 2026-09-14.
 Latest scoped production update: 2026-09-22 (accepted P15-D, P40-B, P10-C and P04-B).
 Latest human shortlist feedback: 2026-09-22 (P03/P27, corrected P10-C and P04-B accepted).
-Latest continuation: 2026-09-22 (P04-B adopted with checked print proofs; development checkpoint and separate review-master archive prepared).
+Latest continuation: 2026-09-22 (P04-B adopted with checked print proofs; development checkpoint and separate review-master archive pushed and remotely verified).
 
 ## Current decision
 
@@ -96,6 +96,9 @@ SV07-B text-free masters are additionally preserved in
 [the review-only archive](../assets/reviewed-candidates/README.md). No production
 routing or acceptance scope changes follow from that backup. Downloaded source
 images, private renderer state and complete temporary render jobs remain excluded.
+P04 adoption and all four review-only masters are stored in pushed commit
+`6b1513a`; an independent remote-ref query confirmed that exact commit, and
+the five master files match their committed Git blobs byte-for-byte.
 
 ### P10-C accepted and adopted (2026-09-22)
 

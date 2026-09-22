@@ -25,7 +25,7 @@ Entwicklungsbranch auch im Remote-Repository sichern.
   pixelgenau abgleichen und die übrigen 41 Master auf Unverändertheit prüfen.
 - [x] Zwei deutsche Panorama-Druckproben mit dem Produktionsrenderer erstellen;
   alle vier PDF-Seiten sowie Bildpixel, A4-Geometrie und Platzierungen prüfen.
-- [ ] Ergebnis und offene Grenzen dokumentieren, gezielt committen und pushen;
+- [x] Ergebnis und offene Grenzen dokumentieren, gezielt committen und pushen;
   Remote-Commit abschließend unabhängig vergleichen.
 
 ## Ausführungsentscheidungen
@@ -67,5 +67,9 @@ jeweils eine Panorama-Seite und eine Herkunfts-/Hinweisseite. Bei 100 % drucken.
 Der volle Testlauf hat vor und nach der Übernahme dieselben drei bestehenden
 Fehler bei widerrufenen Alt-Freigaben: 828 bestanden, 3 fehlgeschlagen,
 1 übersprungen. Einzelheiten stehen im [Test-/Sicherungsbericht](2026-09-22-git-checkpoint-verification.md).
-Der Entwicklungs-Checkpoint `82b23a9` ist bereits gepusht. P04 und die vier
-Review-Archiv-Master folgen im abschließenden, getrennten Sicherungsstand.
+Der Entwicklungs-Checkpoint `82b23a9` ist gepusht. P04 und die vier
+Review-Archiv-Master sind im getrennten Commit `6b1513a` ebenfalls gepusht.
+Die unabhängige Remote-Abfrage bestätigte exakt
+`6b1513a7acc11df3d22fec28e5e229d26da64674` auf `codex/v10-refresh`.
+Alle fünf gesicherten Master stimmen mit ihren Git-Blobs überein.
+Der nachfolgende Dokumentationsabschluss verändert keine Bild- oder Code-Datei.
