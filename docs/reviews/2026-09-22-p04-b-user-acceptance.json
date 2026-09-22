@@ -191,7 +191,7 @@
     "No numeric small-cast layout pass or exact-source identity claim; original agent findings are retained unchanged.",
     "Approval does not extend to A, changed pixels, other panoramas, full PDF sets or release completion."
   ],
-  "technical_adoption": "pending",
-  "promoted": false,
+  "technical_adoption": "installed_exact_pixels_and_validated; see 2026-09-22-p04-b-production.json",
+  "promoted": true,
   "release_ready": false
 }

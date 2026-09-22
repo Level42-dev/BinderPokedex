@@ -7,9 +7,9 @@ live in [Poster Workflow](POSTER_WORKFLOW.md), durable product requirements in
 evidence in [Poster Experiment Log](POSTER_ARTWORK_EXPERIMENT_LOG.md).
 
 Installed-artwork audit reopened: 2026-09-12. Full target retriage: 2026-09-14.
-Latest scoped production update: 2026-09-22 (accepted P15-D, P40-B and P10-C).
+Latest scoped production update: 2026-09-22 (accepted P15-D, P40-B, P10-C and P04-B).
 Latest human shortlist feedback: 2026-09-22 (P03/P27, corrected P10-C and P04-B accepted).
-Latest continuation: 2026-09-22 (P10-C adopted; P04-B accepted, technical adoption pending).
+Latest continuation: 2026-09-22 (P04-B adopted with checked print proofs; development checkpoint and separate review-master archive prepared).
 
 ## Current decision
 
@@ -51,7 +51,7 @@ visually accepted B on 14 September, independently of ExGen3 C. Both exact
 candidate masters now have scoped human acceptance; neither is technically
 promoted. The installed Base1 artwork and release files remain unchanged.
 
-### P04-B accepted; technical adoption pending (2026-09-22)
+### P04-B accepted and adopted (2026-09-22)
 
 P04 (`Pokedex/sections/gen1`) has two new canonical v11 source-detail one-shots.
 The targeted pale Charmander tail underside is restored. A is rejected for a
@@ -60,8 +60,9 @@ with byte-identical references and unchanged seed/models/scene description.
 B has three outer claw forms, with a rounded middle tip and extra inner line
 explicitly disclosed for user judgment. No exact-source or numeric-layout
 pass is invented. Every raw/master/preview and all nine cards per variant were
-inspected; B's canonical verifier and 119 focused tests pass. All 42 installed
-masters remain unchanged during P04 work. No P04 promotion or release build.
+inspected; B's canonical verifier and 119 focused tests passed before user
+acceptance. All 42 installed masters were unchanged during those P04 trials;
+the later scoped adoption is recorded below. No release build was performed.
 
 The operator subsequently accepted the exact B scene and all three shown
 source/card comparisons with “sieht alles super aus!”. The disclosed middle
@@ -69,11 +70,32 @@ claw inner contour and other minor differences are accepted for these exact
 pixels only. All 33 hash bindings in the original agent report were rechecked;
 that historical report remains unchanged. This does not imply a numeric-layout
 pass, a user inspection of every physical crop or approval of any full release.
-Technical adoption and subsequent print validation remain pending.
+The exact B master is now installed through the normal promotion command with
+an agent technical review, separate from the human decision. Master, German
+preview and all nine physical cards match the accepted candidate pixel-for-pixel;
+the other 41 installed masters are unchanged. Both German panorama-only proof
+PDFs passed embedded-pixel, A4/placement and all-four-page visual checks. These
+are not full Pokédex or release builds.
 
-[Exact P04-B user acceptance](reviews/2026-09-22-p04-b-user-acceptance.json).
+[Exact P04-B user acceptance](reviews/2026-09-22-p04-b-user-acceptance.json) and
+[production evidence](reviews/2026-09-22-p04-b-production.json).
 
 [P04-B full scene, all source pairs and enlarged claw detail](reviews/2026-09-22-p04-source-detail-review.md).
+
+### Git preservation checkpoint (2026-09-22)
+
+The accumulated source-detail code, tests, decisions and installed masters are
+preserved in checkpoint `82b23a9` on `codex/v10-refresh`, pushed to the existing
+GitHub repository. The full test directory remains 828 passed, 3 failed,
+1 skipped before and after P04 adoption; the three pre-existing global tests
+still encounter revoked historical approvals. See the
+[explicit test boundaries](reviews/2026-09-22-git-checkpoint-verification.md).
+
+The exact previously accepted/partly accepted Base1-B, ExGen3 Mega-C, P02-E and
+SV07-B text-free masters are additionally preserved in
+[the review-only archive](../assets/reviewed-candidates/README.md). No production
+routing or acceptance scope changes follow from that backup. Downloaded source
+images, private renderer state and complete temporary render jobs remain excluded.
 
 ### P10-C accepted and adopted (2026-09-22)
 

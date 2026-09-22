@@ -1,15 +1,17 @@
 # Entwicklungsstand: Git-Sicherung und Testgrenzen
 
-Stand: 22.09.2026, vor P04-B-Übernahme. Kein Release und keine Merge-Freigabe.
+Stand: 22.09.2026. Kein Release und keine Merge-Freigabe.
 
 Die sieben bereits vorhandenen lokalen Commits bis `4abae76` wurden auf den
 bestehenden Remote-Branch `codex/v10-refresh` übertragen. GitHub bestätigte
 den Repository-Umzug; `origin` verweist nun auf `Level42-dev/BinderPokedex`.
 
-## Prüfung des bisher uncommitteten Stands
+## Prüfung des bisher uncommitteten Stands und nach P04-B-Übernahme
 
 - Vollständiges Testverzeichnis: `python -m pytest scripts/tests -q`:
   **828 bestanden, 3 fehlgeschlagen, 1 übersprungen**; 174,59 Sekunden.
+- Wiederholung nach P04-B-Übernahme: gleiches Ergebnis und dieselben drei
+  Testnamen; 107,29 Sekunden. Keine neue Testregression durch die Übernahme.
 - Separater unabhängiger Review: 93 fokussierte Tests bestanden; kein konkreter
   Fehler in den geprüften Source-Detail-/Skalierungsänderungen gefunden.
 - Maschinengebundene Markdown-Verweise wurden in relative Projektverweise
@@ -32,11 +34,18 @@ verdeckt. P04 wird separat auf seine exakte neue Version geprüft.
 
 ## Sicherungsgrenze
 
-Der Entwicklungsstand schützt Code, Konfiguration, Prüfberichte und regulär
-übernommene textfreie Master samt Herkunftsnachweisen. Er ist keine vollständige
-Sicherung sämtlicher ignorierter Render-Versuche. Deren Rohbilder, Protokolle,
-Versuchshilfen und reproduzierbare Quellen bleiben vorerst lokal. Die Übernahme
-weiterer bereits akzeptierter historischer Kandidaten ist separat offen.
+Checkpoint `82b23a9` schützt Code, Konfiguration, Prüfberichte und regulär
+übernommene textfreie Master samt Herkunftsnachweisen und wurde gepusht.
+Zusätzlich werden die exakten Master von Basis-Set B, ExGen3 Mega C, Dschungel E
+und Stellarkrone B samt unverändert abgegrenzten Review-Entscheidungen im
+[Review-Archiv](../../assets/reviewed-candidates/README.md) gesichert. Das Archiv
+aktiviert keine Produktionsroute und macht insbesondere Teilfreigaben nicht zu
+Gesamtfreigaben. Die reguläre technische Übernahme dieser Kandidaten bleibt offen.
+
+Dies ist keine vollständige Sicherung sämtlicher ignorierter Render-Versuche.
+Deren Rohbilder, Protokolle, Versuchshilfen und reproduzierbare Quellen bleiben
+lokal. Die bestehenden PDF-/ZIP-Release-Kandidaten wurden nicht verändert,
+veröffentlicht oder in Git aufgenommen.
 
 ## Review-Abgrenzung
 

@@ -1,7 +1,7 @@
 # P04 – Pokédex Generation I: Variante B freigegeben
 
 Stand: 22.09.2026. Neues Kanto-Panorama mit Bisasam, Glumanda und Schiggy;
-**noch nicht übernommen**. Gemeint ist der Pokédex-Abschnitt Generation I,
+**pixelgleich übernommen und als separate Druckprobe geprüft**. Gemeint ist der Pokédex-Abschnitt Generation I,
 nicht das separat akzeptierte Basis-Set.
 
 Nutzerfreigabe vom 22.09.2026: „sieht alles super aus!“ – für genau B,
@@ -9,7 +9,9 @@ alle drei gezeigten Pokémon und die Gesamtszene einschließlich der offengelegt
 kleinen Restabweichungen. Die Bild-, Quellen- und Prüfberichtbindungen wurden
 erneut abgeglichen; die Entscheidung steht im
 [separaten Freigabenachweis](2026-09-22-p04-b-user-acceptance.json).
-Technische Übernahme und anschließende Druckprüfung stehen noch aus.
+Die technische Übernahme und die Prüfung beider separaten Panorama-Druckproben
+sind abgeschlossen; siehe [Produktionsnachweis](2026-09-22-p04-b-production.json).
+Die vollständige Pokédex-/v10-Ausgabe bleibt separat offen.
 
 Glumandas fehlende helle Schwanzunterseite ist wieder sichtbar. Versuch A
 hatte jedoch eine zusätzliche Krallenspitze bei Bisasam. B präzisiert nur
@@ -18,7 +20,7 @@ sind unverändert. Die neu erzeugte Landschaft selbst unterscheidet sich.
 
 ## Gesamtbild B
 
-![P04 B – vollständiges neues Panorama](../../tmp/oneshot-trials/p04-source-detail-20260922-b/review/artwork-300dpi.png)
+![P04 B – pixelgleich übernommenes Panorama](../../assets/posters/Pokedex/sections/gen1/poster-flux2-artwork.png)
 
 ## Bisasam · r3c1
 
@@ -63,7 +65,7 @@ Schwanz sind erhalten. Finger-/Zehenkonturen sind etwas runder und kürzer.
 - [x] Bisasams offengelegte Restabweichung an der mittleren Krallenspitze akzeptiert.
 - [x] Glumanda und Schiggy im gezeigten direkten Quellenvergleich akzeptiert.
 - [x] Gezeigte Gesamtszene, Figurengrößen und Randabstände akzeptiert.
-- [ ] Technische Übernahme und anschließende Druckprüfung abgeschlossen.
+- [x] Technische Übernahme und anschließende Prüfung aller vier Druckproben-Seiten abgeschlossen.
 
 Die Freigabe gilt ausschließlich für die unveränderten B-Dateien. Sie ist
 keine Freigabe von Versuch A, anderen Panoramen oder der gesamten v10-Ausgabe.

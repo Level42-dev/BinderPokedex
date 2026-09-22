@@ -36,7 +36,7 @@ Für jedes freizugebende Pokémon stehen ab jetzt der **exakte Kartenausschnitt 
 | P01 | Stellarkrone (SV07) | 3 Figur(en) beanstandet | [Master öffnen](../../assets/posters/SV07/poster-flux2-artwork.png) |
 | P02 | Dschungel (Base2) | 1 Figur(en) beanstandet, 2 unklar | [Master öffnen](../../assets/posters/Base2/poster-flux2-artwork.png) |
 | P03 | Dunkelnacht (ME05) | Agentencheck bestanden | [Master öffnen](../../assets/posters/ME05/poster-flux2-artwork.png) |
-| P04 | Pokédex – Generation I (Pokedex/sections/gen1) | 2 Figur(en) beanstandet | [Master öffnen](../../assets/posters/Pokedex/sections/gen1/poster-flux2-artwork.png) |
+| P04 | Pokédex – Generation I (Pokedex/sections/gen1) | 2 Figur(en) beanstandet | [Historischen Master öffnen](../../tmp/v10-p04-adoption-20260922/previous-bundle/poster-flux2-artwork.png) |
 | P05 | Pokédex – Generation II (Pokedex/sections/gen2) | 2 Figur(en) beanstandet, 1 unklar | [Master öffnen](../../assets/posters/Pokedex/sections/gen2/poster-flux2-artwork.png) |
 | P06 | Pokédex – Generation III (Pokedex/sections/gen3) | 2 Figur(en) beanstandet | [Master öffnen](../../assets/posters/Pokedex/sections/gen3/poster-flux2-artwork.png) |
 | P07 | Pokédex – Generation IV (Pokedex/sections/gen4) | 1 Figur(en) beanstandet | [Master öffnen](../../assets/posters/Pokedex/sections/gen4/poster-flux2-artwork.png) |
@@ -212,7 +212,10 @@ Bildkennung: `3120f1f07526c80d` (vollständiger Hash im zugehörigen JSON-Snapsh
 
 **Deine Bewertung: offen.** 2 Figur(en) beanstandet.
 
-![P04 – Pokédex – Generation I, bestehender textfreier Master](../../assets/posters/Pokedex/sections/gen1/poster-flux2-artwork.png)
+![P04 – Pokédex – Generation I, historische Fassung vor B](../../tmp/v10-p04-adoption-20260922/previous-bundle/poster-flux2-artwork.png)
+
+Dieser historische Master ist außerdem im Git-Commit `82b23a9` erhalten.
+Die spätere P04-B-Freigabe ersetzt nicht rückwirkend die hier geprüften Pixel.
 
 #### P04 – Bisasam · unten links
 

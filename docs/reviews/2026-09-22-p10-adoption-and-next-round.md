@@ -19,7 +19,7 @@ markiert. Die technische Sichtprüfung aller Karten ist eine Agentenprüfung.
 - [x] Offene Liste abgleichen und P04 / Pokédex Generation I als nächsten klaren Fehlerfall im bestehenden One-shot-Verfahren bearbeiten.
 - [x] P04-B mit vollständigem Panorama und allen Original-/Kartenpaaren zur eigenen Nutzerfreigabe vorbereiten.
 
-## P04-B: Nutzerfreigabe erhalten, Übernahme offen
+## P04-B: Nutzerfreigabe erhalten und übernommen
 
 Zwei kontrollierte One-shots erstellt. Glumandas helle Schwanzunterseite
 ist in beiden vorhanden. A wurde wegen der zusätzlichen Bisasam-Krallenspitze
@@ -27,7 +27,8 @@ verworfen. B zeigt drei äußere Formen, aber noch eine zusätzliche Innenlinie
 an der mittleren Spitze. Diese kleine, ausdrücklich offengelegte Restabweichung
 und die neue Gesamtszene wurden separat vorgelegt und anschließend mit
 „sieht alles super aus!“ akzeptiert. Die Freigabe ist an die exakten B-Dateien
-gebunden; technische Übernahme und Druckprüfung von P04 stehen noch aus.
+gebunden. Die spätere technische Übernahme und separate Druckprüfung sind im
+[P04-Produktionsnachweis](2026-09-22-p04-b-production.json) dokumentiert.
 
 [Exakte P04-B-Nutzerentscheidung](2026-09-22-p04-b-user-acceptance.json).
 

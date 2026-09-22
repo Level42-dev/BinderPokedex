@@ -136,6 +136,25 @@ are queued on the worker rather than through a publicly exposed API.
 
 ## Required and optional phases
 
+### Development checkpoints and review-master preservation
+
+For the operator-requested ongoing v10 Git backup, commit and push validated
+milestones to the existing development branch, then compare the remote branch
+SHA with local HEAD. A backup commit is not a merge, release, tag or blanket
+artwork approval. Stage an explicit project-file allowlist; never include
+private renderer state, downloaded sources, generated release ZIPs or local
+release metadata. Record any known failing tests without weakening approval gates.
+
+Exact already shown and accepted or partly accepted text-free masters awaiting
+technical integration may be preserved under `assets/reviewed-candidates`.
+Store only the unchanged master and clearly labelled review-only provenance:
+master/report/source hashes, original decision and its exact limits. This archive
+is outside `assets/posters`, has no routing manifest and cannot activate a PDF
+poster. Partial subject approval never becomes full-scene approval. Continue to
+use the normal promotion path when integration and its review gates are complete.
+Raw render jobs and logs remain outside Git; this archive does not claim a full
+backup of every temporary experiment.
+
 | Phase | Required for a normal PDF | Required for a poster PDF | May be repeated |
 | --- | --- | --- | --- |
 | Fetch scope data | yes | yes | whenever source data changes |

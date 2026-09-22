@@ -16,14 +16,14 @@ Entwicklungsbranch auch im Remote-Repository sichern.
 
 ## Arbeitsliste
 
-- [ ] Bestehende Commits auf `codex/v10-refresh` mit dem Remote abgleichen.
-- [ ] Lokale Code-, Konfigurations- und Review-Arbeit auf sichere Inhalte prüfen,
+- [x] Bestehende Commits auf `codex/v10-refresh` mit dem Remote abgleichen.
+- [x] Lokale Code-, Konfigurations- und Review-Arbeit auf sichere Inhalte prüfen,
   den Teststand erfassen und als Entwicklungsstand committen und pushen.
-- [ ] P04-B-Freigabe und sämtliche gebundenen Dateien erneut verifizieren;
+- [x] P04-B-Freigabe und sämtliche gebundenen Dateien erneut verifizieren;
   bisherigen P04-Bestand rückholbar sichern.
-- [ ] Genau P04-B regulär übernehmen; Master, Vorschau und alle neun Karten
+- [x] Genau P04-B regulär übernehmen; Master, Vorschau und alle neun Karten
   pixelgenau abgleichen und die übrigen 41 Master auf Unverändertheit prüfen.
-- [ ] Zwei deutsche Panorama-Druckproben mit dem Produktionsrenderer erstellen;
+- [x] Zwei deutsche Panorama-Druckproben mit dem Produktionsrenderer erstellen;
   alle vier PDF-Seiten sowie Bildpixel, A4-Geometrie und Platzierungen prüfen.
 - [ ] Ergebnis und offene Grenzen dokumentieren, gezielt committen und pushen;
   Remote-Commit abschließend unabhängig vergleichen.
@@ -44,3 +44,28 @@ Pre-flight: Übernahme benötigt die bereits freigegebenen Bild-/Quellenhashes;
 Druckproben konsumieren den regulär übernommenen Master; Git enthält nur
 öffentliche Projektdaten und den freigegebenen Master samt Herkunftsnachweis.
 Es ist keine neue Produktionscode-Implementierung vorgesehen.
+
+Ruling: Die vier bereits ganz oder teilweise akzeptierten, aber noch nicht
+produktiven Master zusätzlich in `assets/reviewed-candidates` archivieren.
+Der aktuelle Sicherungsauftrag umfasst diese sonst nur lokal vorhandenen
+Bildresultate. Das Archiv liegt außerhalb des Produktionsroutings und erhält
+die genaue Teil-/Gesamtfreigabe. Risiko einer Verwechslung wird durch eigene
+Archiv-Provenienz und ausdrücklich falsche Promotion-/Release-Flags begrenzt.
+
+## Ergebnis der P04-Übernahme
+
+Der Master ist bytegleich zu B; deutsche Vorschau und alle neun Schnittkarten
+sind pixelgleich. Die übrigen 41 installierten Master sind unverändert.
+Produktionsvalidierung, exakte eingebettete PDF-Bildpixel, physische Positionen
+und alle vier gerasterten PDF-Seiten sind geprüft. Die beiden Ausgaben enthalten
+jeweils eine Panorama-Seite und eine Herkunfts-/Hinweisseite. Bei 100 % drucken.
+
+- [Deutsche Schnittkarten](../../output/pdf/v10-p04-b-20260922/v10_P04_B_Druckprobe_DE_Schnittkarten.pdf)
+- [Deutsches Gesamtpanorama](../../output/pdf/v10-p04-b-20260922/v10_P04_B_Druckprobe_DE_Gesamtpanorama.pdf)
+- [Hashgebundener Produktions- und PDF-Prüfnachweis](2026-09-22-p04-b-production.json)
+
+Der volle Testlauf hat vor und nach der Übernahme dieselben drei bestehenden
+Fehler bei widerrufenen Alt-Freigaben: 828 bestanden, 3 fehlgeschlagen,
+1 übersprungen. Einzelheiten stehen im [Test-/Sicherungsbericht](2026-09-22-git-checkpoint-verification.md).
+Der Entwicklungs-Checkpoint `82b23a9` ist bereits gepusht. P04 und die vier
+Review-Archiv-Master folgen im abschließenden, getrennten Sicherungsstand.
