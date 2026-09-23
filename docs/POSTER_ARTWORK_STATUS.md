@@ -8,8 +8,25 @@ evidence in [Poster Experiment Log](POSTER_ARTWORK_EXPERIMENT_LOG.md).
 
 Installed-artwork audit reopened: 2026-09-12. Full target retriage: 2026-09-14.
 Latest scoped production update: 2026-09-22 (accepted P15-D, P40-B, P10-C and P04-B).
-Latest human shortlist feedback: 2026-09-22 (P03/P27, corrected P10-C and P04-B accepted).
-Latest continuation: 2026-09-22 (P04-B adopted with checked print proofs; development checkpoint and separate review-master archive pushed and remotely verified).
+Latest human artwork feedback: 2026-09-23 (29 exact candidates in the collected panorama review accepted).
+Latest continuation: 2026-09-23 (29 accepted masters preserved in the review-only archive; technical adoption and release remain open).
+
+### Collected panorama artwork accepted (2026-09-23)
+
+The operator accepted all **29 exact artwork candidates** presented in the
+[collected panorama comparison](reviews/2026-09-22-panorama-batch-gallery.md),
+including the noted small differences in finger/hand line divisions. The
+[acceptance record](reviews/2026-09-23-panorama-batch-user-acceptance.json)
+binds this decision to each text-free master and German preview hash, and to
+the unchanged evidence index containing all 87 source/card pairs and 261
+physical card crops. It is an image-specific judgment, not a general exception
+for future anatomy deviations.
+
+P16 and P37 were marked non-approvable and were not part of the 29. P01's
+Hopplo shadow, P02's remaining subjects and P06's detailed identity check are
+still open. SVP/MEP promo numbers, all card data, PDF print quality, production
+promotion and a complete v10 release remain independent gates. No installed
+artwork or release PDF changed as a result of recording this approval.
 
 ## Current decision
 

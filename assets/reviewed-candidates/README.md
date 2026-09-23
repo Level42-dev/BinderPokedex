@@ -1,5 +1,12 @@
 # Review-Archiv, keine Produktionsfreigabe
 
+Die [V10-Sammelcharge vom 23.09.2026](v10-batch-20260923/archive-index.json)
+enthält 29 exakt freigegebene, textfreie Master aus der
+[gemeinsamen Bildabnahme](../../docs/reviews/2026-09-23-panorama-batch-user-acceptance.json).
+Die zugehörigen Quellen- und Einlegerhashes stehen im unveränderten
+Review-Nachweis. P16 und P37 sind ausgeschlossen. Diese Archivkopien ändern
+weder `assets/posters` noch PDF-Routing, Daten oder Verkaufsfreigaben.
+
 Diese unveränderten textfreien Master werden auf den ausdrücklichen
 Git-Sicherungsauftrag vom 22.09.2026 hin erhalten. Sie sind nicht in
 `assets/posters` installiert und besitzen keine neue PDF-Routing-Freigabe.
