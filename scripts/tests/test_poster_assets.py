@@ -96,6 +96,7 @@ from scripts.poster_assets.queue_comfyui_workflow import (
     validate_server_input_directory,
 )
 from scripts.poster_assets.prepare_comfyui_poster import (
+    build_individual_spatial_joint_references,
     build_joint_scene_references,
     build_identity_lock_references,
     build_upper_context_mask,
@@ -1333,6 +1334,21 @@ def test_regional_joint_scene_preparation_writes_only_identity_refs(
         "identity_reference_2.png",
         "identity_reference_3.png",
     ]
+
+
+def test_individual_spatial_references_apply_opt_in_scales_without_changing_default(tmp_path: Path):
+    bundle = poster_bundle("Base1")
+    items = load_cutout_items(bundle.source_dir)
+    first_key = resolve_poster_subject(items[0]).subject_key
+    normal = build_individual_spatial_joint_references("Base1", tmp_path / "normal")
+    scaled = build_individual_spatial_joint_references(
+        "Base1", tmp_path / "scaled", subject_scales={first_key: 0.55},
+    )
+    with Image.open(normal[0]) as original, Image.open(scaled[0]) as smaller:
+        assert ImageChops.difference(original, smaller).getbbox() is not None
+        assert smaller.size == original.size
+    with Image.open(normal[1]) as original, Image.open(scaled[1]) as unchanged:
+        assert ImageChops.difference(original, unchanged).getbbox() is None
 
 
 

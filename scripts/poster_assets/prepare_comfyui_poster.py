@@ -292,6 +292,8 @@ def build_joint_scene_references(
 def build_individual_spatial_joint_references(
     scope: str,
     output_dir: Path | None = None,
+    *,
+    subject_scales: dict[str, float] | None = None,
 ) -> list[Path]:
     """Write one poster-shaped identity-and-position image per subject."""
     bundle = poster_bundle(scope, poster_assets=POSTER_ASSETS)
@@ -310,6 +312,7 @@ def build_individual_spatial_joint_references(
             "standard_3x3",
         ),
         canvas_size=(width, height),
+        subject_scales=subject_scales,
     )
     neutral = _joint_scene_neutral_rgb(manifest)
     outputs = []
