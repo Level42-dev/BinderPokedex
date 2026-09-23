@@ -8,6 +8,7 @@ Tests the transformation of TCG cards to target format, including:
 """
 
 import json
+import subprocess
 import sys
 import pytest
 from pathlib import Path
@@ -27,6 +28,26 @@ from scripts.poster_assets.poster_subject import (
 )
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+
+
+def test_transform_step_imports_without_prior_repository_path_bootstrap(tmp_path):
+    """The fetcher step must not depend on earlier imports adding repo root."""
+    fetcher_dir = REPO_ROOT / "scripts" / "fetcher"
+    code = (
+        "import sys\n"
+        f"sys.path.insert(0, {str(fetcher_dir)!r})\n"
+        f"sys.path = [path for path in sys.path if path != {str(REPO_ROOT)!r}]\n"
+        "import steps.transform_tcg_set\n"
+    )
+    result = subprocess.run(
+        [sys.executable, "-c", code],
+        cwd=tmp_path,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+
+    assert result.returncode == 0, result.stderr
 
 
 class TestVariantSuffixPrefixDetection:

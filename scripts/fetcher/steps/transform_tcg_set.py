@@ -23,6 +23,9 @@ import requests
 
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
+project_root = str(Path(__file__).resolve().parents[3])
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
 
 from steps.base import BaseStep, PipelineContext
 from steps.pokemon_utils import get_mega_artwork_url

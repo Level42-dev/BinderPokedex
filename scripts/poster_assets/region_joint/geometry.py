@@ -11,6 +11,9 @@ from .eligibility import P16_SCOPE
 CONTRACT_VERSION = 3
 GENERATION_WH = (1200, 1664)
 LATENT_PIXEL_SIZE = 16
+# The pinned FLUX.2 transformer uses patch_size=1: one 16px latent cell per
+# main-image token. The older Qwen 2x2 packing assumption was superseded by
+# the observed P16 pilot C token counts (see its review record).
 IMAGE_TOKEN_SIZE = 16
 
 

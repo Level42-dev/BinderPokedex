@@ -1,5 +1,10 @@
 # P16 regionsgebundener One-shot — technischer Pilotbefund
 
+**Historischer Zwischenstand:** Die unten vermutete 2×2-Tokenpackung wurde vor
+Pilot C am gepinnten FLUX.2-Modell widerlegt. Der [spätere Pilot-C-Bericht](2026-09-23-p16-region-pilot-c.md)
+dokumentiert `patch_size=1`, 104×75 Hauptbild-Tokens und den danach erreichten
+numerischen Fehler. Dieser Bericht bleibt als Fehlerchronik erhalten.
+
 Stand: 2026-09-23. Variante: `p16-region-20260923-a`. **Nicht freigegeben; kein Bild entstanden.** `joint_scene` bleibt der produktive Standard. P16 und P37 wurden nicht promotiert oder für neue PDFs verwendet.
 
 Der isolierte Job wurde mit vier hashgebundenen Referenzen, der lokalen Guider-Erweiterung und den gepinnten FLUX.2-4B-Modellen vorbereitet. Lokale Tests (75 fokussierte Prüfungen), Modell-/Jobhash-Validierung auf dem konfigurierten Worker und eine kleine MPS-Aufmerksamkeitsprobe bestanden. Die Modellgewichte sind BF16. Der erste Startversuch blieb noch vor ComfyUI an einem durch die eigene MPS-Probe erzeugten Python-Bytecode-Cache im Job hängen. Genau diese vier Cache-Dateien wurden nach Dateilistenprüfung lokal und auf dem Worker entfernt; der Job bestand danach erneut die vollständige Hashprüfung.
