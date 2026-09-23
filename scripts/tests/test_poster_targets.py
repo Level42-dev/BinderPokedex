@@ -39,6 +39,13 @@ from scripts.pdf.generate_pdf import filter_variant_data_for_language
 
 
 ROOT = Path(__file__).resolve().parents[2]
+RELEASE_POSTER_KEYS = {
+    "ExGen2/sections/mega",
+    "ExGen3/sections/normal",
+    "ME05",
+    "Pokedex/sections/gen1",
+    "Pokedex/sections/gen7",
+}
 
 
 @pytest.mark.parametrize(
@@ -46,17 +53,18 @@ ROOT = Path(__file__).resolve().parents[2]
     sorted((ROOT / "data" / "output").glob("*.json")),
     ids=lambda path: path.stem,
 )
-def test_every_release_section_routes_to_a_real_panorama(scope_path):
-    """Missing/disabled artwork must not silently ship a cover-only section."""
+def test_release_sections_route_only_validated_panorama_targets(scope_path):
+    """Unreviewed artwork must not enter release PDFs; other sections keep covers."""
     source = json.loads(scope_path.read_text(encoding="utf-8"))
     collection = PosterPageCollection.from_scope(scope_path.stem, source, "de")
     try:
         for index, section_id in enumerate(source["sections"]):
             posters = collection.for_section(section_id, index)
-            assert len(posters) == 1, (
-                f"{scope_path.stem}/{section_id} needs one reviewed panorama"
-            )
-            assert posters[0].artwork_path.is_file()
+            key = f"{scope_path.stem}/sections/{section_id}"
+            expected = int(scope_path.stem in RELEASE_POSTER_KEYS or key in RELEASE_POSTER_KEYS)
+            assert len(posters) == expected, f"unexpected poster route for {key}"
+            if posters:
+                assert posters[0].artwork_path.is_file()
     finally:
         collection.cleanup()
 
@@ -260,21 +268,16 @@ def test_every_generated_pdf_language_has_complete_poster_copy():
 
 
 def test_standalone_poster_manifests_remain_isolated_single_bundles():
-    expected_hashes = {
-        "Base1": "30fe44df5f2e99596d9b80a879371ed7549299a9e7e192e26f6cb066f94cf36b",
-        "SV03.5": "30fcaeaa7b80f2cc5709461afc7f9178451940e0c8b911bedacbae8c030d2173",
-    }
-
-    for scope, expected_hash in expected_hashes.items():
+    for scope in ("Base1", "SV03.5"):
         bundles = poster_bundles_for_scope(scope)
         assert len(bundles) == 1
         assert bundles[0].asset_key == scope
         assert bundles[0].section_id is None
         assert bundles[0].insertion == "after_first_section_cover"
-        assert sha256_file(bundles[0].manifest_path) == expected_hash
+        assert not bundles[0].pdf_enabled
 
 
-def test_pokedex_index_routes_all_nine_enabled_section_bundles():
+def test_pokedex_index_keeps_nine_manifests_but_enables_only_validated_bundles():
     expected_starters = {
         "gen1": [1, 4, 7],
         "gen2": [152, 155, 158],
@@ -293,20 +296,10 @@ def test_pokedex_index_routes_all_nine_enabled_section_bundles():
     assert len({bundle.manifest_path for bundle in bundles}) == 9
     assert [
         bundle.poster_id for bundle in bundles if bundle.pdf_enabled
-    ] == [
-        "gen1",
-        "gen2",
-        "gen3",
-        "gen4",
-        "gen5",
-        "gen6",
-        "gen7",
-        "gen8",
-        "gen9",
-    ]
+    ] == ["gen1", "gen7"]
     assert [
         bundle.poster_id for bundle in bundles if not bundle.pdf_enabled
-    ] == []
+    ] == ["gen2", "gen3", "gen4", "gen5", "gen6", "gen8", "gen9"]
     assert all(bundle.insertion == "after_section_cover" for bundle in bundles)
     assert len(
         {

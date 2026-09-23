@@ -3530,7 +3530,7 @@ def test_promoted_production_posters_match_provenance_and_print_geometry():
 
 
 def test_validation_rejects_pdf_artwork_not_named_by_provenance():
-    bundle = poster_bundle("Base1")
+    bundle = poster_bundle("ME05")
     mismatched_bundle = replace(
         bundle,
         artwork_file="unreviewed.png",

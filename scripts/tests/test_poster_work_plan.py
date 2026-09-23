@@ -16,6 +16,7 @@ from scripts.poster_assets.provenance import sha256_file
 from scripts.poster_assets.poster_subject import PosterSubject
 from scripts.poster_assets.validate_promoted_poster import (
     enabled_poster_bundles,
+    validate as validate_promoted_poster,
 )
 
 
@@ -1035,28 +1036,18 @@ def test_public_state_vocabulary_is_stable():
     )
 
 
-def test_every_checked_in_enabled_poster_remains_generation_current():
+def test_every_release_enabled_poster_passes_production_validation():
     bundles = enabled_poster_bundles()
     assert {
         bundle.asset_key for bundle in bundles
-    }.issuperset(
-        {
-            "Base1",
-            "SV03.5",
-            "Pokedex/sections/gen1",
-            "Pokedex/sections/gen2",
-            "Pokedex/sections/gen3",
-            "Pokedex/sections/gen4",
-            "Pokedex/sections/gen5",
-            "Pokedex/sections/gen6",
-            "Pokedex/sections/gen7",
-            "Pokedex/sections/gen8",
-            "Pokedex/sections/gen9",
-        }
-    )
+    } == {
+        "ExGen2/sections/mega",
+        "ExGen3/sections/normal",
+        "ME05",
+        "Pokedex/sections/gen1",
+        "Pokedex/sections/gen7",
+    }
 
     for bundle in bundles:
-        plan = poster_work_plan.build_work_plan(scope=bundle.asset_key)
-        planned = target(plan)
-        assert planned["state"] == "current", bundle.asset_key
-        assert "regenerate_candidate" not in planned["next_actions"]
+        result = validate_promoted_poster(bundle)
+        assert result["cards"] == 9, bundle.asset_key

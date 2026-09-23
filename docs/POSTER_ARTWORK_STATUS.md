@@ -10,6 +10,9 @@ Installed-artwork audit reopened: 2026-09-12. Full target retriage: 2026-09-14.
 Latest scoped production update: 2026-09-22 (accepted P15-D, P40-B, P10-C and P04-B).
 Latest human artwork feedback: 2026-09-23 (29 exact candidates in the collected panorama review accepted).
 Latest continuation: 2026-09-23 (29 accepted masters preserved in the review-only archive; technical adoption and release remain open).
+Release cut: 2026-09-23 (further artwork generation paused; only five currently
+production-valid panoramas remain enabled for v10.0, and the other 37 routes use
+their normal covers). See the [v10 release-cut record](reviews/2026-09-23-v10-release-cut.md).
 
 ### Collected panorama artwork accepted (2026-09-23)
 

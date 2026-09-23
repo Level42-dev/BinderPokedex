@@ -22,7 +22,7 @@ title_logo:
     it: logos/logo-it.png
 
 pdf:
-  enabled: true
+  enabled: false
   artwork_file: poster-flux2-artwork.png
   insertion: after_first_section_cover
 

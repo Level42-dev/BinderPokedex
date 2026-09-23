@@ -18,7 +18,7 @@ title_logo:
   source: https://assets.tcgdex.net/en/base/base1/logo.png
 
 pdf:
-  enabled: true
+  enabled: false
   artwork_file: poster-flux2-artwork.png
   insertion: after_first_section_cover
 

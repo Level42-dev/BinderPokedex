@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   transferred or directly bootstrapped runtimes can be removed without touching
   the external models.
 
-## [10.0.0] - 2026-09-12
+## [10.0.0] - 2026-09-23
 
 ### ✨ Current Collections and Data
 
@@ -51,11 +51,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   available only in another language.
 - Added measured one- or two-line label fitting so long Trainer names stay
   inside their card and cutting boundaries.
-- Added exact German title logos for Schwarze Blitze and Weiße Flammen and
-  corrected the Stellarkrone panorama with anatomically correct Hopplo artwork.
-- Added the reviewed Dunkelnacht panorama and replaced the Stürmische Funken
-  panorama after bounded reference, resolution, model, and seed comparisons.
-  All 42 set and aggregate-section targets now have enabled panoramas.
+- Added exact German title logos for Schwarze Blitze and Weiße Flammen.
+- Included five currently validated panoramas: ExGen2 Mega, ExGen3 Normal,
+  ME05 Dunkelnacht, and Pokédex generations 1 and 7. The other 37 poster
+  routes are disabled for this release; their set or section covers remain.
+  Accepted but not yet technically adopted artwork remains preserved for a
+  subsequent reviewed release, including the unfinished Stellarkrone and
+  Stürmische Funken replacements.
 
 ### 🔧 Release Quality
 
@@ -65,7 +67,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Release builds consume the committed data snapshot instead of silently
   fetching mutable card data during publication.
 - Regression tests exercise real PDF poster routing for every release section;
-  a disabled panorama or cover-only route fails the normal release test gate.
+  only validated, explicitly enabled artwork may enter release PDFs.
 - New visual-review records explicitly distinguish agent inspection from human
   approval while retaining the same source, raw, print, and crop checks.
 - The poster planner uses the importer's canonical subject selection, including
