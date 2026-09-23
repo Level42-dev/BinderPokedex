@@ -18,11 +18,11 @@ def test_contract_uses_exact_source_and_print_card_spans():
     assert contract["print_wh"] == [2368, 3268]
     assert contract["print_columns"] == [[0, 750], [809, 1559], [1618, 2368]]
     assert contract["print_rows"] == [[0, 1050], [1109, 2159], [2218, 3268]]
-    assert contract["version"] == 2
+    assert contract["version"] == 3
     assert contract["latent_pixel_size"] == 16
-    assert contract["image_token_size"] == 32
+    assert contract["image_token_size"] == 16
     assert contract["latent_hw"] == [104, 75]
-    assert contract["token_hw"] == [52, 38]
+    assert contract["token_hw"] == [104, 75]
 
 
 def test_p16_subject_regions_are_inset_from_their_own_physical_cards():

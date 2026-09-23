@@ -29,9 +29,11 @@ from .eligibility import P16_SCOPE, require_p16_evidence
 from .geometry import build_p16_region_contract, validate_p16_region_contract
 
 
-PILOT_VARIANT = "p16-region-20260923-b"
+PILOT_VARIANT = "p16-region-20260923-c"
 PREVIOUS_FAILED_VARIANT = "p16-region-20260923-a"
 PREVIOUS_FAILURE_LOG_SHA256 = "d7376db5eb5f9d70d6da16e49f0e67c86856a6f13ed5cc3b33648b3dc9180054"
+PREVIOUS_PREPARED_VARIANT = "p16-region-20260923-b"
+PREVIOUS_PREPARED_JOB_SHA256 = "f8958e149312cf20187c382c7b44cea5c2075945fe504a0ff3c72a0b2fa2b6f0"
 SEED = 653315091
 MODEL_NAMES = (
     ("diffusion_models", "model", "model_sha256"),
@@ -173,6 +175,19 @@ def require_previous_failed_trial(root: Path) -> dict[str, str]:
     return {"variant": PREVIOUS_FAILED_VARIANT, "comfyui_log_sha256": PREVIOUS_FAILURE_LOG_SHA256}
 
 
+def require_previous_prepared_trial(root: Path) -> dict[str, str]:
+    """Retain the mis-specified, never-run b job as immutable audit evidence."""
+    old_job = Path(root) / "tmp/oneshot-trials" / PREVIOUS_PREPARED_VARIANT / "job"
+    manifest = old_job / "job.json"
+    if not manifest.is_file():
+        raise FileNotFoundError("previous prepared P16 job is missing")
+    if sha256_file(manifest) != PREVIOUS_PREPARED_JOB_SHA256:
+        raise ValueError("previous prepared job hash differs")
+    if (old_job / "run.json").exists() or (old_job / "comfyui.log").exists() or any((old_job / "output").glob("*.png")):
+        raise ValueError("previous prepared P16 variant is no longer unrun")
+    return {"variant": PREVIOUS_PREPARED_VARIANT, "job_sha256": PREVIOUS_PREPARED_JOB_SHA256}
+
+
 def prepare_p16_trial(variant: str, root: Path) -> Path:
     """Create one non-promotable, sealed P16 job below ignored trial space."""
     if variant != PILOT_VARIANT:
@@ -182,6 +197,7 @@ def prepare_p16_trial(variant: str, root: Path) -> Path:
     if trial_dir.exists():
         raise FileExistsError("P16 pilot variant already exists; refusing overwrite")
     preceding_attempt = require_previous_failed_trial(root)
+    preceding_prepared = require_previous_prepared_trial(root)
     evidence = root / "docs/reviews/2026-09-23-p16-region-fallback-evidence.json"
     evidence_sha = require_p16_evidence(root, evidence)
     b_manifest_path = root / "tmp/review-batch-manifests/p16-batch-20260922-b/poster.yaml"
@@ -268,6 +284,7 @@ def prepare_p16_trial(variant: str, root: Path) -> Path:
         "seed": SEED,
         "evidence_sha256": evidence_sha,
         "previous_failed_attempt": preceding_attempt,
+        "previous_prepared_attempt": preceding_prepared,
         "trial_b_manifest_sha256": sha256_file(b_manifest_path),
         "manifest_path": _relative(root, manifest_path),
         "manifest_sha256": sha256_file(manifest_path),

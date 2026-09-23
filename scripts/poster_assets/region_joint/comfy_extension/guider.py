@@ -12,7 +12,7 @@ from .mixer import mix_predictions
 from .region_math import MAX_ATTENTION_MASK_BYTES, attention_bias, latent_weight
 
 
-P16_CONTRACT_SHA256 = "e37909b569d8ef122eea5506666dff21c56bfe3818c36df94481525fa25caa05"
+P16_CONTRACT_SHA256 = "c5a508657aac24dda6b007d052f3e93e464bc7d658cdb87f19913832da173956"
 MAX_ALL_MASKS_BYTES = 1024**3
 BRANCHES = ("global", "left", "right")
 
@@ -32,8 +32,8 @@ def _checked_contract(value: str) -> dict:
 def _token_mask(rect: list[int], token_hw: tuple[int, int]) -> torch.Tensor:
     x0, y0, x1, y1 = rect
     height, width = token_hw
-    x = (torch.arange(width, dtype=torch.float32) + 0.5) * 32
-    y = (torch.arange(height, dtype=torch.float32) + 0.5) * 32
+    x = (torch.arange(width, dtype=torch.float32) + 0.5) * 16
+    y = (torch.arange(height, dtype=torch.float32) + 0.5) * 16
     return ((x >= x0) & (x < x1))[None, :] & ((y >= y0) & (y < y1))[:, None]
 
 
@@ -53,7 +53,7 @@ def _conditioning_counts(conditioning: list, expected_refs: int) -> tuple[int, t
     for latent in refs:
         if not isinstance(latent, torch.Tensor) or latent.ndim != 4 or latent.shape[0] != 1 or min(latent.shape[-2:]) <= 0:
             raise ValueError("P16 reference latent geometry is invalid")
-        counts.append(math.ceil(latent.shape[-2] / 2) * math.ceil(latent.shape[-1] / 2))
+        counts.append(latent.shape[-2] * latent.shape[-1])
     return int(context.shape[1]), tuple(counts)
 
 
@@ -79,7 +79,7 @@ def preflight_mask_budget(conditionings: dict, main_hw: tuple[int, int], dtype: 
 
 
 class RegionAttentionOverride:
-    """Apply the Qwen FLUX.2 key mask at the optimized attention call itself."""
+    """Apply the FLUX.2 key mask at the optimized attention call itself."""
 
     def __init__(
         self,
@@ -114,8 +114,8 @@ class RegionAttentionOverride:
             raise ValueError("P16 Qwen attention head geometry differs")
         if self.expected_dtype is not None and q.dtype != self.expected_dtype:
             raise ValueError("P16 attention dtype differs from preflight")
-        if not isinstance(transformer_options, dict) or transformer_options.get("block_type") != "double":
-            raise ValueError("P16 FLUX.2 double block metadata is missing")
+        if not isinstance(transformer_options, dict) or transformer_options.get("block_type") not in {"double", "single"}:
+            raise ValueError("P16 FLUX.2 block metadata is missing")
         refs = transformer_options.get("reference_image_num_tokens", [])
         if not isinstance(refs, (list, tuple)) or any(type(count) is not int or count <= 0 for count in refs):
             raise ValueError("P16 reference token counts are invalid")
@@ -144,7 +144,7 @@ class RegionAttentionOverride:
             self._cached_bias[key] = bias
         combined = bias[None, None, :, :] if mask is None else bias[None, None, :, :] + mask[:, :, None, :]
         self.calls += 1
-        self.block_types.add("double")
+        self.block_types.add(transformer_options["block_type"])
         return func(q, k, v, heads, combined, transformer_options=transformer_options, **kwargs)
 
 
@@ -221,8 +221,8 @@ def make_region_guider(
                     self.inner_model, x, timestep, None, self.conds[branch], 1.0,
                     model_options=branch_options, seed=seed,
                 )
-                if override.calls == 0 or override.block_types != {"double"}:
-                    raise RuntimeError("Region attention override was not invoked in FLUX.2 double blocks")
+                if override.calls == 0 or override.block_types != {"double", "single"}:
+                    raise RuntimeError("Region attention override was not invoked in both FLUX.2 block types")
                 predictions.append(prediction)
             on_device = tuple(weight.to(device=x.device, dtype=x.dtype) for weight in weights)
             return mix_predictions(predictions[0], tuple(predictions[1:]), on_device)

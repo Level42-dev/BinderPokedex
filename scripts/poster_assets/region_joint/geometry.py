@@ -8,10 +8,10 @@ from scripts.poster_assets.layout import build_print_layout, build_source_layout
 from .eligibility import P16_SCOPE
 
 
-CONTRACT_VERSION = 2
+CONTRACT_VERSION = 3
 GENERATION_WH = (1200, 1664)
 LATENT_PIXEL_SIZE = 16
-IMAGE_TOKEN_SIZE = 32
+IMAGE_TOKEN_SIZE = 16
 
 
 def build_p16_region_contract() -> dict:

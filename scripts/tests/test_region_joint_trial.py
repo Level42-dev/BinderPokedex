@@ -10,7 +10,9 @@ from scripts.poster_assets.region_joint.geometry import build_p16_region_contrac
 from scripts.poster_assets.region_joint.prepare_p16_trial import (
     PILOT_VARIANT,
     PREVIOUS_FAILED_VARIANT,
+    PREVIOUS_PREPARED_VARIANT,
     require_previous_failed_trial,
+    require_previous_prepared_trial,
     pin_trial_b_scales,
     build_p16_prompts,
     build_p16_workflow,
@@ -95,8 +97,9 @@ def test_p16_prompt_bindings_use_position_first_and_own_source_details_only():
 
 
 def test_p16_trial_refuses_existing_variant_without_overwriting(tmp_path):
-    assert PILOT_VARIANT == "p16-region-20260923-b"
+    assert PILOT_VARIANT == "p16-region-20260923-c"
     assert PREVIOUS_FAILED_VARIANT == "p16-region-20260923-a"
+    assert PREVIOUS_PREPARED_VARIANT == "p16-region-20260923-b"
     existing = tmp_path / "tmp/oneshot-trials" / PILOT_VARIANT
     existing.mkdir(parents=True)
     marker = existing / "owner.txt"
@@ -114,6 +117,16 @@ def test_corrected_variant_requires_the_exact_previous_failure_log(tmp_path):
     (old_job / "comfyui.log").write_text("not the reviewed failure", encoding="utf-8")
     with pytest.raises(ValueError, match="failure log hash"):
         require_previous_failed_trial(tmp_path)
+
+
+def test_corrected_variant_refuses_to_reuse_an_unrun_prepared_variant(tmp_path):
+    old_job = tmp_path / "tmp/oneshot-trials" / PREVIOUS_PREPARED_VARIANT / "job"
+    old_job.mkdir(parents=True)
+    with pytest.raises(FileNotFoundError, match="previous prepared P16 job"):
+        require_previous_prepared_trial(tmp_path)
+    (old_job / "job.json").write_text("wrong sealed job", encoding="utf-8")
+    with pytest.raises(ValueError, match="prepared job hash"):
+        require_previous_prepared_trial(tmp_path)
 
 
 def test_p16_trial_refuses_missing_evidence_before_creating_files(tmp_path):

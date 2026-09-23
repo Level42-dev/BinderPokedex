@@ -10,6 +10,13 @@
 
 **Spec:** `docs/superpowers/specs/2026-09-23-regionsgebundener-oneshot-fallback-design.md`
 
+## Runtime-Korrektur vom 23.09.2026 (ersetzt ältere Hook-/Token-Annahmen unten)
+
+- Das tatsächlich geladene Bildmodell ist `model_base.Flux2` mit `comfy.ldm.flux.model.Flux`; Qwen3 4B ist nur der Textencoder. Die ursprüngliche Diagnose anhand von `qwen_image/model.py` war für diesen Job nicht anwendbar. Im FLUX-Bildmodell wird ein `attn1_patch`-Ergebnis an die Attention weitergereicht; die ältere Begründung, dieser Hook werde ignoriert, ist daher zurückgenommen.
+- `EmptyFlux2LatentImage` liefert für 1200 × 1664 Pixel ein Latent mit 75 × 104 Zellen. Das erkannte FLUX.2-Modell hat `patch_size=1`: `token_hw=[104,75]`, 16 Bildpixel pro Token, ohne zusätzliche Halbierung. Die beiden Referenzgrößen ergeben 1976 bzw. 1024 Bildtokens. Der Regionsvertrag ist Version 3.
+- FLUX.2 Klein 4B hat Double- und Single-Stream-Blöcke. Der korrigierte Pilot verwendet den unterstützten `optimized_attention_override` in **beiden** Blockarten und prüft dessen Aufruf für beide. Das ist ein direkter, testbarer Eingriff am tatsächlichen Attention-Aufruf, keine Behauptung, der alte Hook sei generell unbrauchbar.
+- Versuch `a` scheiterte ohne Bild an falscher Latentgeometrie. Variante `b` wurde nur vorbereitet und wegen der falschen Bildmodellannahme **nicht gestartet**. Ausschließlich die neue, versiegelte Variante `c` darf nach Worker-Prüfung einen GPU-Versuch erhalten. Die früheren Task-Anweisungen mit `attn1_patch`, Halbierung der Tokens oder nur einem Blocktyp sind historische Planungsnotizen, keine gültige Ausführungsanleitung.
+
 ## Global Constraints
 
 - `joint_scene` bleibt Standard; `region_constrained_joint` ist nur ein ausdrücklicher P16-Pilot nach nachgewiesenen A/B/E/F-Fehlern, ohne automatischen Wechsel und ohne P37-Folgerender.

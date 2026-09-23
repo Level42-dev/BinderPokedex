@@ -14,6 +14,7 @@ from scripts.poster_assets.region_joint.comfy_extension import NODE_CLASS_MAPPIN
 from scripts.poster_assets.region_joint.comfy_extension.guider import (
     P16_CONTRACT_SHA256,
     RegionAttentionOverride,
+    _conditioning_counts,
     make_region_guider,
     preflight_mask_budget,
     with_region_override,
@@ -83,8 +84,14 @@ def test_override_applies_mask_at_actual_attention_and_preserves_text_key_mask()
     assert torch.isneginf(seen[0][0, 0, 2, 0])  # original text mask remains effective
     assert torch.isneginf(seen[0][0, 0, 2, 1])
     assert torch.isneginf(seen[0][0, 0, 2, 4])
-    assert override.block_types == {"double"}
-    assert override.calls == 1
+    result_single = override(
+        attention, q, k, v, 1, text_mask,
+        transformer_options={"reference_image_num_tokens": [1, 1], "block_type": "single"},
+        skip_reshape=True,
+    )
+    assert torch.equal(result, result_single)
+    assert override.block_types == {"double", "single"}
+    assert override.calls == 2
 
 
 def test_override_rejects_changed_token_order_or_reference_count():
@@ -100,7 +107,7 @@ def test_override_rejects_changed_token_order_or_reference_count():
                  transformer_options={"reference_image_num_tokens": [2], "block_type": "double"}, skip_reshape=True)
     with pytest.raises(ValueError, match="block"):
         override(attention, q, k, v, 1,
-                 transformer_options={"reference_image_num_tokens": [1, 1], "block_type": "single"}, skip_reshape=True)
+                 transformer_options={"reference_image_num_tokens": [1, 1], "block_type": "foreign"}, skip_reshape=True)
 
 
 def test_model_options_clone_does_not_mutate_original_and_rejects_existing_hook():
@@ -119,13 +126,22 @@ def test_model_options_clone_does_not_mutate_original_and_rejects_existing_hook(
 
 def test_preflight_rejects_wrong_reference_count_and_oversized_masks():
     conditionings = {"global": _conditioning(1, 0), "left": _conditioning(1, 2), "right": _conditioning(1, 2)}
-    assert preflight_mask_budget(conditionings, (52, 38), torch.float32) < 1024**3
+    assert preflight_mask_budget(conditionings, (104, 75), torch.float32) < 1024**3
     conditionings["left"] = _conditioning(1, 1)
     with pytest.raises(ValueError, match="two references"):
-        preflight_mask_budget(conditionings, (52, 38), torch.float32)
+        preflight_mask_budget(conditionings, (104, 75), torch.float32)
     conditionings["left"] = [[torch.zeros((1, 1, 4)), {"reference_latents": [torch.zeros((1, 4, 160, 160)) for _ in range(2)]}]]
     with pytest.raises(MemoryError):
-        preflight_mask_budget(conditionings, (52, 38), torch.float32)
+        preflight_mask_budget(conditionings, (104, 75), torch.float32)
+
+
+def test_flux2_klein_patch_one_preflight_uses_full_latent_reference_tokens():
+    reference_latents = [torch.zeros((1, 4, 38, 52)), torch.zeros((1, 4, 32, 32))]
+    local = [[torch.zeros((1, 512, 4)), {"reference_latents": reference_latents}]]
+    conditionings = {"global": _conditioning(512, 0), "left": local, "right": local}
+    assert _conditioning_counts(local, 2) == (512, (1976, 1024))
+    expected = (512 + 104 * 75) ** 2 * 2 + 2 * (512 + 104 * 75 + 1976 + 1024) ** 2 * 2
+    assert preflight_mask_budget(conditionings, (104, 75), torch.bfloat16) == expected
 
 
 def test_guider_uses_same_x_and_timestep_for_three_branches_and_one_prediction():
@@ -155,7 +171,7 @@ def test_guider_uses_same_x_and_timestep_for_three_branches_and_one_prediction()
         override = model_options["transformer_options"]["optimized_attention_override"]
         calls.append((override.branch, x, timestep, uncond, scale, seed))
         override.calls = 2
-        override.block_types.add("double")
+        override.block_types.update(("double", "single"))
         return torch.full_like(x, {"global": 1, "left": 3, "right": 5}[override.branch])
 
     guider = make_region_guider(
