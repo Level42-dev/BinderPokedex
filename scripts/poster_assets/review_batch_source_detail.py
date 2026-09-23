@@ -135,7 +135,13 @@ def build_trial_manifest(
 
 
 @contextmanager
-def trial_manifest_bundle(scope: str, trial_manifest: Path, *, repository_root: Path = ROOT):
+def trial_manifest_bundle(
+    scope: str,
+    trial_manifest: Path,
+    *,
+    repository_root: Path = ROOT,
+    isolated_work_dir: Path | None = None,
+):
     """Temporarily route one sequential review process to its ignored overlay."""
     relative = _safe_scope(scope)
     root = Path(repository_root).resolve()
@@ -146,6 +152,19 @@ def trial_manifest_bundle(scope: str, trial_manifest: Path, *, repository_root: 
     manifest = yaml.safe_load(trial_manifest.read_text(encoding="utf-8"))
     if manifest.get("asset_key", scope) != scope:
         raise ValueError("trial manifest identifies another scope")
+    if isolated_work_dir is not None:
+        isolated_work_dir = Path(isolated_work_dir)
+        allowed_work_root = root / "tmp/oneshot-trials"
+        resolved = isolated_work_dir.resolve()
+        relative_work = resolved.relative_to(allowed_work_root) if resolved.is_relative_to(allowed_work_root) else None
+        if (
+            relative_work is None
+            or len(relative_work.parts) != 2
+            or not SAFE_VARIANT.fullmatch(relative_work.parts[0])
+            or ".." in relative_work.parts[0]
+            or relative_work.parts[1] != "prepared"
+        ):
+            raise ValueError("isolated work dir must stay under one trial's prepared directory")
     original = poster_io.poster_bundle
 
     def resolve(asset_key, *args, **kwargs):
@@ -157,7 +176,12 @@ def trial_manifest_bundle(scope: str, trial_manifest: Path, *, repository_root: 
             poster_configs=root / "config/posters",
             poster_workspaces=root / "tmp/poster-workspaces",
         )
-        return replace(bundle, manifest_path=trial_manifest, manifest=manifest)
+        return replace(
+            bundle,
+            manifest_path=trial_manifest,
+            manifest=manifest,
+            work_dir=isolated_work_dir if isolated_work_dir is not None else bundle.work_dir,
+        )
 
     modules = [
         module for name, module in list(sys.modules.items())

@@ -9,6 +9,7 @@ import unittest
 
 import yaml
 
+from scripts.poster_assets import poster_io
 from scripts.poster_assets.review_batch_source_detail import (
     build_trial_manifest,
     trial_manifest_bundle,
@@ -114,6 +115,42 @@ class ReviewBatchSourceDetailTests(unittest.TestCase):
         with self.assertRaisesRegex(FileExistsError, "exists"):
             self.build()
         self.assertTrue(output.is_file())
+
+    def test_isolated_work_dir_applies_only_within_trial_context(self):
+        trial_manifest = self.build()
+        isolated = self.root / "tmp/oneshot-trials/p99-region-a/prepared"
+        roots = {
+            "poster_assets": self.root / "assets/posters",
+            "poster_configs": self.root / "config/posters",
+            "poster_workspaces": self.root / "tmp/poster-workspaces",
+        }
+        with trial_manifest_bundle(
+            self.scope, trial_manifest, repository_root=self.root,
+            isolated_work_dir=isolated,
+        ):
+            self.assertEqual(poster_io.poster_bundle(self.scope, **roots).work_dir, isolated)
+        self.assertEqual(poster_io.poster_bundle(self.scope, **roots).work_dir.name, "comfyui_poster")
+
+    def test_default_trial_context_retains_original_work_dir(self):
+        trial_manifest = self.build()
+        roots = {
+            "poster_assets": self.root / "assets/posters",
+            "poster_configs": self.root / "config/posters",
+            "poster_workspaces": self.root / "tmp/poster-workspaces",
+        }
+        original_work = poster_io.poster_bundle(self.scope, **roots).work_dir
+        with trial_manifest_bundle(self.scope, trial_manifest, repository_root=self.root):
+            self.assertEqual(poster_io.poster_bundle(self.scope, **roots).work_dir.resolve(), original_work.resolve())
+
+    def test_isolated_work_dir_must_stay_under_its_trial(self):
+        trial_manifest = self.build()
+        outside = self.root / "tmp/poster-workspaces/Fixture/comfyui_poster"
+        with self.assertRaisesRegex(ValueError, "isolated work dir"):
+            with trial_manifest_bundle(
+                self.scope, trial_manifest, repository_root=self.root,
+                isolated_work_dir=outside,
+            ):
+                pass
 
 
 if __name__ == "__main__":
