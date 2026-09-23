@@ -18,12 +18,12 @@ def latent_weight(rect: tuple[int, int, int, int], latent_hw: tuple[int, int]) -
         raise ValueError("Invalid rectangle or latent canvas")
     x0, y0, x1, y1 = rect
     height, width = latent_hw
-    if not (0 <= x0 < x1 <= width * 8 and 0 <= y0 < y1 <= height * 8):
+    if not (0 <= x0 < x1 <= width * 16 and 0 <= y0 < y1 <= height * 16):
         raise ValueError("Region rectangle is outside latent canvas")
-    x = (torch.arange(width, dtype=torch.float32) + 0.5) * 8
-    y = (torch.arange(height, dtype=torch.float32) + 0.5) * 8
-    horizontal = torch.minimum(((x - x0) / 16).clamp(0, 1), ((x1 - x) / 16).clamp(0, 1))
-    vertical = torch.minimum(((y - y0) / 16).clamp(0, 1), ((y1 - y) / 16).clamp(0, 1))
+    x = (torch.arange(width, dtype=torch.float32) + 0.5) * 16
+    y = (torch.arange(height, dtype=torch.float32) + 0.5) * 16
+    horizontal = torch.minimum(((x - x0) / 32).clamp(0, 1), ((x1 - x) / 32).clamp(0, 1))
+    vertical = torch.minimum(((y - y0) / 32).clamp(0, 1), ((y1 - y) / 32).clamp(0, 1))
     return (vertical[:, None] * horizontal[None, :])[None, None]
 
 

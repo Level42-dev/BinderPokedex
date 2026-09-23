@@ -8,10 +8,10 @@ from scripts.poster_assets.layout import build_print_layout, build_source_layout
 from .eligibility import P16_SCOPE
 
 
-CONTRACT_VERSION = 1
+CONTRACT_VERSION = 2
 GENERATION_WH = (1200, 1664)
-LATENT_PIXEL_SIZE = 8
-IMAGE_TOKEN_SIZE = 16
+LATENT_PIXEL_SIZE = 16
+IMAGE_TOKEN_SIZE = 32
 
 
 def build_p16_region_contract() -> dict:
@@ -44,13 +44,15 @@ def build_p16_region_contract() -> dict:
         "layout": "standard_3x3",
         "token_order": "text_main_references",
         "generation_wh": [width, height],
+        "latent_pixel_size": LATENT_PIXEL_SIZE,
+        "image_token_size": IMAGE_TOKEN_SIZE,
         "source_columns": [list(span) for span in source.column_spans],
         "source_rows": [list(span) for span in source.row_spans],
         "print_wh": [printed.width_px, printed.height_px],
         "print_columns": [list(span) for span in printed.column_spans],
         "print_rows": [list(span) for span in printed.row_spans],
         "latent_hw": [height // LATENT_PIXEL_SIZE, width // LATENT_PIXEL_SIZE],
-        "token_hw": [height // IMAGE_TOKEN_SIZE, width // IMAGE_TOKEN_SIZE],
+        "token_hw": [math.ceil(height / IMAGE_TOKEN_SIZE), math.ceil(width / IMAGE_TOKEN_SIZE)],
         "guard_px": guard,
         "left": left,
         "right": right,

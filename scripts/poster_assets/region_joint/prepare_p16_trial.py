@@ -29,7 +29,9 @@ from .eligibility import P16_SCOPE, require_p16_evidence
 from .geometry import build_p16_region_contract, validate_p16_region_contract
 
 
-PILOT_VARIANT = "p16-region-20260923-a"
+PILOT_VARIANT = "p16-region-20260923-b"
+PREVIOUS_FAILED_VARIANT = "p16-region-20260923-a"
+PREVIOUS_FAILURE_LOG_SHA256 = "d7376db5eb5f9d70d6da16e49f0e67c86856a6f13ed5cc3b33648b3dc9180054"
 SEED = 653315091
 MODEL_NAMES = (
     ("diffusion_models", "model", "model_sha256"),
@@ -158,6 +160,19 @@ def _production_masters_before(root: Path) -> list[dict[str, str]]:
     return records
 
 
+def require_previous_failed_trial(root: Path) -> dict[str, str]:
+    """Bind this corrected attempt to the reviewed, image-free first failure."""
+    old_job = Path(root) / "tmp/oneshot-trials" / PREVIOUS_FAILED_VARIANT / "job"
+    log = old_job / "comfyui.log"
+    if not log.is_file():
+        raise FileNotFoundError("previous P16 failure log is missing")
+    if sha256_file(log) != PREVIOUS_FAILURE_LOG_SHA256:
+        raise ValueError("previous P16 failure log hash differs")
+    if (old_job / "run.json").exists() or any((old_job / "output").glob("*.png")):
+        raise ValueError("previous P16 attempt is no longer an image-free failure")
+    return {"variant": PREVIOUS_FAILED_VARIANT, "comfyui_log_sha256": PREVIOUS_FAILURE_LOG_SHA256}
+
+
 def prepare_p16_trial(variant: str, root: Path) -> Path:
     """Create one non-promotable, sealed P16 job below ignored trial space."""
     if variant != PILOT_VARIANT:
@@ -166,6 +181,7 @@ def prepare_p16_trial(variant: str, root: Path) -> Path:
     trial_dir = root / "tmp/oneshot-trials" / variant
     if trial_dir.exists():
         raise FileExistsError("P16 pilot variant already exists; refusing overwrite")
+    preceding_attempt = require_previous_failed_trial(root)
     evidence = root / "docs/reviews/2026-09-23-p16-region-fallback-evidence.json"
     evidence_sha = require_p16_evidence(root, evidence)
     b_manifest_path = root / "tmp/review-batch-manifests/p16-batch-20260922-b/poster.yaml"
@@ -251,6 +267,7 @@ def prepare_p16_trial(variant: str, root: Path) -> Path:
         "reference_mode": "region_constrained_joint",
         "seed": SEED,
         "evidence_sha256": evidence_sha,
+        "previous_failed_attempt": preceding_attempt,
         "trial_b_manifest_sha256": sha256_file(b_manifest_path),
         "manifest_path": _relative(root, manifest_path),
         "manifest_sha256": sha256_file(manifest_path),

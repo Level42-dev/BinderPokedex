@@ -16,6 +16,7 @@ from scripts.poster_assets.region_joint.review_p16_trial import (
     verify_pinned_models,
 )
 from scripts.poster_assets.region_joint.comfy_extension.guider import P16_CONTRACT_SHA256
+from scripts.poster_assets.region_joint.prepare_p16_trial import PILOT_VARIANT
 from scripts.poster_assets.render_job import COMFYUI_COMMIT
 from scripts.poster_assets.region_joint import review_p16_trial as review_module
 
@@ -25,7 +26,7 @@ def _sha(data: bytes) -> str:
 
 
 def _trial_with_records(tmp_path):
-    job = tmp_path / "tmp/oneshot-trials/p16-region-20260923-a/job"
+    job = tmp_path / "tmp/oneshot-trials" / PILOT_VARIANT / "job"
     job.mkdir(parents=True)
     (job / "run.json").write_text("{}", encoding="utf-8")
     (job / "comfyui.log").write_text("Device: mps\n", encoding="utf-8")
@@ -42,7 +43,7 @@ def _trial_with_records(tmp_path):
     source.parent.mkdir(parents=True)
     source.write_bytes(b"source cutout")
     provenance = {
-        "variant": "p16-region-20260923-a",
+        "variant": PILOT_VARIANT,
         "scope": "ExGen2/sections/primal",
         "region_contract_sha256": P16_CONTRACT_SHA256,
         "production_masters_before": master_records,
@@ -85,7 +86,7 @@ def test_review_rejects_non_300dpi_poster(tmp_path):
 
 
 def test_review_requires_run_and_log_before_output(tmp_path):
-    job = tmp_path / "tmp/oneshot-trials/p16-region-20260923-a/job"
+    job = tmp_path / "tmp/oneshot-trials" / PILOT_VARIANT / "job"
     job.mkdir(parents=True)
     with pytest.raises(FileNotFoundError, match="run.json"):
         audit_p16_trial(job, tmp_path)
@@ -95,7 +96,7 @@ def test_review_requires_run_and_log_before_output(tmp_path):
 
 
 def test_review_rejects_symlink_output_directory_without_touching_target(tmp_path):
-    job = tmp_path / "tmp/oneshot-trials/p16-region-20260923-a/job"
+    job = tmp_path / "tmp/oneshot-trials" / PILOT_VARIANT / "job"
     job.mkdir(parents=True)
     elsewhere = tmp_path / "elsewhere"
     elsewhere.mkdir()
@@ -245,7 +246,7 @@ def test_review_binds_successful_return_to_nine_cards_and_two_source_pairs(tmp_p
         "extensions": {"name": "binder_region_joint", "files": extension_files},
     }
     (job / "job.json").write_text(json.dumps(job_record), encoding="utf-8")
-    manifest = tmp_path / "tmp/review-batch-manifests/p16-region-20260923-a/poster.yaml"
+    manifest = tmp_path / "tmp/review-batch-manifests" / PILOT_VARIANT / "poster.yaml"
     manifest.parent.mkdir(parents=True)
     manifest.write_text(yaml.safe_dump({
         "asset_key": "ExGen2/sections/primal", "artwork": {"generation": generation},

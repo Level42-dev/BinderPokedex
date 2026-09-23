@@ -1,4 +1,4 @@
-"""One-state P16 FLUX guider with checked, branch-local attention."""
+"""One-state P16 FLUX.2 guider with checked, branch-local attention."""
 from __future__ import annotations
 
 import hashlib
@@ -12,7 +12,7 @@ from .mixer import mix_predictions
 from .region_math import MAX_ATTENTION_MASK_BYTES, attention_bias, latent_weight
 
 
-P16_CONTRACT_SHA256 = "2499accfd70d8d2e5fe6e94669cd4fda866f2b80adc16f6fe283eb74b332bdd7"
+P16_CONTRACT_SHA256 = "e37909b569d8ef122eea5506666dff21c56bfe3818c36df94481525fa25caa05"
 MAX_ALL_MASKS_BYTES = 1024**3
 BRANCHES = ("global", "left", "right")
 
@@ -32,8 +32,8 @@ def _checked_contract(value: str) -> dict:
 def _token_mask(rect: list[int], token_hw: tuple[int, int]) -> torch.Tensor:
     x0, y0, x1, y1 = rect
     height, width = token_hw
-    x = (torch.arange(width, dtype=torch.float32) + 0.5) * 16
-    y = (torch.arange(height, dtype=torch.float32) + 0.5) * 16
+    x = (torch.arange(width, dtype=torch.float32) + 0.5) * 32
+    y = (torch.arange(height, dtype=torch.float32) + 0.5) * 32
     return ((x >= x0) & (x < x1))[None, :] & ((y >= y0) & (y < y1))[:, None]
 
 
@@ -78,8 +78,8 @@ def preflight_mask_budget(conditionings: dict, main_hw: tuple[int, int], dtype: 
     return total_bytes
 
 
-class RegionAttentionPatch:
-    """Add a FLUX double-/single-stream Q/K gate without changing Q, K or V."""
+class RegionAttentionOverride:
+    """Apply the Qwen FLUX.2 key mask at the optimized attention call itself."""
 
     def __init__(
         self,
@@ -105,31 +105,35 @@ class RegionAttentionPatch:
         self.block_types: set[str] = set()
         self._cached_bias: dict[tuple, torch.Tensor] = {}
 
-    def __call__(self, q, k, v, *, pe, attn_mask, extra_options):
-        if attn_mask is not None:
-            raise ValueError("P16 refuses a pre-existing attention mask")
+    def __call__(self, func, q, k, v, heads, mask=None, *, transformer_options=None, **kwargs):
         if not all(isinstance(tensor, torch.Tensor) and tensor.ndim == 4 for tensor in (q, k, v)):
             raise ValueError("P16 attention tensors are invalid")
-        if q.shape[:3] != k.shape[:3] or q.shape[:3] != v.shape[:3] or q.device != k.device or q.device != v.device:
+        if q.shape != k.shape or q.shape != v.shape or q.device != k.device or q.device != v.device or q.dtype != k.dtype or q.dtype != v.dtype:
             raise ValueError("P16 attention Q/K/V token geometry differs")
+        if heads != q.shape[1] or kwargs.get("skip_reshape") is not True:
+            raise ValueError("P16 Qwen attention head geometry differs")
         if self.expected_dtype is not None and q.dtype != self.expected_dtype:
             raise ValueError("P16 attention dtype differs from preflight")
-        if not isinstance(extra_options, dict) or extra_options.get("block_type") not in {"double", "single"}:
-            raise ValueError("P16 FLUX block metadata is missing")
-        image_slice = extra_options.get("img_slice")
-        if not isinstance(image_slice, (list, tuple)) or len(image_slice) != 2 or image_slice[1] != q.shape[2]:
-            raise ValueError("P16 token order or image slice differs")
-        text_count = image_slice[0]
-        refs = extra_options.get("reference_image_num_tokens", [])
+        if not isinstance(transformer_options, dict) or transformer_options.get("block_type") != "double":
+            raise ValueError("P16 FLUX.2 double block metadata is missing")
+        refs = transformer_options.get("reference_image_num_tokens", [])
         if not isinstance(refs, (list, tuple)) or any(type(count) is not int or count <= 0 for count in refs):
             raise ValueError("P16 reference token counts are invalid")
         refs = tuple(refs)
         if self.branch == "global" and refs or self.branch != "global" and len(refs) != 2:
             raise ValueError("P16 reference count differs from branch")
+        text_count = q.shape[2] - math.prod(self.token_hw) - sum(refs)
+        if text_count <= 0:
+            raise ValueError("P16 text/main/reference token order differs")
         if self.expected_counts is not None and (text_count, refs) != self.expected_counts:
             raise ValueError("P16 reference or text token count differs from preflight")
-        if text_count + math.prod(self.token_hw) + sum(refs) != q.shape[2]:
-            raise ValueError("P16 token count differs from text/main/reference order")
+        if mask is not None:
+            if (
+                not isinstance(mask, torch.Tensor) or mask.shape != (q.shape[0], 1, q.shape[2])
+                or mask.dtype != q.dtype or mask.device != q.device
+                or torch.any(torch.isnan(mask)) or torch.any(torch.isposinf(mask))
+            ):
+                raise ValueError("P16 original text attention mask is invalid")
 
         protected = self.left_mask | self.right_mask if self.branch == "global" else (self.left_mask if self.branch == "left" else self.right_mask)
         allowed = None if self.branch == "global" else protected
@@ -138,12 +142,13 @@ class RegionAttentionPatch:
         if bias is None:
             bias = attention_bias(text_count, self.token_hw, refs, protected, allowed, dtype=q.dtype, device=q.device)
             self._cached_bias[key] = bias
+        combined = bias[None, None, :, :] if mask is None else bias[None, None, :, :] + mask[:, :, None, :]
         self.calls += 1
-        self.block_types.add(extra_options["block_type"])
-        return {"attn_mask": bias}
+        self.block_types.add("double")
+        return func(q, k, v, heads, combined, transformer_options=transformer_options, **kwargs)
 
 
-def with_region_patch(model_options: dict, patch: RegionAttentionPatch, *, clone_fn: Callable | None = None) -> dict:
+def with_region_override(model_options: dict, override: RegionAttentionOverride, *, clone_fn: Callable | None = None) -> dict:
     """Clone existing ComfyUI options and attach only this branch's hook."""
     if clone_fn is None:
         import comfy.model_patcher
@@ -151,10 +156,16 @@ def with_region_patch(model_options: dict, patch: RegionAttentionPatch, *, clone
         clone_fn = comfy.model_patcher.create_model_options_clone
     options = clone_fn(model_options)
     transformer = options.setdefault("transformer_options", {})
-    patches = transformer.setdefault("patches", {})
-    if any(name.startswith("attn1") for name in patches) or transformer.get("patches_replace"):
+    if not isinstance(transformer, dict):
         raise ValueError("P16 has a conflicting attention patch")
-    patches["attn1_patch"] = [patch]
+    patches = transformer.get("patches", {})
+    if (
+        not isinstance(patches, dict)
+        or any(name.startswith("attn1") for name in patches)
+        or transformer.get("patches_replace") or "optimized_attention_override" in transformer
+    ):
+        raise ValueError("P16 has a conflicting attention patch")
+    transformer["optimized_attention_override"] = override
     return options
 
 
@@ -166,7 +177,7 @@ def make_region_guider(
     base_cls: type,
     sampling_fn: Callable,
     clone_fn: Callable,
-    patch_factory: Callable = RegionAttentionPatch,
+    override_factory: Callable = RegionAttentionOverride,
 ):
     """Create a CFGGuider subclass that shares x/t across three branches."""
     contract = _checked_contract(region_contract)
@@ -201,17 +212,17 @@ def make_region_guider(
             options = model_options or {}
             predictions = []
             for branch in BRANCHES:
-                patch = patch_factory(
+                override = override_factory(
                     branch, token_hw, left_mask, right_mask,
                     expected_counts=expected_counts[branch], expected_dtype=dtype,
                 )
-                branch_options = with_region_patch(options, patch, clone_fn=clone_fn)
+                branch_options = with_region_override(options, override, clone_fn=clone_fn)
                 prediction = sampling_fn(
                     self.inner_model, x, timestep, None, self.conds[branch], 1.0,
                     model_options=branch_options, seed=seed,
                 )
-                if patch.calls == 0 or patch.block_types != {"double", "single"}:
-                    raise RuntimeError("Region attention patch was not invoked in both FLUX block types")
+                if override.calls == 0 or override.block_types != {"double"}:
+                    raise RuntimeError("Region attention override was not invoked in FLUX.2 double blocks")
                 predictions.append(prediction)
             on_device = tuple(weight.to(device=x.device, dtype=x.dtype) for weight in weights)
             return mix_predictions(predictions[0], tuple(predictions[1:]), on_device)
