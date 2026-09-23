@@ -51,3 +51,40 @@ Skalenwechsel ist nach diesen materiell unterschiedlichen Fehlversuchen keine
 belastbare Freigabestrategie. Vor einem neuen Render sollte gezielt geklärt
 werden, ob ein tatsächlich hart begrenzender One-shot-Mechanismus verfügbar ist;
 erst falls nicht, ist der bereits vorgesehene mehrstufige Fallback zu bewerten.
+
+## Nachprüfung der One-shot-Schnittliniensteuerung
+
+Der am 23.09.2026 gepinnte ComfyUI-Stand ist `87d23b8`. Sein
+[`ConditioningSetMask`](https://github.com/Comfy-Org/ComfyUI/blob/87d23b81765161624889febfb3b81f19f3c8435b/nodes.py)
+hängt eine Maske an die Konditionierung; der
+[`Sampler`](https://github.com/Comfy-Org/ComfyUI/blob/87d23b81765161624889febfb3b81f19f3c8435b/comfy/samplers.py)
+gewichtet damit Vorhersagen, beschneidet aber keine Figurenpixel. Beim Versuch
+E blieb außerdem die gemeinsame Positionsreferenz mit beiden Figuren im
+globalen, unmaskierten Zweig. Seine zusätzlichen Kartenmasken konnten deren
+Einfluss deshalb nicht exklusiv auf r3c1 und r3c3 begrenzen. Der reine
+Konditionierungs-Maskenansatz ist für eine harte Zuschnittgarantie widerlegt.
+
+Die bereits vorhandene Variante `regional_identity_joint` nimmt die globale
+Figurenreferenz heraus, erzeugte jedoch bei den früher geprüften Motiven
+getrennt wirkende Horizonte und Kartenhintergründe. Sie ist ebenfalls keine
+freigabefähige Standardlösung. Eine lesende Prüfung des konfigurierten Workers
+fand keinen installierten regionalen Attention-/Control-Knoten. Es wurde
+nichts installiert oder gerendert. Ein weiterer Seed-, Modell- oder
+Maskenstärke-Versuch würde keine neue Schnittliniengarantie prüfen.
+
+Ein möglicher **neuer** One-shot-Ansatz wäre ein eigener regionsgebundener
+Sampling-Eingriff: ein gemeinsamer latenter Bildzustand und ein finaler Decode,
+aber pro Denoising-Schritt ein globaler Landschaftsbeitrag und auf die
+Einleger-Innenflächen begrenzte Figurenbeiträge. Dabei müssten
+Referenz-/Figureninformationen auch in der Attention außerhalb ihrer Regionen
+gesperrt und Dekodier-Randwirkungen durch Abstand zur Schnittlinie plus
+automatische sowie visuelle Crop-Prüfung abgefangen werden. Das ist eine
+Architekturänderung, **noch kein implementierter oder bewiesener Mechanismus**;
+seine Nahtfreiheit, Quelltreue und Laufzeit sind offen. Vor Umsetzung sind
+Designfreigabe und ein isolierter P16-Prototyp nötig.
+
+Zusätzlich ist das 9B-Modell laut
+[`FLUX.2`-Modellübersicht des Herstellers](https://github.com/black-forest-labs/flux2)
+non-commercial lizenziert, während 4B unter Apache 2.0 steht. Der 9B-Versuch
+bleibt deshalb eine Diagnose; für einen verkäuflichen Release ist zunächst der
+4B-Pfad oder eine gesondert geklärte Lizenz maßgeblich.
