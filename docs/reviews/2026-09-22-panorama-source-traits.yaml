@@ -1,7 +1,9 @@
 schema_version: 1
-# Only unresolved one-shot scopes. Existing approved or partly approved candidates
-# are handled separately; their exact pixels must not be silently replaced.
+# Unresolved one-shot scopes, plus P02 after the operator explicitly requested
+# correction of its remaining subjects. Its earlier Pikachu approval remains
+# bound only to candidate E and does not transfer to the new complete scene.
 scopes:
+  P02: Base2
   P07: Pokedex/sections/gen4
   P08: Pokedex/sections/gen5
   P09: Pokedex/sections/gen6
@@ -39,6 +41,28 @@ scopes:
 # Existing validated traits for keys not listed here are reused only if their
 # stored source hash matches the current source bytes.
 traits:
+  "pokeapi:official-artwork:25": >-
+    Match this exact cheerful Pikachu source pose: two long black-tipped ears,
+    two round dark eyes with white highlights, red cheeks, an open pink mouth,
+    the image-left arm stretched outward, the other bent toward the chest,
+    two small standing feet and one zigzag yellow tail with its brown base.
+    Keep the face and all limb contours source-close. Two long jungle grass
+    blades may naturally pass in front of its extended arm and lower belly;
+    they are foreground scenery, not new body outlines.
+  "pokeapi:official-artwork:143": >-
+    Match the exact seated Relaxo source: broad teal-blue body, pointed ears,
+    closed narrow eyes, cream face and enormous round cream belly. Preserve
+    the continuous curved smiling mouth and its two separate small upward
+    white teeth. Both arms extend to the sides and show their small white
+    claws. Both large forward-facing feet retain the brown oval paw pads and
+    exactly the distinct white source toe claws, without extra spikes.
+  "pokeapi:official-artwork:133": >-
+    Match the exact standing Evoli source: warm brown four-legged body with
+    all four feet on the ground, very large pointed ears with dark inner
+    areas, black oval eyes and white highlights, tiny nose and a subtle
+    closed smile. Preserve the jagged cream neck ruff and its large bushy
+    tail rising to image-right with a cream tip. Do not invent red cheek
+    markings, change it to a seated pose or hide its standing legs.
   "pokeapi:official-artwork:10077": >-
     Match the exact Primal Kyogre source, including its long dark-blue whale body,
     pale glowing eye and forehead markings, bright circuit-like lines on both

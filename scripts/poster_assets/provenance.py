@@ -617,6 +617,33 @@ def require_joint_scene_visual_review(
             or record.get("workflow_sha256") != run_metadata["inputs"]["workflow"]["sha256"]
         ):
             raise ValueError("Grounding visual review has stale baseline or workflow binding")
+    historical_revocation = record.get("historical_reaudit_revocation")
+    reacceptance = record.get("reacceptance")
+    if historical_revocation is not None or reacceptance is not None:
+        if not isinstance(historical_revocation, dict) or not isinstance(reacceptance, dict):
+            raise ValueError("Joint-scene reacceptance requires its historical revocation")
+        report_name = reacceptance.get("report")
+        if not isinstance(report_name, str):
+            raise ValueError("Joint-scene reacceptance report path is invalid")
+        report_relative = Path(report_name)
+        report_root = ROOT / "docs/reviews"
+        report_path = ROOT / report_relative
+        if (
+            report_relative.is_absolute()
+            or ".." in report_relative.parts
+            or not report_path.resolve().is_relative_to(report_root.resolve())
+            or not report_path.is_file()
+            or historical_revocation.get("verdict") != "reject"
+            or historical_revocation.get("previously_passed") is not True
+            or historical_revocation.get("master_sha256") != artwork["sha256"]
+            or reacceptance.get("reviewer_kind") != "human"
+            or reacceptance.get("scope") != "exact_existing_master_only"
+            or reacceptance.get("accepted_master_sha256") != artwork["sha256"]
+            or reacceptance.get("raw_artwork_reinspected") is not False
+            or not _valid_sha256(reacceptance.get("report_sha256"))
+            or sha256_file(report_path) != reacceptance["report_sha256"]
+        ):
+            raise ValueError("Joint-scene reacceptance is incomplete or stale")
     return record
 
 

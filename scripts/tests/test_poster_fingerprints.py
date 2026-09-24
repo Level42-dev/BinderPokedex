@@ -957,6 +957,31 @@ def test_joint_scene_cannot_promote_without_explicit_visual_review():
         )
 
 
+def test_reaccepted_joint_scene_requires_hash_bound_historical_decision():
+    root = Path(__file__).resolve().parents[2]
+    run = json.loads(
+        (
+            root
+            / "assets/posters/Pokedex/sections/gen3/poster-flux2-provenance.json"
+        ).read_text(encoding="utf-8")
+    )["run"]
+    require_joint_scene_visual_review(run)
+
+    for change in ("missing_reacceptance", "wrong_master", "wrong_report", "wrong_history"):
+        damaged = copy.deepcopy(run)
+        review = damaged["validation"][JOINT_SCENE_REVIEW_KEY]
+        if change == "missing_reacceptance":
+            del review["reacceptance"]
+        elif change == "wrong_master":
+            review["reacceptance"]["accepted_master_sha256"] = "0" * 64
+        elif change == "wrong_report":
+            review["reacceptance"]["report_sha256"] = "0" * 64
+        else:
+            review["historical_reaudit_revocation"]["master_sha256"] = "0" * 64
+        with pytest.raises(ValueError, match="reacceptance"):
+            require_joint_scene_visual_review(damaged)
+
+
 @pytest.mark.parametrize(
     ("engine", "mode", "reference_mode", "current_version"),
     (

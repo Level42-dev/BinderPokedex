@@ -19,7 +19,7 @@ posters:
     section_id: gen3
     manifest: sections/gen3/poster.yaml
     pdf:
-      enabled: false
+      enabled: true
       artwork_file: poster-flux2-artwork.png
       insertion: after_section_cover
   - id: gen4

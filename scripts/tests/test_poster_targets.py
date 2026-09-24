@@ -45,6 +45,7 @@ RELEASE_POSTER_KEYS = {
     "ExGen3/sections/normal",
     "ME05",
     "Pokedex/sections/gen1",
+    "Pokedex/sections/gen3",
     "Pokedex/sections/gen7",
     "SV08",
 } | {
@@ -69,6 +70,25 @@ def test_sv08_release_route_uses_the_exact_separately_accepted_artwork():
     assert accepted["master"]["sha256"] == expected_sha256
     assert sha256_file(ROOT / accepted["master"]["file"]) == expected_sha256
     assert poster_bundle("SV08").pdf_enabled is True
+
+
+def test_p06_release_route_uses_only_the_exact_reaccepted_existing_master():
+    expected_sha256 = "4e05fe23e97123fbcdf162396f0ab38bf8f35be7a165e0ea3b638b61892aba49"
+    bundle = next(
+        item for item in poster_bundles_for_scope("Pokedex")
+        if item.asset_key == "Pokedex/sections/gen3"
+    )
+    provenance = json.loads(
+        (bundle.asset_dir / "poster-flux2-provenance.json").read_text(encoding="utf-8")
+    )
+    review = provenance["run"]["validation"]["joint_scene_visual_review"]
+    assert sha256_file(bundle.asset_dir / "poster-flux2-artwork.png") == expected_sha256
+    assert review["reviewed_artwork_sha256"] == expected_sha256
+    assert review["reacceptance"]["accepted_master_sha256"] == expected_sha256
+    assert review["reacceptance"]["reviewer_kind"] == "human"
+    assert review["reacceptance"]["raw_artwork_reinspected"] is False
+    assert review["historical_reaudit_revocation"]["master_sha256"] == expected_sha256
+    assert bundle.pdf_enabled is True
 
 
 def test_human_accepted_batch_uses_exact_reviewed_pixels_in_release_routes():
@@ -354,10 +374,10 @@ def test_pokedex_index_keeps_nine_manifests_and_routes_accepted_bundles():
     assert len({bundle.manifest_path for bundle in bundles}) == 9
     assert [
         bundle.poster_id for bundle in bundles if bundle.pdf_enabled
-    ] == ["gen1", "gen2", "gen4", "gen5", "gen6", "gen7", "gen8", "gen9"]
+    ] == ["gen1", "gen2", "gen3", "gen4", "gen5", "gen6", "gen7", "gen8", "gen9"]
     assert [
         bundle.poster_id for bundle in bundles if not bundle.pdf_enabled
-    ] == ["gen3"]
+    ] == []
     assert all(bundle.insertion == "after_section_cover" for bundle in bundles)
     assert len(
         {

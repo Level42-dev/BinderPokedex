@@ -12,8 +12,9 @@ Latest human artwork feedback: 2026-09-23 (29 exact candidates in the collected 
 Latest continuation: 2026-09-24 (all 29 accepted masters technically promoted
 and validated; the v10 release build remains open).
 Release candidate after the [SV08 exact-artwork adoption](reviews/2026-09-24-sv08-exact-artwork-adoption.md):
-2026-09-24 (35 production-valid panoramas enabled; seven unresolved routes
-retain their normal covers). The earlier 34/42 checkpoint is preserved in the
+2026-09-24 (36 production-valid panoramas enabled after the
+[P06 exact-artwork reacceptance](reviews/2026-09-24-p06-existing-artwork-acceptance.md);
+six unresolved routes retain their normal covers). The earlier 34/42 checkpoint is preserved in the
 [approved-artwork adoption record](reviews/2026-09-24-v10-approved-panorama-adoption.md).
 
 ### Collected panorama artwork accepted (2026-09-23)
@@ -28,11 +29,19 @@ physical card crops. It is an image-specific judgment, not a general exception
 for future anatomy deviations.
 
 P16 and P37 were marked non-approvable and were not part of the 29. P01's
-Hopplo shadow, P02's remaining subjects and P06's detailed identity check are
-still open. SVP/MEP promo numbers, all card data, PDF print quality, production
+Hopplo shadow and P02's remaining subjects are still open. P06 was separately
+accepted on 24 September for its exact existing pixels. SVP/MEP promo numbers, all card data, PDF print quality, production
 promotion and a complete v10 release remain independent gates. The approval
 record itself did not alter release files; technical promotion followed on
 24 September and is documented separately.
+
+For P02, [two source-bound one-shot corrections and bounded foreground
+fallbacks](reviews/2026-09-24-p02-correction-trials.md) have been reviewed.
+The operator withdrew the brief acceptance of candidate F after identifying
+two depth defects. Revised candidate G has separate small Pikachu and Evoli
+leaf corrections and is awaiting a fresh human review of its full panorama and
+source/card pairs. A truthful fallback-promotion contract remains necessary;
+the existing P02 PDF route stays disabled.
 
 ## Current decision
 
