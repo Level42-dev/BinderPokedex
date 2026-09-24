@@ -9,10 +9,11 @@ evidence in [Poster Experiment Log](POSTER_ARTWORK_EXPERIMENT_LOG.md).
 Installed-artwork audit reopened: 2026-09-12. Full target retriage: 2026-09-14.
 Latest scoped production update: 2026-09-22 (accepted P15-D, P40-B, P10-C and P04-B).
 Latest human artwork feedback: 2026-09-23 (29 exact candidates in the collected panorama review accepted).
-Latest continuation: 2026-09-23 (29 accepted masters preserved in the review-only archive; technical adoption and release remain open).
-Release cut: 2026-09-23 (further artwork generation paused; only five currently
-production-valid panoramas remain enabled for v10.0, and the other 37 routes use
-their normal covers). See the [v10 release-cut record](reviews/2026-09-23-v10-release-cut.md).
+Latest continuation: 2026-09-24 (all 29 accepted masters technically promoted
+and validated; the v10 release build remains open).
+Release candidate: 2026-09-24 (34 production-valid panoramas enabled; eight
+unresolved routes retain their normal covers). See the
+[approved-artwork adoption record](reviews/2026-09-24-v10-approved-panorama-adoption.md).
 
 ### Collected panorama artwork accepted (2026-09-23)
 
@@ -28,8 +29,9 @@ for future anatomy deviations.
 P16 and P37 were marked non-approvable and were not part of the 29. P01's
 Hopplo shadow, P02's remaining subjects and P06's detailed identity check are
 still open. SVP/MEP promo numbers, all card data, PDF print quality, production
-promotion and a complete v10 release remain independent gates. No installed
-artwork or release PDF changed as a result of recording this approval.
+promotion and a complete v10 release remain independent gates. The approval
+record itself did not alter release files; technical promotion followed on
+24 September and is documented separately.
 
 ## Current decision
 

@@ -52,12 +52,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added measured one- or two-line label fitting so long Trainer names stay
   inside their card and cutting boundaries.
 - Added exact German title logos for Schwarze Blitze and Weiße Flammen.
-- Included five currently validated panoramas: ExGen2 Mega, ExGen3 Normal,
-  ME05 Dunkelnacht, and Pokédex generations 1 and 7. The other 37 poster
-  routes are disabled for this release; their set or section covers remain.
-  Accepted but not yet technically adopted artwork remains preserved for a
-  subsequent reviewed release, including the unfinished Stellarkrone and
-  Stürmische Funken replacements.
+- Included 34 production-validated panoramas: the five previously valid bundles
+  plus all 29 exact, human-accepted batch artworks. Eight unresolved routes
+  remain disabled and retain their set or section covers: Base1, Base2,
+  ExGen2 Primal, ExGen3 Mega, ME03, Pokédex Generation 3, SV07 Stellarkrone,
+  and SV08 Stürmische Funken.
 
 ### 🔧 Release Quality
 

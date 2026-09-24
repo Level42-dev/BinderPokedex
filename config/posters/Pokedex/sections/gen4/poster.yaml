@@ -5,10 +5,8 @@ poster_id: gen4
 source:
   scope: Pokedex
   section_id: gen4
-
 layout:
   name: standard_3x3
-
 text_cells:
   title:
     row: 1
@@ -18,28 +16,23 @@ text_cells:
     column: 2
     max_width_ratio: 0.92
     max_height_ratio: 0.68
-
 text_content:
   mode: section_summary
-
 artwork:
   promoted_file: poster-flux2-artwork.png
   provenance_file: poster-flux2-provenance.json
   identity_lock:
     overscan_ratio: 0.04
-    max_protected_start_ratio: 0.70
-    transition_ratio: 0.10
+    max_protected_start_ratio: 0.7
+    transition_ratio: 0.1
     subject_clearance_ratio: 0.02
   scene:
     concept: a cinematic Sinnoh highland landscape with an alpine expedition mood
-    setting: >-
-      The artwork contains a cool Sinnoh-inspired highland meadow with dark
-      conifers, a distant snow-streaked mountain, a quiet lake, and ancient
-      weathered stone confined to the far background.
+    setting: The artwork contains a cool Sinnoh-inspired highland meadow with dark conifers, a distant
+      snow-streaked mountain, a quiet lake, and ancient weathered stone confined to the far background.
     lighting: Crisp silver-gold mountain light enters from the upper left.
-    rendering: >-
-      Use clean cinematic cel-painted linework, restrained cool colors, and
-      long alpine atmospheric depth.
+    rendering: Use clean cinematic cel-painted linework, restrained cool colors, and long alpine atmospheric
+      depth.
     ground_noun: highland grass
   generation:
     engine: flux
@@ -50,23 +43,40 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260734875
+    reference_mode: spatial_source_detail_joint
+    seed: 260735885
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
-
+  source_details:
+    pokeapi:official-artwork:387:
+      sha256: 34bdf93e84d8e1770074ead9c38b1659bcc937abfa20ddd8a6e53a283ed0e16d
+      traits: Match the exact small green Turtwig source, its broad head, yellow lower face and shell
+        rim, red eyes, separate short feet, and one small twig with two leaves growing from the top of
+        the head. Do not turn the twig into a tail.
+    pokeapi:official-artwork:390:
+      sha256: 7ce75f77abcaff1451c67da6fc8de9b6828aacb1a222dd590825c5cab4b20140
+      traits: 'Match this exact Chimchar source pose: orange monkey body, blue eye markings, cream face
+        and belly, clear belly swirl, slim arms and long separate fingers, with its small rear flame.
+        In particular keep the supporting hand and its distinct extended finger visible.'
+    pokeapi:official-artwork:393:
+      sha256: 84895daf63236a40d6061af37739908b5256876c96a4a34b9f354df5f1ec2ca0
+      traits: Match the exact blue Piplup source with its pale face, oval white belly, tiny yellow beak
+        and feet, dark blue cap and cape-like sides, and short flipper wings. Preserve its compact upright
+        penguin proportions.
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns
   row: bottom
   cutout_source: pokeapi_official_artwork
   fallback_candidates: []
-
 conditioning:
   identity_defaults:
-    neutral_rgb: [226, 224, 211]
+    neutral_rgb:
+    - 226
+    - 224
+    - 211
     canvas_px: 512
     min_subject_px: 150
     max_subject_px: 350

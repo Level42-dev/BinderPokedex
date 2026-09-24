@@ -124,10 +124,10 @@ def test_pokedex_enabled_generation_bundles_need_no_set_id():
     try:
         assert [
             renderer.poster_id for renderer in collection.renderers
-        ] == ["gen1", "gen7"]
+        ] == ["gen1", "gen2", "gen4", "gen5", "gen6", "gen7", "gen8", "gen9"]
         assert [
             renderer.section_id for renderer in collection.renderers
-        ] == ["gen1", "gen7"]
+        ] == ["gen1", "gen2", "gen4", "gen5", "gen6", "gen7", "gen8", "gen9"]
     finally:
         collection.cleanup()
 
@@ -214,8 +214,8 @@ def test_enabled_poster_source_is_text_free_artwork():
         renderer.cleanup()
 
 
-def test_disabled_sv035_artwork_is_not_routed_into_release_pdf():
-    assert PosterPageRenderer.from_variant_data({"set_id": "SV03.5"}, "de") is None
+def test_disabled_sv07_artwork_is_not_routed_into_release_pdf():
+    assert PosterPageRenderer.from_variant_data({"set_id": "SV07"}, "de") is None
 
 
 @pytest.mark.parametrize(

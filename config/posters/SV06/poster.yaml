@@ -11,7 +11,7 @@ text_cells:
     max_width_ratio: 0.92
     max_height_ratio: 0.68
 pdf:
-  enabled: false
+  enabled: true
   artwork_file: poster-flux2-artwork.png
   insertion: after_first_section_cover
 artwork:
@@ -31,21 +31,37 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260781702
+    reference_mode: spatial_source_detail_joint
+    seed: 260782711
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
   scene:
     concept: the Twilight Masquerade expansion
-    setting: The artwork contains a secluded twilight woodland clearing inspired by a rural
-      festival evening, layered flowering trees, distant weathered stone, and soft lantern-like
-      fireflies only in the upper background.
+    setting: The artwork contains a secluded twilight woodland clearing inspired by a rural festival evening,
+      layered flowering trees, distant weathered stone, and soft lantern-like fireflies only in the upper
+      background.
     lighting: Violet dusk mixes with the last warm light from the upper left.
-    rendering: Use graceful cel-painted linework, restrained festival colors, and mysterious
-      but readable woodland depth.
+    rendering: Use graceful cel-painted linework, restrained festival colors, and mysterious but readable
+      woodland depth.
     ground_noun: woodland grass
+  source_details:
+    pokeapi:official-artwork:810:
+      sha256: 0a4b1c0662dd8e0ad7f00bf78c2f958b297bc25c70bbc7273d50b3d39d5de330
+      traits: Match the exact little green Grookey source with its brown ears and face, orange snout,
+        large eyes, green leafy hair tuft, short limbs and slim stick held at the top of the head. Keep
+        the stick separate from its arms.
+    pokeapi:official-artwork:390:
+      sha256: 7ce75f77abcaff1451c67da6fc8de9b6828aacb1a222dd590825c5cab4b20140
+      traits: 'Match this exact Chimchar source pose: orange monkey body, blue eye markings, cream face
+        and belly, clear belly swirl, slim arms and long separate fingers, with its small rear flame.
+        In particular keep the supporting hand and its distinct extended finger visible.'
+    pokeapi:official-artwork:656:
+      sha256: cbb47c38d234eb7dea4b1d90f8c97ec990f41b6e61f26e7efba90d80a3d1d632
+      traits: 'Match the exact blue Froakie source: large yellow eyes, pale foam scarf around the neck,
+        rounded face, slim hind legs and individually separated fingers and toes. Keep the foam as a collar,
+        not an extra limb.'
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns

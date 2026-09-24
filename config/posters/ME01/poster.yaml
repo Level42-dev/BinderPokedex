@@ -11,7 +11,7 @@ text_cells:
     max_width_ratio: 0.92
     max_height_ratio: 0.68
 pdf:
-  enabled: false
+  enabled: true
   artwork_file: poster-flux2-artwork.png
   insertion: after_first_section_cover
 artwork:
@@ -31,21 +31,45 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260763287
+    reference_mode: spatial_source_detail_joint
+    seed: 260764296
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
   scene:
     concept: the Mega Evolution expansion and its surge of awakened energy
-    setting: The artwork contains a broad highland garden with ancient stone terraces, distant
-      crystalline ridges, wind-shaped trees, and subtle arcs of refracted energy in the far
-      atmosphere.
+    setting: The artwork contains a broad highland garden with ancient stone terraces, distant crystalline
+      ridges, wind-shaped trees, and subtle arcs of refracted energy in the far atmosphere.
     lighting: Clear golden daylight breaks through high silver clouds.
-    rendering: Use polished trading-card illustration, clean cel-painted linework, restrained
-      jewel tones, and deep atmospheric perspective.
+    rendering: Use polished trading-card illustration, clean cel-painted linework, restrained jewel tones,
+      and deep atmospheric perspective.
     ground_noun: meadow
+  source_details:
+    pokeapi:official-artwork:1:
+      sha256: 8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a
+      traits: Match this exact Bulbasaur source pose and low four-legged silhouette. Keep the joined folds
+        and pointed tips of the large green bulb, the two upright pointed ears, two separate red eyes
+        with tall white highlights, tiny nostrils, and smiling open mouth with its pink tongue and small
+        white corner teeth. Preserve the angular dark teal forehead, cheek, shoulder and leg markings,
+        including the small angular spot above the near front leg. Copy the visible short legs. Each of
+        the three fully visible feet has EXACTLY THREE separate white claw tips in IMAGE 2. In particular
+        the large near front paw, at image-center below the small angular leg spot, must have only three
+        white tips, not four. Match the three-tip paw outlines and keep the partly hidden farther limb
+        hidden as in the source. Do not invent extra toes or limbs.
+    pokeapi:official-artwork:152:
+      sha256: 3ffc2eeee9139b0281ab5493b1a6d4b5c1329de5ddf5361f5ee3c93d12c05659
+      traits: Match this exact pale yellow-green Chikorita source pose, its rounded head and body, two
+        separate reddish oval eyes, tiny smiling mouth, three visible short feet and a partly obscured
+        fourth limb. Preserve the single broad green leaf arching up and toward image-right from its narrow
+        head stem, with the leaf stem separate from the green collar buds. Keep the three round front
+        collar buds and the small pointed buds at the side edges individually visible. Do not fuse a grass
+        blade, collar bud or leaf stem into an extra appendage or change the source's gentle expression.
+    pokeapi:official-artwork:251:
+      sha256: 7596d91f88dfdb24bac29ad2ff37ec9652ae0aa5de9e8dab04fb0ac53ed697f1
+      traits: Match the exact small pale-green Celebi source, its rounded pinkish face, two fine antennae,
+        large blue eyes, small hands and feet, thin translucent wings and tapered head crest. Keep this
+        delicate fairy-like silhouette.
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns

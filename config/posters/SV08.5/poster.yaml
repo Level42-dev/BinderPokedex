@@ -11,7 +11,7 @@ text_cells:
     max_width_ratio: 0.92
     max_height_ratio: 0.68
 pdf:
-  enabled: false
+  enabled: true
   artwork_file: poster-flux2-artwork.png
   insertion: after_first_section_cover
 artwork:
@@ -31,21 +31,41 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260797695
+    reference_mode: spatial_source_detail_joint
+    seed: 260798704
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
   scene:
     concept: the Prismatic Evolutions expansion
-    setting: The artwork contains a tranquil alpine lake basin, pale crystalline cliffs, soft
-      evergreen layers, and broad prismatic refractions crossing the distant water and upper
-      sky.
+    setting: The artwork contains a tranquil alpine lake basin, pale crystalline cliffs, soft evergreen
+      layers, and broad prismatic refractions crossing the distant water and upper sky.
     lighting: Clear white daylight separates into subtle spectral colors.
-    rendering: Use elegant premium-card linework, restrained rainbow accents, clean reflections,
-      and luminous atmospheric depth.
+    rendering: Use elegant premium-card linework, restrained rainbow accents, clean reflections, and luminous
+      atmospheric depth.
     ground_noun: lakeside grass
+  source_details:
+    pokeapi:official-artwork:25:
+      sha256: bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f
+      traits: 'Pikachu must match this exact cheerful yellow source pose: exactly two long black-tipped
+        ears, two separate dark round eyes with white highlights, red cheek circles and the open pink
+        mouth with distinct tongue. Preserve the image-left arm extended outward and the image-right arm
+        bent toward the chest with its separate small pointed finger contours. Copy the two small standing
+        feet and one continuous large yellow zigzag tail with its brown base. Preserve the source''s body
+        proportions, expression, eye spacing, ear angles and hand pose; no extra fingers, ears, tails
+        or facial marks. Scene-appropriate foreground overlap is allowed without changing these defining
+        features.'
+    pokeapi:official-artwork:383:
+      sha256: 0207895137e94107b5efbf9054d3c94f2ae16374f9cd07d3729fb5e86dd271ac
+      traits: Match the exact standard Groudon source with red segmented armor, black panel seams, sharp
+        white claws, open jaw, bulky legs and angular side and tail spikes. Keep this ordinary Groudon
+        distinct from the glowing Primal form.
+    pokeapi:official-artwork:249:
+      sha256: f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30
+      traits: 'Match the exact white-and-blue Lugia source: narrow defined eye, long beak-like muzzle,
+        paired dark-blue dorsal plates, long neck and tail, and broad wing-arms with individually separated
+        fingertip feathers. Preserve the head profile and wing-finger count visible in the reference.'
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns

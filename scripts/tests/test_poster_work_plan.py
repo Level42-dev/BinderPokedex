@@ -1038,6 +1038,12 @@ def test_public_state_vocabulary_is_stable():
 
 def test_every_release_enabled_poster_passes_production_validation():
     bundles = enabled_poster_bundles()
+    accepted = json.loads(
+        (
+            Path(__file__).resolve().parents[2]
+            / "docs/reviews/2026-09-23-panorama-batch-user-acceptance.json"
+        ).read_text(encoding="utf-8")
+    )
     assert {
         bundle.asset_key for bundle in bundles
     } == {
@@ -1046,7 +1052,7 @@ def test_every_release_enabled_poster_passes_production_validation():
         "ME05",
         "Pokedex/sections/gen1",
         "Pokedex/sections/gen7",
-    }
+    } | {candidate["scope"] for candidate in accepted["candidates"]}
 
     for bundle in bundles:
         result = validate_promoted_poster(bundle)

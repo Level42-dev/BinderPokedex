@@ -5,7 +5,7 @@ posters:
   section_id: normal
   manifest: sections/normal/poster.yaml
   pdf:
-    enabled: false
+    enabled: true
     artwork_file: poster-flux2-artwork.png
     insertion: after_section_cover
 - id: mega

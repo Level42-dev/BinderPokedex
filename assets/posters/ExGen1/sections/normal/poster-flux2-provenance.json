@@ -3,7 +3,7 @@
   "kind": "promoted_poster",
   "outputs": {
     "artwork": {
-      "bytes": 7184869,
+      "bytes": 9238026,
       "dpi": [
         299.9994,
         299.9994
@@ -11,28 +11,28 @@
       "file": "assets/posters/ExGen1/sections/normal/poster-flux2-artwork.png",
       "height": 3268,
       "mode": "RGBA",
-      "pixel_sha256": "410632669ce8173cd00c149469675ecf5e9be3fe378de0aa0e2776808bc604c1",
-      "sha256": "80457937f2507257f9ff45a82e6826e567c86186f0de379b109374d249a860ea",
+      "pixel_sha256": "003601ecd4e9f6028976c21936129c39e2f0035a306caadadfca03204d670862",
+      "sha256": "d3a9bea00447de6c0df558f6979681f49e86f5392ba25b3ab087e05fefb05557",
       "width": 2368
     }
   },
   "poster_id": "normal",
-  "promoted_at": "2026-08-10T08:21:09.729140+00:00",
-  "review_language": "en",
+  "promoted_at": "2026-09-24T07:07:44.045751+00:00",
+  "review_language": "de",
   "run": {
-    "created_at": "2026-08-07T07:09:35.647504+00:00",
+    "created_at": "2026-09-22T20:46:38.521405+00:00",
     "generation": {
       "encoder": "qwen_3_4b.safetensors",
       "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
       "engine": "flux",
-      "generation_megapixels": 1.0,
+      "generation_megapixels": 2.0,
       "mode": "joint_scene",
       "model": "flux-2-klein-4b.safetensors",
       "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
       "output_dpi": 300,
       "output_method": "lanczos",
-      "reference_mode": "individual_spatial_joint",
-      "seed": 260737078,
+      "reference_mode": "spatial_source_detail_joint",
+      "seed": 260738087,
       "steps": 4,
       "vae": "flux2-vae.safetensors",
       "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
@@ -41,7 +41,7 @@
       "cutout_manifest": {
         "bytes": 1742,
         "file": "tmp/poster-workspaces/ExGen1/sections/normal/sources/cutouts/manifest.json",
-        "sha256": "4c309781708ecb727afc6eb88228bc4b3dcb44d3f9d87b2ba86452cd48410f3e"
+        "sha256": "85035fd4fe66ebed634380401c2bc9e7ce3b3f9a9c092ca365ebb6fcc1da389a"
       },
       "cutouts": [
         {
@@ -99,68 +99,69 @@
           ],
           "effective_prompt": {
             "encoding": "utf-8",
-            "sha256": "992a0b185163de4186813b16c1a7b7be0b43daae1644ac2a722d0fc4df338be5"
+            "sha256": "1c92c51ef84757cf5f2e908da86e31f1c98edc14961c1aa1e5d11ce01aa4d1f9"
           },
           "generation": {
             "encoder": "qwen_3_4b.safetensors",
             "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
             "engine": "flux",
-            "generation_megapixels": 1.0,
+            "generation_megapixels": 2.0,
             "mode": "joint_scene",
             "model": "flux-2-klein-4b.safetensors",
             "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
             "output_dpi": 300,
             "output_method": "lanczos",
-            "reference_mode": "individual_spatial_joint",
-            "seed": 260737078,
+            "reference_mode": "spatial_source_detail_joint",
+            "seed": 260738087,
             "steps": 4,
             "vae": "flux2-vae.safetensors",
             "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
           },
           "joint_scene_conditioning": {
-            "identity_source_resampling": "canonical_card_fit",
-            "reference_megapixels": 0.5,
+            "cast_max_megapixels": 0.5,
+            "identity_canvas_px": 512,
+            "identity_source_resampling": "none",
             "reference_neutral_rgb": [
               226,
               224,
               211
             ],
-            "reference_strategy": "individual_spatial_identity_per_subject"
+            "reference_strategy": "spatial_cast_plus_unscaled_identity"
           },
           "layout": {
             "columns": 3,
             "name": "standard_3x3",
             "raster_geometry": {
               "generation_canvas_px": [
-                848,
-                1168
+                1200,
+                1664
               ],
               "generation_column_spans_px": [
                 [
                   0,
-                  269
+                  380
                 ],
                 [
-                  290,
-                  558
+                  410,
+                  790
                 ],
                 [
-                  579,
-                  848
+                  820,
+                  1200
                 ]
               ],
               "generation_row_spans_px": [
                 [
                   0,
-                  375
+                  535
                 ],
                 [
-                  396,
-                  772
+                  565,
+                  1099
                 ],
                 [
-                  793,
-                  1168
+                  1129,
+                  1664
                 ]
               ],
               "name": "cumulative_physical_endpoints",
@@ -212,7 +213,7 @@
           },
           "pipeline_contract": {
             "name": "poster_generation",
-            "version": 9
+            "version": 11
           },
           "pokemon": {
             "count": "auto_from_layout_columns",
@@ -231,6 +232,20 @@
             "rendering": "Use nostalgic mid-2000s trading-card illustration, clean cel-painted linework, restrained natural colors, and broad atmospheric depth.",
             "setting": "The artwork contains an expansive Hoenn-inspired frontier where a bright meadow meets layered tropical woodland, weathered pale rock, distant blue water, and a small research outpost with completely blank facades low on the outer horizon."
           },
+          "source_details": {
+            "pokeapi:official-artwork:249": {
+              "sha256": "f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30",
+              "traits": "Match the exact white-and-blue Lugia source: narrow defined eye, long beak-like muzzle, paired dark-blue dorsal plates, long neck and tail, and broad wing-arms with individually separated fingertip feathers. Preserve the head profile and wing-finger count visible in the reference."
+            },
+            "pokeapi:official-artwork:3": {
+              "sha256": "04897191b567f8e6d866e6aa6eef184b6a93f8d0ba9ddaa50b4592ef261edc3b",
+              "traits": "Match the exact broad-bodied Venusaur source: low green spotted face and legs, red eyes, separate claws, giant pink spotted flower with defined petals, yellow center, thick palm-like trunk and layered green leaves. Preserve the face beneath the flower rather than turning it into a generic frog."
+            },
+            "pokeapi:official-artwork:9": {
+              "sha256": "1bac4860feebcf5fb5cd27af8c9c4465773e948b68a7436dc65ec49618becd49",
+              "traits": "Match the exact bulky blue Blastoise source, its brown segmented shell, pale belly, compact turtle face, separate clawed arms and legs, tail and two distinct metal water cannons emerging from the shoulders."
+            }
+          },
           "source_subject_ids": [
             3,
             9,
@@ -238,7 +253,7 @@
           ]
         },
         "schema_version": 1,
-        "sha256": "d0386075927d766fde1eed6243bd98b4537efe2769c95bfc41cffbfea4630b62"
+        "sha256": "46070ec791f43928d6db51f5c17f7c24f2336c415eadc39ca38e1b695abce726"
       },
       "overlay_fingerprint": {
         "components": {
@@ -378,75 +393,84 @@
         "sha256": "ff0fa718af0e23fbdfabb07a9946985a6e2c57de67993dba7f4964c243879702"
       },
       "prompt": {
-        "bytes": 5945,
-        "file": "tmp/poster-workspaces/ExGen1/sections/normal/comfyui_poster/individual_spatial_joint_prompt.generated.txt",
-        "sha256": "ab6e0e15332cdf84346c89602298b81bd81c21e605814beead89011440705ad2"
+        "bytes": 3915,
+        "file": "tmp/oneshot-trials/p13-batch-20260922-a/workflows/source_detail_joint_prompt.generated.txt",
+        "sha256": "c1e23d4085261fcfb578f84a014de50b281fb9e05510971b1bc34c01c7d8b096"
       },
       "references": [
         {
-          "bytes": 31863,
-          "file": "tmp/poster-workspaces/ExGen1/sections/normal/comfyui_poster/individual_spatial_reference_1.png",
+          "bytes": 78651,
+          "file": "tmp/oneshot-trials/p13-batch-20260922-a/references/joint_scene_cast_reference.png",
           "height": 832,
           "mode": "RGBA",
-          "pixel_sha256": "0eb98334a8364c96e64ea28fafff38488b8a81a5c59023ba13c60fb9abb5a04d",
-          "sha256": "7522b32ee93384194ba6047b61d0f0b09b0789af5aa413344cf01c10e59cceaa",
+          "pixel_sha256": "1d56497672f63dec94f123390e744eab49ea25b4c36e6caa4334540bccbe8948",
+          "sha256": "ccedf1144e8ae55f82433293bcffc40d874cd0d0cc4803d15bc97d0a96aa8baf",
           "width": 608
         },
         {
-          "bytes": 34250,
-          "file": "tmp/poster-workspaces/ExGen1/sections/normal/comfyui_poster/individual_spatial_reference_2.png",
-          "height": 832,
+          "bytes": 166817,
+          "file": "tmp/oneshot-trials/p13-batch-20260922-a/references/identity_reference_1.png",
+          "height": 512,
           "mode": "RGBA",
-          "pixel_sha256": "bbc47c655938aa50289d22cf3b17c2119cbff8451bdb6524024833b27cb443ad",
-          "sha256": "eaf7ba8e358f6e9e06503d51c9959d3b9086bfa675e8b883a666bade4b28b5af",
-          "width": 608
+          "pixel_sha256": "287348efbb2472cf5677e372fd1ef55872416ad190c7ef7874783ec1dee9175d",
+          "sha256": "051cb7f99905d7a2e7207d5aaaab1317f9dc98bc8ce188c3111fca8d7c0fbd12",
+          "width": 512
         },
         {
-          "bytes": 22041,
-          "file": "tmp/poster-workspaces/ExGen1/sections/normal/comfyui_poster/individual_spatial_reference_3.png",
-          "height": 832,
+          "bytes": 174979,
+          "file": "tmp/oneshot-trials/p13-batch-20260922-a/references/identity_reference_2.png",
+          "height": 512,
           "mode": "RGBA",
-          "pixel_sha256": "5df95e96e4874ee907332405b5199fb2a9d2742c60ffb09aa979c488ccf2b0f7",
-          "sha256": "f29b83f0ad5433561f5776cb8602a25079e44365fca9db520976ebdae19253fe",
-          "width": 608
+          "pixel_sha256": "4a1d8931c9dc8374544e7b37e4811a8a977ec35194595cea7de56f04c56a2075",
+          "sha256": "61d0e03af75703623634c82b59f099b27986c628751ddd8140b8cf4d1daa6b67",
+          "width": 512
+        },
+        {
+          "bytes": 94693,
+          "file": "tmp/oneshot-trials/p13-batch-20260922-a/references/identity_reference_3.png",
+          "height": 512,
+          "mode": "RGBA",
+          "pixel_sha256": "eb080e66c079f9c7bc5fea841031ca39a944c0346198a264431306b74cc58ca3",
+          "sha256": "02c6198c470153be9d31abc4cae4122a2f203eb0d6db3eaf5a638bfb77701c3e",
+          "width": 512
         }
       ],
       "scope_manifest": {
-        "bytes": 2269,
-        "file": "config/posters/ExGen1/sections/normal/poster.yaml",
-        "sha256": "2b6c8cee0169b4301617644dbac086a1609c61bdcf2ad837aa23ac7756314db0"
+        "bytes": 3479,
+        "file": "tmp/review-batch-manifests/p13-batch-20260922-a/poster.yaml",
+        "sha256": "9e0bcc2e95097fbda08ddafe564cb528a6ac47314e5f8ae6479f492056581408"
       },
       "workflow": {
-        "bytes": 9995,
-        "file": "tmp/poster-workspaces/ExGen1/sections/normal/comfyui_poster/workflow_api_joint_scene_individual_spatial_joint_1mp_260737078.json",
-        "sha256": "cb92b0c487a3aa0286dc75317227bcd2ad226d9505429919ea77f6d6ffa74065"
+        "bytes": 8587,
+        "file": "tmp/oneshot-trials/p13-batch-20260922-a/workflows/workflow_api_joint_scene_spatial_source_detail_joint_2mp_260738087.json",
+        "sha256": "a4a9475158e9a982ea8e30cfe41f66874a555516852152dcfb80b1093d377f58"
       }
     },
     "kind": "poster_generation_run",
     "poster_id": "normal",
     "raw_artwork": {
-      "bytes": 1621030,
-      "file": "tmp/poster-workspaces/ExGen1/sections/normal/comfyui_poster/output/exgen1__sections__normal_flux2_joint_scene_individual_spatial_1mp_seed_260737078_00001_.png",
-      "height": 1168,
+      "bytes": 3375108,
+      "file": "tmp/oneshot-trials/p13-batch-20260922-a/retrieved/oneshot-2h27t0b9/output/exgen1__sections__normal_flux2_joint_scene_2mp_seed_260738087_00001_.png",
+      "height": 1664,
       "mode": "RGBA",
-      "pixel_sha256": "01c35e258fae7ef668618ce0a58f30346fa7b0d08cf50aa4f4eeb26d6ad6473a",
-      "sha256": "ba95338bdb97ade1bd82d46eb01bdb776bf2f470bcaee24cdc73e6c596e9a778",
-      "width": 848
+      "pixel_sha256": "a95bb60461171185a913d648fa946727b06e55b3c5c7fe7670152242ea4e090d",
+      "sha256": "5b0a5a2c18ee5640eae6c19a81401601b775113ad2f8c6fa7aa60aff2438b58d",
+      "width": 1200
     },
     "schema_version": 1,
     "scope": "ExGen1/sections/normal",
     "section_id": "normal",
     "source_artwork": {
-      "bytes": 7184869,
+      "bytes": 9238026,
       "dpi": [
         299.9994,
         299.9994
       ],
-      "file": "tmp/poster-workspaces/ExGen1/sections/normal/comfyui_poster/temp/exgen1__sections__normal_flux2_joint_scene_individual_spatial_1mp_seed_260737078_00001__to_300dpi.png",
+      "file": "tmp/oneshot-trials/p13-batch-20260922-a/review/artwork-300dpi.png",
       "height": 3268,
       "mode": "RGBA",
-      "pixel_sha256": "410632669ce8173cd00c149469675ecf5e9be3fe378de0aa0e2776808bc604c1",
-      "sha256": "80457937f2507257f9ff45a82e6826e567c86186f0de379b109374d249a860ea",
+      "pixel_sha256": "003601ecd4e9f6028976c21936129c39e2f0035a306caadadfca03204d670862",
+      "sha256": "d3a9bea00447de6c0df558f6979681f49e86f5392ba25b3ab087e05fefb05557",
       "width": 2368
     },
     "source_scope": "ExGen1",
@@ -465,29 +489,14 @@
           "natural_scene_integration",
           "coherent_landscape_occlusion"
         ],
-        "generation_fingerprint_sha256": "d0386075927d766fde1eed6243bd98b4537efe2769c95bfc41cffbfea4630b62",
+        "generation_fingerprint_sha256": "46070ec791f43928d6db51f5c17f7c24f2336c415eadc39ca38e1b695abce726",
         "method": "human_identity_and_scene_review",
-        "passed": false,
-        "reaudit_revocation": {
-          "date": "2026-09-12",
-          "reviewer_kind": "agent",
-          "method": "source_by_source_visual_reaudit",
-          "previously_passed": true,
-          "verdict": "reject",
-          "master_sha256": "80457937f2507257f9ff45a82e6826e567c86186f0de379b109374d249a860ea",
-          "reports": [
-            {
-              "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
-              "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
-            }
-          ],
-          "reason": "Current exact artwork has rejected or unresolved source-fidelity findings. Historical review fields are retained; the prior approval is withdrawn pending a corrected candidate."
-        },
-        "raw_artwork_pixel_sha256": "01c35e258fae7ef668618ce0a58f30346fa7b0d08cf50aa4f4eeb26d6ad6473a",
-        "raw_artwork_sha256": "ba95338bdb97ade1bd82d46eb01bdb776bf2f470bcaee24cdc73e6c596e9a778",
-        "reviewed_artwork_pixel_sha256": "410632669ce8173cd00c149469675ecf5e9be3fe378de0aa0e2776808bc604c1",
-        "reviewed_artwork_sha256": "80457937f2507257f9ff45a82e6826e567c86186f0de379b109374d249a860ea",
-        "reviewed_at": "2026-08-08T08:07:38.384155+00:00",
+        "passed": true,
+        "raw_artwork_pixel_sha256": "a95bb60461171185a913d648fa946727b06e55b3c5c7fe7670152242ea4e090d",
+        "raw_artwork_sha256": "5b0a5a2c18ee5640eae6c19a81401601b775113ad2f8c6fa7aa60aff2438b58d",
+        "reviewed_artwork_pixel_sha256": "003601ecd4e9f6028976c21936129c39e2f0035a306caadadfca03204d670862",
+        "reviewed_artwork_sha256": "d3a9bea00447de6c0df558f6979681f49e86f5392ba25b3ab087e05fefb05557",
+        "reviewed_at": "2026-09-24T07:07:22.508022+00:00",
         "source_cutout_pixel_sha256": [
           "c712365648ec3c21469e36aa0b2ee2fe6de83527da79e28174b0cb00fdf5eba3",
           "1ac8b2c741d3f07e6ebe6b96443d789bae0c1bc85ca5dbd6075cb6db09a85d09",

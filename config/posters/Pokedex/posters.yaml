@@ -12,7 +12,7 @@ posters:
     section_id: gen2
     manifest: sections/gen2/poster.yaml
     pdf:
-      enabled: false
+      enabled: true
       artwork_file: poster-flux2-artwork.png
       insertion: after_section_cover
   - id: gen3
@@ -26,21 +26,21 @@ posters:
     section_id: gen4
     manifest: sections/gen4/poster.yaml
     pdf:
-      enabled: false
+      enabled: true
       artwork_file: poster-flux2-artwork.png
       insertion: after_section_cover
   - id: gen5
     section_id: gen5
     manifest: sections/gen5/poster.yaml
     pdf:
-      enabled: false
+      enabled: true
       artwork_file: poster-flux2-artwork.png
       insertion: after_section_cover
   - id: gen6
     section_id: gen6
     manifest: sections/gen6/poster.yaml
     pdf:
-      enabled: false
+      enabled: true
       artwork_file: poster-flux2-artwork.png
       insertion: after_section_cover
   - id: gen7
@@ -54,13 +54,13 @@ posters:
     section_id: gen8
     manifest: sections/gen8/poster.yaml
     pdf:
-      enabled: false
+      enabled: true
       artwork_file: poster-flux2-artwork.png
       insertion: after_section_cover
   - id: gen9
     section_id: gen9
     manifest: sections/gen9/poster.yaml
     pdf:
-      enabled: false
+      enabled: true
       artwork_file: poster-flux2-artwork.png
       insertion: after_section_cover

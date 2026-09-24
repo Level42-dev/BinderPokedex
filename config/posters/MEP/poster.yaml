@@ -11,7 +11,7 @@ text_cells:
     max_width_ratio: 0.92
     max_height_ratio: 0.68
 pdf:
-  enabled: false
+  enabled: true
   artwork_file: poster-flux2-artwork.png
   insertion: after_first_section_cover
 artwork:
@@ -31,21 +31,47 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260754076
+    reference_mode: spatial_source_detail_joint
+    seed: 260755085
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
   scene:
     concept: the Mega Evolution Black Star Promo collection
-    setting: The artwork contains an expansive celebratory highland meadow, distant crystal
-      monuments without writing, sweeping cloud ribbons, and several subtly different biomes
-      meeting at the horizon.
+    setting: The artwork contains an expansive celebratory highland meadow, distant crystal monuments
+      without writing, sweeping cloud ribbons, and several subtly different biomes meeting at the horizon.
     lighting: Festive clear daylight creates soft gold highlights.
-    rendering: Use premium promotional-card illustration, clean linework, restrained saturated
-      accents, and spacious atmospheric depth.
+    rendering: Use premium promotional-card illustration, clean linework, restrained saturated accents,
+      and spacious atmospheric depth.
     ground_noun: meadow
+  source_details:
+    pokeapi:official-artwork:888:
+      sha256: f36c2b196763a2c3389ee00b481b534b94d87907d81c0b0fd2dcf5487db2a533
+      traits: Match this exact Hero-of-Many-Battles Zacian source, not its crowned sword-bearing form.
+        Keep the long blue canine body, alert yellow eye, cream lower legs and separated paws, and the
+        winding salmon-pink braided mane or ribbon running from neck to flank. Do not add a sword.
+    pokeapi:official-artwork:1:
+      sha256: 8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a
+      traits: Match this exact Bulbasaur source pose and low four-legged silhouette. Keep the joined folds
+        and pointed tips of the large green bulb, the two upright pointed ears, two separate red eyes
+        with tall white highlights, tiny nostrils, and smiling open mouth with its pink tongue and small
+        white corner teeth. Preserve the angular dark teal forehead, cheek, shoulder and leg markings,
+        including the small angular spot above the near front leg. Copy the visible short legs. Each of
+        the three fully visible feet has EXACTLY THREE separate white claw tips in IMAGE 2. In particular
+        the large near front paw, at image-center below the small angular leg spot, must have only three
+        white tips, not four. Match the three-tip paw outlines and keep the partly hidden farther limb
+        hidden as in the source. Do not invent extra toes or limbs.
+    pokeapi:official-artwork:4:
+      sha256: a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8
+      traits: 'Match this exact smiling Charmander source pose with both short arms extended sideways,
+        two planted legs with white claws, tall blue eyes with dark pupils and white highlights, and an
+        open pink mouth with the small separate white corner teeth. Preserve the broad pale cream throat
+        and belly. The single curved tail rises to the image-right: critically, its LOWER EDGE carries
+        a clearly visible narrow pale cream underside from behind the body along the entire upward curve
+        to just beneath the flame. Keep that light continuous stripe distinct from the orange-brown upper
+        tail; it must not become orange or dark brown. Copy the pointed orange-and-yellow flame, the head
+        angle and compact source proportions. Do not add extra tails, limbs or flame ornaments.'
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns

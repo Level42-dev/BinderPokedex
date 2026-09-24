@@ -3,7 +3,7 @@
   "kind": "promoted_poster",
   "outputs": {
     "artwork": {
-      "bytes": 6473751,
+      "bytes": 8233079,
       "dpi": [
         299.9994,
         299.9994
@@ -11,28 +11,28 @@
       "file": "assets/posters/ME04/poster-flux2-artwork.png",
       "height": 3268,
       "mode": "RGBA",
-      "pixel_sha256": "da44f697da43c3688ddee9fae3b49c7ab26392ade263966a2c0e1b157e0d79c4",
-      "sha256": "4206d994cf6cf049fed81817b4d54106e5744999032cf6e33215792ff054e434",
+      "pixel_sha256": "5cb8e1e3937ebfae97d8b097c787161b4fc03d88dcb4018fee5b9213839f16ca",
+      "sha256": "ddcaad6b7911534db808ce548dce9e62d3f406d8732138476c827896e228bae2",
       "width": 2368
     }
   },
   "poster_id": "ME04",
-  "promoted_at": "2026-09-12T14:08:40.921230+00:00",
-  "review_language": "en",
+  "promoted_at": "2026-09-24T07:13:34.402660+00:00",
+  "review_language": "de",
   "run": {
-    "created_at": "2026-08-06T18:31:48.393911+00:00",
+    "created_at": "2026-09-22T21:45:10.437802+00:00",
     "generation": {
       "encoder": "qwen_3_4b.safetensors",
       "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
       "engine": "flux",
-      "generation_megapixels": 1.0,
+      "generation_megapixels": 2.0,
       "mode": "joint_scene",
       "model": "flux-2-klein-4b.safetensors",
       "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
       "output_dpi": 300,
       "output_method": "lanczos",
-      "reference_mode": "individual_spatial_joint",
-      "seed": 260734267,
+      "reference_mode": "spatial_source_detail_joint",
+      "seed": 260735276,
       "steps": 4,
       "vae": "flux2-vae.safetensors",
       "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
@@ -41,7 +41,7 @@
       "cutout_manifest": {
         "bytes": 1716,
         "file": "tmp/poster-workspaces/ME04/sources/cutouts/manifest.json",
-        "sha256": "e3c5900c37064188493c7c4c196a1bce125f309eb3edd8159c8b275313790dfb"
+        "sha256": "cf9f2a79f91503862c4715d69fbd73c02049eafd32a0c836060d9eda70d64ac5"
       },
       "cutouts": [
         {
@@ -99,68 +99,69 @@
           ],
           "effective_prompt": {
             "encoding": "utf-8",
-            "sha256": "0404432d26fa408c7fb53686948e9fb7c432c912b220955bf2f72703df49bcc9"
+            "sha256": "fbde58d7c28275b0f62c0b45328adfc138bd5ea024544b5adc2079c2ac186c5a"
           },
           "generation": {
             "encoder": "qwen_3_4b.safetensors",
             "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
             "engine": "flux",
-            "generation_megapixels": 1.0,
+            "generation_megapixels": 2.0,
             "mode": "joint_scene",
             "model": "flux-2-klein-4b.safetensors",
             "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
             "output_dpi": 300,
             "output_method": "lanczos",
-            "reference_mode": "individual_spatial_joint",
-            "seed": 260734267,
+            "reference_mode": "spatial_source_detail_joint",
+            "seed": 260735276,
             "steps": 4,
             "vae": "flux2-vae.safetensors",
             "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
           },
           "joint_scene_conditioning": {
-            "identity_source_resampling": "canonical_card_fit",
-            "reference_megapixels": 0.5,
+            "cast_max_megapixels": 0.5,
+            "identity_canvas_px": 512,
+            "identity_source_resampling": "none",
             "reference_neutral_rgb": [
               226,
               224,
               211
             ],
-            "reference_strategy": "individual_spatial_identity_per_subject"
+            "reference_strategy": "spatial_cast_plus_unscaled_identity"
           },
           "layout": {
             "columns": 3,
             "name": "standard_3x3",
             "raster_geometry": {
               "generation_canvas_px": [
-                848,
-                1168
+                1200,
+                1664
               ],
               "generation_column_spans_px": [
                 [
                   0,
-                  269
+                  380
                 ],
                 [
-                  290,
-                  558
+                  410,
+                  790
                 ],
                 [
-                  579,
-                  848
+                  820,
+                  1200
                 ]
               ],
               "generation_row_spans_px": [
                 [
                   0,
-                  375
+                  535
                 ],
                 [
-                  396,
-                  772
+                  565,
+                  1099
                 ],
                 [
-                  793,
-                  1168
+                  1129,
+                  1664
                 ]
               ],
               "name": "cumulative_physical_endpoints",
@@ -212,7 +213,7 @@
           },
           "pipeline_contract": {
             "name": "poster_generation",
-            "version": 9
+            "version": 11
           },
           "pokemon": {
             "count": "auto_from_layout_columns",
@@ -247,6 +248,20 @@
             "rendering": "Use energetic trading-card linework, controlled dramatic contrast, and layered motion in the distant environment without cluttering the ground.",
             "setting": "The artwork contains a rugged wilderness beneath a vast rotating storm, fractured distant cliffs, wind-bent woodland, and far-off red-gold light breaking through dark cloud layers."
           },
+          "source_details": {
+            "pokeapi:official-artwork:250": {
+              "sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274",
+              "traits": "Match the exact red, cream, yellow and green Ho-Oh source pose. Preserve its distinctly lobed yellow-red head crest instead of flattening it into a fan, hooked beak, layered neck feathers, individually patterned wing feathers and long separate colored tail feathers."
+            },
+            "pokeapi:official-artwork:650": {
+              "sha256": "565272048cd8eeb2b524d597da6805dbdff28c313bc5346181f1859041320ee7",
+              "traits": "Match the exact small Chespin source with its green spined hood, tan face, dark nose, pink cheeks, visible little upper tooth, cream belly, short forearms and individually outlined feet. Preserve its asymmetric source pose, mouth and toe tips instead of smoothing them away."
+            },
+            "pokeapi:official-artwork:653": {
+              "sha256": "b638e094ee06adcec959aad2898ce93f8c5fda88feba9c9158d1f16c026c07dd",
+              "traits": "Match the exact yellow Fennekin source with its oversized pointed ears, flame-orange inner ear fur, tiny dark nose, narrow bright eyes, cream cheek tufts, slim fox legs and bushy orange-tipped tail. Keep the source's leg pose and face profile rather than a generic seated fox."
+            }
+          },
           "source_subject_ids": [
             650,
             250,
@@ -254,7 +269,7 @@
           ]
         },
         "schema_version": 1,
-        "sha256": "b9047d57bfe8c8aa88802b9a71f50b6005bc3b0f5f9f81183f2e0f198b72564f"
+        "sha256": "2b8656a9ec898f99a06683cb3c21f0bd0ef2ca8a50849eeae8afcf4d3b020abb"
       },
       "overlay_fingerprint": {
         "components": {
@@ -423,75 +438,84 @@
         "sha256": "a74baa858b45411b182781edb1c209223d456eac111f6352c0fc2b06003febf9"
       },
       "prompt": {
-        "bytes": 5716,
-        "file": "tmp/poster-workspaces/ME04/comfyui_poster/individual_spatial_joint_prompt.generated.txt",
-        "sha256": "0c5bfb926ca961f7d1decb74c88e9b17b89664083e145d43fce351956a4d6dec"
+        "bytes": 3734,
+        "file": "tmp/oneshot-trials/p38-batch-20260922-b/workflows/source_detail_joint_prompt.generated.txt",
+        "sha256": "34df40a53feb8e0efe3512b30ed01bcbcced0a24426bb8db3472b4c2430b3e3e"
       },
       "references": [
         {
-          "bytes": 24738,
-          "file": "tmp/poster-workspaces/ME04/comfyui_poster/individual_spatial_reference_1.png",
+          "bytes": 66468,
+          "file": "tmp/oneshot-trials/p38-batch-20260922-b/references/joint_scene_cast_reference.png",
           "height": 832,
           "mode": "RGBA",
-          "pixel_sha256": "d29024cd700d488120027bf504884e65c17f2565e5c9b32f82ce162bbe368308",
-          "sha256": "ec2aea81a7c1bbe93c115849ee6c30085e483c3c27b027b37d88c91d39e9af49",
+          "pixel_sha256": "251a6a155332624a5ab083157817898e65879a19f18bc6e6608bdb8333a92f2a",
+          "sha256": "5dee713879c61fca9bf8c90a664f42bb1dcf927c6e84f64fd7c642d4ccb63962",
           "width": 608
         },
         {
-          "bytes": 25823,
-          "file": "tmp/poster-workspaces/ME04/comfyui_poster/individual_spatial_reference_2.png",
-          "height": 832,
+          "bytes": 108353,
+          "file": "tmp/oneshot-trials/p38-batch-20260922-b/references/identity_reference_1.png",
+          "height": 512,
           "mode": "RGBA",
-          "pixel_sha256": "aa542737a18f07a2daef52cf11dd37d2e1e94ceaee9a071b118b90dd86253216",
-          "sha256": "78301570c39b101d0c831f1fcb8300cca8583f8320dfcc611351bc9a12c24235",
-          "width": 608
+          "pixel_sha256": "70ecaaad3cfc75b4b9a44a4b7e1330e0125daa79fed6824e01d1addd22fce1ab",
+          "sha256": "e5a649f12ef82953927f52b1dd616e0b7907feb81fc54942351d2d07b2dd537a",
+          "width": 512
         },
         {
-          "bytes": 24532,
-          "file": "tmp/poster-workspaces/ME04/comfyui_poster/individual_spatial_reference_3.png",
-          "height": 832,
+          "bytes": 128309,
+          "file": "tmp/oneshot-trials/p38-batch-20260922-b/references/identity_reference_2.png",
+          "height": 512,
           "mode": "RGBA",
-          "pixel_sha256": "072edfff8df34a7cebe0c53980a7d28ce2d581d508e120058f3eadc1ec5acb07",
-          "sha256": "273d0585042a74b526e88ec1c737c2c0a66a7b4d06967dfc291ba0e9b15e9fc3",
-          "width": 608
+          "pixel_sha256": "d10f7f059a39aa5a2a1091a2bd0e3886cb51e67e5a0347e78a956dfb207a7a8c",
+          "sha256": "0d5982a899bb987ddd9361304b8933759111ba95a10b0af8186481f6e820fa79",
+          "width": 512
+        },
+        {
+          "bytes": 108381,
+          "file": "tmp/oneshot-trials/p38-batch-20260922-b/references/identity_reference_3.png",
+          "height": 512,
+          "mode": "RGBA",
+          "pixel_sha256": "a4408d98d5a592cc4fb6320b824064f5b5636a3e7e21a6c7cbcb6424ef1c6828",
+          "sha256": "1c3b78363463fc73b46bd83d32fa9b67c7ec1e3ba066616911cbccb6a2b08f9d",
+          "width": 512
         }
       ],
       "scope_manifest": {
-        "bytes": 2231,
-        "file": "config/posters/ME04/poster.yaml",
-        "sha256": "c7fc3073d2425a261173310f88beba27e6c96ba48e7ac7a16feac9b0afad4076"
+        "bytes": 3456,
+        "file": "tmp/review-batch-manifests/p38-batch-20260922-b/poster.yaml",
+        "sha256": "bc334a616ce715be6f9145b0728e821221ab6846d325012a65f448d6456272e8"
       },
       "workflow": {
-        "bytes": 9739,
-        "file": "tmp/poster-workspaces/ME04/comfyui_poster/workflow_api_joint_scene_individual_spatial_joint_1mp_260734267.json",
-        "sha256": "881eba2ff2af758d360972372e68c94d3078219f1e63a6424b47eff1a2d9af05"
+        "bytes": 8379,
+        "file": "tmp/oneshot-trials/p38-batch-20260922-b/workflows/workflow_api_joint_scene_spatial_source_detail_joint_2mp_260735276.json",
+        "sha256": "be573d8da9dbe2399df36c39a86086c5a4672d3440930854eb9d39b521f14046"
       }
     },
     "kind": "poster_generation_run",
     "poster_id": "ME04",
     "raw_artwork": {
-      "bytes": 1539058,
-      "file": "tmp/poster-workspaces/ME04/comfyui_poster/output/me04_flux2_joint_scene_individual_spatial_1mp_seed_260734267_00001_.png",
-      "height": 1168,
+      "bytes": 3150761,
+      "file": "tmp/oneshot-trials/p38-batch-20260922-b/retrieved/oneshot-90wz8alu/output/me04_flux2_joint_scene_2mp_seed_260735276_00001_.png",
+      "height": 1664,
       "mode": "RGBA",
-      "pixel_sha256": "0bdf534486121a6cc843d9ee68816cdf486a949bb366a3425b2451133e9a081f",
-      "sha256": "6afea07a3d7710506abcabcb1a33ac572e4bcb3999d4b50dd847fd361ee0e498",
-      "width": 848
+      "pixel_sha256": "077e8afedfc5ec4624c18a348189e5158e447332d2b346b89a94a32065946283",
+      "sha256": "c38ce01f46f78b6efd3ac429cc2d1fec9e01fe10579a3d1a7aa0727584c69009",
+      "width": 1200
     },
     "schema_version": 1,
     "scope": "ME04",
     "section_id": null,
     "source_artwork": {
-      "bytes": 6473751,
+      "bytes": 8233079,
       "dpi": [
         299.9994,
         299.9994
       ],
-      "file": "tmp/poster-workspaces/ME04/comfyui_poster/temp/me04_flux2_joint_scene_individual_spatial_1mp_seed_260734267_00001__to_300dpi.png",
+      "file": "tmp/oneshot-trials/p38-batch-20260922-b/review/artwork-300dpi.png",
       "height": 3268,
       "mode": "RGBA",
-      "pixel_sha256": "da44f697da43c3688ddee9fae3b49c7ab26392ade263966a2c0e1b157e0d79c4",
-      "sha256": "4206d994cf6cf049fed81817b4d54106e5744999032cf6e33215792ff054e434",
+      "pixel_sha256": "5cb8e1e3937ebfae97d8b097c787161b4fc03d88dcb4018fee5b9213839f16ca",
+      "sha256": "ddcaad6b7911534db808ce548dce9e62d3f406d8732138476c827896e228bae2",
       "width": 2368
     },
     "source_scope": "ME04",
@@ -510,29 +534,14 @@
           "natural_scene_integration",
           "coherent_landscape_occlusion"
         ],
-        "generation_fingerprint_sha256": "b9047d57bfe8c8aa88802b9a71f50b6005bc3b0f5f9f81183f2e0f198b72564f",
+        "generation_fingerprint_sha256": "2b8656a9ec898f99a06683cb3c21f0bd0ef2ca8a50849eeae8afcf4d3b020abb",
         "method": "human_identity_and_scene_review",
-        "passed": false,
-        "reaudit_revocation": {
-          "date": "2026-09-12",
-          "reviewer_kind": "agent",
-          "method": "source_by_source_visual_reaudit",
-          "previously_passed": true,
-          "verdict": "reject",
-          "master_sha256": "4206d994cf6cf049fed81817b4d54106e5744999032cf6e33215792ff054e434",
-          "reports": [
-            {
-              "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
-              "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
-            }
-          ],
-          "reason": "Current exact artwork has rejected or unresolved source-fidelity findings. Historical review fields are retained; the prior approval is withdrawn pending a corrected candidate."
-        },
-        "raw_artwork_pixel_sha256": "0bdf534486121a6cc843d9ee68816cdf486a949bb366a3425b2451133e9a081f",
-        "raw_artwork_sha256": "6afea07a3d7710506abcabcb1a33ac572e4bcb3999d4b50dd847fd361ee0e498",
-        "reviewed_artwork_pixel_sha256": "da44f697da43c3688ddee9fae3b49c7ab26392ade263966a2c0e1b157e0d79c4",
-        "reviewed_artwork_sha256": "4206d994cf6cf049fed81817b4d54106e5744999032cf6e33215792ff054e434",
-        "reviewed_at": "2026-08-06T23:50:46.053311+00:00",
+        "passed": true,
+        "raw_artwork_pixel_sha256": "077e8afedfc5ec4624c18a348189e5158e447332d2b346b89a94a32065946283",
+        "raw_artwork_sha256": "c38ce01f46f78b6efd3ac429cc2d1fec9e01fe10579a3d1a7aa0727584c69009",
+        "reviewed_artwork_pixel_sha256": "5cb8e1e3937ebfae97d8b097c787161b4fc03d88dcb4018fee5b9213839f16ca",
+        "reviewed_artwork_sha256": "ddcaad6b7911534db808ce548dce9e62d3f406d8732138476c827896e228bae2",
+        "reviewed_at": "2026-09-24T07:13:20.306701+00:00",
         "source_cutout_pixel_sha256": [
           "2d476961e61fcbfcad17257f451779d702695af3461f35c85cf33b2c13e95974",
           "27c1eb01dc8b91b25c89dd2c948aafa26722d2b563e8c00728926b10ff077f4c",

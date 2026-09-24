@@ -1,5 +1,9 @@
 # v10.0 release cut — 2026-09-23
 
+> Historical checkpoint. The operator subsequently requested adoption of all
+> 29 accepted artworks. The current candidate is documented in
+> [the 2026-09-24 adoption record](2026-09-24-v10-approved-panorama-adoption.md).
+
 ## Decision boundary
 
 Ship the corrected data and PDF renderer without waiting for further poster

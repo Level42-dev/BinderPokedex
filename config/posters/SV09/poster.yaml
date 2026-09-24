@@ -11,7 +11,7 @@ text_cells:
     max_width_ratio: 0.92
     max_height_ratio: 0.68
 pdf:
-  enabled: false
+  enabled: true
   artwork_file: poster-flux2-artwork.png
   insertion: after_first_section_cover
 artwork:
@@ -31,21 +31,37 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260747621
+    reference_mode: spatial_source_detail_joint
+    seed: 260748630
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
   scene:
     concept: the Journey Together expansion
-    setting: The artwork contains a welcoming travel panorama of connected Paldean hills,
-      woodland, distant coast, and a tiny unoccupied camp beneath a broad open route-free
-      landscape.
+    setting: The artwork contains a welcoming travel panorama of connected Paldean hills, woodland, distant
+      coast, and a tiny unoccupied camp beneath a broad open route-free landscape.
     lighting: Warm companionable morning light enters from the upper left.
-    rendering: Use friendly modern cel-painted linework, balanced natural colors, and layered
-      postcard-like depth.
+    rendering: Use friendly modern cel-painted linework, balanced natural colors, and layered postcard-like
+      depth.
     ground_noun: meadow
+  source_details:
+    pokeapi:official-artwork:906:
+      sha256: cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a
+      traits: Match the exact bright-green Sprigatito source, with its leaf-shaped face mask, reddish
+        eyes, broad ears with pink interiors, fluffy neck leaves, compact kitten paws and tiny pointed
+        mouth fangs. Keep the fangs visible when the source mouth is unobstructed.
+    pokeapi:official-artwork:255:
+      sha256: d234db13f46ac30452288fee011df2857d93bac22f7d038d6b472ef14a651950
+      traits: Match the exact orange Torchic source pose with its three-point head tuft, short beak, black
+        eyes, cream downy neck feathers and two short legs. Preserve both feet and their actual overlap
+        and angle as drawn in the source; do not fuse them into one invented claw.
+    pokeapi:official-artwork:643:
+      sha256: da64fe6f0285ea0837a5fd06b150abee0eb5598c47050314ac1ece006d61c135
+      traits: 'Match the exact white Reshiram source: slender angular head profile, fine blue eye, tall
+        feathered crown, long layered neck feathers, broad feathered wings with distinct edge notches,
+        clawed limbs and large turbine tail. Keep its head and neck crisp rather than rounding them into
+        a swan.'
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns

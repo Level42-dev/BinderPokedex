@@ -11,7 +11,7 @@ text_cells:
     max_width_ratio: 0.92
     max_height_ratio: 0.68
 pdf:
-  enabled: false
+  enabled: true
   artwork_file: poster-flux2-artwork.png
   insertion: after_first_section_cover
 artwork:
@@ -31,21 +31,47 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260737358
+    reference_mode: spatial_source_detail_joint
+    seed: 260738367
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
   scene:
     concept: the Temporal Forces expansion
-    setting: The artwork contains a windswept valley with layered rock bands from different
-      eras, ancient trees, distant modern crystalline forms, and slow spiral cloud structures
-      high above the horizon.
+    setting: The artwork contains a windswept valley with layered rock bands from different eras, ancient
+      trees, distant modern crystalline forms, and slow spiral cloud structures high above the horizon.
     lighting: Pale dawn and late-afternoon gold appear together across the upper sky.
-    rendering: Use crisp cel-painted linework, subtle temporal color contrast, and long atmospheric
-      depth.
+    rendering: Use crisp cel-painted linework, subtle temporal color contrast, and long atmospheric depth.
     ground_noun: windswept grass
+  source_details:
+    pokeapi:official-artwork:387:
+      sha256: 34bdf93e84d8e1770074ead9c38b1659bcc937abfa20ddd8a6e53a283ed0e16d
+      traits: Match the exact small green Turtwig source, its broad head, yellow lower face and shell
+        rim, red eyes, separate short feet, and one small twig with two leaves growing from the top of
+        the head. Do not turn the twig into a tail.
+    pokeapi:official-artwork:725:
+      sha256: 02391ac457888baf123accfc5ce446fc75df4790b3b000865a21c0f21b622600
+      traits: Litten must match this exact dark charcoal walking cat source pose. Copy the precise overlapping
+        outlines immediately below the chin in IMAGE 3. The long planted left foreleg has red bands and
+        one rounded divided paw. Just to its image-left, a tiny diagonal strip of charcoal with one red
+        band peeks out beneath the chin; this is the visible part of the right foreleg. This short triangular
+        strip ends by disappearing behind the upper part of the long planted leg. Below the upper red
+        band, the image-left edge of the long leg is one uninterrupted contour down to its own paw, without
+        any separate rounded bump beside it. Match this exact strip-and-overlap geometry rather than drawing
+        another foot. Preserve the separate curved red-banded rear limb at the image-right, the one raised
+        curved tail with its pointed tuft, two triangular pale inner ears, red double-bar forehead marking,
+        yellow eyes with narrow dark pupils and warm inner accents, red muzzle and pointed red cheek tufts.
+        Keep the exact head angle and compact body.
+    pokeapi:official-artwork:158:
+      sha256: a0ce9f06497dc2a9a3d34174ff89e0ee1a0745ce8007cc89257e379d9be49525
+      traits: Match this exact upright bright-cyan Totodile source pose with its head tipped back, wide
+        open pink mouth, distinct small white teeth, one large red-iris eye, pale yellow pointed chest
+        patch and dark red dorsal spikes. Keep both short arms separate, the large nearer hand drawn across
+        its belly and the long low tail pointing image-right. At the bottom, preserve one broad planted
+        foot with three rounded toe lobes separated by two short grooves, exactly as in the source. Do
+        not replace that foot with narrow splayed claws or an extra toe, or invent a second visible supporting
+        foot. Preserve the source's cheerful pose, body proportions and silhouette.
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns

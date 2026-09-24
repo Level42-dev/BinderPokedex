@@ -11,7 +11,7 @@ text_cells:
     max_width_ratio: 0.92
     max_height_ratio: 0.68
 pdf:
-  enabled: false
+  enabled: true
   artwork_file: poster-flux2-artwork.png
   insertion: after_first_section_cover
 artwork:
@@ -31,21 +31,42 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260723235
+    reference_mode: spatial_source_detail_joint
+    seed: 260724244
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
   scene:
     concept: the Phantasmal Flames expansion
-    setting: The artwork contains a dusky volcanic woodland with dark basalt shelves, distant
-      warm vents, pale spectral mist between the trees, and faint flame-like cloud forms confined
-      to the far background.
+    setting: The artwork contains a dusky volcanic woodland with dark basalt shelves, distant warm vents,
+      pale spectral mist between the trees, and faint flame-like cloud forms confined to the far background.
     lighting: Copper sunset light meets cool blue twilight from the upper sky.
-    rendering: Use dramatic but readable cel-painted linework, controlled warm-cool contrast,
-      and layered smoky depth.
+    rendering: Use dramatic but readable cel-painted linework, controlled warm-cool contrast, and layered
+      smoky depth.
     ground_noun: forest floor
+  source_details:
+    pokeapi:official-artwork:649:
+      sha256: 0d77f632c0d27b74998040266b493c817a3643e2257e106a0feaa5fe52002b5a
+      traits: 'Match the exact purple Genesect source: angular insectlike head and paired red eyes, long
+        separate cannon above the back, segmented torso, two distinct arms and legs, and compact clawed
+        feet. Keep the eyes and cannon mechanically crisp, not rounded into a generic robot face.'
+    pokeapi:official-artwork:4:
+      sha256: a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8
+      traits: 'Match this exact smiling Charmander source pose with both short arms extended sideways,
+        two planted legs with white claws, tall blue eyes with dark pupils and white highlights, and an
+        open pink mouth with the small separate white corner teeth. Preserve the broad pale cream throat
+        and belly. The single curved tail rises to the image-right: critically, its LOWER EDGE carries
+        a clearly visible narrow pale cream underside from behind the body along the entire upward curve
+        to just beneath the flame. Keep that light continuous stripe distinct from the orange-brown upper
+        tail; it must not become orange or dark brown. Copy the pointed orange-and-yellow flame, the head
+        angle and compact source proportions. Do not add extra tails, limbs or flame ornaments.'
+    pokeapi:official-artwork:643:
+      sha256: da64fe6f0285ea0837a5fd06b150abee0eb5598c47050314ac1ece006d61c135
+      traits: 'Match the exact white Reshiram source: slender angular head profile, fine blue eye, tall
+        feathered crown, long layered neck feathers, broad feathered wings with distinct edge notches,
+        clawed limbs and large turbine tail. Keep its head and neck crisp rather than rounding them into
+        a swan.'
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns

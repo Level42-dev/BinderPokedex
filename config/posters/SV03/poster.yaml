@@ -11,7 +11,7 @@ text_cells:
     max_width_ratio: 0.92
     max_height_ratio: 0.68
 pdf:
-  enabled: false
+  enabled: true
   artwork_file: poster-flux2-artwork.png
   insertion: after_first_section_cover
 artwork:
@@ -31,20 +31,43 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260718248
+    reference_mode: spatial_source_detail_joint
+    seed: 260719257
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
   scene:
     concept: the Obsidian Flames expansion
-    setting: The artwork contains a black-rock woodland at the edge of an ancient volcanic
-      valley, glassy obsidian outcrops, warm distant vents, and high ember-colored clouds.
+    setting: The artwork contains a black-rock woodland at the edge of an ancient volcanic valley, glassy
+      obsidian outcrops, warm distant vents, and high ember-colored clouds.
     lighting: Low orange sunlight cuts through cool charcoal cloud layers.
-    rendering: Use bold trading-card linework, restrained firelight accents, deep charcoal
-      greens, and clear atmospheric separation.
+    rendering: Use bold trading-card linework, restrained firelight accents, deep charcoal greens, and
+      clear atmospheric separation.
     ground_noun: dark grass
+  source_details:
+    pokeapi:official-artwork:722:
+      sha256: 5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36
+      traits: Rowlet must match this exact round tan owl source pose. Preserve the two joined white facial
+        discs, two separate dark oval eyes with white highlights, and the central white upper beak with
+        its orange lower section. Keep the two distinct green leaves of the bow tie, the pale lower belly,
+        both folded side wings, and the two small orange-brown feet in their original positions. Copy
+        the source proportions, face spacing and clean rounded silhouette; do not add ears or extra limbs.
+    pokeapi:official-artwork:4:
+      sha256: a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8
+      traits: 'Match this exact smiling Charmander source pose with both short arms extended sideways,
+        two planted legs with white claws, tall blue eyes with dark pupils and white highlights, and an
+        open pink mouth with the small separate white corner teeth. Preserve the broad pale cream throat
+        and belly. The single curved tail rises to the image-right: critically, its LOWER EDGE carries
+        a clearly visible narrow pale cream underside from behind the body along the entire upward curve
+        to just beneath the flame. Keep that light continuous stripe distinct from the orange-brown upper
+        tail; it must not become orange or dark brown. Copy the pointed orange-and-yellow flame, the head
+        angle and compact source proportions. Do not add extra tails, limbs or flame ornaments.'
+    pokeapi:official-artwork:656:
+      sha256: cbb47c38d234eb7dea4b1d90f8c97ec990f41b6e61f26e7efba90d80a3d1d632
+      traits: 'Match the exact blue Froakie source: large yellow eyes, pale foam scarf around the neck,
+        rounded face, slim hind legs and individually separated fingers and toes. Keep the foam as a collar,
+        not an extra limb.'
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns

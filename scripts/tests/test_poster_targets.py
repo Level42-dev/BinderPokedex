@@ -32,6 +32,7 @@ from scripts.poster_assets.poster_io import (
 )
 from scripts.poster_assets.poster_config import build_identity_lock_prompt
 from scripts.poster_assets.provenance import sha256_file
+from scripts.poster_assets.provenance import image_pixel_record
 from scripts.poster_assets.scene_catalog import section_scenes_for_scope
 from scripts.poster_assets.validate_promoted_poster import enabled_poster_scopes
 from scripts.pdf.lib.rendering.poster_page_renderer import PosterPageCollection
@@ -45,7 +46,48 @@ RELEASE_POSTER_KEYS = {
     "ME05",
     "Pokedex/sections/gen1",
     "Pokedex/sections/gen7",
+} | {
+    candidate["scope"]
+    for candidate in json.loads(
+        (ROOT / "docs/reviews/2026-09-23-panorama-batch-user-acceptance.json")
+        .read_text(encoding="utf-8")
+    )["candidates"]
 }
+
+
+def test_human_accepted_batch_uses_exact_reviewed_pixels_in_release_routes():
+    """A reviewed image must not be dropped or silently swapped at release time."""
+    acceptance = json.loads(
+        (
+            ROOT
+            / "docs/reviews/2026-09-23-panorama-batch-user-acceptance.json"
+        ).read_text(encoding="utf-8")
+    )
+    assert acceptance["human_approval"] is True
+    assert len(acceptance["candidates"]) == 29
+
+    for candidate in acceptance["candidates"]:
+        scope = candidate["scope"]
+        reviewed = (
+            ROOT
+            / "assets/reviewed-candidates/v10-batch-20260923"
+            / candidate["review_id"].lower()
+            / "artwork-300dpi.png"
+        )
+        promoted = (
+            ROOT / "assets/posters" / scope / "poster-flux2-artwork.png"
+        )
+        assert sha256_file(reviewed) == candidate["master_sha256"]
+        assert promoted.is_file(), scope
+        assert (
+            image_pixel_record(promoted)["pixel_sha256"]
+            == image_pixel_record(reviewed)["pixel_sha256"]
+        ), scope
+        routed = {
+            bundle.asset_key: bundle.pdf_enabled
+            for bundle in poster_bundles_for_scope(scope.split("/", 1)[0])
+        }
+        assert routed[scope], scope
 
 
 @pytest.mark.parametrize(
@@ -268,7 +310,7 @@ def test_every_generated_pdf_language_has_complete_poster_copy():
 
 
 def test_standalone_poster_manifests_remain_isolated_single_bundles():
-    for scope in ("Base1", "SV03.5"):
+    for scope in ("Base1", "SV07"):
         bundles = poster_bundles_for_scope(scope)
         assert len(bundles) == 1
         assert bundles[0].asset_key == scope
@@ -277,7 +319,7 @@ def test_standalone_poster_manifests_remain_isolated_single_bundles():
         assert not bundles[0].pdf_enabled
 
 
-def test_pokedex_index_keeps_nine_manifests_but_enables_only_validated_bundles():
+def test_pokedex_index_keeps_nine_manifests_and_routes_accepted_bundles():
     expected_starters = {
         "gen1": [1, 4, 7],
         "gen2": [152, 155, 158],
@@ -296,10 +338,10 @@ def test_pokedex_index_keeps_nine_manifests_but_enables_only_validated_bundles()
     assert len({bundle.manifest_path for bundle in bundles}) == 9
     assert [
         bundle.poster_id for bundle in bundles if bundle.pdf_enabled
-    ] == ["gen1", "gen7"]
+    ] == ["gen1", "gen2", "gen4", "gen5", "gen6", "gen7", "gen8", "gen9"]
     assert [
         bundle.poster_id for bundle in bundles if not bundle.pdf_enabled
-    ] == ["gen2", "gen3", "gen4", "gen5", "gen6", "gen8", "gen9"]
+    ] == ["gen3"]
     assert all(bundle.insertion == "after_section_cover" for bundle in bundles)
     assert len(
         {

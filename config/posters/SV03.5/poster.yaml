@@ -1,8 +1,6 @@
 scope: SV03.5
-
 layout:
   name: standard_3x3
-
 text_cells:
   title:
     row: 1
@@ -12,7 +10,6 @@ text_cells:
     column: 2
     max_width_ratio: 0.92
     max_height_ratio: 0.68
-
 title_logo:
   files:
     de: logos/logo-de.png
@@ -20,34 +17,27 @@ title_logo:
     fr: logos/logo-fr.png
     es: logos/logo-es.png
     it: logos/logo-it.png
-
 pdf:
-  enabled: false
+  enabled: true
   artwork_file: poster-flux2-artwork.png
   insertion: after_first_section_cover
-
 artwork:
   promoted_file: poster-flux2-artwork.png
   provenance_file: poster-flux2-provenance.json
   identity_lock:
     overscan_ratio: 0.04
-    max_protected_start_ratio: 0.70
-    transition_ratio: 0.10
+    max_protected_start_ratio: 0.7
+    transition_ratio: 0.1
     subject_clearance_ratio: 0.02
   scene:
     concept: a Kanto collection
-    setting: >-
-      The artwork contains a quiet coastal meadow in a gentle watercolor and
-      clean cel-painted style: layered woodland, distant low hills, weathered
-      coastal forms, and a glimpse of a calm blue bay.
+    setting: 'The artwork contains a quiet coastal meadow in a gentle watercolor and clean cel-painted
+      style: layered woodland, distant low hills, weathered coastal forms, and a glimpse of a calm blue
+      bay.'
     lighting: Warm late-afternoon sunlight enters from the upper left.
-    rendering: >-
-      Use clean linework, restrained natural colors, and gentle atmospheric
-      depth.
+    rendering: Use clean linework, restrained natural colors, and gentle atmospheric depth.
     ground_noun: meadow
-    safe_areas: >-
-      Keep the upper area visually calm for later deterministic poster
-      information.
+    safe_areas: Keep the upper area visually calm for later deterministic poster information.
   generation:
     engine: flux
     model: flux-2-klein-4b.safetensors
@@ -57,26 +47,58 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260726101
-    generation_megapixels: 1.0
+    reference_mode: spatial_source_detail_joint
+    seed: 260727110
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
     steps: 4
-
+  source_details:
+    pokeapi:official-artwork:1:
+      sha256: 8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a
+      traits: Match this exact Bulbasaur source pose and low four-legged silhouette. Keep the joined folds
+        and pointed tips of the large green bulb, the two upright pointed ears, two separate red eyes
+        with tall white highlights, tiny nostrils, and smiling open mouth with its pink tongue and small
+        white corner teeth. Preserve the angular dark teal forehead, cheek, shoulder and leg markings,
+        including the small angular spot above the near front leg. Copy the visible short legs. Each of
+        the three fully visible feet has EXACTLY THREE separate white claw tips in IMAGE 2. In particular
+        the large near front paw, at image-center below the small angular leg spot, must have only three
+        white tips, not four. Match the three-tip paw outlines and keep the partly hidden farther limb
+        hidden as in the source. Do not invent extra toes or limbs.
+    pokeapi:official-artwork:4:
+      sha256: a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8
+      traits: 'Match this exact smiling Charmander source pose with both short arms extended sideways,
+        two planted legs with white claws, tall blue eyes with dark pupils and white highlights, and an
+        open pink mouth with the small separate white corner teeth. Preserve the broad pale cream throat
+        and belly. The single curved tail rises to the image-right: critically, its LOWER EDGE carries
+        a clearly visible narrow pale cream underside from behind the body along the entire upward curve
+        to just beneath the flame. Keep that light continuous stripe distinct from the orange-brown upper
+        tail; it must not become orange or dark brown. Copy the pointed orange-and-yellow flame, the head
+        angle and compact source proportions. Do not add extra tails, limbs or flame ornaments.'
+    pokeapi:official-artwork:7:
+      sha256: 8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290
+      traits: Match this exact upright Squirtle source pose, blue rounded head and body, two separate
+        burgundy-dark eyes with white highlights, tiny nostrils and the closed curved smiling mouth. Preserve
+        both extended short arms and both planted feet with the source's compact pointed finger and toe
+        outlines. Keep the cream segmented belly shell and the brown rear shell with its pale rim. Copy
+        the one large blue tail curled into a clearly drawn inward spiral on the image-right. Preserve
+        the exact head/body proportions and limb pose; no open mouth, extra fingers, additional tails
+        or changed shell divisions.
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns
   row: bottom
   cutout_source: pokeapi_official_artwork
   fallback_candidates:
-    - pokemon_id: 1
-    - pokemon_id: 4
-    - pokemon_id: 7
-
+  - pokemon_id: 1
+  - pokemon_id: 4
+  - pokemon_id: 7
 conditioning:
   identity_defaults:
-    neutral_rgb: [226, 224, 211]
+    neutral_rgb:
+    - 226
+    - 224
+    - 211
     canvas_px: 512
     min_subject_px: 150
     max_subject_px: 350
