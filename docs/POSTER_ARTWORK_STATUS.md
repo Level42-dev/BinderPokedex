@@ -38,9 +38,10 @@ record itself did not alter release files; technical promotion followed on
 For P02, [two source-bound one-shot corrections and bounded foreground
 fallbacks](reviews/2026-09-24-p02-correction-trials.md) have been reviewed.
 The operator withdrew the brief acceptance of candidate F after identifying
-two depth defects. Revised candidate G has separate small Pikachu and Evoli
-leaf corrections and is awaiting a fresh human review of its full panorama and
-source/card pairs. A truthful fallback-promotion contract remains necessary;
+two depth defects and then rejected G because the blades still looked wrong.
+Candidate H now has continuous Pikachu and Evoli foreground layers; its exact
+master and source/card comparisons are awaiting human review. A truthful
+fallback-promotion contract remains necessary;
 the existing P02 PDF route stays disabled.
 
 ## Current decision

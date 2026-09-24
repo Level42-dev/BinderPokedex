@@ -19,7 +19,7 @@
     "changed_outside_mask_pixels": 0
   },
   "unchanged_physical_cards": 7,
-  "human_approval": "pending",
+  "human_approval": "rejected",
   "production_promotion": false,
   "pdf_routing": false,
   "review_report": "docs/reviews/2026-09-24-p02-correction-trials.md"

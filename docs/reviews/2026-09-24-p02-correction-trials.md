@@ -1,4 +1,4 @@
-# P02 Dschungel — source-bound correction trials (human review pending)
+# P02 Dschungel — source-bound correction trials (H awaiting human review)
 
 The operator requested correction of Relaxo and Evoli instead of accepting
 their errors in the older candidate E. Candidate E's Pikachu-only acceptance
@@ -48,10 +48,31 @@ Exactly 9,042 pixels changed inside the union of the two small repair masks;
 to one-shot A, and the Pikachu/Evoli cards exactly match their separate local
 repair previews. The full scene and all nine card positions were inspected;
 new source-versus-card sheets were generated for Pikachu, Relaxo and Evoli.
-G has **not** yet been accepted by the operator or promoted.
+The operator subsequently rejected G because both foreground blades still
+looked wrong. It has not been promoted.
 The exact text-free G master is preserved in the
 [review-pending archive](../../assets/review-pending/p02-g/artwork-300dpi.png)
-with explicit non-release provenance so the local render work cannot be lost.
+with explicit non-release provenance for traceability.
+
+On 25 September a further limited fallback constructed two **continuous
+foreground layers** from the existing vegetation: a blade crossing both
+edges of Pikachu's extended arm and a broad leaf crossing Evoli's tail. The
+layers were supplied as guides to two separate masked FLUX.2 harmonization
+jobs, not pasted straight into the final master. Both jobs returned `run.json`,
+`comfyui.log` and all output images. The model changed no pixel outside its
+small respective mask. The Evoli guide came from A's text-free master, so the
+German card title was not incorporated into the artwork.
+
+The two bounded results form review-only candidate **H**, text-free master
+SHA-256 `26d6a468e59b7dd1ea21931d85ae016ed220324d23eee1fd8aacb642001a07f6`.
+The union-mask pixel audit found 10,548 changed pixels within 11,121 editable
+pixels and **zero outside**. Seven other physical card crops are pixel-identical
+to A. The full German panorama, all nine physical card positions and three
+source-versus-card pairs (Pikachu, Relaxo, Evoli) were inspected. The result
+places the blade before Pikachu's arm and the leaf before Evoli's tail; the
+tip near Pikachu's cheek remains a point for the operator to inspect. H is
+**awaiting human acceptance**, is not promoted, and is preserved as an exact
+[review-pending master](../../assets/review-pending/p02-h/artwork-300dpi.png).
 
 No masked-fallback candidate is yet technically promotion-eligible: the
 current standard promoter has a one-shot provenance contract, not a
