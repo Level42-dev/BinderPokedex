@@ -46,6 +46,7 @@ RELEASE_POSTER_KEYS = {
     "ME05",
     "Pokedex/sections/gen1",
     "Pokedex/sections/gen7",
+    "SV08",
 } | {
     candidate["scope"]
     for candidate in json.loads(
@@ -53,6 +54,21 @@ RELEASE_POSTER_KEYS = {
         .read_text(encoding="utf-8")
     )["candidates"]
 }
+
+
+def test_sv08_release_route_uses_the_exact_separately_accepted_artwork():
+    feedback = json.loads(
+        (ROOT / "docs/reviews/2026-09-22-shortlist-user-feedback.json")
+        .read_text(encoding="utf-8")
+    )
+    accepted = next(
+        item for item in feedback["targets"] if item["asset_key"] == "SV08"
+    )
+    expected_sha256 = "d931776dc062cc9f9db4b632fab658ce678ad6fe2afcc73d33e363f1e51fe7f8"
+    assert accepted["human_artwork_acceptance"] is True
+    assert accepted["master"]["sha256"] == expected_sha256
+    assert sha256_file(ROOT / accepted["master"]["file"]) == expected_sha256
+    assert poster_bundle("SV08").pdf_enabled is True
 
 
 def test_human_accepted_batch_uses_exact_reviewed_pixels_in_release_routes():

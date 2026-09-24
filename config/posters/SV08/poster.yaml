@@ -11,7 +11,7 @@ text_cells:
     max_width_ratio: 0.92
     max_height_ratio: 0.68
 pdf:
-  enabled: false
+  enabled: true
   artwork_file: poster-flux2-artwork.png
   insertion: after_first_section_cover
 artwork:

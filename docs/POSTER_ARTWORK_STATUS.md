@@ -11,8 +11,9 @@ Latest scoped production update: 2026-09-22 (accepted P15-D, P40-B, P10-C and P0
 Latest human artwork feedback: 2026-09-23 (29 exact candidates in the collected panorama review accepted).
 Latest continuation: 2026-09-24 (all 29 accepted masters technically promoted
 and validated; the v10 release build remains open).
-Release candidate: 2026-09-24 (34 production-valid panoramas enabled; eight
-unresolved routes retain their normal covers). See the
+Release candidate after the [SV08 exact-artwork adoption](reviews/2026-09-24-sv08-exact-artwork-adoption.md):
+2026-09-24 (35 production-valid panoramas enabled; seven unresolved routes
+retain their normal covers). The earlier 34/42 checkpoint is preserved in the
 [approved-artwork adoption record](reviews/2026-09-24-v10-approved-panorama-adoption.md).
 
 ### Collected panorama artwork accepted (2026-09-23)

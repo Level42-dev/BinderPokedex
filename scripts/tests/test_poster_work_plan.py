@@ -1052,6 +1052,7 @@ def test_every_release_enabled_poster_passes_production_validation():
         "ME05",
         "Pokedex/sections/gen1",
         "Pokedex/sections/gen7",
+        "SV08",
     } | {candidate["scope"] for candidate in accepted["candidates"]}
 
     for bundle in bundles:
