@@ -1094,6 +1094,7 @@ def test_every_release_enabled_poster_passes_production_validation():
     assert {
         bundle.asset_key for bundle in bundles
     } == {
+        "Base2",
         "ExGen2/sections/mega",
         "ExGen3/sections/normal",
         "ME05",

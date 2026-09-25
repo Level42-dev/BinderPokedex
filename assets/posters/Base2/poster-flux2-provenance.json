@@ -14,7 +14,13 @@
     "final_artwork_sha256": "26d6a468e59b7dd1ea21931d85ae016ed220324d23eee1fd8aacb642001a07f6",
     "human_artwork_approval": "text_free_artwork_accepted_2026-09-25",
     "kind": "masked_fallback",
-    "localized_overlay_approval": null,
+    "localized_overlay_approval": {
+      "status": "accepted",
+      "reviewer_kind": "human",
+      "accepted_on": "2026-09-25",
+      "preview_sha256": "9ddd07346a37db94b236418b55e73f1ea0712caa341b3fc8b515a4406f3a9012",
+      "overlay_fingerprint_sha256": "60cfdded286b73d0cdf758f0974533da4c8a501ee37e7eadd8efe50973482e12"
+    },
     "outside_base_pixel_sha256": "4ed2c69401b9f50eff792ec3361bd143582b52ef0363910da090f573076c57ca",
     "overlay_fingerprint_sha256": "60cfdded286b73d0cdf758f0974533da4c8a501ee37e7eadd8efe50973482e12",
     "preview_sha256": "9ddd07346a37db94b236418b55e73f1ea0712caa341b3fc8b515a4406f3a9012",

@@ -67,6 +67,43 @@ its overlay fingerprint is
 `60cfdded286b73d0cdf758f0974533da4c8a501ee37e7eadd8efe50973482e12`.
 The full preview and all nine 750 × 1050 physical card crops were inspected;
 the three Pokémon cards were compared side by side with their official source
-art. Technical validation passes, but the new localized overlay has **not**
-yet been accepted by the operator. `pdf.enabled` and PDF routing remain false
-pending that exact preview approval and later print/PDF QA.
+art. At this technical-adoption checkpoint, the new localized overlay had
+not yet been accepted and PDF routing remained false; the later approval and
+print checks are recorded below.
+
+## Exact overlay acceptance and local PDF checks
+
+The operator accepted the displayed corrected Dschungel panorama on
+25 September 2026. The approval is bound to German preview SHA-256
+`9ddd07346a37db94b236418b55e73f1ea0712caa341b3fc8b515a4406f3a9012`
+and overlay-fingerprint SHA-256
+`60cfdded286b73d0cdf758f0974533da4c8a501ee37e7eadd8efe50973482e12`.
+The earlier accepted logo-only preview remains historical evidence, not this
+release gate. Schema-3 validation now accepts the localized overlay and the
+P02 PDF route is enabled.
+
+Only de, en, fr and it are available for Base2 in the current source data.
+All four have 64 cards; the PDF generator deliberately skips the five other
+generic renderer languages for this set. Their four title and information
+cards were inspected in physical card crops. German keeps the approved
+`JUNGLE` mark and `Juni 2000`; English and French use their configured logos,
+while Italian uses the explicit text-title path. The English TCGdex logo is
+160 × 111 pixels and consequently softer than the 500 × 410 French/German
+mark, but legible and wholly inside the title card.
+
+The canonical local PDFs were rebuilt after preserving byte-identical copies
+of the preceding outputs in the ignored Base2 workspace. Each new PDF has
+10 A4 pages and text extraction finds each of the 64 card numbers. The German
+poster page was rendered at 300 dpi and its r2c2 information card inspected
+at print size; the other three poster pages were also rendered and inspected.
+The German second and final pages were sampled for the card-page transition
+and notices. The new local PDF SHA-256 values are:
+
+- de: `a42dd5f9d885d2b269e97d53f0e6ec7a9b9aa4e281f93ad6aeaf02d1290960d3`
+- en: `cd5dc472c3ca3133a4ee9313b330b34f005c6c262cd85b64ead5b8951fb5f42e`
+- fr: `f40766e0e767077c22f6d41424f5584159c5d7dd0cf26f3dbc2e12e802d5d109`
+- it: `0c00c2bd9b228db35f95a2fb9cd0bc770e093e7ebbb89fda3b142e0be249e794`
+
+These are locally generated candidate PDFs, not a published v10 release.
+The notices page explicitly excludes third-party Pokémon material from the
+project-design CC BY-NC license; no new commercial-use right is asserted here.

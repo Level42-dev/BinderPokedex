@@ -37,13 +37,14 @@ from scripts.poster_assets.provenance import (
 )
 from scripts.poster_assets.provenance import image_pixel_record
 from scripts.poster_assets.scene_catalog import section_scenes_for_scope
-from scripts.poster_assets.validate_promoted_poster import enabled_poster_scopes
+from scripts.poster_assets.validate_promoted_poster import enabled_poster_scopes, validate
 from scripts.pdf.lib.rendering.poster_page_renderer import PosterPageCollection
 from scripts.pdf.generate_pdf import filter_variant_data_for_language
 
 
 ROOT = Path(__file__).resolve().parents[2]
 RELEASE_POSTER_KEYS = {
+    "Base2",
     "ExGen2/sections/mega",
     "ExGen3/sections/normal",
     "ME05",
@@ -60,7 +61,7 @@ RELEASE_POSTER_KEYS = {
 }
 
 
-def test_p02_accepted_h_promotion_is_exact_and_pdf_remains_disabled():
+def test_p02_accepted_h_promotion_is_exact_and_routes_after_overlay_approval():
     bundle = poster_bundle("Base2")
     generation = bundle.manifest["artwork"]["generation"]
     assert (
@@ -81,8 +82,16 @@ def test_p02_accepted_h_promotion_is_exact_and_pdf_remains_disabled():
     assert rebuild_generation_fingerprint_from_recorded_sources(bundle, fingerprint)["sha256"] == fingerprint["sha256"]
     review = json.loads((ROOT / "assets/review-pending/p02-h/review-provenance.json").read_text(encoding="utf-8"))
     assert review["artwork_sha256"] == expected_h
-    assert review["localized_overlay_approval"] == "pending"
-    assert bundle.pdf_enabled is False
+    assert review["localized_overlay_approval"]["german_preview_sha256"] == (
+        "9ddd07346a37db94b236418b55e73f1ea0712caa341b3fc8b515a4406f3a9012"
+    )
+    assert bundle.pdf_enabled is True
+    assert validate("Base2")["localized_overlay_approved"] is True
+    collection = PosterPageCollection.from_scope("Base2", {}, "de")
+    try:
+        assert len(collection.renderers) == 1
+    finally:
+        collection.cleanup()
 
 
 def test_sv08_release_route_uses_the_exact_separately_accepted_artwork():

@@ -7,10 +7,12 @@ live in [Poster Workflow](POSTER_WORKFLOW.md), durable product requirements in
 evidence in [Poster Experiment Log](POSTER_ARTWORK_EXPERIMENT_LOG.md).
 
 Installed-artwork audit reopened: 2026-09-12. Full target retriage: 2026-09-14.
-Latest scoped production update: 2026-09-22 (accepted P15-D, P40-B, P10-C and P04-B).
-Latest human artwork feedback: 2026-09-23 (29 exact candidates in the collected panorama review accepted).
-Latest continuation: 2026-09-24 (all 29 accepted masters technically promoted
-and validated; the v10 release build remains open).
+Latest scoped production update: 2026-09-25 (P02-H masked-fallback panorama and
+localized German overlay approved, routed, and locally print-checked).
+Latest human artwork feedback: 2026-09-25 (P02-H German panorama accepted).
+Latest continuation: 2026-09-25 (37 production-valid panoramas enabled;
+five configured panorama targets remain invalid/disabled; the v10 release
+build remains open).
 Release candidate after the [SV08 exact-artwork adoption](reviews/2026-09-24-sv08-exact-artwork-adoption.md):
 2026-09-24 (36 production-valid panoramas enabled after the
 [P06 exact-artwork reacceptance](reviews/2026-09-24-p06-existing-artwork-acceptance.md);
@@ -29,7 +31,7 @@ physical card crops. It is an image-specific judgment, not a general exception
 for future anatomy deviations.
 
 P16 and P37 were marked non-approvable and were not part of the 29. P01's
-Hopplo shadow and P02's remaining subjects are still open. P06 was separately
+Hopplo shadow remains open; P02 was separately resolved on 25 September. P06 was separately
 accepted on 24 September for its exact existing pixels. SVP/MEP promo numbers, all card data, PDF print quality, production
 promotion and a complete v10 release remain independent gates. The approval
 record itself did not alter release files; technical promotion followed on
@@ -48,9 +50,24 @@ The exact H master is now technically promoted with a truthful schema-3
 masked-fallback record that distinguishes the one-shot base from both bounded
 foreground repairs. The corrected German preview shows `Juni 2000` and the
 accepted historical `JUNGLE` mark; all nine physical crops and the three
-source-art comparisons were inspected. The new localized overlay still needs
-the operator's approval, followed by print/PDF QA. The P02 PDF route stays
-disabled until those gates pass.
+source-art comparisons were inspected. The operator accepted this exact
+localized overlay on 25 September. Four language PDFs (de/en/fr/it) were
+built locally and their poster pages, card boundaries and information panels
+inspected; each has 64 numbered cards and 10 A4 pages. The P02 route is
+enabled. The existing English TCGdex logo is only 160 × 111 source pixels and
+visibly softer than the higher-resolution German/French mark; it remains a
+documented quality limitation rather than silently substituted artwork.
+Five unrelated poster routes remain blocked.
+
+Current remaining disabled routes (work-planner audit on 25 September):
+
+- Base1, ExGen2/sections/primal, ExGen3/sections/mega, and ME03: existing
+  candidate/provenance does not carry a current complete visual-identity
+  approval. None may be silently enabled merely because artwork files exist.
+- SV07: the installed candidate's generation-provenance contract is unsupported
+  (`flux/joint_scene/spatial_source_detail_joint v9`); its historical Hopplo
+  review remains a separate visual concern. It needs a validated replacement
+  contract and renewed source/print review before routing.
 
 ## Current decision
 
