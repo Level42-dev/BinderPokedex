@@ -31,7 +31,10 @@ from scripts.poster_assets.poster_io import (
     poster_bundles_for_scope,
 )
 from scripts.poster_assets.poster_config import build_identity_lock_prompt
-from scripts.poster_assets.provenance import sha256_file
+from scripts.poster_assets.provenance import (
+    rebuild_generation_fingerprint_from_recorded_sources,
+    sha256_file,
+)
 from scripts.poster_assets.provenance import image_pixel_record
 from scripts.poster_assets.scene_catalog import section_scenes_for_scope
 from scripts.poster_assets.validate_promoted_poster import enabled_poster_scopes
@@ -55,6 +58,31 @@ RELEASE_POSTER_KEYS = {
         .read_text(encoding="utf-8")
     )["candidates"]
 }
+
+
+def test_p02_accepted_h_promotion_is_exact_and_pdf_remains_disabled():
+    bundle = poster_bundle("Base2")
+    generation = bundle.manifest["artwork"]["generation"]
+    assert (
+        generation["generation_megapixels"], generation["reference_mode"], generation["seed"]
+    ) == (2.0, "spatial_source_detail_joint", 260924002)
+    expected_h = "26d6a468e59b7dd1ea21931d85ae016ed220324d23eee1fd8aacb642001a07f6"
+    artwork_path = bundle.asset_dir / "poster-flux2-artwork.png"
+    assert sha256_file(artwork_path) == expected_h
+    promoted = json.loads((bundle.asset_dir / "poster-flux2-provenance.json").read_text(encoding="utf-8"))
+    assert promoted["schema_version"] == 3
+    assert promoted["composition"]["kind"] == "masked_fallback"
+    assert promoted["composition"]["final_artwork_sha256"] == expected_h
+    assert promoted["run"]["source_artwork"]["sha256"] == (
+        "67f4e6dcfa88260aa35cb75c843b47c9975ddd3985154d3f318addb69a892e4d"
+    )
+    fingerprint = promoted["run"]["inputs"]["generation_fingerprint"]
+    assert fingerprint["sha256"] == "ce5b0c3761663ce466d9b5aacbc34c0036e8bcf87e9bc915a98257e9f67f38df"
+    assert rebuild_generation_fingerprint_from_recorded_sources(bundle, fingerprint)["sha256"] == fingerprint["sha256"]
+    review = json.loads((ROOT / "assets/review-pending/p02-h/review-provenance.json").read_text(encoding="utf-8"))
+    assert review["artwork_sha256"] == expected_h
+    assert review["localized_overlay_approval"] == "pending"
+    assert bundle.pdf_enabled is False
 
 
 def test_sv08_release_route_uses_the_exact_separately_accepted_artwork():

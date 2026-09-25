@@ -524,6 +524,28 @@ def test_scene_catalog_is_required_subset_and_allows_reviewed_overrides(tmp_path
     assert "scene_catalog_drift" not in target(plan)["reason_codes"]
 
 
+def test_scene_catalog_allows_appended_reviewed_constraints_but_not_changed_ones(tmp_path):
+    assets, output, catalog = setup_individual(tmp_path)
+    manifest_path = assets / "Alpha" / "poster.yaml"
+    catalog_payload = yaml.safe_load(catalog.read_text(encoding="utf-8"))
+    catalog_payload["scopes"]["Alpha"]["constraints"] = ["Keep the base scene clear."]
+    save_yaml(catalog, catalog_payload)
+    payload = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+    payload["artwork"]["scene"]["constraints"] = [
+        "Keep the base scene clear.",
+        "Keep the reviewed foreground blade in front of the subject."
+    ]
+    save_yaml(manifest_path, payload)
+
+    accepted = build("Alpha", assets, output, catalog)
+    assert "scene_catalog_drift" not in target(accepted)["reason_codes"]
+
+    payload["artwork"]["scene"]["constraints"][0] = "Changed catalog constraint"
+    save_yaml(manifest_path, payload)
+    changed = build("Alpha", assets, output, catalog)
+    assert target(changed)["reason_codes"] == ["scene_catalog_drift"]
+
+
 
 
 

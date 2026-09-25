@@ -379,6 +379,15 @@ def _contains_catalog_contract(
             and _contains_catalog_contract(configured[key], value)
             for key, value in expected.items()
         )
+    if isinstance(expected, list):
+        return (
+            isinstance(configured, list)
+            and len(configured) >= len(expected)
+            and all(
+                _contains_catalog_contract(actual, required)
+                for actual, required in zip(configured, expected)
+            )
+        )
     return configured == expected
 
 

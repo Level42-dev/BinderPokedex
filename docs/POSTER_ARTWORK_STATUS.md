@@ -44,9 +44,13 @@ text-free master was accepted for Pokémon appearance on 25 September. The
 first plain-text German title was rejected. The source-backed vintage set
 mark was separately [accepted for P02](reviews/2026-09-25-p02-h-logo-review.md)
 on 25 September; that decision excludes the infocard date and PDF release.
-A truthful
-fallback-promotion contract remains necessary;
-the existing P02 PDF route stays disabled.
+The exact H master is now technically promoted with a truthful schema-3
+masked-fallback record that distinguishes the one-shot base from both bounded
+foreground repairs. The corrected German preview shows `Juni 2000` and the
+accepted historical `JUNGLE` mark; all nine physical crops and the three
+source-art comparisons were inspected. The new localized overlay still needs
+the operator's approval, followed by print/PDF QA. The P02 PDF route stays
+disabled until those gates pass.
 
 ## Current decision
 

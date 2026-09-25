@@ -48,3 +48,25 @@ Source references:
 - TCGdex set mark: <https://assets.tcgdex.net/fr/base/base2/logo.png>
 - Historical German booster image: <https://zadoys.ch/en/products/pokemon-dschungel-sealed-1st-edition-booster-deutsch>
 - Independent German set gallery: <https://pokezentrum.de/pokemon-kartengalerien/>
+
+## Technical master adoption and corrected information panel
+
+The exact accepted H master was adopted on 25 September with a schema-3
+`masked_fallback` provenance record. Its SHA-256 remains
+`26d6a468e59b7dd1ea21931d85ae016ed220324d23eee1fd8aacb642001a07f6`.
+The stored record identifies the original one-shot A separately from the two
+bounded Pikachu/Evoli foreground repairs; its print-pixel audit found 10,548
+changed pixels within 11,121 editable pixels and zero changes outside the
+masks. This is a technical master adoption, not a claim that H is an untouched
+one-shot output. The other seven physical card areas remain unchanged from A.
+
+The new German overlay displays the accepted historical `JUNGLE` mark and
+`Juni 2000` in the information panel, without inventing a day. The new preview
+SHA-256 is `9ddd07346a37db94b236418b55e73f1ea0712caa341b3fc8b515a4406f3a9012`;
+its overlay fingerprint is
+`60cfdded286b73d0cdf758f0974533da4c8a501ee37e7eadd8efe50973482e12`.
+The full preview and all nine 750 × 1050 physical card crops were inspected;
+the three Pokémon cards were compared side by side with their official source
+art. Technical validation passes, but the new localized overlay has **not**
+yet been accepted by the operator. `pdf.enabled` and PDF routing remain false
+pending that exact preview approval and later print/PDF QA.

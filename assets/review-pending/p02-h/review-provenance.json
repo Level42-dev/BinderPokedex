@@ -27,6 +27,13 @@
     "german_preview_sha256": "1bb691e4fb60eadb98d10dc579a82df3e1399770fcd92c25a40bac2928ae565a"
   },
   "localized_overlay_approval": "pending",
+  "technical_master_promotion": {
+    "status": "validated_2026-09-25",
+    "schema_version": 3,
+    "master_sha256": "26d6a468e59b7dd1ea21931d85ae016ed220324d23eee1fd8aacb642001a07f6",
+    "german_preview_sha256": "9ddd07346a37db94b236418b55e73f1ea0712caa341b3fc8b515a4406f3a9012",
+    "overlay_fingerprint_sha256": "60cfdded286b73d0cdf758f0974533da4c8a501ee37e7eadd8efe50973482e12"
+  },
   "production_promotion": false,
   "pdf_routing": false,
   "review_report": "docs/reviews/2026-09-24-p02-correction-trials.md"
