@@ -8,6 +8,7 @@ import pytest
 
 from scripts.poster_assets.provenance import image_pixel_record, sha256_file
 from scripts.poster_assets.training_dataset import (
+    audit_promoted_pairs,
     compose_aligned_teacher_target,
     compose_foreground_occlusion_target,
     immutable_image_record,
@@ -92,6 +93,34 @@ def fixture_manifest(tmp_path: Path, *, status: str = "gold") -> Path:
     }
     write_json(manifest_path, manifest)
     return manifest_path
+
+
+def test_masked_fallback_is_not_a_raw_one_shot_training_target(tmp_path: Path) -> None:
+    config_path = tmp_path / "config.json"
+    write_json(config_path, {
+        "schema_version": 1,
+        "profile": "test",
+        "split_policy": {"excluded_training_targets": {}, "holdout_scopes": []},
+    })
+    provenance_path = tmp_path / "assets" / "posters" / "Example" / "poster-flux2-provenance.json"
+    provenance_path.parent.mkdir(parents=True)
+    (provenance_path.parent / "poster.yaml").write_text(
+        "scope: Example\nlayout:\n  name: standard_3x3\npdf:\n  enabled: false\n",
+        encoding="utf-8",
+    )
+    write_json(provenance_path, {
+        "schema_version": 3,
+        "kind": "promoted_poster",
+        "scope": "Example",
+        "composition": {"kind": "masked_fallback"},
+        "run": {"raw_artwork": {"file": "ignored-one-shot.png"}},
+    })
+    result = audit_promoted_pairs(
+        config_path, root=tmp_path,
+        poster_assets=tmp_path / "assets" / "posters",
+    )
+    assert result["summary"]["promoted_scenes"] == 0
+    assert result["samples"] == []
 
 
 def test_pair_status_never_auto_approves_a_pair() -> None:

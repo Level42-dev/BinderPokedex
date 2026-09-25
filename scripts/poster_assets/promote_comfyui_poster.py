@@ -13,6 +13,7 @@ from pathlib import Path
 from PIL import Image
 
 try:
+    from .masked_fallback import load_and_audit_composition
     from .generation_contract import is_grounded_generation, requires_visual_review
     from .provenance import require_grounding_pixel_validation
     from .finalize_comfyui_poster import finalize
@@ -38,6 +39,7 @@ try:
     )
     from .slice_poster import slice_poster
 except ImportError:
+    from masked_fallback import load_and_audit_composition
     from generation_contract import is_grounded_generation, requires_visual_review
     from provenance import require_grounding_pixel_validation
     from finalize_comfyui_poster import finalize
@@ -65,6 +67,154 @@ except ImportError:
 
 
 ROOT = Path(__file__).resolve().parents[2]
+
+
+def _write_masked_promotion(
+    *,
+    bundle,
+    artwork: Path,
+    run_metadata: dict,
+    composition: dict,
+    language: str,
+    name: str,
+    force: bool,
+) -> tuple[Path, Path, list[Path], Path]:
+    """Stage H byte-for-byte, then atomically install only H and its audit."""
+    scope_dir = bundle.asset_dir
+    generation = run_metadata["generation"]
+    layout = build_generation_output_layout(
+        bundle.manifest.get("layout", {}).get("name", "standard_3x3"), generation,
+    )
+    with Image.open(artwork) as image:
+        if image.size != (layout.width_px, layout.height_px):
+            raise ValueError("Masked final dimensions do not match generation")
+        dpi = image.info.get("dpi")
+        expected_dpi = generation.get("output_dpi")
+        if isinstance(expected_dpi, int) and (
+            not dpi or any(abs(value - expected_dpi) > 0.1 for value in dpi)
+        ):
+            raise ValueError("Masked final lacks correct print DPI metadata")
+    artwork_path = scope_dir / f"poster-{name}-artwork.png"
+    qa_dir = bundle.work_dir / "promotion"
+    final_path = qa_dir / f"poster-{name}.png"
+    cards_dir = qa_dir / f"poster-{name}-cards"
+    provenance_path = scope_dir / f"poster-{name}-provenance.json"
+    with tempfile.TemporaryDirectory(prefix=".poster-promotion-", dir=scope_dir) as temporary:
+        stage = Path(temporary)
+        staged_artwork = stage / artwork_path.name
+        staged_final = stage / final_path.name
+        staged_cards = stage / cards_dir.name
+        staged_provenance = stage / provenance_path.name
+        shutil.copy2(artwork, staged_artwork)
+        if sha256_file(staged_artwork) != composition["final_artwork_sha256"]:
+            raise ValueError("Staged masked final differs from accepted H")
+        finalize(bundle.asset_key, staged_artwork, staged_final, language)
+        staged_card_paths = slice_poster(bundle.asset_key, staged_final, staged_cards)
+        if len(staged_card_paths) != layout.rows * layout.columns:
+            raise ValueError("Masked promotion did not produce every physical card")
+        current_overlay = build_overlay_fingerprint(bundle)
+        run_metadata["inputs"]["overlay_fingerprint"] = current_overlay
+        composition["preview_sha256"] = sha256_file(staged_final)
+        composition["overlay_fingerprint_sha256"] = current_overlay["sha256"]
+        approval = composition.get("localized_overlay_approval")
+        if not isinstance(approval, dict) or (
+            approval.get("preview_sha256") != composition["preview_sha256"]
+            or approval.get("overlay_fingerprint_sha256") != current_overlay["sha256"]
+        ):
+            composition["localized_overlay_approval"] = None
+        provenance = promoted_provenance(
+            scope=bundle.asset_key,
+            name=name,
+            language=language,
+            run_metadata=run_metadata,
+            artwork_path=staged_artwork,
+            stable_artwork_path=artwork_path,
+        )
+        provenance["schema_version"] = 3
+        provenance["composition"] = composition
+        staged_provenance.write_text(
+            json.dumps(provenance, indent=2, ensure_ascii=False, sort_keys=True) + "\n",
+            encoding="utf-8",
+        )
+        qa_dir.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(staged_final, final_path)
+        if cards_dir.exists():
+            shutil.rmtree(cards_dir)
+        shutil.copytree(staged_cards, cards_dir)
+        _replace_bundle(
+            [(staged_artwork, artwork_path), (staged_provenance, provenance_path)],
+            force=force, backup_dir=stage / "backups",
+        )
+    card_paths = [
+        cards_dir / f"card_r{row}_c{column}.png"
+        for row in range(1, layout.rows + 1)
+        for column in range(1, layout.columns + 1)
+    ]
+    return artwork_path, final_path, card_paths, provenance_path
+
+
+def _promote_masked(
+    scope: str,
+    artwork: Path,
+    *,
+    bundle,
+    run_metadata_path: Path,
+    composition_input_path: Path | None,
+    language: str,
+    name: str,
+    force: bool,
+    approve_joint_scene: bool,
+) -> tuple[Path, Path, list[Path], Path]:
+    if approve_joint_scene:
+        raise ValueError("Masked fallback uses its exact human review record")
+    if composition_input_path is not None:
+        composition, base_run_path, base_artwork_path = load_and_audit_composition(
+            composition_input_path, artwork, bundle,
+        )
+        run_metadata = copy.deepcopy(load_run_metadata(base_run_path, base_artwork_path))
+    else:
+        container = json.loads(run_metadata_path.read_text(encoding="utf-8"))
+        if not _is_existing_promotion_refresh(
+            scope=scope, scope_dir=bundle.asset_dir, manifest=bundle.manifest,
+            metadata_path=run_metadata_path, metadata_container=container,
+            artwork_path=artwork,
+        ) or container.get("schema_version") != 3:
+            raise ValueError("Schema-3 refresh requires the configured stable H and provenance")
+        try:
+            from .validate_promoted_poster import validate
+        except ImportError:
+            from validate_promoted_poster import validate
+        validate(bundle)
+        run_metadata = copy.deepcopy(container["run"])
+        composition = copy.deepcopy(container["composition"])
+    if run_metadata.get("scope") != scope:
+        raise ValueError("One-shot A run targets a different poster")
+    configured = bundle.manifest.get("artwork", {}).get("generation")
+    recorded = run_metadata.get("generation")
+    if not isinstance(configured, dict) or not isinstance(recorded, dict):
+        raise ValueError("Masked generation contract is missing")
+    validate_promotable_generation_contract(configured)
+    validate_promotable_generation_contract(recorded)
+    if configured != recorded:
+        raise ValueError("One-shot A generation does not match current manifest")
+    recorded_fingerprint = run_metadata.get("inputs", {}).get("generation_fingerprint")
+    if not fingerprint_record_is_valid(recorded_fingerprint):
+        raise ValueError("One-shot A generation fingerprint is missing or invalid")
+    current_fingerprint = build_generation_fingerprint(
+        bundle,
+        pipeline_contract_version=generation_fingerprint_pipeline_contract_version(
+            recorded_fingerprint, recorded,
+        ),
+    )
+    if current_fingerprint["sha256"] != recorded_fingerprint["sha256"]:
+        raise ValueError("One-shot A generation inputs have drifted")
+    composition["base_generation_fingerprint_sha256"] = recorded_fingerprint["sha256"]
+    if composition["final_artwork_sha256"] != sha256_file(artwork):
+        raise ValueError("Masked final H differs from accepted master")
+    return _write_masked_promotion(
+        bundle=bundle, artwork=artwork, run_metadata=run_metadata,
+        composition=composition, language=language, name=name, force=force,
+    )
 
 
 def _configured_refresh_paths(
@@ -173,6 +323,7 @@ def promote(
     approve_joint_scene: bool = False,
     reviewer_kind: str | None = None,
     run_metadata_path: Path,
+    composition_input_path: Path | None = None,
 ) -> tuple[Path, Path, list[Path], Path]:
     """Persist a reviewed master; keep reproducible QA derivatives ignored."""
     if not artwork.is_file():
@@ -182,6 +333,16 @@ def promote(
     scope_dir = bundle.asset_dir
     manifest_path = bundle.manifest_path
     manifest = bundle.manifest
+
+    if composition_input_path is not None or (
+        run_metadata_path.is_file()
+        and json.loads(run_metadata_path.read_text(encoding="utf-8")).get("schema_version") == 3
+    ):
+        return _promote_masked(
+            scope, artwork, bundle=bundle, run_metadata_path=run_metadata_path,
+            composition_input_path=composition_input_path, language=language,
+            name=name, force=force, approve_joint_scene=approve_joint_scene,
+        )
 
     run_metadata = copy.deepcopy(
         load_run_metadata(run_metadata_path, artwork)
@@ -437,6 +598,7 @@ def main() -> int:
         ),
     )
     parser.add_argument("--run-metadata", required=True, type=Path)
+    parser.add_argument("--composition-input", type=Path)
     parser.add_argument(
         "--reviewer-kind",
         choices=("human", "agent"),
@@ -453,6 +615,7 @@ def main() -> int:
         approve_joint_scene=args.approve_joint_scene,
         reviewer_kind=args.reviewer_kind,
         run_metadata_path=args.run_metadata,
+        composition_input_path=args.composition_input,
     )
     print(f"Artwork: {artwork_path}")
     print(f"QA preview (ignored): {final_path}")

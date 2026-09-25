@@ -763,7 +763,7 @@ def _promotion_drift_codes(
     overlay_drift: list[str] = []
     pipeline_notes: list[str] = []
     if (
-        provenance.get("schema_version") not in {1, 2}
+        provenance.get("schema_version") not in {1, 2, 3}
         or provenance.get("kind") != "promoted_poster"
         or provenance.get("scope") != bundle.asset_key
     ):
@@ -1152,6 +1152,14 @@ def _plan_bundle(
         if pipeline_notes
         else ()
     )
+    masked_fallback = (
+        isinstance(validation_result, dict)
+        and validation_result.get("composition_kind") == "masked_fallback"
+    )
+    localized_overlay_pending = (
+        masked_fallback
+        and validation_result.get("localized_overlay_approved") is False
+    )
     if bundle.pdf_enabled:
         return WorkItem(
             **base,
@@ -1159,6 +1167,7 @@ def _plan_bundle(
             reason_codes=_unique(
                 (
                     "promotion_current",
+                    "masked_fallback" if masked_fallback else "",
                     "pdf_enabled",
                     *overlay_drift,
                     *pipeline_notes,
@@ -1172,7 +1181,9 @@ def _plan_bundle(
         reason_codes=_unique(
             (
                 "promotion_current",
+                "masked_fallback" if masked_fallback else "",
                 "pdf_disabled",
+                "localized_overlay_pending" if localized_overlay_pending else "",
                 *overlay_drift,
                 *pipeline_notes,
             )
@@ -1180,6 +1191,7 @@ def _plan_bundle(
         next_actions=(
             *overlay_actions,
             *pipeline_actions,
+            *(("review_localized_overlay",) if localized_overlay_pending else ()),
             "enable_pdf_after_review",
         ),
     )

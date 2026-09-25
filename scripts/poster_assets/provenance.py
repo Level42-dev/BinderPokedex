@@ -2176,3 +2176,28 @@ def promoted_provenance(
         },
         "outputs": {"artwork": artwork_record},
     }
+
+
+def verify_localized_overlay_approval(payload: dict[str, Any]) -> bool:
+    """Require human acceptance of this exact preview and overlay contract."""
+    if payload.get("schema_version") != 3:
+        return False
+    composition = payload.get("composition")
+    if not isinstance(composition, dict):
+        return False
+    approval = composition.get("localized_overlay_approval")
+    if not isinstance(approval, dict) or approval.get("status") != "accepted":
+        return False
+    preview_hash = composition.get("preview_sha256")
+    overlay_hash = (
+        payload.get("run", {}).get("inputs", {})
+        .get("overlay_fingerprint", {}).get("sha256")
+    )
+    return (
+        isinstance(preview_hash, str) and len(preview_hash) == 64
+        and isinstance(overlay_hash, str) and len(overlay_hash) == 64
+        and approval.get("preview_sha256") == preview_hash
+        and approval.get("overlay_fingerprint_sha256") == overlay_hash
+        and composition.get("overlay_fingerprint_sha256") == overlay_hash
+        and approval.get("reviewer_kind") == "human"
+    )

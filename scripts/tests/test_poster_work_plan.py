@@ -842,6 +842,31 @@ def test_overlay_only_change_requests_refresh_without_regeneration(tmp_path):
     assert target(plan)["commands"] == []
 
 
+def test_planner_identifies_validated_masked_fallback_pending_overlay(tmp_path):
+    assets, output, catalog = setup_individual(tmp_path)
+    bundle = poster_bundles_for_scope("Alpha", poster_assets=assets)[0]
+    write_promotion(bundle, output)
+    provenance_path = bundle.asset_dir / "poster-flux2-provenance.json"
+    provenance = json.loads(provenance_path.read_text(encoding="utf-8"))
+    provenance["schema_version"] = 3
+    provenance["composition"] = {"kind": "masked_fallback"}
+    save_json(provenance_path, provenance)
+    plan = build(
+        "Alpha", assets, output, catalog,
+        validator=lambda _bundle: {
+            "composition_kind": "masked_fallback",
+            "localized_overlay_approved": False,
+            "overlay_fingerprint_current": True,
+        },
+    )
+    item = target(plan)
+    assert item["state"] == "promoted_disabled"
+    assert "masked_fallback" in item["reason_codes"]
+    assert "localized_overlay_pending" in item["reason_codes"]
+    assert "review_localized_overlay" in item["next_actions"]
+    assert "regenerate_candidate" not in item["next_actions"]
+
+
 
 
 def test_legacy_manifest_drift_is_not_misclassified_as_safe_migration(
