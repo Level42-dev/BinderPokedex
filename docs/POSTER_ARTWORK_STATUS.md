@@ -40,7 +40,10 @@ fallbacks](reviews/2026-09-24-p02-correction-trials.md) have been reviewed.
 The operator withdrew the brief acceptance of candidate F after identifying
 two depth defects and then rejected G because the blades still looked wrong.
 Candidate H now has continuous Pikachu and Evoli foreground layers; its exact
-master and source/card comparisons are awaiting human review. A truthful
+text-free master was accepted for Pokémon appearance on 25 September. The
+first plain-text German title was rejected, and a source-backed vintage set
+mark is in [separate overlay review](reviews/2026-09-25-p02-h-logo-review.md).
+A truthful
 fallback-promotion contract remains necessary;
 the existing P02 PDF route stays disabled.
 

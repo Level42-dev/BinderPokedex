@@ -1,4 +1,4 @@
-# P02 Dschungel — source-bound correction trials (H awaiting human review)
+# P02 Dschungel — source-bound correction trials (H artwork accepted)
 
 The operator requested correction of Relaxo and Evoli instead of accepting
 their errors in the older candidate E. Candidate E's Pikachu-only acceptance
@@ -71,8 +71,15 @@ to A. The full German panorama, all nine physical card positions and three
 source-versus-card pairs (Pikachu, Relaxo, Evoli) were inspected. The result
 places the blade before Pikachu's arm and the leaf before Evoli's tail; the
 tip near Pikachu's cheek remains a point for the operator to inspect. H is
-**awaiting human acceptance**, is not promoted, and is preserved as an exact
+**accepted for its Pokémon artwork** by the operator on 25 September, but not
+for its first German overlay. It is not promoted, and is preserved as an exact
 [review-pending master](../../assets/review-pending/p02-h/artwork-300dpi.png).
+
+The user specifically rejected the first H preview's plain `Dschungel`
+heading as the wrong set logo. That localized-overlay objection does not
+revoke approval of H's text-free Pokémon pixels. A separate authentic-logo
+preview and its remaining release gates are documented in
+[the logo review](2026-09-25-p02-h-logo-review.md).
 
 No masked-fallback candidate is yet technically promotion-eligible: the
 current standard promoter has a one-shot provenance contract, not a
