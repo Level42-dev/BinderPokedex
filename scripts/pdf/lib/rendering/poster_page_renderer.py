@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import logging
+import json
 import sys
 import tempfile
 from pathlib import Path
@@ -157,6 +158,13 @@ class PosterPageRenderer:
         *,
         page_mode: str = "cards",
     ) -> "PosterPageRenderer":
+        provenance_file = bundle.manifest.get("artwork", {}).get("provenance_file")
+        if bundle.pdf_enabled and provenance_file:
+            provenance_path = bundle.asset_dir / provenance_file
+            provenance = json.loads(provenance_path.read_text(encoding="utf-8"))
+            if provenance.get("schema_version") == 3:
+                from scripts.poster_assets.validate_promoted_poster import validate
+                validate(bundle)
         artwork_path = bundle.asset_dir / bundle.artwork_file
         if not artwork_path.is_file():
             raise FileNotFoundError(f"Poster PDF artwork not found: {artwork_path}")

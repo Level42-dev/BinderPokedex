@@ -57,6 +57,9 @@ inspected; each has 64 numbered cards and 10 A4 pages. The P02 route is
 enabled. The existing English TCGdex logo is only 160 × 111 source pixels and
 visibly softer than the higher-resolution German/French mark; it remains a
 documented quality limitation rather than silently substituted artwork.
+The final code review closed four release-gate gaps: an enabled masked poster
+now rejects changed overlay inputs, missing configured language logos and
+incomplete base evidence; direct PDF generation also checks its approval.
 Five unrelated poster routes remain blocked.
 
 Current remaining disabled routes (work-planner audit on 25 September):

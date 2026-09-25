@@ -1,5 +1,6 @@
 import json
 from copy import deepcopy
+from dataclasses import replace
 from pathlib import Path
 
 import pytest
@@ -39,6 +40,7 @@ from scripts.poster_assets.provenance import image_pixel_record
 from scripts.poster_assets.scene_catalog import section_scenes_for_scope
 from scripts.poster_assets.validate_promoted_poster import enabled_poster_scopes, validate
 from scripts.pdf.lib.rendering.poster_page_renderer import PosterPageCollection
+from scripts.pdf.lib.rendering import poster_page_renderer
 from scripts.pdf.generate_pdf import filter_variant_data_for_language
 
 
@@ -92,6 +94,81 @@ def test_p02_accepted_h_promotion_is_exact_and_routes_after_overlay_approval():
         assert len(collection.renderers) == 1
     finally:
         collection.cleanup()
+
+
+def test_enabled_masked_poster_rejects_changed_overlay_after_approval():
+    bundle = poster_bundle("Base2")
+    manifest = deepcopy(bundle.manifest)
+    manifest["text_content"]["release_date_overrides"]["de"]["value"] = "2000-07"
+    with pytest.raises(ValueError, match="overlay fingerprint drift"):
+        validate(replace(bundle, manifest=manifest))
+
+
+def test_enabled_masked_poster_requires_each_configured_logo(monkeypatch):
+    bundle = poster_bundle("Base2")
+    missing_logo = bundle.source_dir / bundle.manifest["title_logo"]["files"]["en"]
+    original_is_file = Path.is_file
+    monkeypatch.setattr(
+        Path, "is_file",
+        lambda path: False if path == missing_logo else original_is_file(path),
+    )
+    with pytest.raises((FileNotFoundError, ValueError), match="title logo"):
+        validate(bundle)
+
+
+@pytest.mark.parametrize(
+    "missing_key",
+    ["base_run_sha256", "base_review_evidence_sha256", "combined_review_evidence_sha256"],
+)
+def test_enabled_masked_poster_requires_complete_base_proof(monkeypatch, missing_key):
+    bundle = poster_bundle("Base2")
+    provenance_path = bundle.asset_dir / "poster-flux2-provenance.json"
+    payload = json.loads(provenance_path.read_text(encoding="utf-8"))
+    payload["composition"].pop(missing_key)
+    original_read_text = Path.read_text
+    monkeypatch.setattr(
+        Path, "read_text",
+        lambda path, *args, **kwargs: json.dumps(payload)
+        if path == provenance_path else original_read_text(path, *args, **kwargs),
+    )
+    with pytest.raises(ValueError, match=missing_key):
+        validate(bundle)
+
+
+def test_enabled_masked_poster_cannot_drop_both_base_artwork_hashes(monkeypatch):
+    bundle = poster_bundle("Base2")
+    provenance_path = bundle.asset_dir / "poster-flux2-provenance.json"
+    payload = json.loads(provenance_path.read_text(encoding="utf-8"))
+    payload["composition"].pop("base_artwork_sha256")
+    payload["run"]["source_artwork"].pop("sha256")
+    original_read_text = Path.read_text
+    monkeypatch.setattr(
+        Path, "read_text",
+        lambda path, *args, **kwargs: json.dumps(payload)
+        if path == provenance_path else original_read_text(path, *args, **kwargs),
+    )
+    with pytest.raises(ValueError, match="base_artwork_sha256"):
+        validate(bundle)
+
+
+def test_pdf_collection_rejects_unapproved_masked_poster(monkeypatch):
+    bundle = poster_bundle("Base2")
+    provenance_path = bundle.asset_dir / "poster-flux2-provenance.json"
+    payload = json.loads(provenance_path.read_text(encoding="utf-8"))
+    payload["composition"].pop("localized_overlay_approval")
+    original_read_text = Path.read_text
+    monkeypatch.setattr(
+        Path, "read_text",
+        lambda path, *args, **kwargs: json.dumps(payload)
+        if path == provenance_path else original_read_text(path, *args, **kwargs),
+    )
+    monkeypatch.setattr(
+        poster_page_renderer,
+        "poster_bundles_for_scope",
+        lambda *args, **kwargs: [bundle],
+    )
+    with pytest.raises(ValueError, match="localized overlay approval"):
+        PosterPageCollection.from_scope("Base2", {}, "de")
 
 
 def test_sv08_release_route_uses_the_exact_separately_accepted_artwork():

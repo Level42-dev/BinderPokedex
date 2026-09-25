@@ -131,6 +131,16 @@ def _validate_masked_composition(payload: dict, bundle: PosterBundle, artwork_pa
         raise ValueError("Unsupported schema-3 poster composition")
     run = payload["run"]
     output = payload["outputs"]["artwork"]
+    for key in (
+        "base_artwork_sha256", "base_artwork_pixel_sha256",
+        "base_generation_fingerprint_sha256", "base_run_sha256",
+        "base_review_evidence_sha256", "combined_review_evidence_sha256",
+    ):
+        if not re.fullmatch(r"[0-9a-f]{64}", str(composition.get(key, ""))):
+            raise ValueError(f"Masked composition lacks {key}")
+    for key in ("sha256", "pixel_sha256"):
+        if not re.fullmatch(r"[0-9a-f]{64}", str(run.get("source_artwork", {}).get(key, ""))):
+            raise ValueError(f"Masked base source artwork lacks {key}")
     if (
         composition.get("base_artwork_sha256") != run.get("source_artwork", {}).get("sha256")
         or composition.get("base_artwork_pixel_sha256") != run.get("source_artwork", {}).get("pixel_sha256")
@@ -162,6 +172,12 @@ def _validate_masked_composition(payload: dict, bundle: PosterBundle, artwork_pa
         raise ValueError("Accepted title logo source has drifted")
     if bundle.pdf_enabled and not current_logo.is_file():
         raise ValueError("Enabled masked poster lacks its title logo source")
+    if bundle.pdf_enabled:
+        for language, logo_file in bundle.manifest.get("title_logo", {}).get("files", {}).items():
+            if not isinstance(logo_file, str) or not (bundle.source_dir / logo_file).is_file():
+                raise FileNotFoundError(
+                    f"Enabled masked poster lacks {language} title logo source: {logo_file}"
+                )
     with Image.open(artwork_path) as image:
         union = decode_mask(composition.get("union_mask"))
         if union.size != image.size or union.size != (layout.width_px, layout.height_px):
@@ -610,6 +626,10 @@ def validate(target: str | PosterBundle) -> dict[str, Any]:
         localized_overlay_approved = _validate_masked_composition(
             payload, bundle, artwork_path, layout,
         )
+        if bundle.pdf_enabled and overlay_fingerprint_current is not True:
+            raise ValueError(
+                "Enabled masked poster has overlay fingerprint drift since approval"
+            )
     routed_artwork_path = bundle.asset_dir / bundle.artwork_file
     if artwork_path != routed_artwork_path:
         raise ValueError(
