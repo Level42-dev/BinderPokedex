@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "Base2",
-  "promoted_at": "2026-08-06T23:49:00.556777+00:00",
+  "promoted_at": "2026-09-12T14:08:18.697643+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T18:12:29.330749+00:00",
@@ -264,14 +264,14 @@
           "languages": {
             "de": {
               "information": [
-                "Dschungel",
                 "64 Karten",
                 "Veröffentlicht",
                 "16. Juni 1999"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "10cb599dbc166a90e6f08e29d8ee75bb6d5e380af19e82c25eb834f0bf30e07f"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Dschungel"
               }
             },
             "en": {
@@ -288,14 +288,14 @@
             },
             "es": {
               "information": [
-                "Jungla",
-                "64 cartas",
+                "0 cartas",
                 "Publicado",
                 "16 junio 1999"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "10cb599dbc166a90e6f08e29d8ee75bb6d5e380af19e82c25eb834f0bf30e07f"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Jungle"
               }
             },
             "fr": {
@@ -312,80 +312,68 @@
             },
             "it": {
               "information": [
-                "Jungle",
                 "64 carte",
                 "Pubblicato",
                 "16 giugno 1999"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "10cb599dbc166a90e6f08e29d8ee75bb6d5e380af19e82c25eb834f0bf30e07f"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Jungle"
               }
             },
             "ja": {
               "information": [
-                "Jungle",
-                "64 枚",
+                "0 枚",
                 "発売日",
                 "1999年6月16日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "10cb599dbc166a90e6f08e29d8ee75bb6d5e380af19e82c25eb834f0bf30e07f"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Jungle"
               }
             },
             "ko": {
               "information": [
-                "Jungle",
-                "64 장",
+                "0 장",
                 "출시일",
                 "1999년 6월 16일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "10cb599dbc166a90e6f08e29d8ee75bb6d5e380af19e82c25eb834f0bf30e07f"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Jungle"
               }
             },
             "zh_hans": {
               "information": [
-                "Jungle",
-                "64 张",
+                "0 张",
                 "发行日期",
                 "1999年6月16日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "10cb599dbc166a90e6f08e29d8ee75bb6d5e380af19e82c25eb834f0bf30e07f"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Jungle"
               }
             },
             "zh_hant": {
               "information": [
-                "Jungle",
-                "64 張",
+                "0 張",
                 "發行日期",
                 "1999年6月16日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "10cb599dbc166a90e6f08e29d8ee75bb6d5e380af19e82c25eb834f0bf30e07f"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Jungle"
               }
             }
           },
           "layout_name": "standard_3x3",
           "logo_pixels": {
-            "de": {
-              "height": 111,
-              "mode": "RGBA",
-              "pixel_sha256": "10cb599dbc166a90e6f08e29d8ee75bb6d5e380af19e82c25eb834f0bf30e07f",
-              "width": 160
-            },
             "en": {
-              "height": 111,
-              "mode": "RGBA",
-              "pixel_sha256": "10cb599dbc166a90e6f08e29d8ee75bb6d5e380af19e82c25eb834f0bf30e07f",
-              "width": 160
-            },
-            "es": {
               "height": 111,
               "mode": "RGBA",
               "pixel_sha256": "10cb599dbc166a90e6f08e29d8ee75bb6d5e380af19e82c25eb834f0bf30e07f",
@@ -396,36 +384,6 @@
               "mode": "RGBA",
               "pixel_sha256": "fca05604752b6ff740dc379b855b93880439fc0ba5b15c47e1d0d5263806df3d",
               "width": 500
-            },
-            "it": {
-              "height": 111,
-              "mode": "RGBA",
-              "pixel_sha256": "10cb599dbc166a90e6f08e29d8ee75bb6d5e380af19e82c25eb834f0bf30e07f",
-              "width": 160
-            },
-            "ja": {
-              "height": 111,
-              "mode": "RGBA",
-              "pixel_sha256": "10cb599dbc166a90e6f08e29d8ee75bb6d5e380af19e82c25eb834f0bf30e07f",
-              "width": 160
-            },
-            "ko": {
-              "height": 111,
-              "mode": "RGBA",
-              "pixel_sha256": "10cb599dbc166a90e6f08e29d8ee75bb6d5e380af19e82c25eb834f0bf30e07f",
-              "width": 160
-            },
-            "zh_hans": {
-              "height": 111,
-              "mode": "RGBA",
-              "pixel_sha256": "10cb599dbc166a90e6f08e29d8ee75bb6d5e380af19e82c25eb834f0bf30e07f",
-              "width": 160
-            },
-            "zh_hant": {
-              "height": 111,
-              "mode": "RGBA",
-              "pixel_sha256": "10cb599dbc166a90e6f08e29d8ee75bb6d5e380af19e82c25eb834f0bf30e07f",
-              "width": 160
             }
           },
           "pipeline_contract": {
@@ -447,7 +405,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "b1cf566beb5812328e80ed74bc3cbab84f1cec628a41bebd8c6615b27be55124"
+        "sha256": "fc6dca5b61f27f1fb7beec80caabefeaa1219556db38cd0d968e90dc8d9ea1e7"
       },
       "prompt": {
         "bytes": 5887,
@@ -539,7 +497,22 @@
         ],
         "generation_fingerprint_sha256": "b9e21b5fbd97918aefb25f9493ed8def8ec82b1bfa07b320cf8c805be012815c",
         "method": "human_identity_and_scene_review",
-        "passed": true,
+        "passed": false,
+        "reaudit_revocation": {
+          "date": "2026-09-12",
+          "reviewer_kind": "agent",
+          "method": "source_by_source_visual_reaudit",
+          "previously_passed": true,
+          "verdict": "reject",
+          "master_sha256": "9c0c166cc6bda2f8a8e07ba9affd486c19d9c017b54ed15b9bedba4568d5c45f",
+          "reports": [
+            {
+              "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+              "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+            }
+          ],
+          "reason": "Current exact artwork has rejected or unresolved source-fidelity findings. Historical review fields are retained; the prior approval is withdrawn pending a corrected candidate."
+        },
         "raw_artwork_pixel_sha256": "e52af1733714d3292f737f46d198cdef53bedde321ec18de6b8c7193895e477c",
         "raw_artwork_sha256": "c54353b1c3cef7311c5fd0260703fb0f334cdf8a083b714edafff399f38e8e36",
         "reviewed_artwork_pixel_sha256": "4255bf60fb88da0241faf1b875c7f739ab861ff4bdac6d6a109421fc394e02b5",

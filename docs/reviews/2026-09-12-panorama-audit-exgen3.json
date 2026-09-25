@@ -1,0 +1,389 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-12",
+  "reviewer": "root_agent_source_by_source_visual_audit",
+  "status": "complete",
+  "coverage": {
+    "targets": 2,
+    "subjects": 6,
+    "original_sources_actually_viewed": 6,
+    "full_masters_actually_viewed": 2,
+    "individual_physical_crops_actually_viewed": 18,
+    "german_pdf_pages_actually_viewed": [
+      1,
+      27
+    ],
+    "legacy_raw_files_reviewed": false
+  },
+  "method": "Actually opened all six original source images, both current text-free masters, every existing physical card crop and the two German PDF panorama pages. New anatomy observations supersede legacy blanket approvals. Byte and decoded-pixel hashes checked against current provenance. No source, artwork or PDF changed by this audit.",
+  "targets": [
+    {
+      "asset_key": "ExGen3/sections/normal",
+      "verdict": "reject",
+      "provenance": {
+        "file": "assets/posters/ExGen3/sections/normal/poster-flux2-provenance.json",
+        "sha256": "b843f260e715324de67b9677b0ac428fd8bccbd03f204d25d008c683a07b11a7"
+      },
+      "master": {
+        "file": "assets/posters/ExGen3/sections/normal/poster-flux2-artwork.png",
+        "sha256": "30b426a3806f98d8b15d267afd0728f7ede559b094a75f6119dc39f81243f49f",
+        "pixel_sha256": "24268685ffc6fc23158b4824af1d73a0e3816aff44da66fcc90f962ddf0bb5f6",
+        "hashes_verified": true,
+        "actually_viewed": true
+      },
+      "crop_coverage": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/ExGen3/sections/normal/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "e8155d8b42474652675d3abef55e1bdb110b536370d978a23f96ea48b2296676",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/ExGen3/sections/normal/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "a3c7a3af3ced126d214c90400a1d933a80b066a0ddacfe1303af7ca462b85956",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/ExGen3/sections/normal/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "0ca351da65c12ea2c0bea1be73b2829bd1df4960fec8756eef5c8f55997b243d",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/ExGen3/sections/normal/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "8567bb8cbe75f2d71152e7f80b321fe966721690ed3c8661fdbfb9cb21275a23",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/ExGen3/sections/normal/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "a3dfaf9a205f8daf832780a0720dbdc0d658027a6d11aca0a8df5e8d2849a5a0",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/ExGen3/sections/normal/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "c5ce76074a48f566d86fdb28744b8e6b79eb48b03d89a966d35d2066757cebdd",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/ExGen3/sections/normal/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "5434108c854b35a84011ac4fcbd71d032906febcda5478184e967bca4b45eda1",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/ExGen3/sections/normal/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "73302e556f69c7ca9864fd341746f882e0096b7884298826cabc76f597daa4be",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/ExGen3/sections/normal/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "1217bbc79b8083323b5d160a14fdeaf2b002aa6c76725ae1c7c3b9516ac04a38",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true
+        }
+      ],
+      "subjects": [
+        {
+          "identity": "Koraidon",
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen3/sections/normal/sources/cutouts/pokemon_1007_koraidon.png",
+            "sha256": "a292ff6c8c43f3f2c2df404ad14fc84e4ba0db33107692068d70e30ea9b44962",
+            "pixel_sha256": "c9e907f440cd1d5ad0c40cbe8231b0b336f45beb72b129ec06d0f472b07694b7",
+            "hashes_verified": true,
+            "actually_viewed": true
+          },
+          "crop": {
+            "cell": "r3c1",
+            "file": "tmp/poster-workspaces/ExGen3/sections/normal/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "5434108c854b35a84011ac4fcbd71d032906febcda5478184e967bca4b45eda1",
+            "dimensions": [
+              750,
+              1050
+            ],
+            "actually_viewed": true
+          },
+          "verdict": "reject",
+          "observations": "Source chest is a closed segmented black tire-like plate; output invents white eye/tooth-like elements in a dark opening there. The true head eye becomes a pale angular patch. Large source hand and foot claws collapse into short blobs or disappear. These are unoccluded structural changes, not just different shading."
+        },
+        {
+          "identity": "Pikachu",
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen3/sections/normal/sources/cutouts/pokemon_025_pikachu.png",
+            "sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+            "pixel_sha256": "e1100eee7248e696797b553f2151ad8e62c0eb83df473d0d9151cceb2e61c76c",
+            "hashes_verified": true,
+            "actually_viewed": true
+          },
+          "crop": {
+            "cell": "r3c2",
+            "file": "tmp/poster-workspaces/ExGen3/sections/normal/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "73302e556f69c7ca9864fd341746f882e0096b7884298826cabc76f597daa4be",
+            "dimensions": [
+              750,
+              1050
+            ],
+            "actually_viewed": true
+          },
+          "verdict": "uncertain",
+          "observations": "Paired black-tipped ears, round eyes, red cheeks, mouth, two arms/feet and complete lightning tail remain. The source raised paw has separate angular fingertips; the generated paw is a dark scribbled oval whose exact digit structure cannot be confirmed. Do not approve this uncertainty as preserved anatomy."
+        },
+        {
+          "identity": "Miraidon",
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen3/sections/normal/sources/cutouts/pokemon_1008_miraidon.png",
+            "sha256": "282add1c4774047944a6c9d377ee0ed739744d2d23bb18ac32133534190a022a",
+            "pixel_sha256": "fe22dead91aca376715aa4c7c179a86de19a713d6512bf6ee660f0d0837a77de",
+            "hashes_verified": true,
+            "actually_viewed": true
+          },
+          "crop": {
+            "cell": "r3c3",
+            "file": "tmp/poster-workspaces/ExGen3/sections/normal/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "1217bbc79b8083323b5d160a14fdeaf2b002aa6c76725ae1c7c3b9516ac04a38",
+            "dimensions": [
+              750,
+              1050
+            ],
+            "actually_viewed": true
+          },
+          "verdict": "reject",
+          "observations": "Source thin jagged lightning-like head extensions become solid leaf/feather-shaped horns. The readable source eye disappears into the narrow dark face. Chest light markings lose their zigzag pattern; raised hand digits and segmented lower body are simplified into fused shapes. Full tail fits the crop, so clipping does not explain the loss."
+        }
+      ],
+      "scene_observations": "One continuous landscape across all nine cells. No subject crosses a physical cut line; sky/title and middle information cells remain separate from figures. Current source-sized figure defects persist in the actual German PDF.",
+      "pdf_evidence": {
+        "file": "output/de/ExGen3_DE.pdf",
+        "sha256": "3f2511dfebfd2c52df134a24eb797aa8f16d142ac1e6272529d10d112ab330d4",
+        "page": 1,
+        "raster": "tmp/pdfs/exgen3-source-review.c1UeAy/ExGen3_DE_page1.png",
+        "raster_sha256": "babb82271f41adb060c98b10d47d06c1e6b9b82ca524e07e4fd846033c49b6c3",
+        "actually_viewed": true
+      }
+    },
+    {
+      "asset_key": "ExGen3/sections/mega",
+      "verdict": "reject",
+      "provenance": {
+        "file": "assets/posters/ExGen3/sections/mega/poster-flux2-provenance.json",
+        "sha256": "9050ed19dbcd6d6af4d07446c867fc06eb58ee43bb536dda735aff5de33e0fde"
+      },
+      "master": {
+        "file": "assets/posters/ExGen3/sections/mega/poster-flux2-artwork.png",
+        "sha256": "e630635438acc3a00aeb286ff287a28c3e3839767b256851d889884b6190c354",
+        "pixel_sha256": "f3853ce711489955113d2b88151a9b8637edfcbd552f9e1d692acdffc5d5b58d",
+        "hashes_verified": true,
+        "actually_viewed": true
+      },
+      "crop_coverage": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/ExGen3/sections/mega/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "2d21404394767e71ef5aa820013ab3f3432370a0bdee088d4f2ff3ca8fbfe9b6",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/ExGen3/sections/mega/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "21a7b4ce1613f41f1f0e73cfa8bab5e96dd5765a30ddc14a193ad6ddfcfbb622",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/ExGen3/sections/mega/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "e64cbdf0f4729004100b496b76a4a8193fc90bbec9e90bb8b5b011665973764d",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/ExGen3/sections/mega/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "6c739e0d89a33f3543691a1caa390cc40a6d219969e51e9e45a17ee390f485bd",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/ExGen3/sections/mega/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "6809c7f4ea6275bf21c199203eeeea308152f5fea6c43f722e41cc0e9a56be0c",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/ExGen3/sections/mega/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "1b0784e1200905ac6d98dabe21362d6ce43e3921f70c0e2c438524263dd663d8",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/ExGen3/sections/mega/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "efd3594c49e98341b90d98bf54a78def01c392038608dcc9e0d4334c0a0fde5b",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/ExGen3/sections/mega/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "bf93b6606b314f7adba416db883418afa42b4d28cc819cff333ce138b0fb98a6",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/ExGen3/sections/mega/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "f67e06fdb613174a4de5b0a9d7b824f60cefa1c78fb6750dd57dab3a56d9ee3b",
+          "dimensions": [
+            750,
+            1050
+          ],
+          "actually_viewed": true
+        }
+      ],
+      "subjects": [
+        {
+          "identity": "Mega Latias",
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen3/sections/mega/sources/cutouts/pokemon_380_artwork_10062_mega_latias.png",
+            "sha256": "73d1e516779d7106f2c39c8cdfbe0d74b83127a296f6f5927b9432673dc83787",
+            "pixel_sha256": "5c9afa2435eb806d76964ed10de2cd51f5ac905fece59d62b04ca52b3b1a7449",
+            "hashes_verified": true,
+            "actually_viewed": true
+          },
+          "crop": {
+            "cell": "r3c1",
+            "file": "tmp/poster-workspaces/ExGen3/sections/mega/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "efd3594c49e98341b90d98bf54a78def01c392038608dcc9e0d4334c0a0fde5b",
+            "dimensions": [
+              750,
+              1050
+            ],
+            "actually_viewed": true
+          },
+          "verdict": "reject",
+          "observations": "The near hand at the right has four narrow white claw tips instead of the source's three. The original pointed head plumes become irregular short prongs. Purple wing silhouette and yellow eye survive; the extra unobscured claw is the decisive anatomy failure."
+        },
+        {
+          "identity": "Mega Diancie",
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen3/sections/mega/sources/cutouts/pokemon_719_artwork_10075_mega_diancie.png",
+            "sha256": "96abacb8a7430bf4d242c9ee694c937eb86aa3e1f8154ab0755e4e615868d48e",
+            "pixel_sha256": "6403c9b3f8171df5d25e4c6d67a76741474b5d2258860e6078386e10d9a95308",
+            "hashes_verified": true,
+            "actually_viewed": true
+          },
+          "crop": {
+            "cell": "r3c2",
+            "file": "tmp/poster-workspaces/ExGen3/sections/mega/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "bf93b6606b314f7adba416db883418afa42b4d28cc819cff333ce138b0fb98a6",
+            "dimensions": [
+              750,
+              1050
+            ],
+            "actually_viewed": true
+          },
+          "verdict": "reject",
+          "observations": "The source has clearly faceted crown diamond, readable orange/yellow eyes and distinct thin hands. The crown becomes a largely flat pale shape, the eye/face area is smeared, and both hands become blade-like strokes. The transparent veil is also replaced by broad opaque-edged ribbons. General dress silhouette is not sufficient to approve the lost defining details."
+        },
+        {
+          "identity": "Mega Lucario",
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen3/sections/mega/sources/cutouts/pokemon_448_artwork_10059_mega_lucario.png",
+            "sha256": "d51cd3b0051ffc2fe17b14c423c883831a8723b0da904bbc1f51367d15a6e85c",
+            "pixel_sha256": "d46aa86b77c45468013a7b60fbe5487bb78b95b7c20468cc900809208175a813",
+            "hashes_verified": true,
+            "actually_viewed": true
+          },
+          "crop": {
+            "cell": "r3c3",
+            "file": "tmp/poster-workspaces/ExGen3/sections/mega/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "f67e06fdb613174a4de5b0a9d7b824f60cefa1c78fb6750dd57dab3a56d9ee3b",
+            "dimensions": [
+              750,
+              1050
+            ],
+            "actually_viewed": true
+          },
+          "verdict": "reject",
+          "observations": "Source shows one forward central chest spike plus two lateral spike ends; all three are absent in the currently promoted image. Source orange eye becomes an oversized red spot. Wrist spikes are missing or fused with hands and feet gain many fine toe/claw marks. Body fits its cell; the corruption is already in the source master, not introduced by PDF placement."
+        }
+      ],
+      "scene_observations": "One continuous landscape across all nine cells. No subject crosses a physical cut line; sky/title and middle information cells remain separate from figures. Current source-sized figure defects persist in the actual German PDF.",
+      "pdf_evidence": {
+        "file": "output/de/ExGen3_DE.pdf",
+        "sha256": "3f2511dfebfd2c52df134a24eb797aa8f16d142ac1e6272529d10d112ab330d4",
+        "page": 27,
+        "raster": "tmp/pdfs/exgen3-source-review.c1UeAy/ExGen3_DE_page27.png",
+        "raster_sha256": "d2e46596bdc2f70a950d9c61d65e6cbff2008bcbce16631100b083e25f1a761d",
+        "actually_viewed": true
+      }
+    }
+  ]
+}

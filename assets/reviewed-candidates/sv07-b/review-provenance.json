@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "kind": "review_archive_not_production_provenance",
+  "archived_on": "2026-09-22",
+  "scope": "SV07",
+  "review_status": "identity_and_scene_accepted_shadow_correction_reserved",
+  "purpose": "Preserve exact previously shown artwork under the user Git-backup request; not technical promotion.",
+  "master": {
+    "file": "assets/reviewed-candidates/sv07-b/artwork-300dpi.png",
+    "sha256": "3d44b64f29b99898f150a4a5bee5cf62d6e928f1658dd9396a4464e76dda2799"
+  },
+  "original_candidate": {
+    "file": "tmp/oneshot-trials/sv07-source-detail-20260915-b/review/artwork-300dpi.png",
+    "sha256": "3d44b64f29b99898f150a4a5bee5cf62d6e928f1658dd9396a4464e76dda2799"
+  },
+  "original_review_report": {
+    "file": "docs/reviews/2026-09-15-sv07-source-detail-b.json",
+    "sha256": "32d3bfef6552236c9bced14e857c112db734a7b6b6ab057512908a80cc27c687"
+  },
+  "original_review_decision": {
+    "reviewed_on": "2026-09-15",
+    "user_text": "alles perfekt. der neue Flow scheint sehr gut zu greifen!",
+    "scope": "Identity of all three shown Pokemon, scene and composition including the explicitly disclosed larger Scorbunny/Squirtle.",
+    "interpretation": "Responds to the preceding identity/composition checkpoint. This is exact-image aesthetic acceptance, not an automatic technical promotion or a claim that the reserved shadow correction has been performed.",
+    "master": {
+      "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/review/artwork-300dpi.png",
+      "sha256": "3d44b64f29b99898f150a4a5bee5cf62d6e928f1658dd9396a4464e76dda2799"
+    },
+    "raw": {
+      "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/retrieved/oneshot-853845th/output/sv07_flux2_joint_scene_2mp_seed_260915007_00001_.png",
+      "sha256": "4bb09429f81f13718db12f89b5361dc9045bb53aeff7279b9e95b8ce744e5086"
+    },
+    "shown_cards": [
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/review/cards/card_r3_c1.png",
+        "rectangle": [
+          0,
+          2218,
+          750,
+          3268
+        ],
+        "sha256": "3c0d72f9954d0b75e6e00c5c0db344f6b27c73f9785aff7deb59e3d8bd332cc9"
+      },
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/review/cards/card_r3_c2.png",
+        "rectangle": [
+          809,
+          2218,
+          1559,
+          3268
+        ],
+        "sha256": "d491bc827e1dd75f70d4a8b0d8e5f96f40196ca078312c2e9443b91caf4449ab"
+      },
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/review/cards/card_r3_c3.png",
+        "rectangle": [
+          1618,
+          2218,
+          2368,
+          3268
+        ],
+        "sha256": "7d53721bea84c8aefb19cff8045c365309303d3811981daa5a237582aeed9981"
+      }
+    ],
+    "exact_sources": [
+      {
+        "name": "Bisasam",
+        "card": "r3c1",
+        "key": "pokeapi:official-artwork:1",
+        "path": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_001_bulbasaur.png",
+        "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a"
+      },
+      {
+        "name": "Schiggy",
+        "card": "r3c2",
+        "key": "pokeapi:official-artwork:7",
+        "path": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_007_squirtle.png",
+        "sha256": "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290"
+      },
+      {
+        "name": "Hopplo",
+        "card": "r3c3",
+        "key": "pokeapi:official-artwork:813",
+        "path": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_813_scorbunny.png",
+        "sha256": "0099f4bb576966efc872c03c69616f954c8474d12608a2fd7e91304a9d271167"
+      }
+    ],
+    "reserved_before_promotion": [
+      "Previously stated narrow Scorbunny ground-shadow correction and its subsequent visual review.",
+      "Canonical technical promotion, PDF and release verification."
+    ],
+    "prior_agent_findings_preserved": true,
+    "creation_time_evidence_unchanged": true,
+    "approval_does_not_transfer_to_other_images": true,
+    "fresh_candidate_and_source_hash_verification": "Canonical pilot verify completed successfully before recording this response."
+  },
+  "reviewed_original_sources": [
+    {
+      "name": "Bisasam",
+      "card": "r3c1",
+      "key": "pokeapi:official-artwork:1",
+      "path": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_001_bulbasaur.png",
+      "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a"
+    },
+    {
+      "name": "Schiggy",
+      "card": "r3c2",
+      "key": "pokeapi:official-artwork:7",
+      "path": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_007_squirtle.png",
+      "sha256": "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290"
+    },
+    {
+      "name": "Hopplo",
+      "card": "r3c3",
+      "key": "pokeapi:official-artwork:813",
+      "path": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_813_scorbunny.png",
+      "sha256": "0099f4bb576966efc872c03c69616f954c8474d12608a2fd7e91304a9d271167"
+    }
+  ],
+  "promoted": false,
+  "production_routing_enabled_by_archive": false,
+  "release_ready": false,
+  "limits": [
+    "No source images, title logos, raw outputs, worker logs or private renderer configuration archived.",
+    "No whole-image acceptance is inferred from a partial subject review.",
+    "Original generation pipeline/version and historical report remain unchanged.",
+    "This is not a complete immutable-render-job backup."
+  ]
+}

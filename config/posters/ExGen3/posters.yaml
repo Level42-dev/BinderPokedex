@@ -12,6 +12,6 @@ posters:
   section_id: mega
   manifest: sections/mega/poster.yaml
   pdf:
-    enabled: true
+    enabled: false
     artwork_file: poster-flux2-artwork.png
     insertion: after_section_cover

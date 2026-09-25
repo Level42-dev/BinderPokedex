@@ -19,6 +19,6 @@ posters:
   section_id: primal
   manifest: sections/primal/poster.yaml
   pdf:
-    enabled: true
+    enabled: false
     artwork_file: poster-flux2-artwork.png
     insertion: after_section_cover

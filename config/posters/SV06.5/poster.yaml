@@ -31,21 +31,39 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260733691
+    reference_mode: spatial_source_detail_joint
+    seed: 260734700
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
   scene:
     concept: the Shrouded Fable expansion
-    setting: The artwork contains a mist-covered mountain forest, twisted old trees, distant
-      mossy shrine stones without symbols or writing, and layered veils of blue-green folklore
-      atmosphere.
+    setting: The artwork contains a mist-covered mountain forest, twisted old trees, distant mossy shrine
+      stones without symbols or writing, and layered veils of blue-green folklore atmosphere.
     lighting: Diffuse cool daylight filters through mist from the upper left.
-    rendering: Use storybook trading-card linework, muted jade and indigo colors, and deep
-      atmospheric layering.
+    rendering: Use storybook trading-card linework, muted jade and indigo colors, and deep atmospheric
+      layering.
     ground_noun: forest floor
+  source_details:
+    pokeapi:official-artwork:722:
+      sha256: 5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36
+      traits: Rowlet must match this exact round tan owl source pose. Preserve the two joined white facial
+        discs, two separate dark oval eyes with white highlights, and the central white upper beak with
+        its orange lower section. Keep the two distinct green leaves of the bow tie, the pale lower belly,
+        both folded side wings, and the two small orange-brown feet in their original positions. Copy
+        the source proportions, face spacing and clean rounded silhouette; do not add ears or extra limbs.
+    pokeapi:official-artwork:717:
+      sha256: 154bd7f904c5db48ddce7cc7ff656f95cd110c7327bee28a895b11fddfcfa4a7
+      traits: Match the exact red-and-black Yveltal source with its narrow defined head, distinct eyes,
+        broad Y-shaped wing-arms ending in black finger-like tips, long neck and tail, and separately
+        visible talons. Preserve the angular silhouette and correct foot details instead of softening
+        it into a bird.
+    pokeapi:official-artwork:649:
+      sha256: 0d77f632c0d27b74998040266b493c817a3643e2257e106a0feaa5fe52002b5a
+      traits: 'Match the exact purple Genesect source: angular insectlike head and paired red eyes, long
+        separate cannon above the back, segmented torso, two distinct arms and legs, and compact clawed
+        feet. Keep the eyes and cannon mechanically crisp, not rounded into a generic robot face.'
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns

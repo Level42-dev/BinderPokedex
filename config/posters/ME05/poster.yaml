@@ -1,0 +1,77 @@
+scope: ME05
+layout:
+  name: standard_3x3
+text_cells:
+  title:
+    row: 1
+    column: 2
+  set_info:
+    row: 2
+    column: 2
+    max_width_ratio: 0.92
+    max_height_ratio: 0.68
+pdf:
+  enabled: true
+  artwork_file: poster-flux2-artwork.png
+  insertion: after_first_section_cover
+artwork:
+  promoted_file: poster-flux2-artwork.png
+  provenance_file: poster-flux2-provenance.json
+  identity_lock:
+    overscan_ratio: 0.04
+    max_protected_start_ratio: 0.7
+    transition_ratio: 0.1
+    subject_clearance_ratio: 0.02
+  generation:
+    engine: flux
+    model: flux-2-klein-4b.safetensors
+    model_sha256: ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343
+    encoder: qwen_3_4b.safetensors
+    encoder_sha256: 6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a
+    vae: flux2-vae.safetensors
+    vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
+    mode: joint_scene
+    reference_mode: spatial_identity_joint
+    seed: 260912507
+    steps: 4
+    generation_megapixels: 1.0
+    output_dpi: 300
+    output_method: lanczos
+  scene:
+    concept: the Dunkelnacht expansion and its mysterious nocturnal energy
+    setting: >-
+      The artwork contains a broad moonlit valley with layered indigo woodland,
+      dark crystalline ridges, quiet reflective pools, and distant violet cloud
+      ribbons crossing an open midnight sky.
+    lighting: >-
+      Cool moonlight enters from the upper left with restrained violet and
+      silver highlights.
+    rendering: >-
+      Use polished trading-card illustration, clean cel-painted linework, deep
+      but readable nocturnal colors, and spacious atmospheric depth.
+    ground_noun: moonlit grass
+pokemon:
+  strategy: featured_from_scope
+  count: auto_from_layout_columns
+  row: bottom
+  cutout_source: pokeapi_official_artwork
+  fallback_candidates:
+  - pokemon_id: 25
+  - pokemon_id: 1
+  - pokemon_id: 4
+  - pokemon_id: 7
+  - pokemon_id: 133
+  - pokemon_id: 6
+conditioning:
+  identity_defaults:
+    neutral_rgb:
+    - 226
+    - 224
+    - 211
+    canvas_px: 512
+    min_subject_px: 150
+    max_subject_px: 350
+    bottom_padding_px: 24
+title_logo:
+  files:
+    de: logos/logo-de.png

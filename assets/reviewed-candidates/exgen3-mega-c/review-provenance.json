@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "kind": "review_archive_not_production_provenance",
+  "archived_on": "2026-09-22",
+  "scope": "ExGen3/sections/mega",
+  "review_status": "shown_scene_accepted_with_disclosed_eye_detail",
+  "purpose": "Preserve exact previously shown artwork under the user Git-backup request; not technical promotion.",
+  "master": {
+    "file": "assets/reviewed-candidates/exgen3-mega-c/artwork-300dpi.png",
+    "sha256": "eb61f272fd22bd400b2c2555cb2a490fad47c85b3947087a88b96b2e9dce3ebd"
+  },
+  "original_candidate": {
+    "file": "tmp/oneshot-trials/exgen3-source-detail-20260914-c/review/artwork-300dpi.png",
+    "sha256": "eb61f272fd22bd400b2c2555cb2a490fad47c85b3947087a88b96b2e9dce3ebd"
+  },
+  "original_review_report": {
+    "file": "docs/reviews/2026-09-14-exgen3-oneshot-c.json",
+    "sha256": "ce44b6b8897b9555cd6ebfcc5a11155ef072c6bcee7f042b8400b5c44e09b6a0"
+  },
+  "original_review_decision": {
+    "reviewer_kind": "human",
+    "review_date": "2026-09-14",
+    "source": "direct user message in this task",
+    "decision": "visual_candidate_accepted",
+    "candidate": "exgen3-source-detail-20260914-c",
+    "user_statement": "Sieht wirklich gut aus. Nur noch leichte Abweichungen, zb im Auge fehlt der schwarz Strich/Punkt/Pupille. Aber das halte ich für vertretbar!",
+    "accepted_deviations": "Minor visual deviations in the shown candidate, explicitly including a missing black eye stroke/dot/pupil detail. The user did not identify which subject's eye.",
+    "accepted_master_sha256": "eb61f272fd22bd400b2c2555cb2a490fad47c85b3947087a88b96b2e9dce3ebd",
+    "related_raw_sha256": "a1f96425dc1b7beb7f7cb3d5c35c62cb6e9dd708a2d8187cca2f7b2cb9cc813c",
+    "related_preview_sha256": "046e402de4be80e6cebe4d7008eebf17137835526050ee8dc5883722e69709bb",
+    "review_extent": "Acceptance of the shown overall candidate; no claim that the user separately inspected every physical card crop. The agent's source and nine-crop review remains attributed separately below.",
+    "scope_limit": "This exact candidate only; not a blanket waiver for missing pupils, defining traits or anatomy defects in other artwork.",
+    "first_example_review_gate_satisfied": true,
+    "canonical_integration_completed": false,
+    "production_promotion_completed": false,
+    "release_approval_granted": false
+  },
+  "reviewed_original_sources": [
+    {
+      "path": "tmp/poster-workspaces/ExGen3/sections/mega/sources/cutouts/pokemon_380_artwork_10062_mega_latias.png",
+      "sha256": "73d1e516779d7106f2c39c8cdfbe0d74b83127a296f6f5927b9432673dc83787"
+    },
+    {
+      "path": "tmp/poster-workspaces/ExGen3/sections/mega/sources/cutouts/pokemon_719_artwork_10075_mega_diancie.png",
+      "sha256": "96abacb8a7430bf4d242c9ee694c937eb86aa3e1f8154ab0755e4e615868d48e"
+    },
+    {
+      "path": "tmp/poster-workspaces/ExGen3/sections/mega/sources/cutouts/pokemon_448_artwork_10059_mega_lucario.png",
+      "sha256": "d51cd3b0051ffc2fe17b14c423c883831a8723b0da904bbc1f51367d15a6e85c"
+    }
+  ],
+  "promoted": false,
+  "production_routing_enabled_by_archive": false,
+  "release_ready": false,
+  "limits": [
+    "No source images, title logos, raw outputs, worker logs or private renderer configuration archived.",
+    "No whole-image acceptance is inferred from a partial subject review.",
+    "Original generation pipeline/version and historical report remain unchanged.",
+    "This is not a complete immutable-render-job backup."
+  ]
+}

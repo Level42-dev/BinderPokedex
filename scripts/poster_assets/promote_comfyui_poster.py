@@ -13,9 +13,10 @@ from pathlib import Path
 from PIL import Image
 
 try:
+    from .generation_contract import is_grounded_generation, requires_visual_review
+    from .provenance import require_grounding_pixel_validation
     from .finalize_comfyui_poster import finalize
     from .generation_contract import (
-        is_joint_scene_generation,
         requires_generation_fingerprint,
         validate_promotable_generation_contract,
     )
@@ -37,9 +38,10 @@ try:
     )
     from .slice_poster import slice_poster
 except ImportError:
+    from generation_contract import is_grounded_generation, requires_visual_review
+    from provenance import require_grounding_pixel_validation
     from finalize_comfyui_poster import finalize
     from generation_contract import (
-        is_joint_scene_generation,
         requires_generation_fingerprint,
         validate_promotable_generation_contract,
     )
@@ -169,6 +171,7 @@ def promote(
     name: str = "flux2",
     force: bool = False,
     approve_joint_scene: bool = False,
+    reviewer_kind: str | None = None,
     run_metadata_path: Path,
 ) -> tuple[Path, Path, list[Path], Path]:
     """Persist a reviewed master; keep reproducible QA derivatives ignored."""
@@ -229,10 +232,10 @@ def promote(
             f"{manifest_path}. Review and update artwork.generation before "
             "promoting this candidate."
         )
-    is_joint_scene = is_joint_scene_generation(recorded_generation)
-    if approve_joint_scene and not is_joint_scene:
+    needs_visual_review = requires_visual_review(recorded_generation)
+    if approve_joint_scene and not needs_visual_review:
         raise ValueError(
-            "--approve-joint-scene applies only to flux/joint_scene candidates"
+            "--approve-joint-scene applies only to joint-scene or grounded candidates"
         )
     run_inputs = run_metadata.get("inputs")
     if not isinstance(run_inputs, dict):
@@ -282,7 +285,11 @@ def promote(
         # expensive generation. Bind the promotion preview to their current
         # state instead of rejecting the reviewed text-free artwork.
         run_inputs["overlay_fingerprint"] = build_overlay_fingerprint(bundle)
-    if is_joint_scene:
+    if is_grounded_generation(recorded_generation):
+        require_grounding_pixel_validation(
+            run_metadata, verify_files=not refreshing_existing_promotion,
+        )
+    if needs_visual_review:
         if refreshing_existing_promotion:
             if approve_joint_scene:
                 raise ValueError(
@@ -302,6 +309,7 @@ def promote(
                     run_metadata,
                     artwork_path=artwork,
                     raw_artwork_path=raw_artwork_path,
+                    reviewer_kind=reviewer_kind,
                 )
             require_joint_scene_visual_review(
                 run_metadata,
@@ -347,7 +355,7 @@ def promote(
         if output_dpi:
             save_options["dpi"] = (float(output_dpi), float(output_dpi))
         source.save(staged_artwork, **save_options)
-        if is_joint_scene:
+        if needs_visual_review:
             reviewed = require_joint_scene_visual_review(run_metadata)
             stable_pixels = image_pixel_record(
                 staged_artwork,
@@ -429,6 +437,11 @@ def main() -> int:
         ),
     )
     parser.add_argument("--run-metadata", required=True, type=Path)
+    parser.add_argument(
+        "--reviewer-kind",
+        choices=("human", "agent"),
+        help="Required with --approve-joint-scene; records who inspected the artwork",
+    )
     args = parser.parse_args()
 
     artwork_path, final_path, cards, provenance_path = promote(
@@ -438,6 +451,7 @@ def main() -> int:
         name=args.name,
         force=args.force,
         approve_joint_scene=args.approve_joint_scene,
+        reviewer_kind=args.reviewer_kind,
         run_metadata_path=args.run_metadata,
     )
     print(f"Artwork: {artwork_path}")

@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "kind": "review_archive_not_production_provenance",
+  "archived_on": "2026-09-23",
+  "purpose": "Preserve the exact 29 user-accepted text-free panorama masters in Git without changing production routing.",
+  "acceptance_record": {
+    "path": "docs/reviews/2026-09-23-panorama-batch-user-acceptance.json",
+    "sha256": "6c30b112ab1305ebe11578083a60ac2a77ec571b6702fa0a16d2cec56f1cf749"
+  },
+  "evidence_report": {
+    "path": "docs/reviews/2026-09-22-panorama-batch-evidence.json",
+    "sha256": "2854fdbf2502e30fccf6a5c85b89ccf1246d7394d6cbe1f207f9255c41f8999b"
+  },
+  "masters": [
+    {
+      "review_id": "P05",
+      "scope": "Pokedex/sections/gen2",
+      "variant": "p05-source-detail-20260922-d",
+      "original_path": "tmp/oneshot-trials/p05-source-detail-20260922-d/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p05/artwork-300dpi.png",
+      "sha256": "ed0b8e1934588d4a7617c5821dcae835bad9f5bc757bc72e7fc1133bfa81cf82"
+    },
+    {
+      "review_id": "P07",
+      "scope": "Pokedex/sections/gen4",
+      "variant": "p07-batch-20260922-b",
+      "original_path": "tmp/oneshot-trials/p07-batch-20260922-b/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p07/artwork-300dpi.png",
+      "sha256": "6cb096641b830851e87428c9a8d3825b9dcf016818f69ead53a5c7121f92062c"
+    },
+    {
+      "review_id": "P08",
+      "scope": "Pokedex/sections/gen5",
+      "variant": "p08-batch-20260922-a",
+      "original_path": "tmp/oneshot-trials/p08-batch-20260922-a/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p08/artwork-300dpi.png",
+      "sha256": "53cbd5a3f6a91e1ef0725e9e8ac872387e1248df602cdefecb30a8a39ecd29c9"
+    },
+    {
+      "review_id": "P09",
+      "scope": "Pokedex/sections/gen6",
+      "variant": "p09-batch-20260922-a",
+      "original_path": "tmp/oneshot-trials/p09-batch-20260922-a/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p09/artwork-300dpi.png",
+      "sha256": "e60684632ceb0bfad55d394706c36a026e19dba025f25eb028cdf684d32ba4ef"
+    },
+    {
+      "review_id": "P11",
+      "scope": "Pokedex/sections/gen8",
+      "variant": "p11-batch-20260922-a",
+      "original_path": "tmp/oneshot-trials/p11-batch-20260922-a/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p11/artwork-300dpi.png",
+      "sha256": "e7cd202e96cc577db36b370f5171cfed98b4698da3f67ca714bb438830eb6d05"
+    },
+    {
+      "review_id": "P12",
+      "scope": "Pokedex/sections/gen9",
+      "variant": "p12-batch-20260922-a",
+      "original_path": "tmp/oneshot-trials/p12-batch-20260922-a/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p12/artwork-300dpi.png",
+      "sha256": "3669378fb6c7530a82a45b1c3cb573525ac7912c6ff76db9f0a8ba291da83c53"
+    },
+    {
+      "review_id": "P13",
+      "scope": "ExGen1/sections/normal",
+      "variant": "p13-batch-20260922-a",
+      "original_path": "tmp/oneshot-trials/p13-batch-20260922-a/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p13/artwork-300dpi.png",
+      "sha256": "d3a9bea00447de6c0df558f6979681f49e86f5392ba25b3ab087e05fefb05557"
+    },
+    {
+      "review_id": "P14",
+      "scope": "ExGen2/sections/normal",
+      "variant": "p14-batch-20260922-b",
+      "original_path": "tmp/oneshot-trials/p14-batch-20260922-b/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p14/artwork-300dpi.png",
+      "sha256": "a2a39bedce61820387039aa528039890326ed7bc6ef032bdb7af164e1a0f91c4"
+    },
+    {
+      "review_id": "P17",
+      "scope": "Base3",
+      "variant": "p17-batch-20260922-b",
+      "original_path": "tmp/oneshot-trials/p17-batch-20260922-b/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p17/artwork-300dpi.png",
+      "sha256": "6377efa79e83fe2bd706017a41667db2d6619441d808c1cc3f71644974f33bfd"
+    },
+    {
+      "review_id": "P18",
+      "scope": "SV01",
+      "variant": "p18-batch-20260922-b",
+      "original_path": "tmp/oneshot-trials/p18-batch-20260922-b/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p18/artwork-300dpi.png",
+      "sha256": "a952cb5ded85f41e32e6e5851c7d43e30e89be56ef42ce99f08c9f813d8ec09f"
+    },
+    {
+      "review_id": "P19",
+      "scope": "SV02",
+      "variant": "p19-batch-20260922-b",
+      "original_path": "tmp/oneshot-trials/p19-batch-20260922-b/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p19/artwork-300dpi.png",
+      "sha256": "3cae82d5c3a29b9aaac2503ef0afa266a0ff5085b4d936bc54318bf3395f5bd8"
+    },
+    {
+      "review_id": "P20",
+      "scope": "SV03",
+      "variant": "p20-batch-20260922-b",
+      "original_path": "tmp/oneshot-trials/p20-batch-20260922-b/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p20/artwork-300dpi.png",
+      "sha256": "868dd69b9b6cdf94ee06aaca084e8434a575fde097eac704ccd1846fc7fd14bb"
+    },
+    {
+      "review_id": "P21",
+      "scope": "SV03.5",
+      "variant": "p21-batch-20260922-b",
+      "original_path": "tmp/oneshot-trials/p21-batch-20260922-b/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p21/artwork-300dpi.png",
+      "sha256": "47ae99820a848f208008befd6c959c3393ed6d4f14f5f453682589299473464a"
+    },
+    {
+      "review_id": "P22",
+      "scope": "SV04",
+      "variant": "p22-batch-20260922-b",
+      "original_path": "tmp/oneshot-trials/p22-batch-20260922-b/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p22/artwork-300dpi.png",
+      "sha256": "1250ba297a9bb68ab116d9f4ccca0efddef52d96442c10d363beb474dcbceb65"
+    },
+    {
+      "review_id": "P23",
+      "scope": "SV04.5",
+      "variant": "p23-batch-20260922-d",
+      "original_path": "tmp/oneshot-trials/p23-batch-20260922-d/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p23/artwork-300dpi.png",
+      "sha256": "cc0931eef931dbc080ca860c9163c0b9ab37965a6cd51853b17731d758f2445e"
+    },
+    {
+      "review_id": "P24",
+      "scope": "SV05",
+      "variant": "p24-batch-20260922-b",
+      "original_path": "tmp/oneshot-trials/p24-batch-20260922-b/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p24/artwork-300dpi.png",
+      "sha256": "5906999f2cf695791ca67d84c1bce2ed0e15cd134e705410b07c7693fa9c3a88"
+    },
+    {
+      "review_id": "P25",
+      "scope": "SV06",
+      "variant": "p25-batch-20260922-b",
+      "original_path": "tmp/oneshot-trials/p25-batch-20260922-b/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p25/artwork-300dpi.png",
+      "sha256": "d7e7fa2fe895049eb6d05f92afaaa8aac53046788c3e7b305fd57a5b4f227a67"
+    },
+    {
+      "review_id": "P26",
+      "scope": "SV06.5",
+      "variant": "p26-batch-20260922-b",
+      "original_path": "tmp/oneshot-trials/p26-batch-20260922-b/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p26/artwork-300dpi.png",
+      "sha256": "06d93ca7eea6d0dd961df3df6122a74e45bacf05785059d9eb5119f21e1baac9"
+    },
+    {
+      "review_id": "P28",
+      "scope": "SV08.5",
+      "variant": "p28-batch-20260922-b",
+      "original_path": "tmp/oneshot-trials/p28-batch-20260922-b/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p28/artwork-300dpi.png",
+      "sha256": "ad690494a14b3998a2a9ac86ffc522ce1cf3df84b1db6805dd1d6217c9e121e8"
+    },
+    {
+      "review_id": "P29",
+      "scope": "SV09",
+      "variant": "p29-batch-20260922-b",
+      "original_path": "tmp/oneshot-trials/p29-batch-20260922-b/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p29/artwork-300dpi.png",
+      "sha256": "f520e268290bcb16638481a7391fdbf6ab46ad28abf6915e74e22de3508f841c"
+    },
+    {
+      "review_id": "P30",
+      "scope": "SV10",
+      "variant": "p30-batch-20260922-b",
+      "original_path": "tmp/oneshot-trials/p30-batch-20260922-b/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p30/artwork-300dpi.png",
+      "sha256": "79ef9332fd67b1e368f127f5cce64055d35363705b9fdd395d0f0404c7dadbdd"
+    },
+    {
+      "review_id": "P31",
+      "scope": "SV10.5B",
+      "variant": "p31-batch-20260922-b",
+      "original_path": "tmp/oneshot-trials/p31-batch-20260922-b/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p31/artwork-300dpi.png",
+      "sha256": "9045ba28e1d0109836e994277376570ab4956f3941b88540b39e490e956b3fca"
+    },
+    {
+      "review_id": "P32",
+      "scope": "SV10.5W",
+      "variant": "p32-batch-20260922-b",
+      "original_path": "tmp/oneshot-trials/p32-batch-20260922-b/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p32/artwork-300dpi.png",
+      "sha256": "953a96ab998cf7106bcdb48b2ccd529d1993843a62b6bee0285b510d7f54bc06"
+    },
+    {
+      "review_id": "P33",
+      "scope": "SVP",
+      "variant": "p33-batch-20260922-b",
+      "original_path": "tmp/oneshot-trials/p33-batch-20260922-b/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p33/artwork-300dpi.png",
+      "sha256": "63ab635defb8330d01fce514bd14080d40a3715fbd1eb961736ed9b43230c924"
+    },
+    {
+      "review_id": "P34",
+      "scope": "ME01",
+      "variant": "p34-batch-20260922-b",
+      "original_path": "tmp/oneshot-trials/p34-batch-20260922-b/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p34/artwork-300dpi.png",
+      "sha256": "02fad0ecbc18c47b25e9eaf0c542d9928f97fb2529bd3ede305e6bef62948f5d"
+    },
+    {
+      "review_id": "P35",
+      "scope": "ME02",
+      "variant": "p35-batch-20260922-b",
+      "original_path": "tmp/oneshot-trials/p35-batch-20260922-b/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p35/artwork-300dpi.png",
+      "sha256": "994973afcecaa6f4508d8e31c083e7439793b3d2ecb40b90e6535f9c58e9d236"
+    },
+    {
+      "review_id": "P36",
+      "scope": "ME02.5",
+      "variant": "p36-batch-20260922-b",
+      "original_path": "tmp/oneshot-trials/p36-batch-20260922-b/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p36/artwork-300dpi.png",
+      "sha256": "34ece29bdea31475c29177fb320e8aa04dee7fcb3faf575abcf725ddeb9e407f"
+    },
+    {
+      "review_id": "P38",
+      "scope": "ME04",
+      "variant": "p38-batch-20260922-b",
+      "original_path": "tmp/oneshot-trials/p38-batch-20260922-b/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p38/artwork-300dpi.png",
+      "sha256": "ddcaad6b7911534db808ce548dce9e62d3f406d8732138476c827896e228bae2"
+    },
+    {
+      "review_id": "P39",
+      "scope": "MEP",
+      "variant": "p39-batch-20260922-b",
+      "original_path": "tmp/oneshot-trials/p39-batch-20260922-b/review/artwork-300dpi.png",
+      "archive_path": "assets/reviewed-candidates/v10-batch-20260923/p39/artwork-300dpi.png",
+      "sha256": "88e3a5ef794b6fd3e825758998f288f0662f9c422c7ba6019db71f09ee0b9c42"
+    }
+  ],
+  "promoted": false,
+  "production_routing_enabled_by_archive": false,
+  "release_ready": false,
+  "excluded": [
+    "P16",
+    "P37"
+  ],
+  "not_archived": [
+    "source cutouts",
+    "title logos",
+    "worker logs",
+    "remote configuration",
+    "unapproved render trials"
+  ]
+}

@@ -3,7 +3,7 @@
   "kind": "promoted_poster",
   "outputs": {
     "artwork": {
-      "bytes": 5346340,
+      "bytes": 6511223,
       "dpi": [
         299.9994,
         299.9994
@@ -11,27 +11,27 @@
       "file": "assets/posters/ExGen2/sections/mega/poster-flux2-artwork.png",
       "height": 3268,
       "mode": "RGBA",
-      "pixel_sha256": "5599e86f8c5e4d1a024c4d253502876ee755e41d84702e12f768be9ff5c006df",
-      "sha256": "51a3ceff402561ce6a156d8616e1a270ee302c22e04c1f11260794f6ce074fa0",
+      "pixel_sha256": "f017b1fb8e9b41251993c0fca8929f5b22b0fd3127579a57a246c59beb72e7db",
+      "sha256": "ae8d7afad5051c47117650ae03c1b4cbc30c7da8b7083a10f9e7da3d801b55bb",
       "width": 2368
     }
   },
   "poster_id": "mega",
-  "promoted_at": "2026-08-06T23:49:32.952557+00:00",
-  "review_language": "en",
+  "promoted_at": "2026-09-22T08:40:11.331069+00:00",
+  "review_language": "de",
   "run": {
-    "created_at": "2026-08-06T18:22:07.983614+00:00",
+    "created_at": "2026-09-15T13:41:12.777789+00:00",
     "generation": {
       "encoder": "qwen_3_4b.safetensors",
       "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
       "engine": "flux",
-      "generation_megapixels": 1.0,
+      "generation_megapixels": 2.0,
       "mode": "joint_scene",
       "model": "flux-2-klein-4b.safetensors",
       "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
       "output_dpi": 300,
       "output_method": "lanczos",
-      "reference_mode": "individual_spatial_joint",
+      "reference_mode": "spatial_source_detail_joint",
       "seed": 260736802,
       "steps": 4,
       "vae": "flux2-vae.safetensors",
@@ -41,7 +41,7 @@
       "cutout_manifest": {
         "bytes": 2817,
         "file": "tmp/poster-workspaces/ExGen2/sections/mega/sources/cutouts/manifest.json",
-        "sha256": "66e1a00757275db0192c0916eeb828fafa3652aef12dfd67be249168dcd8f6d1"
+        "sha256": "b57cb92df66edd710019c9487a541ef5d13062551debee36116d530c930ee438"
       },
       "cutouts": [
         {
@@ -111,68 +111,69 @@
           ],
           "effective_prompt": {
             "encoding": "utf-8",
-            "sha256": "2f495e594051c6544406dbf43c3a23f1ea2386dc607c2b210592f72a7a8b1fda"
+            "sha256": "d7612f95d8a70e5718beb82ab914de5ba31279462636b9892a7f0b147039f527"
           },
           "generation": {
             "encoder": "qwen_3_4b.safetensors",
             "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
             "engine": "flux",
-            "generation_megapixels": 1.0,
+            "generation_megapixels": 2.0,
             "mode": "joint_scene",
             "model": "flux-2-klein-4b.safetensors",
             "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
             "output_dpi": 300,
             "output_method": "lanczos",
-            "reference_mode": "individual_spatial_joint",
+            "reference_mode": "spatial_source_detail_joint",
             "seed": 260736802,
             "steps": 4,
             "vae": "flux2-vae.safetensors",
             "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
           },
           "joint_scene_conditioning": {
-            "identity_source_resampling": "canonical_card_fit",
-            "reference_megapixels": 0.5,
+            "cast_max_megapixels": 0.5,
+            "identity_canvas_px": 512,
+            "identity_source_resampling": "none",
             "reference_neutral_rgb": [
               226,
               224,
               211
             ],
-            "reference_strategy": "individual_spatial_identity_per_subject"
+            "reference_strategy": "spatial_cast_plus_unscaled_identity"
           },
           "layout": {
             "columns": 3,
             "name": "standard_3x3",
             "raster_geometry": {
               "generation_canvas_px": [
-                848,
-                1168
+                1200,
+                1664
               ],
               "generation_column_spans_px": [
                 [
                   0,
-                  269
+                  380
                 ],
                 [
-                  290,
-                  558
+                  410,
+                  790
                 ],
                 [
-                  579,
-                  848
+                  820,
+                  1200
                 ]
               ],
               "generation_row_spans_px": [
                 [
                   0,
-                  375
+                  535
                 ],
                 [
-                  396,
-                  772
+                  565,
+                  1099
                 ],
                 [
-                  793,
-                  1168
+                  1129,
+                  1664
                 ]
               ],
               "name": "cumulative_physical_endpoints",
@@ -224,7 +225,7 @@
           },
           "pipeline_contract": {
             "name": "poster_generation",
-            "version": 9
+            "version": 11
           },
           "pokemon": {
             "count": "auto_from_layout_columns",
@@ -242,6 +243,20 @@
             "lighting": "Silver-gold daylight enters from the upper left.",
             "rendering": "Use premium 2010s trading-card illustration, crisp cel-painted linework, restrained jewel tones, and spacious atmospheric depth.",
             "setting": "The artwork contains an elegant Kalos-inspired highland garden with broad low grass, distant pale terraces, restrained crystalline ridges, sparse wind-shaped trees at the outer edges, and faint refracted energy confined to the far atmosphere."
+          },
+          "source_details": {
+            "pokeapi:official-artwork:10043": {
+              "sha256": "5dd98bb485cf51eb4ede5189d28aeb9c6e426bd08d9abbc37187c02268b188d9",
+              "traits": "Mega Mewtwo X must match this exact upright muscular source pose, not ordinary Mewtwo or Mega Mewtwo Y. Preserve the angular light gray head with two pointed horns and the narrow blue eye with dark pupil; keep the surrounding face light gray as in the source. Preserve the pink-violet shoulder arcs and belly, the bent image-left arm with its fist in front of the torso, and the raised image-right hand with three distinct round fingertips. Keep both long pale legs and the separated rounded toes exactly as shown. There is exactly ONE continuous pink-violet tail behind the image-left shoulder: one stem ending in one inward-curled oval tip. Every visible tail part belongs to that same connected stem; no second tip, extra stem or detached oval. Copy the source's open spaces, proportions, expression and viewing direction."
+            },
+            "pokeapi:official-artwork:10063": {
+              "sha256": "ea327ac2ac56cb1a90153bad84f66bd62d25f8c25093733ed1aef9a5411b8054",
+              "traits": "Mega Latios must match this exact elongated white-and-lavender flying pose with the real head at the far LEFT. Preserve the visible red eye, blue forehead area, narrow beak-like mouth, long pale neck and two jagged pale head crests. There is exactly ONE SMALL white-outlined hollow triangular marking near the image-left ROOT of the lavender near-wing surface, just behind the neck. Its center is plain gray-lavender, not an eye. The long dark purple upper wing stretches toward the far RIGHT and is completely PLAIN and UNMARKED. Preserve the source's shallow swept-back wing profile, lighter lavender base, separate lower fins and sharp white contours. Do not add another large upper wing, enlarge or duplicate the small triangle, or place a mark, eye or pupil on the long plain wing. Copy the original wing/body proportions, orientation and spaces between appendages."
+            },
+            "pokeapi:official-artwork:10079": {
+              "sha256": "28a9f35caa69df85cde05fcb5e7785d7581b30910b2cd6df508d35fca2a789f4",
+              "traits": "Mega Rayquaza must match this exact long green serpentine body in its single continuous curled loop, with its head facing down-left and its tapering tail continuing toward the right. Preserve the angular layered head plates, the narrow visible eye, open mouth and separate pale pointed teeth. Copy the two small clawed arms, the geometric body fins, dark panel outlines and circular orange-yellow markings in their source locations. The long gold-orange appendages with diamond-shaped sections are slender flowing energy ribbons, not additional snakes, heads or arms. Preserve the source's complete body path and all distinct head, jaw, claw and fin contours."
+            }
           },
           "source_subject_ids": [
             {
@@ -265,10 +280,16 @@
                 "source": "pokeapi_official_artwork"
               }
             }
-          ]
+          ],
+          "spatial_reference": {
+            "subject_scales": {
+              "pokeapi:official-artwork:10079": 0.8
+            },
+            "version": 1
+          }
         },
         "schema_version": 1,
-        "sha256": "e7dc5239893da1db704838dbfe0b446db9995428c7a442dd21b2070ce1a55f37"
+        "sha256": "844c54cb4094414e7b6395e8e3786fedb5ce98641cb1a51cd9463527ff85f98d"
       },
       "overlay_fingerprint": {
         "components": {
@@ -424,75 +445,84 @@
         "sha256": "f90824daa55f95839693ef3f7824a6ea3107f011aba4f9b7f3ecf151b1d01a9b"
       },
       "prompt": {
-        "bytes": 5988,
-        "file": "tmp/poster-workspaces/ExGen2/sections/mega/comfyui_poster/individual_spatial_joint_prompt.generated.txt",
-        "sha256": "70f413861325546a968964525a9743fc612d710815cbf3eb4f453c79571e0082"
+        "bytes": 5535,
+        "file": "tmp/oneshot-trials/p15-scale-20260915-d/workflows/source_detail_joint_prompt.generated.txt",
+        "sha256": "c3b512748cf9cc44691957f121e8093b399f561fe9f396b5528fe4e80e78ee82"
       },
       "references": [
         {
-          "bytes": 24138,
-          "file": "tmp/poster-workspaces/ExGen2/sections/mega/comfyui_poster/individual_spatial_reference_1.png",
+          "bytes": 58858,
+          "file": "tmp/oneshot-trials/p15-scale-20260915-d/references/joint_scene_cast_reference.png",
           "height": 832,
           "mode": "RGBA",
-          "pixel_sha256": "2c5b72f55528324185e74965b901736099af0e6f460dff09b021239da517d617",
-          "sha256": "b9c7f0ddd4b1ba1c4f86d2761e07d8a644af2e8f81f1ed49c5c263b8b2d7d7f3",
+          "pixel_sha256": "dd5dee7d329f0f344d78744ef704a4497f1cdb4817ebd06683eb6bb5d09f272f",
+          "sha256": "498c7aba9a6b38ed15782a3b0eb27767119718d70e22905ed1e2bd14f081e5a4",
           "width": 608
         },
         {
-          "bytes": 32329,
-          "file": "tmp/poster-workspaces/ExGen2/sections/mega/comfyui_poster/individual_spatial_reference_2.png",
-          "height": 832,
+          "bytes": 96616,
+          "file": "tmp/oneshot-trials/p15-scale-20260915-d/references/identity_reference_1.png",
+          "height": 512,
           "mode": "RGBA",
-          "pixel_sha256": "e6026c1dcf498720e33743aa00200b91c530e7bc2e4bc6150edfd25c7647b02f",
-          "sha256": "0e7990284336e1c0fb0645ffb988054b7914f87de7eb964365d05e8fe05cfdd0",
-          "width": 608
+          "pixel_sha256": "e4a081930fa9f1cc42f586258f37a7d3a3e4e9df105ce81140142d20f9dd4891",
+          "sha256": "22481307e5c2f16199ad8d186f14619734e196c97f6c07bb144596b8a44ba50a",
+          "width": 512
         },
         {
-          "bytes": 18676,
-          "file": "tmp/poster-workspaces/ExGen2/sections/mega/comfyui_poster/individual_spatial_reference_3.png",
-          "height": 832,
+          "bytes": 143911,
+          "file": "tmp/oneshot-trials/p15-scale-20260915-d/references/identity_reference_2.png",
+          "height": 512,
           "mode": "RGBA",
-          "pixel_sha256": "d0ab7b6c0214a4369d8f65b1c4078f9849a0c82271977c833f9bd09d4c864ee8",
-          "sha256": "7c8d467d97511a6fc0e7ebe20c895a26b6aff02dc84401f62a8eb90ce0a3b25d",
-          "width": 608
+          "pixel_sha256": "efeecc85877640422bafabba298dd8346b1fa943f1a7318e4b7cc55e3c18416e",
+          "sha256": "823fda40d277e508560e6e5759abfd58301b2343a9e87f0a860809c088526f5d",
+          "width": 512
+        },
+        {
+          "bytes": 72525,
+          "file": "tmp/oneshot-trials/p15-scale-20260915-d/references/identity_reference_3.png",
+          "height": 512,
+          "mode": "RGBA",
+          "pixel_sha256": "5d818463c5a654e08b0c52a83a341a5470449b90cd9443a8e1cf505e92144079",
+          "sha256": "83dcbbc9a7e4764d2e9f9e22f4343c6d96022a0c5cae0c2ee9e6c05be661e0b9",
+          "width": 512
         }
       ],
       "scope_manifest": {
-        "bytes": 2250,
+        "bytes": 5060,
         "file": "config/posters/ExGen2/sections/mega/poster.yaml",
-        "sha256": "24ec47d44f90b3bb55ec117b6e806fc02daf9fb800b79b58444aeffe19248cba"
+        "sha256": "952126b7e2d5a8d26de0945f5661d53706969a5f7d4cf244d417354c6bbd4db6"
       },
       "workflow": {
-        "bytes": 10029,
-        "file": "tmp/poster-workspaces/ExGen2/sections/mega/comfyui_poster/workflow_api_joint_scene_individual_spatial_joint_1mp_260736802.json",
-        "sha256": "a0d375ecb929023081cf46343262b2c0025e30e3af9db1bcc978f28db9c54eb0"
+        "bytes": 10198,
+        "file": "tmp/oneshot-trials/p15-scale-20260915-d/workflows/workflow_api_joint_scene_spatial_source_detail_joint_2mp_260736802.json",
+        "sha256": "c6340dbcfa8c600b056526a2838f101eb60dd76bda0f7999f7a5169ddc050a7e"
       }
     },
     "kind": "poster_generation_run",
     "poster_id": "mega",
     "raw_artwork": {
-      "bytes": 1320499,
-      "file": "tmp/poster-workspaces/ExGen2/sections/mega/comfyui_poster/output/exgen2__sections__mega_flux2_joint_scene_individual_spatial_1mp_seed_260736802_00001_.png",
-      "height": 1168,
+      "bytes": 2668988,
+      "file": "tmp/oneshot-trials/p15-scale-20260915-d/retrieved/oneshot-vru7sa9g/output/exgen2__sections__mega_flux2_joint_scene_2mp_seed_260736802_00001_.png",
+      "height": 1664,
       "mode": "RGBA",
-      "pixel_sha256": "3fa92f93cf82d4a45fa51a1a2649ca1c804be7698af07177f3e45befcda89c6f",
-      "sha256": "87eb0b97360b1e6479da6512b0414f3ac3ea31b10b81ebad6d8c48502b1932cc",
-      "width": 848
+      "pixel_sha256": "b34db5f852d89b5a5d10b41305fa6d4f7b009ca428fcfcf4f93eb4b15c7b2d6c",
+      "sha256": "21a4db1b8c1f760d7c3718b1fa1cda9b830bbb1218d90e8b1151ceb79704a953",
+      "width": 1200
     },
     "schema_version": 1,
     "scope": "ExGen2/sections/mega",
     "section_id": "mega",
     "source_artwork": {
-      "bytes": 5346340,
+      "bytes": 6511223,
       "dpi": [
         299.9994,
         299.9994
       ],
-      "file": "tmp/poster-workspaces/ExGen2/sections/mega/comfyui_poster/temp/exgen2__sections__mega_flux2_joint_scene_individual_spatial_1mp_seed_260736802_00001__to_300dpi.png",
+      "file": "tmp/oneshot-trials/p15-scale-20260915-d/review/artwork-300dpi.png",
       "height": 3268,
       "mode": "RGBA",
-      "pixel_sha256": "5599e86f8c5e4d1a024c4d253502876ee755e41d84702e12f768be9ff5c006df",
-      "sha256": "51a3ceff402561ce6a156d8616e1a270ee302c22e04c1f11260794f6ce074fa0",
+      "pixel_sha256": "f017b1fb8e9b41251993c0fca8929f5b22b0fd3127579a57a246c59beb72e7db",
+      "sha256": "ae8d7afad5051c47117650ae03c1b4cbc30c7da8b7083a10f9e7da3d801b55bb",
       "width": 2368
     },
     "source_scope": "ExGen2",
@@ -511,14 +541,14 @@
           "natural_scene_integration",
           "coherent_landscape_occlusion"
         ],
-        "generation_fingerprint_sha256": "e7dc5239893da1db704838dbfe0b446db9995428c7a442dd21b2070ce1a55f37",
-        "method": "human_identity_and_scene_review",
+        "generation_fingerprint_sha256": "844c54cb4094414e7b6395e8e3786fedb5ce98641cb1a51cd9463527ff85f98d",
+        "method": "agent_identity_and_scene_review",
         "passed": true,
-        "raw_artwork_pixel_sha256": "3fa92f93cf82d4a45fa51a1a2649ca1c804be7698af07177f3e45befcda89c6f",
-        "raw_artwork_sha256": "87eb0b97360b1e6479da6512b0414f3ac3ea31b10b81ebad6d8c48502b1932cc",
-        "reviewed_artwork_pixel_sha256": "5599e86f8c5e4d1a024c4d253502876ee755e41d84702e12f768be9ff5c006df",
-        "reviewed_artwork_sha256": "51a3ceff402561ce6a156d8616e1a270ee302c22e04c1f11260794f6ce074fa0",
-        "reviewed_at": "2026-08-06T23:49:25.409300+00:00",
+        "raw_artwork_pixel_sha256": "b34db5f852d89b5a5d10b41305fa6d4f7b009ca428fcfcf4f93eb4b15c7b2d6c",
+        "raw_artwork_sha256": "21a4db1b8c1f760d7c3718b1fa1cda9b830bbb1218d90e8b1151ceb79704a953",
+        "reviewed_artwork_pixel_sha256": "f017b1fb8e9b41251993c0fca8929f5b22b0fd3127579a57a246c59beb72e7db",
+        "reviewed_artwork_sha256": "ae8d7afad5051c47117650ae03c1b4cbc30c7da8b7083a10f9e7da3d801b55bb",
+        "reviewed_at": "2026-09-22T08:39:54.655821+00:00",
         "source_cutout_pixel_sha256": [
           "5cb6f08bfa45ba919a4c4490ea815a511d7811f8157ccd014736454271371397",
           "c62bb4f8a03ed1dba5591c040d3b226d4fe4d6f1706e5d8e0031c06b8b1a6de9",

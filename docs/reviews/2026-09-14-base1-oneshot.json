@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-14",
+  "reviewer_kind": "agent",
+  "reviewed_by": "root",
+  "scope": "Base1",
+  "status": "candidate_b_user_accepted_pending_canonical_integration_and_promotion",
+  "operator_acceptance": {
+    "reviewer_kind": "human",
+    "review_date": "2026-09-14",
+    "source": "direct user message in this task",
+    "decision": "visual_candidate_accepted",
+    "candidate": "base1-source-detail-20260914-b",
+    "user_statement": "das sieht super aus!",
+    "accepted_master_sha256": "d06f69eb6e010b2670987a2209d3aec50848ac694aaefec64dc70d342ce0d9b4",
+    "related_raw_sha256": "f655c8a01f8b8f2d4a26b978a29db89ced62e01a5b3dc61d3d7a48eefd16134a",
+    "related_preview_sha256": "32333e3887f59882c06b97d79561f1f5450057982a54f5d0630fa4145716550c",
+    "review_extent": "User accepted the shown text-free overall candidate after the remaining small contour differences were disclosed. No separate human inspection of all nine card crops or acceptance of the German preview's existing English logo subtitle is claimed.",
+    "scope_limit": "This exact Base1 candidate only; independent of the earlier ExGen3-C decision and not a general waiver for source-identity or anatomy errors in other artwork.",
+    "user_review_gate_satisfied": true,
+    "canonical_integration_completed": false,
+    "production_promotion_completed": false,
+    "release_approval_granted": false
+  },
+  "request": "Transfer the accepted ExGen3-C one-shot approach to the Base Set, with special attention to Mewtwo in the lower-left physical card.",
+  "method": "Viewed all three original source cutouts, all four prepared spatial/detail inputs, the installed Base1 full master and Mewtwo crop. For A, viewed native raw, displayed full master and native Mewtwo card; A was rejected for a fourth creature before a complete nine-card review. For B, viewed native raw, displayed full master and German preview, and all nine 750x1050 physical card crops individually at native resolution.",
+  "evidence": {
+    "cards": [
+      {
+        "path": "tmp/oneshot-trials/base1-source-detail-20260914-b/review/cards/card_r1_c1.png",
+        "rectangle": [
+          0,
+          0,
+          750,
+          1050
+        ],
+        "sha256": "4059d59c999c5305a8049f3979a1150a2d768e887a070de808f74c1dadf78d2a"
+      },
+      {
+        "path": "tmp/oneshot-trials/base1-source-detail-20260914-b/review/cards/card_r1_c2.png",
+        "rectangle": [
+          809,
+          0,
+          1559,
+          1050
+        ],
+        "sha256": "e37e2b285f1d333bc8797e36b27d6b33153fb244e007d62593346a4e1ad41654"
+      },
+      {
+        "path": "tmp/oneshot-trials/base1-source-detail-20260914-b/review/cards/card_r1_c3.png",
+        "rectangle": [
+          1618,
+          0,
+          2368,
+          1050
+        ],
+        "sha256": "fbdf62a2801ff8518cba4fc5616abca3e182c96f8ffc67bf35d7fc874c73a7c5"
+      },
+      {
+        "path": "tmp/oneshot-trials/base1-source-detail-20260914-b/review/cards/card_r2_c1.png",
+        "rectangle": [
+          0,
+          1109,
+          750,
+          2159
+        ],
+        "sha256": "b33a6f325b6a6409efe589aa91aaba1cddf55cd96025ca929668eb7c77b683f4"
+      },
+      {
+        "path": "tmp/oneshot-trials/base1-source-detail-20260914-b/review/cards/card_r2_c2.png",
+        "rectangle": [
+          809,
+          1109,
+          1559,
+          2159
+        ],
+        "sha256": "294dbe21e8c8c636f445a4508c66aea3ac34de110cb879006f486b7368b7b041"
+      },
+      {
+        "path": "tmp/oneshot-trials/base1-source-detail-20260914-b/review/cards/card_r2_c3.png",
+        "rectangle": [
+          1618,
+          1109,
+          2368,
+          2159
+        ],
+        "sha256": "b85533c5feee12116ffa682b155f26a9941bca632c50a04812d8f94a6ccfc102"
+      },
+      {
+        "path": "tmp/oneshot-trials/base1-source-detail-20260914-b/review/cards/card_r3_c1.png",
+        "rectangle": [
+          0,
+          2218,
+          750,
+          3268
+        ],
+        "sha256": "d95036a19f0ef155ad45395c4f93862956eba4ee7c5c33df0c53dc0c076b6065"
+      },
+      {
+        "path": "tmp/oneshot-trials/base1-source-detail-20260914-b/review/cards/card_r3_c2.png",
+        "rectangle": [
+          809,
+          2218,
+          1559,
+          3268
+        ],
+        "sha256": "97bc4cf26de30f1c7c653dd7a041e6d4690933a52f19f2b8218e6d35a5c6c14c"
+      },
+      {
+        "path": "tmp/oneshot-trials/base1-source-detail-20260914-b/review/cards/card_r3_c3.png",
+        "rectangle": [
+          1618,
+          2218,
+          2368,
+          3268
+        ],
+        "sha256": "d23e8834daa8af5285e8a6d97404172aa4bdc5b30e5a7b619efb7d9ee51a5b66"
+      }
+    ],
+    "deterministic_resampling": "Lanczos",
+    "elapsed_seconds": 67.56810975074768,
+    "master": {
+      "path": "tmp/oneshot-trials/base1-source-detail-20260914-b/review/artwork-300dpi.png",
+      "sha256": "d06f69eb6e010b2670987a2209d3aec50848ac694aaefec64dc70d342ce0d9b4"
+    },
+    "model_upscale_used": false,
+    "original_sources": [
+      {
+        "path": "tmp/poster-workspaces/Base1/sources/cutouts/pokemon_150_mewtwo.png",
+        "sha256": "b7c00037d7ba9fb5cebc2da42ca0da54c7b664f4d7b2348d60ade5c6dc9de256"
+      },
+      {
+        "path": "tmp/poster-workspaces/Base1/sources/cutouts/pokemon_001_bulbasaur.png",
+        "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a"
+      },
+      {
+        "path": "tmp/poster-workspaces/Base1/sources/cutouts/pokemon_004_charmander.png",
+        "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+      }
+    ],
+    "post_generation_character_compositing": false,
+    "preview": {
+      "path": "tmp/oneshot-trials/base1-source-detail-20260914-b/review/poster-de.png",
+      "sha256": "32333e3887f59882c06b97d79561f1f5450057982a54f5d0630fa4145716550c"
+    },
+    "print_dimensions": [
+      2368,
+      3268
+    ],
+    "raw": {
+      "path": "tmp/oneshot-trials/base1-source-detail-20260914-b/retrieved/oneshot-jl3dxlg5/output/base1_flux2_joint_scene_2mp_seed_260726503_00001_.png",
+      "sha256": "f655c8a01f8b8f2d4a26b978a29db89ced62e01a5b3dc61d3d7a48eefd16134a"
+    },
+    "raw_dimensions": [
+      1200,
+      1664
+    ],
+    "scope": "Base1",
+    "variant": "base1-source-detail-20260914-b",
+    "visual_review": "completed_by_agent_user_acceptance_recorded_separately"
+  },
+  "controlled_comparison": {
+    "template": "docs/reviews/2026-09-14-exgen3-oneshot-c.json",
+    "mode": "joint_scene",
+    "reference_mode": "spatial_identity_joint",
+    "model": "flux-2-klein-4b.safetensors",
+    "seed": 260726503,
+    "steps": 4,
+    "generation_megapixels": 2,
+    "shared_cast_dimensions": [
+      608,
+      832
+    ],
+    "identity_reference_dimensions": [
+      512,
+      512
+    ],
+    "complete_returned_jobs": 2,
+    "change_from_A_to_B": "Only prepend an explicit one-per-species inventory and empty-upper-landscape instruction to the positive prompt; all other graph nodes, source/detail references, model hashes, seed and raster are identical.",
+    "graph_equality_check": "diff after deleting only node 4 inputs.text: no differences; job input/model records: no differences",
+    "hypothesis": "The model instantiated a detail reference as an additional subject despite the placement instruction. Stronger count/placement priority removes that extra instance in B. This is an observed controlled outcome, not proof that all future seeds or sets will obey the prompt.",
+    "trials": [
+      {
+        "variant": "base1-source-detail-20260914-a",
+        "raw": {
+          "path": "tmp/oneshot-trials/base1-source-detail-20260914-a/retrieved/oneshot-z7jqiagy/output/base1_flux2_joint_scene_2mp_seed_260726503_00001_.png",
+          "sha256": "27ec786a699c8b210e8278da42bb6bc39dbfe785cda32d2bf8178941cda5a887"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/base1-source-detail-20260914-a/review/artwork-300dpi.png",
+          "sha256": "252a64205294b454db1b2bfd8109ce53af805e5154387c491d3c1ef04f2577fe"
+        },
+        "elapsed_seconds": 67.59863901138306,
+        "verdict": "reject",
+        "reason": "Additional malformed Bulbasaur in the middle landscape, already present in the raw. Mewtwo is closer to the source but does not rescue the full poster.",
+        "native_cards_viewed": 1
+      },
+      {
+        "variant": "base1-source-detail-20260914-b",
+        "raw": {
+          "path": "tmp/oneshot-trials/base1-source-detail-20260914-b/retrieved/oneshot-jl3dxlg5/output/base1_flux2_joint_scene_2mp_seed_260726503_00001_.png",
+          "sha256": "f655c8a01f8b8f2d4a26b978a29db89ced62e01a5b3dc61d3d7a48eefd16134a"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/base1-source-detail-20260914-b/review/artwork-300dpi.png",
+          "sha256": "d06f69eb6e010b2670987a2209d3aec50848ac694aaefec64dc70d342ce0d9b4"
+        },
+        "elapsed_seconds": 67.56810975074768,
+        "verdict": "user_accepted_visual_candidate_not_promoted",
+        "native_cards_viewed": 9
+      }
+    ],
+    "prompts": {
+      "prefix": "tmp/oneshot-trials/base1-source-detail-20260914-b/layout-priority-prefix.txt",
+      "source_and_scene": "tmp/oneshot-trials/base1-source-detail-20260914-b/source-detail-prompt.txt",
+      "sealed_workflow": "tmp/oneshot-trials/base1-source-detail-20260914-b/jobs/oneshot/workflow_api.json"
+    }
+  },
+  "verdicts": {
+    "genuine_one_shot": "pass: one empty target, one sampler, one decode and one saved raw image; no post-decode character restoration, masks, compositing or learned upscale",
+    "character_count_and_containment": "B: exactly one Mewtwo, one Bulbasaur and one Charmander observed, wholly within their assigned lower cards with padding; no additional creature in the six upper cards or uncovered raw middle landscape.",
+    "source_identity": "Close-source candidate, not pixel-identical. Its own subsequent Base1-specific human acceptance is recorded above; the earlier ExGen3-C decision was not used as blanket approval.",
+    "subjects": [
+      {
+        "name": "Mewtwo",
+        "cell": "r3c1",
+        "finding": "Angular violet eye with dark pupil/upper lid, two short cranial nubs, extended hand with three round tips, separate lowered three-digit hand, curved chest contours, long limbs and continuous purple tail loop are preserved and much closer than the installed rounded-eye version. Eye details, muzzle and fine foot/toe contours still differ slightly. Foreground blades obscure small foot/tail-edge areas; hidden toe contours cannot be independently confirmed."
+      },
+      {
+        "name": "Bulbasaur",
+        "cell": "r3c2",
+        "finding": "Squat mint-green form, red/white eyes, smiling mouth, angular skin patches, three visible feet with pale claws and folded green bulb are retained. Bulb folds, fine mouth/claw outlines and cel shading differ from the source. No duplicate remains in B."
+      },
+      {
+        "name": "Charmander",
+        "cell": "r3c3",
+        "finding": "Orange body, blue-black eyes with highlights, smiling mouth, cream belly, two extended arms, two legs, curved tail and single flame remain recognizable and close. Tiny fingertip/mouth contours and some claw edges are simplified; grass partly crosses the lower foot edges."
+      }
+    ],
+    "scene_depth": "Continuous meadow, coherent directional shadows and scene-appropriate foreground blades crossing small foot/tail boundaries. No post-generation source paste or character-shaped clearing. This does not assert exact physical lighting accuracy.",
+    "typography": "German information and footer fit within their cards. The existing configured title asset still reads TRADING CARD GAME in English; it was reused unchanged. This is an artwork probe, not a completed German-logo/localized-release audit.",
+    "release_approval": "not granted: visual user acceptance is recorded separately, but the experimental prompt override still requires canonical integration, production promotion and release validation; no new PDF or archive was built"
+  },
+  "verification": {
+    "technical_physical_crop_checks": 18,
+    "native_cards_actually_viewed": {
+      "A": 1,
+      "B": 9
+    },
+    "artwork_and_source_hash_checks_per_trial": 15,
+    "immutable_jobs_returned_with_logs": true,
+    "original_production_master_sha256": "922c938e9c05f6d9fed6c23714cab0f4f4e8a31d05090c7f08fe4d94edbf96b7",
+    "production_master_provenance_manifest_and_scope_data_unchanged": true,
+    "focused_pytest_command": "tmp/v10-artwork-audit-env/bin/python -m pytest scripts/tests/test_render_job.py -q",
+    "focused_pytest_result": "7 passed in 0.38s",
+    "full_release_check": "not run; no release-readiness claim"
+  },
+  "boundaries": {
+    "production_artwork_changed": false,
+    "production_generation_manifests_changed": false,
+    "pdfs_or_archives_changed": false,
+    "other_sets_generated": [],
+    "fallback_used": false,
+    "models_or_runtime_installed": false,
+    "automatic_followup_render": false,
+    "operator_acceptance": "visual acceptance recorded separately above; production and release approval remain outstanding"
+  }
+}

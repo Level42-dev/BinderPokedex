@@ -31,21 +31,36 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260789099
+    reference_mode: spatial_source_detail_joint
+    seed: 260790108
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
   scene:
     concept: the Black Bolt expansion
-    setting: The artwork contains a dark Unova-inspired highland of black stone, distant angular
-      city silhouettes without signs, silver rain, and a single bold lightning front across
-      the upper sky.
+    setting: The artwork contains a dark Unova-inspired highland of black stone, distant angular city
+      silhouettes without signs, silver rain, and a single bold lightning front across the upper sky.
     lighting: Cold storm light is edged by a narrow gold break from the upper left.
-    rendering: Use graphic cel-painted linework, a controlled near-monochrome palette, sharp
-      electric highlights, and deep rain-filled atmosphere.
+    rendering: Use graphic cel-painted linework, a controlled near-monochrome palette, sharp electric
+      highlights, and deep rain-filled atmosphere.
     ground_noun: dark grass
+  source_details:
+    pokeapi:official-artwork:495:
+      sha256: e7ff61a0daed598a7676b262c56af766e88bcf91764658eeeae615f6f9937549
+      traits: Match the exact small green Snivy source with its pointed face, narrow reddish eyes, pale
+        belly, short arms, yellow collar arcs and broad leaf-like tail. Keep the tail a single plant-shaped
+        appendage, not a new limb.
+    pokeapi:official-artwork:646:
+      sha256: d67df985a583dc711c2d2f753f516c56e33e4717c113f4b27fcb998c8f33f38b
+      traits: Match the exact gray Kyurem source with its sharply modeled head, long dark neck, asymmetrical
+        ice-blue crystalline wing structures, separately visible arms, clawed feet and heavy tail. Preserve
+        the jagged frozen wing outlines rather than replacing them with soft feathers.
+    pokeapi:official-artwork:644:
+      sha256: 3a621c1df54ce8e73a144c58b5cd4d20fa309009c41731852f85445068829fcc
+      traits: 'Match the exact dark Zekrom source: armored angular head and red eye, raised hand with
+        individually defined fingers, segmented shoulders and torso, broad dark wings and cylindrical
+        turbine tail. Do not merge the raised hand with a wing or smooth away its armored seams.'
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns
@@ -73,5 +88,3 @@ title_logo:
     de: logos/logo-de.png
     en: logos/logo-en.png
     fr: logos/logo-fr.png
-    es: logos/logo-es.png
-    it: logos/logo-it.png

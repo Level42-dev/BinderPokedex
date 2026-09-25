@@ -1,0 +1,25 @@
+# P16: korrigierter FLUX.2-Regionspilot C
+
+Stand 23.09.2026: **einmal auf dem konfigurierten Remote-Worker gestartet, vor Bildausgabe gescheitert, nicht freigegeben**. Der zunächst nicht erreichbare Worker antwortete beim erneuten Check; sein gepinnter Laufzeit- und Modellbestand sowie der versiegelte Job bestanden die Validierung. Der eine freigegebene C-Bildlauf startete daraufhin, erzeugte jedoch kein Panorama. Das vollständige `comfyui.log` wurde in den ignorierten Versuch zurückgeholt (SHA-256 `3f924642a96c75f82f4d8b05e7055ea753fb1c160f9f70d1be63d8b4454d0a39`); `run.json` und Ausgabebild fehlen. P16- und P37-Produktionsmaster, Provenienz und PDFs sind unverändert.
+
+## Abgrenzung der Versuche
+
+- `p16-region-20260923-a`: erster GPU-Lauf, vor Bildausgabe an falscher Latentgeometrie gescheitert; Log-SHA-256 `d7376db5eb5f9d70d6da16e49f0e67c86856a6f13ed5cc3b33648b3dc9180054`. Siehe `2026-09-23-p16-region-pilot.md`.
+- `p16-region-20260923-b`: nach der ersten Korrektur versiegelter, aber **nicht gestarteter** Job. Die unabhängige Prüfung erkannte vor dem Transfer, dass versehentlich die Tokengeometrie des Qwen-Bildmodells auf FLUX.2 Klein übertragen worden war. Job-Manifest-SHA-256 `f8958e149312cf20187c382c7b44cea5c2075945fe504a0ff3c72a0b2fa2b6f0`.
+- `p16-region-20260923-c`: einmal gestarteter, fehlgeschlagener Job. Er bindet A und B in seiner ignorierten Laufprovenienz, verwendet unverändert Seed `653315091`, dieselben beiden Quellen, FLUX.2 Klein 4B, Qwen3 4B und vier Schritte. Er bleibt strikt außerhalb der Produktion und wird nicht erneut gestartet.
+
+## Technischer Vertrag für C
+
+Das tatsächliche Bildmodell ist FLUX.2, nicht Qwen Image. Für 1200 × 1664 Bildpixel beträgt das Latent 104 × 75 Zellen. FLUX.2 verwendet hier `patch_size=1`, also ebenfalls 104 × 75 Hauptbild-Tokens. Die beiden Referenzen liefern 1976 und 1024 Tokens. Beide FLUX-Blockarten (`double` und `single`) müssen den regionsgebundenen Attention-Override aufrufen. Der Regionsvertrag ist Version 3 mit SHA-256 `c5a508657aac24dda6b007d052f3e93e464bc7d658cdb87f19913832da173956`.
+
+Die gezielte Suite besteht mit 48 Tests. Die vollständige Suite meldet 905 bestanden, einen übersprungenen und drei bereits bestehende Base1-Freigabe-Sperren; diese wurden nicht abgeschwächt. Eine kleine lokale Metal/BF16-Probe der Maske besteht in beiden Blockarten. Auch ein gezielter, nicht-generativer Hook-Test auf dem **gepinnten** Worker mit dessen subquadratischem Attention-Backend bestand für beide Blockarten. Der vollständige C-Lauf lud Textencoder und FLUX.2-Modell und erreichte den ersten Sampling-Schritt. Dort meldete die regionale Guider-Erweiterung `Predictions must be finite`. Die genaue Fehlerzeile im Mixer prüft ausschließlich die **globale Grundvorhersage**; weder lokale Zweige noch der Bild-Mix wurden als Ursache nachgewiesen. Ob die große Aufmerksamkeitsmaske, das MPS/BF16-Rechenverfahren oder ein anderer Effekt die ungültigen Werte hervorruft, bleibt offen. Die Maskenlogik selbst lässt im globalen Zweig für jede Abfrage ungeschützte Bildschlüssel frei; das ist noch kein numerischer Vollgrößenbeweis.
+
+Es gibt daher keinen Kandidaten für die Sichtprüfung von Gesamtpanorama, neun physischen Einlegern und beiden Quellenvergleichen. Keine automatische Wiederholung, keine Promotion und kein P37-Folgelauf. Ein weiterer GPU-Bildlauf braucht zunächst eine engere Fehlerdiagnose, einen neuen unveränderlichen Job und eine erneute Freigabe.
+
+## Eingrenzung ohne weiteren Bildlauf
+
+Ein bereits erfolgreich gerenderter, unmaskierter P16-One-shot B verwendet denselben gepinnten ComfyUI-Commit, dieselben drei Modell-Dateien samt SHA-256, denselben Seed, dieselbe 1200 × 1664-Leinwand und denselben Vier-Schritt-Scheduler. Sein `run.json` und Ausgabebild liegen vor; das Log enthält keinen Fehler. C unterscheidet sich insbesondere durch den eigenen Guider mit regionaler Attention-Maske sowie getrennte Text- und Referenzzweige. Dieser Vergleich schließt einen generellen Defekt der gepinnten Modelle, des Seeds oder der Leinwandgröße aus, identifiziert aber den ersten numerisch fehlerhaften Modellblock noch nicht.
+
+Die globale Zusatzmaske lässt außerhalb der geschützten Motive 6.640 von 7.800 Bildschlüsseln erreichbar. Ein vollständig maskierter Attention-Zeilenfall ist damit aus der eigenen Maske ausgeschlossen; FLUX.2 übergibt hier keine zusätzliche Textmaske an das Modell. Ein winziger CPU-Gegenbeispieltest am gepinnten subquadratischen Backend ergab bei absichtlich extremen Werten `NaN`, wenn ein vollständig gesperrter Schlüsselblock einen sehr hohen Roh-Score hat. Bei der derzeitigen Speicherausstattung dürfte der echte 8.312-Token-Lauf aber den Vollschlüsselpfad nutzen; der Gegenbeispieltest ist **kein Nachweis** für die Ursache von C.
+
+Nächster diagnostischer Schritt, nur nach Freigabe: ein separater, nicht promotierbarer Job, der dieselben Eingaben nur bis zur ersten globalen Modellvorhersage verarbeitet, die erste nichtendliche Ein-/Ausgabe an den Attention-Blockgrenzen meldet und vor den lokalen Zweigen sowie vor jeder Bildausgabe absichtlich stoppt. Weder C noch die Produktionsmaster werden dafür geändert.

@@ -1,0 +1,62 @@
+{
+  "review_id": "P40",
+  "scope": "ExGen3/sections/normal",
+  "variant": "p40-source-detail-20260915-a",
+  "reviewed_on": "2026-09-15",
+  "agent_visual_decision": "reject_oneshot_physical_card_clipping",
+  "independent_visual_decision": "reject_oneshot",
+  "human_approval": "not_requested_rejected_candidate",
+  "raw_sha256": "8aa17831853b07e3a00b3320ac865a8c06df9a8cc35176acb855777bab48e188",
+  "master_sha256": "56bc93c11c3fd59ae2c5ab1a6cb7ec68e22db5cb5141e69d8e3591622587841c",
+  "preview_sha256": "e7c423b54abf2d8030414fa1d4f0eccf7ef32c11ecd118bf5683d3c49938dab7",
+  "creation_evidence": "tmp/oneshot-trials/p40-source-detail-20260915-a/review/evidence.json",
+  "immutable_state": "tmp/oneshot-trials/p40-source-detail-20260915-a/experiment.json",
+  "manifest_at_render": {
+    "path": "docs/reviews/2026-09-15-p40-source-detail-a-manifest.yaml",
+    "sha256": "d20f86618fa2f8afd87ab21977faa76f4b8c73e805c5e318b3148cdffdea5906"
+  },
+  "source_brief": "docs/reviews/2026-09-15-p15-p40-source-briefs.json",
+  "viewed_by_controller_and_independent_reviewer": {
+    "raw": true,
+    "full_master": true,
+    "german_preview": true,
+    "all_nine_actual_cards": true,
+    "three_exact_originals": true,
+    "four_prepared_references": true,
+    "complete_prompt": true
+  },
+  "findings": [
+    {
+      "severity": "blocking_physical_card_containment",
+      "subject": "Miraidon",
+      "card": "r3c3",
+      "detail": "The image-left upper lightning tip appears to intersect the card's top extraction boundary; the independent initial statement that both tips were cut was too strong. Targeted original-detail re-view found the image-right tip edge-near but not proven cut. This is a visually established edge-contact concern with suspected left-tip truncation, not a complete silhouette-segmentation measurement. The narrow angular face, electric appendages, chest zigzags, arms and lower curved tail are otherwise source-close."
+    },
+    {
+      "severity": "blocking_current_layout_contract",
+      "detail": "The cast is larger/higher than the shared spatial reference and specified lower band. Koraidon and Pikachu remain contained in their actual cards; their size is not automatically accepted by P01's separate approval."
+    },
+    {
+      "severity": "minor_source_drift",
+      "subject": "Pikachu",
+      "card": "r3c2",
+      "detail": "Tiny extra dark marks on the extended hand. Face, ears, mouth, raised hand, feet and continuous tail remain identifiable."
+    },
+    {
+      "severity": "secondary_scene_composition_deviation",
+      "detail": "The academy-like building is near the scene center instead of the outer horizon specified in the brief. No false anatomy is attributed to it."
+    }
+  ],
+  "technical_verification": {
+    "canonical_verify_passed_before_manifest_revision": true,
+    "complete_returned_job_and_log": true,
+    "raw_dimensions": [1200, 1664],
+    "master_dimensions": [2368, 3268],
+    "nine_card_dimensions": [750, 1050],
+    "physical_crop_pixels_and_300_dpi_passed": true,
+    "installed_masters_unchanged": 42,
+    "prompt_seconds": 61.65
+  },
+  "next_step": "One bounded same-seed B with an explicit final scene-layout reminder covering the complete lightning silhouette; unchanged source descriptions, references, models and generation graph.",
+  "promotion_or_pdf_zip_rebuild": false
+}

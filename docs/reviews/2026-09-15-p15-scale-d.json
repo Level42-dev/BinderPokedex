@@ -1,0 +1,330 @@
+{
+  "review_id": "P15",
+  "variant": "p15-scale-20260915-d",
+  "scope": "ExGen2/sections/mega",
+  "reviewed_on": "2026-09-15",
+  "agent_visual_decision": "improved_clearance_user_review_candidate_not_release_ready",
+  "independent_visual_decision": "user_review_candidate_no_definite_visual_blocker",
+  "human_approval": "accepted_shown_rayquaza_clearance",
+  "release_ready": false,
+  "layout_contract_pass": false,
+  "generation": {
+    "encoder": "qwen_3_4b.safetensors",
+    "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
+    "engine": "flux",
+    "generation_megapixels": 2,
+    "mode": "joint_scene",
+    "model": "flux-2-klein-4b.safetensors",
+    "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
+    "output_dpi": 300,
+    "output_method": "lanczos",
+    "reference_mode": "spatial_source_detail_joint",
+    "seed": 260736802,
+    "steps": 4,
+    "vae": "flux2-vae.safetensors",
+    "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
+  },
+  "generation_fingerprint_sha256": "844c54cb4094414e7b6395e8e3786fedb5ce98641cb1a51cd9463527ff85f98d",
+  "raw": {
+    "path": "tmp/oneshot-trials/p15-scale-20260915-d/retrieved/oneshot-vru7sa9g/output/exgen2__sections__mega_flux2_joint_scene_2mp_seed_260736802_00001_.png",
+    "sha256": "21a4db1b8c1f760d7c3718b1fa1cda9b830bbb1218d90e8b1151ceb79704a953"
+  },
+  "master": {
+    "path": "tmp/oneshot-trials/p15-scale-20260915-d/review/artwork-300dpi.png",
+    "sha256": "ae8d7afad5051c47117650ae03c1b4cbc30c7da8b7083a10f9e7da3d801b55bb"
+  },
+  "preview": {
+    "path": "tmp/oneshot-trials/p15-scale-20260915-d/review/poster-de.png",
+    "sha256": "985dd107c046c8c27c23fd47a48e584185eb21f85e95b9ff7119530ad7c7764a"
+  },
+  "sealed_creation_evidence": {
+    "path": "tmp/oneshot-trials/p15-scale-20260915-d/review/evidence.json",
+    "sha256": "a3cbadc5c135898cc784d8c84bc3234ae17e42970526c5ac1379db0d85b45a69"
+  },
+  "manifest_snapshot": {
+    "path": "docs/reviews/2026-09-15-p15-scale-d-manifest.yaml",
+    "sha256": "952126b7e2d5a8d26de0945f5661d53706969a5f7d4cf244d417354c6bbd4db6"
+  },
+  "physical_cards": [
+    {
+      "path": "tmp/oneshot-trials/p15-scale-20260915-d/review/cards/card_r1_c1.png",
+      "rectangle": [
+        0,
+        0,
+        750,
+        1050
+      ],
+      "sha256": "e80ab3b500249fc0170e119c126f837da902a036af875e97cf777658ec048988"
+    },
+    {
+      "path": "tmp/oneshot-trials/p15-scale-20260915-d/review/cards/card_r1_c2.png",
+      "rectangle": [
+        809,
+        0,
+        1559,
+        1050
+      ],
+      "sha256": "ce09ad757514dc76b0d6881c11819146c42679b43b4facc3b5307f7181e728fc"
+    },
+    {
+      "path": "tmp/oneshot-trials/p15-scale-20260915-d/review/cards/card_r1_c3.png",
+      "rectangle": [
+        1618,
+        0,
+        2368,
+        1050
+      ],
+      "sha256": "c4efbaa7cbdd39ecd7f16a1eb2cd7d9a2a290bff4b659eede88a66a400ff40b1"
+    },
+    {
+      "path": "tmp/oneshot-trials/p15-scale-20260915-d/review/cards/card_r2_c1.png",
+      "rectangle": [
+        0,
+        1109,
+        750,
+        2159
+      ],
+      "sha256": "16cb18ce4142412d1f7474aed8a4e1188ecef290e5bfd772cbeb35d9f88dcd17"
+    },
+    {
+      "path": "tmp/oneshot-trials/p15-scale-20260915-d/review/cards/card_r2_c2.png",
+      "rectangle": [
+        809,
+        1109,
+        1559,
+        2159
+      ],
+      "sha256": "d7e02596642d000a200c383d4d528ca812bd78078cdc8ecc7e835ba89ffcafc4"
+    },
+    {
+      "path": "tmp/oneshot-trials/p15-scale-20260915-d/review/cards/card_r2_c3.png",
+      "rectangle": [
+        1618,
+        1109,
+        2368,
+        2159
+      ],
+      "sha256": "974ee3fbafba0d23ffe06a4db4e5c580115da027be506306a6e0d819f1ae3999"
+    },
+    {
+      "path": "tmp/oneshot-trials/p15-scale-20260915-d/review/cards/card_r3_c1.png",
+      "rectangle": [
+        0,
+        2218,
+        750,
+        3268
+      ],
+      "sha256": "6f1f467b24f5577d510210d1513540bebdc2f7840d39a9a63522b76cc05954e5"
+    },
+    {
+      "path": "tmp/oneshot-trials/p15-scale-20260915-d/review/cards/card_r3_c2.png",
+      "rectangle": [
+        809,
+        2218,
+        1559,
+        3268
+      ],
+      "sha256": "74379871dfe2995a66db61dcd1930acbcf72113def1d44c84e5f80c033adf5af"
+    },
+    {
+      "path": "tmp/oneshot-trials/p15-scale-20260915-d/review/cards/card_r3_c3.png",
+      "rectangle": [
+        1618,
+        2218,
+        2368,
+        3268
+      ],
+      "sha256": "05bfb0ddd81645ec335f63d7c6e4788d854d79ca58ab59fa61e6bc88b0f908f1"
+    }
+  ],
+  "source_pairs": [
+    {
+      "name": "Mega-Mewtu X",
+      "source": {
+        "key": "pokeapi:official-artwork:10043",
+        "path": "tmp/poster-workspaces/ExGen2/sections/mega/sources/cutouts/pokemon_150_artwork_10043_mega_mewtwo_x.png",
+        "sha256": "5dd98bb485cf51eb4ede5189d28aeb9c6e426bd08d9abbc37187c02268b188d9"
+      },
+      "card": {
+        "path": "tmp/oneshot-trials/p15-scale-20260915-d/review/cards/card_r3_c1.png",
+        "rectangle": [
+          0,
+          2218,
+          750,
+          3268
+        ],
+        "sha256": "6f1f467b24f5577d510210d1513540bebdc2f7840d39a9a63522b76cc05954e5"
+      }
+    },
+    {
+      "name": "Mega-Rayquaza",
+      "source": {
+        "key": "pokeapi:official-artwork:10079",
+        "path": "tmp/poster-workspaces/ExGen2/sections/mega/sources/cutouts/pokemon_384_artwork_10079_mega_rayquaza.png",
+        "sha256": "28a9f35caa69df85cde05fcb5e7785d7581b30910b2cd6df508d35fca2a789f4"
+      },
+      "card": {
+        "path": "tmp/oneshot-trials/p15-scale-20260915-d/review/cards/card_r3_c2.png",
+        "rectangle": [
+          809,
+          2218,
+          1559,
+          3268
+        ],
+        "sha256": "74379871dfe2995a66db61dcd1930acbcf72113def1d44c84e5f80c033adf5af"
+      }
+    },
+    {
+      "name": "Mega-Latios",
+      "source": {
+        "key": "pokeapi:official-artwork:10063",
+        "path": "tmp/poster-workspaces/ExGen2/sections/mega/sources/cutouts/pokemon_381_artwork_10063_mega_latios.png",
+        "sha256": "ea327ac2ac56cb1a90153bad84f66bd62d25f8c25093733ed1aef9a5411b8054"
+      },
+      "card": {
+        "path": "tmp/oneshot-trials/p15-scale-20260915-d/review/cards/card_r3_c3.png",
+        "rectangle": [
+          1618,
+          2218,
+          2368,
+          3268
+        ],
+        "sha256": "05bfb0ddd81645ec335f63d7c6e4788d854d79ca58ab59fa61e6bc88b0f908f1"
+      }
+    }
+  ],
+  "directly_viewed_by_controller_and_independent_reviewer": {
+    "raw": true,
+    "full_text_free_master": true,
+    "german_preview": true,
+    "all_nine_actual_cards": true,
+    "three_exact_originals": true,
+    "four_prepared_references": true
+  },
+  "complete_prompt_viewed_by_controller": true,
+  "controlled_b_d_change": {
+    "changed": [
+      "Rayquaza-only shared spatial reference factor 0.8",
+      "Derived Rayquaza prompt bounds and height in the leading layout paragraph",
+      "Additive version-1 spatial_reference generation-fingerprint component"
+    ],
+    "unchanged": [
+      "All three original PNGs and separate identity-reference PNG bytes",
+      "Seed, model/encoder/VAE pins, 2 MP, four steps",
+      "All graph nodes except text node 4",
+      "All source-trait, scene and foreground-depth paragraphs",
+      "One empty target, sampler and decode; deterministic Lanczos and print crops"
+    ],
+    "spatial_difference_rectangle": [
+      223,
+      634,
+      384,
+      779
+    ],
+    "no_generated_subject_paste_or_local_retouch": true
+  },
+  "findings": [
+    "Rayquaza's actual card has visibly more room than B, especially at the left. The right tail tip remains more tightly framed than the left; no apparent cut-off appendage.",
+    "Mewtwo X retains a gray face and one visibly connected tail; Latios retains the small root-wing mark and plain long wing. All three identities were rechecked; no definite new anatomical blocker was found.",
+    "Tiny Rayquaza claw/rear-coil and ribbon-origin connections remain uncertain at actual card scale, not established missing anatomy.",
+    "Latios's nose remains near its left cut edge (also close in accepted B); contained, not claimed to have generous padding.",
+    "Exactly three subjects, all in the bottom row; all upper cards and both text cards are unobstructed. No definite foreground-depth reversal was found.",
+    "D still exceeds the configured small-cast bounds. Physical containment and improved breathing room are not an exact-layout pass or transferred B approval."
+  ],
+  "clearance_proxy": {
+    "method": "Fixed RGB predicate r<85, g-r>=35, b-r>=20, g>=65 in actual r3c2 rows 110..899",
+    "kind": "interior_color_proxy_not_full_silhouette_segmentation",
+    "b": {
+      "inclusive_bbox": [
+        10,
+        228,
+        735,
+        817
+      ],
+      "left_px": 10,
+      "right_px": 14,
+      "hits": 75546
+    },
+    "c": {
+      "inclusive_bbox": [
+        10,
+        240,
+        720,
+        818
+      ],
+      "left_px": 10,
+      "right_px": 29,
+      "hits": 71524
+    },
+    "d": {
+      "inclusive_bbox": [
+        73,
+        324,
+        710,
+        848
+      ],
+      "left_px": 73,
+      "right_px": 39,
+      "hits": 53371
+    },
+    "interpretation": "Interior pixels are farther from both cut edges; outline/glow extends farther out. The 60 px right-side target from C is still not met. D is presented for the user's qualitative breathing-room decision, not as a certified 5 mm safe strip."
+  },
+  "measured_layout_counterexample": {
+    "kind": "selected_teal_body_pixel_not_full_silhouette",
+    "card_pixel": [
+      351,
+      324
+    ],
+    "rgb": [
+      58,
+      93,
+      79
+    ],
+    "canvas_pixel": [
+      1160,
+      2542
+    ],
+    "canvas_y_percent": 77.78,
+    "specified_subject_top_percent": 79.9,
+    "interpretation": "Visible Rayquaza body pixel above its configured target top, but inside the real card."
+  },
+  "technical_verification": {
+    "canonical_d_verify_passed": true,
+    "all_job_log_outputs_retrieved": true,
+    "nine_pixel_exact_300_dpi_crops": true,
+    "prompt_seconds": 65.12,
+    "mps": true,
+    "traceback": false,
+    "truncation_warning": false,
+    "focused_tests_passed": 119,
+    "broader_regression_passed": 246,
+    "broader_known_revoked_approval_failures": 2,
+    "installed_masters_unchanged": 42,
+    "independent_code_review_passed": true,
+    "independent_visual_review_agent": "p15_scale_d_visual_review"
+  },
+  "worker_run": {
+    "path": "tmp/oneshot-trials/p15-scale-20260915-d/retrieved/oneshot-vru7sa9g/run.json",
+    "sha256": "b142e3097007d0c9664c45f4894557e6e4a1b00c507f6e24e50c0bd04dd0220a"
+  },
+  "worker_log": {
+    "path": "tmp/oneshot-trials/p15-scale-20260915-d/retrieved/oneshot-vru7sa9g/comfyui.log",
+    "sha256": "69634dc17218a0f4f583836e82e556eee66a731352ab7e6fbf5e0946e04c110d"
+  },
+  "historical_evidence_policy": "Old frozen B/C code preflight may fail after this intentional renderer change; original immutable jobs and input/image records are not rewritten. P15-B/P40-B reference PNGs, graph and fingerprint were rebuilt byte-identically without an override.",
+  "user_decision": {
+    "recorded_at": "2026-09-15T14:35:11Z",
+    "quote": "Passt prima!",
+    "responds_to": "Passt dir der Abstand jetzt?",
+    "applies_to_master_sha256": "ae8d7afad5051c47117650ae03c1b4cbc30c7da8b7083a10f9e7da3d801b55bb",
+    "applies_to_preview_sha256": "985dd107c046c8c27c23fd47a48e584185eb21f85e95b9ff7119530ad7c7764a",
+    "applies_to_rayquaza_card_sha256": "74379871dfe2995a66db61dcd1930acbcf72113def1d44c84e5f80c033adf5af",
+    "accepted": [
+      "Rayquaza's shown D card framing and increased clearance, including the disclosed tighter right side"
+    ],
+    "scope_note": "Records the user's exact response to the shown D Rayquaza crop and source comparison. Does not assert a separate human inspection of every other card, numerical layout compliance, approval of future changed pixels, promotion or release completion.",
+    "verification": "Canonical D verification and all 22 report artifact/source hash bindings were freshly checked before recording acceptance. Immutable creation-time evidence and technical findings remain unchanged."
+  },
+  "next_step": "Rayquaza clearance feedback is resolved for exact D. Retain D for subsequent scoped production/promotion work; no further Rayquaza generation required for this request. No promotion, PDF/ZIP rebuild, commit or push was performed during acceptance recording.",
+  "promotion_or_pdf_zip_rebuild": false
+}

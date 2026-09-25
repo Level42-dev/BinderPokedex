@@ -17,7 +17,7 @@
     }
   },
   "poster_id": "ME03",
-  "promoted_at": "2026-08-06T23:50:44.970380+00:00",
+  "promoted_at": "2026-09-12T14:08:31.933788+00:00",
   "review_language": "en",
   "run": {
     "created_at": "2026-08-06T19:19:01.614627+00:00",
@@ -331,50 +331,50 @@
             },
             "ja": {
               "information": [
-                "Perfect Order",
-                "124 枚",
+                "0 枚",
                 "発売日",
                 "2026年3月27日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "5b94c56207ae0cc9ee310fb4db5e425aa8f65acf1d953e3ac7e985f5fa912c95"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Perfect Order"
               }
             },
             "ko": {
               "information": [
-                "Perfect Order",
-                "124 장",
+                "0 장",
                 "출시일",
                 "2026년 3월 27일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "5b94c56207ae0cc9ee310fb4db5e425aa8f65acf1d953e3ac7e985f5fa912c95"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Perfect Order"
               }
             },
             "zh_hans": {
               "information": [
-                "Perfect Order",
-                "124 张",
+                "0 张",
                 "发行日期",
                 "2026年3月27日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "5b94c56207ae0cc9ee310fb4db5e425aa8f65acf1d953e3ac7e985f5fa912c95"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Perfect Order"
               }
             },
             "zh_hant": {
               "information": [
-                "Perfect Order",
-                "124 張",
+                "0 張",
                 "發行日期",
                 "2026年3月27日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "5b94c56207ae0cc9ee310fb4db5e425aa8f65acf1d953e3ac7e985f5fa912c95"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Perfect Order"
               }
             }
           },
@@ -409,30 +409,6 @@
               "mode": "RGBA",
               "pixel_sha256": "b1007bbb77a9b7301a3bbd3d91572afd7bacb6ef8a47913788cf7c961ac77a90",
               "width": 604
-            },
-            "ja": {
-              "height": 242,
-              "mode": "RGBA",
-              "pixel_sha256": "5b94c56207ae0cc9ee310fb4db5e425aa8f65acf1d953e3ac7e985f5fa912c95",
-              "width": 604
-            },
-            "ko": {
-              "height": 242,
-              "mode": "RGBA",
-              "pixel_sha256": "5b94c56207ae0cc9ee310fb4db5e425aa8f65acf1d953e3ac7e985f5fa912c95",
-              "width": 604
-            },
-            "zh_hans": {
-              "height": 242,
-              "mode": "RGBA",
-              "pixel_sha256": "5b94c56207ae0cc9ee310fb4db5e425aa8f65acf1d953e3ac7e985f5fa912c95",
-              "width": 604
-            },
-            "zh_hant": {
-              "height": 242,
-              "mode": "RGBA",
-              "pixel_sha256": "5b94c56207ae0cc9ee310fb4db5e425aa8f65acf1d953e3ac7e985f5fa912c95",
-              "width": 604
             }
           },
           "pipeline_contract": {
@@ -454,7 +430,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "969617bd213db814238f273e057a83704c1f68e11707be7429a3661438ae92b0"
+        "sha256": "457578912c53f22aac5850d667a58fd24622c2bcf82ce082557fbbb8b63bce38"
       },
       "prompt": {
         "bytes": 5731,
@@ -546,7 +522,22 @@
         ],
         "generation_fingerprint_sha256": "911150b9c3c3f561f7a8ab7ecf6844337453e2a9568364584e19c733a6df6490",
         "method": "human_identity_and_scene_review",
-        "passed": true,
+        "passed": false,
+        "reaudit_revocation": {
+          "date": "2026-09-12",
+          "reviewer_kind": "agent",
+          "method": "source_by_source_visual_reaudit",
+          "previously_passed": true,
+          "verdict": "reject",
+          "master_sha256": "f168f308c04d3cfd617d49378ae74ebc3bb5ad9ccb6fb6fbc8e1f01dcd1a065f",
+          "reports": [
+            {
+              "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+              "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+            }
+          ],
+          "reason": "Current exact artwork has rejected or unresolved source-fidelity findings. Historical review fields are retained; the prior approval is withdrawn pending a corrected candidate."
+        },
         "raw_artwork_pixel_sha256": "b7d09404a134319ce70671977cdf18f7bc034f238911a437c0f8c1808dc65a6b",
         "raw_artwork_sha256": "7f4586c7ce320805b532a4f84605122e3624cf1bf6c443307ee0888ae1a881fe",
         "reviewed_artwork_pixel_sha256": "30b93e3be4d6fb68b3d7aff3752519953f1e049f059053e7a7542ec41e7c21b7",

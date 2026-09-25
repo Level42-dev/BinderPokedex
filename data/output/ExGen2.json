@@ -1530,8 +1530,8 @@
           "suffix": "[EX]",
           "form_code": "#377_EX2_NOR",
           "tcg_card": {
-            "id": "xy10-43",
-            "localId": "43",
+            "id": "xy10-43a",
+            "localId": "43a",
             "set": {
               "cardCount": {
                 "official": 124,
@@ -1543,7 +1543,7 @@
               "symbol": "https://assets.tcgdex.net/univ/xy/xy10/symbol"
             },
             "hp": 180,
-            "rarity": "Ultra Rare"
+            "rarity": "Rare"
           }
         },
         {
@@ -3195,8 +3195,8 @@
           "suffix": "[EX]",
           "form_code": "#681_EX2_NOR",
           "tcg_card": {
-            "id": "xy4-65a",
-            "localId": "65a",
+            "id": "xy4-65",
+            "localId": "65",
             "set": {
               "cardCount": {
                 "official": 119,
@@ -3208,7 +3208,7 @@
               "symbol": "https://assets.tcgdex.net/univ/xy/xy4/symbol"
             },
             "hp": 170,
-            "rarity": "Rare"
+            "rarity": "Ultra Rare"
           }
         },
         {
@@ -4478,8 +4478,8 @@
           "suffix": "[EX]",
           "form_code": "#310_EX2_MEG",
           "tcg_card": {
-            "id": "xy4-24a",
-            "localId": "24a",
+            "id": "xy4-24",
+            "localId": "24",
             "set": {
               "cardCount": {
                 "official": 119,
@@ -4491,7 +4491,7 @@
               "symbol": "https://assets.tcgdex.net/univ/xy/xy4/symbol"
             },
             "hp": 210,
-            "rarity": "Rare"
+            "rarity": "Ultra Rare"
           }
         },
         {

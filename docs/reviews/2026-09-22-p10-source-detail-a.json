@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-22",
+  "reviewer_kind": "agent",
+  "scope": "Pokedex/sections/gen7",
+  "review_id": "P10",
+  "variant": "p10-source-detail-20260922-a",
+  "status": "rejected_for_visible_forepaw_not_present_in_source",
+  "human_approval": false,
+  "release_ready": false,
+  "promoted": false,
+  "new_render_attempt": 1,
+  "finding_de": "Der zuvor fehlende schräg sichtbare rechte Vorderbeinabschnitt einschließlich roter Zeichnung ist wieder vorhanden. Der Generator hat darunter jedoch eine separate kleine runde Pfote sichtbar ergänzt; diese bleibt in der exakten Quelle hinter dem näheren Vorderbein verborgen. Deshalb gezielte zweite Variante statt einer behaupteten vollständigen Korrektur.",
+  "additional_findings_de": [
+    "Flamiau ist sichtbar größer als in der gemeinsamen Positionsreferenz, bleibt aber mit Ohren, Schwanz und Pfoten vollständig innerhalb r3c2; keine numerische Erfüllung der Ziel-Silhouetten behauptet.",
+    "Bauz und Robball bleiben in Pose, Gesicht und sichtbaren Gliedmaßen quellnah. Vegetation vor Robballs äußerer Flossenkante ist räumlich plausibel.",
+    "Keine Freigabe der neu erzeugten Bildpixel aus der früheren Zustimmung abgeleitet."
+  ],
+  "inspection": {
+    "raw_viewed": true,
+    "full_master_viewed": true,
+    "german_preview_viewed": true,
+    "physical_cards_viewed": 9,
+    "exact_sources_viewed": 3,
+    "actual_input_references_viewed": 4,
+    "canonical_verify_passed_before_next_manifest_change": true,
+    "production_masters_unchanged": 42
+  },
+  "evidence": {
+    "raw": {
+      "path": "tmp/oneshot-trials/p10-source-detail-20260922-a/retrieved/oneshot-gkblw5v3/output/pokedex__sections__gen7_flux2_joint_scene_2mp_seed_260726058_00001_.png",
+      "sha256": "974a01daab9b927fb86ed3999166ad965459543327aa1e3a808b678d6e6dd81d"
+    },
+    "master": {
+      "path": "tmp/oneshot-trials/p10-source-detail-20260922-a/review/artwork-300dpi.png",
+      "sha256": "f79bd6594e0b0947aec029a9f8d8d70f03a75ef668875cfaa81c7fbdf2c816b0"
+    },
+    "preview": {
+      "path": "tmp/oneshot-trials/p10-source-detail-20260922-a/review/poster-de.png",
+      "sha256": "59a6fd6b3a1e4fbdd8d8eedadcefdb5102217487c55dd9f1e8011fbb220ed68c"
+    },
+    "cards": [
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-a/review/cards/card_r1_c1.png",
+        "rectangle": [
+          0,
+          0,
+          750,
+          1050
+        ],
+        "sha256": "101cf795749d3e0911cff929b32e338dfce45a012b6f54b243488d026cf30839"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-a/review/cards/card_r1_c2.png",
+        "rectangle": [
+          809,
+          0,
+          1559,
+          1050
+        ],
+        "sha256": "a824219fca78fcd5d4af3d5ee7b96be8ec29b7def252d76ca8e2061785b7d8a9"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-a/review/cards/card_r1_c3.png",
+        "rectangle": [
+          1618,
+          0,
+          2368,
+          1050
+        ],
+        "sha256": "14e07f74e0ec7c8ce04cf70be8af571c70de4b08c88f2e4c44a3ee105b55fb40"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-a/review/cards/card_r2_c1.png",
+        "rectangle": [
+          0,
+          1109,
+          750,
+          2159
+        ],
+        "sha256": "371c5ec1052204c6c4ab85883a3ff2473789a68bba19f69ef02dc799ffaf8c23"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-a/review/cards/card_r2_c2.png",
+        "rectangle": [
+          809,
+          1109,
+          1559,
+          2159
+        ],
+        "sha256": "84713e73cbee29202f6e962cf66ecb2dc5797721b87d4783bddb324b5e25cc92"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-a/review/cards/card_r2_c3.png",
+        "rectangle": [
+          1618,
+          1109,
+          2368,
+          2159
+        ],
+        "sha256": "fe7f0e78cf39c751b3b9115ddb24caa327ff8a9ae651d52f95277200939d5cca"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-a/review/cards/card_r3_c1.png",
+        "rectangle": [
+          0,
+          2218,
+          750,
+          3268
+        ],
+        "sha256": "88b6097a81d35bfd68b5f4979dbe658cd1b5b66cdc5ed25226a0433a448385e0"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-a/review/cards/card_r3_c2.png",
+        "rectangle": [
+          809,
+          2218,
+          1559,
+          3268
+        ],
+        "sha256": "59eaa181c08cd6723ff2baafad90a0594c47aaba0df1f0e500f1196548e275ce"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-a/review/cards/card_r3_c3.png",
+        "rectangle": [
+          1618,
+          2218,
+          2368,
+          3268
+        ],
+        "sha256": "79eed04b4d248f64e24644879550d10e8ef1d2cf00de86807d81b17d3709ba36"
+      }
+    ],
+    "worker_run": {
+      "path": "tmp/oneshot-trials/p10-source-detail-20260922-a/retrieved/oneshot-gkblw5v3/run.json",
+      "sha256": "5c15c0e8cf1d08237a51df907a136b4a8249955d7b8d06ff8f63c6b5559a442e"
+    },
+    "worker_log": {
+      "path": "tmp/oneshot-trials/p10-source-detail-20260922-a/retrieved/oneshot-gkblw5v3/comfyui.log",
+      "sha256": "eda3787f37dddbf3c4bfdce330ed04862e66cdbdf60207cb45a23f5161a19371"
+    }
+  },
+  "manifest_snapshot": "tmp/oneshot-trials/p10-source-detail-20260922-a/manifest-snapshot.yaml",
+  "next_change_de": "Nur Flamiaus Merkmalsbeschreibung um die in der Quelle bestehende Verdeckung der zweiten Vorderpfote präzisieren. Seed, Modelle, Szene, Referenzbilder und übrige Figurenbeschreibungen bleiben unverändert."
+}

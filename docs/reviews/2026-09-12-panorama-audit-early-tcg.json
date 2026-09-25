@@ -1,0 +1,2591 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-12",
+  "reviewer": "independent_visual_audit_early_tcg",
+  "scope": "13 assigned TCG panoramas; current tracked masters and localized promotion derivatives",
+  "method": "Viewed each of 39 original source file instances with view_image, then each complete localized panorama and all nine 750x1050 physical crops individually. Compared source identity/form, visible face, limbs, digits, markings, silhouette, containment and scene boundaries. Recomputed SHA-256 for every source and tracked artwork and matched against provenance. Existing passed flags were not treated as anatomy evidence. File hashes were verified after the visual inspection; no source or artwork file was changed.",
+  "limitations": [
+    "Joint-scene stylization and pose variation are allowed; no pixel equality requirement was imposed.",
+    "Uncertain denotes insufficient feature-level visual evidence and is not approval.",
+    "Derivative hashes identify exactly the viewed files; this report does not independently reproduce localization/slicing or validate PDF contents.",
+    "Tiny details were not assigned an invented canonical count when the source/crop did not support one."
+  ],
+  "coverage": {
+    "targets": 13,
+    "source_instances_viewed": 39,
+    "full_panoramas_viewed": 13,
+    "physical_crops_viewed": 117,
+    "all_source_file_hashes_match": true,
+    "all_tracked_artwork_hashes_match": true,
+    "missing_sources": [],
+    "missing_crops": []
+  },
+  "targets": [
+    {
+      "target": "Base1",
+      "provenance_file": "assets/posters/Base1/poster-flux2-provenance.json",
+      "provenance_sha256": "b0ee840d238e0bb98bf76545b3e68856cf79917813690313a2ea3def0f02f61d",
+      "master": {
+        "file": "assets/posters/Base1/poster-flux2-artwork.png",
+        "sha256": "922c938e9c05f6d9fed6c23714cab0f4f4e8a31d05090c7f08fe4d94edbf96b7",
+        "expected_sha256": "922c938e9c05f6d9fed6c23714cab0f4f4e8a31d05090c7f08fe4d94edbf96b7",
+        "hash_matches": true
+      },
+      "full_panorama": {
+        "file": "tmp/poster-workspaces/Base1/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "437e0d77c1ce997c9c992d72d700751d9fc5172820b1c412b250cef92d80b096"
+      },
+      "crops": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/Base1/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "f12001604f6e44eed6ed6d8016e98541859193c763b2a9e01e8683bfd863b103",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/Base1/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "f687bd27cdcd1f844d391121d7d85e69730881a4f1911ef5bbd34ef7f4fd1873",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/Base1/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "b5663a5ef90419ea3215ba89923c200c6763fc31f4c1e471ec6769d4581365dc",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/Base1/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "4684cd873771acb554868310e64dd2158b1e0866df739ac217c1944ce25b201f",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/Base1/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "78efda56e753dbfa44f32368acd80fc9b58bb3102ad51cb02ac841732e703e10",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/Base1/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "301579d9be7547a917df377e5f0726c2d50cc342f8f92d15587b705db055c95c",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/Base1/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "d1a63724dc44bb8c9e20c3e2a655148008e0b277ddcdf640dab8fbd5027b30a8",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/Base1/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "c4c41c0eda485bae39e6537ca8f7fbbdf963d4cd6c6ff89048db6fdd6cadbc12",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/Base1/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "8150c71c6aa4ea6f994d386b3075dd5395f8fa6e6183010583c17e1682b2a2e3",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        }
+      ],
+      "full_panorama_viewed": true,
+      "subjects": [
+        {
+          "subject_id": 150,
+          "identity": "Mewtwo",
+          "source": {
+            "subject_id": 150,
+            "file": "tmp/poster-workspaces/Base1/sources/cutouts/pokemon_150_mewtwo.png",
+            "expected_sha256": "b7c00037d7ba9fb5cebc2da42ca0da54c7b664f4d7b2348d60ade5c6dc9de256",
+            "sha256": "b7c00037d7ba9fb5cebc2da42ca0da54c7b664f4d7b2348d60ade5c6dc9de256",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/Base1/poster-flux2-artwork.png",
+            "sha256": "922c938e9c05f6d9fed6c23714cab0f4f4e8a31d05090c7f08fe4d94edbf96b7"
+          },
+          "cell": "r3c1",
+          "physical_crop": {
+            "cell": "r3c1",
+            "file": "tmp/poster-workspaces/Base1/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "d1a63724dc44bb8c9e20c3e2a655148008e0b277ddcdf640dab8fbd5027b30a8"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Two head projections, paired eyes, chest form, purple abdomen and a single curved tail remain recognizable. Raised hand retains three round tips. The grounded left foot collapses the reference's elongated split toes into several round lobes; the lower foot/ankle structure is deformed. All limbs fit r3c1; grass approaches but does not hide the foot defect."
+        },
+        {
+          "subject_id": 1,
+          "identity": "Bulbasaur",
+          "source": {
+            "subject_id": 1,
+            "file": "tmp/poster-workspaces/Base1/sources/cutouts/pokemon_001_bulbasaur.png",
+            "expected_sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a",
+            "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/Base1/poster-flux2-artwork.png",
+            "sha256": "922c938e9c05f6d9fed6c23714cab0f4f4e8a31d05090c7f08fe4d94edbf96b7"
+          },
+          "cell": "r3c2",
+          "physical_crop": {
+            "cell": "r3c2",
+            "file": "tmp/poster-workspaces/Base1/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "c4c41c0eda485bae39e6537ca8f7fbbdf963d4cd6c6ff89048db6fdd6cadbc12"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Two triangular ears, red eyes, dorsal bulb, three large visible legs and green patches remain. The generated chest has a sharply outlined cream/tan bib, whereas the source chest is green. Near front and rear claws are softened; small source leg markings are also simplified. Entire bulb and paws fit the cell."
+        },
+        {
+          "subject_id": 4,
+          "identity": "Charmander",
+          "source": {
+            "subject_id": 4,
+            "file": "tmp/poster-workspaces/Base1/sources/cutouts/pokemon_004_charmander.png",
+            "expected_sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/Base1/poster-flux2-artwork.png",
+            "sha256": "922c938e9c05f6d9fed6c23714cab0f4f4e8a31d05090c7f08fe4d94edbf96b7"
+          },
+          "cell": "r3c3",
+          "physical_crop": {
+            "cell": "r3c3",
+            "file": "tmp/poster-workspaces/Base1/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "8150c71c6aa4ea6f994d386b3075dd5395f8fa6e6183010583c17e1682b2a2e3"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Orange body, blue eyes, cream belly, two arms, two legs and one flame-tipped tail remain. Reference has three discrete white pointed claws on each foot; output substitutes flesh-colored flat fingerlike toes. The arms are serrated rather than clearly articulated; mouth teeth are weakly resolved. Tail and flame remain inside the cell."
+        }
+      ],
+      "target_verdict": "reject",
+      "scene_observation": "Full composition and all nine cells inspected. Exactly the three reference subjects appear in the bottom row; all bodies fit their physical cells. Scenery/body intrusions, when present, are listed per subject. No fourth creature identified.",
+      "required_action": "Do not use legacy approval as evidence. Resolve rejected and uncertain subject details, then repeat source and all-card review before approval."
+    },
+    {
+      "target": "Base2",
+      "provenance_file": "assets/posters/Base2/poster-flux2-provenance.json",
+      "provenance_sha256": "eaa4f0f291e39a78e70863dc0852661873a01da249402c00b7753afafb2c619a",
+      "master": {
+        "file": "assets/posters/Base2/poster-flux2-artwork.png",
+        "sha256": "9c0c166cc6bda2f8a8e07ba9affd486c19d9c017b54ed15b9bedba4568d5c45f",
+        "expected_sha256": "9c0c166cc6bda2f8a8e07ba9affd486c19d9c017b54ed15b9bedba4568d5c45f",
+        "hash_matches": true
+      },
+      "full_panorama": {
+        "file": "tmp/poster-workspaces/Base2/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "de85b5c6eab4159edcc0869518b7f953401aa154025f1b2b2d287d40e74933ac"
+      },
+      "crops": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/Base2/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "cb844eb2360c49610121f6acd7c1d67013fb6e0f63984c19789b1720118464ff",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/Base2/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "7e37a2de90c38849f573ad75669d3fa84a87408eadef7a45b364c5a0efa02a1c",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/Base2/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "af848ba337a83e4285426e32854f53eb8112d451fddac7fc32f0593f8782e5e1",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/Base2/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "9fd8eb174b6be6929d37b7b0d5e80069205fed40c11519e919fe427e967024de",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/Base2/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "36dcdd2a1c7e39a3be8d0fa1fd4a5d350d98493063f489452b7c4919d3f794cf",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/Base2/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "311d04f8da2535d285c55ccfc9e7ed7f79d809c0cd0c90b359e70e3aabf3c21a",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/Base2/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "6c30d13f0d0fcfbc5471b0df131133371e49bf3f61532ea6185029cf3ebd78e7",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/Base2/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "e4597b2e4c2bccd98fab7c83d1738c44ec50cf266bd6e205fe8f4718d620395b",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/Base2/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "41161b6697c1da99625650e4688f386850e7b151e2fa0156a48a779b6213b274",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        }
+      ],
+      "full_panorama_viewed": true,
+      "subjects": [
+        {
+          "subject_id": 25,
+          "identity": "Pikachu",
+          "source": {
+            "subject_id": 25,
+            "file": "tmp/poster-workspaces/Base2/sources/cutouts/pokemon_025_pikachu.png",
+            "expected_sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+            "sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/Base2/poster-flux2-artwork.png",
+            "sha256": "9c0c166cc6bda2f8a8e07ba9affd486c19d9c017b54ed15b9bedba4568d5c45f"
+          },
+          "cell": "r3c1",
+          "physical_crop": {
+            "cell": "r3c1",
+            "file": "tmp/poster-workspaces/Base2/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "6c30d13f0d0fcfbc5471b0df131133371e49bf3f61532ea6185029cf3ebd78e7"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "uncertain",
+          "observations": "Two black-tipped ears, red cheeks, round black eyes and one intact lightning tail match the source silhouette. Both arms and legs are present, but raised-hand digits are merged dark notches, and the left foot is an irregular curled lump rather than the source's elongated three-toe foot. Cannot confidently validate fine digit count at the generated crop's effective detail. No crop clipping."
+        },
+        {
+          "subject_id": 143,
+          "identity": "Snorlax",
+          "source": {
+            "subject_id": 143,
+            "file": "tmp/poster-workspaces/Base2/sources/cutouts/pokemon_143_snorlax.png",
+            "expected_sha256": "5f1f27c4be078c17521492ac7970d95d92200fa17b8c9696ac8d6ee0e0f4cc45",
+            "sha256": "5f1f27c4be078c17521492ac7970d95d92200fa17b8c9696ac8d6ee0e0f4cc45",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/Base2/poster-flux2-artwork.png",
+            "sha256": "9c0c166cc6bda2f8a8e07ba9affd486c19d9c017b54ed15b9bedba4568d5c45f"
+          },
+          "cell": "r3c2",
+          "physical_crop": {
+            "cell": "r3c2",
+            "file": "tmp/poster-workspaces/Base2/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "e4597b2e4c2bccd98fab7c83d1738c44ec50cf266bd6e205fe8f4718d620395b"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Paired ears, closed eyes, cream face and belly, two arms, and two sole pads remain. Reference's clear curved mouth and two white fangs are missing; output shows two short nostril-like marks instead. Hand claws become tiny dark serrations. Three large claw silhouettes on each foot remain but their bases merge with the cream feet. Contained, with coherent ground shadow."
+        },
+        {
+          "subject_id": 133,
+          "identity": "Eevee",
+          "source": {
+            "subject_id": 133,
+            "file": "tmp/poster-workspaces/Base2/sources/cutouts/pokemon_133_eevee.png",
+            "expected_sha256": "4a2657541b849e64f08f25c397cc2156f88eddd7163b86ced4c94050088f2bda",
+            "sha256": "4a2657541b849e64f08f25c397cc2156f88eddd7163b86ced4c94050088f2bda",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/Base2/poster-flux2-artwork.png",
+            "sha256": "9c0c166cc6bda2f8a8e07ba9affd486c19d9c017b54ed15b9bedba4568d5c45f"
+          },
+          "cell": "r3c3",
+          "physical_crop": {
+            "cell": "r3c3",
+            "file": "tmp/poster-workspaces/Base2/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "41161b6697c1da99625650e4688f386850e7b151e2fa0156a48a779b6213b274"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "uncertain",
+          "observations": "Two long dark-inner ears, brown eyes, cream neck ruff and cream-tipped bushy tail remain. A reddish cheek patch is added. Front paws are individually outlined, but the rear-leg region ends against a foreground leaf and cannot be verified as complete against the source's clearly visible rear paw. The tail is fully contained; lower-body occlusion prevents approval."
+        }
+      ],
+      "target_verdict": "reject",
+      "scene_observation": "Full composition and all nine cells inspected. Exactly the three reference subjects appear in the bottom row; all bodies fit their physical cells. Scenery/body intrusions, when present, are listed per subject. No fourth creature identified.",
+      "required_action": "Do not use legacy approval as evidence. Resolve rejected and uncertain subject details, then repeat source and all-card review before approval."
+    },
+    {
+      "target": "Base3",
+      "provenance_file": "assets/posters/Base3/poster-flux2-provenance.json",
+      "provenance_sha256": "03afdc61bf3b9bc58d5fe8652800445cbbc3951cc423716ebf8a680a17a3e18a",
+      "master": {
+        "file": "assets/posters/Base3/poster-flux2-artwork.png",
+        "sha256": "aa861af2f9b212943db476be0fad91358f63f209f262b59e90c2f2a951ba3537",
+        "expected_sha256": "aa861af2f9b212943db476be0fad91358f63f209f262b59e90c2f2a951ba3537",
+        "hash_matches": true
+      },
+      "full_panorama": {
+        "file": "tmp/poster-workspaces/Base3/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "b213fe76e87c6cbe65e05415ab7e90802cb914a7d9a56762391b05b5d06ad753"
+      },
+      "crops": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/Base3/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "8bb8111ec1d399755cbd6ea7cc6414f48054be96e88d703ecf847c9ac2f87762",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/Base3/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "e3e8cd2c10646c3af010dff716e9e9ab5a9581ea10af84931cd8c546296efd9b",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/Base3/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "8d1c19878db241de42d9f686d4aa3e849148532e9a60b13dcb4e41a24a24761a",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/Base3/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "a957727f93e486be709a9cb937f2c009d605499b943b6ffbaac2355da764929e",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/Base3/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "f62c281882ab08c45814ec87fd88ea9bf3a167509d742f6a28824beb9dcf9d4a",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/Base3/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "4e55eac7c32150977db77a1e4e83aa1e179b402d17847e32a9992aaf6d951624",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/Base3/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "36f95d18f93de4f34f053d4208af65fd1cdfc399eaa3648282850def1728b795",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/Base3/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "e53546f5cbb8792919b9c47c912da1065c5b096b497a3a27286bac5a86c53912",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/Base3/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "f533622e193652404a6fa6ee3da44174c8755ed5cbf3f89c00884742256d8a97",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        }
+      ],
+      "full_panorama_viewed": true,
+      "subjects": [
+        {
+          "subject_id": 141,
+          "identity": "Kabutops",
+          "source": {
+            "subject_id": 141,
+            "file": "tmp/poster-workspaces/Base3/sources/cutouts/pokemon_141_kabutops.png",
+            "expected_sha256": "d59c4a7435ada052c103fded3f49623e1c32858665c7f5135c6bbbe0f1de8527",
+            "sha256": "d59c4a7435ada052c103fded3f49623e1c32858665c7f5135c6bbbe0f1de8527",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/Base3/poster-flux2-artwork.png",
+            "sha256": "aa861af2f9b212943db476be0fad91358f63f209f262b59e90c2f2a951ba3537"
+          },
+          "cell": "r3c1",
+          "physical_crop": {
+            "cell": "r3c1",
+            "file": "tmp/poster-workspaces/Base3/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "36f95d18f93de4f34f053d4208af65fd1cdfc399eaa3648282850def1728b795"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Head shield, visible eye, segmented pale torso, two scythes, bent legs, dorsal plates and tail remain. The source has two white clawed toes on the visible left foot; the output adds a third overlapping hooked toe/claw in that foot cluster. The opposite foot retains a clear two-claw shape. Foreground grass touches the left foot but does not explain the added claw."
+        },
+        {
+          "subject_id": 131,
+          "identity": "Lapras",
+          "source": {
+            "subject_id": 131,
+            "file": "tmp/poster-workspaces/Base3/sources/cutouts/pokemon_131_lapras.png",
+            "expected_sha256": "0dda58737b5c1d7db8e7b81ff61b41d0f23bc08ddbf166ca61c20d17d1d27113",
+            "sha256": "0dda58737b5c1d7db8e7b81ff61b41d0f23bc08ddbf166ca61c20d17d1d27113",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/Base3/poster-flux2-artwork.png",
+            "sha256": "aa861af2f9b212943db476be0fad91358f63f209f262b59e90c2f2a951ba3537"
+          },
+          "cell": "r3c2",
+          "physical_crop": {
+            "cell": "r3c2",
+            "file": "tmp/poster-workspaces/Base3/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "e53546f5cbb8792919b9c47c912da1065c5b096b497a3a27286bac5a86c53912"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Single forehead horn, curled side ear, long neck, gray spiked shell and four flippers remain. The reference has dark-blue neck/flank spots; all disappear in the generated crop. Cream flipper undersides are also absent. The eye is changed to a rounded baby-like eye. All parts fit the card, with an attached ground shadow."
+        },
+        {
+          "subject_id": 94,
+          "identity": "Gengar",
+          "source": {
+            "subject_id": 94,
+            "file": "tmp/poster-workspaces/Base3/sources/cutouts/pokemon_094_gengar.png",
+            "expected_sha256": "cd83bb9a7cc3cb159394dc30dda48160965f5470a474d63c921c7eb4884f8d1d",
+            "sha256": "cd83bb9a7cc3cb159394dc30dda48160965f5470a474d63c921c7eb4884f8d1d",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/Base3/poster-flux2-artwork.png",
+            "sha256": "aa861af2f9b212943db476be0fad91358f63f209f262b59e90c2f2a951ba3537"
+          },
+          "cell": "r3c3",
+          "physical_crop": {
+            "cell": "r3c3",
+            "file": "tmp/poster-workspaces/Base3/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "f533622e193652404a6fa6ee3da44174c8755ed5cbf3f89c00884742256d8a97"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "uncertain",
+          "observations": "Red-orange eyes, broad segmented grin, two arms, paired pointed ears and back spikes match the broad reference structure. The front raised foot's three-point toe outline becomes an illegible black scribble, and the far toes merge into a black fringe. Fine toe anatomy cannot be confidently verified. A thin foreground blade overlaps the lower body, but the whole silhouette is inside the crop."
+        }
+      ],
+      "target_verdict": "reject",
+      "scene_observation": "Full composition and all nine cells inspected. Exactly the three reference subjects appear in the bottom row; all bodies fit their physical cells. Scenery/body intrusions, when present, are listed per subject. No fourth creature identified.",
+      "required_action": "Do not use legacy approval as evidence. Resolve rejected and uncertain subject details, then repeat source and all-card review before approval."
+    },
+    {
+      "target": "SV01",
+      "provenance_file": "assets/posters/SV01/poster-flux2-provenance.json",
+      "provenance_sha256": "f95fffadbf70313f2d27784cafeceae627b7d412347ce40b47e24083d67f9f76",
+      "master": {
+        "file": "assets/posters/SV01/poster-flux2-artwork.png",
+        "sha256": "0c5b398a2b5bd52cc7e255d291e76dbfe840078a5931ddf9bf527db512509bfe",
+        "expected_sha256": "0c5b398a2b5bd52cc7e255d291e76dbfe840078a5931ddf9bf527db512509bfe",
+        "hash_matches": true
+      },
+      "full_panorama": {
+        "file": "tmp/poster-workspaces/SV01/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "956916b973b98a61b89c53540e17362d4ea75db683e41e30ec8c6a4fe05fcdd7"
+      },
+      "crops": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/SV01/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "2a5bda464d96352868457bc30e1fd6c4421155eefbe3860f5aa3d3f1f1cdc2ac",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/SV01/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "ffb4d2b527c1fe4cc7a7af62bf46ec4e6e3b8853a2399781f3ad2b47ea310f16",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/SV01/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "dc90d42fa01711e18b35aa9f2e93aa9ba880d0030afb73ec4cb3a8477b2d3365",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/SV01/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "37172765fa40cd088631f96783a0bce9e0f909b384759058bb1dcb0c11e66acd",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/SV01/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "d5b10443f3a1f0ec4983e2de1823a9ec0a0f7bbe3cfef576586185efaf555f62",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/SV01/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "ed79466c5a460d9c93976b8b96f274a4b04219f341e45d5b0bbd0e96c1d0612b",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/SV01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "eb94e96f85ccc2fe933f85f90f28967065d629995eccba0ba62e89a6d7b87a2b",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/SV01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "1f4af09fd2f172a7c67346e009ba9e46f76b342c5fa25e15d3cfb4fe23fc8d7b",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/SV01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "42cd3edb6b790f0c92186a69f1f635e00456f4a804c031a756bf4bf9c9542f27",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        }
+      ],
+      "full_panorama_viewed": true,
+      "subjects": [
+        {
+          "subject_id": 906,
+          "identity": "Sprigatito",
+          "source": {
+            "subject_id": 906,
+            "file": "tmp/poster-workspaces/SV01/sources/cutouts/pokemon_906_sprigatito.png",
+            "expected_sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a",
+            "sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV01/poster-flux2-artwork.png",
+            "sha256": "0c5b398a2b5bd52cc7e255d291e76dbfe840078a5931ddf9bf527db512509bfe"
+          },
+          "cell": "r3c1",
+          "physical_crop": {
+            "cell": "r3c1",
+            "file": "tmp/poster-workspaces/SV01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "eb94e96f85ccc2fe933f85f90f28967065d629995eccba0ba62e89a6d7b87a2b"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Two ears, paired pink eyes, leaf-shaped face mask, leafy collar and single bushy tail remain. Both tiny upper fangs visible in the open-mouth source are absent despite an equally open output mouth; the source pink nose is replaced with ochre. Legs remain separated and clear of scenery; no clipping."
+        },
+        {
+          "subject_id": 909,
+          "identity": "Fuecoco",
+          "source": {
+            "subject_id": 909,
+            "file": "tmp/poster-workspaces/SV01/sources/cutouts/pokemon_909_fuecoco.png",
+            "expected_sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b",
+            "sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV01/poster-flux2-artwork.png",
+            "sha256": "0c5b398a2b5bd52cc7e255d291e76dbfe840078a5931ddf9bf527db512509bfe"
+          },
+          "cell": "r3c2",
+          "physical_crop": {
+            "cell": "r3c2",
+            "file": "tmp/poster-workspaces/SV01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "1f4af09fd2f172a7c67346e009ba9e46f76b342c5fa25e15d3cfb4fe23fc8d7b"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "uncertain",
+          "observations": "Two yellow head tufts, cream face/belly, yellow belly rectangle, two nostrils, one upper tooth, one obvious lower tooth, two arms, two legs with paired dark claws, and single tail remain. The source's opposite lower tooth is reduced to a narrow ambiguous sliver at the mouth edge, and finger points become rounded hand contours. Cannot approve that tooth/digit detail confidently. Ground shadow and containment are sound."
+        },
+        {
+          "subject_id": 912,
+          "identity": "Quaxly",
+          "source": {
+            "subject_id": 912,
+            "file": "tmp/poster-workspaces/SV01/sources/cutouts/pokemon_912_quaxly.png",
+            "expected_sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f",
+            "sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV01/poster-flux2-artwork.png",
+            "sha256": "0c5b398a2b5bd52cc7e255d291e76dbfe840078a5931ddf9bf527db512509bfe"
+          },
+          "cell": "r3c3",
+          "physical_crop": {
+            "cell": "r3c3",
+            "file": "tmp/poster-workspaces/SV01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "42cd3edb6b790f0c92186a69f1f635e00456f4a804c031a756bf4bf9c9542f27"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "pass",
+          "observations": "Blue cap with white double-curve mark and side sweep, paired blue eyes, yellow beak, two white wings and two blue webbed feet follow the source. Both legs are distinct, foot divisions are readable, and the white torso stays clear of the background. No extra appendage or scenery intrusion; grounded shadow and full containment."
+        }
+      ],
+      "target_verdict": "reject",
+      "scene_observation": "Full composition and all nine cells inspected. Exactly the three reference subjects appear in the bottom row; all bodies fit their physical cells. Scenery/body intrusions, when present, are listed per subject. No fourth creature identified.",
+      "required_action": "Do not use legacy approval as evidence. Resolve rejected and uncertain subject details, then repeat source and all-card review before approval."
+    },
+    {
+      "target": "SV02",
+      "provenance_file": "assets/posters/SV02/poster-flux2-provenance.json",
+      "provenance_sha256": "446d465f6dc856cb68b8f5e619a89bfa9e0174274b867d1b0abe616719e80ef6",
+      "master": {
+        "file": "assets/posters/SV02/poster-flux2-artwork.png",
+        "sha256": "54aff4959b4c408246342318956805918bd8676d26518cc8d1f4cca8dc47ec6a",
+        "expected_sha256": "54aff4959b4c408246342318956805918bd8676d26518cc8d1f4cca8dc47ec6a",
+        "hash_matches": true
+      },
+      "full_panorama": {
+        "file": "tmp/poster-workspaces/SV02/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "31017860687e4e515c03cfcc2033dd604a250b39adf47e190dc5fb0bba162c30"
+      },
+      "crops": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/SV02/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "6f2a747c639df7d8deb728aec3ac286218f5afdc880a90f86cfcfdad43c5992a",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/SV02/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "8ea36a4c531e2b400c9d04203b9a945c38d1924084315536ea15a9c699b31cad",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/SV02/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "917079f238eff23bbba7382e792a606c7fba38de20cba04fa44a12992aa87212",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/SV02/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "d7256f8451acb65507cfba2459a4adb5cb5aa7f772dff5a45c057e5dcf71345a",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/SV02/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "85b1a9154aa702936ddcc2ee943e68d7ac5aaa7ad8bf795238beafb5b69c9aa0",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/SV02/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "50776e2a6e0e1d63ef99de230d5c98e59e1bfc886e0e8815edac62f7cc4ca67f",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/SV02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "123a91b8cfc485dc6f7ad7a0fb2aa0fb2fcdeb8cc464dbad05552ead61db1870",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/SV02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "bc90fda792480785499109babb5935bb4cdcd26a65efb5ccdfe306c1a8d0a029",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/SV02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "ee7ee602e7ce1277c872fe6da3a113293c54def45dbc80e413a70bf3f5d0a5cd",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        }
+      ],
+      "full_panorama_viewed": true,
+      "subjects": [
+        {
+          "subject_id": 906,
+          "identity": "Sprigatito",
+          "source": {
+            "subject_id": 906,
+            "file": "tmp/poster-workspaces/SV02/sources/cutouts/pokemon_906_sprigatito.png",
+            "expected_sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a",
+            "sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV02/poster-flux2-artwork.png",
+            "sha256": "54aff4959b4c408246342318956805918bd8676d26518cc8d1f4cca8dc47ec6a"
+          },
+          "cell": "r3c1",
+          "physical_crop": {
+            "cell": "r3c1",
+            "file": "tmp/poster-workspaces/SV02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "123a91b8cfc485dc6f7ad7a0fb2aa0fb2fcdeb8cc464dbad05552ead61db1870"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Paired ears and pink eyes, green face leaf, leafy collar, legs and tail remain. Both upper fangs disappear from the open mouth and the pink source nose becomes an olive/ochre mark. A grass blade touches the hind paw; it does not account for the missing teeth. Entire figure fits the card."
+        },
+        {
+          "subject_id": 909,
+          "identity": "Fuecoco",
+          "source": {
+            "subject_id": 909,
+            "file": "tmp/poster-workspaces/SV02/sources/cutouts/pokemon_909_fuecoco.png",
+            "expected_sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b",
+            "sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV02/poster-flux2-artwork.png",
+            "sha256": "54aff4959b4c408246342318956805918bd8676d26518cc8d1f4cca8dc47ec6a"
+          },
+          "cell": "r3c2",
+          "physical_crop": {
+            "cell": "r3c2",
+            "file": "tmp/poster-workspaces/SV02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "bc90fda792480785499109babb5935bb4cdcd26a65efb5ccdfe306c1a8d0a029"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Cream face, two yellow tufts, nostrils, upper tooth, belly rectangle, paired dark toe claws and tail remain. Source shows a lower tooth on each side of the wide-open mouth; generated left lower tooth is absent while the right lower tooth remains. Hand digit points are also softened. Shadow remains coherent; no clipping."
+        },
+        {
+          "subject_id": 912,
+          "identity": "Quaxly",
+          "source": {
+            "subject_id": 912,
+            "file": "tmp/poster-workspaces/SV02/sources/cutouts/pokemon_912_quaxly.png",
+            "expected_sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f",
+            "sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV02/poster-flux2-artwork.png",
+            "sha256": "54aff4959b4c408246342318956805918bd8676d26518cc8d1f4cca8dc47ec6a"
+          },
+          "cell": "r3c3",
+          "physical_crop": {
+            "cell": "r3c3",
+            "file": "tmp/poster-workspaces/SV02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "ee7ee602e7ce1277c872fe6da3a113293c54def45dbc80e413a70bf3f5d0a5cd"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "uncertain",
+          "observations": "Cap curl and white mark, blue eyes, yellow beak, two wings and two feet remain. The right iris contains irregular white/blue streaks, and grass merges into the lower feet and right wing tip, making their fine boundaries uncertain. Broad identity and containment pass, but precise face/foot details do not support unqualified approval."
+        }
+      ],
+      "target_verdict": "reject",
+      "scene_observation": "Full composition and all nine cells inspected. Exactly the three reference subjects appear in the bottom row; all bodies fit their physical cells. Scenery/body intrusions, when present, are listed per subject. No fourth creature identified.",
+      "required_action": "Do not use legacy approval as evidence. Resolve rejected and uncertain subject details, then repeat source and all-card review before approval."
+    },
+    {
+      "target": "SV03",
+      "provenance_file": "assets/posters/SV03/poster-flux2-provenance.json",
+      "provenance_sha256": "b13fc3b49cb751ade8d74162bbdf2b456103ec62bf22a2cfe5a8806f07e66c1c",
+      "master": {
+        "file": "assets/posters/SV03/poster-flux2-artwork.png",
+        "sha256": "96edafdfdbdf95e8873c9cc72c5e4c9f6fde2d7aeda1512802147b6123391770",
+        "expected_sha256": "96edafdfdbdf95e8873c9cc72c5e4c9f6fde2d7aeda1512802147b6123391770",
+        "hash_matches": true
+      },
+      "full_panorama": {
+        "file": "tmp/poster-workspaces/SV03/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "d685a4c52702be8665f638030cc7e434b0fe7305597758e7cd452c7fdbe747b1"
+      },
+      "crops": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/SV03/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "6470d6b27561d202b42ed62908ad85fe8a745a98fa099c91d9d0f9ecdb58b9b1",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/SV03/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "c951e9e21e00ec2e7431eadd72a3e1e1222c8ba2003004d0310a5cdb78cd41d7",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/SV03/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "9d132b3819bd8d24ab29edbc3bef1894c1cf5845bc8267cfdd2b1014dcc7fc76",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/SV03/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "60a6c096ba5f4affb0686cbf86df6ba26bb341ae571891d02fe2e8955576fe7f",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/SV03/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "8dc66d06a1915cceb1246294dd993b357a9dedd97c0578e5d63810c205ffd228",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/SV03/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "b6623bd4a6c7ab8eea436cd42449f62a0deae7b24344ea4f4d4f6de97a47be31",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/SV03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "0501d9fca7bdbf36fc2e4a6d5c963351cbc7a6b3659993f9194dd2f6c2f4752a",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/SV03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "b0c1fb22066895a3c62f8316f931a8416d03e84fae444ca4bfb18c878ea9cf93",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/SV03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "086dd49260adfd37a014324f91998972752b79d35340c41ff6ac40bd2a2ef8d9",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        }
+      ],
+      "full_panorama_viewed": true,
+      "subjects": [
+        {
+          "subject_id": 722,
+          "identity": "Rowlet",
+          "source": {
+            "subject_id": 722,
+            "file": "tmp/poster-workspaces/SV03/sources/cutouts/pokemon_722_rowlet.png",
+            "expected_sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36",
+            "sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV03/poster-flux2-artwork.png",
+            "sha256": "96edafdfdbdf95e8873c9cc72c5e4c9f6fde2d7aeda1512802147b6123391770"
+          },
+          "cell": "r3c1",
+          "physical_crop": {
+            "cell": "r3c1",
+            "file": "tmp/poster-workspaces/SV03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "0501d9fca7bdbf36fc2e4a6d5c963351cbc7a6b3659993f9194dd2f6c2f4752a"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Two eyes in the white facial disc, white/orange beak, paired wings, pale belly and orange feet remain. A broad foreground blade runs through the body and terminates in the left green bow leaf, fusing scenery with a defining marking and hiding its outline. This is visible in the full panorama and r3c1, independently of otherwise recognizable anatomy."
+        },
+        {
+          "subject_id": 4,
+          "identity": "Charmander",
+          "source": {
+            "subject_id": 4,
+            "file": "tmp/poster-workspaces/SV03/sources/cutouts/pokemon_004_charmander.png",
+            "expected_sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV03/poster-flux2-artwork.png",
+            "sha256": "96edafdfdbdf95e8873c9cc72c5e4c9f6fde2d7aeda1512802147b6123391770"
+          },
+          "cell": "r3c2",
+          "physical_crop": {
+            "cell": "r3c2",
+            "file": "tmp/poster-workspaces/SV03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "b0c1fb22066895a3c62f8316f931a8416d03e84fae444ca4bfb18c878ea9cf93"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Orange body, blue eyes, cream belly, two arms, three white claws per foot and a flame-tipped tail remain. Reference mouth has white teeth, but output's wide-open smiling mouth has none. Hand silhouettes are simplified. Figure and flame are wholly contained, with a coherent shadow."
+        },
+        {
+          "subject_id": 656,
+          "identity": "Froakie",
+          "source": {
+            "subject_id": 656,
+            "file": "tmp/poster-workspaces/SV03/sources/cutouts/pokemon_656_froakie.png",
+            "expected_sha256": "cbb47c38d234eb7dea4b1d90f8c97ec990f41b6e61f26e7efba90d80a3d1d632",
+            "sha256": "cbb47c38d234eb7dea4b1d90f8c97ec990f41b6e61f26e7efba90d80a3d1d632",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV03/poster-flux2-artwork.png",
+            "sha256": "96edafdfdbdf95e8873c9cc72c5e4c9f6fde2d7aeda1512802147b6123391770"
+          },
+          "cell": "r3c3",
+          "physical_crop": {
+            "cell": "r3c3",
+            "file": "tmp/poster-workspaces/SV03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "086dd49260adfd37a014324f91998972752b79d35340c41ff6ac40bd2a2ef8d9"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "pass",
+          "observations": "Two tall yellow eyes with dark pupils, two white nasal bubbles, white foam collar/chest bubble, one raised three-lobed hand and one grounded three-fingered hand remain. Two bent legs and paired feet have distinct outlines; no extra limb, crop cut or scenery crossing. The shadow sits beneath the crouched body."
+        }
+      ],
+      "target_verdict": "reject",
+      "scene_observation": "Full composition and all nine cells inspected. Exactly the three reference subjects appear in the bottom row; all bodies fit their physical cells. Scenery/body intrusions, when present, are listed per subject. No fourth creature identified.",
+      "required_action": "Do not use legacy approval as evidence. Resolve rejected and uncertain subject details, then repeat source and all-card review before approval."
+    },
+    {
+      "target": "SV03.5",
+      "provenance_file": "assets/posters/SV03.5/poster-flux2-provenance.json",
+      "provenance_sha256": "cef56430672acb6fa1741aa9df0da030b845988f66fec412b8d3572f1510634b",
+      "master": {
+        "file": "assets/posters/SV03.5/poster-flux2-artwork.png",
+        "sha256": "727efeda4772538dc294fe0e458600a371e8fef643cd75c8fc603a1ab126acd8",
+        "expected_sha256": "727efeda4772538dc294fe0e458600a371e8fef643cd75c8fc603a1ab126acd8",
+        "hash_matches": true
+      },
+      "full_panorama": {
+        "file": "tmp/poster-workspaces/SV03.5/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "a5b3a13fc036eece43ac77f09b4877ae6589029e4d8fad7b5b03656b43850e82"
+      },
+      "crops": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/SV03.5/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "c94c6dcdda9e56bd725fd8fec6f577fd6c8a0b1ae7af98e282673849a0645609",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/SV03.5/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "ede5cb1b62f478a92f028c50c3f4815daf5cfc27c4e21c745c8eec9ac909415e",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/SV03.5/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "92e2809e9ad73e55b7082e0380471e9c126631744382fb6e4ec35580532745ac",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/SV03.5/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "b6dd3101cb7661e5ee5221a75dd2abe59ecf1505ec68b3dc85ead236e84146ea",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/SV03.5/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "ad2091d0dab4b6d7b877f9f2a4ee02a20f0b896f1abf936ebdd37f4931136a1c",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/SV03.5/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "f49d38f9af0833dfcdb90702edf9f6ea911eabfb6d67287eefb01220b0207fa3",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/SV03.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "56dd916dd041303d68e93037cbe3ee0cdef831bf7a8694ad2dc7a545b9de18bf",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/SV03.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "8196fdef1d0c51307e6554ff8705e75d5190bb099065fd8f6385b071ad0ae930",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/SV03.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "755ec722476707b909999b7c4ce875797cc7178eb0237503cffe00636f9007c5",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        }
+      ],
+      "full_panorama_viewed": true,
+      "subjects": [
+        {
+          "subject_id": 1,
+          "identity": "Bulbasaur",
+          "source": {
+            "subject_id": 1,
+            "file": "tmp/poster-workspaces/SV03.5/sources/cutouts/pokemon_001_bulbasaur.png",
+            "expected_sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a",
+            "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV03.5/poster-flux2-artwork.png",
+            "sha256": "727efeda4772538dc294fe0e458600a371e8fef643cd75c8fc603a1ab126acd8"
+          },
+          "cell": "r3c1",
+          "physical_crop": {
+            "cell": "r3c1",
+            "file": "tmp/poster-workspaces/SV03.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "56dd916dd041303d68e93037cbe3ee0cdef831bf7a8694ad2dc7a545b9de18bf"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Two ears, red eyes, bulb, green skin and principal patches remain. The near front paw visibly has four white claw tips rather than the source's three; the small upper foreleg spot is omitted. Mouth retains a visible right fang. Bulb and feet are contained; thin grass near the far paw does not explain the extra near-paw claw."
+        },
+        {
+          "subject_id": 4,
+          "identity": "Charmander",
+          "source": {
+            "subject_id": 4,
+            "file": "tmp/poster-workspaces/SV03.5/sources/cutouts/pokemon_004_charmander.png",
+            "expected_sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV03.5/poster-flux2-artwork.png",
+            "sha256": "727efeda4772538dc294fe0e458600a371e8fef643cd75c8fc603a1ab126acd8"
+          },
+          "cell": "r3c2",
+          "physical_crop": {
+            "cell": "r3c2",
+            "file": "tmp/poster-workspaces/SV03.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "8196fdef1d0c51307e6554ff8705e75d5190bb099065fd8f6385b071ad0ae930"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Two blue eyes, cream belly, arms, legs, tail and flame remain. Left foot has only two conspicuous white claws instead of the source's three; the right foot has three. The left upper fang is also absent while the right is retained. Grounding and containment remain coherent."
+        },
+        {
+          "subject_id": 7,
+          "identity": "Squirtle",
+          "source": {
+            "subject_id": 7,
+            "file": "tmp/poster-workspaces/SV03.5/sources/cutouts/pokemon_007_squirtle.png",
+            "expected_sha256": "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290",
+            "sha256": "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV03.5/poster-flux2-artwork.png",
+            "sha256": "727efeda4772538dc294fe0e458600a371e8fef643cd75c8fc603a1ab126acd8"
+          },
+          "cell": "r3c3",
+          "physical_crop": {
+            "cell": "r3c3",
+            "file": "tmp/poster-workspaces/SV03.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "755ec722476707b909999b7c4ce875797cc7178eb0237503cffe00636f9007c5"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "uncertain",
+          "observations": "Round head with reddish eyes, cream segmented belly shell, brown rear shell and curled blue tail remain. Both arms and legs are present, but the near hand's reference finger tips are smoothed into a single broad edge and the toes blend with grass. Precise hand/toe count cannot be established confidently from this crop. Entire tail and body remain inside the cell."
+        }
+      ],
+      "target_verdict": "reject",
+      "scene_observation": "Full composition and all nine cells inspected. Exactly the three reference subjects appear in the bottom row; all bodies fit their physical cells. Scenery/body intrusions, when present, are listed per subject. No fourth creature identified.",
+      "required_action": "Do not use legacy approval as evidence. Resolve rejected and uncertain subject details, then repeat source and all-card review before approval."
+    },
+    {
+      "target": "SV04",
+      "provenance_file": "assets/posters/SV04/poster-flux2-provenance.json",
+      "provenance_sha256": "b9edd45d2c30fa3704828dd5f38d0c3801f83cb0d8a242ee06b6a91700148b1c",
+      "master": {
+        "file": "assets/posters/SV04/poster-flux2-artwork.png",
+        "sha256": "fbef96b80f577acaa02915ea6b789c447df4a5b28dcac369070ff711a413c30a",
+        "expected_sha256": "fbef96b80f577acaa02915ea6b789c447df4a5b28dcac369070ff711a413c30a",
+        "hash_matches": true
+      },
+      "full_panorama": {
+        "file": "tmp/poster-workspaces/SV04/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "3c5ca5f961449808a334166798a4a73ec252ed121b18a3228db13bbb3b95b7e5"
+      },
+      "crops": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/SV04/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "2d691d53501499222bf840463fef0d77a786041eaa42f46fbed8ff57e6f5df0f",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/SV04/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "d623496614bda7c881621a7d11fe81970cef75525a3ded740ba5ea2b3ece3513",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/SV04/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "712ea824ef9a69872ad93a5d15f4b82f55ba13d3b70b7f48acd8bd5ab83c8463",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/SV04/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "008cf35010266dc5b0fd8a7ff0d2e2fa7188aa07d0119e70800182744f5495fe",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/SV04/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "e840d79693469aa4ab75882017fa7f818b23959726dd08123e2c6acd714d3e51",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/SV04/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "e38c11c66c739c6be97b11d3883cb8feddb63cafac88dd6755bd3e782de9a7ed",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/SV04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "60fbd44d2c98eb5dc9747234b394ebe56a58903053e0552bfd768dcec7610cd5",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/SV04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "e1306c54e24fb20644f7fef1bef650e5f5423dab5f6f93325dc484b6eae71fa4",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/SV04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "ae99a27bd415c16ba88d18df2532ce68aaa1893476122fbe97edbeccee3e5a4c",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        }
+      ],
+      "full_panorama_viewed": true,
+      "subjects": [
+        {
+          "subject_id": 909,
+          "identity": "Fuecoco",
+          "source": {
+            "subject_id": 909,
+            "file": "tmp/poster-workspaces/SV04/sources/cutouts/pokemon_909_fuecoco.png",
+            "expected_sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b",
+            "sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV04/poster-flux2-artwork.png",
+            "sha256": "fbef96b80f577acaa02915ea6b789c447df4a5b28dcac369070ff711a413c30a"
+          },
+          "cell": "r3c1",
+          "physical_crop": {
+            "cell": "r3c1",
+            "file": "tmp/poster-workspaces/SV04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "60fbd44d2c98eb5dc9747234b394ebe56a58903053e0552bfd768dcec7610cd5"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Paired tufts, cream face, yellow belly plate, two arms, paired dark foot claws and a tail remain. The wide-open mouth lacks the source's left lower tooth; one upper and one opposite lower tooth remain. Rounded fingertips also lose source definition. All extremities are contained."
+        },
+        {
+          "subject_id": 484,
+          "identity": "Palkia",
+          "source": {
+            "subject_id": 484,
+            "file": "tmp/poster-workspaces/SV04/sources/cutouts/pokemon_484_palkia.png",
+            "expected_sha256": "c364c56bf8921cdb2e26922307379bc1d8b2f61220f366da467e117be26f33c9",
+            "sha256": "c364c56bf8921cdb2e26922307379bc1d8b2f61220f366da467e117be26f33c9",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV04/poster-flux2-artwork.png",
+            "sha256": "fbef96b80f577acaa02915ea6b789c447df4a5b28dcac369070ff711a413c30a"
+          },
+          "cell": "r3c2",
+          "physical_crop": {
+            "cell": "r3c2",
+            "file": "tmp/poster-workspaces/SV04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "e1306c54e24fb20644f7fef1bef650e5f5423dab5f6f93325dc484b6eae71fa4"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Head crest, long neck, striped armor, shoulder orb, dorsal fins, two legs and curved tail remain. The near hand's separate pointed white claws in the reference are replaced by a stack of short gray strokes merged into the palm. The far hand is also flattened; claw separation is lost. The shoulder pearl changes pink to orange, beyond the otherwise cool scene colors. Figure is contained and shadowed."
+        },
+        {
+          "subject_id": 150,
+          "identity": "Mewtwo",
+          "source": {
+            "subject_id": 150,
+            "file": "tmp/poster-workspaces/SV04/sources/cutouts/pokemon_150_mewtwo.png",
+            "expected_sha256": "b7c00037d7ba9fb5cebc2da42ca0da54c7b664f4d7b2348d60ade5c6dc9de256",
+            "sha256": "b7c00037d7ba9fb5cebc2da42ca0da54c7b664f4d7b2348d60ade5c6dc9de256",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV04/poster-flux2-artwork.png",
+            "sha256": "fbef96b80f577acaa02915ea6b789c447df4a5b28dcac369070ff711a413c30a"
+          },
+          "cell": "r3c3",
+          "physical_crop": {
+            "cell": "r3c3",
+            "file": "tmp/poster-workspaces/SV04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "ae99a27bd415c16ba88d18df2532ce68aaa1893476122fbe97edbeccee3e5a4c"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Two head projections, purple belly and long curled tail remain. Extended hand has only two round terminal tips rather than the reference's three. The visible iris is yellow rather than purple. Both feet are rounded/simplified; the missing hand tip is unobscured and cannot be explained by scenery. Fully contained."
+        }
+      ],
+      "target_verdict": "reject",
+      "scene_observation": "Full composition and all nine cells inspected. Exactly the three reference subjects appear in the bottom row; all bodies fit their physical cells. Scenery/body intrusions, when present, are listed per subject. No fourth creature identified.",
+      "required_action": "Do not use legacy approval as evidence. Resolve rejected and uncertain subject details, then repeat source and all-card review before approval."
+    },
+    {
+      "target": "SV04.5",
+      "provenance_file": "assets/posters/SV04.5/poster-flux2-provenance.json",
+      "provenance_sha256": "b4c337df596f5f71069d56b72aae7eb83dc44dcf63230172ab09a791d271895d",
+      "master": {
+        "file": "assets/posters/SV04.5/poster-flux2-artwork.png",
+        "sha256": "05a519ec108167e8eec28f50410252c8be294d90100aedf99a7d215cb15d8c6b",
+        "expected_sha256": "05a519ec108167e8eec28f50410252c8be294d90100aedf99a7d215cb15d8c6b",
+        "hash_matches": true
+      },
+      "full_panorama": {
+        "file": "tmp/poster-workspaces/SV04.5/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "dd25f6c26818d40ccbb830918c17ef654f1a1c1a9e70b1c81805881ff7399c89"
+      },
+      "crops": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/SV04.5/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "684bc0ea3d141977f95e509f5548054fbc965fb72ad5d835d2976b05c9560ac5",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/SV04.5/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "0fc90205a32081457bdcd7a103e4d9a5c380255f706b848cfaef46f195d797ba",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/SV04.5/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "1a2bb45561433a0e13dc3924d58173e52029c74f015f66de5cdd4dc5bfb9a9df",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/SV04.5/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "b5ec6a1b8df5acb318634eaa8afef8c52ac1cbd11a7dd82138bff26b9576d558",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/SV04.5/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "f66d78d76912353053416f4d26d229b5b1c87a6db4206dc7d6c5bcaaf0fe208f",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/SV04.5/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "c5c2ec9b21baae1085f04709d233a8ec129bde5e173d50035f87f1fea8a6add5",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/SV04.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "f7a62da1871b5a60d96207cba94bbd31d1b40ed8b2d8139c2628ea2fbd18f26c",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/SV04.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "aca0883ddeea60d1f6f4bd4e2fcf805a388977eabd2ce2297bc62fe4786f66ce",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/SV04.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "cde58f54b2e67a02bf9ff0d13e37bf74c83984d316b33d07ebb4e21940706670",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        }
+      ],
+      "full_panorama_viewed": true,
+      "subjects": [
+        {
+          "subject_id": 4,
+          "identity": "Charmander",
+          "source": {
+            "subject_id": 4,
+            "file": "tmp/poster-workspaces/SV04.5/sources/cutouts/pokemon_004_charmander.png",
+            "expected_sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV04.5/poster-flux2-artwork.png",
+            "sha256": "05a519ec108167e8eec28f50410252c8be294d90100aedf99a7d215cb15d8c6b"
+          },
+          "cell": "r3c1",
+          "physical_crop": {
+            "cell": "r3c1",
+            "file": "tmp/poster-workspaces/SV04.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "f7a62da1871b5a60d96207cba94bbd31d1b40ed8b2d8139c2628ea2fbd18f26c"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Anatomy largely follows the source: two blue eyes, visible white teeth, cream belly, three white claws per foot, two arms and flame-tipped tail. However a foreground blade rises across the body and ends inside the cream belly, interrupting its clean defining boundary. Entire figure fits the physical crop; rejection is for scene/body crossing."
+        },
+        {
+          "subject_id": 25,
+          "identity": "Pikachu",
+          "source": {
+            "subject_id": 25,
+            "file": "tmp/poster-workspaces/SV04.5/sources/cutouts/pokemon_025_pikachu.png",
+            "expected_sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+            "sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV04.5/poster-flux2-artwork.png",
+            "sha256": "05a519ec108167e8eec28f50410252c8be294d90100aedf99a7d215cb15d8c6b"
+          },
+          "cell": "r3c2",
+          "physical_crop": {
+            "cell": "r3c2",
+            "file": "tmp/poster-workspaces/SV04.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "aca0883ddeea60d1f6f4bd4e2fcf805a388977eabd2ce2297bc62fe4786f66ce"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "uncertain",
+          "observations": "Two black-tipped ears, red cheek circles, round eyes, two arms/legs and single lightning tail remain. Hand fingertips are black scribbles rather than individually legible source fingers; exact count cannot be verified. Both feet remain elongated and the shadow is plausible. No clipping or major silhouette error."
+        },
+        {
+          "subject_id": 131,
+          "identity": "Lapras",
+          "source": {
+            "subject_id": 131,
+            "file": "tmp/poster-workspaces/SV04.5/sources/cutouts/pokemon_131_lapras.png",
+            "expected_sha256": "0dda58737b5c1d7db8e7b81ff61b41d0f23bc08ddbf166ca61c20d17d1d27113",
+            "sha256": "0dda58737b5c1d7db8e7b81ff61b41d0f23bc08ddbf166ca61c20d17d1d27113",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV04.5/poster-flux2-artwork.png",
+            "sha256": "05a519ec108167e8eec28f50410252c8be294d90100aedf99a7d215cb15d8c6b"
+          },
+          "cell": "r3c3",
+          "physical_crop": {
+            "cell": "r3c3",
+            "file": "tmp/poster-workspaces/SV04.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "cde58f54b2e67a02bf9ff0d13e37bf74c83984d316b33d07ebb4e21940706670"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "pass",
+          "observations": "Forehead horn, paired head structures including curled ear, narrow eye, cream throat, faint but visible dark-blue neck/flank spots, gray shell bumps, four flippers and cream undersides are retained. No invented extra fin or cropped appendage. The shell has a readable border and rests in grass without a major body crossing."
+        }
+      ],
+      "target_verdict": "reject",
+      "scene_observation": "Full composition and all nine cells inspected. Exactly the three reference subjects appear in the bottom row; all bodies fit their physical cells. Scenery/body intrusions, when present, are listed per subject. No fourth creature identified.",
+      "required_action": "Do not use legacy approval as evidence. Resolve rejected and uncertain subject details, then repeat source and all-card review before approval."
+    },
+    {
+      "target": "SV05",
+      "provenance_file": "assets/posters/SV05/poster-flux2-provenance.json",
+      "provenance_sha256": "a2f3735b68008cb5e182a6df2ed403e5c78c143b01aed335e2f0c4f3e9d452ce",
+      "master": {
+        "file": "assets/posters/SV05/poster-flux2-artwork.png",
+        "sha256": "2e0deba9d4194f6b11c90fa7a067cf4eecd59c36a8fb57cf272f98b2674aa374",
+        "expected_sha256": "2e0deba9d4194f6b11c90fa7a067cf4eecd59c36a8fb57cf272f98b2674aa374",
+        "hash_matches": true
+      },
+      "full_panorama": {
+        "file": "tmp/poster-workspaces/SV05/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "13bd3c76a6c23d3dfe5ef0e6a43c83dbc7402d204eeed5badb8a00c4fa87f2c4"
+      },
+      "crops": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/SV05/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "28401e8d8bbecd94f4ab7adc7ffde33783f5dafad386b7b8fcbb25359a2ddf9c",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/SV05/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "81611d9e3bf7a5bfec9b0f34730135775668ce4683cc556ffbdbce62a23d31dd",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/SV05/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "3fe70c47ec21a1ab50b6ba12f6c6283ce057dbf89a149557a15b097b5fef765a",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/SV05/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "1490591b432a4532e9ad9ff815a711b11da80eabea49e44599bec94fdf1c7bad",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/SV05/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "f7e7c0375c5574f19220c7921b3c8f8a7a19f607f44c32781cad338f1df35659",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/SV05/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "19f9356c2e396cd643bbbd78784bdf20e33a6b1384344c0a6a2cd6c13cb21c3d",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/SV05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "ffbaa5f708d963b26ba5d43a3f5c7cb7745e05e7eb790d9e52311949ce8379c4",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/SV05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "e610663de670e8a158d96a26f78c98f0b51719ce071e77ca0e4f85994792f974",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/SV05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "76212e1ef1b435012f1235c20584667d6382d84a8b9ef64864bcb37660cd0c06",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        }
+      ],
+      "full_panorama_viewed": true,
+      "subjects": [
+        {
+          "subject_id": 387,
+          "identity": "Turtwig",
+          "source": {
+            "subject_id": 387,
+            "file": "tmp/poster-workspaces/SV05/sources/cutouts/pokemon_387_turtwig.png",
+            "expected_sha256": "34bdf93e84d8e1770074ead9c38b1659bcc937abfa20ddd8a6e53a283ed0e16d",
+            "sha256": "34bdf93e84d8e1770074ead9c38b1659bcc937abfa20ddd8a6e53a283ed0e16d",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV05/poster-flux2-artwork.png",
+            "sha256": "2e0deba9d4194f6b11c90fa7a067cf4eecd59c36a8fb57cf272f98b2674aa374"
+          },
+          "cell": "r3c1",
+          "physical_crop": {
+            "cell": "r3c1",
+            "file": "tmp/poster-workspaces/SV05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "ffbaa5f708d963b26ba5d43a3f5c7cb7745e05e7eb790d9e52311949ce8379c4"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "uncertain",
+          "observations": "Two leaves on a brown head sprout, yellow eye ring/jaw, brown shell with dark border, and three clearly visible legs preserve identity. The tiny fourth leg visible beneath the source belly is not independently distinguishable here; the crop also introduces toe grooves in source's smooth yellow feet. This may partly reflect pose/grass, so record uncertainty rather than an invented missing-leg fact. Main silhouette is contained."
+        },
+        {
+          "subject_id": 725,
+          "identity": "Litten",
+          "source": {
+            "subject_id": 725,
+            "file": "tmp/poster-workspaces/SV05/sources/cutouts/pokemon_725_litten.png",
+            "expected_sha256": "02391ac457888baf123accfc5ce446fc75df4790b3b000865a21c0f21b622600",
+            "sha256": "02391ac457888baf123accfc5ce446fc75df4790b3b000865a21c0f21b622600",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV05/poster-flux2-artwork.png",
+            "sha256": "2e0deba9d4194f6b11c90fa7a067cf4eecd59c36a8fb57cf272f98b2674aa374"
+          },
+          "cell": "r3c2",
+          "physical_crop": {
+            "cell": "r3c2",
+            "file": "tmp/poster-workspaces/SV05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "e610663de670e8a158d96a26f78c98f0b51719ce071e77ca0e4f85994792f974"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Two true ears, forehead red stripe, yellow slit eyes, red cheek tufts, striped foreleg and long dark tail remain. A large pale triangular ear-like patch is invented behind the right cheek, absent from the source. The right cheek tuft merges into several digit-like lines and the body/rear-leg junction loses a clean separation. All fits the card but form is not faithful."
+        },
+        {
+          "subject_id": 158,
+          "identity": "Totodile",
+          "source": {
+            "subject_id": 158,
+            "file": "tmp/poster-workspaces/SV05/sources/cutouts/pokemon_158_totodile.png",
+            "expected_sha256": "a0ce9f06497dc2a9a3d34174ff89e0ee1a0745ce8007cc89257e379d9be49525",
+            "sha256": "a0ce9f06497dc2a9a3d34174ff89e0ee1a0745ce8007cc89257e379d9be49525",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV05/poster-flux2-artwork.png",
+            "sha256": "2e0deba9d4194f6b11c90fa7a067cf4eecd59c36a8fb57cf272f98b2674aa374"
+          },
+          "cell": "r3c3",
+          "physical_crop": {
+            "cell": "r3c3",
+            "file": "tmp/poster-workspaces/SV05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "76212e1ef1b435012f1235c20584667d6382d84a8b9ef64864bcb37660cd0c06"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Open jaw, two upper fangs, red eye, yellow chest chevron, two arms, one raised foot, one planted foot and spiked tail remain. Several separate lower teeth visible around both sides of the source jaw are missing in output. Raised hand digits become short blunt notches. The mouth is unobscured, so missing teeth cannot be attributed to occlusion. Contained and grounded."
+        }
+      ],
+      "target_verdict": "reject",
+      "scene_observation": "Full composition and all nine cells inspected. Exactly the three reference subjects appear in the bottom row; all bodies fit their physical cells. Scenery/body intrusions, when present, are listed per subject. No fourth creature identified.",
+      "required_action": "Do not use legacy approval as evidence. Resolve rejected and uncertain subject details, then repeat source and all-card review before approval."
+    },
+    {
+      "target": "SV06",
+      "provenance_file": "assets/posters/SV06/poster-flux2-provenance.json",
+      "provenance_sha256": "63970854f1fafd9e89c02e51188bceb2345eb0069f4f4276b2e35aae10cbcac7",
+      "master": {
+        "file": "assets/posters/SV06/poster-flux2-artwork.png",
+        "sha256": "a94d925d2e6d5a252f0c684c754f603284daaecbca5d0fa21f55f008f1755bcc",
+        "expected_sha256": "a94d925d2e6d5a252f0c684c754f603284daaecbca5d0fa21f55f008f1755bcc",
+        "hash_matches": true
+      },
+      "full_panorama": {
+        "file": "tmp/poster-workspaces/SV06/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "5794c1fac63f954923c628c2d01465d78fa666c1e186a05d9958dedb64d66b04"
+      },
+      "crops": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/SV06/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "c73ef4cb5a319414f4e5916594ac1814272fccfff0c0a1c08e2817bef5f46aa1",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/SV06/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "1abc1a5ad6335971cca370f2238010120c05fc4de02f9edb4e252c2ba29ca611",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/SV06/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "5f199ff092ac06ef4c34afe347655131ee5741cf3028a18a269df1380ad7f1c6",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/SV06/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "e9952a105ba52932db416a973190e29e23329c812b2781a95a7654915bdc8ec3",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/SV06/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "d1508b6a3888d6c2f299e807f8bcdd1cf2aec801a73bb21eaec8e76e4c1103bf",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/SV06/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "a0cada423f10bda4bc0e53e76d4ed946cc11c78530a9f0648ec80d45db587adc",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/SV06/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "abebc56ed7fe17b17c8a83789f6116c0e1dd9aac3e0e3f6832287578f9e75db9",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/SV06/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "9f02e29160bbe0b977c4d857c7a9cd2ee2294c6ccd8f98c9d438d1a8a03d9202",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/SV06/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "7afd007fe6df5c1bf2b174a2298a2e934161e8b522cbd2153e4b6e0fdfc67c4b",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        }
+      ],
+      "full_panorama_viewed": true,
+      "subjects": [
+        {
+          "subject_id": 810,
+          "identity": "Grookey",
+          "source": {
+            "subject_id": 810,
+            "file": "tmp/poster-workspaces/SV06/sources/cutouts/pokemon_810_grookey.png",
+            "expected_sha256": "0a4b1c0662dd8e0ad7f00bf78c2f958b297bc25c70bbc7273d50b3d39d5de330",
+            "sha256": "0a4b1c0662dd8e0ad7f00bf78c2f958b297bc25c70bbc7273d50b3d39d5de330",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV06/poster-flux2-artwork.png",
+            "sha256": "a94d925d2e6d5a252f0c684c754f603284daaecbca5d0fa21f55f008f1755bcc"
+          },
+          "cell": "r3c1",
+          "physical_crop": {
+            "cell": "r3c1",
+            "file": "tmp/poster-workspaces/SV06/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "abebc56ed7fe17b17c8a83789f6116c0e1dd9aac3e0e3f6832287578f9e75db9"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Two leaf tips and one stick on the head, brown ears, cream face rings, orange muzzle, curled tail and two arms/legs remain. Grounded source hand has individually outlined fingers; generated hand collapses to three blunt lobes. Raised fingertips are also reduced. A leaf touches the tail but does not account for the hand defect. No crop clipping."
+        },
+        {
+          "subject_id": 390,
+          "identity": "Chimchar",
+          "source": {
+            "subject_id": 390,
+            "file": "tmp/poster-workspaces/SV06/sources/cutouts/pokemon_390_chimchar.png",
+            "expected_sha256": "7ce75f77abcaff1451c67da6fc8de9b6828aacb1a222dd590825c5cab4b20140",
+            "sha256": "7ce75f77abcaff1451c67da6fc8de9b6828aacb1a222dd590825c5cab4b20140",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV06/poster-flux2-artwork.png",
+            "sha256": "a94d925d2e6d5a252f0c684c754f603284daaecbca5d0fa21f55f008f1755bcc"
+          },
+          "cell": "r3c2",
+          "physical_crop": {
+            "cell": "r3c2",
+            "file": "tmp/poster-workspaces/SV06/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "9f02e29160bbe0b977c4d857c7a9cd2ee2294c6ccd8f98c9d438d1a8a03d9202"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "uncertain",
+          "observations": "Paired ears, head tuft, long arms, bent legs and rear flame remain. Source's broad pink upper eye patches shrink to thin rims, chest curl becomes a boxy outlined patch, and grounded hand/foot details are substantially shortened. The hand has overlapping shapes that prevent a reliable count; flag uncertainty instead of assuming anatomical equivalence. Entire figure is contained."
+        },
+        {
+          "subject_id": 656,
+          "identity": "Froakie",
+          "source": {
+            "subject_id": 656,
+            "file": "tmp/poster-workspaces/SV06/sources/cutouts/pokemon_656_froakie.png",
+            "expected_sha256": "cbb47c38d234eb7dea4b1d90f8c97ec990f41b6e61f26e7efba90d80a3d1d632",
+            "sha256": "cbb47c38d234eb7dea4b1d90f8c97ec990f41b6e61f26e7efba90d80a3d1d632",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV06/poster-flux2-artwork.png",
+            "sha256": "a94d925d2e6d5a252f0c684c754f603284daaecbca5d0fa21f55f008f1755bcc"
+          },
+          "cell": "r3c3",
+          "physical_crop": {
+            "cell": "r3c3",
+            "file": "tmp/poster-workspaces/SV06/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "7afd007fe6df5c1bf2b174a2298a2e934161e8b522cbd2153e4b6e0fdfc67c4b"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "pass",
+          "observations": "Tall paired yellow eyes, two nasal foam balls, larger foam collar and chest ball, two bent legs and two white three-fingered hands remain. Raised fingers are distinct and do not fuse with nearby leaves; the grounded hand and both feet are clear. Single coherent crouching silhouette, attached shadow, and full containment."
+        }
+      ],
+      "target_verdict": "reject",
+      "scene_observation": "Full composition and all nine cells inspected. Exactly the three reference subjects appear in the bottom row; all bodies fit their physical cells. Scenery/body intrusions, when present, are listed per subject. No fourth creature identified.",
+      "required_action": "Do not use legacy approval as evidence. Resolve rejected and uncertain subject details, then repeat source and all-card review before approval."
+    },
+    {
+      "target": "SV06.5",
+      "provenance_file": "assets/posters/SV06.5/poster-flux2-provenance.json",
+      "provenance_sha256": "36a9a1372ad15cd3e2f9a11ac6633be5a3d521bb50d2057742558ca090b9423d",
+      "master": {
+        "file": "assets/posters/SV06.5/poster-flux2-artwork.png",
+        "sha256": "847ff1ca298cf6489b775573f73370cf6f562a48f545c3fdc3bec1e7fdfe60e3",
+        "expected_sha256": "847ff1ca298cf6489b775573f73370cf6f562a48f545c3fdc3bec1e7fdfe60e3",
+        "hash_matches": true
+      },
+      "full_panorama": {
+        "file": "tmp/poster-workspaces/SV06.5/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "671b34f946326177a7307d8293fbb3aaf6dcd83846758b37204fbd085d3c3052"
+      },
+      "crops": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/SV06.5/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "3e371c49efb9f1ff36937c53794624f9e76d4f28055d67b2238e1c9d02f47270",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/SV06.5/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "ab9a099316bd816a7c3eb80beb264461b8b12a809f82962b9dc23935379dfd50",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/SV06.5/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "db73847ee0d12ec77437e92094147fb6424e6e1bc33e1085a5d4d7c36a77dd02",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/SV06.5/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "16b6b52b692b788f9b58a9b62366b650e57e8b9a2f04a711a2fb03deda4a9dc6",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/SV06.5/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "857f2268393269086cebfe3e4bd83a31af09a8da357d0cf04f203e27641f4aa0",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/SV06.5/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "b8f8b560f3b30f341cbf812752830f2354cd1b726c9f85416991fe5d5aed1e09",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/SV06.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "f73a5494acd74239351eab39311e072d50af2531de3b707a176b5eb2baa61a4b",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/SV06.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "0623a506dcfe3ea0e405871e3d4d169c52886bf84da772fbb006ec0d37eb2bfe",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/SV06.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "6a57af6bdb870703b5feef1673e42a3b60023365ea5e3d82ace5fc56ef59c15e",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        }
+      ],
+      "full_panorama_viewed": true,
+      "subjects": [
+        {
+          "subject_id": 722,
+          "identity": "Rowlet",
+          "source": {
+            "subject_id": 722,
+            "file": "tmp/poster-workspaces/SV06.5/sources/cutouts/pokemon_722_rowlet.png",
+            "expected_sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36",
+            "sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV06.5/poster-flux2-artwork.png",
+            "sha256": "847ff1ca298cf6489b775573f73370cf6f562a48f545c3fdc3bec1e7fdfe60e3"
+          },
+          "cell": "r3c1",
+          "physical_crop": {
+            "cell": "r3c1",
+            "file": "tmp/poster-workspaces/SV06.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "f73a5494acd74239351eab39311e072d50af2531de3b707a176b5eb2baa61a4b"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "White facial disc, paired eyes, white/orange beak, two green bow leaves, wings and pale belly remain. The left orange foot has three pointed toe tips, whereas the source foot has two. Wing layering/proportions also change, but the unobscured foot count is the concrete rejection. Entire subject remains in r3c1."
+        },
+        {
+          "subject_id": 717,
+          "identity": "Yveltal",
+          "source": {
+            "subject_id": 717,
+            "file": "tmp/poster-workspaces/SV06.5/sources/cutouts/pokemon_717_yveltal.png",
+            "expected_sha256": "154bd7f904c5db48ddce7cc7ff656f95cd110c7327bee28a895b11fddfcfa4a7",
+            "sha256": "154bd7f904c5db48ddce7cc7ff656f95cd110c7327bee28a895b11fddfcfa4a7",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV06.5/poster-flux2-artwork.png",
+            "sha256": "847ff1ca298cf6489b775573f73370cf6f562a48f545c3fdc3bec1e7fdfe60e3"
+          },
+          "cell": "r3c2",
+          "physical_crop": {
+            "cell": "r3c2",
+            "file": "tmp/poster-workspaces/SV06.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "0623a506dcfe3ea0e405871e3d4d169c52886bf84da772fbb006ec0d37eb2bfe"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Red/black branching wing and tail membranes, dark crest/ruff, the large terminal claw fans and single visible small leg follow the general source pose. The visible small foot's distinct pale hooked claws are replaced by a compressed cluster of multiple cyan-white jagged strokes; claw separation and leg termination are deformed. Fine face/eye details are also weak. No crop clipping; aerial shadow plausible."
+        },
+        {
+          "subject_id": 649,
+          "identity": "Genesect",
+          "source": {
+            "subject_id": 649,
+            "file": "tmp/poster-workspaces/SV06.5/sources/cutouts/pokemon_649_genesect.png",
+            "expected_sha256": "0d77f632c0d27b74998040266b493c817a3643e2257e106a0feaa5fe52002b5a",
+            "sha256": "0d77f632c0d27b74998040266b493c817a3643e2257e106a0feaa5fe52002b5a",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV06.5/poster-flux2-artwork.png",
+            "sha256": "847ff1ca298cf6489b775573f73370cf6f562a48f545c3fdc3bec1e7fdfe60e3"
+          },
+          "cell": "r3c3",
+          "physical_crop": {
+            "cell": "r3c3",
+            "file": "tmp/poster-workspaces/SV06.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "6a57af6bdb870703b5feef1673e42a3b60023365ea5e3d82ace5fc56ef59c15e"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "uncertain",
+          "observations": "Back cannon with opening and yellow module, purple shell, two blade-like arms, segmented torso and two pointed feet remain. Source eye shows two separate oval inner marks and mouth has individually divided white teeth; generated eye marks merge into bright bars and the mouth becomes a mostly undivided pale line. Fine face identity cannot be verified confidently. All appendages fit; no major scenery crossing."
+        }
+      ],
+      "target_verdict": "reject",
+      "scene_observation": "Full composition and all nine cells inspected. Exactly the three reference subjects appear in the bottom row; all bodies fit their physical cells. Scenery/body intrusions, when present, are listed per subject. No fourth creature identified.",
+      "required_action": "Do not use legacy approval as evidence. Resolve rejected and uncertain subject details, then repeat source and all-card review before approval."
+    },
+    {
+      "target": "SV07",
+      "provenance_file": "assets/posters/SV07/poster-flux2-provenance.json",
+      "provenance_sha256": "826c7d773018427b6a1b55cc96d4208a66ac66b6b46822e2d0d3f7463039f84a",
+      "master": {
+        "file": "assets/posters/SV07/poster-flux2-artwork.png",
+        "sha256": "876c1c23d1bd31ee832c419845e2f0469b069e0e596e7171b438246c56a4c8ef",
+        "expected_sha256": "876c1c23d1bd31ee832c419845e2f0469b069e0e596e7171b438246c56a4c8ef",
+        "hash_matches": true
+      },
+      "full_panorama": {
+        "file": "tmp/poster-workspaces/SV07/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "ee7af481f4fa42efa7aeec935a40361746c60941f29ee78c3eac0050733d02ab"
+      },
+      "crops": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/SV07/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "07d39f01372d7b24eb262d66a05ca74caa15eb54bc6811cdbd8119a4dad4c2ed",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/SV07/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "f5d7580e53405c5c08af39f6f442180968fd0f2c9a90552766087c219a84bc4c",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/SV07/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "b9164ab018e71b6eb7bac63c5b30da98406255ead87b0c9dc05d8a6da012a85a",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/SV07/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "fd8fa7bdc92916c02348aafa3aceaf777ebb311388b6956daadb09dde1400aaa",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/SV07/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "529dc0cea1f5888cbd1755fb52b462d9bed8affe96d1f859b89a55795325aa92",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/SV07/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "94347ae7c589f0bb69d99aaa9132ea97c76ecf93d3d3376b0630e8ee627c51d5",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected scenery/overlay cell: no additional creature or detached anatomical fragment; sky/landscape continuity and card boundary inspected."
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/SV07/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "6c66954ce54179a492a687c5bc5d2e00a756f99c586a55cec9b6f310195aa1f8",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/SV07/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "1fb371737c0748617a64acb25b9f91e815fe09195d0b836d86ec46feb408aeb4",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/SV07/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "4e4a9d1f935dd9eaedd577d0b72684a52f8f1d9766ac1d404fb72442382d5a3c",
+          "viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ],
+          "observation": "Inspected full physical subject crop; feature findings recorded in subjects."
+        }
+      ],
+      "full_panorama_viewed": true,
+      "subjects": [
+        {
+          "subject_id": 1,
+          "identity": "Bulbasaur",
+          "source": {
+            "subject_id": 1,
+            "file": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_001_bulbasaur.png",
+            "expected_sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a",
+            "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV07/poster-flux2-artwork.png",
+            "sha256": "876c1c23d1bd31ee832c419845e2f0469b069e0e596e7171b438246c56a4c8ef"
+          },
+          "cell": "r3c1",
+          "physical_crop": {
+            "cell": "r3c1",
+            "file": "tmp/poster-workspaces/SV07/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "6c66954ce54179a492a687c5bc5d2e00a756f99c586a55cec9b6f310195aa1f8"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Two ears, red eyes, bulb and principal dark-green patches remain. The near front paw and visible rear paw each show four white claw tips instead of reference's three. Source fangs are absent from the open mouth, and the small upper foreleg spot is missing. A blade touches the far leg but does not explain near-paw anatomy. Entire bulb and paws fit r3c1."
+        },
+        {
+          "subject_id": 7,
+          "identity": "Squirtle",
+          "source": {
+            "subject_id": 7,
+            "file": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_007_squirtle.png",
+            "expected_sha256": "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290",
+            "sha256": "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV07/poster-flux2-artwork.png",
+            "sha256": "876c1c23d1bd31ee832c419845e2f0469b069e0e596e7171b438246c56a4c8ef"
+          },
+          "cell": "r3c2",
+          "physical_crop": {
+            "cell": "r3c2",
+            "file": "tmp/poster-workspaces/SV07/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "1fb371737c0748617a64acb25b9f91e815fe09195d0b836d86ec46feb408aeb4"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Two reddish eyes, segmented cream belly shell, brown rear shell, two arms/legs and curled tail remain. White claw-like nails are introduced on the far foot, where the source has blue toe tips without white nails. Near hand is simplified and one foot's toes become a broad zigzag edge. No scenery covers these changes; full containment."
+        },
+        {
+          "subject_id": 813,
+          "identity": "Scorbunny",
+          "source": {
+            "subject_id": 813,
+            "file": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_813_scorbunny.png",
+            "expected_sha256": "0099f4bb576966efc872c03c69616f954c8474d12608a2fd7e91304a9d271167",
+            "sha256": "0099f4bb576966efc872c03c69616f954c8474d12608a2fd7e91304a9d271167",
+            "hash_matches": true
+          },
+          "artwork": {
+            "file": "assets/posters/SV07/poster-flux2-artwork.png",
+            "sha256": "876c1c23d1bd31ee832c419845e2f0469b069e0e596e7171b438246c56a4c8ef"
+          },
+          "cell": "r3c3",
+          "physical_crop": {
+            "cell": "r3c3",
+            "file": "tmp/poster-workspaces/SV07/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "4e4a9d1f935dd9eaedd577d0b72684a52f8f1d9766ac1d404fb72442382d5a3c"
+          },
+          "original_source_viewed": true,
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "The v10 result has exactly two orange-tipped outer ears, so the former three-ear issue is absent. However the left ear lacks the yellow inner inset; the source's upper white incisor is missing in the open mouth. Two orange neck pads become one continuous red collar, raised sole's yellow rectangular pad becomes orange, and left eye/nose region becomes a distorted brown smear. Two arms and legs and white tail are present; no crop clipping. Two ears alone does not establish approval."
+        }
+      ],
+      "target_verdict": "reject",
+      "scene_observation": "Full composition and all nine cells inspected. Exactly the three reference subjects appear in the bottom row; all bodies fit their physical cells. Scenery/body intrusions, when present, are listed per subject. No fourth creature identified.",
+      "required_action": "Do not use legacy approval as evidence. Resolve rejected and uncertain subject details, then repeat source and all-card review before approval."
+    }
+  ],
+  "subject_verdict_counts": {
+    "pass": 4,
+    "reject": 25,
+    "uncertain": 10
+  }
+}

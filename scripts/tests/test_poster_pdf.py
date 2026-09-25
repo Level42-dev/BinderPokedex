@@ -21,8 +21,8 @@ from scripts.poster_assets.poster_io import PosterBundle
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def test_base1_poster_page_draws_all_nine_physical_cards():
-    renderer = PosterPageRenderer.from_variant_data({"set_id": "Base1"}, "de")
+def test_enabled_poster_page_draws_all_nine_physical_cards():
+    renderer = PosterPageRenderer.from_variant_data({"set_id": "ME05"}, "de")
     assert renderer is not None
     canvas = MagicMock()
     page_renderer = PageRenderer()
@@ -37,15 +37,15 @@ def test_base1_poster_page_draws_all_nine_physical_cards():
         assert call.kwargs["height"] == page_renderer.style.CARD_HEIGHT
 
 
-def test_base1_full_page_draws_one_continuous_physical_poster():
+def test_enabled_full_page_draws_one_continuous_physical_poster():
     renderer = PosterPageRenderer.from_variant_data(
-        {"set_id": "Base1"},
+        {"set_id": "ME05"},
         "de",
         page_mode="full-page",
     )
     assert renderer is not None
     localized_path = (
-        ROOT / "assets" / "posters" / "Base1" / "poster-flux2-artwork.png"
+        ROOT / "assets" / "posters" / "ME05" / "poster-flux2-artwork.png"
     )
     renderer._prepare_localized_poster = MagicMock(
         return_value=localized_path,
@@ -76,13 +76,13 @@ def test_base1_full_page_draws_one_continuous_physical_poster():
 
 
 def test_scope_without_enabled_poster_has_no_poster_page():
-    assert PosterPageRenderer.from_variant_data({"set_id": "missing"}, "de") is None
+    assert PosterPageRenderer.from_variant_data({"set_id": "Base1"}, "de") is None
 
 
 def test_enabled_poster_can_be_skipped_before_loading_its_assets():
     assert (
         PosterPageRenderer.from_variant_data(
-            {"set_id": "Base1"},
+            {"set_id": "ME05"},
             "de",
             include_poster=False,
         )
@@ -124,30 +124,10 @@ def test_pokedex_enabled_generation_bundles_need_no_set_id():
     try:
         assert [
             renderer.poster_id for renderer in collection.renderers
-        ] == [
-            "gen1",
-            "gen2",
-            "gen3",
-            "gen4",
-            "gen5",
-            "gen6",
-            "gen7",
-            "gen8",
-            "gen9",
-        ]
+        ] == ["gen1", "gen2", "gen3", "gen4", "gen5", "gen6", "gen7", "gen8", "gen9"]
         assert [
             renderer.section_id for renderer in collection.renderers
-        ] == [
-            "gen1",
-            "gen2",
-            "gen3",
-            "gen4",
-            "gen5",
-            "gen6",
-            "gen7",
-            "gen8",
-            "gen9",
-        ]
+        ] == ["gen1", "gen2", "gen3", "gen4", "gen5", "gen6", "gen7", "gen8", "gen9"]
     finally:
         collection.cleanup()
 
@@ -221,12 +201,12 @@ def test_enabled_aggregate_bindings_create_one_renderer_per_section(
         collection.cleanup()
 
 
-def test_base1_poster_source_is_text_free_artwork():
-    renderer = PosterPageRenderer.from_variant_data({"set_id": "Base1"}, "en")
+def test_enabled_poster_source_is_text_free_artwork():
+    renderer = PosterPageRenderer.from_variant_data({"set_id": "ME05"}, "en")
     assert renderer is not None
     try:
         assert renderer.artwork_path == (
-            ROOT / "assets" / "posters" / "Base1" / "poster-flux2-artwork.png"
+            ROOT / "assets" / "posters" / "ME05" / "poster-flux2-artwork.png"
         )
         assert renderer.insertion == "after_first_section_cover"
         assert renderer.layout_name == "standard_3x3"
@@ -234,20 +214,8 @@ def test_base1_poster_source_is_text_free_artwork():
         renderer.cleanup()
 
 
-def test_sv035_poster_source_is_text_free_artwork():
-    renderer = PosterPageRenderer.from_variant_data({"set_id": "SV03.5"}, "de")
-    assert renderer is not None
-    try:
-        assert renderer.artwork_path == (
-            ROOT
-            / "assets"
-            / "posters"
-            / "SV03.5"
-            / "poster-flux2-artwork.png"
-        )
-        assert renderer.insertion == "after_first_section_cover"
-    finally:
-        renderer.cleanup()
+def test_disabled_sv07_artwork_is_not_routed_into_release_pdf():
+    assert PosterPageRenderer.from_variant_data({"set_id": "SV07"}, "de") is None
 
 
 @pytest.mark.parametrize(

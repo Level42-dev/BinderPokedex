@@ -53,17 +53,17 @@ Technical details: [full changelog](CHANGELOG.md).
 - **1,025+ Pokémon** across all 9 generations (Kanto → Paldea) in National Pokédex
 - **Official artwork** from PokéAPI and TCGdex - authentic images from games and TCG
 - **3×3 card layout** (9 per page) - perfect for standard binder sheets
-- **Nine-card poster panoramas** for every current set, Pokédex generation,
-  and EX chapter
+- **Nine-card poster panoramas** plus clean set covers for every current set,
+  Pokédex generation, and EX chapter
 - **New: Custom poster layouts** ✨ — generate temporary compact 2×2 or wide
   4×3 artwork layouts on the existing A4 print grid without changing bundled
   release PDFs or poster assets
 - **Complete TCG Support** 🎴
   - **3 EX Generations:** ExGen1 (2003-2007), ExGen2 (2012-2016), ExGen3 (2023+)
   - **17 Scarlet & Violet Sets:** Full Scarlet & Violet era (SV01-SV10 + specials)
-  - **Mega Evolution Era:** ME01, ME02, ME02.5, ME03, ME04, MEP
+  - **Mega Evolution Era:** ME01, ME02, ME02.5, ME03, ME04, ME05, MEP
   - Auto-discovery and batch generation
-- **Scope-Based System** with 30 total scopes
+- **Scope-Based System** with 31 total scopes
 - **Sectioned PDFs** with themed dividers and featured Pokémon headers
 - **Modular pipeline** for data fetching with flexible configuration
 - **Print-ready A4** - just download, print, and bind! 📎
@@ -136,7 +136,7 @@ cd BinderPokedex
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
-# List available scopes (30 total: 1 Pokedex + 3 ExGen + 26 TCG sets)
+# List available scopes (31 total: 1 Pokedex + 3 ExGen + 27 TCG sets)
 ls config/scopes/*.yaml
 
 # Fetch data for a scope

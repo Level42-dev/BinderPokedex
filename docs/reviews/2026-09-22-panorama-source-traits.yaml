@@ -1,0 +1,235 @@
+schema_version: 1
+# Unresolved one-shot scopes, plus P02 after the operator explicitly requested
+# correction of its remaining subjects. Its earlier Pikachu approval remains
+# bound only to candidate E and does not transfer to the new complete scene.
+scopes:
+  P02: Base2
+  P07: Pokedex/sections/gen4
+  P08: Pokedex/sections/gen5
+  P09: Pokedex/sections/gen6
+  P11: Pokedex/sections/gen8
+  P12: Pokedex/sections/gen9
+  P13: ExGen1/sections/normal
+  P14: ExGen2/sections/normal
+  P16: ExGen2/sections/primal
+  P17: Base3
+  P18: SV01
+  P19: SV02
+  P20: SV03
+  P21: SV03.5
+  P22: SV04
+  P23: SV04.5
+  P24: SV05
+  P25: SV06
+  P26: SV06.5
+  P28: SV08.5
+  P29: SV09
+  P30: SV10
+  P31: SV10.5B
+  P32: SV10.5W
+  P33: SVP
+  P34: ME01
+  P35: ME02
+  P36: ME02.5
+  P37: ME03
+  P38: ME04
+  P39: MEP
+
+# A description is keyed by the exact official-artwork identity, not by a card
+# nickname. All repeated subjects use the same detail source and the builder
+# checks its bytes against the hash-bound September retriage before rendering.
+# Existing validated traits for keys not listed here are reused only if their
+# stored source hash matches the current source bytes.
+traits:
+  "pokeapi:official-artwork:25": >-
+    Match this exact cheerful Pikachu source pose: two long black-tipped ears,
+    two round dark eyes with white highlights, red cheeks, an open pink mouth,
+    the image-left arm stretched outward, the other bent toward the chest,
+    two small standing feet and one zigzag yellow tail with its brown base.
+    Keep the face and all limb contours source-close. Two long jungle grass
+    blades may naturally pass in front of its extended arm and lower belly;
+    they are foreground scenery, not new body outlines.
+  "pokeapi:official-artwork:143": >-
+    Match the exact seated Relaxo source: broad teal-blue body, pointed ears,
+    closed narrow eyes, cream face and enormous round cream belly. Preserve
+    the continuous curved smiling mouth and its two separate small upward
+    white teeth. Both arms extend to the sides and show their small white
+    claws. Both large forward-facing feet retain the brown oval paw pads and
+    exactly the distinct white source toe claws, without extra spikes.
+  "pokeapi:official-artwork:133": >-
+    Match the exact standing Evoli source: warm brown four-legged body with
+    all four feet on the ground, very large pointed ears with dark inner
+    areas, black oval eyes and white highlights, tiny nose and a subtle
+    closed smile. Preserve the jagged cream neck ruff and its large bushy
+    tail rising to image-right with a cream tip. Do not invent red cheek
+    markings, change it to a seated pose or hide its standing legs.
+  "pokeapi:official-artwork:10077": >-
+    Match the exact Primal Kyogre source, including its long dark-blue whale body,
+    pale glowing eye and forehead markings, bright circuit-like lines on both
+    broad flippers, white fin-tip shapes and individually separated rear fins.
+    Keep its head, fins and tail connected in the source pose; do not replace
+    its characteristic illuminated patterns with generic stripes.
+  "pokeapi:official-artwork:10078": >-
+    Match this exact Primal Groudon source: massive dark torso, vivid red armored
+    head and back plates, pale yellow magma seams, long angular tail with side
+    spikes, thick clawed arms and both separately visible clawed feet. Preserve
+    the source's layered plate outlines rather than a smooth red dinosaur body.
+  "pokeapi:official-artwork:10301": >-
+    Match this exact Mega Zygarde source, especially the huge dark horizontal
+    cannon-like upper appendage with purple central emblem, red facets, and
+    separated forked muzzle; keep the much smaller green-and-black body beneath
+    it, angular arms, green core markings, tail and pointed lower silhouette.
+    The cannon belongs to this one subject, not a second creature.
+  "pokeapi:official-artwork:131": >-
+    Match the exact blue Lapras source pose, its long curved neck, gentle face,
+    paired head ears, cream underside, brown shell with separate raised ridges,
+    flippers, and every visible darker blue spot on neck and body. Do not turn
+    the spotted neck into a smooth unmarked surface.
+  "pokeapi:official-artwork:141": >-
+    Match the exact Kabutops source: brown segmented shell head, narrow eyes,
+    slim upright torso, two separate scythe forearms, angular legs and their
+    visible foot shape. Keep the scythes as arms rather than extra horns, and
+    do not invent or merge feet.
+  "pokeapi:official-artwork:150": >-
+    Match this exact Mewtwo source pose: pale humanoid body, distinct purple
+    belly and long purple tail, horn-like head projections, focused eye, narrow
+    neck and the source's individually separated fingers on both hands.
+    Preserve the extended hand structure; do not make mitten-like hands.
+  "pokeapi:official-artwork:151": >-
+    Match the exact small pink Mew source with its rounded head, large blue
+    eyes, tiny limbs, pointed ears and very long thin curling tail. Keep its
+    simple catlike silhouette and source pose, not a larger feline body.
+  "pokeapi:official-artwork:249": >-
+    Match the exact white-and-blue Lugia source: narrow defined eye, long
+    beak-like muzzle, paired dark-blue dorsal plates, long neck and tail, and
+    broad wing-arms with individually separated fingertip feathers. Preserve
+    the head profile and wing-finger count visible in the reference.
+  "pokeapi:official-artwork:250": >-
+    Match the exact red, cream, yellow and green Ho-Oh source pose. Preserve
+    its distinctly lobed yellow-red head crest instead of flattening it into
+    a fan, hooked beak, layered neck feathers, individually patterned wing
+    feathers and long separate colored tail feathers.
+  "pokeapi:official-artwork:251": >-
+    Match the exact small pale-green Celebi source, its rounded pinkish face,
+    two fine antennae, large blue eyes, small hands and feet, thin translucent
+    wings and tapered head crest. Keep this delicate fairy-like silhouette.
+  "pokeapi:official-artwork:255": >-
+    Match the exact orange Torchic source pose with its three-point head tuft,
+    short beak, black eyes, cream downy neck feathers and two short legs.
+    Preserve both feet and their actual overlap and angle as drawn in the
+    source; do not fuse them into one invented claw.
+  "pokeapi:official-artwork:3": >-
+    Match the exact broad-bodied Venusaur source: low green spotted face and
+    legs, red eyes, separate claws, giant pink spotted flower with defined
+    petals, yellow center, thick palm-like trunk and layered green leaves.
+    Preserve the face beneath the flower rather than turning it into a generic frog.
+  "pokeapi:official-artwork:383": >-
+    Match the exact standard Groudon source with red segmented armor, black
+    panel seams, sharp white claws, open jaw, bulky legs and angular side and
+    tail spikes. Keep this ordinary Groudon distinct from the glowing Primal form.
+  "pokeapi:official-artwork:387": >-
+    Match the exact small green Turtwig source, its broad head, yellow lower
+    face and shell rim, red eyes, separate short feet, and one small twig with
+    two leaves growing from the top of the head. Do not turn the twig into a tail.
+  "pokeapi:official-artwork:390": >-
+    Match this exact Chimchar source pose: orange monkey body, blue eye
+    markings, cream face and belly, clear belly swirl, slim arms and long
+    separate fingers, with its small rear flame. In particular keep the
+    supporting hand and its distinct extended finger visible.
+  "pokeapi:official-artwork:393": >-
+    Match the exact blue Piplup source with its pale face, oval white belly,
+    tiny yellow beak and feet, dark blue cap and cape-like sides, and short
+    flipper wings. Preserve its compact upright penguin proportions.
+  "pokeapi:official-artwork:484": >-
+    Match the exact white-and-pink Palkia source with its long neck, angular
+    head crest, shoulder guards, purple round shoulder markings, chest plates,
+    long tail and clearly separated finger claws on both hands. Keep the
+    armored hands anatomically attached and source-shaped.
+  "pokeapi:official-artwork:495": >-
+    Match the exact small green Snivy source with its pointed face, narrow
+    reddish eyes, pale belly, short arms, yellow collar arcs and broad leaf-like
+    tail. Keep the tail a single plant-shaped appendage, not a new limb.
+  "pokeapi:official-artwork:498": >-
+    Match the exact orange Tepig source with its oval yellow snout, black
+    shoulder and ear markings, four short feet and thin curled tail ending in
+    a dark puff. Preserve the happy piglet face and source body proportions.
+  "pokeapi:official-artwork:501": >-
+    Match the exact white-and-blue Oshawott source with its dark-blue ears,
+    orange oval nose, three clear dark cheek freckles on each side, blue arms
+    and feet, and the yellow shell held on its pale belly. Keep the freckles
+    and shell visibly separate from the face and body.
+  "pokeapi:official-artwork:643": >-
+    Match the exact white Reshiram source: slender angular head profile,
+    fine blue eye, tall feathered crown, long layered neck feathers, broad
+    feathered wings with distinct edge notches, clawed limbs and large turbine
+    tail. Keep its head and neck crisp rather than rounding them into a swan.
+  "pokeapi:official-artwork:644": >-
+    Match the exact dark Zekrom source: armored angular head and red eye,
+    raised hand with individually defined fingers, segmented shoulders and
+    torso, broad dark wings and cylindrical turbine tail. Do not merge the
+    raised hand with a wing or smooth away its armored seams.
+  "pokeapi:official-artwork:646": >-
+    Match the exact gray Kyurem source with its sharply modeled head, long
+    dark neck, asymmetrical ice-blue crystalline wing structures, separately
+    visible arms, clawed feet and heavy tail. Preserve the jagged frozen
+    wing outlines rather than replacing them with soft feathers.
+  "pokeapi:official-artwork:649": >-
+    Match the exact purple Genesect source: angular insectlike head and
+    paired red eyes, long separate cannon above the back, segmented torso,
+    two distinct arms and legs, and compact clawed feet. Keep the eyes and
+    cannon mechanically crisp, not rounded into a generic robot face.
+  "pokeapi:official-artwork:650": >-
+    Match the exact small Chespin source with its green spined hood, tan face,
+    dark nose, pink cheeks, visible little upper tooth, cream belly, short
+    forearms and individually outlined feet. Preserve its asymmetric source
+    pose, mouth and toe tips instead of smoothing them away.
+  "pokeapi:official-artwork:653": >-
+    Match the exact yellow Fennekin source with its oversized pointed ears,
+    flame-orange inner ear fur, tiny dark nose, narrow bright eyes, cream
+    cheek tufts, slim fox legs and bushy orange-tipped tail. Keep the source's
+    leg pose and face profile rather than a generic seated fox.
+  "pokeapi:official-artwork:656": >-
+    Match the exact blue Froakie source: large yellow eyes, pale foam scarf
+    around the neck, rounded face, slim hind legs and individually separated
+    fingers and toes. Keep the foam as a collar, not an extra limb.
+  "pokeapi:official-artwork:717": >-
+    Match the exact red-and-black Yveltal source with its narrow defined head,
+    distinct eyes, broad Y-shaped wing-arms ending in black finger-like tips,
+    long neck and tail, and separately visible talons. Preserve the angular
+    silhouette and correct foot details instead of softening it into a bird.
+  "pokeapi:official-artwork:810": >-
+    Match the exact little green Grookey source with its brown ears and face,
+    orange snout, large eyes, green leafy hair tuft, short limbs and slim
+    stick held at the top of the head. Keep the stick separate from its arms.
+  "pokeapi:official-artwork:816": >-
+    Match the exact pale-blue Sobble source: huge wet-looking eyes, yellow
+    forehead crest, slim arms, narrow separated legs, curled tail and seated
+    source pose. Do not merge a leg into a hand or redraw the eyes as dots.
+  "pokeapi:official-artwork:888": >-
+    Match this exact Hero-of-Many-Battles Zacian source, not its crowned
+    sword-bearing form. Keep the long blue canine body, alert yellow eye,
+    cream lower legs and separated paws, and the winding salmon-pink braided
+    mane or ribbon running from neck to flank. Do not add a sword.
+  "pokeapi:official-artwork:9": >-
+    Match the exact bulky blue Blastoise source, its brown segmented shell,
+    pale belly, compact turtle face, separate clawed arms and legs, tail and
+    two distinct metal water cannons emerging from the shoulders.
+  "pokeapi:official-artwork:906": >-
+    Match the exact bright-green Sprigatito source, with its leaf-shaped face
+    mask, reddish eyes, broad ears with pink interiors, fluffy neck leaves,
+    compact kitten paws and tiny pointed mouth fangs. Keep the fangs visible
+    when the source mouth is unobstructed.
+  "pokeapi:official-artwork:909": >-
+    Match the exact red Fuecoco source, its square yellow belly plate,
+    black eye patches, yellow crest, friendly open mouth with a visible
+    lower tooth, short legs and two separate scalloped hands. Do not flatten
+    the lower tooth or make smooth mitten-like hands.
+  "pokeapi:official-artwork:912": >-
+    Match the exact white Quaxly source with its rounded blue hair crest,
+    blue eyes, yellow bill and feet, distinct wing arms and clean open space
+    between the legs. Do not invent any finger-like white appendage beneath
+    a wing or between the legs.
+  "pokeapi:official-artwork:94": >-
+    Match the exact purple Gengar source, its red eyes, wide toothy grin,
+    pointed head and back spikes, short clawed arms, low legs and stocky
+    ghost silhouette. Keep the grin and teeth sharply defined.

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "scope": "Base2",
+  "review_id": "P02",
+  "candidate": "H",
+  "asset_kind": "text_free_master",
+  "artwork_file": "artwork-300dpi.png",
+  "artwork_sha256": "26d6a468e59b7dd1ea21931d85ae016ed220324d23eee1fd8aacb642001a07f6",
+  "composition": "one-shot A plus two separate bounded FLUX.2 foreground-layer harmonizations",
+  "one_shot_master_sha256": "67f4e6dcfa88260aa35cb75c843b47c9975ddd3985154d3f318addb69a892e4d",
+  "one_shot_trial_evidence_sha256": "152b50fc0bce2df520f9a2dc331be0041b3c9c18ae7dedaabe1dc2d2bb2426af",
+  "pikachu_repair_evidence_sha256": "b05f4757242a7d5ad8befcf8ff08078d206fd4e448591095165e36524c6668e5",
+  "eevee_repair_evidence_sha256": "7ca8e4dd5bff89291c9692f20de6d396bc9d425783dbc88926a183b6efa97bc4",
+  "pikachu_repair_mask_sha256": "a6b15c59e7132ccf3f36c70c83d532690898ad31ac0f2776c0a9024a16af524b",
+  "eevee_repair_mask_sha256": "9f33dd254b10d96edc2da1b20e5bb687e0b1e684498cfa82f5283b01c1dcf9ba",
+  "combined_review_evidence_sha256": "f8a961cce698cdf85093194f3f019bfd3fa891ed353be70daac76b5266eb313d",
+  "pixel_audit": {
+    "changed_editable_pixels": 10548,
+    "editable_pixels": 11121,
+    "changed_outside_mask_pixels": 0
+  },
+  "unchanged_physical_cards": 7,
+  "human_approval": "text_free_artwork_accepted_2026-09-25",
+  "title_logo_approval": {
+    "status": "accepted_2026-09-25",
+    "logo_sha256": "2c3c710607f45c54a2e7ed05f492e82a2ccfe9d021b9511cccf07f9053a0bbfc",
+    "german_preview_sha256": "1bb691e4fb60eadb98d10dc579a82df3e1399770fcd92c25a40bac2928ae565a"
+  },
+  "localized_overlay_approval": "pending",
+  "production_promotion": false,
+  "pdf_routing": false,
+  "review_report": "docs/reviews/2026-09-24-p02-correction-trials.md"
+}

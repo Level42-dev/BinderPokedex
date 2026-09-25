@@ -5,10 +5,10 @@
     "release_date": "2024-05-24",
     "card_count": {
       "firstEd": 0,
-      "holo": 0,
-      "normal": 0,
+      "holo": 114,
+      "normal": 137,
       "official": 167,
-      "reverse": 0,
+      "reverse": 147,
       "total": 226
     },
     "logo": "https://assets.tcgdex.net/en/sv/sv06/logo.png",
@@ -3021,7 +3021,7 @@
   "metadata": {
     "total_cards": 226,
     "set_id": "sv06",
-    "date_fetched": "2026-03-31T22:05:39.824664Z",
+    "date_fetched": "2026-09-12T02:48:01.556635Z",
     "source": "TCGdex API v2",
     "language": "en"
   }

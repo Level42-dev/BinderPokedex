@@ -2,7 +2,7 @@
   "version": "2.0",
   "type": "pokedex",
   "name": "Pokédex",
-  "consolidated_date": "2026-07-27",
+  "consolidated_date": "2026-09-12",
   "total_generations": 9,
   "sections": {
     "gen1": {
@@ -3148,7 +3148,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
           "local_image_path": "data/section_artwork/pokemon_1_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 1,
+            "official_artwork_id": 1,
+            "subject_key": "pokeapi:official-artwork:1",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+          }
         },
         {
           "pokemon_id": 4,
@@ -3158,7 +3165,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
           "local_image_path": "data/section_artwork/pokemon_4_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 4,
+            "official_artwork_id": 4,
+            "subject_key": "pokeapi:official-artwork:4",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png"
+          }
         },
         {
           "pokemon_id": 7,
@@ -3168,7 +3182,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
           "local_image_path": "data/section_artwork/pokemon_7_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 7,
+            "official_artwork_id": 7,
+            "subject_key": "pokeapi:official-artwork:7",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png"
+          }
         }
       ]
     },
@@ -5277,7 +5298,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/152.png",
           "local_image_path": "data/section_artwork/pokemon_152_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 152,
+            "official_artwork_id": 152,
+            "subject_key": "pokeapi:official-artwork:152",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/152.png"
+          }
         },
         {
           "pokemon_id": 155,
@@ -5287,7 +5315,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/155.png",
           "local_image_path": "data/section_artwork/pokemon_155_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 155,
+            "official_artwork_id": 155,
+            "subject_key": "pokeapi:official-artwork:155",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/155.png"
+          }
         },
         {
           "pokemon_id": 158,
@@ -5297,7 +5332,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/158.png",
           "local_image_path": "data/section_artwork/pokemon_158_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 158,
+            "official_artwork_id": 158,
+            "subject_key": "pokeapi:official-artwork:158",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/158.png"
+          }
         }
       ]
     },
@@ -8123,7 +8165,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/252.png",
           "local_image_path": "data/section_artwork/pokemon_252_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 252,
+            "official_artwork_id": 252,
+            "subject_key": "pokeapi:official-artwork:252",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/252.png"
+          }
         },
         {
           "pokemon_id": 255,
@@ -8133,7 +8182,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/255.png",
           "local_image_path": "data/section_artwork/pokemon_255_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 255,
+            "official_artwork_id": 255,
+            "subject_key": "pokeapi:official-artwork:255",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/255.png"
+          }
         },
         {
           "pokemon_id": 258,
@@ -8143,7 +8199,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/258.png",
           "local_image_path": "data/section_artwork/pokemon_258_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 258,
+            "official_artwork_id": 258,
+            "subject_key": "pokeapi:official-artwork:258",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/258.png"
+          }
         }
       ]
     },
@@ -9111,11 +9174,11 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/432.png",
           "generation": 4,
           "name": {
-            "es": "Purugly",
             "ko": "몬냥이",
             "zh_hant": "東施喵",
             "fr": "Chaffreux",
             "de": "Shnurgarst",
+            "es": "Purugly",
             "it": "Purugly",
             "en": "Purugly",
             "ja": "ブニャット",
@@ -10396,7 +10459,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/387.png",
           "local_image_path": "data/section_artwork/pokemon_387_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 387,
+            "official_artwork_id": 387,
+            "subject_key": "pokeapi:official-artwork:387",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/387.png"
+          }
         },
         {
           "pokemon_id": 390,
@@ -10406,7 +10476,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/390.png",
           "local_image_path": "data/section_artwork/pokemon_390_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 390,
+            "official_artwork_id": 390,
+            "subject_key": "pokeapi:official-artwork:390",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/390.png"
+          }
         },
         {
           "pokemon_id": 393,
@@ -10416,7 +10493,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/393.png",
           "local_image_path": "data/section_artwork/pokemon_393_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 393,
+            "official_artwork_id": 393,
+            "subject_key": "pokeapi:official-artwork:393",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/393.png"
+          }
         }
       ]
     },
@@ -10687,11 +10771,11 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/505.png",
           "generation": 5,
           "name": {
-            "es": "Watchog",
             "ko": "보르그",
             "zh_hant": "步哨鼠",
             "fr": "Miradar",
             "de": "Kukmarda",
+            "es": "Watchog",
             "it": "Watchog",
             "en": "Watchog",
             "ja": "ミルホッグ",
@@ -13670,7 +13754,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/495.png",
           "local_image_path": "data/section_artwork/pokemon_495_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 495,
+            "official_artwork_id": 495,
+            "subject_key": "pokeapi:official-artwork:495",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/495.png"
+          }
         },
         {
           "pokemon_id": 498,
@@ -13680,7 +13771,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/498.png",
           "local_image_path": "data/section_artwork/pokemon_498_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 498,
+            "official_artwork_id": 498,
+            "subject_key": "pokeapi:official-artwork:498",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/498.png"
+          }
         },
         {
           "pokemon_id": 501,
@@ -13690,7 +13788,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/501.png",
           "local_image_path": "data/section_artwork/pokemon_501_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 501,
+            "official_artwork_id": 501,
+            "subject_key": "pokeapi:official-artwork:501",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/501.png"
+          }
         }
       ]
     },
@@ -15231,7 +15336,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/650.png",
           "local_image_path": "data/section_artwork/pokemon_650_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 650,
+            "official_artwork_id": 650,
+            "subject_key": "pokeapi:official-artwork:650",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/650.png"
+          }
         },
         {
           "pokemon_id": 653,
@@ -15241,7 +15353,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/653.png",
           "local_image_path": "data/section_artwork/pokemon_653_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 653,
+            "official_artwork_id": 653,
+            "subject_key": "pokeapi:official-artwork:653",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/653.png"
+          }
         },
         {
           "pokemon_id": 656,
@@ -15251,7 +15370,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/656.png",
           "local_image_path": "data/section_artwork/pokemon_656_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 656,
+            "official_artwork_id": 656,
+            "subject_key": "pokeapi:official-artwork:656",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/656.png"
+          }
         }
       ]
     },
@@ -16123,12 +16249,12 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/762.png",
           "generation": 7,
           "name": {
-            "it": "Steenee",
             "ko": "달무리나",
             "zh_hant": "甜舞妮",
             "fr": "Candine",
             "de": "Frubaila",
             "es": "Steenee",
+            "it": "Steenee",
             "en": "Steenee",
             "ja": "アママイコ",
             "zh_hans": "甜舞妮"
@@ -17126,7 +17252,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/722.png",
           "local_image_path": "data/section_artwork/pokemon_722_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 722,
+            "official_artwork_id": 722,
+            "subject_key": "pokeapi:official-artwork:722",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/722.png"
+          }
         },
         {
           "pokemon_id": 725,
@@ -17136,7 +17269,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/725.png",
           "local_image_path": "data/section_artwork/pokemon_725_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 725,
+            "official_artwork_id": 725,
+            "subject_key": "pokeapi:official-artwork:725",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/725.png"
+          }
         },
         {
           "pokemon_id": 728,
@@ -17146,7 +17286,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/728.png",
           "local_image_path": "data/section_artwork/pokemon_728_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 728,
+            "official_artwork_id": 728,
+            "subject_key": "pokeapi:official-artwork:728",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/728.png"
+          }
         }
       ]
     },
@@ -19170,7 +19317,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/810.png",
           "local_image_path": "data/section_artwork/pokemon_810_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 810,
+            "official_artwork_id": 810,
+            "subject_key": "pokeapi:official-artwork:810",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/810.png"
+          }
         },
         {
           "pokemon_id": 813,
@@ -19180,7 +19334,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/813.png",
           "local_image_path": "data/section_artwork/pokemon_813_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 813,
+            "official_artwork_id": 813,
+            "subject_key": "pokeapi:official-artwork:813",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/813.png"
+          }
         },
         {
           "pokemon_id": 816,
@@ -19190,7 +19351,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/816.png",
           "local_image_path": "data/section_artwork/pokemon_816_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 816,
+            "official_artwork_id": 816,
+            "subject_key": "pokeapi:official-artwork:816",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/816.png"
+          }
         }
       ]
     },
@@ -19461,10 +19629,10 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/917.png",
           "generation": 9,
           "name": {
-            "de": "Tarundel",
             "ko": "타랜툴라",
             "zh_hant": "團珠蛛",
             "fr": "Tissenboule",
+            "de": "Tarundel",
             "es": "Tarountula",
             "it": "Tarountula",
             "en": "Tarountula",
@@ -21634,14 +21802,14 @@
           "generation": 9,
           "name": {
             "ko": "무쇠암석",
-            "zh_hant": "铁磐岩",
+            "zh_hant": "鐵磐岩",
             "fr": "Roc-de-Fer",
             "de": "Eisenfels",
             "es": "Ferromole",
             "it": "Massoferreo",
             "en": "Iron Boulder",
             "ja": "テツノイワオ",
-            "zh_hans": "鐵磐岩"
+            "zh_hans": "铁磐岩"
           }
         },
         {
@@ -21655,14 +21823,14 @@
           "generation": 9,
           "name": {
             "ko": "무쇠감투",
-            "zh_hant": "铁头壳",
+            "zh_hant": "鐵頭殼",
             "fr": "Chef-de-Fer",
             "de": "Eisenhaupt",
             "es": "Ferrotesta",
             "it": "Capoferreo",
             "en": "Iron Crown",
             "ja": "テツノカシラ",
-            "zh_hans": "鐵頭殼"
+            "zh_hans": "铁头壳"
           }
         },
         {
@@ -21727,7 +21895,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/906.png",
           "local_image_path": "data/section_artwork/pokemon_906_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 906,
+            "official_artwork_id": 906,
+            "subject_key": "pokeapi:official-artwork:906",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/906.png"
+          }
         },
         {
           "pokemon_id": 909,
@@ -21737,7 +21912,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/909.png",
           "local_image_path": "data/section_artwork/pokemon_909_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 909,
+            "official_artwork_id": 909,
+            "subject_key": "pokeapi:official-artwork:909",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/909.png"
+          }
         },
         {
           "pokemon_id": 912,
@@ -21747,7 +21929,14 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/912.png",
           "local_image_path": "data/section_artwork/pokemon_912_pokedex.png",
           "rarity": null,
-          "hp": null
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 912,
+            "official_artwork_id": 912,
+            "subject_key": "pokeapi:official-artwork:912",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/912.png"
+          }
         }
       ]
     }

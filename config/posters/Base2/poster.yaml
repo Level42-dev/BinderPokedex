@@ -11,7 +11,7 @@ text_cells:
     max_width_ratio: 0.92
     max_height_ratio: 0.68
 pdf:
-  enabled: true
+  enabled: false
   artwork_file: poster-flux2-artwork.png
   insertion: after_first_section_cover
 artwork:
@@ -76,5 +76,5 @@ title_logo:
     de: logos/logo-de.png
     en: logos/logo-en.png
     fr: logos/logo-fr.png
-    es: logos/logo-es.png
-    it: logos/logo-it.png
+  sources:
+    de: https://assets.tcgdex.net/fr/base/base2/logo.png

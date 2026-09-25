@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "scope": "ExGen2/sections/primal",
+  "original_flow": "joint_scene",
+  "decision": "Allow one isolated P16 region_constrained_joint pilot; no promotion or P37 run without exact-image approval.",
+  "failed_trials": [
+    {
+      "variant": "p16-batch-20260922-a",
+      "failure": "The unmasked one-shot did not keep both source-matched figures within their physical bottom-row card cuts.",
+      "poster_sha256": "32df9b54f87b2ed0ba298073d246f653944ab9b3c1b6c5fde7039b2e6ca024aa",
+      "evidence_sha256": "be30251cb66e77c4ebb8bea0704a77a7be14f7fccad763e170cda1bbf6a347cf"
+    },
+    {
+      "variant": "p16-batch-20260922-b",
+      "failure": "The 4B source-detail one-shot crossed the bottom-card boundaries and was not reliably source-faithful at the cut.",
+      "poster_sha256": "34ddb7ce161ed5dc300f3c0484e7c231a1efb1b4bdf556c963281c2dc71e2dfc",
+      "evidence_sha256": "26817447065da72d6d23210d5d6a05845d66b3775e0cd1503bf2e97d86929bff"
+    },
+    {
+      "variant": "p16-batch-20260922-e",
+      "failure": "The masked attempt displaced figure anatomy and left a global joint reference unmasked.",
+      "poster_sha256": "df574615aea53df57de4e13362d92242dbdd880af47ea08b65aa87dce9dd4e59",
+      "evidence_sha256": "4b837de12c0fbec5ecfda645e07059a780c7f1fc0356e3a992f83beb34b64a0e"
+    },
+    {
+      "variant": "p16-batch-20260923-f",
+      "failure": "Kyogre flippers and Groudon tail cross into r3c2; both source-card silhouettes are cut at the print boundary.",
+      "poster_sha256": "53f0269bb9a5d713bd3cd5975eac1772bd241f198a611e0bff638932aa5c61e9",
+      "evidence_sha256": "55e449738ea2f90daaea8a2b1673b575eac81226e4ded333226c997fc9ade881"
+    }
+  ]
+}
