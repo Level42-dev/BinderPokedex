@@ -33,7 +33,11 @@ All nine physical card crops were produced; the top-center logo crop was
 visually inspected at its full 750 × 1050 pixel size and stays within the
 cutting area.
 
-The operator has not yet approved this replacement logo composition. The P02
+The operator subsequently accepted this exact `JUNGLE` logo composition for
+the German P02 cover, acknowledging that no wholly German standalone logo is
+available and the historical mark has already been used for this set. This
+decision is bound to the logo and German preview hashes above. It does not
+approve the unrelated release-date value in the info panel or the PDF. The P02
 PDF route remains disabled. Before release, the project also needs a truthful
 masked-fallback promotion contract, print/PDF validation, and review of the
 currently displayed `16. Juni 1999`: this is the source set's global/English

@@ -21,6 +21,11 @@
   },
   "unchanged_physical_cards": 7,
   "human_approval": "text_free_artwork_accepted_2026-09-25",
+  "title_logo_approval": {
+    "status": "accepted_2026-09-25",
+    "logo_sha256": "2c3c710607f45c54a2e7ed05f492e82a2ccfe9d021b9511cccf07f9053a0bbfc",
+    "german_preview_sha256": "1bb691e4fb60eadb98d10dc579a82df3e1399770fcd92c25a40bac2928ae565a"
+  },
   "localized_overlay_approval": "pending",
   "production_promotion": false,
   "pdf_routing": false,
