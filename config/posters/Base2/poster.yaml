@@ -10,6 +10,12 @@ text_cells:
     column: 2
     max_width_ratio: 0.92
     max_height_ratio: 0.68
+text_content:
+  mode: set_summary
+  release_date_overrides:
+    de:
+      value: "2000-06"
+      precision: month
 pdf:
   enabled: false
   artwork_file: poster-flux2-artwork.png

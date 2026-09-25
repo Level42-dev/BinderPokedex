@@ -194,6 +194,44 @@ def test_info_panel_counts_only_the_language_selection_including_unnumbered_card
     assert source == original
 
 
+def test_p02_month_override_is_local_and_strict():
+    data = {
+        "name": "Jungle",
+        "release_date": "1999-06-16",
+        "sections": {"all": {"title": {"de": "Dschungel", "en": "Jungle"}, "cards": []}},
+    }
+    config = {"release_date_overrides": {"de": {"value": "2000-06", "precision": "month"}}}
+    assert info_panel_values(data, "de", "set_summary", text_content=config)[-1] == "Juni 2000"
+    assert info_panel_values(data, "en", "set_summary", text_content=config)[-1] == "June 16, 1999"
+    with pytest.raises(ValueError, match="month precision"):
+        info_panel_values(
+            data, "de", "set_summary",
+            text_content={"release_date_overrides": {"de": {"value": "2000-06-16", "precision": "month"}}},
+        )
+    with pytest.raises(ValueError, match="day precision"):
+        info_panel_values(
+            data, "de", "set_summary",
+            text_content={"release_date_overrides": {"de": {"value": "2000-06", "precision": "day"}}},
+        )
+    for value in ("0000-06", "2000-13"):
+        with pytest.raises(ValueError, match="month precision"):
+            info_panel_values(
+                data, "de", "set_summary",
+                text_content={"release_date_overrides": {"de": {"value": value, "precision": "month"}}},
+            )
+    with pytest.raises(ValueError, match="day precision"):
+        info_panel_values(
+            data, "de", "set_summary",
+            text_content={"release_date_overrides": {"de": {"value": "2000-02-30", "precision": "day"}}},
+        )
+    with pytest.raises(ValueError, match="language keys"):
+        info_panel_values(
+            data, "de", "set_summary",
+            text_content={"release_date_overrides": {"de-DE": {"value": "2000-06", "precision": "month"}}},
+        )
+    assert data["release_date"] == "1999-06-16"
+
+
 def test_every_current_poster_target_has_a_checked_in_manifest():
     manifests = list(POSTER_CONFIG_ROOT.glob("*/poster.yaml"))
     manifests.extend(POSTER_CONFIG_ROOT.glob("*/sections/*/poster.yaml"))

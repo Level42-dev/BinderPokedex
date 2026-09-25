@@ -1178,6 +1178,28 @@ def test_overlay_fingerprint_tracks_text_and_logo_but_not_pdf_routing(
     assert logo_changed["sha256"] != logo_original["sha256"]
 
 
+def test_month_override_changes_overlay_but_not_generation_fingerprint(tmp_path):
+    _repository, assets, output, _scope_dir, bundle = _write_fixture(tmp_path)
+    source_path = output / "Example.json"
+    source = load_json(source_path)
+    source["release_date"] = "1999-06-16"
+    source_path.write_text(json.dumps(source), encoding="utf-8")
+    original_overlay = build_overlay_fingerprint(bundle, poster_assets=assets, scope_data_dir=output)
+    original_generation = build_generation_fingerprint(bundle, poster_assets=assets, scope_data_dir=output)
+    manifest = copy.deepcopy(bundle.manifest)
+    manifest["text_content"] = {
+        "mode": "set_summary",
+        "release_date_overrides": {"de": {"value": "2000-06", "precision": "month"}},
+    }
+    changed = _with_manifest(bundle, manifest)
+    changed_overlay = build_overlay_fingerprint(changed, poster_assets=assets, scope_data_dir=output)
+    changed_generation = build_generation_fingerprint(changed, poster_assets=assets, scope_data_dir=output)
+    assert changed_overlay["sha256"] != original_overlay["sha256"]
+    assert changed_overlay["components"]["languages"]["de"]["information"][-1] == "Juni 2000"
+    assert changed_overlay["components"]["languages"]["en"]["information"][-1] == "June 16, 1999"
+    assert changed_generation["sha256"] == original_generation["sha256"]
+
+
 def test_overlay_fingerprint_tracks_the_rendering_contract(
     tmp_path,
     monkeypatch,

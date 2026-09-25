@@ -1515,6 +1515,7 @@ def build_overlay_fingerprint(
                     language,
                     content_mode,
                     header_text=header_text,
+                    text_content=content,
                 )
             ),
         }
