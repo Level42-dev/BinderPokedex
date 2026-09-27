@@ -1,0 +1,330 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-22",
+  "reviewer_kind": "agent",
+  "scope": "Pokedex/sections/gen7",
+  "review_id": "P10",
+  "variant": "p10-source-detail-20260922-c",
+  "status": "user_review_candidate_with_disclosed_forepaw_overlap_difference",
+  "human_approval": false,
+  "release_ready": false,
+  "promoted": false,
+  "requested_missing_leg_visible": true,
+  "exact_source_overlap_reproduced": false,
+  "finding_de": "Der vom Nutzer vermisste schräge rechte Vorderbeinabschnitt einschließlich roter Zeichnung ist wieder sichtbar. C reduziert die in A/B entstandene zusätzlich freistehende Pfotenform; eine kleine dunkle Rundung bleibt dennoch stärker neben dem langen Vorderbein sichtbar als in der Originalquelle. Keine Behauptung einer vollständig quellidentischen Korrektur.",
+  "subjects": [
+    {
+      "name": "Bauz",
+      "cell": "r3c1",
+      "source": {
+        "file": "tmp/poster-workspaces/Pokedex/sections/gen7/sources/cutouts/pokemon_722_rowlet.png",
+        "sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36"
+      },
+      "crop": {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/review/cards/card_r3_c1.png",
+        "rectangle": [
+          0,
+          2218,
+          750,
+          3268
+        ],
+        "sha256": "ddd071d4c36cf3d37203c062d7d740811c1d05cb26cca9c72536f3f24f69ff88"
+      },
+      "human_approval": false,
+      "finding_de": "Quellnahe Silhouette, Gesicht, Schnabel, Blattfliege, Flügel und beide sichtbaren Füße; kleine Kontur-/Glanzlichtunterschiede."
+    },
+    {
+      "name": "Flamiau",
+      "cell": "r3c2",
+      "source": {
+        "file": "tmp/poster-workspaces/Pokedex/sections/gen7/sources/cutouts/pokemon_725_litten.png",
+        "sha256": "02391ac457888baf123accfc5ce446fc75df4790b3b000865a21c0f21b622600"
+      },
+      "crop": {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/review/cards/card_r3_c2.png",
+        "rectangle": [
+          809,
+          2218,
+          1559,
+          3268
+        ],
+        "sha256": "6e22e05ab1f7d9ce10a4ed49d2c37fdc205e9920f4881a5d16b2f9e471e32363"
+      },
+      "human_approval": false,
+      "finding_de": "Beinabschnitt wieder vorhanden; stärkere kleine Pfotenrundung an der Überdeckung bleibt zur Nutzerentscheidung offen. Augen, Stirn-/Backenzeichnung, Ohren und ein einzelner Schwanz quellnah."
+    },
+    {
+      "name": "Robball",
+      "cell": "r3c3",
+      "source": {
+        "file": "tmp/poster-workspaces/Pokedex/sections/gen7/sources/cutouts/pokemon_728_popplio.png",
+        "sha256": "3bfa3104b894f212985122732497b17c78979c6bc9304bd7396e781677f2d7a3"
+      },
+      "crop": {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/review/cards/card_r3_c3.png",
+        "rectangle": [
+          1618,
+          2218,
+          2368,
+          3268
+        ],
+        "sha256": "47f74d133d5e6df60b7280c62c44d457fef3be4398a19cf51e9b7a537874cbc6"
+      },
+      "human_approval": false,
+      "finding_de": "Quellnahe Nase, Auge, Maul/Zunge, Kragen und vier Flossen. Vordergrundblatt am äußeren rechten Flossenrand räumlich plausibel; kein sicherer neuer Anatomiefehler."
+    }
+  ],
+  "layout": {
+    "actual_card_containment_agent_review_passed": true,
+    "small_cast_target_compliance_confirmed": false,
+    "finding_de": "Alle drei vollständigen sichtbaren Figuren liegen innerhalb ihrer tatsächlichen unteren Schnittkarte. Flamiau ist gegenüber der kleinen Positionsvorgabe vergrößert und höher; keine pauschale Erfüllung der numerischen Ziel-Silhouetten. Keine automatisierte Silhouettenvermessung behauptet."
+  },
+  "scene_de": "Neu erzeugte Alola-Bucht mit Vulkanhängen, tropischem Vordergrund und Licht von links oben. Keine zusätzlichen Figuren oder harten einkopierten Bildrechtecke. Pflanzenüberdeckung bei Robball plausibel; kein sicherer neuer lokaler Tiefenbruch. Landschaft und neue Pixel benötigen eigene Nutzerannahme.",
+  "generation": {
+    "encoder": "qwen_3_4b.safetensors",
+    "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
+    "engine": "flux",
+    "generation_megapixels": 2,
+    "mode": "joint_scene",
+    "model": "flux-2-klein-4b.safetensors",
+    "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
+    "output_dpi": 300,
+    "output_method": "lanczos",
+    "reference_mode": "spatial_source_detail_joint",
+    "seed": 260726058,
+    "steps": 4,
+    "vae": "flux2-vae.safetensors",
+    "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
+  },
+  "generation_fingerprint_sha256": "130081a1087c59b8a5b7de66aa02e629b128bd06b9b0c155d9d003f93f5c9e4c",
+  "manifest": {
+    "path": "config/posters/Pokedex/sections/gen7/poster.yaml",
+    "sha256": "cf82b6ebe5132f467b4971f5f295227c02616db9cce9ff725576cf0d52d8adcb"
+  },
+  "manifest_snapshot": {
+    "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/manifest-snapshot.yaml",
+    "sha256": "cf82b6ebe5132f467b4971f5f295227c02616db9cce9ff725576cf0d52d8adcb"
+  },
+  "workflow": {
+    "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/workflows/workflow_api_joint_scene_spatial_source_detail_joint_2mp_260726058.json",
+    "sha256": "e46ccb7085dcbf497ae12cf56b8c812e57ca312a7e3bbe155df59d34393e1e6d"
+  },
+  "prompt": {
+    "bytes": 4980,
+    "file": "tmp/oneshot-trials/p10-source-detail-20260922-c/workflows/source_detail_joint_prompt.generated.txt",
+    "sha256": "487bdae277bc427bfe7460668956a79014bbf2ff19be5603281aef07f0aa3523"
+  },
+  "references": [
+    {
+      "bytes": 55557,
+      "file": "tmp/oneshot-trials/p10-source-detail-20260922-c/references/joint_scene_cast_reference.png",
+      "height": 832,
+      "mode": "RGBA",
+      "pixel_sha256": "775cef92454b999d7deca45a89d0efe48dcb140f1ff4f7b6909053dce6560324",
+      "sha256": "3aabccc5359466e0ba3c951357cbe236d7e71d020e798ef2687da89dee3fb9af",
+      "width": 608
+    },
+    {
+      "bytes": 122248,
+      "file": "tmp/oneshot-trials/p10-source-detail-20260922-c/references/identity_reference_1.png",
+      "height": 512,
+      "mode": "RGBA",
+      "pixel_sha256": "92f43329ef0adc5738cf8d74d81e9ad9b7a4cd5380db1dec3701f02b8f30c8da",
+      "sha256": "566ee10bf87a5ff85b4c518d5215436513ccb660a556f7d65aec0b3fbb009b4c",
+      "width": 512
+    },
+    {
+      "bytes": 74709,
+      "file": "tmp/oneshot-trials/p10-source-detail-20260922-c/references/identity_reference_2.png",
+      "height": 512,
+      "mode": "RGBA",
+      "pixel_sha256": "71ac7db8905e3a165030c8a73b3c1b27357a1df76d9b77ec96018afb7ed988ba",
+      "sha256": "75b4af5770f699b794193a18c7ef6391de71af7c19dcb5a0a23a402ce51b8907",
+      "width": 512
+    },
+    {
+      "bytes": 80563,
+      "file": "tmp/oneshot-trials/p10-source-detail-20260922-c/references/identity_reference_3.png",
+      "height": 512,
+      "mode": "RGBA",
+      "pixel_sha256": "fde0d9b1cab3a0d1784bfc57ae720301db3e28f340dcab5e2912cdb3c8760949",
+      "sha256": "4962cece5498462453646efa5ccbce3addd10656d378138891ccea0781f3760e",
+      "width": 512
+    }
+  ],
+  "evidence": {
+    "raw": {
+      "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/retrieved/oneshot-_fjk0ec1/output/pokedex__sections__gen7_flux2_joint_scene_2mp_seed_260726058_00001_.png",
+      "sha256": "fdaf8f0d4e4d11e5213aad9a359e5acf0cbb1633e63c0f9b1bcad4a95437292d"
+    },
+    "master": {
+      "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/review/artwork-300dpi.png",
+      "sha256": "245da8494f8965864a7fd219383888aec08a32234662d1353419e61210d654d9"
+    },
+    "preview": {
+      "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/review/poster-de.png",
+      "sha256": "2422906113c89fd7eccede269a332ae4c68215e6c121989fa1e2f705034c19f3"
+    },
+    "cards": [
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/review/cards/card_r1_c1.png",
+        "rectangle": [
+          0,
+          0,
+          750,
+          1050
+        ],
+        "sha256": "6d9408efb19f8a71d93a5906b4aae6a82dab35a706c08ebb3eb3e4f68a0086c4"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/review/cards/card_r1_c2.png",
+        "rectangle": [
+          809,
+          0,
+          1559,
+          1050
+        ],
+        "sha256": "3dd4473e22487dab847f7bc8c62091bb0cf4d84753b30d4fe318d75172eabd35"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/review/cards/card_r1_c3.png",
+        "rectangle": [
+          1618,
+          0,
+          2368,
+          1050
+        ],
+        "sha256": "c68d85404462f7256ba79e9759f21979dedd8ca61ea74315630a2d20efd28677"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/review/cards/card_r2_c1.png",
+        "rectangle": [
+          0,
+          1109,
+          750,
+          2159
+        ],
+        "sha256": "bb721ab8d137569d48a69e135f98bc5ec1cae2155e4c9726b97918d86908c072"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/review/cards/card_r2_c2.png",
+        "rectangle": [
+          809,
+          1109,
+          1559,
+          2159
+        ],
+        "sha256": "9f64e7c69b6d2a96fe4c06480982b053b841c3e58c67b69ab42f73f273a0049e"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/review/cards/card_r2_c3.png",
+        "rectangle": [
+          1618,
+          1109,
+          2368,
+          2159
+        ],
+        "sha256": "8a3577925425999c2d64acbc04f458aaabb2371258021f11bee8268747a808ca"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/review/cards/card_r3_c1.png",
+        "rectangle": [
+          0,
+          2218,
+          750,
+          3268
+        ],
+        "sha256": "ddd071d4c36cf3d37203c062d7d740811c1d05cb26cca9c72536f3f24f69ff88"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/review/cards/card_r3_c2.png",
+        "rectangle": [
+          809,
+          2218,
+          1559,
+          3268
+        ],
+        "sha256": "6e22e05ab1f7d9ce10a4ed49d2c37fdc205e9920f4881a5d16b2f9e471e32363"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/review/cards/card_r3_c3.png",
+        "rectangle": [
+          1618,
+          2218,
+          2368,
+          3268
+        ],
+        "sha256": "47f74d133d5e6df60b7280c62c44d457fef3be4398a19cf51e9b7a537874cbc6"
+      }
+    ],
+    "worker_run": {
+      "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/retrieved/oneshot-_fjk0ec1/run.json",
+      "sha256": "0a1e4068dc0757725acc95a98227b63bad136838c928bdb23ed6ebd2677dd364"
+    },
+    "worker_log": {
+      "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/retrieved/oneshot-_fjk0ec1/comfyui.log",
+      "sha256": "d89567244c684398d84e4d003bfbabd0697bf6f9cceb9b0dff9d0f1d18d3243e"
+    },
+    "run_sidecar": {
+      "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/review/artwork-300dpi.run.json",
+      "sha256": "d3ffade7ff840f0b010255ba7088f67956052bdfb97fe1c9cdf7dd154f7eaee2"
+    }
+  },
+  "inspection": {
+    "raw_viewed": true,
+    "full_master_viewed": true,
+    "german_preview_viewed": true,
+    "physical_cards_viewed": 9,
+    "exact_sources_viewed": 3,
+    "actual_input_references_viewed": 4,
+    "references_byte_identical_across_a_b_c": true,
+    "canonical_graph_prompt_sources_seals_verify_passed": true,
+    "all_card_pixels_dimensions_dpi_verified": true,
+    "raw_size_px": [
+      1200,
+      1664
+    ],
+    "master_size_px": [
+      2368,
+      3268
+    ],
+    "card_size_px": [
+      750,
+      1050
+    ],
+    "output_dpi": 300,
+    "production_masters_unchanged_during_p10_work": 42,
+    "independent_reviewer": false
+  },
+  "tests": {
+    "passed": 119,
+    "failed": 0,
+    "scope": "source-detail, fingerprints, spatial scale, transport and render jobs; not the complete project suite"
+  },
+  "historical_acceptances_modified": false,
+  "installed_master_before_and_after": {
+    "file": "assets/posters/Pokedex/sections/gen7/poster-flux2-artwork.png",
+    "sha256": "2cf724beabc3c2a21be30f4a287e239292b5e16e59a4f3444bb26f6ba8ae7201"
+  },
+  "attempts": [
+    {
+      "variant": "p10-source-detail-20260922-a",
+      "report": "docs/reviews/2026-09-22-p10-source-detail-a.json"
+    },
+    {
+      "variant": "p10-source-detail-20260922-b",
+      "report": "docs/reviews/2026-09-22-p10-source-detail-b.json"
+    },
+    {
+      "variant": "p10-source-detail-20260922-c",
+      "report": "docs/reviews/2026-09-22-p10-source-detail-c.json"
+    }
+  ],
+  "changes_between_attempts": "Only Litten's source-trait paragraph changed. Same seed, models, scene, four reference bytes and graph except prompt text.",
+  "automatic_further_retry": false,
+  "multistage_fallback_used": false,
+  "remaining": [
+    "Human decision on C's residual forepaw overlap and figure scale/composition",
+    "Separate canonical promotion and complete PDF/release checks if accepted"
+  ]
+}

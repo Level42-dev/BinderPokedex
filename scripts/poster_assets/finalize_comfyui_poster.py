@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 from datetime import date
 from pathlib import Path
 
@@ -15,6 +16,7 @@ try:
         load_poster_scope_data,
         poster_bundle,
     )
+    from .scope_language import filter_variant_data_for_language
     from .typography import (
         draw_text_centered,
         load_font,
@@ -23,6 +25,7 @@ try:
 except ImportError:
     from layout import build_image_layout
     from poster_io import POSTER_ASSETS, load_poster_scope_data, poster_bundle
+    from scope_language import filter_variant_data_for_language
     from typography import (
         draw_text_centered,
         load_font,
@@ -148,14 +151,11 @@ def draw_title_logo(canvas: Image.Image, cell, logo_path: Path) -> None:
 
 
 def title_logo_file(manifest: dict, language: str) -> str | None:
-    """Resolve a localized title logo with an English/default fallback."""
+    """Resolve only a title logo explicitly configured for this language."""
     config = manifest.get("title_logo", {})
     files = config.get("files")
     if isinstance(files, dict):
-        return files.get(language) or files.get("en") or next(
-            (value for value in files.values() if value),
-            None,
-        )
+        return files.get(language)
     return config.get("file")
 
 
@@ -222,20 +222,53 @@ def localized_date(value: str, language: str) -> str:
     return f"{parsed.day}. {month} {parsed.year}" if language == "de" else f"{parsed.day} {month} {parsed.year}"
 
 
+def release_text(scope_data: dict, language: str, text_content: dict | None) -> str:
+    overrides = (text_content or {}).get("release_date_overrides", {})
+    if not isinstance(overrides, dict) or any(key not in SUPPORTED_LANGUAGES for key in overrides):
+        raise ValueError("release_date_overrides must use supported language keys")
+    override = overrides.get(language)
+    if override is None:
+        return localized_date(str(scope_data["release_date"]), language)
+    if not isinstance(override, dict):
+        raise ValueError("Release date override must be a mapping")
+    value, precision = override.get("value"), override.get("precision")
+    if precision == "day":
+        if not isinstance(value, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
+            raise ValueError(f"Invalid day precision release date: {value}")
+        try:
+            return localized_date(value, language)
+        except ValueError as exc:
+            raise ValueError(f"Invalid day precision release date: {value}") from exc
+    if precision == "month":
+        if not isinstance(value, str) or not re.fullmatch(r"\d{4}-\d{2}", value):
+            raise ValueError(f"Invalid month precision release date: {value}")
+        year, month = map(int, value.split("-"))
+        if not 1 <= year <= 9999 or not 1 <= month <= 12:
+            raise ValueError(f"Invalid month precision release date: {value}")
+        if language in ("ja", "zh_hans", "zh_hant"):
+            return f"{year}年{month}月"
+        if language == "ko":
+            return f"{year}년 {month}월"
+        return f"{MONTHS[language][month - 1]} {year}"
+    raise ValueError(f"Invalid {precision} precision release date: {value}")
+
+
 def info_panel_values(
     scope_data: dict,
     language: str,
     content_mode: str,
     *,
     header_text: str | None = None,
+    text_content: dict | None = None,
 ) -> tuple[str, ...]:
     """Resolve the deterministic text rows for one poster overlay profile."""
+    scope_data = filter_variant_data_for_language(scope_data, language)
     if content_mode == "set_summary":
         values = (
             localized_set_name(scope_data, language),
             f"{card_count(scope_data)} {CARD_LABELS[language]}",
             RELEASE_LABELS[language],
-            localized_date(str(scope_data["release_date"]), language),
+            release_text(scope_data, language, text_content),
         )
     elif content_mode == "section_summary":
         section = selected_section(scope_data)
@@ -324,6 +357,7 @@ def draw_info_panel(
     *,
     content_mode: str = "set_summary",
     header_text: str | None = None,
+    text_content: dict | None = None,
 ) -> None:
     box = info_panel_box(cell, config)
     scale = canvas.width / 1400
@@ -344,6 +378,7 @@ def draw_info_panel(
         language,
         content_mode,
         header_text=header_text,
+        text_content=text_content,
     )
 
     text_draw = ImageDraw.Draw(canvas, "RGBA")
@@ -592,6 +627,7 @@ def draw_final_text_cells(canvas, layout, manifest, scope_data, scope_dir: Path,
         info_cfg,
         content_mode=content_config.get("mode", "set_summary"),
         header_text=header_text,
+        text_content=content_config,
     )
     draw_project_signature(canvas)
 

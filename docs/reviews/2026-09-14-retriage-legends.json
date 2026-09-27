@@ -1,0 +1,778 @@
+{
+  "review_date": "2026-09-14",
+  "reviewer_kind": "agent",
+  "scope": "Read-only Neu-Triage ausschließlich P13, P14, P15, P16, P17, P22, P26, P28, P31, P32, P35, P40 der Nutzerwarteschlange. Bestehende installierte Master; keine Neugenerierung, Promotion oder menschliche Freigabe. Kein Audit aller neun Karten und keine PDF-/Release-Freigabe.",
+  "method": {
+    "visual_review": "Alle zwölf vollständigen textfreien Master sowie alle 35 physischen Motiv-Kartenausschnitte und ihre jeweils exakten Quellbilder tatsächlich mit view_image angesehen. Ausschnitt und Quelle jeweils zusammen im selben Werkzeugergebnis; Quellen auch bei wiederholtem Hash erneut angesehen. Ganze Master wurden zur Anzeige verkleinert; Motivkarten und Quellen vollständig angezeigt.",
+    "rubric": "Quelle bestimmt Form, Gesicht, Gliedmaßen, Proportionen und definierende Zeichnung. Plausible Vordergrundüberdeckung ist erwünscht und kein Identitätsfehler; verdeckte Anatomie wird nicht als fehlend behauptet. Kleine nicht definierende Druckdetails werden als minor offengelegt. Keine erfundenen Finger-/Federzahlen. Die Freigaben ExGen3 Mega C, Base1 B und Base2 Pikachu E gelten ausschließlich für deren konkrete Bilder.",
+    "routing": "Primärer Korrekturpfad ist eine echte gemeinsam generierte One-shot-Szene mit räumlichen und individuellen Quelldetailreferenzen, exakter Besetzung/Kartenbelegung und 2 MP. Eine konturgeführte maskierte Landschaftsreparatur ist nur für klar abgegrenzte Tiefenfehler denkbar; die bisherige Evidenz betrifft ausschließlich zwei Halme von Base2 Pikachu, nicht Anatomie oder einen autonomen Detektor.",
+    "prior_reports": "Keine alten Einzelurteile für die visuellen Befunde verwendet.",
+    "hash_verification": "Alle 82 referenzierten Dateieinträge (12 Master, 35 Motivkarten, 35 Quellen einschließlich Wiederholungen) existieren; SHA-256 stimmt exakt mit der Nutzerwarteschlange überein."
+  },
+  "targets": [
+    {
+      "review_id": "P13",
+      "asset_key": "ExGen1/sections/normal",
+      "title_de": "Pokémon ex - Generation 1",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Bisaflors Gesicht und Lugias Kopf weichen klar von den Quellen ab; keine reine Überdeckungsreparatur.",
+      "subjects": [
+        {
+          "name": "Bisaflor",
+          "cell": "r3c1",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die Augen sind rund aufgerissen statt schmal unter schweren Brauen; das offene Maul verliert die klaren unteren Fangzähne der Quelle. Vordergras überdeckt einen Fuß plausibel, ist aber nicht Ursache der Gesichtsänderung.",
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen1/sections/normal/sources/cutouts/pokemon_003_venusaur.png",
+            "sha256": "04897191b567f8e6d866e6aa6eef184b6a93f8d0ba9ddaa50b4592ef261edc3b"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/ExGen1/sections/normal/card_r3_c1.png",
+            "sha256": "3bfba4a8900af2533ab342a3685725091e90c020b575fa084f4676ef04fc1b7b"
+          }
+        },
+        {
+          "name": "Turtok",
+          "cell": "r3c2",
+          "identity": "minor_deviation",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Panzer, Kanonen, Rückansicht und kräftige Gliedmaßen bleiben erhalten. Kleinere Handkrallen und Panzerlinien sind vereinfacht; kein eindeutiger definierender Defekt.",
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen1/sections/normal/sources/cutouts/pokemon_009_blastoise.png",
+            "sha256": "1bac4860feebcf5fb5cd27af8c9c4465773e948b68a7436dc65ec49618becd49"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/ExGen1/sections/normal/card_r3_c2.png",
+            "sha256": "1872f236f97fb2f4137d72aa4b7218a1e34580471910daca108e96890b5593c9"
+          }
+        },
+        {
+          "name": "Lugia",
+          "cell": "r3c3",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die blaue Augenmaske und das Auge werden am Schnabel zu mehreren weißen knopfartigen Segmenten; die klare Augen-/Schnabelstruktur der Quelle geht verloren. Flügel und Körper bleiben grundsätzlich lesbar.",
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen1/sections/normal/sources/cutouts/pokemon_249_lugia.png",
+            "sha256": "f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/ExGen1/sections/normal/card_r3_c3.png",
+            "sha256": "d6c25a2b9b52b1ec9df47640726946bb3cd863c9e84cec24d4c0379c7c869d4c"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/ExGen1/sections/normal/poster-flux2-artwork.png",
+        "sha256": "80457937f2507257f9ff45a82e6826e567c86186f0de379b109374d249a860ea"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P14",
+      "asset_key": "ExGen2/sections/normal",
+      "title_de": "Pokémon EX",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Lugias Augen-/Schnabelbereich und Mewtus Handstruktur sind definierend verändert.",
+      "subjects": [
+        {
+          "name": "Mewtu",
+          "cell": "r3c1",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die ausgestreckte Hand verliert die klar getrennten kugelförmigen Fingerenden der Quelle zugunsten eines verschmolzenen Knubbels; auch die hängende Hand ist klauenartig statt rund gegliedert. Fußgras erklärt diese Änderungen nicht.",
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen2/sections/normal/sources/cutouts/pokemon_150_mewtwo.png",
+            "sha256": "b7c00037d7ba9fb5cebc2da42ca0da54c7b664f4d7b2348d60ade5c6dc9de256"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/normal/card_r3_c1.png",
+            "sha256": "2da1acb110cf0264a19abb67ed6507aba5e2345ed3cfc1cbb4105835b134d5b9"
+          }
+        },
+        {
+          "name": "Mew",
+          "cell": "r3c2",
+          "identity": "minor_deviation",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Schwanzschleife, Gliedmaßen und Körperform bleiben erkennbar. Augen sind runder und stärker glänzend; die kleinen Fingerspitzen sind geglättet. Fußgras hat eine plausible Vordergrundlage.",
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen2/sections/normal/sources/cutouts/pokemon_151_mew.png",
+            "sha256": "3e7b29103dae09d0f8e8ff889b1991bdf387a2c6328aacb93fc34e8962584e33"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/normal/card_r3_c2.png",
+            "sha256": "d6db2ad3466725395392b69cf0672da8cccb94ef60d54baac098ad8322467bbc"
+          }
+        },
+        {
+          "name": "Lugia",
+          "cell": "r3c3",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Anstelle der klaren blauen Augenmaske mit seitlichem Auge liegt eine Reihe heller rechteckiger Segmente unter einer blauen Platte. Das verändert das Gesicht sichtbar; keine Vegetation verdeckt diesen Bereich.",
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen2/sections/normal/sources/cutouts/pokemon_249_lugia.png",
+            "sha256": "f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/normal/card_r3_c3.png",
+            "sha256": "3fcb3d3be3ccb2f0323e06eaea66ae3d9aa03f154edb217775e87570bd49ef3b"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/ExGen2/sections/normal/poster-flux2-artwork.png",
+        "sha256": "f968cb0b1687c4853d554e3287be23f8f3cc0efeb66da74f5376121708235811"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P15",
+      "asset_key": "ExGen2/sections/mega",
+      "title_de": "Mega-Pokémon EX",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Mega-Latios besitzt ein erfundenes Auge auf dem Flügel, Mega-Rayquazas Kopfzeichnung und Arme sind strukturell verändert; höchste Priorität.",
+      "subjects": [
+        {
+          "name": "Mega-Mewtu X",
+          "cell": "r3c1",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die langen Füße mit klar getrennten runden Zehenenden werden zu kurzen, mehrfach gefurchten Fußflächen; die erhobene Hand ist zur Faust umgedeutet. Form und Pose sind im Groben erkennbar, die Gliedmaßenstruktur weicht sichtbar ab.",
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen2/sections/mega/sources/cutouts/pokemon_150_artwork_10043_mega_mewtwo_x.png",
+            "sha256": "5dd98bb485cf51eb4ede5189d28aeb9c6e426bd08d9abbc37187c02268b188d9"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/mega/card_r3_c1.png",
+            "sha256": "559d245e2ba97077933b4c9b6e50745d77bbd9baf537fbe91caa9f1d703cdd53"
+          }
+        },
+        {
+          "name": "Mega-Rayquaza",
+          "cell": "r3c2",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Das markante gezackte offene Maul und die feine Kopfpanzerung werden zu einer glatten dunklen Schnauzenfläche; der nahe Arm samt Hand verliert die klare Quelle-Kontur. Dies sind Identitäts-/Anatomieprobleme, keine Grasüberdeckung.",
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen2/sections/mega/sources/cutouts/pokemon_384_artwork_10079_mega_rayquaza.png",
+            "sha256": "28a9f35caa69df85cde05fcb5e7785d7581b30910b2cd6df508d35fca2a789f4"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/mega/card_r3_c2.png",
+            "sha256": "9195003d03355eac2877dffabdd8f5a00b0ec417a7f7df44ab60edab4f879f3a"
+          }
+        },
+        {
+          "name": "Mega-Latios",
+          "cell": "r3c3",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die helle dreieckige Flügelmarkierung ist zu einem gelb-schwarzen Auge geworden, sodass der Flügel wie ein zusätzlicher Kopf wirkt. Die Kopfspitzen sind ebenfalls geglättet.",
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen2/sections/mega/sources/cutouts/pokemon_381_artwork_10063_mega_latios.png",
+            "sha256": "ea327ac2ac56cb1a90153bad84f66bd62d25f8c25093733ed1aef9a5411b8054"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/mega/card_r3_c3.png",
+            "sha256": "af874bf57f586776fbb619c0c6bf911f13babb076e19ebe86f098cb9d62911e8"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/ExGen2/sections/mega/poster-flux2-artwork.png",
+        "sha256": "51a3ceff402561ce6a156d8616e1a270ee302c22e04c1f11260794f6ce074fa0"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P16",
+      "asset_key": "ExGen2/sections/primal",
+      "title_de": "Primal Pokémon EX",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Beide Proto-Formen verlieren klar sichtbare definierende Zeichnung bzw. Gliederung; Szene und äußere Platzierung sind brauchbar.",
+      "subjects": [
+        {
+          "name": "Proto-Kyogre",
+          "cell": "r3c1",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die leuchtenden verzweigten Flossenmarkierungen und die gegliederte Stirnzeichnung sind in einfache gerade Speichen und eine einzelne helle Kontur umgebaut. Die Schwanzlappen wirken vereinfacht; die Markierungsänderung ist bereits ohne Zählen eindeutig.",
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen2/sections/primal/sources/cutouts/pokemon_382_artwork_10077_primal_kyogre.png",
+            "sha256": "226507487da40a44b8df44c4fd04ecc6398b8873e792dd2ce31ecfa7a8e3777b"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/primal/card_r3_c1.png",
+            "sha256": "f211168cb303bf8959c1e627d7e3f1ccdf145ebef389780c4d7fe99f91483852"
+          }
+        },
+        {
+          "name": "Proto-Groudon",
+          "cell": "r3c3",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die dunklen gegliederten Brustplatten und getrennten Armklauen der Quelle verschmelzen vorn zu einer schwarzen Fläche mit mehreren langen weißen Streifen. Die seitliche Kopf-/Maulstruktur ist stark zusammengedrückt. Vorderblätter erklären nur kleine äußere Überdeckungen.",
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen2/sections/primal/sources/cutouts/pokemon_383_artwork_10078_primal_groudon.png",
+            "sha256": "fd0a131143a3289cde178438f5ea0249ff62cacb6dbb6742c95544c7c42aad5a"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/primal/card_r3_c3.png",
+            "sha256": "7c4bb1a3235c154d0c820c5eb175ee1fdee500e0fcb111988a735b1bfb2b0a06"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/ExGen2/sections/primal/poster-flux2-artwork.png",
+        "sha256": "74c828b35bbf41bd745c80b088179ac41aba9e560a2cfff824504f0c2c85b836"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P17",
+      "asset_key": "Base3",
+      "title_de": "Fossil",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Lapras verliert die charakteristischen dunklen Körperflecken, Kabutops zeigt eine veränderte sichtbare Fußstruktur.",
+      "subjects": [
+        {
+          "name": "Kabutops",
+          "cell": "r3c1",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Am nach links gerichteten Fuß liegt eine zusätzliche mittige krallenartige Struktur gegenüber der klaren gespaltenen Quelle-Kontur. Brustplatten und Sicheln sind grundsätzlich erhalten; die Fußabweichung liegt frei sichtbar.",
+          "source": {
+            "file": "tmp/poster-workspaces/Base3/sources/cutouts/pokemon_141_kabutops.png",
+            "sha256": "d59c4a7435ada052c103fded3f49623e1c32858665c7f5135c6bbbe0f1de8527"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/Base3/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "36f95d18f93de4f34f053d4208af65fd1cdfc399eaa3648282850def1728b795"
+          }
+        },
+        {
+          "name": "Lapras",
+          "cell": "r3c2",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die dunklen Flecken an Hals und Flossen fehlen großflächig; zugleich werden helle Unterkiefer-/Flossenflächen weitgehend blau. Das ist ein Verlust definierender Zeichnung, nicht bloß einer feinen Linie.",
+          "source": {
+            "file": "tmp/poster-workspaces/Base3/sources/cutouts/pokemon_131_lapras.png",
+            "sha256": "0dda58737b5c1d7db8e7b81ff61b41d0f23bc08ddbf166ca61c20d17d1d27113"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/Base3/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "e53546f5cbb8792919b9c47c912da1065c5b096b497a3a27286bac5a86c53912"
+          }
+        },
+        {
+          "name": "Gengar",
+          "cell": "r3c3",
+          "identity": "minor_deviation",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Silhouette, breite Zahnreihe, Augen und ausgestreckte Arme folgen der Quelle. Zehenlinien sind kleinteilig und unruhig; der Blick wirkt etwas weicher. Kein sicherer neuer Körperteil, leichte Vordergrasüberdeckung plausibel.",
+          "source": {
+            "file": "tmp/poster-workspaces/Base3/sources/cutouts/pokemon_094_gengar.png",
+            "sha256": "cd83bb9a7cc3cb159394dc30dda48160965f5470a474d63c921c7eb4884f8d1d"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/Base3/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "f533622e193652404a6fa6ee3da44174c8755ed5cbf3f89c00884742256d8a97"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/Base3/poster-flux2-artwork.png",
+        "sha256": "aa861af2f9b212943db476be0fad91358f63f209f262b59e90c2f2a951ba3537"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P22",
+      "asset_key": "SV04",
+      "title_de": "Paradoxrift",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Mewtus ausgestreckte Hand verliert einen klar getrennten Finger, Palkias Handkrallen werden umgebaut; keine lokale Tiefenkorrektur.",
+      "subjects": [
+        {
+          "name": "Krokel",
+          "cell": "r3c1",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die Quelle zeigt am offenen unteren Maulrand beidseitig helle Zähne; der linke untere Zahn fehlt im frei sichtbaren Maul. Körper, Schwanz und Bauchfeld bleiben ansonsten gut erkennbar.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV04/sources/cutouts/pokemon_909_fuecoco.png",
+            "sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "60fbd44d2c98eb5dc9747234b394ebe56a58903053e0552bfd768dcec7610cd5"
+          }
+        },
+        {
+          "name": "Palkia",
+          "cell": "r3c2",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die hellen spitzen Krallen der offenen Hand werden zu dunklen stumpfen Fingern; an der körpernahen Hand verschmelzen die Klauen zu parallelen Querstrichen. Die Schulterperle ist gelb statt rosa. Keine Vegetation liegt über den Händen.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV04/sources/cutouts/pokemon_484_palkia.png",
+            "sha256": "c364c56bf8921cdb2e26922307379bc1d8b2f61220f366da467e117be26f33c9"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "e1306c54e24fb20644f7fef1bef650e5f5423dab5f6f93325dc484b6eae71fa4"
+          }
+        },
+        {
+          "name": "Mewtu",
+          "cell": "r3c3",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die ausgestreckte Hand besitzt nicht mehr die getrennten kugelförmigen Fingerenden der Quelle; rechts an der Handfläche geht eine Fingerstruktur in den Arm über. Zusätzlich ist die Iris gelb statt violett.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV04/sources/cutouts/pokemon_150_mewtwo.png",
+            "sha256": "b7c00037d7ba9fb5cebc2da42ca0da54c7b664f4d7b2348d60ade5c6dc9de256"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "ae99a27bd415c16ba88d18df2532ce68aaa1893476122fbe97edbeccee3e5a4c"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/SV04/poster-flux2-artwork.png",
+        "sha256": "fbef96b80f577acaa02915ea6b789c447df4a5b28dcac369070ff711a413c30a"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P26",
+      "asset_key": "SV06.5",
+      "title_de": "Nebel der Sagen",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Genesects Augenstruktur und Yveltals frei sichtbare Fuß-/Kopfdetails sind klar umgestaltet.",
+      "subjects": [
+        {
+          "name": "Bauz",
+          "cell": "r3c1",
+          "identity": "minor_deviation",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Gesichtsscheibe, zweifarbiger Schnabel und Blattfliege sind vorhanden. Die Figur ist stärker seitlich gedreht und die Füße sind flacher/gezackt statt rund gegliedert; die Blattfliege ist asymmetrischer. Kein sicherer zusätzlicher Körperteil.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV06.5/sources/cutouts/pokemon_722_rowlet.png",
+            "sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV06.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "f73a5494acd74239351eab39311e072d50af2531de3b707a176b5eb2baa61a4b"
+          }
+        },
+        {
+          "name": "Yveltal",
+          "cell": "r3c2",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die deutlich getrennten gebogenen Krallen am zentralen Fuß werden zu einer kleinen Reihe heller Striche. Der schmale farbig gegliederte Kopf verliert seine klare Augen-/Schnabelzeichnung in einer dunklen Fläche. Flügel und Schwanz sind als Gesamtform vorhanden.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV06.5/sources/cutouts/pokemon_717_yveltal.png",
+            "sha256": "154bd7f904c5db48ddce7cc7ff656f95cd110c7327bee28a895b11fddfcfa4a7"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV06.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "0623a506dcfe3ea0e405871e3d4d169c52886bf84da772fbb006ec0d37eb2bfe"
+          }
+        },
+        {
+          "name": "Genesect",
+          "cell": "r3c3",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die orange Augenfläche mit getrennten hellen Ovalen der Quelle wird zu einer einzelnen leuchtenden senkrechten Irisstruktur. Das Maul verliert die klare Zahnsegmentierung. Panzer und Kanone bleiben grundsätzlich richtig, die Gesichtsänderung liegt frei sichtbar.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV06.5/sources/cutouts/pokemon_649_genesect.png",
+            "sha256": "0d77f632c0d27b74998040266b493c817a3643e2257e106a0feaa5fe52002b5a"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV06.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "6a57af6bdb870703b5feef1673e42a3b60023365ea5e3d82ace5fc56ef59c15e"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/SV06.5/poster-flux2-artwork.png",
+        "sha256": "847ff1ca298cf6489b775573f73370cf6f562a48f545c3fdc3bec1e7fdfe60e3"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P28",
+      "asset_key": "SV08.5",
+      "title_de": "Prismatische Entwicklungen",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Lugias Gesicht ist erneut strukturell verändert; Groudons Maul und seitliche Panzerstacheln weichen deutlich ab.",
+      "subjects": [
+        {
+          "name": "Pikachu",
+          "cell": "r3c1",
+          "identity": "minor_deviation",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Gesicht, Ohren, Blitzschwanz und Sprungpose bleiben erhalten. Die angezogene Hand ist rundlich geglättet und feine Fingerkerben fehlen; Druckgrößenurteil erforderlich. Keine eindeutige fehlerhafte Pflanzenüberschneidung.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV08.5/sources/cutouts/pokemon_025_pikachu.png",
+            "sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV08.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "a05b9ee1286c2a557dba4746cefcf3049332871329486d2fb414b64dbf8f09dc"
+          }
+        },
+        {
+          "name": "Groudon",
+          "cell": "r3c2",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Das schmale gezähnte Maul der Quelle wird zu einem großen weit geöffneten dunklen Maul mit langer Zunge. Die spitzen seitlichen weißen Panzerstacheln sind teils zu flachen Platten geglättet; dies verändert Gesicht und definierende Kontur.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV08.5/sources/cutouts/pokemon_383_groudon.png",
+            "sha256": "0207895137e94107b5efbf9054d3c94f2ae16374f9cd07d3729fb5e86dd271ac"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV08.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "b1c32e4cf2be42ce6edd75f732a944e35a1da82adefb32f8318dd7f5f317e674"
+          }
+        },
+        {
+          "name": "Lugia",
+          "cell": "r3c3",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die blaue Augenmaske endet über hellen zahnartigen Knubbeln statt über dem klaren seitlichen Auge. Die Augen-/Schnabelstruktur ist verändert und frei sichtbar; Flügel bleiben grundsätzlich nachvollziehbar.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV08.5/sources/cutouts/pokemon_249_lugia.png",
+            "sha256": "f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV08.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "60c467c04df83d0be91d47929039099733e3aa05f05f5dd03ffa941dff5fcb90"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/SV08.5/poster-flux2-artwork.png",
+        "sha256": "0fa96a8cf36e05d50bf667354127603aa0a057afb710c4743fe9676db4cd74a9"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P31",
+      "asset_key": "SV10.5B",
+      "title_de": "Schwarze Blitze",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Kyurems eisiger Flügel und Zekroms erhobene Hand verlieren definierende Details; mehrere Identitätsfehler.",
+      "subjects": [
+        {
+          "name": "Serpifeu",
+          "cell": "r3c1",
+          "identity": "minor_deviation",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Schmaler Kopf, halb geschlossenes Auge, gelber Kragen und Blattschwanz sind erhalten. Handspitzen und Halslinien sind feiner beziehungsweise zahlreicher vereinfacht; kein sicherer harter Defekt.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV10.5B/sources/cutouts/pokemon_495_snivy.png",
+            "sha256": "e7ff61a0daed598a7676b262c56af766e88bcf91764658eeeae615f6f9937549"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV10.5B/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "02d10db47121ad21ebcb2a6b96bd9e586c0208568b1c9e381931c0188070e901"
+          }
+        },
+        {
+          "name": "Kyurem",
+          "cell": "r3c2",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Am großen Eisflügel fehlt die obere kreisförmige gelbe Ansatzmarke der Quelle; die Enden sind als andere Spitzen gezeichnet. Die hellen Hand-/Fußkrallen sind zudem dunkel geglättet. Die betroffenen Stellen sind unverdeckt.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV10.5B/sources/cutouts/pokemon_646_kyurem.png",
+            "sha256": "d67df985a583dc711c2d2f753f516c56e33e4717c113f4b27fcb998c8f33f38b"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV10.5B/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "474a719a0106b6110118a8d987bb5f983992a98a1d1b559e588eb92d58b88d8b"
+          }
+        },
+        {
+          "name": "Zekrom",
+          "cell": "r3c3",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die deutlich nach vorn gestreckte Hand mit getrennten rundlichen Fingern der Quelle ist in eine flache segmentierte Fläche am Flügel-/Schwanzansatz umgebaut. Der rote Augenakzent ist kaum erkennbar; die Handstruktur ist der klare harte Befund.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV10.5B/sources/cutouts/pokemon_644_zekrom.png",
+            "sha256": "3a621c1df54ce8e73a144c58b5cd4d20fa309009c41731852f85445068829fcc"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV10.5B/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "10a63dd78aa9c51f64f22c2c1c2f313dfbf530fa7c107ce8bf40d78dfda7b6bc"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/SV10.5B/poster-flux2-artwork.png",
+        "sha256": "802d5dec3ae46e0b9d0ba953d475fa61cc77e7f6a8eb8ea258f7d34b1a9f003b"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P32",
+      "asset_key": "SV10.5W",
+      "title_de": "Weiße Flammen",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Reshirams Kopf und Flügel-/Halsdetails weichen strukturell ab; die kleinen Begleitmotive benötigen eher Detailurteil.",
+      "subjects": [
+        {
+          "name": "Floink",
+          "cell": "r3c1",
+          "identity": "minor_deviation",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Farbflächen, Schwanzring mit Kugel, Ohren und Laufhaltung bleiben erhalten. Die Maulform ist etwas dreieckiger, der Schwanzring unruhiger. Gras über den Füßen ist plausibel und kein Anatomiebeweis.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV10.5W/sources/cutouts/pokemon_498_tepig.png",
+            "sha256": "d7750c56dc5be8ae10a6c270c34a0c46dbf64f289f2eb5670cbe52a9fd41f275"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV10.5W/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "064efa1bce0775f880b75fef8dc2b976b39310183dd8f2917770313baf5d857e"
+          }
+        },
+        {
+          "name": "Reshiram",
+          "cell": "r3c2",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Der kantige Kopf mit blauem Auge und spitzem Unterkiefer wird zu einer glatten, stumpfen Schnauze ohne klare Augenzeichnung. Die langen spitzen Flügelfedern und Halsringe sind deutlich umgeformt; die Flügelhand wirkt krallenartig verwischt.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV10.5W/sources/cutouts/pokemon_643_reshiram.png",
+            "sha256": "da64fe6f0285ea0837a5fd06b150abee0eb5598c47050314ac1ece006d61c135"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV10.5W/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "ad54ee4337ef3419f6392f0b8547abd8f9fbe6d2f102b9dddf267df86e561acf"
+          }
+        },
+        {
+          "name": "Ottaro",
+          "cell": "r3c3",
+          "identity": "minor_deviation",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Muschel, Körper, Arme, Schwanz und Gesicht bleiben passend. Die kleinen Wangenpunkte sind sehr schwach beziehungsweise nicht klar lesbar; das ist ein offener Druckdetailpunkt, kein sicherer Körperformfehler.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV10.5W/sources/cutouts/pokemon_501_oshawott.png",
+            "sha256": "480904e99ed485ba3c8fb5866bac1a2acee76dd6dcee1a1ad3e2aac706576fc7"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV10.5W/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "4a397744abb8867c008bcbd553d4ee74746dfd77fa3d3b6020ba54f718c75283"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/SV10.5W/poster-flux2-artwork.png",
+        "sha256": "da524b22b59dc76537adbf19b66e692f276cb0ebd5b0af7044b5f4c0783c2e0f"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P35",
+      "asset_key": "ME02",
+      "title_de": "Fatale Flammen",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Reshiram und Genesect zeigen deutliche Gesichtsänderungen; Glumandas frei sichtbare Zähne fehlen teilweise.",
+      "subjects": [
+        {
+          "name": "Genesect",
+          "cell": "r3c1",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die getrennten hellen Ovale der orangefarbenen Augenfläche sind in eine leuchtend gestreifte Iris umgestaltet, die Zahnreihe ist stark geglättet. Das vordere Blatt liegt plausibel vor Bein/Arm und ist nicht der Identitätsfehler.",
+          "source": {
+            "file": "tmp/poster-workspaces/ME02/sources/cutouts/pokemon_649_genesect.png",
+            "sha256": "0d77f632c0d27b74998040266b493c817a3643e2257e106a0feaa5fe52002b5a"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "0699853c51c2004759756308e0d1c75d7edc511d55223f1a62486c2940a75673"
+          }
+        },
+        {
+          "name": "Glumanda",
+          "cell": "r3c2",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Im offenen Maul fehlt der deutlich helle Zahn links aus der Quelle; auch die kleinen unteren Zähne sind nicht klar vorhanden. Die übrige Körperform, Pfotenhaltung und Schwanzflamme bleiben erkennbar.",
+          "source": {
+            "file": "tmp/poster-workspaces/ME02/sources/cutouts/pokemon_004_charmander.png",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "8926684b77ce78a4bed5c708dff2ba3c76b13a91e06e0c579c8fb7df9cc2e5ce"
+          }
+        },
+        {
+          "name": "Reshiram",
+          "cell": "r3c3",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Der schmale kantige Kopf wird zu einer stumpfen Schnauze mit großem glänzendem Auge und rosa Halsfläche. Die Quelle besitzt schärfere Gesichts-/Halsfedern und klarere Halsringe. Kleine Fußüberdeckung durch Vordergras ist plausibel.",
+          "source": {
+            "file": "tmp/poster-workspaces/ME02/sources/cutouts/pokemon_643_reshiram.png",
+            "sha256": "da64fe6f0285ea0837a5fd06b150abee0eb5598c47050314ac1ece006d61c135"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "da7b1d4da3b5f831b10b62d988dadd97d22fc7dbc328c06b9920a9336f6322d1"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/ME02/poster-flux2-artwork.png",
+        "sha256": "f20acc0f58cc0f21ed7c81567d15ecb34afe5f45c5bfcc3f649bf1e83d8cf28a"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P40",
+      "asset_key": "ExGen3/sections/normal",
+      "title_de": "Pokémon ex",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Koraidons Gesicht/Brustrad und Miraidons elektrische Antennen/Brustzeichnung sind stark umgebaut; höchste Priorität.",
+      "subjects": [
+        {
+          "name": "Koraidon",
+          "cell": "r3c1",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Das sichtbare Auge rutscht optisch in die dunkle Brustscheibe, während das eigentliche Gesicht kaum lesbar ist. Die markanten roten/weißen Brustzacken und die Handkrallen verlieren ihre Struktur; die Quelle zeigt diese Bereiche klar getrennt.",
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen3/sections/normal/sources/cutouts/pokemon_1007_koraidon.png",
+            "sha256": "a292ff6c8c43f3f2c2df404ad14fc84e4ba0db33107692068d70e30ea9b44962"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ExGen3/sections/normal/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "5434108c854b35a84011ac4fcbd71d032906febcda5478184e967bca4b45eda1"
+          }
+        },
+        {
+          "name": "Pikachu",
+          "cell": "r3c2",
+          "identity": "minor_deviation",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Gesicht, Ohren, Schwanz und Sprungpose passen grundsätzlich. Die angezogene Pfote ist unruhig geknubbelt und die ausgestreckten Fingerspitzen sind vereinfacht; dies bleibt ein Detailpunkt für die menschliche Sichtung, keine pauschale Übernahme der anderen Pikachu-Freigabe.",
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen3/sections/normal/sources/cutouts/pokemon_025_pikachu.png",
+            "sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ExGen3/sections/normal/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "73302e556f69c7ca9864fd341746f882e0096b7884298826cabc76f597daa4be"
+          }
+        },
+        {
+          "name": "Miraidon",
+          "cell": "r3c3",
+          "identity": "defect",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die blitzartig verzweigten Antennen sind zu federartigen Blättern geworden. Die gezackte leuchtende Brustzeichnung wird zur glatten ovalen Scheibe mit diagonalen Linien; Auge und Kopf gehen in eine dunkle schmale Fläche über.",
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen3/sections/normal/sources/cutouts/pokemon_1008_miraidon.png",
+            "sha256": "282add1c4774047944a6c9d377ee0ed739744d2d23bb18ac32133534190a022a"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ExGen3/sections/normal/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "1217bbc79b8083323b5d160a14fdeaf2b002aa6c76725ae1c7c3b9516ac04a38"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/ExGen3/sections/normal/poster-flux2-artwork.png",
+        "sha256": "30b426a3806f98d8b15d267afd0728f7ede559b094a75f6119dc39f81243f49f"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    }
+  ]
+}

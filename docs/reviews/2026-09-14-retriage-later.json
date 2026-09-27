@@ -1,0 +1,859 @@
+{
+  "review_date": "2026-09-14",
+  "reviewer_kind": "agent",
+  "scope": "Read-only Re-Triage der 13 zugewiesenen installierten textfreien Master und aller 39 Figuren-Kartencrops. Kein vollständiger Neun-Karten-, Rohbild-, Overlay-, PDF- oder Release-Audit; keine menschliche Freigabe.",
+  "method": {
+    "visual": "Jeden textfreien Vollmaster und jeden physischen Figuren-Crop tatsächlich mit view_image betrachtet; exakte Quellbilder ebenfalls betrachtet, identische Quellhashes nur einmal. Alte Ablehnungsberichte nicht als Befundgrundlage verwendet.",
+    "file_binding": "Alle 91 referenzierten Dateien mit SHA-256 gegen das Review-Register geprüft; keine Abweichung und keine fehlende Datei.",
+    "rubric": "Official-Artwork-Quelle maßgeblich für Form, Gesicht, Anatomie, Proportionen und Zeichnung. Szenengerechte Vordergrundüberdeckung ist erwünscht und kein Identitätsfehler; verdeckte Teile nicht als fehlend gewertet. Kleine nichtdefinierende Linienabweichungen werden zur menschlichen Prüfung offengelegt. Frühere Nutzerannahmen gelten nur für exakt angenommene Bilder.",
+    "routing": "Primär echter gemeinsamer One-shot mit räumlichen und individuellen Detailquellen, exaktem Cast/Kartencontainment und 2 MP. Konturgeführter maskierter Landschafts-Nachlauf ist nur für konkret belegte enge Tiefenkorrekturen erwogen; bisherige Base2-Evidenz umfasst zwei Grashalmkreuzungen, keinen allgemeinen Tiefendetektor und keine Anatomiekorrektur.",
+    "values": "identity: fail, minor oder acceptable; depth: acceptable, local_defect oder uncertain; severity: hard, minor, uncertain oder none. present_for_human_review ist keine Annahme/Freigabe."
+  },
+  "targets": [
+    {
+      "review_id": "P20",
+      "asset_key": "SV03",
+      "title_de": "Obsidian Flammen",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Glumandas Mund und Arm-/Handkonturen weichen deutlich ab; die sinnvolle Grasüberdeckung bei Bauz ist kein Identitätsfehler.",
+      "subjects": [
+        {
+          "name": "Bauz",
+          "cell": "r3c1",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Gesichtsmaske, Schnabel und Blattfliege erkennbar; untere Bauchlinie und Fußkonturen vereinfacht. Der vordere Halm verdeckt einen Teil der Fliege plausibel, keine fehlende Anatomie.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV03/sources/cutouts/pokemon_722_rowlet.png",
+            "sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "0501d9fca7bdbf36fc2e4a6d5c963351cbc7a6b3659993f9194dd2f6c2f4752a"
+          }
+        },
+        {
+          "name": "Glumanda",
+          "cell": "r3c2",
+          "identity": "fail",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Der offene Mund ist gegenüber der Referenz zahnlos und stark geglättet; Arme und Hände wirken verkürzt und flächig. Das sind Identitäts-/Anatomieabweichungen, kein Problem einer Pflanzenüberdeckung.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV03/sources/cutouts/pokemon_004_charmander.png",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "b0c1fb22066895a3c62f8316f931a8416d03e84fae444ca4bfb18c878ea9cf93"
+          }
+        },
+        {
+          "name": "Froxy",
+          "cell": "r3c3",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Augentürme, Schaumkragen, Nasenblasen und Sitzpose stimmen; unterer Hand-/Beinübergang weicher und kompakter als in der Quelle. Kein klarer lokaler Tiefenbruch.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV03/sources/cutouts/pokemon_656_froakie.png",
+            "sha256": "cbb47c38d234eb7dea4b1d90f8c97ec990f41b6e61f26e7efba90d80a3d1d632"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "086dd49260adfd37a014324f91998972752b79d35340c41ff6ac40bd2a2ef8d9"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/SV03/poster-flux2-artwork.png",
+        "sha256": "96edafdfdbdf95e8873c9cc72c5e4c9f6fde2d7aeda1512802147b6123391770"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P21",
+      "asset_key": "SV03.5",
+      "title_de": "151",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Bisasams sichtbare Fleckenzeichnung ist verändert; eine reine Landschaftskorrektur würde diesen Figurenfehler nicht beheben.",
+      "subjects": [
+        {
+          "name": "Bisasam",
+          "cell": "r3c1",
+          "identity": "fail",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Der separate kleine Fleck am bildrechten Vorderbein der Quelle fehlt im frei sichtbaren Bereich; die Stirn enthält zusätzliche dunkle Striche. Knospe, Haltung und Gesicht bleiben erkennbar, aber die Zeichnung ist nicht quelltreu.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV03.5/sources/cutouts/pokemon_001_bulbasaur.png",
+            "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV03.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "56dd916dd041303d68e93037cbe3ee0cdef831bf7a8694ad2dc7a545b9de18bf"
+          }
+        },
+        {
+          "name": "Glumanda",
+          "cell": "r3c2",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Silhouette, Bauchfeld, Flamme und ausgestreckte Pose passen weitgehend. Zahn- und Handdetails sind vereinfacht; die Abweichung muss im Quellenpaar offengelegt werden.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV03.5/sources/cutouts/pokemon_004_charmander.png",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV03.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "8196fdef1d0c51307e6554ff8705e75d5190bb099065fd8f6385b071ad0ae930"
+          }
+        },
+        {
+          "name": "Schiggy",
+          "cell": "r3c3",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Panzer, gerollter Schweif, Kopf und Haltung sind erkennbar; Bauchsegmente und Handkanten etwas vereinfacht. Vordergrundhalme an den Füßen werden nicht als fehlende Fußteile gewertet.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV03.5/sources/cutouts/pokemon_007_squirtle.png",
+            "sha256": "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV03.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "755ec722476707b909999b7c4ce875797cc7178eb0237503cffe00636f9007c5"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/SV03.5/poster-flux2-artwork.png",
+        "sha256": "727efeda4772538dc294fe0e458600a371e8fef643cd75c8fc603a1ab126acd8"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P23",
+      "asset_key": "SV04.5",
+      "title_de": "Paldeas Schicksale",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Lapras verliert mehrere klar sichtbare blaue Hals-/Körperflecken; die kleine Grasüberdeckung bei Glumanda ist dagegen plausibel.",
+      "subjects": [
+        {
+          "name": "Glumanda",
+          "cell": "r3c1",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Pose, Bauchkontur, Zähne und Schwanzflamme liegen nahe an der Quelle; Handlinien vereinfacht. Der schmale Vordergrundhalm läuft konsistent vor den Bauch.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV04.5/sources/cutouts/pokemon_004_charmander.png",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV04.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "f7a62da1871b5a60d96207cba94bbd31d1b40ed8b2d8139c2628ea2fbd18f26c"
+          }
+        },
+        {
+          "name": "Pikachu",
+          "cell": "r3c2",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Gesicht, rote Wangen, Ohrspitzen und Sprungpose stimmen weitgehend. Pfotenlinien und brauner Schweifansatz sind rauer beziehungsweise kantiger; keine andere Form erkennbar.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV04.5/sources/cutouts/pokemon_025_pikachu.png",
+            "sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV04.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "aca0883ddeea60d1f6f4bd4e2fcf805a388977eabd2ce2297bc62fe4786f66ce"
+          }
+        },
+        {
+          "name": "Lapras",
+          "cell": "r3c3",
+          "identity": "fail",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die blauen Flecken am unteren Hals und am Körper vor dem Panzer fehlen im frei sichtbaren Bereich. Das Stirnhorn ist zudem kürzer/stumpfer als in der Quelle. Dies ist Figurenzeichnung, nicht Grasverdeckung.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV04.5/sources/cutouts/pokemon_131_lapras.png",
+            "sha256": "0dda58737b5c1d7db8e7b81ff61b41d0f23bc08ddbf166ca61c20d17d1d27113"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV04.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "cde58f54b2e67a02bf9ff0d13e37bf74c83984d316b33d07ebb4e21940706670"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/SV04.5/poster-flux2-artwork.png",
+        "sha256": "05a519ec108167e8eec28f50410252c8be294d90100aedf99a7d215cb15d8c6b"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P24",
+      "asset_key": "SV05",
+      "title_de": "Gewalten der Zeit",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Flamiaus rote Augenzeichnung und die Flanke wurden verändert; dafür den gemeinsamen One-shot mit individuellen Detailquellen verwenden.",
+      "subjects": [
+        {
+          "name": "Chelast",
+          "cell": "r3c1",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Kopfspross, gelbe Kieferpartie und Panzer passen. Die Füße sind stärker in Zehen gegliedert als die glatten gelben Enden der Quelle; Proportionen etwas rundlicher.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV05/sources/cutouts/pokemon_387_turtwig.png",
+            "sha256": "34bdf93e84d8e1770074ead9c38b1659bcc937abfa20ddd8a6e53a283ed0e16d"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "ffbaa5f708d963b26ba5d43a3f5c7cb7745e05e7eb790d9e52311949ce8379c4"
+          }
+        },
+        {
+          "name": "Flamiau",
+          "cell": "r3c2",
+          "identity": "fail",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die roten schmalen Irisbereiche der Quelle fehlen zugunsten großer gelb-schwarzer Augen; seitlich hinter dem Schnurrhaar liegt ein erfundenes helles Dreieck. Der Kopf wirkt gegenüber dem schmaleren laufenden Körper stark vergrößert.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV05/sources/cutouts/pokemon_725_litten.png",
+            "sha256": "02391ac457888baf123accfc5ce446fc75df4790b3b000865a21c0f21b622600"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "e610663de670e8a158d96a26f78c98f0b51719ce071e77ca0e4f85994792f974"
+          }
+        },
+        {
+          "name": "Karnimani",
+          "cell": "r3c3",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Aufgerissenes Maul, hochgestellte Arme, Halsfeld und angehobener Fuß erkennbar. Der angehobene Fuß ist kürzer und die Maul-/Zehenlinien weicher; keine Vegetation verdeckt diese Details.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV05/sources/cutouts/pokemon_158_totodile.png",
+            "sha256": "a0ce9f06497dc2a9a3d34174ff89e0ee1a0745ce8007cc89257e379d9be49525"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "76212e1ef1b435012f1235c20584667d6382d84a8b9ef64864bcb37660cd0c06"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/SV05/poster-flux2-artwork.png",
+        "sha256": "2e0deba9d4194f6b11c90fa7a067cf4eecd59c36a8fb57cf272f98b2674aa374"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P25",
+      "asset_key": "SV06",
+      "title_de": "Maskerade im Zwielicht",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Panflams Gesichtsform und Augenzeichnung wurden deutlich umgestaltet; ein enger Landschafts-Pass wäre keine passende Reparatur.",
+      "subjects": [
+        {
+          "name": "Chimpep",
+          "cell": "r3c1",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Stock, Kopfspross, gelbe Augenmaske und Schweif entsprechen der Quelle; Kopf etwas runder und Arm kürzer. Die Pfotenlinien sind vereinfacht.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV06/sources/cutouts/pokemon_810_grookey.png",
+            "sha256": "0a4b1c0662dd8e0ad7f00bf78c2f958b297bc25c70bbc7273d50b3d39d5de330"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV06/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "abebc56ed7fe17b17c8a83789f6116c0e1dd9aac3e0e3f6832287578f9e75db9"
+          }
+        },
+        {
+          "name": "Panflam",
+          "cell": "r3c2",
+          "identity": "fail",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Der nach links gedrehte lange Gesichtsumriss der Quelle wird zu einem fast frontalen runden Gesicht. Große blau umrandete Augen ersetzen die dunklen Augen mit ausgeprägten roten Lidfeldern; Nasen-/Mundpartie verkürzt.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV06/sources/cutouts/pokemon_390_chimchar.png",
+            "sha256": "7ce75f77abcaff1451c67da6fc8de9b6828aacb1a222dd590825c5cab4b20140"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV06/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "9f02e29160bbe0b977c4d857c7a9cd2ee2294c6ccd8f98c9d438d1a8a03d9202"
+          }
+        },
+        {
+          "name": "Froxy",
+          "cell": "r3c3",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Augen, Nasenblasen, Schaumkragen und Sitzhaltung sind sehr ähnlich. Die äußeren Hand-/Fußlinien wurden geglättet; kein eindeutiger Tiefenfehler an den nahe stehenden Gräsern.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV06/sources/cutouts/pokemon_656_froakie.png",
+            "sha256": "cbb47c38d234eb7dea4b1d90f8c97ec990f41b6e61f26e7efba90d80a3d1d632"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV06/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "7afd007fe6df5c1bf2b174a2298a2e934161e8b522cbd2153e4b6e0fdfc67c4b"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/SV06/poster-flux2-artwork.png",
+        "sha256": "a94d925d2e6d5a252f0c684c754f603284daaecbca5d0fa21f55f008f1755bcc"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P27",
+      "asset_key": "SV08",
+      "title_de": "Stürmische Funken",
+      "route": "present_for_human_review",
+      "reason_de": "Kein eindeutiger grober Form-/Anatomiedefekt im direkten Vergleich. Ho-Ohs sehr vereinfachtes Auge und kleinere Linienabweichungen ausdrücklich im Quellenpaar vorlegen; keine automatische Freigabe.",
+      "subjects": [
+        {
+          "name": "Ho-Oh",
+          "cell": "r3c1",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Flügelbänder, Federfächer, Haube und Flugpose erhalten. Das kleine Auge wirkt im Crop fast weiß, der dunkle innere Augenstrich der Quelle ist kaum ausgeprägt; Federenden und Krallenlinien sind weicher. Diese konkrete Abweichung braucht menschliche Bewertung.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV08/sources/cutouts/pokemon_250_ho_oh.png",
+            "sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "783b34d1e30f2c2ba9a9712dd00e6bc53c0bc0474487cc3b24f6d0c6655c62cf"
+          }
+        },
+        {
+          "name": "Krokel",
+          "cell": "r3c2",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Cremefarbene Gesichtsmaske, Nasenformen, offene Maulstruktur, gelbes Bauchfeld und Kopfwedel entsprechen der Quelle. Kleine Konturlinien an Händen/Schwanz sind vereinfacht.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV08/sources/cutouts/pokemon_909_fuecoco.png",
+            "sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "e45272daf5eb81dcd2ff6b24911670104d27c5948508282e4587c5cd2287dc70"
+          }
+        },
+        {
+          "name": "Pikachu",
+          "cell": "r3c3",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Ohrspitzen, Wangen, Schweif und Sprungpose sind schlüssig. Ausgestreckte Pfotenlinie etwas rau; die hohen Halme rechts bleiben räumlich nachvollziehbar hinter beziehungsweise neben der Figur.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV08/sources/cutouts/pokemon_025_pikachu.png",
+            "sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "644019c208f14b3688b76a1ec697a075bd9d9cdb29428eb0a67aa526d2891e99"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/SV08/poster-flux2-artwork.png",
+        "sha256": "d931776dc062cc9f9db4b632fab658ce678ad6fe2afcc73d33e363f1e51fe7f8"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P29",
+      "asset_key": "SV09",
+      "title_de": "Reisegefährten",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Reshirams Kopf-/Halsprofil und Federkonturen sind sichtbar umgestaltet. Neu gemeinsam erzeugen; die Grasüberdeckung am Fuß ist nicht der entscheidende Mangel.",
+      "subjects": [
+        {
+          "name": "Felori",
+          "cell": "r3c1",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Blattgesicht, Halskrause, Ohren und Standpose erhalten; die kleinen Mundzähne und Zungenabgrenzung sind im Crop nicht ausformuliert. Gesicht und Körper etwas runder.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV09/sources/cutouts/pokemon_906_sprigatito.png",
+            "sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV09/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "e7d0f1fdb53a225fec04e04d03f00e489eef6929d2e1868ba36e26b961c4cadb"
+          }
+        },
+        {
+          "name": "Flemmli",
+          "cell": "r3c2",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Kamm, Schnabel, Halsflaum und Schrittpose stimmen weitgehend. Der Standfuß zeigt dickere, überlagerte Linien und die Augen verlieren ihren kleinen farbigen unteren Reflex.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV09/sources/cutouts/pokemon_255_torchic.png",
+            "sha256": "d234db13f46ac30452288fee011df2857d93bac22f7d038d6b472ef14a651950"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV09/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "037e2f0bfe663c6d10e0247f90e3151303101a14d5eddea75b46b77e38253cd2"
+          }
+        },
+        {
+          "name": "Reshiram",
+          "cell": "r3c3",
+          "identity": "fail",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Der scharf gezackte Wangen-/Halskragen der Quelle wird zu einem glatten rundlichen Kopfprofil; Brustfedern und Flügelende sind deutlich zusammengezogen. Der Vordergrundhalm am unteren Fuß verdeckt plausibel, erklärt aber diese frei sichtbaren Formänderungen nicht.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV09/sources/cutouts/pokemon_643_reshiram.png",
+            "sha256": "da64fe6f0285ea0837a5fd06b150abee0eb5598c47050314ac1ece006d61c135"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV09/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "631a1b127488f3ce43c6a87f20f2d15328cd570483da2420ee31434bb640e143"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/SV09/poster-flux2-artwork.png",
+        "sha256": "fea5eaa24c1d7d1f584b9beeef7064a42e0fb56b6e4c74090080c743330059bf"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P30",
+      "asset_key": "SV10",
+      "title_de": "Ewige Rivalen",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Ho-Ohs charakteristische gelappte Haube wird zu einem flachen Fächer, zusätzlich weicht die Federzeichnung ab.",
+      "subjects": [
+        {
+          "name": "Feurigel",
+          "cell": "r3c1",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Lange Schnauze, geschlossenes Auge, Rückenfarbe und Feuerfächer erhalten. Fußenden sind stärker gezackt und die Mund-/Nasenlinie geglättet. Der vordere Halm verdeckt nur eine schmale Beinpartie plausibel.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV10/sources/cutouts/pokemon_155_cyndaquil.png",
+            "sha256": "9532b237ef088f8032024b95459303495e261eb2f7f024b79511522e551a9bcd"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV10/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "b3a4fba8795a75ed90e80a6e3726f8942396bec04573e98cb215990a0a89fab7"
+          }
+        },
+        {
+          "name": "Ho-Oh",
+          "cell": "r3c2",
+          "identity": "fail",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die rund gelappte mehrteilige Haube der Quelle wurde zu einer flachen trapezförmigen Fächerfläche umgebaut. Die klaren weißen/grünen Flügelrandabschnitte gehen stärker ineinander über; der Schwanzfächer ist schematischer.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV10/sources/cutouts/pokemon_250_ho_oh.png",
+            "sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV10/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "b09bec10f97aed236010dd488a0d3faf65fed601e792bd50e48eebb11aec594b"
+          }
+        },
+        {
+          "name": "Flemmli",
+          "cell": "r3c3",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Kamm, Rundkopf, gelber Schnabel und Halsflaum passen weitgehend. Schnabelansatz und Fußkonturen rauer; Gräser rechts verdecken Randteile mit nachvollziehbarer Tiefe.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV10/sources/cutouts/pokemon_255_torchic.png",
+            "sha256": "d234db13f46ac30452288fee011df2857d93bac22f7d038d6b472ef14a651950"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV10/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "cf8d1b262472222ba197da039cae2ed156587da470e4df2df5fb9732aebd250b"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/SV10/poster-flux2-artwork.png",
+        "sha256": "d58e13869502dc2e399d9acec2023ae25fd7cf0b10d25d7d6f83d7f1b0a60d18"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P34",
+      "asset_key": "ME01",
+      "title_de": "Mega-Entwicklung",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Endivies Körper-/Beinaufbau und Knospenkragen weichen deutlich ab; im Crop erscheint zusätzlich ein langer seitlicher Schweif.",
+      "subjects": [
+        {
+          "name": "Bisasam",
+          "cell": "r3c1",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Knospe, Fleckenanordnung und Vierbeinerpose passen weitgehend. Augen-/Zahnlinien wirken körnig; die Vorderbeinzeichnung ist vorhanden. Kleine Grasüberdeckung am äußeren Fuß ist plausibel.",
+          "source": {
+            "file": "tmp/poster-workspaces/ME01/sources/cutouts/pokemon_001_bulbasaur.png",
+            "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "a211f4afe9d52cedc070cc3223cc6c6971665557f30126e699ceee2e9bd4d5e2"
+          }
+        },
+        {
+          "name": "Endivie",
+          "cell": "r3c2",
+          "identity": "fail",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Aus dem breit stehenden Körper der Quelle wird ein langer aufrechter Vorderkörper mit übergroßen länglichen Vorderbeinen. Die Halsknospen liegen als unklare Flecken auf dem Körper; rechts ragt ein langer spitzer Schweif heraus, der in der vorgegebenen Ansicht nicht existiert.",
+          "source": {
+            "file": "tmp/poster-workspaces/ME01/sources/cutouts/pokemon_152_chikorita.png",
+            "sha256": "3ffc2eeee9139b0281ab5493b1a6d4b5c1329de5ddf5361f5ee3c93d12c05659"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "6534d59574b2997c270a6c913f39b29d0a7102e0db9b730cdca2bdd24128a667"
+          }
+        },
+        {
+          "name": "Celebi",
+          "cell": "r3c3",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Kopfform, Fühler, blaue Augen und Flugpose sind erkennbar; die feine Mundlinie fehlt und Flügel-/Handkonturen sind einfacher. Unterer Körper wird teilweise vom Vordergrundhalm verdeckt, was kein fehlendes Körperteil belegt.",
+          "source": {
+            "file": "tmp/poster-workspaces/ME01/sources/cutouts/pokemon_251_celebi.png",
+            "sha256": "7596d91f88dfdb24bac29ad2ff37ec9652ae0aa5de9e8dab04fb0ac53ed697f1"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "1f6dfe244a75608a9933d46d5f14ce326615c6df48be17e89d1bff06d396f9c4"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/ME01/poster-flux2-artwork.png",
+        "sha256": "d189aad3bd442ddc559f341699b4c8a2661a3aa279b29f73960a69280afbc93b"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P36",
+      "asset_key": "ME02.5",
+      "title_de": "Erhabene Helden",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Ho-Ohs Haube und Hals-/Schwanzzeichnung sind gegenüber der exakten Quelle verändert; übrige Figuren haben kleinere Detailabweichungen.",
+      "subjects": [
+        {
+          "name": "Endivie",
+          "cell": "r3c1",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Blatt, Halsknospen und Körperpose bleiben nahe an der Quelle. Fußendlinien und Knospenvolumen sind weicher; der schmale Halm vor dem Vorderbein ist eine plausible Überdeckung.",
+          "source": {
+            "file": "tmp/poster-workspaces/ME02.5/sources/cutouts/pokemon_152_chikorita.png",
+            "sha256": "3ffc2eeee9139b0281ab5493b1a6d4b5c1329de5ddf5361f5ee3c93d12c05659"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME02.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "f9bb31b9fce6f56e4026b100e1393381ff14f4a984139c905f47fc64cdb717d5"
+          }
+        },
+        {
+          "name": "Glumanda",
+          "cell": "r3c2",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Bauchfeld, Schwanzflamme und Pose stimmen weitgehend; Mundzähne und linke Hand sind vereinfacht. Keine Pflanzenüberdeckung erklärt oder verschärft diese kleinen Details.",
+          "source": {
+            "file": "tmp/poster-workspaces/ME02.5/sources/cutouts/pokemon_004_charmander.png",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME02.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "86676f7a217a44d2fb1442916ffcdb40c5917915302d0072d16e505429062168"
+          }
+        },
+        {
+          "name": "Ho-Oh",
+          "cell": "r3c3",
+          "identity": "fail",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die gelappte gelbe Haube wird zu einem flachen aufgefächerten Keil; der grüne Halsring ist kaum noch grün, und die spitzen unregelmäßigen Schwanzfedern werden rundliche gleichförmige Blätter. Mehrere definierende Kontur-/Farbabweichungen.",
+          "source": {
+            "file": "tmp/poster-workspaces/ME02.5/sources/cutouts/pokemon_250_ho_oh.png",
+            "sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME02.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "1aa96716a1203debb8ecae2269f9a3bdad358222ab1273388429383c230835fd"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/ME02.5/poster-flux2-artwork.png",
+        "sha256": "e2f54fb50dca25a95fb660419c307d9126b2064d18dc7544b8a90d8d4815dd69"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P37",
+      "asset_key": "ME03",
+      "title_de": "Optimale Ordnung",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Mega-Zygardes Körperzeichnung und Kanonenmarkierungen brechen im Vergleich zur Quelle deutlich zusammen.",
+      "subjects": [
+        {
+          "name": "Serpifeu",
+          "cell": "r3c1",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Schnauze, halbgeschlossenes Auge, gelber Kragen und Blattschweif erhalten. Torso wirkt etwas bauchiger und Fingerlinien sind weicher, ohne eindeutigen Formwechsel.",
+          "source": {
+            "file": "tmp/poster-workspaces/ME03/sources/cutouts/pokemon_495_snivy.png",
+            "sha256": "e7ff61a0daed598a7676b262c56af766e88bcf91764658eeeae615f6f9937549"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "c0d239ae148a779eff77885dcc23b82d019e39cc37daa11772293b0beeaeb786"
+          }
+        },
+        {
+          "name": "Bauz",
+          "cell": "r3c2",
+          "identity": "minor",
+          "depth": "uncertain",
+          "severity": "uncertain",
+          "finding_de": "Gesichtsmaske, Fliege und Flügel sind ähnlich, Schnabelkante rauer. Zwischen Füßen und Bodenschatten bleibt ein sichtbarer Abstand; im Kontext ist nicht sicher, ob absichtliches kurzes Schweben oder schwache Bodenanbindung gemeint ist.",
+          "source": {
+            "file": "tmp/poster-workspaces/ME03/sources/cutouts/pokemon_722_rowlet.png",
+            "sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "080f11cc141a70530bd54da1d6bc269965b6009654a695c548e5355dfb1dfefd"
+          }
+        },
+        {
+          "name": "Mega-Zygarde",
+          "cell": "r3c3",
+          "identity": "fail",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die klare grün-schwarze Körpergliederung mit weißen Hexagonen wird zu einer verwischten hellgrünen Fläche. Blaue Kanonenrandmarkierungen der Quelle fehlen und die Frontsymbolik ist vereinfacht. Blumen verdecken Teile des Schweifs plausibel; die frei sichtbaren Musterfehler bestehen unabhängig davon.",
+          "source": {
+            "file": "tmp/poster-workspaces/ME03/sources/cutouts/pokemon_718_artwork_10301_mega_zygarde.png",
+            "sha256": "33261872ff2adb38b60f19d6f18a34681555e4243ff4c2ca5f367e9ddd976b55"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "a0993c7b6d2660be55d6b9dc5705bb5ca1ea183fb470febb545148dfae783c3e"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/ME03/poster-flux2-artwork.png",
+        "sha256": "f168f308c04d3cfd617d49378ae74ebc3bb5ad9ccb6fb6fbc8e1f01dcd1a065f"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P38",
+      "asset_key": "ME04",
+      "title_de": "Wachsendes Chaos",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Mehrere klare Figurenfehler: Igamaro-Mund/Fußspitzen, Ho-Oh-Haube und Fynx-Nase/Beinpose. Hohe Priorität für einen neuen Detailquellen-One-shot.",
+      "subjects": [
+        {
+          "name": "Igamaro",
+          "cell": "r3c1",
+          "identity": "fail",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Der große weiße obere Schneidezahn der Quelle wird zu einer dünnen unklaren Linie; die glatten weißen Fußspitzen werden mehrfach geriffelte klauenartige Flächen. Nasen- und Mundpartie sind verzerrt.",
+          "source": {
+            "file": "tmp/poster-workspaces/ME04/sources/cutouts/pokemon_650_chespin.png",
+            "sha256": "565272048cd8eeb2b524d597da6805dbdff28c313bc5346181f1859041320ee7"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "d46f0659ee9ea005c9a827be0e4e5280735e40f2a63218f4efe1718070f09674"
+          }
+        },
+        {
+          "name": "Ho-Oh",
+          "cell": "r3c2",
+          "identity": "fail",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die gelappte goldgelbe Haube erscheint als rötlicher gezackter Fächer; grüner Halsring und weiße Flügelbänder sind stark abgeschwächt. Die Schwanzfedern werden ein kleiner gleichförmiger Fächer.",
+          "source": {
+            "file": "tmp/poster-workspaces/ME04/sources/cutouts/pokemon_250_ho_oh.png",
+            "sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "ab200c2febe3ad84f16f01f1533334b7dec4b75a6675f39430979079001ff2c8"
+          }
+        },
+        {
+          "name": "Fynx",
+          "cell": "r3c3",
+          "identity": "fail",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die schwarze dreieckige Nase der Quelle ist durch eine orangefarbene kleine Form ersetzt. Die charakteristische angehobene Vorderpfote mit hochgebogener Silhouette wird zur abgestellten, nach unten geknickten Beinpose; Augen-/Kopfproportionen sind runder.",
+          "source": {
+            "file": "tmp/poster-workspaces/ME04/sources/cutouts/pokemon_653_fennekin.png",
+            "sha256": "b638e094ee06adcec959aad2898ce93f8c5fda88feba9c9158d1f16c026c07dd"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "b6fb2365ff4609c2741092d6280ab4efc1be5fe7c52b31c683d38dbee9674b24"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/ME04/poster-flux2-artwork.png",
+        "sha256": "4206d994cf6cf049fed81817b4d54106e5744999032cf6e33215792ff054e434"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P39",
+      "asset_key": "MEP",
+      "title_de": "MEP Black Star Promos",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Zacians Flechtmähne und Bisasams frei sichtbare Fleckenzeichnung sind verändert. Gras vor den Füßen ist erwünscht und kein Grund für einen Anatomievorwurf.",
+      "subjects": [
+        {
+          "name": "Zacian",
+          "cell": "r3c1",
+          "identity": "fail",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Die lange rosa geflochtene Strähne der Quelle wird überwiegend zu einem glatten bandartigen Saum; die kantige Gesichtsmaske und die rosa Nase sind im schmalen Kopf stark vereinfacht. Mehrere weiße Fellmarkierungen sind verschoben beziehungsweise reduziert.",
+          "source": {
+            "file": "tmp/poster-workspaces/MEP/sources/cutouts/pokemon_888_zacian.png",
+            "sha256": "f36c2b196763a2c3389ee00b481b534b94d87907d81c0b0fd2dcf5487db2a533"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/MEP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "add51c78952742787714166b8fb212d8facd32745a7a45b7421c40123babcfe0"
+          }
+        },
+        {
+          "name": "Bisasam",
+          "cell": "r3c2",
+          "identity": "fail",
+          "depth": "acceptable",
+          "severity": "hard",
+          "finding_de": "Von den Stirnflecken der Quelle bleibt nur der große obere Fleck klar erhalten; die kleinen Stirnmarkierungen und der separate Fleck am bildrechten Vorderbein fehlen. Vordergrundgras bedeckt die Fußränder plausibel, nicht die beanstandeten freien Flächen.",
+          "source": {
+            "file": "tmp/poster-workspaces/MEP/sources/cutouts/pokemon_001_bulbasaur.png",
+            "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/MEP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "8ed5706e04161912724404425567db79b65531f30624062b1637cd064a73db50"
+          }
+        },
+        {
+          "name": "Glumanda",
+          "cell": "r3c3",
+          "identity": "minor",
+          "depth": "acceptable",
+          "severity": "minor",
+          "finding_de": "Pose, Bauchfläche und Schwanzflamme passen weitgehend. Mund- und Handlinien vereinfacht; die Füße sind teilweise vom Wiesenbewuchs überdeckt und werden deshalb nicht als anatomisch fehlend bewertet.",
+          "source": {
+            "file": "tmp/poster-workspaces/MEP/sources/cutouts/pokemon_004_charmander.png",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/MEP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "048bb4b01be7896b346d08e41e13b744081083a05af966d50286c2973b48cb27"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/MEP/poster-flux2-artwork.png",
+        "sha256": "25bf253bd104c6f62db18dee2239bbd316a8158ec07083a5983cdfbf282d191d"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    }
+  ]
+}

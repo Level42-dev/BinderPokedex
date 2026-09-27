@@ -1,0 +1,367 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-12",
+  "asset_key": "ExGen3/sections/mega",
+  "trial": "identity-lock trial 1",
+  "candidate_root": "tmp/identity-lock-trials/audit-exgen3-mega-identity-lock-260751036",
+  "target_verdict": "reject",
+  "anatomy_after_learned_upscale_verdict": "pass",
+  "scene_transition_verdict": "reject",
+  "ground_contact_verdict": "reject",
+  "promotion_recommended": false,
+  "summary": "All three figures retain their source-bound defining anatomy after learned upscale, including Mega Lucario chest and foot spikes. The candidate is not acceptable as a complete scene: transparent/doubled terrain/tree transitions and insufficient subject grounding remain visible.",
+  "method": "Independent direct view_image inspection of all three exact originals, full raw image at native pixels, full model-upscaled text-free master and full localized preview (both displayed downscaled), plus all nine separate 750x1050 physical cards at native size. Source-pixel lock was not treated as visual approval.",
+  "coverage": {
+    "source_originals_viewed": 3,
+    "raw_viewed": true,
+    "raw_display_dimensions": [
+      848,
+      1168
+    ],
+    "master_viewed": true,
+    "master_display_dimensions": [
+      1343,
+      1854
+    ],
+    "localized_preview_viewed": true,
+    "preview_display_dimensions": [
+      1343,
+      1854
+    ],
+    "physical_cards_viewed": 9,
+    "physical_card_display_dimensions": [
+      750,
+      1050
+    ],
+    "final_pdf_viewed": false,
+    "source_or_cache_gaps": []
+  },
+  "metadata_file": "tmp/identity-lock-trials/audit-exgen3-mega-identity-lock-260751036/review/identity-lock-300dpi-artwork.run.json",
+  "metadata_sha256": "771804e5b4db80a35260aaec1c368a6482d35e327ad4d4976db72a5632f5b6b1",
+  "raw": {
+    "file": "tmp/identity-lock-trials/audit-exgen3-mega-identity-lock-260751036/retrieved/identity-lock-m1vyedlv/output/exgen3__sections__mega_flux2_identity_lock_1mp_scene_seed_260751036_00001_.png",
+    "sha256": "d6bdfe74f3b766f2551346a04f2b0f4c903a13435df25b5cca49514cd7381022",
+    "dimensions": [
+      848,
+      1168
+    ],
+    "matches_metadata": true,
+    "actually_viewed": true
+  },
+  "model_upscaled_master": {
+    "file": "tmp/identity-lock-trials/audit-exgen3-mega-identity-lock-260751036/review/identity-lock-300dpi-artwork.png",
+    "sha256": "a869257670470b301d870079e822ed698a9b166ffe37b5d1cfac971dd12de9a3",
+    "dimensions": [
+      2368,
+      3268
+    ],
+    "matches_metadata": true,
+    "actually_viewed": true
+  },
+  "localized_preview": {
+    "file": "tmp/identity-lock-trials/audit-exgen3-mega-identity-lock-260751036/review/identity-lock-300dpi-de.png",
+    "sha256": "bf2008ab011bbe422dfa083bad4e66c571dce2e9818bd87aade87859a42208bf",
+    "dimensions": [
+      2368,
+      3268
+    ],
+    "actually_viewed": true
+  },
+  "raw_source_pixel_check": {
+    "artwork_sha256": "d6bdfe74f3b766f2551346a04f2b0f4c903a13435df25b5cca49514cd7381022",
+    "changed_pixels": 0,
+    "height": 1168,
+    "method": "exact_opaque_source_pixels",
+    "opaque_pixels": 40345,
+    "passed": true,
+    "reference_sha256": "615cab2fb3ee9f98993dcdc77a3081c8646d6613c853ecfcbf25ae997d27ae79",
+    "stage": "raw_generation",
+    "width": 848,
+    "evidence_status": "Read from hash-bound run metadata; not independently recomputed by this reviewer. Its zero changed opaque pixels does not establish upscaled anatomy, scene transitions or ground contact."
+  },
+  "scene_findings": [
+    {
+      "id": "transition-double-exposure",
+      "verdict": "reject",
+      "location": "Lower portions of r2c1 and r2c3; transition continues across the full master around trees/stone terraces.",
+      "observation": "Faint additional trunk, foliage and wall/terrain outlines overlap the primary scene. Several lower tree/stone areas appear partially transparent, so back contours show through where the upper trees and nearer stone blocks are opaque. The broad transition reads as a double exposure rather than continuous depth.",
+      "scope_note": "Observed already in raw and retained by upscale; no assertion about the implementation cause."
+    },
+    {
+      "id": "lucario-ground-contact",
+      "verdict": "reject",
+      "location": "r3c3, both red feet and immediately adjacent ground.",
+      "observation": "No localized contact shadow or body-cast shadow anchors the feet. Uniform dark-green grass runs to the crisp soles, making the figure look placed on top of the background. This is most evident on the standing figure; brighter/darker subject palette alone is not the reason for rejection."
+    },
+    {
+      "id": "hover-height-cues",
+      "verdict": "uncertain",
+      "location": "r3c1/r3c2, ground beneath Mega Latias and Mega Diancie.",
+      "observation": "Both floating poses are anatomically consistent, but broad pre-existing meadow shadow bands do not provide a readable individual cast shadow. Their relation to the ground is insufficiently clear for a confident natural-integration pass."
+    },
+    {
+      "id": "containment-and-cast",
+      "verdict": "pass",
+      "observation": "Exactly the three expected figures are present, all entirely inside bottom-row cards. No scenery line crosses a figure or amputates a defining part. Sky, distant crystalline ridges and restrained refractions occupy the upper scene without invented creatures."
+    }
+  ],
+  "sources": [
+    {
+      "file": "tmp/poster-workspaces/ExGen3/sections/mega/sources/cutouts/pokemon_380_artwork_10062_mega_latias.png",
+      "sha256": "73d1e516779d7106f2c39c8cdfbe0d74b83127a296f6f5927b9432673dc83787",
+      "dimensions": [
+        475,
+        475
+      ],
+      "expected_sha256": "73d1e516779d7106f2c39c8cdfbe0d74b83127a296f6f5927b9432673dc83787",
+      "matches_metadata": true,
+      "pokemon_id": 380,
+      "official_artwork_id": 10062,
+      "identity": "Mega Latias",
+      "anatomy_verdict": "pass",
+      "scene_integration_verdict": "uncertain",
+      "verdict": "uncertain",
+      "findings": [
+        "The gold visible eye with dark slit, narrow muzzle, purple forehead plate and paired pronged head extensions remain identifiable after learned upscale.",
+        "Both broad purple wing/arm forms, white claw groups, hollow triangular marking on the left appendage, folded lower body/legs and rear split fin silhouette match the exact source; no new eye-like mark or missing defining appendage is visible.",
+        "All extremities remain inside r3c1 and no grass cuts a body outline. Hovering pose is plausible, but no localized cast shadow can be assigned to this figure; its height relative to the meadow is visually weak. Scene-depth acceptance is withheld."
+      ],
+      "source_actually_viewed": true,
+      "cell": "r3c1",
+      "physical_crop_file": "tmp/identity-lock-trials/audit-exgen3-mega-identity-lock-260751036/review/identity-lock-300dpi-de_cards/card_r3_c1.png",
+      "physical_crop_sha256": "8df4924a99cbd0263a897733a7babf1be97091242a80cd088e27700da5afd081",
+      "physical_crop_actually_viewed": true,
+      "subject_region_master_pixel_match": true
+    },
+    {
+      "file": "tmp/poster-workspaces/ExGen3/sections/mega/sources/cutouts/pokemon_719_artwork_10075_mega_diancie.png",
+      "sha256": "96abacb8a7430bf4d242c9ee694c937eb86aa3e1f8154ab0755e4e615868d48e",
+      "dimensions": [
+        475,
+        475
+      ],
+      "expected_sha256": "96abacb8a7430bf4d242c9ee694c937eb86aa3e1f8154ab0755e4e615868d48e",
+      "matches_metadata": true,
+      "pokemon_id": 719,
+      "official_artwork_id": 10075,
+      "identity": "Mega Diancie",
+      "anatomy_verdict": "pass",
+      "scene_integration_verdict": "uncertain",
+      "verdict": "uncertain",
+      "findings": [
+        "Large faceted pink crown, side crown spikes, both orange/red eyes, central yellow facial mark, dark face and pink chest crystal are retained.",
+        "Both slim outstretched arms and small finger tips, scalloped white upper skirt, two long white veil streamers, layered pink faceted lower crystals and the detached diamond chains remain represented. The upscaled hands are small but their source-like tips remain separable; no clear invented limb is observed.",
+        "The full veil and diamond chains are contained in r3c2 with clean backdrop boundaries. Hovering is consistent with source pose, but the broad uniform meadow shadow band does not supply a clear figure-specific shadow/height cue; integration remains uncertain."
+      ],
+      "source_actually_viewed": true,
+      "cell": "r3c2",
+      "physical_crop_file": "tmp/identity-lock-trials/audit-exgen3-mega-identity-lock-260751036/review/identity-lock-300dpi-de_cards/card_r3_c2.png",
+      "physical_crop_sha256": "5595b80156c25d1980ae330a30aba229f6e629737c762ec4e562f522909edf03",
+      "physical_crop_actually_viewed": true,
+      "subject_region_master_pixel_match": true
+    },
+    {
+      "file": "tmp/poster-workspaces/ExGen3/sections/mega/sources/cutouts/pokemon_448_artwork_10059_mega_lucario.png",
+      "sha256": "d51cd3b0051ffc2fe17b14c423c883831a8723b0da904bbc1f51367d15a6e85c",
+      "dimensions": [
+        475,
+        475
+      ],
+      "expected_sha256": "d51cd3b0051ffc2fe17b14c423c883831a8723b0da904bbc1f51367d15a6e85c",
+      "matches_metadata": true,
+      "pokemon_id": 448,
+      "official_artwork_id": 10059,
+      "identity": "Mega Lucario",
+      "anatomy_verdict": "pass",
+      "scene_integration_verdict": "reject",
+      "verdict": "reject",
+      "findings": [
+        "Visible orange eye, dark muzzle, both long blue ears with dark inner portions and the swept dark/red head-appendage grouping match the source.",
+        "The central chest spike and both small upper chest/shoulder spikes are present after upscale. Yellow collar and lower torso tufts, both arms, white wrist/forearm spikes, blue/gray leg panels, tan rear tuft and both red feet preserve their source arrangement.",
+        "Both feet retain their source-like toe separations and white ankle/foot spikes. This trial does not reproduce the earlier missing-chest-spike/deformed-foot failure.",
+        "Despite intact anatomy, both soles sit as crisp cutout edges on effectively uniform dark-green ground; no local contact shadow or figure-cast shadow anchors the stance. The foreground blade below the right foot does not contact it or supply grounding. This is a scene-integration rejection, not an anatomy rejection."
+      ],
+      "source_actually_viewed": true,
+      "cell": "r3c3",
+      "physical_crop_file": "tmp/identity-lock-trials/audit-exgen3-mega-identity-lock-260751036/review/identity-lock-300dpi-de_cards/card_r3_c3.png",
+      "physical_crop_sha256": "6109c7e7516c4f0d4d16e24e50a7c61fedad8e9d32e45ee13dd9060434b91416",
+      "physical_crop_actually_viewed": true,
+      "subject_region_master_pixel_match": true
+    }
+  ],
+  "physical_cards": [
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-identity-lock-260751036/review/identity-lock-300dpi-de_cards/card_r1_c1.png",
+      "sha256": "956687b3a29ad5e0cb86c426264c6c34c9ed619696005a8a78f16616dd6b045e",
+      "dimensions": [
+        750,
+        1050
+      ],
+      "cell": "r1c1",
+      "master_rectangle": [
+        0,
+        0,
+        750,
+        1050
+      ],
+      "matches_preview_pixels": true,
+      "actually_viewed": true,
+      "observations": "Upper-left sun rays and pastel sky: continuous, no unwanted shapes or text."
+    },
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-identity-lock-260751036/review/identity-lock-300dpi-de_cards/card_r1_c2.png",
+      "sha256": "089036a6dc9f8093c4d8ab5ffcedf6a4960294fa6b8b62876b1e18b15f469f07",
+      "dimensions": [
+        750,
+        1050
+      ],
+      "cell": "r1c2",
+      "master_rectangle": [
+        809,
+        0,
+        1559,
+        1050
+      ],
+      "matches_preview_pixels": true,
+      "actually_viewed": true,
+      "observations": "Centered title fits entirely inside card; broad clear sky."
+    },
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-identity-lock-260751036/review/identity-lock-300dpi-de_cards/card_r1_c3.png",
+      "sha256": "d0158654498719b46904d24eb1d1099960320e19ce816d6f2a61c02a31edfe20",
+      "dimensions": [
+        750,
+        1050
+      ],
+      "cell": "r1c3",
+      "master_rectangle": [
+        1618,
+        0,
+        2368,
+        1050
+      ],
+      "matches_preview_pixels": true,
+      "actually_viewed": true,
+      "observations": "Upper-right pastel sky: no discontinuity or unwanted figure."
+    },
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-identity-lock-260751036/review/identity-lock-300dpi-de_cards/card_r2_c1.png",
+      "sha256": "a6b51fb006595643a824c798842b68d4298892ed87742889581d185161404876",
+      "dimensions": [
+        750,
+        1050
+      ],
+      "cell": "r2c1",
+      "master_rectangle": [
+        0,
+        1109,
+        750,
+        2159
+      ],
+      "matches_preview_pixels": true,
+      "actually_viewed": true,
+      "observations": "Mountain/tree depth is coherent above, but lower-right transition contains faint overlapping trunk/vegetation contours and transparent-looking terrain linework."
+    },
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-identity-lock-260751036/review/identity-lock-300dpi-de_cards/card_r2_c2.png",
+      "sha256": "fcf26eb7ef87e164f64430daf810dd6ea4ba989ca41f683cf7d872b5ae154711",
+      "dimensions": [
+        750,
+        1050
+      ],
+      "cell": "r2c2",
+      "master_rectangle": [
+        809,
+        1109,
+        1559,
+        2159
+      ],
+      "matches_preview_pixels": true,
+      "actually_viewed": true,
+      "observations": "Localized information block is contained and legible. Faint overlapping contour arcs remain visible in the valley below it."
+    },
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-identity-lock-260751036/review/identity-lock-300dpi-de_cards/card_r2_c3.png",
+      "sha256": "b28e718657537686a1321f3e01a6113a041d0f1975f50b20c16681c66f6bb7d2",
+      "dimensions": [
+        750,
+        1050
+      ],
+      "cell": "r2c3",
+      "master_rectangle": [
+        1618,
+        1109,
+        2368,
+        2159
+      ],
+      "matches_preview_pixels": true,
+      "actually_viewed": true,
+      "observations": "Bottom transition contains translucent/doubled stone-wall and lower-trunk contours, unlike the clean opaque mountain/tree rendering above."
+    },
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-identity-lock-260751036/review/identity-lock-300dpi-de_cards/card_r3_c1.png",
+      "sha256": "8df4924a99cbd0263a897733a7babf1be97091242a80cd088e27700da5afd081",
+      "dimensions": [
+        750,
+        1050
+      ],
+      "cell": "r3c1",
+      "master_rectangle": [
+        0,
+        2218,
+        750,
+        3268
+      ],
+      "matches_preview_pixels": true,
+      "subject_region_matches_master_pixels": true,
+      "actually_viewed": true,
+      "observations": "Entire Mega Latias visible; no cropped anatomy; missing clear individual ground-shadow cue."
+    },
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-identity-lock-260751036/review/identity-lock-300dpi-de_cards/card_r3_c2.png",
+      "sha256": "5595b80156c25d1980ae330a30aba229f6e629737c762ec4e562f522909edf03",
+      "dimensions": [
+        750,
+        1050
+      ],
+      "cell": "r3c2",
+      "master_rectangle": [
+        809,
+        2218,
+        1559,
+        3268
+      ],
+      "matches_preview_pixels": true,
+      "subject_region_matches_master_pixels": true,
+      "actually_viewed": true,
+      "observations": "Entire Mega Diancie and diamond chains visible; no cropped anatomy; missing clear individual ground-shadow cue."
+    },
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-identity-lock-260751036/review/identity-lock-300dpi-de_cards/card_r3_c3.png",
+      "sha256": "6109c7e7516c4f0d4d16e24e50a7c61fedad8e9d32e45ee13dd9060434b91416",
+      "dimensions": [
+        750,
+        1050
+      ],
+      "cell": "r3c3",
+      "master_rectangle": [
+        1618,
+        2218,
+        2368,
+        3268
+      ],
+      "matches_preview_pixels": true,
+      "subject_region_matches_master_pixels": true,
+      "actually_viewed": true,
+      "observations": "Entire Mega Lucario visible; intact spikes/feet but inadequate sole contact/cast shadow; branding does not overlap figure."
+    }
+  ],
+  "technical_checks": "All original-source byte hashes match run metadata. Raw and model-upscaled master byte hashes match metadata. All nine 750x1050 cards match exact physical geometry crops of the localized preview. The top 950px of every bottom card, including each entire figure, matches the unchanged candidate master pixels.",
+  "limits": "No final PDF reviewed; localized dates/counts were not researched. No generation, configuration, code, canonical artwork, provenance or promotion changes were performed.",
+  "recommended_acceptance_conditions": [
+    "Retain the verified figure anatomy, particularly Lucario chest/shoulder and foot details, through any follow-up learned upscale.",
+    "Eliminate ghosted/transparent tree and masonry contours in the transition region.",
+    "Give the standing figure convincing sole contact and a coherent cast/contact shadow; improve readable height cues for hovering figures without crossing their silhouettes.",
+    "Reinspect the adjusted raw, upscaled master and all nine physical crops; this report does not approve a later candidate."
+  ]
+}

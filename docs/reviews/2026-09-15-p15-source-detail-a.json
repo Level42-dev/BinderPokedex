@@ -1,0 +1,64 @@
+{
+  "review_id": "P15",
+  "scope": "ExGen2/sections/mega",
+  "variant": "p15-source-detail-20260915-a",
+  "reviewed_on": "2026-09-15",
+  "agent_visual_decision": "reject_oneshot",
+  "independent_visual_decision": "reject_oneshot",
+  "human_approval": "not_requested_rejected_candidate",
+  "raw_sha256": "1876b0544ebf4de5c4d454a6e06c5a81f5f512a14f587f374605079d575bc13f",
+  "master_sha256": "770d76de13f324fdcfee8e3c887f6bf0ae9bc2a158af454c0a12f4d47ddffc76",
+  "preview_sha256": "e094694cf7632d13ea5b2c703801417c5a12c7c6563b76b0f637bb7c506ba173",
+  "creation_evidence": "tmp/oneshot-trials/p15-source-detail-20260915-a/review/evidence.json",
+  "immutable_state": "tmp/oneshot-trials/p15-source-detail-20260915-a/experiment.json",
+  "manifest_at_render": {
+    "path": "docs/reviews/2026-09-15-p15-source-detail-a-manifest.yaml",
+    "sha256": "215d58a9c068a2febdcc92c547770fc5446c8fe53fc4f52037b72b86c14c0cc0"
+  },
+  "source_brief": "docs/reviews/2026-09-15-p15-p40-source-briefs.json",
+  "viewed_by_controller_and_independent_reviewer": {
+    "raw": true,
+    "full_master": true,
+    "german_preview": true,
+    "all_nine_actual_cards": true,
+    "three_exact_originals": true,
+    "four_prepared_references": true,
+    "complete_prompt": true
+  },
+  "findings": [
+    {
+      "severity": "blocking_identity",
+      "subject": "Mega-Mewtu X",
+      "card": "r3c1",
+      "detail": "Two distinct pink-violet tail tips/stems are visible behind the left shoulder, including a detached upper tip. The exact source has one continuous tail with one tip. An added red area around the blue eye is a secondary source drift."
+    },
+    {
+      "severity": "blocking_identity_and_source_brief",
+      "subject": "Mega-Latios",
+      "card": "r3c3",
+      "detail": "The source has one small white-outlined triangle near the wing root and a plain long upper wing. The output retains a small mark and adds a second large marked upper wing. The consumed source-trait description incorrectly located the marking on the long upper wing. Root and independent reviewer confirmed this by directly re-viewing the exact source, prepared reference and card."
+    },
+    {
+      "severity": "blocking_current_layout_contract",
+      "detail": "All three figures are larger/higher than the shared spatial reference and numeric prompt bounds. No image-specific size exception has been approved for P15. The physical card silhouettes are contained but several contours are close to edges; this is not a claim that intended size bounds passed."
+    },
+    {
+      "severity": "uncertain_not_established_defect",
+      "subject": "Mega-Rayquaza",
+      "card": "r3c2",
+      "detail": "One small clawed arm is visible. The second claw contour is uncertain amid the curled body and ribbons; neither a missing limb nor an extra one is asserted."
+    }
+  ],
+  "technical_verification": {
+    "canonical_verify_passed_before_manifest_revision": true,
+    "complete_returned_job_and_log": true,
+    "raw_dimensions": [1200, 1664],
+    "master_dimensions": [2368, 3268],
+    "nine_card_dimensions": [750, 1050],
+    "physical_crop_pixels_and_300_dpi_passed": true,
+    "installed_masters_unchanged": 42,
+    "prompt_seconds": 62.52
+  },
+  "next_step": "One bounded same-seed B with corrected source wording for Mewtwo and Latios only; preserve A and compare the actual canonical graph/reference hashes before submission.",
+  "promotion_or_pdf_zip_rebuild": false
+}

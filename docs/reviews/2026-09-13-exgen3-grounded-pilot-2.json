@@ -1,0 +1,487 @@
+{
+  "review_date": "2026-09-13",
+  "review_kind": "independent_actual_image_visual_review",
+  "candidate_root": "tmp/identity-lock-trials/audit-exgen3-mega-grounded-v4-soft-shadows-260751036",
+  "overall_verdict": "reject",
+  "approved_for_promotion": false,
+  "human_approval": false,
+  "summary": "The second candidate preserves all three visible source anatomies and their card containment. Its new shadows are visibly softer, but Diancie's pointed shadow geometry and straight notch remain, and Lucario's soles still look separated from a broad blurred ground patch. Latias's softened projection remains uncertain. No approval is inferred from the prompt change or technical audit.",
+  "review_boundary": {
+    "visual_verdict_based_on_actual_candidate_images": true,
+    "network_or_gpu_used": false,
+    "subagents_used": false,
+    "modified_only_this_report": true,
+    "prior_candidate_evidence_modified": false,
+    "private_connection_state_or_logs_read_or_quoted": false,
+    "physical_print_inspected": false
+  },
+  "coverage": {
+    "original_rgba_sources_directly_viewed": 3,
+    "raw_baseline_directly_viewed": true,
+    "raw_final_directly_viewed": true,
+    "complete_text_free_master_directly_viewed": true,
+    "complete_german_preview_directly_viewed": true,
+    "separate_native_physical_cards_directly_viewed": 9,
+    "all_required_direct_image_coverage_complete": true,
+    "display_detail": "All 16 image files were opened directly with view_image detail=original: three 475x475 RGBA originals, two 848x1168 raw images, the 2368x3268 master and localized preview, and nine separate 750x1050 cards. Large full-image overviews may be scaled by the display; every native card was separately viewed for detailed anatomy and integration, not via a contact sheet.",
+    "missing_evidence": []
+  },
+  "hash_method": "SHA-256 over complete file bytes independently read during this review. All six applicable source/baseline/final/master hashes match sidecar records. Each native card's RGB pixels were compared to its exact preview rectangle with PIL ImageChops.difference; all difference bounding boxes were null.",
+  "sources": [
+    {
+      "file": "tmp/poster-workspaces/ExGen3/sections/mega/sources/cutouts/pokemon_719_artwork_10075_mega_diancie.png",
+      "sha256": "96abacb8a7430bf4d242c9ee694c937eb86aa3e1f8154ab0755e4e615868d48e",
+      "dimensions": [
+        475,
+        475
+      ],
+      "mode": "RGBA",
+      "identity": {
+        "species_id": 719,
+        "artwork_id": 10075,
+        "form": "mega",
+        "name": "Mega Diancie",
+        "provider": "pokeapi_official_artwork"
+      },
+      "directly_viewed_native": true,
+      "matches_sidecar_file_sha256": true
+    },
+    {
+      "file": "tmp/poster-workspaces/ExGen3/sections/mega/sources/cutouts/pokemon_448_artwork_10059_mega_lucario.png",
+      "sha256": "d51cd3b0051ffc2fe17b14c423c883831a8723b0da904bbc1f51367d15a6e85c",
+      "dimensions": [
+        475,
+        475
+      ],
+      "mode": "RGBA",
+      "identity": {
+        "species_id": 448,
+        "artwork_id": 10059,
+        "form": "mega",
+        "name": "Mega Lucario",
+        "provider": "pokeapi_official_artwork"
+      },
+      "directly_viewed_native": true,
+      "matches_sidecar_file_sha256": true
+    },
+    {
+      "file": "tmp/poster-workspaces/ExGen3/sections/mega/sources/cutouts/pokemon_380_artwork_10062_mega_latias.png",
+      "sha256": "73d1e516779d7106f2c39c8cdfbe0d74b83127a296f6f5927b9432673dc83787",
+      "dimensions": [
+        475,
+        475
+      ],
+      "mode": "RGBA",
+      "identity": {
+        "species_id": 380,
+        "artwork_id": 10062,
+        "form": "mega",
+        "name": "Mega Latias",
+        "provider": "pokeapi_official_artwork"
+      },
+      "directly_viewed_native": true,
+      "matches_sidecar_file_sha256": true
+    }
+  ],
+  "candidate_files": [
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-grounded-v4-soft-shadows-260751036/retrieved/identity-lock-t8bkaqr_/output/exgen3__sections__mega_flux2_grounded_source_pixels_1mp_seed_260751036_baseline_00001_.png",
+      "sha256": "2251e0f23d06ac670e4858a335e6a68fed1cf4d2c4372986edb0b5795d7b0cff",
+      "dimensions": [
+        848,
+        1168
+      ],
+      "mode": "RGB",
+      "directly_viewed_image": true,
+      "matches_sidecar_file_sha256": true
+    },
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-grounded-v4-soft-shadows-260751036/retrieved/identity-lock-t8bkaqr_/output/exgen3__sections__mega_flux2_grounded_source_pixels_1mp_seed_260751036_final_00001_.png",
+      "sha256": "062d76ea930ff46a5bc83dffad240a360302be145740de3d1d1559bf46cb7a1c",
+      "dimensions": [
+        848,
+        1168
+      ],
+      "mode": "RGB",
+      "directly_viewed_image": true,
+      "matches_sidecar_file_sha256": true
+    },
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-grounded-v4-soft-shadows-260751036/review/identity-lock-300dpi-artwork.png",
+      "sha256": "a556ea3da2349b00f5973e3900fa23f125b200b261b1bf89fd31df2b4d857a6d",
+      "dimensions": [
+        2368,
+        3268
+      ],
+      "mode": "RGB",
+      "directly_viewed_image": true,
+      "matches_sidecar_file_sha256": true
+    },
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-grounded-v4-soft-shadows-260751036/review/identity-lock-300dpi-de.png",
+      "sha256": "95f1428bc9c926c95dd5ca61207598907abbdae6137d21cd0c9eb7c7009e5780",
+      "dimensions": [
+        2368,
+        3268
+      ],
+      "mode": "RGB",
+      "directly_viewed_image": true
+    },
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-grounded-v4-soft-shadows-260751036/review/identity-lock-300dpi-artwork.run.json",
+      "sha256": "344adab814f4ca46e6463e276b52ed69165965733fa1a57ea7a58c4adbce5e91",
+      "directly_viewed_image": false,
+      "inspection": "Read selected source/candidate hashes and actual raster geometry. Embedded technical verdicts were not treated as visual approval."
+    }
+  ],
+  "physical_layout": {
+    "name": "cumulative_physical_endpoints",
+    "generation_canvas_px": [
+      848,
+      1168
+    ],
+    "generation_column_spans_px": [
+      [
+        0,
+        269
+      ],
+      [
+        290,
+        558
+      ],
+      [
+        579,
+        848
+      ]
+    ],
+    "generation_row_spans_px": [
+      [
+        0,
+        375
+      ],
+      [
+        396,
+        772
+      ],
+      [
+        793,
+        1168
+      ]
+    ],
+    "output_canvas_px": [
+      2368,
+      3268
+    ],
+    "output_column_spans_px": [
+      [
+        0,
+        750
+      ],
+      [
+        809,
+        1559
+      ],
+      [
+        1618,
+        2368
+      ]
+    ],
+    "output_row_spans_px": [
+      [
+        0,
+        1050
+      ],
+      [
+        1109,
+        2159
+      ],
+      [
+        2218,
+        3268
+      ]
+    ],
+    "version": 2,
+    "rectangles_use_exclusive_right_and_bottom": true
+  },
+  "cards": [
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-grounded-v4-soft-shadows-260751036/review/identity-lock-300dpi-de_cards/card_r1_c1.png",
+      "sha256": "6b80fab1ff52783e02a70d5afa6b48178ad186738c7630a9f7051daf993479f2",
+      "dimensions": [
+        750,
+        1050
+      ],
+      "mode": "RGB",
+      "preview_rectangle": [
+        0,
+        0,
+        750,
+        1050
+      ],
+      "pixel_exact_preview_rectangle": true,
+      "directly_viewed_native": true,
+      "visual_verdict": "pass",
+      "observations": "Sun and soft rays occupy the upper-left sky. No unintended creature, clipping seam or text interference."
+    },
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-grounded-v4-soft-shadows-260751036/review/identity-lock-300dpi-de_cards/card_r1_c2.png",
+      "sha256": "ea62474a42249c9afd8e03b0fb7265d97b1f8c98d271120e0327db0164c2d8cd",
+      "dimensions": [
+        750,
+        1050
+      ],
+      "mode": "RGB",
+      "preview_rectangle": [
+        809,
+        0,
+        1559,
+        1050
+      ],
+      "pixel_exact_preview_rectangle": true,
+      "directly_viewed_native": true,
+      "visual_verdict": "pass",
+      "observations": "Mega-Pokémon ex title is clear and contained on its card. No figure intrudes."
+    },
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-grounded-v4-soft-shadows-260751036/review/identity-lock-300dpi-de_cards/card_r1_c3.png",
+      "sha256": "a98b0ea089f08b83c7ebb58981ed24486f7e015d8ecf594e4ffa8fb453f4be56",
+      "dimensions": [
+        750,
+        1050
+      ],
+      "mode": "RGB",
+      "preview_rectangle": [
+        1618,
+        0,
+        2368,
+        1050
+      ],
+      "pixel_exact_preview_rectangle": true,
+      "directly_viewed_native": true,
+      "visual_verdict": "pass",
+      "observations": "Blue sky and aurora arcs are continuous, with no extra creature or visible patch."
+    },
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-grounded-v4-soft-shadows-260751036/review/identity-lock-300dpi-de_cards/card_r2_c1.png",
+      "sha256": "41a52a6e2881a8287d02857e686a014f1d5485c62d524086778f25ee3dfbdee4",
+      "dimensions": [
+        750,
+        1050
+      ],
+      "mode": "RGB",
+      "preview_rectangle": [
+        0,
+        1109,
+        750,
+        2159
+      ],
+      "pixel_exact_preview_rectangle": true,
+      "directly_viewed_native": true,
+      "visual_verdict": "pass",
+      "observations": "Mountain and tree scenery reads continuously; no unintended creature or new terrain defect."
+    },
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-grounded-v4-soft-shadows-260751036/review/identity-lock-300dpi-de_cards/card_r2_c2.png",
+      "sha256": "7843d782bf525b81862dfe373312d0726b64a9d51251839e679723b690c5a701",
+      "dimensions": [
+        750,
+        1050
+      ],
+      "mode": "RGB",
+      "preview_rectangle": [
+        809,
+        1109,
+        1559,
+        2159
+      ],
+      "pixel_exact_preview_rectangle": true,
+      "directly_viewed_native": true,
+      "visual_verdict": "pass",
+      "observations": "Information panel is contained and readable. Faint mountain lines visible through its lower portion do not obscure the text. Factual currency of localized text was outside this visual review."
+    },
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-grounded-v4-soft-shadows-260751036/review/identity-lock-300dpi-de_cards/card_r2_c3.png",
+      "sha256": "f38c44a9fcc8e68445788fe1bdb254d56437c43e189234cfeec4183142861fae",
+      "dimensions": [
+        750,
+        1050
+      ],
+      "mode": "RGB",
+      "preview_rectangle": [
+        1618,
+        1109,
+        2368,
+        2159
+      ],
+      "pixel_exact_preview_rectangle": true,
+      "directly_viewed_native": true,
+      "visual_verdict": "pass",
+      "observations": "Mountain, trees and terrace are continuous; no unintended creature."
+    },
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-grounded-v4-soft-shadows-260751036/review/identity-lock-300dpi-de_cards/card_r3_c1.png",
+      "sha256": "648a235b18f691a884d59cf693f5fded9b91dca27d38e7e18655da7d25897f35",
+      "dimensions": [
+        750,
+        1050
+      ],
+      "mode": "RGB",
+      "preview_rectangle": [
+        0,
+        2218,
+        750,
+        3268
+      ],
+      "pixel_exact_preview_rectangle": true,
+      "directly_viewed_native": true,
+      "visual_verdict": "uncertain",
+      "observations": "Latias anatomy and containment pass. Shadow is softened, but still a compact, irregular pronged blob of uncertain relation to the source silhouette."
+    },
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-grounded-v4-soft-shadows-260751036/review/identity-lock-300dpi-de_cards/card_r3_c2.png",
+      "sha256": "f46acdb76b4c3bfe53fd05a06d999751a259b97e35ed8a6171f8c0eee8035e5b",
+      "dimensions": [
+        750,
+        1050
+      ],
+      "mode": "RGB",
+      "preview_rectangle": [
+        809,
+        2218,
+        1559,
+        3268
+      ],
+      "pixel_exact_preview_rectangle": true,
+      "directly_viewed_native": true,
+      "visual_verdict": "reject",
+      "observations": "Diancie anatomy and containment pass. Long triangular shadow points and an abrupt straight notch remain visible below the hovering figure, despite increased blur."
+    },
+    {
+      "file": "tmp/identity-lock-trials/audit-exgen3-mega-grounded-v4-soft-shadows-260751036/review/identity-lock-300dpi-de_cards/card_r3_c3.png",
+      "sha256": "3449dc3838c51a88c99813cab763df97973966bace6759834b48f47a2679ca91",
+      "dimensions": [
+        750,
+        1050
+      ],
+      "mode": "RGB",
+      "preview_rectangle": [
+        1618,
+        2218,
+        2368,
+        3268
+      ],
+      "pixel_exact_preview_rectangle": true,
+      "directly_viewed_native": true,
+      "visual_verdict": "reject",
+      "observations": "Lucario anatomy and containment pass. Thin sole contours remain distinct above a broad dark blurred patch with streaking; convincing foot-to-ground contact is missing. Footer is clear."
+    }
+  ],
+  "subjects": [
+    {
+      "name": "Mega Latias",
+      "card": "r3_c1",
+      "count": 1,
+      "identity_and_anatomy_verdict": "pass",
+      "anatomy": "Directly compared the original to raw and upscaled figure. Yellow eye, angular pale muzzle, purple face marking, long white neck and pale chest remain. Broad raised left wing/arm and rightward arm preserve their unequal source shapes, inset pale marking and white claws. Smaller curled arm shapes, jagged wing ends, long downward purple section and split rear silhouette remain separate and intact. No visible added or missing anatomy.",
+      "containment": "Entire silhouette and all wing/claw/rear tips remain inside r3_c1 with visible padding.",
+      "integration_verdict": "uncertain",
+      "integration": "The hovering gap is readable and the dark projection lies generally down/right, consistent with upper-left illumination. Its upper edge is visibly softer, but the dark core still has a lobed/pronged silhouette and a smeared tail of uncertain relation to Latias's form. Foreground blades occlude the shadow naturally; no definite blade depth reversal around the figure was seen. Softness alone does not establish a coherent projection.",
+      "location_card_px_approx": [
+        235,
+        825,
+        565,
+        985
+      ],
+      "location_raw_px_approx": [
+        84,
+        1088,
+        202,
+        1150
+      ],
+      "prior_issue_recheck": "Latias uncertainty remains unresolved after direct inspection of this candidate."
+    },
+    {
+      "name": "Mega Diancie",
+      "card": "r3_c2",
+      "count": 1,
+      "identity_and_anatomy_verdict": "pass",
+      "anatomy": "Directly compared source, raw final and native card. Faceted pink-white crown and flanking crown spikes, dark face with paired red eyes and small central pale detail, outstretched thin arms and hands all match the source. Pale scalloped upper dress, faceted pink lower skirt and central gem remain. Both long white veil sides are continuous. Outer, inner and central dangling diamond chains retain their separation and tips. No visibly new or missing hand, diamond chain or crown part.",
+      "containment": "Crown, hands, veil ends, all side diamonds and lowest central diamond remain fully inside r3_c2 with clear margins.",
+      "integration_verdict": "reject",
+      "integration": "The new dark projection is down/right of the suspended figure, but still has two conspicuous long triangular points directed back toward it. A nearly vertical pale slit/straight notch at the upper-right edge remains near card x590,y880-925. The lower body of the shadow is now diffuse and merges into grass, producing mismatched softness around a still polygonal form. The baseline has meadow shading here, but not this added dark projection. No coherent projection of the veil, skirt and crown is established.",
+      "location_card_px_approx": [
+        230,
+        835,
+        650,
+        1000
+      ],
+      "location_raw_px_approx": [
+        372,
+        1092,
+        523,
+        1150
+      ],
+      "blocking_findings": [
+        "D1"
+      ],
+      "prior_issue_recheck": "D1 persists. Blur increased, but the triangular points and straight notch remain visible in the raw final, master and native card."
+    },
+    {
+      "name": "Mega Lucario",
+      "card": "r3_c3",
+      "count": 1,
+      "identity_and_anatomy_verdict": "pass",
+      "anatomy": "Directly compared source, raw final and native card. Two tall ears, angular muzzle, visible orange eye and the dark flowing head appendages with red ends remain. The central chest spike and small shoulder spikes preserve their source foreshortening. Both arm spike sets and both foot spike sets remain distinct. Both red feet and toe divisions are preserved, with no extra or missing toe evident. Blue/dark leg markings, gold chest fur and tail, and red forearms preserve the original.",
+      "containment": "Ear tips, head appendages, arms/spikes, tail, legs, feet and toes fit inside r3_c3 with padding. Footer remains clear of the figure.",
+      "integration_verdict": "reject",
+      "integration": "Both soles retain thin lighter greenish parallel contours just above the dark ground patch. The patch extends broadly beneath and down/right of the feet and blurs into streaked foreground, rather than showing compact, convincing contact at each sole. The left-to-right continuous dark mass feels like a slab under the figure. Both feet remain anatomically intact, but their support on the meadow is visually unconvincing. Large foreground blades remain in front without a definite inconsistent crossing.",
+      "location_card_px_approx": [
+        170,
+        788,
+        555,
+        940
+      ],
+      "location_raw_px_approx": [
+        640,
+        1073,
+        778,
+        1131
+      ],
+      "blocking_findings": [
+        "L1"
+      ],
+      "prior_issue_recheck": "L1 persists: sole contours and the broad blurred patch remain visible at native card detail."
+    }
+  ],
+  "blocking_findings": [
+    {
+      "id": "D1",
+      "severity": "blocking",
+      "subject": "Mega Diancie",
+      "finding": "Persistent long triangular shadow points and straight notch below Diancie, now surrounded by more blur.",
+      "required_visual_outcome": "Continuous, plausible ground projection with coherent softness and no cutout-like points or clipping notch."
+    },
+    {
+      "id": "L1",
+      "severity": "blocking",
+      "subject": "Mega Lucario",
+      "finding": "Detached-looking narrow sole contours above a broad smeared dark ground patch.",
+      "required_visual_outcome": "Both soles visibly supported by the meadow, with compact contact darkening and a plausible body shadow."
+    }
+  ],
+  "scene_checks": {
+    "visible_subject_count": 3,
+    "unintended_creature_detected": false,
+    "source_card_containment": "pass",
+    "appendage_padding": "pass",
+    "clear_text_cells": true,
+    "panorama_terrain_continuity": "No separate new terrain discontinuity outside the shadow integration defects was identified across the complete master and all nine cards.",
+    "baseline_comparison": "Broad green meadow shading exists before the edit. The darker local projections below all three figures are genuinely new in the final and were reviewed separately from that pre-existing shading.",
+    "lighting": "Upper-left sun/rays establish the light direction. General down/right displacement is reasonable, but does not cure incoherent projection geometry or inadequate local foot support.",
+    "gray_patches": "No separate new gray patch was positively identified.",
+    "glows_and_ghosts": "No broad aura or duplicated figure silhouette was seen. The thin sole contours are documented as a specific contact defect.",
+    "foreground_depth": "No definite foreground element switching inconsistently around a restored figure was observed.",
+    "new_problem_scan": "No additional anatomy, unintended creature, text containment or landscape-seam blocker was detected. Added shadow blur remains visually muddy in the lower row and does not resolve the existing integration defects."
+  },
+  "decision": "Reject candidate 2 for promotion. Full direct-view coverage and exact crop equality are established; visible anatomy passes. D1 and L1 remain blocking, and Latias integration remains uncertain. No human approval is claimed."
+}

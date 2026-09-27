@@ -31,21 +31,37 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260762839
+    reference_mode: spatial_source_detail_joint
+    seed: 260763848
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
   scene:
     concept: the White Flare expansion
-    setting: The artwork contains a bright Unova-inspired valley of pale stone, white birch
-      woodland, distant clean city silhouettes without signs, and red-gold cloud fire across
-      the high horizon.
+    setting: The artwork contains a bright Unova-inspired valley of pale stone, white birch woodland,
+      distant clean city silhouettes without signs, and red-gold cloud fire across the high horizon.
     lighting: Radiant warm daylight blooms through white cloud from the upper left.
-    rendering: Use clean cel-painted linework, a pale restrained palette, controlled crimson-gold
-      accents, and luminous atmospheric depth.
+    rendering: Use clean cel-painted linework, a pale restrained palette, controlled crimson-gold accents,
+      and luminous atmospheric depth.
     ground_noun: pale grass
+  source_details:
+    pokeapi:official-artwork:498:
+      sha256: d7750c56dc5be8ae10a6c270c34a0c46dbf64f289f2eb5670cbe52a9fd41f275
+      traits: Match the exact orange Tepig source with its oval yellow snout, black shoulder and ear markings,
+        four short feet and thin curled tail ending in a dark puff. Preserve the happy piglet face and
+        source body proportions.
+    pokeapi:official-artwork:643:
+      sha256: da64fe6f0285ea0837a5fd06b150abee0eb5598c47050314ac1ece006d61c135
+      traits: 'Match the exact white Reshiram source: slender angular head profile, fine blue eye, tall
+        feathered crown, long layered neck feathers, broad feathered wings with distinct edge notches,
+        clawed limbs and large turbine tail. Keep its head and neck crisp rather than rounding them into
+        a swan.'
+    pokeapi:official-artwork:501:
+      sha256: 480904e99ed485ba3c8fb5866bac1a2acee76dd6dcee1a1ad3e2aac706576fc7
+      traits: Match the exact white-and-blue Oshawott source with its dark-blue ears, orange oval nose,
+        three clear dark cheek freckles on each side, blue arms and feet, and the yellow shell held on
+        its pale belly. Keep the freckles and shell visibly separate from the face and body.
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns
@@ -73,5 +89,3 @@ title_logo:
     de: logos/logo-de.png
     en: logos/logo-en.png
     fr: logos/logo-fr.png
-    es: logos/logo-es.png
-    it: logos/logo-it.png

@@ -23,8 +23,52 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from steps.base import BaseStep, PipelineContext
 from lib.tcgdex_client import TCGdexClient
+from lib.tcg_card_overrides import (
+    apply_tcg_card_overrides,
+    load_tcg_card_overrides,
+)
 
 logger = logging.getLogger(__name__)
+
+CURATED_LOGO_SOURCES_PATH = (
+    Path(__file__).resolve().parents[3]
+    / 'enrichments'
+    / 'tcg_set_logo_sources.json'
+)
+
+
+def load_curated_logo_sources(
+    path: Path = CURATED_LOGO_SOURCES_PATH,
+) -> Dict[str, Dict[str, str]]:
+    """Load reviewed, exact-language set-logo sources."""
+    payload = json.loads(path.read_text(encoding='utf-8'))
+    if payload.get('schema_version') != 1:
+        raise ValueError(f"Unsupported set-logo source schema: {path}")
+    sets = payload.get('sets')
+    if not isinstance(sets, dict):
+        raise ValueError(f"Set-logo sources must contain a sets mapping: {path}")
+
+    result = {}
+    for set_id, languages in sets.items():
+        if not isinstance(set_id, str) or set_id != set_id.casefold():
+            raise ValueError(f"Set-logo source key must be lowercase: {set_id!r}")
+        if not isinstance(languages, dict) or not languages:
+            raise ValueError(f"Set-logo source languages must be a mapping: {set_id}")
+        result[set_id] = {}
+        for language, source in languages.items():
+            if not isinstance(language, str) or language not in {
+                'de', 'en', 'fr', 'es', 'it', 'ja', 'ko',
+                'zh_hans', 'zh_hant',
+            }:
+                raise ValueError(
+                    f"Unsupported set-logo language {language!r}: {set_id}"
+                )
+            if not isinstance(source, str) or not source.startswith('https://'):
+                raise ValueError(
+                    f"Set-logo source must be an HTTPS URL: {set_id}/{language}"
+                )
+            result[set_id][language] = source
+    return result
 
 
 class EnrichTCGNamesMultilingualStep(BaseStep):
@@ -39,7 +83,17 @@ class EnrichTCGNamesMultilingualStep(BaseStep):
     """
     
     # Supported languages (matching i18n/languages.json)
-    LANGUAGES = ['de', 'en', 'fr', 'es', 'it', 'ja', 'ko', 'zh-Hans', 'zh-Hant']
+    LANGUAGES = [
+        'de',
+        'en',
+        'fr',
+        'es',
+        'it',
+        'ja',
+        'ko',
+        'zh_hans',
+        'zh_hant',
+    ]
     
     def execute(self, context: PipelineContext, params: Dict[str, Any]) -> PipelineContext:
         """
@@ -86,6 +140,15 @@ class EnrichTCGNamesMultilingualStep(BaseStep):
         data['set_names'] = set_names
         data['logo_urls'] = logo_urls
         data['available_languages'] = available_languages
+        overrides_path = (
+            Path(__file__).resolve().parents[3]
+            / 'enrichments'
+            / 'tcg_card_overrides.json'
+        )
+        data = apply_tcg_card_overrides(
+            data,
+            load_tcg_card_overrides(overrides_path),
+        )
         context.data['tcg_set_source'] = data
         
         return context
@@ -127,6 +190,15 @@ class EnrichTCGNamesMultilingualStep(BaseStep):
                 set_name = set_data.get('name', '')
                 logo_url = set_data.get('logo', '')
                 logger.info(f"     ✓ Got {len(cards)} cards in {api_lang}")
+
+                # Some TCGdex language endpoints expose set metadata before
+                # any localized card records exist.  Such placeholders must
+                # not make an empty localized PDF look like a released set.
+                if not cards:
+                    logger.warning(
+                        f"⚠️  No card data for {api_lang}, skipping"
+                    )
+                    continue
                 
                 # Track this language as available
                 available_languages.append(lang)
@@ -136,10 +208,14 @@ class EnrichTCGNamesMultilingualStep(BaseStep):
                 if set_name:
                     set_names[storage_lang] = set_name
                 if logo_url:
-                    # Ensure logo URL has .png extension
-                    if not logo_url.endswith('.png'):
-                        logo_url += '.png'
-                    logo_urls[storage_lang] = logo_url
+                    resolved_logo_url = self._resolve_logo_url(logo_url)
+                    if resolved_logo_url:
+                        logo_urls[storage_lang] = resolved_logo_url
+                    else:
+                        logger.warning(
+                            "   ✗ Skipped %s logo: no supported asset exists",
+                            storage_lang,
+                        )
                 
                 # Index cards by localId
                 for card in cards:
@@ -161,7 +237,7 @@ class EnrichTCGNamesMultilingualStep(BaseStep):
         elapsed = time.time() - start_time
         logger.info(f"✅ Fetched all languages in {elapsed:.1f}s ({len(self.LANGUAGES)} API calls)")
         
-        # If no logo URLs were found, check for local fallback logo
+        # If no logo URLs were found, check for a language-neutral local logo.
         if not logo_urls:
             local_logo = self._check_local_logo(set_id)
             if local_logo:
@@ -169,17 +245,27 @@ class EnrichTCGNamesMultilingualStep(BaseStep):
                 # Add local logo for all available languages
                 for lang in available_languages:
                     logo_urls[lang] = local_logo
-        # If we have logo URLs but not for all available languages, try to generate them
+        # If we have logo URLs but not for all available languages, probe only
+        # the matching-language paths.  Never label an English logo as German.
         elif len(logo_urls) < len(available_languages):
             logo_urls = self._generate_missing_logo_urls(logo_urls, available_languages)
+
+        # Reviewed official sources override incomplete or incorrect upstream
+        # metadata for their exact language only.
+        curated_sources = load_curated_logo_sources().get(set_id.casefold(), {})
+        for language, source in curated_sources.items():
+            if language in available_languages:
+                logo_urls[language] = source
         
         return names_by_card, set_names, logo_urls, available_languages
     
     def _generate_missing_logo_urls(self, logo_urls: Dict[str, str], 
                                      available_languages: List[str]) -> Dict[str, str]:
         """
-        Generate logo URLs for missing languages by replacing language code in existing URL.
-        Validates each URL with a HEAD request and falls back to English if unavailable.
+        Probe exact-language logo URLs by replacing the language path segment.
+
+        A failed probe remains absent.  Cross-language logo fallback is
+        forbidden because it produces linguistically incorrect products.
         
         For example, if we have 'it': 'https://assets.tcgdex.net/it/me/me02.5/logo.png',
         we can generate 'de': 'https://assets.tcgdex.net/de/me/me02.5/logo.png'.
@@ -194,52 +280,72 @@ class EnrichTCGNamesMultilingualStep(BaseStep):
         if not logo_urls:
             return logo_urls
         
-        # Take the first available logo URL as template
-        template_lang = list(logo_urls.keys())[0]
-        template_url = logo_urls[template_lang]
+        resolved_logo_urls = dict(logo_urls)
+
+        # Take the first available logo URL as a path template.
+        template_lang = list(resolved_logo_urls.keys())[0]
+        template_url = resolved_logo_urls[template_lang]
         
         logger.info(f"🔧 Generating missing logo URLs from template ({template_lang}): {template_url}")
         
-        # Try to find English URL as fallback (either existing or generated)
-        fallback_url = None
-        if 'en' in logo_urls:
-            fallback_url = logo_urls['en']
-        else:
-            # Generate English URL as potential fallback
-            fallback_url = template_url.replace(f'/{template_lang}/', '/en/')
-            # Validate English URL
-            if self._validate_url(fallback_url):
-                logger.info(f"   ℹ️  Using English as fallback: {fallback_url}")
-            else:
-                fallback_url = None  # English doesn't exist either
-        
         generated_count = 0
-        fallback_count = 0
         
         for lang in available_languages:
-            if lang not in logo_urls:
+            if lang not in resolved_logo_urls:
                 # Replace language code in URL (e.g., /it/ -> /de/)
                 generated_url = template_url.replace(f'/{template_lang}/', f'/{lang}/')
                 
-                # Validate URL with HEAD request
-                if self._validate_url(generated_url):
-                    logo_urls[lang] = generated_url
-                    logger.info(f"   ✓ Validated {lang}: {generated_url}")
+                # Resolve the actual upstream image extension and validate it.
+                resolved_url = self._resolve_logo_url(generated_url)
+                if resolved_url:
+                    resolved_logo_urls[lang] = resolved_url
+                    logger.info(f"   ✓ Validated {lang}: {resolved_url}")
                     generated_count += 1
-                elif fallback_url and lang != 'en':
-                    # Use English as fallback
-                    logo_urls[lang] = fallback_url
-                    logger.info(f"   → Fallback {lang}: {fallback_url} (404 for lang-specific URL)")
-                    fallback_count += 1
                 else:
                     logger.warning(f"   ✗ Skipped {lang}: URL not available (404)")
         
         if generated_count > 0:
             logger.info(f"✅ Generated {generated_count} logo URLs")
-        if fallback_count > 0:
-            logger.info(f"📎 Used English fallback for {fallback_count} languages")
         
-        return logo_urls
+        return resolved_logo_urls
+
+    def _resolve_logo_url(self, logo_url: str) -> str:
+        """Return the first existing supported representation of a logo URL.
+
+        TCGdex commonly reports extensionless logo URLs.  Older sets may only
+        expose WebP while newer assets also expose PNG, so callers must probe
+        both rather than manufacturing an unverified ``.png`` URL.
+        """
+        if not logo_url:
+            return ""
+
+        supported_extensions = ('.png', '.webp')
+        matched_extension = next(
+            (
+                extension
+                for extension in supported_extensions
+                if logo_url.casefold().endswith(extension)
+            ),
+            None,
+        )
+        if matched_extension:
+            base_url = logo_url[:-len(matched_extension)]
+            candidates = [logo_url]
+            candidates.extend(
+                f"{base_url}{extension}"
+                for extension in supported_extensions
+                if extension != matched_extension
+            )
+        else:
+            candidates = [
+                f"{logo_url}{extension}"
+                for extension in supported_extensions
+            ]
+
+        for candidate in candidates:
+            if self._validate_url(candidate):
+                return candidate
+        return ""
     
     def _check_local_logo(self, set_id: str) -> str:
         """
@@ -309,17 +415,27 @@ class EnrichTCGNamesMultilingualStep(BaseStep):
         for card in cards:
             enriched_card = card.copy()
             local_id = card.get('localId', '')
+            enriched_card['printed_number'] = card.get(
+                'printed_number',
+                local_id,
+            )
             
             if local_id in multilingual_names:
                 # Add all available language names
                 for lang, name in multilingual_names[local_id].items():
                     enriched_card[f'name_{lang}'] = name
+                enriched_card['available_languages'] = [
+                    lang
+                    for lang in self.LANGUAGES
+                    if lang in multilingual_names[local_id]
+                ]
                 cards_with_names += 1
             else:
-                # Fallback: use English name for all languages
+                # The master source is English. Do not present it as a native
+                # translation in languages where this card was not observed.
                 english_name = card.get('name', '')
-                for lang in ['de', 'en', 'fr', 'es', 'it', 'ja', 'ko', 'zh_hans', 'zh_hant']:
-                    enriched_card[f'name_{lang}'] = english_name
+                enriched_card['name_en'] = english_name
+                enriched_card['available_languages'] = ['en']
                 cards_missing_names += 1
                 logger.warning(f"⚠️  No multilingual names for card {local_id}")
             

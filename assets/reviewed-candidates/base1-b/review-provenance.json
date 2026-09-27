@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "kind": "review_archive_not_production_provenance",
+  "archived_on": "2026-09-22",
+  "scope": "Base1",
+  "review_status": "shown_text_free_scene_accepted",
+  "purpose": "Preserve exact previously shown artwork under the user Git-backup request; not technical promotion.",
+  "master": {
+    "file": "assets/reviewed-candidates/base1-b/artwork-300dpi.png",
+    "sha256": "d06f69eb6e010b2670987a2209d3aec50848ac694aaefec64dc70d342ce0d9b4"
+  },
+  "original_candidate": {
+    "file": "tmp/oneshot-trials/base1-source-detail-20260914-b/review/artwork-300dpi.png",
+    "sha256": "d06f69eb6e010b2670987a2209d3aec50848ac694aaefec64dc70d342ce0d9b4"
+  },
+  "original_review_report": {
+    "file": "docs/reviews/2026-09-14-base1-oneshot.json",
+    "sha256": "4f99a728a2912e07bca55d7676da42ca1fe80724a537eb3227d7cf06a9e84501"
+  },
+  "original_review_decision": {
+    "reviewer_kind": "human",
+    "review_date": "2026-09-14",
+    "source": "direct user message in this task",
+    "decision": "visual_candidate_accepted",
+    "candidate": "base1-source-detail-20260914-b",
+    "user_statement": "das sieht super aus!",
+    "accepted_master_sha256": "d06f69eb6e010b2670987a2209d3aec50848ac694aaefec64dc70d342ce0d9b4",
+    "related_raw_sha256": "f655c8a01f8b8f2d4a26b978a29db89ced62e01a5b3dc61d3d7a48eefd16134a",
+    "related_preview_sha256": "32333e3887f59882c06b97d79561f1f5450057982a54f5d0630fa4145716550c",
+    "review_extent": "User accepted the shown text-free overall candidate after the remaining small contour differences were disclosed. No separate human inspection of all nine card crops or acceptance of the German preview's existing English logo subtitle is claimed.",
+    "scope_limit": "This exact Base1 candidate only; independent of the earlier ExGen3-C decision and not a general waiver for source-identity or anatomy errors in other artwork.",
+    "user_review_gate_satisfied": true,
+    "canonical_integration_completed": false,
+    "production_promotion_completed": false,
+    "release_approval_granted": false
+  },
+  "reviewed_original_sources": [
+    {
+      "path": "tmp/poster-workspaces/Base1/sources/cutouts/pokemon_150_mewtwo.png",
+      "sha256": "b7c00037d7ba9fb5cebc2da42ca0da54c7b664f4d7b2348d60ade5c6dc9de256"
+    },
+    {
+      "path": "tmp/poster-workspaces/Base1/sources/cutouts/pokemon_001_bulbasaur.png",
+      "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a"
+    },
+    {
+      "path": "tmp/poster-workspaces/Base1/sources/cutouts/pokemon_004_charmander.png",
+      "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+    }
+  ],
+  "promoted": false,
+  "production_routing_enabled_by_archive": false,
+  "release_ready": false,
+  "limits": [
+    "No source images, title logos, raw outputs, worker logs or private renderer configuration archived.",
+    "No whole-image acceptance is inferred from a partial subject review.",
+    "Original generation pipeline/version and historical report remain unchanged.",
+    "This is not a complete immutable-render-job backup."
+  ]
+}

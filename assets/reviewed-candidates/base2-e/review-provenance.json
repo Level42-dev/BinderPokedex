@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "kind": "review_archive_not_production_provenance",
+  "archived_on": "2026-09-22",
+  "scope": "Base2",
+  "review_status": "partial_pikachu_and_local_grass_crossing_only",
+  "purpose": "Preserve exact previously shown artwork under the user Git-backup request; not technical promotion.",
+  "master": {
+    "file": "assets/reviewed-candidates/base2-e/artwork-300dpi.png",
+    "sha256": "70766e8307e73b36e0d5ff6be18f24c0df0efaae35cc7fb9355eb6948ee291aa"
+  },
+  "original_candidate": {
+    "file": "tmp/foreground-repair-trials/base2-contour-20260914-e/review/artwork-300dpi.png",
+    "sha256": "70766e8307e73b36e0d5ff6be18f24c0df0efaae35cc7fb9355eb6948ee291aa"
+  },
+  "original_review_report": {
+    "file": "docs/reviews/2026-09-14-base2-contour-repair.json",
+    "sha256": "6779e5130f41556fa08487c1a7335f70fc29fc9cbdba39bda8e9f15f71244940"
+  },
+  "original_review_decision": {
+    "reviewer_kind": "human",
+    "review_date": "2026-09-14",
+    "source": "direct user message in this task",
+    "decision": "visual_repair_candidate_accepted",
+    "candidate": "base2-contour-20260914-e",
+    "user_statement": "das sieht prima aus!",
+    "accepted_master_sha256": "70766e8307e73b36e0d5ff6be18f24c0df0efaae35cc7fb9355eb6948ee291aa",
+    "accepted_crop_sha256": "d92ab3abb30aaeaffed2d128891ef69cdff7b329ef82252b0c36c753117002b4",
+    "reviewed_source_sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+    "review_extent": "User accepted the shown Pikachu card of candidate E and its two foreground grass-blade crossings after the minor belly-blade contour irregularity was disclosed. The exact identity source was displayed alongside the card.",
+    "scope_limit": "Pikachu and this local repair only. Not acceptance of Relaxo, Evoli, the complete panorama, localization, PDFs, canonical promotion or release; not a blanket approval of repairs on other artwork.",
+    "user_review_gate_satisfied_for_local_repair": true,
+    "canonical_integration_completed": false,
+    "production_promotion_completed": false,
+    "release_approval_granted": false
+  },
+  "reviewed_original_sources": [
+    {
+      "file": "tmp/poster-workspaces/Base2/sources/cutouts/pokemon_025_pikachu.png",
+      "sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+      "role": "Exact identity source of the original one-shot; compared during repair review, not pasted again."
+    }
+  ],
+  "promoted": false,
+  "production_routing_enabled_by_archive": false,
+  "release_ready": false,
+  "limits": [
+    "No source images, title logos, raw outputs, worker logs or private renderer configuration archived.",
+    "No whole-image acceptance is inferred from a partial subject review.",
+    "Original generation pipeline/version and historical report remain unchanged.",
+    "This is not a complete immutable-render-job backup."
+  ],
+  "source_master_before_local_repair": {
+    "file": "assets/posters/Base2/poster-flux2-artwork.png",
+    "sha256": "9c0c166cc6bda2f8a8e07ba9affd486c19d9c017b54ed15b9bedba4568d5c45f"
+  }
+}

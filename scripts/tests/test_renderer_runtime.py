@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+import subprocess
 
 import pytest
 
@@ -106,7 +107,14 @@ def test_destroy_refuses_unmarked_directory(tmp_path: Path) -> None:
 
 def test_runtime_marker_is_not_a_tracked_machine_configuration() -> None:
     assert not (ROOT / RUNTIME_MARKER).exists()
-    assert not list(ROOT.rglob("*.safetensors"))
+    tracked_runtime_files = subprocess.run(
+        ["git", "ls-files", "--", RUNTIME_MARKER, "*.safetensors"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.splitlines()
+    assert tracked_runtime_files == []
 
 
 def test_local_launcher_has_no_machine_specific_default_path() -> None:

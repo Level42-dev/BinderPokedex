@@ -1,0 +1,1430 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-12",
+  "status": "audit_complete_exgen3_c_and_base1_b_user_accepted_not_promoted",
+  "release_artwork_approved": false,
+  "scope": {
+    "targets": 42,
+    "subject_instances": 125,
+    "physical_card_cells": 378
+  },
+  "method": "Independent bounded agent groups actually viewed each original source, full master/preview and every physical card. Root audited ExGen3 and independently verified all 42 current master hashes and 125 source hashes. ME05 and SV08 received a second independent source and crop review. This is anatomy/scene review, not proof of distribution rights or new human aesthetic approval.",
+  "verdict_counts": {
+    "targets": {
+      "reject": 41,
+      "pass": 1
+    },
+    "subject_instances": {
+      "reject": 86,
+      "pass": 22,
+      "uncertain": 17
+    }
+  },
+  "reports": [
+    {
+      "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+      "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+    },
+    {
+      "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+      "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+    },
+    {
+      "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+      "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+    },
+    {
+      "file": "docs/reviews/2026-09-12-panorama-audit-exgen3.json",
+      "sha256": "01e8031908bfb74e0a1d295cfef07eb7fb2e25bba27da8810ae5d068f6bc1d12"
+    },
+    {
+      "file": "docs/reviews/2026-09-12-panorama-audit-me05-sv08-second-review.json",
+      "sha256": "db6a8daae4b9a1cb29dab1585f430c6180d75443561e2c6bb7f17168ee4995d8"
+    }
+  ],
+  "targets": [
+    {
+      "asset_key": "Pokedex/sections/gen1",
+      "master_file": "assets/posters/Pokedex/sections/gen1/poster-flux2-artwork.png",
+      "master_sha256": "301976906809649aee6cbad5afa1226643321a7d40bbf6193c8e4305ed17ab21",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen1/sources/cutouts/pokemon_001_bulbasaur.png",
+          "source_sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen1/sources/cutouts/pokemon_004_charmander.png",
+          "source_sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen1/sources/cutouts/pokemon_007_squirtle.png",
+          "source_sha256": "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290",
+          "verdict": "pass"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "Pokedex/sections/gen2",
+      "master_file": "assets/posters/Pokedex/sections/gen2/poster-flux2-artwork.png",
+      "master_sha256": "120df09a5614c08d244841e26b827cff0fdbed82a72de5ba6985ad3c6614a487",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen2/sources/cutouts/pokemon_152_chikorita.png",
+          "source_sha256": "3ffc2eeee9139b0281ab5493b1a6d4b5c1329de5ddf5361f5ee3c93d12c05659",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen2/sources/cutouts/pokemon_155_cyndaquil.png",
+          "source_sha256": "9532b237ef088f8032024b95459303495e261eb2f7f024b79511522e551a9bcd",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen2/sources/cutouts/pokemon_158_totodile.png",
+          "source_sha256": "a0ce9f06497dc2a9a3d34174ff89e0ee1a0745ce8007cc89257e379d9be49525",
+          "verdict": "uncertain"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "Pokedex/sections/gen3",
+      "master_file": "assets/posters/Pokedex/sections/gen3/poster-flux2-artwork.png",
+      "master_sha256": "4e05fe23e97123fbcdf162396f0ab38bf8f35be7a165e0ea3b638b61892aba49",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen3/sources/cutouts/pokemon_252_treecko.png",
+          "source_sha256": "0e066d885e028d3c14a039ebf7b85b12ae2d5cca023d17bf16272f74fb4fae6c",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen3/sources/cutouts/pokemon_255_torchic.png",
+          "source_sha256": "d234db13f46ac30452288fee011df2857d93bac22f7d038d6b472ef14a651950",
+          "verdict": "pass"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen3/sources/cutouts/pokemon_258_mudkip.png",
+          "source_sha256": "89abf9aa5f800efe849acbee7914e98ba574399c2293298606e81ebe43fb5a8d",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "Pokedex/sections/gen4",
+      "master_file": "assets/posters/Pokedex/sections/gen4/poster-flux2-artwork.png",
+      "master_sha256": "1421252b2f09e23e1fc06260181769dbc9775c6bdc2f1422e23bd1309a79d61d",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen4/sources/cutouts/pokemon_387_turtwig.png",
+          "source_sha256": "34bdf93e84d8e1770074ead9c38b1659bcc937abfa20ddd8a6e53a283ed0e16d",
+          "verdict": "pass"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen4/sources/cutouts/pokemon_390_chimchar.png",
+          "source_sha256": "7ce75f77abcaff1451c67da6fc8de9b6828aacb1a222dd590825c5cab4b20140",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen4/sources/cutouts/pokemon_393_piplup.png",
+          "source_sha256": "84895daf63236a40d6061af37739908b5256876c96a4a34b9f354df5f1ec2ca0",
+          "verdict": "pass"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "Pokedex/sections/gen5",
+      "master_file": "assets/posters/Pokedex/sections/gen5/poster-flux2-artwork.png",
+      "master_sha256": "c21cc3dff19ea8b2186617ab39c0a623147130ec82ca25df6227eb7394e26652",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen5/sources/cutouts/pokemon_495_snivy.png",
+          "source_sha256": "e7ff61a0daed598a7676b262c56af766e88bcf91764658eeeae615f6f9937549",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen5/sources/cutouts/pokemon_498_tepig.png",
+          "source_sha256": "d7750c56dc5be8ae10a6c270c34a0c46dbf64f289f2eb5670cbe52a9fd41f275",
+          "verdict": "pass"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen5/sources/cutouts/pokemon_501_oshawott.png",
+          "source_sha256": "480904e99ed485ba3c8fb5866bac1a2acee76dd6dcee1a1ad3e2aac706576fc7",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "Pokedex/sections/gen6",
+      "master_file": "assets/posters/Pokedex/sections/gen6/poster-flux2-artwork.png",
+      "master_sha256": "588d433b0338783c87a14a4b48888b7b8288ff3e68fd89104b0d7396c199d0e6",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen6/sources/cutouts/pokemon_650_chespin.png",
+          "source_sha256": "565272048cd8eeb2b524d597da6805dbdff28c313bc5346181f1859041320ee7",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen6/sources/cutouts/pokemon_653_fennekin.png",
+          "source_sha256": "b638e094ee06adcec959aad2898ce93f8c5fda88feba9c9158d1f16c026c07dd",
+          "verdict": "uncertain"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen6/sources/cutouts/pokemon_656_froakie.png",
+          "source_sha256": "cbb47c38d234eb7dea4b1d90f8c97ec990f41b6e61f26e7efba90d80a3d1d632",
+          "verdict": "pass"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "Pokedex/sections/gen7",
+      "master_file": "assets/posters/Pokedex/sections/gen7/poster-flux2-artwork.png",
+      "master_sha256": "2cf724beabc3c2a21be30f4a287e239292b5e16e59a4f3444bb26f6ba8ae7201",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen7/sources/cutouts/pokemon_722_rowlet.png",
+          "source_sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen7/sources/cutouts/pokemon_725_litten.png",
+          "source_sha256": "02391ac457888baf123accfc5ce446fc75df4790b3b000865a21c0f21b622600",
+          "verdict": "pass"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen7/sources/cutouts/pokemon_728_popplio.png",
+          "source_sha256": "3bfa3104b894f212985122732497b17c78979c6bc9304bd7396e781677f2d7a3",
+          "verdict": "pass"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "Pokedex/sections/gen8",
+      "master_file": "assets/posters/Pokedex/sections/gen8/poster-flux2-artwork.png",
+      "master_sha256": "22cc4173999d2a59b49e039e400f2e188e7d7fd3eba218fc826c56d5a2b81c99",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen8/sources/cutouts/pokemon_810_grookey.png",
+          "source_sha256": "0a4b1c0662dd8e0ad7f00bf78c2f958b297bc25c70bbc7273d50b3d39d5de330",
+          "verdict": "uncertain"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen8/sources/cutouts/pokemon_813_scorbunny.png",
+          "source_sha256": "0099f4bb576966efc872c03c69616f954c8474d12608a2fd7e91304a9d271167",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen8/sources/cutouts/pokemon_816_sobble.png",
+          "source_sha256": "162c8c4c870624a42aa81f3859f29542d7d713bffd98bb4b4f7ab79ae9a881fb",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "Pokedex/sections/gen9",
+      "master_file": "assets/posters/Pokedex/sections/gen9/poster-flux2-artwork.png",
+      "master_sha256": "9b69d26e7fce0838f2769aaa78bb00f7c37dcb72ce67ca224be2150abbb93114",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen9/sources/cutouts/pokemon_906_sprigatito.png",
+          "source_sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen9/sources/cutouts/pokemon_909_fuecoco.png",
+          "source_sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b",
+          "verdict": "pass"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen9/sources/cutouts/pokemon_912_quaxly.png",
+          "source_sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "ExGen1/sections/normal",
+      "master_file": "assets/posters/ExGen1/sections/normal/poster-flux2-artwork.png",
+      "master_sha256": "80457937f2507257f9ff45a82e6826e567c86186f0de379b109374d249a860ea",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/ExGen1/sections/normal/sources/cutouts/pokemon_003_venusaur.png",
+          "source_sha256": "04897191b567f8e6d866e6aa6eef184b6a93f8d0ba9ddaa50b4592ef261edc3b",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ExGen1/sections/normal/sources/cutouts/pokemon_009_blastoise.png",
+          "source_sha256": "1bac4860feebcf5fb5cd27af8c9c4465773e948b68a7436dc65ec49618becd49",
+          "verdict": "pass"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ExGen1/sections/normal/sources/cutouts/pokemon_249_lugia.png",
+          "source_sha256": "f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "ExGen2/sections/normal",
+      "master_file": "assets/posters/ExGen2/sections/normal/poster-flux2-artwork.png",
+      "master_sha256": "f968cb0b1687c4853d554e3287be23f8f3cc0efeb66da74f5376121708235811",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/ExGen2/sections/normal/sources/cutouts/pokemon_150_mewtwo.png",
+          "source_sha256": "b7c00037d7ba9fb5cebc2da42ca0da54c7b664f4d7b2348d60ade5c6dc9de256",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ExGen2/sections/normal/sources/cutouts/pokemon_151_mew.png",
+          "source_sha256": "3e7b29103dae09d0f8e8ff889b1991bdf387a2c6328aacb93fc34e8962584e33",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ExGen2/sections/normal/sources/cutouts/pokemon_249_lugia.png",
+          "source_sha256": "f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "ExGen2/sections/mega",
+      "master_file": "assets/posters/ExGen2/sections/mega/poster-flux2-artwork.png",
+      "master_sha256": "51a3ceff402561ce6a156d8616e1a270ee302c22e04c1f11260794f6ce074fa0",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/ExGen2/sections/mega/sources/cutouts/pokemon_150_artwork_10043_mega_mewtwo_x.png",
+          "source_sha256": "5dd98bb485cf51eb4ede5189d28aeb9c6e426bd08d9abbc37187c02268b188d9",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ExGen2/sections/mega/sources/cutouts/pokemon_384_artwork_10079_mega_rayquaza.png",
+          "source_sha256": "28a9f35caa69df85cde05fcb5e7785d7581b30910b2cd6df508d35fca2a789f4",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ExGen2/sections/mega/sources/cutouts/pokemon_381_artwork_10063_mega_latios.png",
+          "source_sha256": "ea327ac2ac56cb1a90153bad84f66bd62d25f8c25093733ed1aef9a5411b8054",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "ExGen2/sections/primal",
+      "master_file": "assets/posters/ExGen2/sections/primal/poster-flux2-artwork.png",
+      "master_sha256": "74c828b35bbf41bd745c80b088179ac41aba9e560a2cfff824504f0c2c85b836",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/ExGen2/sections/primal/sources/cutouts/pokemon_382_artwork_10077_primal_kyogre.png",
+          "source_sha256": "226507487da40a44b8df44c4fd04ecc6398b8873e792dd2ce31ecfa7a8e3777b",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ExGen2/sections/primal/sources/cutouts/pokemon_383_artwork_10078_primal_groudon.png",
+          "source_sha256": "fd0a131143a3289cde178438f5ea0249ff62cacb6dbb6742c95544c7c42aad5a",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "Base1",
+      "master_file": "assets/posters/Base1/poster-flux2-artwork.png",
+      "master_sha256": "922c938e9c05f6d9fed6c23714cab0f4f4e8a31d05090c7f08fe4d94edbf96b7",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/Base1/sources/cutouts/pokemon_150_mewtwo.png",
+          "source_sha256": "b7c00037d7ba9fb5cebc2da42ca0da54c7b664f4d7b2348d60ade5c6dc9de256",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Base1/sources/cutouts/pokemon_001_bulbasaur.png",
+          "source_sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Base1/sources/cutouts/pokemon_004_charmander.png",
+          "source_sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "Base2",
+      "master_file": "assets/posters/Base2/poster-flux2-artwork.png",
+      "master_sha256": "9c0c166cc6bda2f8a8e07ba9affd486c19d9c017b54ed15b9bedba4568d5c45f",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/Base2/sources/cutouts/pokemon_025_pikachu.png",
+          "source_sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+          "verdict": "uncertain"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Base2/sources/cutouts/pokemon_143_snorlax.png",
+          "source_sha256": "5f1f27c4be078c17521492ac7970d95d92200fa17b8c9696ac8d6ee0e0f4cc45",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Base2/sources/cutouts/pokemon_133_eevee.png",
+          "source_sha256": "4a2657541b849e64f08f25c397cc2156f88eddd7163b86ced4c94050088f2bda",
+          "verdict": "uncertain"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "Base3",
+      "master_file": "assets/posters/Base3/poster-flux2-artwork.png",
+      "master_sha256": "aa861af2f9b212943db476be0fad91358f63f209f262b59e90c2f2a951ba3537",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/Base3/sources/cutouts/pokemon_141_kabutops.png",
+          "source_sha256": "d59c4a7435ada052c103fded3f49623e1c32858665c7f5135c6bbbe0f1de8527",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Base3/sources/cutouts/pokemon_131_lapras.png",
+          "source_sha256": "0dda58737b5c1d7db8e7b81ff61b41d0f23bc08ddbf166ca61c20d17d1d27113",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/Base3/sources/cutouts/pokemon_094_gengar.png",
+          "source_sha256": "cd83bb9a7cc3cb159394dc30dda48160965f5470a474d63c921c7eb4884f8d1d",
+          "verdict": "uncertain"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "SV01",
+      "master_file": "assets/posters/SV01/poster-flux2-artwork.png",
+      "master_sha256": "0c5b398a2b5bd52cc7e255d291e76dbfe840078a5931ddf9bf527db512509bfe",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/SV01/sources/cutouts/pokemon_906_sprigatito.png",
+          "source_sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV01/sources/cutouts/pokemon_909_fuecoco.png",
+          "source_sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b",
+          "verdict": "uncertain"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV01/sources/cutouts/pokemon_912_quaxly.png",
+          "source_sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f",
+          "verdict": "pass"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "SV02",
+      "master_file": "assets/posters/SV02/poster-flux2-artwork.png",
+      "master_sha256": "54aff4959b4c408246342318956805918bd8676d26518cc8d1f4cca8dc47ec6a",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/SV02/sources/cutouts/pokemon_906_sprigatito.png",
+          "source_sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV02/sources/cutouts/pokemon_909_fuecoco.png",
+          "source_sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV02/sources/cutouts/pokemon_912_quaxly.png",
+          "source_sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f",
+          "verdict": "uncertain"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "SV03",
+      "master_file": "assets/posters/SV03/poster-flux2-artwork.png",
+      "master_sha256": "96edafdfdbdf95e8873c9cc72c5e4c9f6fde2d7aeda1512802147b6123391770",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/SV03/sources/cutouts/pokemon_722_rowlet.png",
+          "source_sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV03/sources/cutouts/pokemon_004_charmander.png",
+          "source_sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV03/sources/cutouts/pokemon_656_froakie.png",
+          "source_sha256": "cbb47c38d234eb7dea4b1d90f8c97ec990f41b6e61f26e7efba90d80a3d1d632",
+          "verdict": "pass"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "SV03.5",
+      "master_file": "assets/posters/SV03.5/poster-flux2-artwork.png",
+      "master_sha256": "727efeda4772538dc294fe0e458600a371e8fef643cd75c8fc603a1ab126acd8",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/SV03.5/sources/cutouts/pokemon_001_bulbasaur.png",
+          "source_sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV03.5/sources/cutouts/pokemon_004_charmander.png",
+          "source_sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV03.5/sources/cutouts/pokemon_007_squirtle.png",
+          "source_sha256": "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290",
+          "verdict": "uncertain"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "SV04",
+      "master_file": "assets/posters/SV04/poster-flux2-artwork.png",
+      "master_sha256": "fbef96b80f577acaa02915ea6b789c447df4a5b28dcac369070ff711a413c30a",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/SV04/sources/cutouts/pokemon_909_fuecoco.png",
+          "source_sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV04/sources/cutouts/pokemon_484_palkia.png",
+          "source_sha256": "c364c56bf8921cdb2e26922307379bc1d8b2f61220f366da467e117be26f33c9",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV04/sources/cutouts/pokemon_150_mewtwo.png",
+          "source_sha256": "b7c00037d7ba9fb5cebc2da42ca0da54c7b664f4d7b2348d60ade5c6dc9de256",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "SV04.5",
+      "master_file": "assets/posters/SV04.5/poster-flux2-artwork.png",
+      "master_sha256": "05a519ec108167e8eec28f50410252c8be294d90100aedf99a7d215cb15d8c6b",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/SV04.5/sources/cutouts/pokemon_004_charmander.png",
+          "source_sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV04.5/sources/cutouts/pokemon_025_pikachu.png",
+          "source_sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+          "verdict": "uncertain"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV04.5/sources/cutouts/pokemon_131_lapras.png",
+          "source_sha256": "0dda58737b5c1d7db8e7b81ff61b41d0f23bc08ddbf166ca61c20d17d1d27113",
+          "verdict": "pass"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "SV05",
+      "master_file": "assets/posters/SV05/poster-flux2-artwork.png",
+      "master_sha256": "2e0deba9d4194f6b11c90fa7a067cf4eecd59c36a8fb57cf272f98b2674aa374",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/SV05/sources/cutouts/pokemon_387_turtwig.png",
+          "source_sha256": "34bdf93e84d8e1770074ead9c38b1659bcc937abfa20ddd8a6e53a283ed0e16d",
+          "verdict": "uncertain"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV05/sources/cutouts/pokemon_725_litten.png",
+          "source_sha256": "02391ac457888baf123accfc5ce446fc75df4790b3b000865a21c0f21b622600",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV05/sources/cutouts/pokemon_158_totodile.png",
+          "source_sha256": "a0ce9f06497dc2a9a3d34174ff89e0ee1a0745ce8007cc89257e379d9be49525",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "SV06",
+      "master_file": "assets/posters/SV06/poster-flux2-artwork.png",
+      "master_sha256": "a94d925d2e6d5a252f0c684c754f603284daaecbca5d0fa21f55f008f1755bcc",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/SV06/sources/cutouts/pokemon_810_grookey.png",
+          "source_sha256": "0a4b1c0662dd8e0ad7f00bf78c2f958b297bc25c70bbc7273d50b3d39d5de330",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV06/sources/cutouts/pokemon_390_chimchar.png",
+          "source_sha256": "7ce75f77abcaff1451c67da6fc8de9b6828aacb1a222dd590825c5cab4b20140",
+          "verdict": "uncertain"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV06/sources/cutouts/pokemon_656_froakie.png",
+          "source_sha256": "cbb47c38d234eb7dea4b1d90f8c97ec990f41b6e61f26e7efba90d80a3d1d632",
+          "verdict": "pass"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "SV06.5",
+      "master_file": "assets/posters/SV06.5/poster-flux2-artwork.png",
+      "master_sha256": "847ff1ca298cf6489b775573f73370cf6f562a48f545c3fdc3bec1e7fdfe60e3",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/SV06.5/sources/cutouts/pokemon_722_rowlet.png",
+          "source_sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV06.5/sources/cutouts/pokemon_717_yveltal.png",
+          "source_sha256": "154bd7f904c5db48ddce7cc7ff656f95cd110c7327bee28a895b11fddfcfa4a7",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV06.5/sources/cutouts/pokemon_649_genesect.png",
+          "source_sha256": "0d77f632c0d27b74998040266b493c817a3643e2257e106a0feaa5fe52002b5a",
+          "verdict": "uncertain"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "SV07",
+      "master_file": "assets/posters/SV07/poster-flux2-artwork.png",
+      "master_sha256": "876c1c23d1bd31ee832c419845e2f0469b069e0e596e7171b438246c56a4c8ef",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_001_bulbasaur.png",
+          "source_sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_007_squirtle.png",
+          "source_sha256": "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_813_scorbunny.png",
+          "source_sha256": "0099f4bb576966efc872c03c69616f954c8474d12608a2fd7e91304a9d271167",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "SV08",
+      "master_file": "assets/posters/SV08/poster-flux2-artwork.png",
+      "master_sha256": "d931776dc062cc9f9db4b632fab658ce678ad6fe2afcc73d33e363f1e51fe7f8",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/SV08/sources/cutouts/pokemon_250_ho_oh.png",
+          "source_sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV08/sources/cutouts/pokemon_909_fuecoco.png",
+          "source_sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b",
+          "verdict": "pass"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV08/sources/cutouts/pokemon_025_pikachu.png",
+          "source_sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+          "verdict": "uncertain"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        },
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-me05-sv08-second-review.json",
+          "sha256": "db6a8daae4b9a1cb29dab1585f430c6180d75443561e2c6bb7f17168ee4995d8"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "SV08.5",
+      "master_file": "assets/posters/SV08.5/poster-flux2-artwork.png",
+      "master_sha256": "0fa96a8cf36e05d50bf667354127603aa0a057afb710c4743fe9676db4cd74a9",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/SV08.5/sources/cutouts/pokemon_025_pikachu.png",
+          "source_sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+          "verdict": "pass"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV08.5/sources/cutouts/pokemon_383_groudon.png",
+          "source_sha256": "0207895137e94107b5efbf9054d3c94f2ae16374f9cd07d3729fb5e86dd271ac",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV08.5/sources/cutouts/pokemon_249_lugia.png",
+          "source_sha256": "f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "SV09",
+      "master_file": "assets/posters/SV09/poster-flux2-artwork.png",
+      "master_sha256": "fea5eaa24c1d7d1f584b9beeef7064a42e0fb56b6e4c74090080c743330059bf",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/SV09/sources/cutouts/pokemon_906_sprigatito.png",
+          "source_sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV09/sources/cutouts/pokemon_255_torchic.png",
+          "source_sha256": "d234db13f46ac30452288fee011df2857d93bac22f7d038d6b472ef14a651950",
+          "verdict": "uncertain"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV09/sources/cutouts/pokemon_643_reshiram.png",
+          "source_sha256": "da64fe6f0285ea0837a5fd06b150abee0eb5598c47050314ac1ece006d61c135",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "SV10",
+      "master_file": "assets/posters/SV10/poster-flux2-artwork.png",
+      "master_sha256": "d58e13869502dc2e399d9acec2023ae25fd7cf0b10d25d7d6f83d7f1b0a60d18",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/SV10/sources/cutouts/pokemon_155_cyndaquil.png",
+          "source_sha256": "9532b237ef088f8032024b95459303495e261eb2f7f024b79511522e551a9bcd",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV10/sources/cutouts/pokemon_250_ho_oh.png",
+          "source_sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV10/sources/cutouts/pokemon_255_torchic.png",
+          "source_sha256": "d234db13f46ac30452288fee011df2857d93bac22f7d038d6b472ef14a651950",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "SV10.5B",
+      "master_file": "assets/posters/SV10.5B/poster-flux2-artwork.png",
+      "master_sha256": "802d5dec3ae46e0b9d0ba953d475fa61cc77e7f6a8eb8ea258f7d34b1a9f003b",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/SV10.5B/sources/cutouts/pokemon_495_snivy.png",
+          "source_sha256": "e7ff61a0daed598a7676b262c56af766e88bcf91764658eeeae615f6f9937549",
+          "verdict": "pass"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV10.5B/sources/cutouts/pokemon_646_kyurem.png",
+          "source_sha256": "d67df985a583dc711c2d2f753f516c56e33e4717c113f4b27fcb998c8f33f38b",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV10.5B/sources/cutouts/pokemon_644_zekrom.png",
+          "source_sha256": "3a621c1df54ce8e73a144c58b5cd4d20fa309009c41731852f85445068829fcc",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "SV10.5W",
+      "master_file": "assets/posters/SV10.5W/poster-flux2-artwork.png",
+      "master_sha256": "da524b22b59dc76537adbf19b66e692f276cb0ebd5b0af7044b5f4c0783c2e0f",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/SV10.5W/sources/cutouts/pokemon_498_tepig.png",
+          "source_sha256": "d7750c56dc5be8ae10a6c270c34a0c46dbf64f289f2eb5670cbe52a9fd41f275",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV10.5W/sources/cutouts/pokemon_643_reshiram.png",
+          "source_sha256": "da64fe6f0285ea0837a5fd06b150abee0eb5598c47050314ac1ece006d61c135",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SV10.5W/sources/cutouts/pokemon_501_oshawott.png",
+          "source_sha256": "480904e99ed485ba3c8fb5866bac1a2acee76dd6dcee1a1ad3e2aac706576fc7",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "SVP",
+      "master_file": "assets/posters/SVP/poster-flux2-artwork.png",
+      "master_sha256": "6527600191306285021b3ae373b915e51568dcf15e4349418864e44866e85426",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/SVP/sources/cutouts/pokemon_906_sprigatito.png",
+          "source_sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SVP/sources/cutouts/pokemon_909_fuecoco.png",
+          "source_sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/SVP/sources/cutouts/pokemon_912_quaxly.png",
+          "source_sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "ME01",
+      "master_file": "assets/posters/ME01/poster-flux2-artwork.png",
+      "master_sha256": "d189aad3bd442ddc559f341699b4c8a2661a3aa279b29f73960a69280afbc93b",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/ME01/sources/cutouts/pokemon_001_bulbasaur.png",
+          "source_sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ME01/sources/cutouts/pokemon_152_chikorita.png",
+          "source_sha256": "3ffc2eeee9139b0281ab5493b1a6d4b5c1329de5ddf5361f5ee3c93d12c05659",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ME01/sources/cutouts/pokemon_251_celebi.png",
+          "source_sha256": "7596d91f88dfdb24bac29ad2ff37ec9652ae0aa5de9e8dab04fb0ac53ed697f1",
+          "verdict": "uncertain"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "ME02",
+      "master_file": "assets/posters/ME02/poster-flux2-artwork.png",
+      "master_sha256": "f20acc0f58cc0f21ed7c81567d15ecb34afe5f45c5bfcc3f649bf1e83d8cf28a",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/ME02/sources/cutouts/pokemon_649_genesect.png",
+          "source_sha256": "0d77f632c0d27b74998040266b493c817a3643e2257e106a0feaa5fe52002b5a",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ME02/sources/cutouts/pokemon_004_charmander.png",
+          "source_sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ME02/sources/cutouts/pokemon_643_reshiram.png",
+          "source_sha256": "da64fe6f0285ea0837a5fd06b150abee0eb5598c47050314ac1ece006d61c135",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "ME02.5",
+      "master_file": "assets/posters/ME02.5/poster-flux2-artwork.png",
+      "master_sha256": "e2f54fb50dca25a95fb660419c307d9126b2064d18dc7544b8a90d8d4815dd69",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/ME02.5/sources/cutouts/pokemon_152_chikorita.png",
+          "source_sha256": "3ffc2eeee9139b0281ab5493b1a6d4b5c1329de5ddf5361f5ee3c93d12c05659",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ME02.5/sources/cutouts/pokemon_004_charmander.png",
+          "source_sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ME02.5/sources/cutouts/pokemon_250_ho_oh.png",
+          "source_sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "ME03",
+      "master_file": "assets/posters/ME03/poster-flux2-artwork.png",
+      "master_sha256": "f168f308c04d3cfd617d49378ae74ebc3bb5ad9ccb6fb6fbc8e1f01dcd1a065f",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/ME03/sources/cutouts/pokemon_495_snivy.png",
+          "source_sha256": "e7ff61a0daed598a7676b262c56af766e88bcf91764658eeeae615f6f9937549",
+          "verdict": "pass"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ME03/sources/cutouts/pokemon_722_rowlet.png",
+          "source_sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36",
+          "verdict": "pass"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ME03/sources/cutouts/pokemon_718_artwork_10301_mega_zygarde.png",
+          "source_sha256": "33261872ff2adb38b60f19d6f18a34681555e4243ff4c2ca5f367e9ddd976b55",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "ME04",
+      "master_file": "assets/posters/ME04/poster-flux2-artwork.png",
+      "master_sha256": "4206d994cf6cf049fed81817b4d54106e5744999032cf6e33215792ff054e434",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/ME04/sources/cutouts/pokemon_650_chespin.png",
+          "source_sha256": "565272048cd8eeb2b524d597da6805dbdff28c313bc5346181f1859041320ee7",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ME04/sources/cutouts/pokemon_250_ho_oh.png",
+          "source_sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ME04/sources/cutouts/pokemon_653_fennekin.png",
+          "source_sha256": "b638e094ee06adcec959aad2898ce93f8c5fda88feba9c9158d1f16c026c07dd",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "ME05",
+      "master_file": "assets/posters/ME05/poster-flux2-artwork.png",
+      "master_sha256": "3120f1f07526c80d74f5cd83aa6bbb09dbc256e423f4d1c3c7ee3ecbf8f95732",
+      "verdict": "pass",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/ME05/sources/cutouts/pokemon_728_popplio.png",
+          "source_sha256": "3bfa3104b894f212985122732497b17c78979c6bc9304bd7396e781677f2d7a3",
+          "verdict": "pass"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ME05/sources/cutouts/pokemon_877_morpeko.png",
+          "source_sha256": "897a6b183f7e57c17be9db7979f299cccb386b0169e3961fba34244cfbe33c31",
+          "verdict": "pass"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ME05/sources/cutouts/pokemon_802_marshadow.png",
+          "source_sha256": "4ef2e2ff9af561949c7e315b9b266e561b8ba30c07a906240aa2ba177035ed41",
+          "verdict": "pass"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        },
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-me05-sv08-second-review.json",
+          "sha256": "db6a8daae4b9a1cb29dab1585f430c6180d75443561e2c6bb7f17168ee4995d8"
+        }
+      ],
+      "required_action": "retain_this_exact_master; final artifact check still required after candidate rebuild"
+    },
+    {
+      "asset_key": "MEP",
+      "master_file": "assets/posters/MEP/poster-flux2-artwork.png",
+      "master_sha256": "25bf253bd104c6f62db18dee2239bbd316a8158ec07083a5983cdfbf282d191d",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/MEP/sources/cutouts/pokemon_888_zacian.png",
+          "source_sha256": "f36c2b196763a2c3389ee00b481b534b94d87907d81c0b0fd2dcf5487db2a533",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/MEP/sources/cutouts/pokemon_001_bulbasaur.png",
+          "source_sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/MEP/sources/cutouts/pokemon_004_charmander.png",
+          "source_sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "ExGen3/sections/normal",
+      "master_file": "assets/posters/ExGen3/sections/normal/poster-flux2-artwork.png",
+      "master_sha256": "30b426a3806f98d8b15d267afd0728f7ede559b094a75f6119dc39f81243f49f",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/ExGen3/sections/normal/sources/cutouts/pokemon_1007_koraidon.png",
+          "source_sha256": "a292ff6c8c43f3f2c2df404ad14fc84e4ba0db33107692068d70e30ea9b44962",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ExGen3/sections/normal/sources/cutouts/pokemon_025_pikachu.png",
+          "source_sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+          "verdict": "uncertain"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ExGen3/sections/normal/sources/cutouts/pokemon_1008_miraidon.png",
+          "source_sha256": "282add1c4774047944a6c9d377ee0ed739744d2d23bb18ac32133534190a022a",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-exgen3.json",
+          "sha256": "01e8031908bfb74e0a1d295cfef07eb7fb2e25bba27da8810ae5d068f6bc1d12"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    },
+    {
+      "asset_key": "ExGen3/sections/mega",
+      "master_file": "assets/posters/ExGen3/sections/mega/poster-flux2-artwork.png",
+      "master_sha256": "e630635438acc3a00aeb286ff287a28c3e3839767b256851d889884b6190c354",
+      "verdict": "reject",
+      "subjects": [
+        {
+          "source_file": "tmp/poster-workspaces/ExGen3/sections/mega/sources/cutouts/pokemon_380_artwork_10062_mega_latias.png",
+          "source_sha256": "73d1e516779d7106f2c39c8cdfbe0d74b83127a296f6f5927b9432673dc83787",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ExGen3/sections/mega/sources/cutouts/pokemon_719_artwork_10075_mega_diancie.png",
+          "source_sha256": "96abacb8a7430bf4d242c9ee694c937eb86aa3e1f8154ab0755e4e615868d48e",
+          "verdict": "reject"
+        },
+        {
+          "source_file": "tmp/poster-workspaces/ExGen3/sections/mega/sources/cutouts/pokemon_448_artwork_10059_mega_lucario.png",
+          "source_sha256": "d51cd3b0051ffc2fe17b14c423c883831a8723b0da904bbc1f51367d15a6e85c",
+          "verdict": "reject"
+        }
+      ],
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-exgen3.json",
+          "sha256": "01e8031908bfb74e0a1d295cfef07eb7fb2e25bba27da8810ae5d068f6bc1d12"
+        }
+      ],
+      "required_action": "correct_and_review_new_raw_master_and_all_9_physical_crops_before_promotion",
+      "approval_revoked": true
+    }
+  ],
+  "correction_status": {
+    "accepted_replacements": [],
+    "accepted_visual_candidates": [
+      {
+        "asset_key": "ExGen3/sections/mega",
+        "candidate": "exgen3-source-detail-20260914-c",
+        "master_sha256": "eb61f272fd22bd400b2c2555cb2a490fad47c85b3947087a88b96b2e9dce3ebd",
+        "acceptance_date": "2026-09-14",
+        "reviewer_kind": "human",
+        "report": "docs/reviews/2026-09-14-exgen3-oneshot-c.json",
+        "promoted": false
+      },
+      {
+        "asset_key": "Base1",
+        "candidate": "base1-source-detail-20260914-b",
+        "master_sha256": "d06f69eb6e010b2670987a2209d3aec50848ac694aaefec64dc70d342ce0d9b4",
+        "acceptance_date": "2026-09-14",
+        "reviewer_kind": "human",
+        "report": "docs/reviews/2026-09-14-base1-oneshot.json",
+        "promoted": false
+      }
+    ],
+    "completed_trials": 11,
+    "rejected_trials": 8,
+    "superseded_trials": 1,
+    "pending_user_review_trials": 0,
+    "visually_accepted_trials": 2,
+    "trial_summary": "Two joint-scene retries still altered source anatomy. Two identity-lock trials preserved all 40345 opaque source pixels but failed scene integration. The first identity-lock candidate received a complete independent original/raw/master/nine-crop review; the second was rejected after full-master and Lucario-crop inspection plus a pixel comparison, not a complete nine-crop approval.",
+    "renderer_limitation": "The current identity-lock edit mask stops above the figures and cannot synthesize their ground-contact shadows. Both trial raw images have byte-identical pixels from y818 to the bottom edge.",
+    "temporary_manifest_change_restored": true,
+    "renderer_extension_implemented": true,
+    "grounded_pilot": {
+      "variant": "audit-exgen3-mega-grounded-v4-soft-shadows-260751036",
+      "status": "pixel_audits_and_anatomy_passed_scene_review_rejected",
+      "changed_source_pixels": 0,
+      "changed_outside_mask_pixels": 0,
+      "changed_editable_pixels": 18272,
+      "master_sha256": "a556ea3da2349b00f5973e3900fa23f125b200b261b1bf89fd31df2b4d857a6d",
+      "root_physical_cards_actually_viewed": 9,
+      "report": "docs/reviews/2026-09-13-exgen3-grounded-pilot-2.json",
+      "next_controlled_change": "Feather .012 feasibility assessed in isolated masks only; no third render prepared or queued. This fallback remains paused. The first-example review gate was subsequently satisfied by one-shot candidate C, not by either grounded pilot."
+    },
+    "oneshot_restart": {
+      "operator_decision_date": "2026-09-14",
+      "preferred_mode": "joint_scene",
+      "fallback_policy": "Multi-stage remains an unused, explicitly justified last resort; no automatic fallback after failed candidates.",
+      "occlusion_policy": "Scene-appropriate foreground overlap is desired and is not itself a character appearance change.",
+      "selected_candidate": "exgen3-source-detail-20260914-c",
+      "status": "user_accepted_pending_canonical_integration_and_promotion",
+      "operator_acceptance_date": "2026-09-14",
+      "accepted_deviation_scope": "Small eye/pupil detail omission and minor deviations in this exact candidate; no general anatomy waiver.",
+      "first_example_review_gate_satisfied": true,
+      "master_sha256": "eb61f272fd22bd400b2c2555cb2a490fad47c85b3947087a88b96b2e9dce3ebd",
+      "root_physical_cards_actually_viewed": 9,
+      "report": "docs/reviews/2026-09-14-exgen3-oneshot-c.json",
+      "comparison": "docs/reviews/2026-09-14-exgen3-oneshot-restart.md",
+      "additional_render_queued": false
+    },
+    "base1_oneshot_transfer": {
+      "request_date": "2026-09-14",
+      "selected_candidate": "base1-source-detail-20260914-b",
+      "status": "user_accepted_pending_canonical_integration_and_promotion",
+      "operator_acceptance_date": "2026-09-14",
+      "user_review_gate_satisfied": true,
+      "completed_trials": 2,
+      "rejected_trials": 1,
+      "master_sha256": "d06f69eb6e010b2670987a2209d3aec50848ac694aaefec64dc70d342ce0d9b4",
+      "root_physical_cards_actually_viewed": {"A": 1, "B": 9},
+      "controlled_change": "A produced an additional Bulbasaur in the raw middle landscape. B changes only the positive prompt's leading count/placement instruction; all non-prompt graph nodes, input images, models, seed and raster are identical.",
+      "report": "docs/reviews/2026-09-14-base1-oneshot.json",
+      "comparison": "docs/reviews/2026-09-14-base1-oneshot.md",
+      "additional_render_queued": false
+    },
+    "next_design_proposal": "Integrate the one-shot approach demonstrated by the separately user-accepted ExGen3 C and Base1 B into the canonical generator with source-specific identity constraints, explicit cast count and scene-appropriate occlusion. Exact-artifact promotion and rebuilt-output validation remain separate. Other sets still require their own source and full-crop review.",
+    "existing_pdfs_and_archives": "Unchanged unapproved candidate files; do not distribute as final v10.",
+    "design_approved": true,
+    "implementation_plan": "docs/superpowers/plans/2026-09-12-source-locked-grounding.md",
+    "pending_work": "Canonical one-shot integration, exact-candidate promotion and release validation; ExGen3 C and Base1 B each have their own scoped user acceptance. No longer waiting for either example's user review. No broader rollout or promotion has occurred. Both grounded pilots remain rejected and their further development is paused."
+  }
+}

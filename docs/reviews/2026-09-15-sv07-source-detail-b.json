@@ -1,0 +1,362 @@
+{
+  "review_id": "P01",
+  "scope": "SV07",
+  "reviewed_on": "2026-09-15",
+  "variant": "sv07-source-detail-20260915-b",
+  "agent_visual_decision": "not_release_ready_current_layout_contract_not_met",
+  "independent_visual_verdict": "reject_oneshot_against_binding_layout_bounds",
+  "presentation": "disclosed_identity_and_composition_feedback_checkpoint",
+  "human_approval": "accepted_identity_and_composition_shadow_correction_reserved",
+  "pipeline_contract_version": 11,
+  "seed": 260915007,
+  "viewed_by_controller_and_independent_reviewer": {
+    "raw": true,
+    "full_text_free_master": true,
+    "full_german_preview": true,
+    "physical_cards": [
+      "r1c1",
+      "r1c2",
+      "r1c3",
+      "r2c1",
+      "r2c2",
+      "r2c3",
+      "r3c1",
+      "r3c2",
+      "r3c3"
+    ],
+    "exact_original_sources": [
+      "pokeapi:official-artwork:1",
+      "pokeapi:official-artwork:7",
+      "pokeapi:official-artwork:813"
+    ]
+  },
+  "controller_additional_views": {
+    "prepared_references": 4,
+    "german_logo": true
+  },
+  "source_pairs": [
+    {
+      "name": "Bisasam",
+      "card": "r3c1",
+      "key": "pokeapi:official-artwork:1",
+      "path": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_001_bulbasaur.png",
+      "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a"
+    },
+    {
+      "name": "Schiggy",
+      "card": "r3c2",
+      "key": "pokeapi:official-artwork:7",
+      "path": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_007_squirtle.png",
+      "sha256": "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290"
+    },
+    {
+      "name": "Hopplo",
+      "card": "r3c3",
+      "key": "pokeapi:official-artwork:813",
+      "path": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_813_scorbunny.png",
+      "sha256": "0099f4bb576966efc872c03c69616f954c8474d12608a2fd7e91304a9d271167"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "improvement_not_approval",
+      "kind": "count_and_identity",
+      "detail": "Exactly three intended Pokemon. Both reviewers found source-close poses and defining traits, with no established hard identity failure: Scorbunny has two ears, separate eyes, a single upper tooth, two separate orange neck ovals and the raised sole; Bulbasaur retains angular spots, folded bulb and visible feet; Squirtle retains eyes, shell segmentation and curled tail. Fine contours remain interpreted rather than pixel-identical."
+    },
+    {
+      "severity": "blocking_current_contract",
+      "kind": "layout",
+      "subject": "Hopplo",
+      "target_full_canvas_bounds_percent": [
+        78,
+        75.8,
+        90.2,
+        93.6
+      ],
+      "visually_estimated_full_canvas_bounds_percent": [
+        75,
+        69.2,
+        91.2,
+        94.2
+      ],
+      "detail": "Materially larger and higher than the configured spatial reference. Approximately 45 px remain above the ears in physical r3c3. The figure is inside the physical card, not anatomically clipped. Bounds are visual estimates, not an automated segmentation measurement."
+    },
+    {
+      "severity": "blocking_current_contract",
+      "kind": "layout",
+      "subject": "Schiggy",
+      "target_full_canvas_bounds_percent": [
+        38.1,
+        75.8,
+        61.8,
+        93.6
+      ],
+      "visually_estimated_full_canvas_bounds_percent": [
+        38.4,
+        73.4,
+        64.7,
+        93.4
+      ],
+      "detail": "Larger and higher than the configured spatial reference; approximately 28 px remain between the tail and physical right edge. Fully contained, but not compliant with the narrower requested silhouette bounds. Bounds are visual estimates."
+    },
+    {
+      "severity": "minor_layout_deviation",
+      "kind": "layout",
+      "subject": "Bisasam",
+      "target_full_canvas_bounds_percent": [
+        3.5,
+        77,
+        28.1,
+        93.6
+      ],
+      "visually_estimated_full_canvas_bounds_percent": [
+        4,
+        76.6,
+        29.6,
+        93.1
+      ],
+      "detail": "Smaller layout deviation; all visible body parts and bulb remain inside r3c1. Bounds are visual estimates."
+    },
+    {
+      "severity": "needs_correction_before_promotion",
+      "kind": "shadow",
+      "subject": "Hopplo",
+      "detail": "The distinct narrow ground-shadow extension runs leftward from the supporting foot despite the upper-left key light. The broader stylized shadows have less certain projection. A local shadow repair is appropriate only after the composition is settled."
+    },
+    {
+      "severity": "observation",
+      "kind": "depth_and_physical_crops",
+      "detail": "All three figures are contained in their actual physical cards; logo and information panel do not hide them. Vegetation fits the highland scene. Neither reviewer established a broken-depth plant crossing that warrants inventing or repainting foliage."
+    }
+  ],
+  "controlled_comparison_with_a": {
+    "changed": [
+      "pipeline contract 10 to 11",
+      "only first two prompt paragraphs in node 4"
+    ],
+    "unchanged": [
+      "all other graph nodes",
+      "four exact reference image hashes",
+      "model, encoder and VAE pins",
+      "seed 260915007",
+      "1200x1664 target",
+      "source traits",
+      "scene and depth tail"
+    ],
+    "actual_a_v10_fixture_reconstructed": true
+  },
+  "next_step": {
+    "action": "Show the full B artwork and all three exact card/source pairs for identity and composition feedback before any further generation.",
+    "still_required_before_promotion": [
+      "Resolve deliberate composition choice versus configured size bounds; do not silently re-label a failed layout as passed.",
+      "Correct and re-review the narrow ground shadow if retaining this composition.",
+      "Image-specific human approval and canonical technical promotion checks."
+    ],
+    "mandatory_next_scopes": [
+      "ExGen2/sections/mega (P15 Mega-Latios)",
+      "ExGen3/sections/normal (P40 Miraidon)"
+    ],
+    "other_scopes_rendered_this_turn": false,
+    "promotion_or_release_performed": false
+  },
+  "evidence": {
+    "cards": [
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/review/cards/card_r1_c1.png",
+        "rectangle": [
+          0,
+          0,
+          750,
+          1050
+        ],
+        "sha256": "cede7b06b58a8bc03dc8a942c8f5fb09552a57149c4152fdfa6ba2d6b324d3af"
+      },
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/review/cards/card_r1_c2.png",
+        "rectangle": [
+          809,
+          0,
+          1559,
+          1050
+        ],
+        "sha256": "155db183f17c1e6491ece83d97bffaa438e577bd3a35e5ff86d5ec5c8da55283"
+      },
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/review/cards/card_r1_c3.png",
+        "rectangle": [
+          1618,
+          0,
+          2368,
+          1050
+        ],
+        "sha256": "41967a1adb79087ecd78a21f593a5bda0bb3b45c6c773d93b93a7cffc0906147"
+      },
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/review/cards/card_r2_c1.png",
+        "rectangle": [
+          0,
+          1109,
+          750,
+          2159
+        ],
+        "sha256": "e454f4b25fb407a0ee4a377c16fe9752ba1157cc08cfd1aa0fd4c446c426d010"
+      },
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/review/cards/card_r2_c2.png",
+        "rectangle": [
+          809,
+          1109,
+          1559,
+          2159
+        ],
+        "sha256": "6485ddacf0f0830118928912d722b159b2d5a1be90ebbf77c4dfa09b0925a6ca"
+      },
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/review/cards/card_r2_c3.png",
+        "rectangle": [
+          1618,
+          1109,
+          2368,
+          2159
+        ],
+        "sha256": "e5e586d074e621fa12fd7fce5cd41a0767d307f660958b22d9b884ed4ff5fde1"
+      },
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/review/cards/card_r3_c1.png",
+        "rectangle": [
+          0,
+          2218,
+          750,
+          3268
+        ],
+        "sha256": "3c0d72f9954d0b75e6e00c5c0db344f6b27c73f9785aff7deb59e3d8bd332cc9"
+      },
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/review/cards/card_r3_c2.png",
+        "rectangle": [
+          809,
+          2218,
+          1559,
+          3268
+        ],
+        "sha256": "d491bc827e1dd75f70d4a8b0d8e5f96f40196ca078312c2e9443b91caf4449ab"
+      },
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/review/cards/card_r3_c3.png",
+        "rectangle": [
+          1618,
+          2218,
+          2368,
+          3268
+        ],
+        "sha256": "7d53721bea84c8aefb19cff8045c365309303d3811981daa5a237582aeed9981"
+      }
+    ],
+    "human_approval": "pending",
+    "master": {
+      "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/review/artwork-300dpi.png",
+      "sha256": "3d44b64f29b99898f150a4a5bee5cf62d6e928f1658dd9396a4464e76dda2799"
+    },
+    "preview": {
+      "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/review/poster-de.png",
+      "sha256": "7aed10dd6d049d0ad60ce8c93474f6dad344b6200557abb368c5c81bbd6f0f9a"
+    },
+    "production_masters_unchanged": 42,
+    "raw": {
+      "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/retrieved/oneshot-853845th/output/sv07_flux2_joint_scene_2mp_seed_260915007_00001_.png",
+      "sha256": "4bb09429f81f13718db12f89b5361dc9045bb53aeff7279b9e95b8ce744e5086"
+    },
+    "run_sidecar": {
+      "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/review/artwork-300dpi.run.json",
+      "sha256": "aacd62e47491ea3b752694311377befb4b91175bbdd9a60f5908d4b975c3cf99"
+    },
+    "scope": "SV07",
+    "variant": "sv07-source-detail-20260915-b",
+    "visual_review": "pending_full_master_and_all_nine_cards",
+    "worker_log": {
+      "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/retrieved/oneshot-853845th/comfyui.log",
+      "sha256": "2c5cf01c7f2565bf8edb4393373ca953cd149438fe7714937530c24d8d469b7e"
+    },
+    "worker_run": {
+      "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/retrieved/oneshot-853845th/run.json",
+      "sha256": "41f18550690591705e124bf38f3d25cf695a5f989345d7bf8ee6e920cf59738d"
+    }
+  },
+  "human_review": {
+    "reviewed_on": "2026-09-15",
+    "user_text": "alles perfekt. der neue Flow scheint sehr gut zu greifen!",
+    "scope": "Identity of all three shown Pokemon, scene and composition including the explicitly disclosed larger Scorbunny/Squirtle.",
+    "interpretation": "Responds to the preceding identity/composition checkpoint. This is exact-image aesthetic acceptance, not an automatic technical promotion or a claim that the reserved shadow correction has been performed.",
+    "master": {
+      "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/review/artwork-300dpi.png",
+      "sha256": "3d44b64f29b99898f150a4a5bee5cf62d6e928f1658dd9396a4464e76dda2799"
+    },
+    "raw": {
+      "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/retrieved/oneshot-853845th/output/sv07_flux2_joint_scene_2mp_seed_260915007_00001_.png",
+      "sha256": "4bb09429f81f13718db12f89b5361dc9045bb53aeff7279b9e95b8ce744e5086"
+    },
+    "shown_cards": [
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/review/cards/card_r3_c1.png",
+        "rectangle": [
+          0,
+          2218,
+          750,
+          3268
+        ],
+        "sha256": "3c0d72f9954d0b75e6e00c5c0db344f6b27c73f9785aff7deb59e3d8bd332cc9"
+      },
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/review/cards/card_r3_c2.png",
+        "rectangle": [
+          809,
+          2218,
+          1559,
+          3268
+        ],
+        "sha256": "d491bc827e1dd75f70d4a8b0d8e5f96f40196ca078312c2e9443b91caf4449ab"
+      },
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-b/review/cards/card_r3_c3.png",
+        "rectangle": [
+          1618,
+          2218,
+          2368,
+          3268
+        ],
+        "sha256": "7d53721bea84c8aefb19cff8045c365309303d3811981daa5a237582aeed9981"
+      }
+    ],
+    "exact_sources": [
+      {
+        "name": "Bisasam",
+        "card": "r3c1",
+        "key": "pokeapi:official-artwork:1",
+        "path": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_001_bulbasaur.png",
+        "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a"
+      },
+      {
+        "name": "Schiggy",
+        "card": "r3c2",
+        "key": "pokeapi:official-artwork:7",
+        "path": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_007_squirtle.png",
+        "sha256": "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290"
+      },
+      {
+        "name": "Hopplo",
+        "card": "r3c3",
+        "key": "pokeapi:official-artwork:813",
+        "path": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_813_scorbunny.png",
+        "sha256": "0099f4bb576966efc872c03c69616f954c8474d12608a2fd7e91304a9d271167"
+      }
+    ],
+    "reserved_before_promotion": [
+      "Previously stated narrow Scorbunny ground-shadow correction and its subsequent visual review.",
+      "Canonical technical promotion, PDF and release verification."
+    ],
+    "prior_agent_findings_preserved": true,
+    "creation_time_evidence_unchanged": true,
+    "approval_does_not_transfer_to_other_images": true,
+    "fresh_candidate_and_source_hash_verification": "Canonical pilot verify completed successfully before recording this response."
+  }
+}

@@ -16,6 +16,7 @@ from scripts.poster_assets.provenance import sha256_file
 from scripts.poster_assets.poster_subject import PosterSubject
 from scripts.poster_assets.validate_promoted_poster import (
     enabled_poster_bundles,
+    validate as validate_promoted_poster,
 )
 
 
@@ -138,6 +139,24 @@ def save_yaml(path, payload):
         yaml.safe_dump(payload, allow_unicode=True, sort_keys=False),
         encoding="utf-8",
     )
+
+
+def test_planner_subject_selection_honors_explicit_poster_slots():
+    configured = manifest("Example", scene("Example"))
+    configured["pokemon"]["fallback_candidates"] = [
+        {"pokemon_id": 25, "slot": 3},
+    ]
+    source = {"sections": {"all": source_section([250, 909, 646])}}
+
+    subjects, _layout = poster_work_plan._expected_subject_identities(
+        configured, source,
+    )
+
+    assert [subject[1] for subject in subjects] == [250, 909, 25]
+
+    configured["pokemon"]["fallback_candidates"][0]["slot"] = 4
+    with pytest.raises(ValueError, match="slot must be between"):
+        poster_work_plan._expected_subject_identities(configured, source)
 
 
 def save_json(path, payload):
@@ -505,6 +524,28 @@ def test_scene_catalog_is_required_subset_and_allows_reviewed_overrides(tmp_path
     assert "scene_catalog_drift" not in target(plan)["reason_codes"]
 
 
+def test_scene_catalog_allows_appended_reviewed_constraints_but_not_changed_ones(tmp_path):
+    assets, output, catalog = setup_individual(tmp_path)
+    manifest_path = assets / "Alpha" / "poster.yaml"
+    catalog_payload = yaml.safe_load(catalog.read_text(encoding="utf-8"))
+    catalog_payload["scopes"]["Alpha"]["constraints"] = ["Keep the base scene clear."]
+    save_yaml(catalog, catalog_payload)
+    payload = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+    payload["artwork"]["scene"]["constraints"] = [
+        "Keep the base scene clear.",
+        "Keep the reviewed foreground blade in front of the subject."
+    ]
+    save_yaml(manifest_path, payload)
+
+    accepted = build("Alpha", assets, output, catalog)
+    assert "scene_catalog_drift" not in target(accepted)["reason_codes"]
+
+    payload["artwork"]["scene"]["constraints"][0] = "Changed catalog constraint"
+    save_yaml(manifest_path, payload)
+    changed = build("Alpha", assets, output, catalog)
+    assert target(changed)["reason_codes"] == ["scene_catalog_drift"]
+
+
 
 
 
@@ -793,6 +834,26 @@ def test_accepted_legacy_pipeline_is_current_with_optional_upgrade(tmp_path):
     assert "generation_fingerprint_drift" in target(stale)["reason_codes"]
 
 
+def test_planner_reports_reviewed_historical_scope_current(tmp_path):
+    assets, output, catalog = setup_individual(tmp_path, enabled=True)
+    bundle = poster_bundles_for_scope("Alpha", poster_assets=assets)[0]
+    write_promotion(bundle, output, pipeline_contract_version=1)
+    provenance_path = bundle.asset_dir / "poster-flux2-provenance.json"
+    payload = json.loads(provenance_path.read_text(encoding="utf-8"))
+    payload["run"]["historical_import"] = {
+        "schema_version": 1,
+        "contract_name": "approved_spatial_identity_joint_import",
+    }
+    save_json(provenance_path, payload)
+
+    plan = build("Alpha", assets, output, catalog,
+                 validator=lambda _bundle: {"generation_pipeline_contract_status": "accepted_historical"})
+
+    assert target(plan)["state"] == "current"
+    assert "approved_historical_import" in target(plan)["reason_codes"]
+    assert target(plan)["next_actions"] == []
+
+
 def test_overlay_only_change_requests_refresh_without_regeneration(tmp_path):
     assets, output, catalog = setup_individual(tmp_path)
     bundle = poster_bundles_for_scope("Alpha", poster_assets=assets)[0]
@@ -821,6 +882,31 @@ def test_overlay_only_change_requests_refresh_without_regeneration(tmp_path):
     ]
     assert "regenerate_candidate" not in target(plan)["next_actions"]
     assert target(plan)["commands"] == []
+
+
+def test_planner_identifies_validated_masked_fallback_pending_overlay(tmp_path):
+    assets, output, catalog = setup_individual(tmp_path)
+    bundle = poster_bundles_for_scope("Alpha", poster_assets=assets)[0]
+    write_promotion(bundle, output)
+    provenance_path = bundle.asset_dir / "poster-flux2-provenance.json"
+    provenance = json.loads(provenance_path.read_text(encoding="utf-8"))
+    provenance["schema_version"] = 3
+    provenance["composition"] = {"kind": "masked_fallback"}
+    save_json(provenance_path, provenance)
+    plan = build(
+        "Alpha", assets, output, catalog,
+        validator=lambda _bundle: {
+            "composition_kind": "masked_fallback",
+            "localized_overlay_approved": False,
+            "overlay_fingerprint_current": True,
+        },
+    )
+    item = target(plan)
+    assert item["state"] == "promoted_disabled"
+    assert "masked_fallback" in item["reason_codes"]
+    assert "localized_overlay_pending" in item["reason_codes"]
+    assert "review_localized_overlay" in item["next_actions"]
+    assert "regenerate_candidate" not in item["next_actions"]
 
 
 
@@ -1017,28 +1103,30 @@ def test_public_state_vocabulary_is_stable():
     )
 
 
-def test_every_checked_in_enabled_poster_remains_generation_current():
+def test_every_release_enabled_poster_passes_production_validation():
     bundles = enabled_poster_bundles()
+    accepted = json.loads(
+        (
+            Path(__file__).resolve().parents[2]
+            / "docs/reviews/2026-09-23-panorama-batch-user-acceptance.json"
+        ).read_text(encoding="utf-8")
+    )
     assert {
         bundle.asset_key for bundle in bundles
-    }.issuperset(
-        {
-            "Base1",
-            "SV03.5",
-            "Pokedex/sections/gen1",
-            "Pokedex/sections/gen2",
-            "Pokedex/sections/gen3",
-            "Pokedex/sections/gen4",
-            "Pokedex/sections/gen5",
-            "Pokedex/sections/gen6",
-            "Pokedex/sections/gen7",
-            "Pokedex/sections/gen8",
-            "Pokedex/sections/gen9",
-        }
-    )
+        } == {
+            "Base1",  # Historical B master; original German logo explicitly accepted.
+            "Base2",
+        "ExGen2/sections/mega",
+        "ExGen3/sections/normal",
+            "ExGen3/sections/mega",  # Exact historically accepted C master, revalidated.
+            "ME03",  # Exact P37-A master, visually accepted and pixel-verified.
+        "ME05",
+        "Pokedex/sections/gen1",
+        "Pokedex/sections/gen3",
+        "Pokedex/sections/gen7",
+        "SV08",
+    } | {candidate["scope"] for candidate in accepted["candidates"]}
 
     for bundle in bundles:
-        plan = poster_work_plan.build_work_plan(scope=bundle.asset_key)
-        planned = target(plan)
-        assert planned["state"] == "current", bundle.asset_key
-        assert "regenerate_candidate" not in planned["next_actions"]
+        result = validate_promoted_poster(bundle)
+        assert result["cards"] == 9, bundle.asset_key

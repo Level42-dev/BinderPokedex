@@ -306,6 +306,43 @@ def test_mega_artwork_resolution_never_falls_back_to_base(monkeypatch):
         )
 
 
+@pytest.mark.parametrize(
+    ('pokemon_name', 'form_suffix', 'expected_slug', 'artwork_id'),
+    [
+        ('Charizard X', 'X', 'charizard-mega-x', 10034),
+        ('Charizard Y', 'Y', 'charizard-mega-y', 10035),
+    ],
+)
+def test_mega_artwork_does_not_duplicate_explicit_xy_suffix(
+    monkeypatch,
+    pokemon_name,
+    form_suffix,
+    expected_slug,
+    artwork_id,
+):
+    requested_urls = []
+
+    def fake_get(url, **_kwargs):
+        requested_urls.append(url)
+        return SimpleNamespace(
+            status_code=200,
+            json=lambda: {'id': artwork_id},
+        )
+
+    monkeypatch.setattr(pokemon_utils.requests, 'get', fake_get)
+
+    result = pokemon_utils.get_mega_artwork_url(
+        pokemon_name=pokemon_name,
+        base_id=6,
+        form_suffix=form_suffix,
+    )
+
+    assert requested_urls == [
+        f'https://pokeapi.co/api/v2/pokemon/{expected_slug}'
+    ]
+    assert result == PosterSubject(6, artwork_id).image_url
+
+
 def _checked_in_subjects(scope: str, section_id: str):
     payload = json.loads(
         (REPO_ROOT / "data" / "output" / f"{scope}.json").read_text(

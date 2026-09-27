@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-14",
+  "asset_key": "Base2",
+  "review_id": "P02",
+  "experiment": "scoped foreground repair of the existing one-shot",
+  "reviewer_kind": "agent",
+  "user_authorized_trial": true,
+  "result": "partial visual effect; no acceptable correction",
+  "correction_completed": false,
+  "human_approval_of_repair": false,
+  "canonical_promotion_eligible": false,
+  "promoted": false,
+  "production_renderer_changed": false,
+  "production_artwork_replaced": false,
+  "pdf_or_release_rebuilt": false,
+  "automated_depth_detector_implemented": false,
+  "region_detection": "Agent visual analysis of the original artwork, checked against the user's two orange annotations. No independent automatic detector was evaluated.",
+  "backend": "Existing configured ComfyUI worker; pinned FLUX.2 Klein 4B BF16 stack, four steps, Euler, CFG 1, seed 260914201. No new models or runtime installed.",
+  "source": {
+    "file": "tmp/poster-workspaces/Base2/sources/cutouts/pokemon_025_pikachu.png",
+    "sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f"
+  },
+  "original_master": {
+    "file": "assets/posters/Base2/poster-flux2-artwork.png",
+    "sha256": "9c0c166cc6bda2f8a8e07ba9affd486c19d9c017b54ed15b9bedba4568d5c45f"
+  },
+  "original_crop": {
+    "file": "tmp/poster-workspaces/Base2/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+    "sha256": "6c30d13f0d0fcfbc5471b0df131133371e49bf3f61532ea6185029cf3ebd78e7",
+    "cell": "r3c1",
+    "rectangle": [0, 2218, 750, 3268]
+  },
+  "operator_annotation": {
+    "file": "tmp/panorama-review-inputs/2026-09-14/p02-pikachu-foreground-guide.png",
+    "sha256": "725015f63b68624ad7dd0847fa3f8d86fc33fc63b763dfa8d3af88441eb0d03f",
+    "role": "Location and direction guide only; orange strokes must not enter final artwork. Added as a model reference only in B and C."
+  },
+  "variants": [
+    {
+      "variant": "base2-foreground-20260914-a",
+      "change": "Text-guided masked latent inpainting, followed by exact outside-mask restoration.",
+      "verdict": "reject",
+      "findings": [
+        "New pointed grass section crosses the lower-left belly.",
+        "The upper blade remains behind the extended arm.",
+        "The original black body outline remains visible across the new green belly blade."
+      ],
+      "master": {
+        "file": "tmp/foreground-repair-trials/base2-foreground-20260914-a/review/artwork-300dpi.png",
+        "sha256": "028b9c07f2087f2b8263c01cdf7d45f0a1f549540a16a1a64921b0af5870cc54"
+      },
+      "crop": {
+        "file": "tmp/foreground-repair-trials/base2-foreground-20260914-a/review/pikachu-card.png",
+        "sha256": "8b4388e346648501728947647b73531d5478a4f4a436deb9405cdcd48795b26c"
+      },
+      "technical_evidence": {
+        "file": "tmp/foreground-repair-trials/base2-foreground-20260914-a/review/evidence.json",
+        "sha256": "88e6a151832b3795bac9738c9869eed0104cff8993eb9c489dbbdb5e540c45b6"
+      },
+      "changed_inside_mask": 13792,
+      "changed_outside_mask": 0,
+      "elapsed_seconds": 34.308876037597656
+    },
+    {
+      "variant": "base2-foreground-20260914-b",
+      "change": "Add the operator annotation as a second visual reference and explain its role; original, masks, seed, models and sampler remain fixed.",
+      "verdict": "reject",
+      "findings": [
+        "Arm remains unoccluded.",
+        "The lower blade gains only a tiny, inadequate tip at the body edge."
+      ],
+      "master": {
+        "file": "tmp/foreground-repair-trials/base2-foreground-20260914-b/review/artwork-300dpi.png",
+        "sha256": "f34e7d32868b2a4e7598907f445990d8543254ce5bf1125cf4b0156911d7e845"
+      },
+      "crop": {
+        "file": "tmp/foreground-repair-trials/base2-foreground-20260914-b/review/pikachu-card.png",
+        "sha256": "882c0157518bd8784b03916c41a89c7d72edac38330f9f2da47e675f807d1ce3"
+      },
+      "technical_evidence": {
+        "file": "tmp/foreground-repair-trials/base2-foreground-20260914-b/review/evidence.json",
+        "sha256": "9e7328dc3d8389259ea9dd674c0f7de485e3a9e736eb5e9596d8061288e535a7"
+      },
+      "changed_inside_mask": 13788,
+      "changed_outside_mask": 0,
+      "elapsed_seconds": 66.39075708389282
+    },
+    {
+      "variant": "base2-foreground-20260914-c",
+      "change": "Replace only B's masked sampling latent with an empty target. Both references, prompt, models, seed, sampler and final protection mask remain unchanged.",
+      "verdict": "reject",
+      "findings": [
+        "The raw result generates a much too long, nearly horizontal blade across the belly and leaks two orange guide fragments on the right.",
+        "The bounded result prevents those extensive changes, but clips the different geometry into visible seams and light wedges at the repair boundaries.",
+        "Free synthesis can produce occlusion; it does not establish precise local contour continuity."
+      ],
+      "master": {
+        "file": "tmp/foreground-repair-trials/base2-foreground-20260914-c/review/artwork-300dpi.png",
+        "sha256": "3cc59d1f79ea265c175735a9ec615c4a6cf5d30c46d2216fd4eecaf90bde4632"
+      },
+      "crop": {
+        "file": "tmp/foreground-repair-trials/base2-foreground-20260914-c/review/pikachu-card.png",
+        "sha256": "16793d947ce2788aa96870c9d6a8994d92d06647cbd55b90dac24b28f7f7d0d8"
+      },
+      "technical_evidence": {
+        "file": "tmp/foreground-repair-trials/base2-foreground-20260914-c/review/evidence.json",
+        "sha256": "a06cf16f60042964ef627fe72680862f22917987ee2ee0421b01c0b422f9594c"
+      },
+      "changed_inside_mask": 13789,
+      "changed_outside_mask": 0,
+      "elapsed_seconds": 69.34682130813599
+    }
+  ],
+  "verification": {
+    "focused_tests_passed": 12,
+    "complete_job_packages_verified": 3,
+    "all_six_returned_images_verified": true,
+    "frozen_input_files_unchanged_per_trial": 6,
+    "exact_300dpi_card_crops_checked": 27,
+    "other_cards_pixel_identical_per_trial": 8,
+    "full_poster_editable_pixels": 13866,
+    "full_poster_total_pixels": 7738624,
+    "visual_inspection": "For each variant: raw image, native Pikachu card and full text-free master. Exact original source and operator annotation also viewed. No complete nine-card visual approval is claimed for the rejected variants.",
+    "technical_evidence_status_note": "The immutable creation-time evidence files retain visual_review=pending. The separate agent verdicts in this report complete that inspection with rejection; they do not alter the job seals."
+  },
+  "decision": "Stop this three-variant experiment. Keep one-shot primary; do not promote any repair or start other-set generation. A new repair attempt needs a different, more precise control mechanism, not unbounded prompt/seed retries.",
+  "remaining_human_review": "Pikachu's original appearance remains accepted. The requested grass correction is unresolved. Relaxo, Evoli and the full panorama remain unapproved; PDF and release gates are separate."
+}

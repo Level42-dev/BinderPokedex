@@ -28,16 +28,16 @@ artwork:
     subject_clearance_ratio: 0.02
   scene:
     concept: the classic 2003–2007 Pokémon ex era and its adventurous frontier mood
-    setting: The artwork contains an expansive Hoenn-inspired frontier where a bright meadow
-      meets layered tropical woodland, weathered pale rock, distant blue water, and a small
-      research outpost with completely blank facades low on the outer horizon.
+    setting: The artwork contains an expansive Hoenn-inspired frontier where a bright meadow meets layered
+      tropical woodland, weathered pale rock, distant blue water, and a small research outpost with completely
+      blank facades low on the outer horizon.
     lighting: Warm clear expedition daylight enters from the upper left.
-    rendering: Use nostalgic mid-2000s trading-card illustration, clean cel-painted linework,
-      restrained natural colors, and broad atmospheric depth.
+    rendering: Use nostalgic mid-2000s trading-card illustration, clean cel-painted linework, restrained
+      natural colors, and broad atmospheric depth.
     ground_noun: frontier grass
     constraints:
-    - Keep the outpost, rocks, and prominent foliage distant or at the outer edges, away from
-      the protected subject silhouettes.
+    - Keep the outpost, rocks, and prominent foliage distant or at the outer edges, away from the protected
+      subject silhouettes.
   generation:
     engine: flux
     model: flux-2-klein-4b.safetensors
@@ -47,12 +47,29 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260737078
+    reference_mode: spatial_source_detail_joint
+    seed: 260738087
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
+  source_details:
+    pokeapi:official-artwork:3:
+      sha256: 04897191b567f8e6d866e6aa6eef184b6a93f8d0ba9ddaa50b4592ef261edc3b
+      traits: 'Match the exact broad-bodied Venusaur source: low green spotted face and legs, red eyes,
+        separate claws, giant pink spotted flower with defined petals, yellow center, thick palm-like
+        trunk and layered green leaves. Preserve the face beneath the flower rather than turning it into
+        a generic frog.'
+    pokeapi:official-artwork:9:
+      sha256: 1bac4860feebcf5fb5cd27af8c9c4465773e948b68a7436dc65ec49618becd49
+      traits: Match the exact bulky blue Blastoise source, its brown segmented shell, pale belly, compact
+        turtle face, separate clawed arms and legs, tail and two distinct metal water cannons emerging
+        from the shoulders.
+    pokeapi:official-artwork:249:
+      sha256: f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30
+      traits: 'Match the exact white-and-blue Lugia source: narrow defined eye, long beak-like muzzle,
+        paired dark-blue dorsal plates, long neck and tail, and broad wing-arms with individually separated
+        fingertip feathers. Preserve the head profile and wing-finger count visible in the reference.'
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns

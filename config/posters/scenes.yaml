@@ -108,6 +108,20 @@ scopes:
       layered motion in the distant environment without cluttering the ground.
     ground_noun: rugged grass
 
+  ME05:
+    concept: the Dunkelnacht expansion and its mysterious nocturnal energy
+    setting: >-
+      The artwork contains a broad moonlit valley with layered indigo woodland,
+      dark crystalline ridges, quiet reflective pools, and distant violet cloud
+      ribbons crossing an open midnight sky.
+    lighting: >-
+      Cool moonlight enters from the upper left with restrained violet and
+      silver highlights.
+    rendering: >-
+      Use polished trading-card illustration, clean cel-painted linework, deep
+      but readable nocturnal colors, and spacious atmospheric depth.
+    ground_noun: moonlit grass
+
   MEP:
     concept: the Mega Evolution Black Star Promo collection
     setting: >-

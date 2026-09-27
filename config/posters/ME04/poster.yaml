@@ -31,21 +31,36 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260734267
+    reference_mode: spatial_source_detail_joint
+    seed: 260735276
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
   scene:
     concept: the Chaos Rising expansion
-    setting: The artwork contains a rugged wilderness beneath a vast rotating storm, fractured
-      distant cliffs, wind-bent woodland, and far-off red-gold light breaking through dark
-      cloud layers.
+    setting: The artwork contains a rugged wilderness beneath a vast rotating storm, fractured distant
+      cliffs, wind-bent woodland, and far-off red-gold light breaking through dark cloud layers.
     lighting: Turbulent sunset light flashes through the upper-left storm.
-    rendering: Use energetic trading-card linework, controlled dramatic contrast, and layered
-      motion in the distant environment without cluttering the ground.
+    rendering: Use energetic trading-card linework, controlled dramatic contrast, and layered motion in
+      the distant environment without cluttering the ground.
     ground_noun: rugged grass
+  source_details:
+    pokeapi:official-artwork:650:
+      sha256: 565272048cd8eeb2b524d597da6805dbdff28c313bc5346181f1859041320ee7
+      traits: Match the exact small Chespin source with its green spined hood, tan face, dark nose, pink
+        cheeks, visible little upper tooth, cream belly, short forearms and individually outlined feet.
+        Preserve its asymmetric source pose, mouth and toe tips instead of smoothing them away.
+    pokeapi:official-artwork:250:
+      sha256: 2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274
+      traits: Match the exact red, cream, yellow and green Ho-Oh source pose. Preserve its distinctly
+        lobed yellow-red head crest instead of flattening it into a fan, hooked beak, layered neck feathers,
+        individually patterned wing feathers and long separate colored tail feathers.
+    pokeapi:official-artwork:653:
+      sha256: b638e094ee06adcec959aad2898ce93f8c5fda88feba9c9158d1f16c026c07dd
+      traits: Match the exact yellow Fennekin source with its oversized pointed ears, flame-orange inner
+        ear fur, tiny dark nose, narrow bright eyes, cream cheek tufts, slim fox legs and bushy orange-tipped
+        tail. Keep the source's leg pose and face profile rather than a generic seated fox.
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns

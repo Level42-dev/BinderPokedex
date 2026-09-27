@@ -28,16 +28,16 @@ artwork:
     subject_clearance_ratio: 0.02
   scene:
     concept: the Black and White through XY Pokémon-EX era and its energetic journey
-    setting: The artwork contains a broad Unova-to-Kalos-inspired river valley with open grass,
-      layered woodland, pale distant cliffs, a graceful bridge, and a tiny modern skyline
-      with completely blank facades low on the horizon.
+    setting: The artwork contains a broad Unova-to-Kalos-inspired river valley with open grass, layered
+      woodland, pale distant cliffs, a graceful bridge, and a tiny modern skyline with completely blank
+      facades low on the horizon.
     lighting: Clear blue-gold afternoon light enters from the upper left.
-    rendering: Use polished 2010s trading-card illustration, crisp cel-painted linework, controlled
-      blue and gold accents, and deep readable perspective.
+    rendering: Use polished 2010s trading-card illustration, crisp cel-painted linework, controlled blue
+      and gold accents, and deep readable perspective.
     ground_noun: river grass
     constraints:
-    - Keep the bridge, skyline, cliffs, and other landmarks distant and away from the protected
-      subject silhouettes.
+    - Keep the bridge, skyline, cliffs, and other landmarks distant and away from the protected subject
+      silhouettes.
   generation:
     engine: flux
     model: flux-2-klein-4b.safetensors
@@ -47,12 +47,29 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260737078
+    reference_mode: spatial_source_detail_joint
+    seed: 260738087
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
+  source_details:
+    pokeapi:official-artwork:150:
+      sha256: b7c00037d7ba9fb5cebc2da42ca0da54c7b664f4d7b2348d60ade5c6dc9de256
+      traits: 'Match this exact Mewtwo source pose: pale humanoid body, distinct purple belly and long
+        purple tail, horn-like head projections, focused eye, narrow neck and the source''s individually
+        separated fingers on both hands. Preserve the extended hand structure; do not make mitten-like
+        hands.'
+    pokeapi:official-artwork:151:
+      sha256: 3e7b29103dae09d0f8e8ff889b1991bdf387a2c6328aacb93fc34e8962584e33
+      traits: Match the exact small pink Mew source with its rounded head, large blue eyes, tiny limbs,
+        pointed ears and very long thin curling tail. Keep its simple catlike silhouette and source pose,
+        not a larger feline body.
+    pokeapi:official-artwork:249:
+      sha256: f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30
+      traits: 'Match the exact white-and-blue Lugia source: narrow defined eye, long beak-like muzzle,
+        paired dark-blue dorsal plates, long neck and tail, and broad wing-arms with individually separated
+        fingertip feathers. Preserve the head profile and wing-finger count visible in the reference.'
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns

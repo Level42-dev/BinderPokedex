@@ -5,12 +5,18 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 from typing import Any
 
-from PIL import Image
+from PIL import Image, ImageChops
 
 try:
+    from .historical_review_import import require_historical_import
+    from .masked_fallback import decode_mask, encode_mask, outside_pixel_digest
+    from .generation_contract import is_grounded_generation
+    from .poster_config import build_grounded_prompt_snapshot
+    from .provenance import require_grounding_pixel_validation
     from .fetch_cutouts import (
         resolve_requested_count,
         select_pokemon,
@@ -20,6 +26,7 @@ try:
     from .generation_contract import (
         is_joint_scene_generation,
         requires_generation_fingerprint,
+        requires_visual_review,
         validate_promotable_generation_contract,
     )
     from .layout import (
@@ -40,6 +47,7 @@ try:
         require_exact_source_pixel_validation,
         require_joint_scene_visual_review,
         sha256_file,
+        verify_localized_overlay_approval,
     )
     from .poster_io import (
         POSTER_ASSETS,
@@ -54,6 +62,11 @@ try:
         subject_fingerprint_identity,
     )
 except ImportError:
+    from historical_review_import import require_historical_import
+    from masked_fallback import decode_mask, encode_mask, outside_pixel_digest
+    from generation_contract import is_grounded_generation
+    from poster_config import build_grounded_prompt_snapshot
+    from provenance import require_grounding_pixel_validation
     from fetch_cutouts import (
         resolve_requested_count,
         select_pokemon,
@@ -63,6 +76,7 @@ except ImportError:
     from generation_contract import (
         is_joint_scene_generation,
         requires_generation_fingerprint,
+        requires_visual_review,
         validate_promotable_generation_contract,
     )
     from layout import (
@@ -83,6 +97,7 @@ except ImportError:
         require_exact_source_pixel_validation,
         require_joint_scene_visual_review,
         sha256_file,
+        verify_localized_overlay_approval,
     )
     from poster_io import (
         POSTER_ASSETS,
@@ -109,6 +124,126 @@ POSTER_LANGUAGES = (
     "zh_hans",
     "zh_hant",
 )
+
+
+def _validate_masked_composition(payload: dict, bundle: PosterBundle, artwork_path: Path, layout) -> bool:
+    """Check durable H evidence without relying on ignored render artifacts."""
+    composition = payload.get("composition")
+    if not isinstance(composition, dict) or composition.get("kind") != "masked_fallback":
+        raise ValueError("Unsupported schema-3 poster composition")
+    run = payload["run"]
+    output = payload["outputs"]["artwork"]
+    for key in (
+        "base_artwork_sha256", "base_artwork_pixel_sha256",
+        "base_generation_fingerprint_sha256", "base_run_sha256",
+        "base_review_evidence_sha256", "combined_review_evidence_sha256",
+    ):
+        if not re.fullmatch(r"[0-9a-f]{64}", str(composition.get(key, ""))):
+            raise ValueError(f"Masked composition lacks {key}")
+    for key in ("sha256", "pixel_sha256"):
+        if not re.fullmatch(r"[0-9a-f]{64}", str(run.get("source_artwork", {}).get(key, ""))):
+            raise ValueError(f"Masked base source artwork lacks {key}")
+    if (
+        composition.get("base_artwork_sha256") != run.get("source_artwork", {}).get("sha256")
+        or composition.get("base_artwork_pixel_sha256") != run.get("source_artwork", {}).get("pixel_sha256")
+        or composition.get("base_generation_fingerprint_sha256")
+        != run.get("inputs", {}).get("generation_fingerprint", {}).get("sha256")
+    ):
+        raise ValueError("Masked base A evidence does not match the one-shot run")
+    actual_pixels = image_pixel_record(artwork_path)["pixel_sha256"]
+    if (
+        composition.get("final_artwork_sha256") != output.get("sha256")
+        or composition.get("final_artwork_pixel_sha256") != actual_pixels
+        or output.get("pixel_sha256") != actual_pixels
+    ):
+        raise ValueError("Masked final H differs from its accepted master")
+    if not str(composition.get("human_artwork_approval", "")).startswith("text_free_artwork_accepted_"):
+        raise ValueError("Masked final lacks human artwork acceptance")
+    logo = composition.get("title_logo_approval")
+    logo_file = bundle.manifest.get("title_logo", {}).get("files", {}).get("de")
+    if (
+        not isinstance(logo, dict)
+        or not str(logo.get("status", "")).startswith("accepted_")
+        or not isinstance(logo_file, str)
+        or not re.fullmatch(r"[0-9a-f]{64}", str(logo.get("logo_sha256", "")))
+        or not re.fullmatch(r"[0-9a-f]{64}", str(logo.get("logo_pixel_sha256", "")))
+        or not re.fullmatch(r"[0-9a-f]{64}", str(logo.get("accepted_preview_sha256", "")))
+    ):
+        raise ValueError("Masked final lacks exact accepted title-logo evidence")
+    current_logo = bundle.source_dir / logo_file
+    if (
+        current_logo.is_file()
+        and image_pixel_record(current_logo)["pixel_sha256"] != logo["logo_pixel_sha256"]
+    ):
+        raise ValueError("Accepted title logo source has drifted")
+    if bundle.pdf_enabled and not current_logo.is_file():
+        raise ValueError("Enabled masked poster lacks its title logo source")
+    if bundle.pdf_enabled:
+        for language, logo_file in bundle.manifest.get("title_logo", {}).get("files", {}).items():
+            if not isinstance(logo_file, str) or not (bundle.source_dir / logo_file).is_file():
+                raise FileNotFoundError(
+                    f"Enabled masked poster lacks {language} title logo source: {logo_file}"
+                )
+    with Image.open(artwork_path) as image:
+        union = decode_mask(composition.get("union_mask"))
+        if union.size != image.size or union.size != (layout.width_px, layout.height_px):
+            raise ValueError("Masked union dimensions differ from print canvas")
+        if encode_mask(union) != composition["union_mask"]:
+            raise ValueError("Masked union RLE is not canonical")
+        if outside_pixel_digest(image, union) != composition.get("outside_base_pixel_sha256"):
+            raise ValueError("Promoted artwork changed outside repair masks")
+    repairs = composition.get("repairs")
+    if not isinstance(repairs, list) or not repairs:
+        raise ValueError("Masked composition lacks repair evidence")
+    assembled = Image.new("L", union.size, 0)
+    edit_total = change_total = 0
+    for repair in repairs:
+        if not isinstance(repair, dict):
+            raise ValueError("Masked repair evidence is invalid")
+        for key in (
+            "mask_sha256", "full_artwork_sha256", "bounded_output_sha256",
+            "evidence_sha256", "run_sha256", "job_sha256",
+            "comfyui_log_sha256", "workflow_sha256",
+        ):
+            if not re.fullmatch(r"[0-9a-f]{64}", str(repair.get(key, ""))):
+                raise ValueError(f"Masked repair lacks {key}")
+        row, column = repair.get("row"), repair.get("column")
+        if type(row) is not int or type(column) is not int:
+            raise ValueError("Masked repair card coordinates are invalid")
+        cell = layout.cell(row, column)
+        mask = decode_mask(repair.get("mask"))
+        if mask.size != union.size or encode_mask(mask) != repair["mask"]:
+            raise ValueError("Masked repair RLE is invalid")
+        bounds = mask.getbbox()
+        if not bounds or (
+            bounds[0] < cell.x or bounds[1] < cell.y
+            or bounds[2] > cell.x + cell.width or bounds[3] > cell.y + cell.height
+        ):
+            raise ValueError("Masked repair lies outside its physical card")
+        if ImageChops.multiply(assembled, mask).getbbox():
+            raise ValueError("Masked repair regions overlap")
+        count = mask.histogram()[255]
+        changed = repair.get("changed_editable_pixels")
+        if (
+            repair.get("editable_pixels") != count
+            or type(changed) is not int or not 0 < changed <= count
+            or repair.get("changed_outside_mask_pixels") != 0
+        ):
+            raise ValueError("Masked repair pixel audit is inconsistent")
+        edit_total += count
+        change_total += changed
+        assembled = ImageChops.lighter(assembled, mask)
+    if (
+        assembled.tobytes() != union.tobytes()
+        or composition.get("editable_pixels") != edit_total
+        or composition.get("changed_editable_pixels") != change_total
+        or composition.get("changed_outside_mask_pixels") != 0
+    ):
+        raise ValueError("Masked union and repair audit disagree")
+    approved = verify_localized_overlay_approval(payload)
+    if bundle.pdf_enabled and not approved:
+        raise ValueError("Enabled masked poster lacks localized overlay approval")
+    return approved
 
 
 def enabled_poster_bundles(
@@ -304,7 +439,7 @@ def validate(target: str | PosterBundle) -> dict[str, Any]:
     provenance_path = scope_dir / provenance_file
     payload = json.loads(provenance_path.read_text(encoding="utf-8"))
     schema_version = payload.get("schema_version")
-    if schema_version not in {1, 2}:
+    if schema_version not in {1, 2, 3}:
         raise ValueError(
             f"Unsupported promoted provenance version: {provenance_path}"
         )
@@ -335,6 +470,7 @@ def validate(target: str | PosterBundle) -> dict[str, Any]:
             f"Generation metadata drift between {manifest_path} and "
             f"{provenance_path}"
         )
+    require_historical_import(bundle, payload.get("run", {}))
     run_inputs = payload.get("run", {}).get("inputs", {})
     if not isinstance(run_inputs, dict):
         raise ValueError(
@@ -379,7 +515,9 @@ def validate(target: str | PosterBundle) -> dict[str, Any]:
             recorded_generation
         )
         generation_pipeline_contract_status = (
-            "current"
+            "accepted_historical"
+            if payload.get("run", {}).get("historical_import") is not None
+            else "current"
             if generation_pipeline_contract_version == current_contract
             else "accepted_legacy"
         )
@@ -408,10 +546,18 @@ def validate(target: str | PosterBundle) -> dict[str, Any]:
             f"Missing promoted model hashes: {', '.join(missing_hashes)}"
         )
     is_joint_scene = is_joint_scene_generation(recorded_generation)
-    if is_joint_scene:
-        identity_validation = require_joint_scene_visual_review(
-            payload.get("run", {})
-        )
+    needs_visual_review = requires_visual_review(recorded_generation)
+    visual_validation = (
+        require_joint_scene_visual_review(payload.get("run", {}))
+        if needs_visual_review and schema_version != 3 else None
+    )
+    if is_grounded_generation(recorded_generation):
+        require_grounding_pixel_validation(payload.get("run", {}))
+    if schema_version == 3:
+        identity_validation = {"method": "human_masked_fallback_review"}
+        identity_pixels = None
+    elif is_joint_scene:
+        identity_validation = visual_validation
         identity_pixels = None
     else:
         identity_validation = require_exact_source_pixel_validation(
@@ -426,7 +572,9 @@ def validate(target: str | PosterBundle) -> dict[str, Any]:
             .get("prompt", {})
         )
         current_prompt = (
-            build_identity_lock_prompt(manifest, scope_data) + "\n"
+            (build_grounded_prompt_snapshot(manifest, scope_data)
+             if is_grounded_generation(recorded_generation)
+             else build_identity_lock_prompt(manifest, scope_data)) + "\n"
         ).encode("utf-8")
         current_prompt_hash = hashlib.sha256(current_prompt).hexdigest()
         if prompt_record.get("sha256") != current_prompt_hash:
@@ -468,19 +616,28 @@ def validate(target: str | PosterBundle) -> dict[str, Any]:
         outputs["artwork"],
         expected_path=promoted_artwork_path,
     )
-    if is_joint_scene:
+    if needs_visual_review and schema_version != 3:
         promoted_pixel_hash = image_pixel_record(
             artwork_path,
         )["pixel_sha256"]
         output_pixel_hash = outputs["artwork"].get("pixel_sha256")
         if (
             output_pixel_hash != promoted_pixel_hash
-            or identity_validation.get("reviewed_artwork_pixel_sha256")
+            or visual_validation.get("reviewed_artwork_pixel_sha256")
             != promoted_pixel_hash
         ):
             raise ValueError(
-                "Promoted joint-scene artwork no longer matches its reviewed "
+                "Promoted artwork no longer matches its reviewed "
                 "text-free pixels"
+            )
+    localized_overlay_approved = None
+    if schema_version == 3:
+        localized_overlay_approved = _validate_masked_composition(
+            payload, bundle, artwork_path, layout,
+        )
+        if bundle.pdf_enabled and overlay_fingerprint_current is not True:
+            raise ValueError(
+                "Enabled masked poster has overlay fingerprint drift since approval"
             )
     routed_artwork_path = bundle.asset_dir / bundle.artwork_file
     if artwork_path != routed_artwork_path:
@@ -588,6 +745,8 @@ def validate(target: str | PosterBundle) -> dict[str, Any]:
             generation_pipeline_contract_status
         ),
         "overlay_fingerprint_current": overlay_fingerprint_current,
+        "localized_overlay_approved": localized_overlay_approved,
+        "composition_kind": "masked_fallback" if schema_version == 3 else None,
     }
 
 

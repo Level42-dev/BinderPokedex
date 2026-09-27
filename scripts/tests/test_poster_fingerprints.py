@@ -1,14 +1,19 @@
 import copy
 import hashlib
 import json
+import shutil
+import subprocess
+import sys
 from dataclasses import replace
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 import yaml
 from PIL import Image
 
 from scripts.poster_assets import finalize_comfyui_poster as finalizer
+from scripts.poster_assets import masked_fallback
 from scripts.poster_assets import promote_comfyui_poster as promotion
 from scripts.poster_assets import provenance
 from scripts.poster_assets import validate_promoted_poster as validator
@@ -32,6 +37,7 @@ from scripts.poster_assets.provenance import (
     file_record,
     fingerprint_record_is_valid,
     generation_fingerprint_pipeline_contract_version,
+    image_pixel_record,
     load_run_metadata,
     required_model_artifact_hashes,
     require_joint_scene_visual_review,
@@ -803,8 +809,9 @@ def test_regional_joint_scene_input_records_do_not_include_a_cast(
     assert "source_pixel_audit_reference" not in records
 
 
-def test_joint_scene_human_review_is_bound_to_artwork_and_source_identities(
-    tmp_path,
+@pytest.mark.parametrize("reviewer_kind", ["human", "agent"])
+def test_joint_scene_review_is_bound_to_artwork_and_source_identities(
+    tmp_path, reviewer_kind,
 ):
     artwork_path = tmp_path / "artwork.png"
     raw_artwork_path = tmp_path / "raw.png"
@@ -865,8 +872,10 @@ def test_joint_scene_human_review_is_bound_to_artwork_and_source_identities(
         run,
         artwork_path=artwork_path,
         raw_artwork_path=raw_artwork_path,
+        reviewer_kind=reviewer_kind,
     )
 
+    assert record["method"] == f"{reviewer_kind}_identity_and_scene_review"
     assert record["passed"] is True
     assert record["criteria"] == list(JOINT_SCENE_REVIEW_CRITERIA)
     assert record["reviewed_artwork_sha256"] == artwork_record["sha256"]
@@ -893,6 +902,7 @@ def test_joint_scene_human_review_is_bound_to_artwork_and_source_identities(
             missing_raw_digest,
             artwork_path=artwork_path,
             raw_artwork_path=raw_artwork_path,
+            reviewer_kind=reviewer_kind,
         )
 
     stale_cutout_pixels = copy.deepcopy(run)
@@ -902,7 +912,24 @@ def test_joint_scene_human_review_is_bound_to_artwork_and_source_identities(
             stale_cutout_pixels,
             artwork_path=artwork_path,
             raw_artwork_path=raw_artwork_path,
+            reviewer_kind=reviewer_kind,
         )
+
+    for invalid_kind in (None, "", "automated"):
+        with pytest.raises(ValueError, match="reviewer kind"):
+            approve_joint_scene_visual_review(
+                copy.deepcopy(run),
+                artwork_path=artwork_path,
+                raw_artwork_path=raw_artwork_path,
+                reviewer_kind=invalid_kind,
+            )
+
+    unknown_review = copy.deepcopy(run)
+    unknown_review["validation"][JOINT_SCENE_REVIEW_KEY]["method"] = (
+        "automated_identity_and_scene_review"
+    )
+    with pytest.raises(ValueError, match="incomplete or stale"):
+        require_joint_scene_visual_review(unknown_review)
 
     run["source_artwork"]["sha256"] = "f" * 64
     with pytest.raises(ValueError, match="incomplete or stale"):
@@ -918,7 +945,7 @@ def test_joint_scene_human_review_is_bound_to_artwork_and_source_identities(
         )
 
 
-def test_joint_scene_cannot_promote_without_explicit_human_review():
+def test_joint_scene_cannot_promote_without_explicit_visual_review():
     with pytest.raises(ValueError, match="lacks explicit visual identity"):
         require_joint_scene_visual_review(
             {
@@ -934,6 +961,31 @@ def test_joint_scene_cannot_promote_without_explicit_human_review():
                 },
             }
         )
+
+
+def test_reaccepted_joint_scene_requires_hash_bound_historical_decision():
+    root = Path(__file__).resolve().parents[2]
+    run = json.loads(
+        (
+            root
+            / "assets/posters/Pokedex/sections/gen3/poster-flux2-provenance.json"
+        ).read_text(encoding="utf-8")
+    )["run"]
+    require_joint_scene_visual_review(run)
+
+    for change in ("missing_reacceptance", "wrong_master", "wrong_report", "wrong_history"):
+        damaged = copy.deepcopy(run)
+        review = damaged["validation"][JOINT_SCENE_REVIEW_KEY]
+        if change == "missing_reacceptance":
+            del review["reacceptance"]
+        elif change == "wrong_master":
+            review["reacceptance"]["accepted_master_sha256"] = "0" * 64
+        elif change == "wrong_report":
+            review["reacceptance"]["report_sha256"] = "0" * 64
+        else:
+            review["historical_reaudit_revocation"]["master_sha256"] = "0" * 64
+        with pytest.raises(ValueError, match="reacceptance"):
+            require_joint_scene_visual_review(damaged)
 
 
 @pytest.mark.parametrize(
@@ -1132,6 +1184,28 @@ def test_overlay_fingerprint_tracks_text_and_logo_but_not_pdf_routing(
     assert logo_changed["sha256"] != logo_original["sha256"]
 
 
+def test_month_override_changes_overlay_but_not_generation_fingerprint(tmp_path):
+    _repository, assets, output, _scope_dir, bundle = _write_fixture(tmp_path)
+    source_path = output / "Example.json"
+    source = load_json(source_path)
+    source["release_date"] = "1999-06-16"
+    source_path.write_text(json.dumps(source), encoding="utf-8")
+    original_overlay = build_overlay_fingerprint(bundle, poster_assets=assets, scope_data_dir=output)
+    original_generation = build_generation_fingerprint(bundle, poster_assets=assets, scope_data_dir=output)
+    manifest = copy.deepcopy(bundle.manifest)
+    manifest["text_content"] = {
+        "mode": "set_summary",
+        "release_date_overrides": {"de": {"value": "2000-06", "precision": "month"}},
+    }
+    changed = _with_manifest(bundle, manifest)
+    changed_overlay = build_overlay_fingerprint(changed, poster_assets=assets, scope_data_dir=output)
+    changed_generation = build_generation_fingerprint(changed, poster_assets=assets, scope_data_dir=output)
+    assert changed_overlay["sha256"] != original_overlay["sha256"]
+    assert changed_overlay["components"]["languages"]["de"]["information"][-1] == "Juni 2000"
+    assert changed_overlay["components"]["languages"]["en"]["information"][-1] == "June 16, 1999"
+    assert changed_generation["sha256"] == original_generation["sha256"]
+
+
 def test_overlay_fingerprint_tracks_the_rendering_contract(
     tmp_path,
     monkeypatch,
@@ -1218,6 +1292,49 @@ def test_load_run_metadata_accepts_promoted_provenance_for_overlay_refresh(
     )
 
     assert load_run_metadata(provenance_path, artwork) == run
+
+
+@pytest.mark.parametrize(
+    "case",
+    ["same_pixels", "changed_pixels", "wrong_output_hash", "missing_output", "new_run"],
+)
+def test_overlay_refresh_accepts_only_registered_pixel_identical_reencoding(
+    tmp_path, case,
+):
+    original = tmp_path / "original.png"
+    promoted = tmp_path / "promoted.png"
+    image = Image.new("RGB", (10, 10), (20, 30, 40))
+    image.save(original, compress_level=0)
+    if case == "changed_pixels":
+        image.putpixel((0, 0), (200, 30, 40))
+    image.save(promoted, compress_level=9)
+    assert sha256_file(original) != sha256_file(promoted)
+    run = {
+        "schema_version": 1,
+        "kind": "poster_generation_run",
+        "source_artwork": file_record(original, image=True),
+    }
+    output = file_record(promoted, image=True)
+    if case == "wrong_output_hash":
+        output["sha256"] = "0" * 64
+    payload = {
+        "schema_version": 1,
+        "kind": "promoted_poster",
+        "run": run,
+        "outputs": {"artwork": output},
+    }
+    if case == "missing_output":
+        payload.pop("outputs")
+    elif case == "new_run":
+        payload = run
+    path = tmp_path / "provenance.json"
+    path.write_text(json.dumps(payload), encoding="utf-8")
+
+    if case == "same_pixels":
+        assert load_run_metadata(path, promoted) == run
+    else:
+        with pytest.raises(ValueError):
+            load_run_metadata(path, promoted)
 
 
 def _promotion_fixture(
@@ -1432,9 +1549,410 @@ def _promotion_fixture(
     )
 
 
+def _masked_promotion_fixture(tmp_path: Path, monkeypatch):
+    generation = copy.deepcopy(_manifest()["artwork"]["generation"])
+    generation.update(
+        mode="joint_scene", reference_mode="spatial_identity_joint",
+        output_method="lanczos", output_dpi=300,
+    )
+    for key in ("output_megapixels", "upscale_model", "upscale_model_sha256"):
+        generation.pop(key, None)
+    repository, assets, output, scope_dir, base_artwork, old_run, _ = _promotion_fixture(
+        tmp_path, monkeypatch, generation_override=generation,
+    )
+    monkeypatch.setattr(masked_fallback, "ROOT", repository, raising=False)
+    monkeypatch.setattr(masked_fallback, "build_generation_output_layout", lambda *_args: build_print_layout("standard_3x3", 10))
+    manifest = yaml.safe_load((scope_dir / "poster.yaml").read_text(encoding="utf-8"))
+    manifest["title_logo"] = {"files": {"de": "logo.png"}}
+    manifest["pdf"]["enabled"] = False
+    (scope_dir / "poster.yaml").write_text(yaml.safe_dump(manifest), encoding="utf-8")
+    base_run = repository / "base.run.json"
+    shutil.copy2(old_run, base_run)
+    layout = build_print_layout("standard_3x3", 10)
+    base = Image.open(base_artwork).convert("RGB")
+    final = base.copy()
+    repair_inputs = []
+    for name, column, color in (("pikachu", 1, (200, 30, 20)), ("eevee", 3, (20, 30, 200))):
+        cell = layout.cell(3, column)
+        point = (cell.x + 1, cell.y + 1)
+        repair = base.copy()
+        repair.putpixel(point, color)
+        final.putpixel(point, color)
+        job_dir = repository / "tmp" / f"{name}-job"
+        (job_dir / "input").mkdir(parents=True)
+        (job_dir / "output").mkdir()
+        mask = Image.new("RGBA", (cell.width, cell.height), (0, 0, 0, 255))
+        mask.putpixel((1, 1), (0, 0, 0, 0))
+        mask_path = job_dir / "input" / "repair-mask.png"
+        mask.save(mask_path)
+        original_path = job_dir / "input" / "original-card-padded.png"
+        base.crop((cell.x, cell.y, cell.x + cell.width, cell.y + cell.height)).save(original_path)
+        bounded_path = job_dir / "output" / "bounded.png"
+        repair.crop((cell.x, cell.y, cell.x + cell.width, cell.y + cell.height)).save(bounded_path)
+        workflow_path = job_dir / "workflow_api.json"
+        workflow_path.write_text("{}", encoding="utf-8")
+        input_records = [
+            {"path": "original-card-padded.png", "sha256": sha256_file(original_path)},
+            {"path": "repair-mask.png", "sha256": sha256_file(mask_path)},
+        ]
+        model_records = [
+            {"path": generation[key], "sha256": generation[f"{key}_sha256"]}
+            for key in ("model", "encoder", "vae")
+        ]
+        job = {
+            "inputs": input_records, "models": model_records,
+            "workflow": {"path": "workflow_api.json", "sha256": sha256_file(workflow_path)},
+        }
+        (job_dir / "job.json").write_text(json.dumps(job), encoding="utf-8")
+        run = {
+            "inputs": input_records, "models": model_records,
+            "workflow_sha256": sha256_file(workflow_path),
+            "outputs": [{"path": "bounded.png", "sha256": sha256_file(bounded_path)}],
+        }
+        (job_dir / "run.json").write_text(json.dumps(run), encoding="utf-8")
+        (job_dir / "comfyui.log").write_text("render completed\n", encoding="utf-8")
+        repair_path = repository / f"{name}-repair.png"
+        repair.save(repair_path, dpi=(300, 300))
+        evidence_path = repository / f"{name}-evidence.json"
+        evidence_path.write_text(json.dumps({
+            "master": {"sha256": sha256_file(repair_path)},
+            "pixel_audit": {"editable_pixels": 1, "changed_editable_pixels": 1,
+                            "changed_outside_mask_pixels": 0},
+        }), encoding="utf-8")
+        repair_inputs.append({
+            "reason": f"foreground {name}", "row": 3, "column": column,
+            "padding_origin": "top_left",
+            "bounded_output": "bounded.png",
+            "mask": mask_path.relative_to(repository).as_posix(),
+            "artwork": repair_path.relative_to(repository).as_posix(),
+            "job_dir": job_dir.relative_to(repository).as_posix(),
+            "evidence": evidence_path.relative_to(repository).as_posix(),
+            "approval_mask_key": f"{name}_repair_mask_sha256",
+            "approval_evidence_key": f"{name}_repair_evidence_sha256",
+            "expected_sha256": {
+                "run": sha256_file(job_dir / "run.json"),
+                "job": sha256_file(job_dir / "job.json"),
+                "log": sha256_file(job_dir / "comfyui.log"),
+                "bounded_output": sha256_file(bounded_path),
+                "mask": sha256_file(mask_path),
+                "artwork": sha256_file(repair_path),
+                "evidence": sha256_file(evidence_path),
+            },
+        })
+    final_path = repository / "accepted-h.png"
+    final.save(final_path, dpi=(300, 300))
+    old_preview = repository / "old-preview.png"
+    final.save(old_preview)
+    base_evidence = repository / "base-evidence.json"
+    base_evidence.write_text(json.dumps({"master": {"sha256": sha256_file(base_artwork)}}), encoding="utf-8")
+    combined_evidence = repository / "combined-evidence.json"
+    combined_evidence.write_text(json.dumps({
+        "master": {"sha256": sha256_file(final_path)},
+        "combined_pixel_audit": {"editable_pixels": 2, "changed_editable_pixels": 2,
+                                 "changed_outside_mask_pixels": 0},
+    }), encoding="utf-8")
+    review_path = repository / "assets" / "review-pending" / "example-h" / "review-provenance.json"
+    review_path.parent.mkdir(parents=True)
+    review = {
+        "scope": "Example", "candidate": "H",
+        "artwork_sha256": sha256_file(final_path),
+        "one_shot_master_sha256": sha256_file(base_artwork),
+        "one_shot_trial_evidence_sha256": sha256_file(base_evidence),
+        "combined_review_evidence_sha256": sha256_file(combined_evidence),
+        "pixel_audit": {"editable_pixels": 2, "changed_editable_pixels": 2,
+                        "changed_outside_mask_pixels": 0},
+        "human_approval": "text_free_artwork_accepted_2026-09-25",
+        "title_logo_approval": {
+            "status": "accepted_2026-09-25",
+            "logo_sha256": sha256_file(scope_dir / "logo.png"),
+            "german_preview_sha256": sha256_file(old_preview),
+        },
+        "localized_overlay_approval": "pending",
+    }
+    for item in repair_inputs:
+        review[item["approval_mask_key"]] = sha256_file(repository / item["mask"])
+        review[item["approval_evidence_key"]] = sha256_file(repository / item["evidence"])
+    review_path.write_text(json.dumps(review), encoding="utf-8")
+    input_path = repository / "promotion-input.json"
+    input_path.write_text(json.dumps({
+        "schema_version": 1, "kind": "masked_fallback",
+        "base_run": base_run.relative_to(repository).as_posix(),
+        "base_artwork": base_artwork.relative_to(repository).as_posix(),
+        "base_evidence": base_evidence.relative_to(repository).as_posix(),
+        "combined_evidence": combined_evidence.relative_to(repository).as_posix(),
+        "review_provenance": review_path.relative_to(repository).as_posix(),
+        "accepted_logo_preview": old_preview.relative_to(repository).as_posix(),
+        "repairs": repair_inputs,
+    }), encoding="utf-8")
+    return SimpleNamespace(
+        repository=repository, assets=assets, scope_dir=scope_dir,
+        base_run=base_run, base_artwork=base_artwork, final=final_path,
+        input=input_path, review=review_path, old_preview=old_preview,
+        repair_inputs=repair_inputs,
+        base_sha256=sha256_file(base_artwork),
+    )
+
+
+def test_masked_promotion_records_distinct_one_shot_and_accepted_final(tmp_path, monkeypatch):
+    fixture = _masked_promotion_fixture(tmp_path, monkeypatch)
+    artwork, _preview, _cards, provenance_path = promotion.promote(
+        "Example", fixture.final, language="de",
+        run_metadata_path=fixture.base_run,
+        composition_input_path=fixture.input,
+    )
+    stored = json.loads(provenance_path.read_text(encoding="utf-8"))
+    assert stored["schema_version"] == 3
+    assert stored["run"]["source_artwork"]["sha256"] == fixture.base_sha256
+    assert stored["composition"]["kind"] == "masked_fallback"
+    assert stored["composition"]["title_logo_approval"]["logo_pixel_sha256"] == image_pixel_record(
+        fixture.scope_dir / "logo.png"
+    )["pixel_sha256"]
+    assert stored["composition"]["final_artwork_sha256"] == sha256_file(fixture.final)
+    assert stored["outputs"]["artwork"]["sha256"] == sha256_file(fixture.final)
+    assert stored["outputs"]["artwork"]["pixel_sha256"] == image_pixel_record(artwork)["pixel_sha256"]
+    result = validator.validate("Example")
+    assert result["identity_validation_method"] == "human_masked_fallback_review"
+    assert result["localized_overlay_approved"] is False
+
+
+def test_masked_poster_accepts_reencoded_same_pixel_logo(tmp_path, monkeypatch):
+    fixture = _masked_promotion_fixture(tmp_path, monkeypatch)
+    promotion.promote(
+        "Example", fixture.final, language="de",
+        run_metadata_path=fixture.base_run, composition_input_path=fixture.input,
+    )
+    logo_path = fixture.scope_dir / "logo.png"
+    approved_sha256 = sha256_file(logo_path)
+    with Image.open(logo_path) as image:
+        pixels = image.convert("RGBA")
+    pixels.save(logo_path, format="PNG", compress_level=0)
+    assert sha256_file(logo_path) != approved_sha256
+
+    assert validator.validate("Example")["identity_validation_method"] == "human_masked_fallback_review"
+
+    pixels.putpixel((0, 0), (1, 2, 3, 255))
+    pixels.save(logo_path, format="PNG", compress_level=0)
+    with pytest.raises(ValueError, match="Accepted title logo source has drifted"):
+        validator.validate("Example")
+
+
+def test_masked_promotion_rejects_changed_accepted_logo_preview_before_replacement(tmp_path, monkeypatch):
+    fixture = _masked_promotion_fixture(tmp_path, monkeypatch)
+    artwork, _preview, _cards, provenance_path = promotion.promote(
+        "Example", fixture.final, language="de",
+        run_metadata_path=fixture.base_run, composition_input_path=fixture.input,
+    )
+    stable_hash = sha256_file(artwork)
+    stable_provenance = provenance_path.read_bytes()
+    with Image.open(fixture.old_preview) as loaded:
+        changed = loaded.copy()
+    changed.putpixel((0, 0), (1, 2, 3))
+    changed.save(fixture.old_preview)
+    with pytest.raises(ValueError, match="logo preview"):
+        promotion.promote(
+            "Example", fixture.final, language="de", force=True,
+            run_metadata_path=fixture.base_run, composition_input_path=fixture.input,
+        )
+    assert sha256_file(artwork) == stable_hash
+    assert provenance_path.read_bytes() == stable_provenance
+
+
+def test_masked_validation_and_overlay_refresh_need_no_ignored_render_jobs(tmp_path, monkeypatch):
+    fixture = _masked_promotion_fixture(tmp_path, monkeypatch)
+    artwork, _preview, _cards, provenance_path = promotion.promote(
+        "Example", fixture.final, language="de",
+        run_metadata_path=fixture.base_run, composition_input_path=fixture.input,
+    )
+    accepted_h_sha = sha256_file(artwork)
+    original = json.loads(provenance_path.read_text(encoding="utf-8"))
+    shutil.rmtree(fixture.repository / "tmp")
+    for path in (fixture.base_run, fixture.base_artwork, fixture.final, fixture.old_preview):
+        path.unlink()
+    assert validator.validate("Example")["localized_overlay_approved"] is False
+    manifest_path = fixture.scope_dir / "poster.yaml"
+    manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+    manifest["text_cells"]["set_info"]["max_width_ratio"] = 0.85
+    manifest_path.write_text(yaml.safe_dump(manifest), encoding="utf-8")
+    assert validator.validate("Example")["overlay_fingerprint_current"] is False
+    promotion.promote(
+        "Example", artwork, language="de", force=True,
+        run_metadata_path=provenance_path,
+    )
+    refreshed = json.loads(provenance_path.read_text(encoding="utf-8"))
+    assert sha256_file(artwork) == accepted_h_sha
+    assert refreshed["run"]["source_artwork"]["sha256"] == fixture.base_sha256
+    assert refreshed["composition"]["outside_base_pixel_sha256"] == original["composition"]["outside_base_pixel_sha256"]
+    assert refreshed["composition"]["overlay_fingerprint_sha256"] != original["composition"]["overlay_fingerprint_sha256"]
+    assert validator.validate("Example")["overlay_fingerprint_current"] is True
+
+
+def test_masked_promotion_rejects_mutated_job_metadata_before_replacement(tmp_path, monkeypatch):
+    fixture = _masked_promotion_fixture(tmp_path, monkeypatch)
+    artwork, _preview, _cards, provenance_path = promotion.promote(
+        "Example", fixture.final, language="de",
+        run_metadata_path=fixture.base_run, composition_input_path=fixture.input,
+    )
+    stable_provenance = provenance_path.read_bytes()
+    job_dir = fixture.repository / fixture.repair_inputs[0]["job_dir"]
+    job_path = job_dir / "job.json"
+    job = json.loads(job_path.read_text(encoding="utf-8"))
+    job["irrelevant_annotation"] = "unreviewed replacement"
+    job_path.write_text(json.dumps(job), encoding="utf-8")
+    with pytest.raises(ValueError, match="job hash"):
+        promotion.promote(
+            "Example", fixture.final, language="de", force=True,
+            run_metadata_path=fixture.base_run, composition_input_path=fixture.input,
+        )
+    assert provenance_path.read_bytes() == stable_provenance
+    assert sha256_file(artwork) == sha256_file(fixture.final)
+
+
+def test_masked_promotion_rejects_false_repair_pixel_evidence(tmp_path, monkeypatch):
+    fixture = _masked_promotion_fixture(tmp_path, monkeypatch)
+    artwork, _preview, _cards, provenance_path = promotion.promote(
+        "Example", fixture.final, language="de",
+        run_metadata_path=fixture.base_run, composition_input_path=fixture.input,
+    )
+    stable_provenance = provenance_path.read_bytes()
+    repair_input = fixture.repair_inputs[0]
+    evidence_path = fixture.repository / repair_input["evidence"]
+    evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+    evidence["pixel_audit"]["changed_editable_pixels"] = 0
+    evidence_path.write_text(json.dumps(evidence), encoding="utf-8")
+    promotion_input = json.loads(fixture.input.read_text(encoding="utf-8"))
+    promotion_input["repairs"][0]["expected_sha256"]["evidence"] = sha256_file(evidence_path)
+    fixture.input.write_text(json.dumps(promotion_input), encoding="utf-8")
+    review = json.loads(fixture.review.read_text(encoding="utf-8"))
+    review[repair_input["approval_evidence_key"]] = sha256_file(evidence_path)
+    fixture.review.write_text(json.dumps(review), encoding="utf-8")
+    with pytest.raises(ValueError, match="Repair pixel audit"):
+        promotion.promote(
+            "Example", fixture.final, language="de", force=True,
+            run_metadata_path=fixture.base_run, composition_input_path=fixture.input,
+        )
+    assert provenance_path.read_bytes() == stable_provenance
+    assert sha256_file(artwork) == sha256_file(fixture.final)
+
+
+@pytest.mark.parametrize(
+    ("damage", "message"),
+    [
+        ("missing_log", "comfyui.log"),
+        ("human_approval", "human approval"),
+        ("generation_seed", "generation does not match"),
+        ("outside_repair", "outside"),
+    ],
+)
+def test_masked_promotion_failures_preserve_existing_master(
+    tmp_path, monkeypatch, damage, message,
+):
+    fixture = _masked_promotion_fixture(tmp_path, monkeypatch)
+    artwork, _preview, _cards, provenance_path = promotion.promote(
+        "Example", fixture.final, language="de",
+        run_metadata_path=fixture.base_run, composition_input_path=fixture.input,
+    )
+    original_artwork = artwork.read_bytes()
+    original_provenance = provenance_path.read_bytes()
+    if damage == "missing_log":
+        (fixture.repository / fixture.repair_inputs[0]["job_dir"] / "comfyui.log").unlink()
+    elif damage == "human_approval":
+        review = json.loads(fixture.review.read_text(encoding="utf-8"))
+        review["human_approval"] = "pending"
+        fixture.review.write_text(json.dumps(review), encoding="utf-8")
+    elif damage == "generation_seed":
+        manifest_path = fixture.scope_dir / "poster.yaml"
+        manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+        manifest["artwork"]["generation"]["seed"] += 1
+        manifest_path.write_text(yaml.safe_dump(manifest), encoding="utf-8")
+    else:
+        repair_input = fixture.repair_inputs[0]
+        repair_path = fixture.repository / repair_input["artwork"]
+        with Image.open(repair_path) as loaded:
+            changed = loaded.copy()
+        changed.putpixel((0, 0), (41, 120, 80))
+        changed.save(repair_path, dpi=(300, 300))
+        evidence_path = fixture.repository / repair_input["evidence"]
+        evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+        evidence["master"]["sha256"] = sha256_file(repair_path)
+        evidence_path.write_text(json.dumps(evidence), encoding="utf-8")
+        promotion_input = json.loads(fixture.input.read_text(encoding="utf-8"))
+        promotion_input["repairs"][0]["expected_sha256"]["artwork"] = sha256_file(repair_path)
+        promotion_input["repairs"][0]["expected_sha256"]["evidence"] = sha256_file(evidence_path)
+        fixture.input.write_text(json.dumps(promotion_input), encoding="utf-8")
+        review = json.loads(fixture.review.read_text(encoding="utf-8"))
+        review[repair_input["approval_evidence_key"]] = sha256_file(evidence_path)
+        fixture.review.write_text(json.dumps(review), encoding="utf-8")
+    with pytest.raises((ValueError, FileNotFoundError), match=message):
+        promotion.promote(
+            "Example", fixture.final, language="de", force=True,
+            run_metadata_path=fixture.base_run, composition_input_path=fixture.input,
+        )
+    assert artwork.read_bytes() == original_artwork
+    assert provenance_path.read_bytes() == original_provenance
+
+
+def test_masked_validator_detects_single_outside_pixel_after_reencoding(tmp_path, monkeypatch):
+    fixture = _masked_promotion_fixture(tmp_path, monkeypatch)
+    artwork, _preview, _cards, provenance_path = promotion.promote(
+        "Example", fixture.final, language="de",
+        run_metadata_path=fixture.base_run, composition_input_path=fixture.input,
+    )
+    with Image.open(artwork) as loaded:
+        changed = loaded.convert("RGB")
+    changed.putpixel((0, 0), (41, 120, 80))
+    changed.save(artwork, dpi=(300, 300), optimize=True)
+    stored = json.loads(provenance_path.read_text(encoding="utf-8"))
+    current = file_record(artwork, image=True)
+    stored["outputs"]["artwork"].update(current)
+    stored["composition"]["final_artwork_sha256"] = current["sha256"]
+    stored["composition"]["final_artwork_pixel_sha256"] = current["pixel_sha256"]
+    provenance_path.write_text(json.dumps(stored), encoding="utf-8")
+    with pytest.raises(ValueError, match="outside repair masks"):
+        validator.validate("Example")
+
+
+def test_masked_pdf_gate_needs_exact_human_overlay_hashes(tmp_path, monkeypatch):
+    fixture = _masked_promotion_fixture(tmp_path, monkeypatch)
+    _artwork, _preview, _cards, provenance_path = promotion.promote(
+        "Example", fixture.final, language="de",
+        run_metadata_path=fixture.base_run, composition_input_path=fixture.input,
+    )
+    manifest_path = fixture.scope_dir / "poster.yaml"
+    manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+    manifest["pdf"]["enabled"] = True
+    manifest_path.write_text(yaml.safe_dump(manifest), encoding="utf-8")
+    with pytest.raises(ValueError, match="localized overlay approval"):
+        validator.validate("Example")
+    stored = json.loads(provenance_path.read_text(encoding="utf-8"))
+    composition = stored["composition"]
+    composition["localized_overlay_approval"] = {
+        "status": "accepted", "reviewer_kind": "human",
+        "preview_sha256": "0" * 64,
+        "overlay_fingerprint_sha256": composition["overlay_fingerprint_sha256"],
+    }
+    provenance_path.write_text(json.dumps(stored), encoding="utf-8")
+    with pytest.raises(ValueError, match="localized overlay approval"):
+        validator.validate("Example")
+    composition["localized_overlay_approval"]["preview_sha256"] = composition["preview_sha256"]
+    provenance_path.write_text(json.dumps(stored), encoding="utf-8")
+    assert validator.validate("Example")["localized_overlay_approved"] is True
+
+
+def test_poster_promotion_direct_script_help_remains_available():
+    root = Path(__file__).resolve().parents[2]
+    result = subprocess.run(
+        [sys.executable, str(root / "scripts/poster_assets/promote_comfyui_poster.py"), "--help"],
+        cwd=root, capture_output=True, text=True, check=False,
+    )
+    assert result.returncode == 0, result.stderr
+    assert "--composition-input" in result.stdout
+
+
+@pytest.mark.parametrize("reviewer_kind", ["human", "agent"])
 def test_joint_scene_requires_review_then_promotes_and_validates(
     tmp_path,
     monkeypatch,
+    reviewer_kind,
 ):
     generation = copy.deepcopy(_manifest()["artwork"]["generation"])
     generation.update(
@@ -1470,10 +1988,17 @@ def test_joint_scene_requires_review_then_promotes_and_validates(
             run_metadata_path=run_metadata,
         )
 
+    with pytest.raises(ValueError, match="reviewer kind"):
+        promotion.promote(
+            "Example", candidate, approve_joint_scene=True,
+            run_metadata_path=run_metadata,
+        )
+
     artwork, _preview, _cards, provenance_path = promotion.promote(
         "Example",
         candidate,
         approve_joint_scene=True,
+        reviewer_kind=reviewer_kind,
         run_metadata_path=run_metadata,
     )
     promoted = load_json(provenance_path)
@@ -1484,7 +2009,7 @@ def test_joint_scene_requires_review_then_promotes_and_validates(
     result = validator.validate("Example")
     assert result["generation_fingerprint_current"] is True
     assert result["identity_validation_method"] == (
-        "human_identity_and_scene_review"
+        f"{reviewer_kind}_identity_and_scene_review"
     )
 
     promoted["run"]["inputs"].pop("generation_fingerprint")

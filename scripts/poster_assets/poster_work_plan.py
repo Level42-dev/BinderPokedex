@@ -22,8 +22,7 @@ try:
     from .fetch_cutouts import (
         cutout_filename,
         resolve_requested_count,
-        scope_featured_elements,
-        unique_by_poster_subject,
+        select_pokemon,
         validate_png,
     )
     from .fetch_title_logos import resolve_logo_downloads
@@ -70,8 +69,7 @@ except ImportError:  # Direct script execution
     from fetch_cutouts import (
         cutout_filename,
         resolve_requested_count,
-        scope_featured_elements,
-        unique_by_poster_subject,
+        select_pokemon,
         validate_png,
     )
     from fetch_title_logos import resolve_logo_downloads
@@ -381,6 +379,15 @@ def _contains_catalog_contract(
             and _contains_catalog_contract(configured[key], value)
             for key, value in expected.items()
         )
+    if isinstance(expected, list):
+        return (
+            isinstance(configured, list)
+            and len(configured) >= len(expected)
+            and all(
+                _contains_catalog_contract(actual, required)
+                for actual, required in zip(configured, expected)
+            )
+        )
     return configured == expected
 
 
@@ -545,22 +552,10 @@ def _expected_subject_identities(
         str(manifest.get("layout", {}).get("name", "standard_3x3"))
     )
     count = resolve_requested_count(manifest, layout)
-    selected = unique_by_poster_subject(scope_featured_elements(scope_data))
-    fallback = manifest.get("pokemon", {}).get("fallback_candidates", [])
-    for candidate in fallback:
-        if isinstance(candidate, dict) and isinstance(
-            candidate.get("pokemon_id"), int
-        ):
-            selected.append(dict(candidate))
-    selected = unique_by_poster_subject(selected)
-    if len(selected) < count:
-        raise ValueError(
-            f"Layout needs {count} Pokemon, but only {len(selected)} "
-            "were resolved"
-        )
+    selected = select_pokemon(manifest, scope_data, count, {})
     return [
         resolve_poster_subject(item).selection_key()
-        for item in selected[:count]
+        for item in selected
     ], layout
 
 
@@ -777,7 +772,7 @@ def _promotion_drift_codes(
     overlay_drift: list[str] = []
     pipeline_notes: list[str] = []
     if (
-        provenance.get("schema_version") not in {1, 2}
+        provenance.get("schema_version") not in {1, 2, 3}
         or provenance.get("kind") != "promoted_poster"
         or provenance.get("scope") != bundle.asset_key
     ):
@@ -903,7 +898,11 @@ def _promotion_drift_codes(
                     recorded_generation
                 )
             ):
-                pipeline_notes.append("accepted_legacy_pipeline")
+                pipeline_notes.append(
+                    "approved_historical_import"
+                    if run.get("historical_import")
+                    else "accepted_legacy_pipeline"
+                )
     elif not manifest_matches and not drift:
         # A legacy full-manifest mismatch could be only pdf/title/overlay
         # routing, but could equally be an old identity-lock/conditioning
@@ -1156,6 +1155,13 @@ def _plan_bundle(
         and not pipeline_notes
     ):
         pipeline_notes = ["accepted_legacy_pipeline"]
+    if (
+        isinstance(validation_result, dict)
+        and validation_result.get("generation_pipeline_contract_status")
+        == "accepted_historical"
+        and not pipeline_notes
+    ):
+        pipeline_notes = ["approved_historical_import"]
     overlay_actions = (
         ("refresh_promoted_overlay",)
         if overlay_drift
@@ -1163,8 +1169,16 @@ def _plan_bundle(
     )
     pipeline_actions = (
         ("upgrade_generation_pipeline",)
-        if pipeline_notes
+        if "accepted_legacy_pipeline" in pipeline_notes
         else ()
+    )
+    masked_fallback = (
+        isinstance(validation_result, dict)
+        and validation_result.get("composition_kind") == "masked_fallback"
+    )
+    localized_overlay_pending = (
+        masked_fallback
+        and validation_result.get("localized_overlay_approved") is False
     )
     if bundle.pdf_enabled:
         return WorkItem(
@@ -1173,6 +1187,7 @@ def _plan_bundle(
             reason_codes=_unique(
                 (
                     "promotion_current",
+                    "masked_fallback" if masked_fallback else "",
                     "pdf_enabled",
                     *overlay_drift,
                     *pipeline_notes,
@@ -1186,7 +1201,9 @@ def _plan_bundle(
         reason_codes=_unique(
             (
                 "promotion_current",
+                "masked_fallback" if masked_fallback else "",
                 "pdf_disabled",
+                "localized_overlay_pending" if localized_overlay_pending else "",
                 *overlay_drift,
                 *pipeline_notes,
             )
@@ -1194,6 +1211,7 @@ def _plan_bundle(
         next_actions=(
             *overlay_actions,
             *pipeline_actions,
+            *(("review_localized_overlay",) if localized_overlay_pending else ()),
             "enable_pdf_after_review",
         ),
     )

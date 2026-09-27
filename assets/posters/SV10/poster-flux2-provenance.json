@@ -3,7 +3,7 @@
   "kind": "promoted_poster",
   "outputs": {
     "artwork": {
-      "bytes": 6454123,
+      "bytes": 7981450,
       "dpi": [
         299.9994,
         299.9994
@@ -11,28 +11,28 @@
       "file": "assets/posters/SV10/poster-flux2-artwork.png",
       "height": 3268,
       "mode": "RGBA",
-      "pixel_sha256": "19c52bc7aba7fb00439a1b7eef1accbc3fc025218b9e60496178be6c8cd46233",
-      "sha256": "d58e13869502dc2e399d9acec2023ae25fd7cf0b10d25d7d6f83d7f1b0a60d18",
+      "pixel_sha256": "8ad0d5dcc22848c5a139f3b0d43d3587d21ce703f1e9208fb681d42846463a1a",
+      "sha256": "79ef9332fd67b1e368f127f5cce64055d35363705b9fdd395d0f0404c7dadbdd",
       "width": 2368
     }
   },
   "poster_id": "SV10",
-  "promoted_at": "2026-08-06T23:54:44.253192+00:00",
-  "review_language": "en",
+  "promoted_at": "2026-09-24T07:11:38.621113+00:00",
+  "review_language": "de",
   "run": {
-    "created_at": "2026-08-06T19:01:19.731224+00:00",
+    "created_at": "2026-09-22T21:29:35.003957+00:00",
     "generation": {
       "encoder": "qwen_3_4b.safetensors",
       "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
       "engine": "flux",
-      "generation_megapixels": 1.0,
+      "generation_megapixels": 2.0,
       "mode": "joint_scene",
       "model": "flux-2-klein-4b.safetensors",
       "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
       "output_dpi": 300,
       "output_method": "lanczos",
-      "reference_mode": "individual_spatial_joint",
-      "seed": 260773151,
+      "reference_mode": "spatial_source_detail_joint",
+      "seed": 260774160,
       "steps": 4,
       "vae": "flux2-vae.safetensors",
       "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
@@ -41,7 +41,7 @@
       "cutout_manifest": {
         "bytes": 1722,
         "file": "tmp/poster-workspaces/SV10/sources/cutouts/manifest.json",
-        "sha256": "f6d6d4a452b578a820fc9763a533852f8a67c1d7979fa3943e62349c50d9fce7"
+        "sha256": "03b0b5af9b522d1179d04211df877cb6919ed76f1c2ccb4a85463fce5fc7dcca"
       },
       "cutouts": [
         {
@@ -99,68 +99,69 @@
           ],
           "effective_prompt": {
             "encoding": "utf-8",
-            "sha256": "42721b28039e79c5018f9f00fbedd647be98b574892b223dd33914fb0734c5de"
+            "sha256": "544f6dbfbfd47a9ac95f994abc9022c221bc0cf4966a17c3c47bc2f74b62d03a"
           },
           "generation": {
             "encoder": "qwen_3_4b.safetensors",
             "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
             "engine": "flux",
-            "generation_megapixels": 1.0,
+            "generation_megapixels": 2.0,
             "mode": "joint_scene",
             "model": "flux-2-klein-4b.safetensors",
             "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
             "output_dpi": 300,
             "output_method": "lanczos",
-            "reference_mode": "individual_spatial_joint",
-            "seed": 260773151,
+            "reference_mode": "spatial_source_detail_joint",
+            "seed": 260774160,
             "steps": 4,
             "vae": "flux2-vae.safetensors",
             "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
           },
           "joint_scene_conditioning": {
-            "identity_source_resampling": "canonical_card_fit",
-            "reference_megapixels": 0.5,
+            "cast_max_megapixels": 0.5,
+            "identity_canvas_px": 512,
+            "identity_source_resampling": "none",
             "reference_neutral_rgb": [
               226,
               224,
               211
             ],
-            "reference_strategy": "individual_spatial_identity_per_subject"
+            "reference_strategy": "spatial_cast_plus_unscaled_identity"
           },
           "layout": {
             "columns": 3,
             "name": "standard_3x3",
             "raster_geometry": {
               "generation_canvas_px": [
-                848,
-                1168
+                1200,
+                1664
               ],
               "generation_column_spans_px": [
                 [
                   0,
-                  269
+                  380
                 ],
                 [
-                  290,
-                  558
+                  410,
+                  790
                 ],
                 [
-                  579,
-                  848
+                  820,
+                  1200
                 ]
               ],
               "generation_row_spans_px": [
                 [
                   0,
-                  375
+                  535
                 ],
                 [
-                  396,
-                  772
+                  565,
+                  1099
                 ],
                 [
-                  793,
-                  1168
+                  1129,
+                  1664
                 ]
               ],
               "name": "cumulative_physical_endpoints",
@@ -212,7 +213,7 @@
           },
           "pipeline_contract": {
             "name": "poster_generation",
-            "version": 9
+            "version": 11
           },
           "pokemon": {
             "count": "auto_from_layout_columns",
@@ -247,6 +248,20 @@
             "rendering": "Use dramatic trading-card linework, disciplined rival color contrast, and cinematic atmospheric depth.",
             "setting": "The artwork contains a tense valley framed by opposing warm and cool mountain fronts, a distant weathered fortress with blank walls, and converging storm clouds high over the horizon."
           },
+          "source_details": {
+            "pokeapi:official-artwork:155": {
+              "sha256": "9532b237ef088f8032024b95459303495e261eb2f7f024b79511522e551a9bcd",
+              "traits": "Match this exact Cyndaquil right-facing side pose. Preserve the long narrow pale-cream snout, one simple closed-eye arc, deep blue-teal cap and back, cream belly and short separate limbs with tiny light toe tips. The single orange-and-yellow flame is a broad jagged fan emerging from the back toward image-left, not an extra tail or limb. Keep the source's compact body, curved back-to-snout outline and quiet closed-eye expression; do not add an open eye or new markings."
+            },
+            "pokeapi:official-artwork:250": {
+              "sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274",
+              "traits": "Match the exact red, cream, yellow and green Ho-Oh source pose. Preserve its distinctly lobed yellow-red head crest instead of flattening it into a fan, hooked beak, layered neck feathers, individually patterned wing feathers and long separate colored tail feathers."
+            },
+            "pokeapi:official-artwork:255": {
+              "sha256": "d234db13f46ac30452288fee011df2857d93bac22f7d038d6b472ef14a651950",
+              "traits": "Match the exact orange Torchic source pose with its three-point head tuft, short beak, black eyes, cream downy neck feathers and two short legs. Preserve both feet and their actual overlap and angle as drawn in the source; do not fuse them into one invented claw."
+            }
+          },
           "source_subject_ids": [
             155,
             250,
@@ -254,7 +269,7 @@
           ]
         },
         "schema_version": 1,
-        "sha256": "c099d91a3f4aa61553ceb1127fa3f322ea0f63889d3ad808067ba682f4c0d6c6"
+        "sha256": "3f966f9d9eeada005dc62f5a86c561873aa7dc609e86b155f808288ca3a7a26a"
       },
       "overlay_fingerprint": {
         "components": {
@@ -321,50 +336,50 @@
             },
             "ja": {
               "information": [
-                "ロケット団の栄光",
-                "244 枚",
+                "132 枚",
                 "発売日",
                 "2025年5月30日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "87e453b138244c7beaa24b2753dbb5f3c0c8e4e09c8e74f5b36b8ed4c36b1554"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "ロケット団の栄光"
               }
             },
             "ko": {
               "information": [
-                "Destined Rivals",
-                "244 장",
+                "0 장",
                 "출시일",
                 "2025년 5월 30일"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "87e453b138244c7beaa24b2753dbb5f3c0c8e4e09c8e74f5b36b8ed4c36b1554"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Destined Rivals"
               }
             },
             "zh_hans": {
               "information": [
-                "Destined Rivals",
-                "244 张",
+                "0 张",
                 "发行日期",
                 "2025年5月30日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "87e453b138244c7beaa24b2753dbb5f3c0c8e4e09c8e74f5b36b8ed4c36b1554"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Destined Rivals"
               }
             },
             "zh_hant": {
               "information": [
-                "Destined Rivals",
-                "244 張",
+                "0 張",
                 "發行日期",
                 "2025年5月30日"
               ],
               "title": {
-                "kind": "logo",
-                "pixel_sha256": "87e453b138244c7beaa24b2753dbb5f3c0c8e4e09c8e74f5b36b8ed4c36b1554"
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Destined Rivals"
               }
             }
           },
@@ -399,30 +414,6 @@
               "mode": "RGBA",
               "pixel_sha256": "001c72ca654e009a5ca90d3e6f6b358471eeca8d00ad0558a1b2e2308f9aab68",
               "width": 604
-            },
-            "ja": {
-              "height": 178,
-              "mode": "RGBA",
-              "pixel_sha256": "87e453b138244c7beaa24b2753dbb5f3c0c8e4e09c8e74f5b36b8ed4c36b1554",
-              "width": 445
-            },
-            "ko": {
-              "height": 178,
-              "mode": "RGBA",
-              "pixel_sha256": "87e453b138244c7beaa24b2753dbb5f3c0c8e4e09c8e74f5b36b8ed4c36b1554",
-              "width": 445
-            },
-            "zh_hans": {
-              "height": 178,
-              "mode": "RGBA",
-              "pixel_sha256": "87e453b138244c7beaa24b2753dbb5f3c0c8e4e09c8e74f5b36b8ed4c36b1554",
-              "width": 445
-            },
-            "zh_hant": {
-              "height": 178,
-              "mode": "RGBA",
-              "pixel_sha256": "87e453b138244c7beaa24b2753dbb5f3c0c8e4e09c8e74f5b36b8ed4c36b1554",
-              "width": 445
             }
           },
           "pipeline_contract": {
@@ -444,78 +435,87 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "e09812cf55440d46b10aca9150dd910570c0571c11807f29b8511fee1e480f89"
+        "sha256": "8ab9c3df7e0269f5279cab8c1f2eccd2100b3cc098a9f1351a56034b4366b74f"
       },
       "prompt": {
-        "bytes": 5696,
-        "file": "tmp/poster-workspaces/SV10/comfyui_poster/individual_spatial_joint_prompt.generated.txt",
-        "sha256": "e2ab0d101f7a950eb1e4e7ae30bffee5daeae120a1c45408218e631b85b34528"
+        "bytes": 3898,
+        "file": "tmp/oneshot-trials/p30-batch-20260922-b/workflows/source_detail_joint_prompt.generated.txt",
+        "sha256": "9c06dca3513e95f816e5db65b5449713b5c8b221567247f80424df49db43ed46"
       },
       "references": [
         {
-          "bytes": 22532,
-          "file": "tmp/poster-workspaces/SV10/comfyui_poster/individual_spatial_reference_1.png",
+          "bytes": 59200,
+          "file": "tmp/oneshot-trials/p30-batch-20260922-b/references/joint_scene_cast_reference.png",
           "height": 832,
           "mode": "RGBA",
-          "pixel_sha256": "9f91f22a364f76aa758d42345040e2709ffb25ca7964aa75c3fa68ae3eca71db",
-          "sha256": "1a14517d1827401d9ba534873c8944b066818fe3462e52e7276d4e467f66a043",
+          "pixel_sha256": "c7d158b1e8eeb3974a491aef280363190ba0a7bd7e5dcd870f8f90e7c2f08a64",
+          "sha256": "21a30e826e1f02cd544f79fa03c4cd2f9185622de68d4747e679be57c004c528",
           "width": 608
         },
         {
-          "bytes": 25823,
-          "file": "tmp/poster-workspaces/SV10/comfyui_poster/individual_spatial_reference_2.png",
-          "height": 832,
+          "bytes": 97734,
+          "file": "tmp/oneshot-trials/p30-batch-20260922-b/references/identity_reference_1.png",
+          "height": 512,
           "mode": "RGBA",
-          "pixel_sha256": "aa542737a18f07a2daef52cf11dd37d2e1e94ceaee9a071b118b90dd86253216",
-          "sha256": "78301570c39b101d0c831f1fcb8300cca8583f8320dfcc611351bc9a12c24235",
-          "width": 608
+          "pixel_sha256": "95582574c8988db33344f4f1fc0933901a494e36b999da4f7db1a432de0f5494",
+          "sha256": "a113ba2f9be110f122c3e2c564e23f7ef69996c23d38a148983771dc8fadd9b4",
+          "width": 512
         },
         {
-          "bytes": 18786,
-          "file": "tmp/poster-workspaces/SV10/comfyui_poster/individual_spatial_reference_3.png",
-          "height": 832,
+          "bytes": 128309,
+          "file": "tmp/oneshot-trials/p30-batch-20260922-b/references/identity_reference_2.png",
+          "height": 512,
           "mode": "RGBA",
-          "pixel_sha256": "fbf0674722d3a3eb36dd4170ed300ccb869b56d3818f2f853f9dee67dc4a9ad5",
-          "sha256": "3df5033ac0ee7a3e0060be386bc2db51a3bfadb68307f077076ebcfac83e3a5e",
-          "width": 608
+          "pixel_sha256": "d10f7f059a39aa5a2a1091a2bd0e3886cb51e67e5a0347e78a956dfb207a7a8c",
+          "sha256": "0d5982a899bb987ddd9361304b8933759111ba95a10b0af8186481f6e820fa79",
+          "width": 512
+        },
+        {
+          "bytes": 78390,
+          "file": "tmp/oneshot-trials/p30-batch-20260922-b/references/identity_reference_3.png",
+          "height": 512,
+          "mode": "RGBA",
+          "pixel_sha256": "95e504c84396fa68b7ffd6b58dcefe28739b2ac23deb5734a59b98d8bef4f42f",
+          "sha256": "ddd7601efb8ad59a6c839e608aea28c8d0602e96882c38ee2014a5bbcfabfebe",
+          "width": 512
         }
       ],
       "scope_manifest": {
-        "bytes": 2233,
-        "file": "config/posters/SV10/poster.yaml",
-        "sha256": "928750761bc81c423949b9ffb63e667bf27c47d0891c2762892d23d42b37a3a7"
+        "bytes": 3633,
+        "file": "tmp/review-batch-manifests/p30-batch-20260922-b/poster.yaml",
+        "sha256": "da5a3fd3a4eaa594daf4823f11ebbd0d0fa7a9f37b607abd84613c0c81890b9a"
       },
       "workflow": {
-        "bytes": 9719,
-        "file": "tmp/poster-workspaces/SV10/comfyui_poster/workflow_api_joint_scene_individual_spatial_joint_1mp_260773151.json",
-        "sha256": "8383c6844c5c0790118254bd890ac7643ebf83689a089fc49f3dbf7c87ab2028"
+        "bytes": 8543,
+        "file": "tmp/oneshot-trials/p30-batch-20260922-b/workflows/workflow_api_joint_scene_spatial_source_detail_joint_2mp_260774160.json",
+        "sha256": "c029587037dc0c632376b5c30e873d607c0223f774d50a97f5ac6ecf1314da7e"
       }
     },
     "kind": "poster_generation_run",
     "poster_id": "SV10",
     "raw_artwork": {
-      "bytes": 1544811,
-      "file": "tmp/poster-workspaces/SV10/comfyui_poster/output/sv10_flux2_joint_scene_individual_spatial_1mp_seed_260773151_00001_.png",
-      "height": 1168,
+      "bytes": 3093149,
+      "file": "tmp/oneshot-trials/p30-batch-20260922-b/retrieved/oneshot-x6z1_nnk/output/sv10_flux2_joint_scene_2mp_seed_260774160_00001_.png",
+      "height": 1664,
       "mode": "RGBA",
-      "pixel_sha256": "dad7312db95d7e6051fb13173b39b9db5a59f700456b6dab8a581ed87d9e3d83",
-      "sha256": "96750d95a0898eeebc3dfdfb98e0e871d85d454f656b090dfddf03a4941b6e1f",
-      "width": 848
+      "pixel_sha256": "68caa760aa00ecc94dba82b5a942682a0e30f3650d7f5f48fcbe5a64a7122bd6",
+      "sha256": "122e4554bcaf3ffb4275c6ec0a9019a5022a9308091bce1714b1fefcf1bcbe16",
+      "width": 1200
     },
     "schema_version": 1,
     "scope": "SV10",
     "section_id": null,
     "source_artwork": {
-      "bytes": 6454123,
+      "bytes": 7981450,
       "dpi": [
         299.9994,
         299.9994
       ],
-      "file": "tmp/poster-workspaces/SV10/comfyui_poster/temp/sv10_flux2_joint_scene_individual_spatial_1mp_seed_260773151_00001__to_300dpi.png",
+      "file": "tmp/oneshot-trials/p30-batch-20260922-b/review/artwork-300dpi.png",
       "height": 3268,
       "mode": "RGBA",
-      "pixel_sha256": "19c52bc7aba7fb00439a1b7eef1accbc3fc025218b9e60496178be6c8cd46233",
-      "sha256": "d58e13869502dc2e399d9acec2023ae25fd7cf0b10d25d7d6f83d7f1b0a60d18",
+      "pixel_sha256": "8ad0d5dcc22848c5a139f3b0d43d3587d21ce703f1e9208fb681d42846463a1a",
+      "sha256": "79ef9332fd67b1e368f127f5cce64055d35363705b9fdd395d0f0404c7dadbdd",
       "width": 2368
     },
     "source_scope": "SV10",
@@ -534,14 +534,14 @@
           "natural_scene_integration",
           "coherent_landscape_occlusion"
         ],
-        "generation_fingerprint_sha256": "c099d91a3f4aa61553ceb1127fa3f322ea0f63889d3ad808067ba682f4c0d6c6",
+        "generation_fingerprint_sha256": "3f966f9d9eeada005dc62f5a86c561873aa7dc609e86b155f808288ca3a7a26a",
         "method": "human_identity_and_scene_review",
         "passed": true,
-        "raw_artwork_pixel_sha256": "dad7312db95d7e6051fb13173b39b9db5a59f700456b6dab8a581ed87d9e3d83",
-        "raw_artwork_sha256": "96750d95a0898eeebc3dfdfb98e0e871d85d454f656b090dfddf03a4941b6e1f",
-        "reviewed_artwork_pixel_sha256": "19c52bc7aba7fb00439a1b7eef1accbc3fc025218b9e60496178be6c8cd46233",
-        "reviewed_artwork_sha256": "d58e13869502dc2e399d9acec2023ae25fd7cf0b10d25d7d6f83d7f1b0a60d18",
-        "reviewed_at": "2026-08-06T23:54:33.146946+00:00",
+        "raw_artwork_pixel_sha256": "68caa760aa00ecc94dba82b5a942682a0e30f3650d7f5f48fcbe5a64a7122bd6",
+        "raw_artwork_sha256": "122e4554bcaf3ffb4275c6ec0a9019a5022a9308091bce1714b1fefcf1bcbe16",
+        "reviewed_artwork_pixel_sha256": "8ad0d5dcc22848c5a139f3b0d43d3587d21ce703f1e9208fb681d42846463a1a",
+        "reviewed_artwork_sha256": "79ef9332fd67b1e368f127f5cce64055d35363705b9fdd395d0f0404c7dadbdd",
+        "reviewed_at": "2026-09-24T07:11:23.478271+00:00",
         "source_cutout_pixel_sha256": [
           "b54e467594c5b93a7d563140f2cbf9b0af9bc33bbef72d9fc0c976bc39c095e7",
           "27c1eb01dc8b91b25c89dd2c948aafa26722d2b563e8c00728926b10ff077f4c",

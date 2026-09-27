@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-22",
+  "review_id": "P05",
+  "scope": "Pokedex/sections/gen2",
+  "candidate": "p05-source-detail-20260922-d",
+  "status": "agent_reviewed_pending_exact_user_approval",
+  "release_ready": false,
+  "user_approval_recorded": false,
+  "production_master_changed": false,
+  "release_pdfs_changed": false,
+  "review_workspace": "tmp/oneshot-trials/p05-source-detail-20260922-d",
+  "source_sha256": {
+    "pokeapi:official-artwork:152": "3ffc2eeee9139b0281ab5493b1a6d4b5c1329de5ddf5361f5ee3c93d12c05659",
+    "pokeapi:official-artwork:155": "9532b237ef088f8032024b95459303495e261eb2f7f024b79511522e551a9bcd",
+    "pokeapi:official-artwork:158": "a0ce9f06497dc2a9a3d34174ff89e0ee1a0745ce8007cc89257e379d9be49525"
+  },
+  "generation_fingerprint_sha256": "dcea1a0eace1760141f625f6a0122bf1533ef5467ae729f6ae55f3aac4c4fbf3",
+  "candidate_files": {
+    "raw_sha256": "007316370891bffaa996ed811e4050b118a838551b80dce1a6d714ecbda4b41d",
+    "text_free_master_sha256": "ed0b8e1934588d4a7617c5821dcae835bad9f5bc757bc72e7fc1133bfa81cf82",
+    "german_preview_sha256": "98f34818596db99678912b8224e7d9c7f398436186f615cf078c6d0152cd54fd",
+    "run_sidecar_sha256": "1f133f19114dbcb103676366337414ad17980c709793279247a6cda1f49498cf"
+  },
+  "technical_review": {
+    "immutable_job_and_complete_return_verified": true,
+    "worker_run_and_log_returned": true,
+    "canonical_one_shot_graph": true,
+    "generation_size_px": [1200, 1664],
+    "print_master_and_preview_size_px": [2368, 3268],
+    "all_nine_physical_cards_exactly_match_preview_pixels": true,
+    "each_card_size_px": [750, 1050],
+    "each_card_dpi": 300,
+    "text_free_master_preview_and_all_nine_cards_visually_inspected": true,
+    "three_official_sources_compared_with_bottom_card_crops": true,
+    "production_masters_unchanged": 42
+  },
+  "visual_findings": [
+    "One each of Chikorita, Cyndaquil and Totodile remains in the bottom row; no extra figures, generated text or logo appear in the text-free master.",
+    "Chikorita's leaf is attached at the head, while three round front collar buds and smaller side buds remain separate from foreground grass.",
+    "Cyndaquil retains the right-facing closed-eye pose, two small arms, two planted feet and one back flame; source style is approximated rather than pixel-identical.",
+    "Totodile's supporting foot is broad with three rounded toe lobes and two short grooves, matching the inspected official source more closely than the old narrow claw-like foot.",
+    "Card title and center information panel stay inside their physical cells; the foreground grass is scene-appropriate and no character crosses a cut line."
+  ],
+  "source_interpretation_correction": "The enlarged official Totodile artwork shows two toe grooves dividing three broad lobes. An earlier two-lobe description and first-pass rejection of candidates B/C were incorrect; candidate D uses the corrected source-bound traits.",
+  "tests": {
+    "command": "tmp/v10-artwork-audit-env/bin/python -m pytest scripts/tests -q",
+    "passed": 829,
+    "failed": 3,
+    "skipped": 1,
+    "failed_test_ids": [
+      "scripts/tests/test_poster_assets.py::test_promoted_production_posters_match_provenance_and_print_geometry",
+      "scripts/tests/test_poster_assets.py::test_validation_rejects_pdf_artwork_not_named_by_provenance",
+      "scripts/tests/test_poster_work_plan.py::test_every_checked_in_enabled_poster_remains_generation_current"
+    ],
+    "boundary": "The same three test IDs fail as before this pilot, first on revoked Base1 history. P05 additionally has expected scoped generation-metadata drift while its new manifest is not yet promoted, so the branch is not release-ready."
+  },
+  "limits": {
+    "user_visual_approval_pending": true,
+    "candidate_master_not_committed_or_promoted": true,
+    "candidate_render_job_and_source_cache_ignored": true,
+    "scoped_p05_production_validator_passes": false,
+    "new_pdf_or_release_built": false,
+    "physical_paper_test": false
+  }
+}

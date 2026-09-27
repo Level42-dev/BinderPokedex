@@ -5,11 +5,11 @@
     "release_date": "2025-09-26",
     "card_count": {
       "firstEd": 0,
-      "holo": 16,
-      "normal": 0,
+      "holo": 113,
+      "normal": 1,
       "official": 0,
       "reverse": 0,
-      "total": 10
+      "total": 89
     },
     "logo": "",
     "symbol": "",
@@ -156,12 +156,1114 @@
         447
       ],
       "trainerType": ""
+    },
+    {
+      "id": "mep-011",
+      "localId": "011",
+      "name": "Mega Latias ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Dragon"
+      ],
+      "dexId": [
+        380
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-012",
+      "localId": "012",
+      "name": "Mega Lucario ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fighting"
+      ],
+      "dexId": [
+        448
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-013",
+      "localId": "013",
+      "name": "Mega Venusaur ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Grass"
+      ],
+      "dexId": [
+        3
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-014",
+      "localId": "014",
+      "name": "Ceruledge",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        937
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-015",
+      "localId": "015",
+      "name": "Zacian",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Psychic"
+      ],
+      "dexId": [
+        888
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-016",
+      "localId": "016",
+      "name": "Flygon",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fighting"
+      ],
+      "dexId": [
+        330
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-017",
+      "localId": "017",
+      "name": "Toxtricity",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Darkness"
+      ],
+      "dexId": [
+        849
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-018",
+      "localId": "018",
+      "name": "Cottonee",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Psychic"
+      ],
+      "dexId": [
+        546
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-019",
+      "localId": "019",
+      "name": "Whimsicott",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Psychic"
+      ],
+      "dexId": [
+        547
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-020",
+      "localId": "020",
+      "name": "Sneasel",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Darkness"
+      ],
+      "dexId": [
+        215
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-021",
+      "localId": "021",
+      "name": "Weavile",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Darkness"
+      ],
+      "dexId": [
+        461
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-022",
+      "localId": "022",
+      "name": "Charcadet",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        935
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-023",
+      "localId": "023",
+      "name": "Mega Charizard X ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        6
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-024",
+      "localId": "024",
+      "name": "Oricorio ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        741
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-025",
+      "localId": "025",
+      "name": "Mega Kangaskhan ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Colorless"
+      ],
+      "dexId": [
+        115
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-026",
+      "localId": "026",
+      "name": "Meloetta",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Psychic"
+      ],
+      "dexId": [
+        648
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-027",
+      "localId": "027",
+      "name": "Haunter",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Darkness"
+      ],
+      "dexId": [
+        93
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-028",
+      "localId": "028",
+      "name": "Celebratory Fanfare",
+      "image": "",
+      "category": "Trainer",
+      "types": [],
+      "dexId": [],
+      "trainerType": "Stadium"
+    },
+    {
+      "id": "mep-029",
+      "localId": "029",
+      "name": "Mega Charizard X ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        6
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-030",
+      "localId": "030",
+      "name": "Mega Charizard Y ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        6
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-031",
+      "localId": "031",
+      "name": "N's Zekrom",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Dragon"
+      ],
+      "dexId": [
+        644
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-032",
+      "localId": "032",
+      "name": "Mega Gardevoir ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Psychic"
+      ],
+      "dexId": [
+        282
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-033",
+      "localId": "033",
+      "name": "Mega Lucario ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fighting"
+      ],
+      "dexId": [
+        448
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-034",
+      "localId": "034",
+      "name": "Mega Meganium ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Grass"
+      ],
+      "dexId": [
+        154
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-035",
+      "localId": "035",
+      "name": "Mega Emboar ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        500
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-036",
+      "localId": "036",
+      "name": "Mega Feraligatr ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Water"
+      ],
+      "dexId": [
+        160
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-037",
+      "localId": "037",
+      "name": "Bulbasaur",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Grass"
+      ],
+      "dexId": [
+        1
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-038",
+      "localId": "038",
+      "name": "Charmander",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        4
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-039",
+      "localId": "039",
+      "name": "Squirtle",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Water"
+      ],
+      "dexId": [
+        7
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-040",
+      "localId": "040",
+      "name": "Turtwig",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Grass"
+      ],
+      "dexId": [
+        387
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-041",
+      "localId": "041",
+      "name": "Chimchar",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        390
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-042",
+      "localId": "042",
+      "name": "Piplup",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Water"
+      ],
+      "dexId": [
+        393
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-043",
+      "localId": "043",
+      "name": "Rowlet",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Grass"
+      ],
+      "dexId": [
+        722
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-044",
+      "localId": "044",
+      "name": "Litten",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        725
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-045",
+      "localId": "045",
+      "name": "Popplio",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Water"
+      ],
+      "dexId": [
+        728
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-046",
+      "localId": "046",
+      "name": "Chikorita",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Grass"
+      ],
+      "dexId": [
+        152
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-047",
+      "localId": "047",
+      "name": "Cyndaquil",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        155
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-048",
+      "localId": "048",
+      "name": "Totodile",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Water"
+      ],
+      "dexId": [
+        158
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-049",
+      "localId": "049",
+      "name": "Snivy",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Grass"
+      ],
+      "dexId": [
+        495
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-050",
+      "localId": "050",
+      "name": "Tepig",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        498
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-051",
+      "localId": "051",
+      "name": "Oshawott",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Water"
+      ],
+      "dexId": [
+        501
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-052",
+      "localId": "052",
+      "name": "Grookey",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Grass"
+      ],
+      "dexId": [
+        810
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-053",
+      "localId": "053",
+      "name": "Scorbunny",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        813
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-054",
+      "localId": "054",
+      "name": "Sobble",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Water"
+      ],
+      "dexId": [
+        816
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-055",
+      "localId": "055",
+      "name": "Treecko",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Grass"
+      ],
+      "dexId": [
+        252
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-056",
+      "localId": "056",
+      "name": "Torchic",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        255
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-057",
+      "localId": "057",
+      "name": "Mudkip",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Water"
+      ],
+      "dexId": [
+        258
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-058",
+      "localId": "058",
+      "name": "Chespin",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Grass"
+      ],
+      "dexId": [
+        650
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-059",
+      "localId": "059",
+      "name": "Fennekin",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        653
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-060",
+      "localId": "060",
+      "name": "Froakie",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Water"
+      ],
+      "dexId": [
+        656
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-061",
+      "localId": "061",
+      "name": "Sprigatito",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Grass"
+      ],
+      "dexId": [
+        906
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-062",
+      "localId": "062",
+      "name": "Fuecoco",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        909
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-063",
+      "localId": "063",
+      "name": "Quaxly",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Water"
+      ],
+      "dexId": [
+        912
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-064",
+      "localId": "064",
+      "name": "Serperior",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Grass"
+      ],
+      "dexId": [
+        497
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-065",
+      "localId": "065",
+      "name": "Barbaracle",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fighting"
+      ],
+      "dexId": [
+        689
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-066",
+      "localId": "066",
+      "name": "Tyrantrum",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fighting"
+      ],
+      "dexId": [
+        697
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-067",
+      "localId": "067",
+      "name": "Doublade",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Metal"
+      ],
+      "dexId": [
+        680
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-068",
+      "localId": "068",
+      "name": "Makuhita",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fighting"
+      ],
+      "dexId": [
+        296
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-069",
+      "localId": "069",
+      "name": "Chikorita",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Grass"
+      ],
+      "dexId": [
+        152
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-070",
+      "localId": "070",
+      "name": "Tyrunt",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fighting"
+      ],
+      "dexId": [
+        696
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-071",
+      "localId": "071",
+      "name": "Mega Zygarde ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fighting"
+      ],
+      "dexId": [
+        718
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-072",
+      "localId": "072",
+      "name": "Mega Clefable ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Psychic"
+      ],
+      "dexId": [
+        36
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-073",
+      "localId": "073",
+      "name": "Mega Gengar ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Darkness"
+      ],
+      "dexId": [
+        94
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-074",
+      "localId": "074",
+      "name": "Delphox",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        655
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-075",
+      "localId": "075",
+      "name": "Ampharos",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Lightning"
+      ],
+      "dexId": [
+        181
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-076",
+      "localId": "076",
+      "name": "Crobat",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Darkness"
+      ],
+      "dexId": [
+        169
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-077",
+      "localId": "077",
+      "name": "Goodra",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Dragon"
+      ],
+      "dexId": [
+        706
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-078",
+      "localId": "078",
+      "name": "Toxel",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Darkness"
+      ],
+      "dexId": [
+        848
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-079",
+      "localId": "079",
+      "name": "Charmeleon",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        5
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-080",
+      "localId": "080",
+      "name": "Fennekin",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        653
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-081",
+      "localId": "081",
+      "name": "Mega Greninja ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Water"
+      ],
+      "dexId": [
+        658
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-082",
+      "localId": "082",
+      "name": "Miraidon",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Lightning"
+      ],
+      "dexId": [
+        1008
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-083",
+      "localId": "083",
+      "name": "Slowbro",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Psychic"
+      ],
+      "dexId": [
+        80
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-084",
+      "localId": "084",
+      "name": "Dhelmise",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Psychic"
+      ],
+      "dexId": [
+        781
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-085",
+      "localId": "085",
+      "name": "Bastiodon",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Metal"
+      ],
+      "dexId": [
+        411
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-086",
+      "localId": "086",
+      "name": "Slowpoke",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Psychic"
+      ],
+      "dexId": [
+        79
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-087",
+      "localId": "087",
+      "name": "Binacle",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fighting"
+      ],
+      "dexId": [
+        688
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-088",
+      "localId": "088",
+      "name": "Zarude",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Darkness"
+      ],
+      "dexId": [
+        893
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-Museum",
+      "localId": "Museum",
+      "name": "Pikachu at the Museum",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Lightning"
+      ],
+      "dexId": [
+        25
+      ],
+      "trainerType": ""
     }
   ],
   "metadata": {
-    "total_cards": 10,
+    "total_cards": 89,
     "set_id": "mep",
-    "date_fetched": "2026-03-31T21:58:56.767190Z",
+    "date_fetched": "2026-09-12T02:40:23.760883Z",
     "source": "TCGdex API v2",
     "language": "en"
   }

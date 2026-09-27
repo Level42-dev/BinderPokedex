@@ -179,6 +179,7 @@ class FetchTCGdexSetStep(BaseStep):
         import time
         
         complete_cards = []
+        missing_card_ids = []
         total = len(cards)
         start_time = time.time()
         
@@ -206,8 +207,10 @@ class FetchTCGdexSetStep(BaseStep):
             else:
                 # Clear progress line for warning
                 sys.stdout.write("\r" + " " * 80 + "\r")
-                logger.warning(f"⚠️  Failed to fetch complete data for {card_id}, using minimal data")
-                complete_cards.append(card)
+                logger.error(
+                    f"❌ Failed to fetch complete data for {card_id}"
+                )
+                missing_card_ids.append(card_id)
         
         # Clear progress line and show summary
         sys.stdout.write("\r" + " " * 80 + "\r")
@@ -217,6 +220,12 @@ class FetchTCGdexSetStep(BaseStep):
         logger.info(f"📊 Categories found:")
         for category, count in sorted(category_counts.items()):
             logger.info(f"   - {category}: {count} cards")
+
+        if missing_card_ids:
+            raise RuntimeError(
+                "Failed to fetch complete card data for: "
+                + ", ".join(missing_card_ids)
+            )
         
         return complete_cards
     

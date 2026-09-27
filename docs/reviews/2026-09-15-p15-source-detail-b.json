@@ -1,0 +1,176 @@
+{
+  "review_id": "P15",
+  "scope": "ExGen2/sections/mega",
+  "variant": "p15-source-detail-20260915-b",
+  "reviewed_on": "2026-09-15",
+  "agent_visual_decision": "identity_and_composition_feedback_candidate_not_release_ready",
+  "independent_visual_decision": "review_candidate_conditional_on_layout_review",
+  "human_approval": "accepted_identity_and_composition_except_rayquaza_clearance",
+  "release_ready": false,
+  "layout_contract_pass": false,
+  "generation": {
+    "encoder": "qwen_3_4b.safetensors",
+    "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
+    "engine": "flux",
+    "generation_megapixels": 2,
+    "mode": "joint_scene",
+    "model": "flux-2-klein-4b.safetensors",
+    "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
+    "output_dpi": 300,
+    "output_method": "lanczos",
+    "reference_mode": "spatial_source_detail_joint",
+    "seed": 260736802,
+    "steps": 4,
+    "vae": "flux2-vae.safetensors",
+    "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
+  },
+  "generation_fingerprint": "d4665319f2a7c32088f6d9d6433db522bc2fa58e13892ecc36e68b645bf059e4",
+  "raw": {
+    "path": "tmp/oneshot-trials/p15-source-detail-20260915-b/retrieved/oneshot-zqhl7lhw/output/exgen2__sections__mega_flux2_joint_scene_2mp_seed_260736802_00001_.png",
+    "sha256": "66b4136825266cf6b6166599d2980d4e4fc184d15ffadd2757d8eb59e41d311d"
+  },
+  "master": {
+    "path": "tmp/oneshot-trials/p15-source-detail-20260915-b/review/artwork-300dpi.png",
+    "sha256": "6904f2a6792461f6066721c9089a44fed613b2ab12a12c9c0bc6203d66164d84"
+  },
+  "preview": {
+    "path": "tmp/oneshot-trials/p15-source-detail-20260915-b/review/poster-de.png",
+    "sha256": "ac4b2f70f1ba85c843e30ea7dc9b814302351f963d8b7287de33f7828b25b1b9"
+  },
+  "sealed_creation_evidence": {
+    "path": "tmp/oneshot-trials/p15-source-detail-20260915-b/review/evidence.json",
+    "sha256": "21cde2716dbf6c9ba66bf3a5dd4908b370ee7f64d430e5c93937b7b09c6ee107"
+  },
+  "source_pairs": [
+    {
+      "name": "Mega-Mewtu X",
+      "card": {
+        "path": "tmp/oneshot-trials/p15-source-detail-20260915-b/review/cards/card_r3_c1.png",
+        "rectangle": [
+          0,
+          2218,
+          750,
+          3268
+        ],
+        "sha256": "560370b3d0600e6edd139419a6ce01b8ee865977ffa9d41068ee3da9cdb659b9"
+      },
+      "source": {
+        "key": "pokeapi:official-artwork:10043",
+        "path": "tmp/poster-workspaces/ExGen2/sections/mega/sources/cutouts/pokemon_150_artwork_10043_mega_mewtwo_x.png",
+        "sha256": "5dd98bb485cf51eb4ede5189d28aeb9c6e426bd08d9abbc37187c02268b188d9"
+      }
+    },
+    {
+      "name": "Mega-Rayquaza",
+      "card": {
+        "path": "tmp/oneshot-trials/p15-source-detail-20260915-b/review/cards/card_r3_c2.png",
+        "rectangle": [
+          809,
+          2218,
+          1559,
+          3268
+        ],
+        "sha256": "3f184c87d181c81e2083b3f40a328fd880aeb8c36bf8399f0f82bd411ffec26d"
+      },
+      "source": {
+        "key": "pokeapi:official-artwork:10079",
+        "path": "tmp/poster-workspaces/ExGen2/sections/mega/sources/cutouts/pokemon_384_artwork_10079_mega_rayquaza.png",
+        "sha256": "28a9f35caa69df85cde05fcb5e7785d7581b30910b2cd6df508d35fca2a789f4"
+      }
+    },
+    {
+      "name": "Mega-Latios",
+      "card": {
+        "path": "tmp/oneshot-trials/p15-source-detail-20260915-b/review/cards/card_r3_c3.png",
+        "rectangle": [
+          1618,
+          2218,
+          2368,
+          3268
+        ],
+        "sha256": "7163de10f657add1b5f89a046f3eb496a1d5b23376734e3754ea30e77f18adb1"
+      },
+      "source": {
+        "key": "pokeapi:official-artwork:10063",
+        "path": "tmp/poster-workspaces/ExGen2/sections/mega/sources/cutouts/pokemon_381_artwork_10063_mega_latios.png",
+        "sha256": "ea327ac2ac56cb1a90153bad84f66bd62d25f8c25093733ed1aef9a5411b8054"
+      }
+    }
+  ],
+  "directly_viewed_by_controller_and_independent_reviewer": {
+    "raw": true,
+    "full_master": true,
+    "german_preview": true,
+    "all_nine_physical_cards": true,
+    "three_exact_originals": true,
+    "four_prepared_references": true,
+    "complete_prompt": true
+  },
+  "controlled_a_b_comparison": {
+    "changed": [
+      "Only Mewtwo X and Latios source-trait paragraphs changed. Mewtwo's one connected tail and gray face were clarified; Latios's one small root-wing mark and plain long wing were corrected."
+    ],
+    "unchanged": [
+      "seed",
+      "all four prepared reference image hashes",
+      "exact source PNG bytes",
+      "model, encoder and VAE pins",
+      "2-MP generation target and four steps",
+      "one empty target, sampler and decode",
+      "all graph nodes except text node 4",
+      "deterministic 300-dpi print pipeline"
+    ]
+  },
+  "findings": [
+    "The duplicated Mewtwo tail and red eye-surround patch are gone. The extra large marked Latios wing is gone; the small root marking reads as a flat marking.",
+    "All three forms are inside their actual cards. Rayquaza's image-left silhouette is very close to the cut edge; preserve this as a print-clearance review point, not proof of comfortable padding.",
+    "Rayquaza's second claw contour is uncertain, not a proven missing limb. No other decisive new anatomical mismatch or proven foreground-depth failure was found."
+  ],
+  "measured_layout_counterexample": {
+    "kind": "selected_orange_energy_pixel_not_full_silhouette_segmentation",
+    "canvas_pixel": [
+      1192,
+      2352
+    ],
+    "rgb": [
+      240,
+      195,
+      159
+    ],
+    "canvas_height": 3268,
+    "pixel_y_percent": 71.97,
+    "specified_subject_top_percent": 76.6,
+    "physical_card_top": 2218,
+    "interpretation": "This visible energy pixel is above the specified source-layout top but inside the physical card. It proves target-layout drift, not card clipping or a complete measured silhouette."
+  },
+  "technical_verification": {
+    "canonical_verify_passed": true,
+    "complete_job_log_and_all_outputs_retrieved": true,
+    "nine_pixel_exact_crops_and_300_dpi": true,
+    "installed_masters_unchanged": 42,
+    "prompt_seconds": 60.79
+  },
+  "next_step": "Create one isolated same-seed canonical one-shot C addressing Rayquaza's padding. Preserve B and recheck all three figures, full scene and nine actual cards. Do not promote.",
+  "promotion_or_pdf_zip_rebuild": false,
+  "user_decision": {
+    "recorded_on": "2026-09-15",
+    "quote": "P15 Rayquaza ist wirklich sehr knapp. Hie rwürde ich mir noch etwas mehr Platz drumherum wünschen!\nDer Rest passt prima!",
+    "applies_to_master_sha256": "6904f2a6792461f6066721c9089a44fed613b2ab12a12c9c0bc6203d66164d84",
+    "accepted": [
+      "All three shown identities",
+      "Mewtwo X and Latios composition",
+      "The shown landscape"
+    ],
+    "remaining": [
+      "Increase the space around Rayquaza in r3c2; submit the new exact image for review"
+    ],
+    "scope": "Exact B master and the six card/source hashes in source_pairs; no approval transfers to changed pixels, other images or a release",
+    "fresh_canonical_evidence_verification_passed": true,
+    "preserves_original_agent_findings_and_sealed_creation_evidence": true
+  },
+  "manifest_snapshot": {
+    "path": "docs/reviews/2026-09-15-p15-source-detail-b-manifest.yaml",
+    "sha256": "784180894d124e6982267f495ced4015fe5f08cb3b911fb006535599178949b4",
+    "reason": "Exact B manifest retained before the controlled Rayquaza clearance revision"
+  }
+}

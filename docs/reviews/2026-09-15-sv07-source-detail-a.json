@@ -1,0 +1,188 @@
+{
+  "review_id": "P01",
+  "scope": "SV07",
+  "reviewed_on": "2026-09-15",
+  "variant": "sv07-source-detail-20260915-a",
+  "agent_visual_decision": "reject",
+  "human_approval": "not_requested_for_rejected_candidate",
+  "pipeline_contract_version": 10,
+  "seed": 260915007,
+  "viewed": {
+    "raw": true,
+    "full_text_free_master": true,
+    "physical_cards": [
+      "r1c1",
+      "r1c2",
+      "r1c3",
+      "r2c1",
+      "r2c2",
+      "r2c3",
+      "r3c1",
+      "r3c2",
+      "r3c3"
+    ],
+    "exact_original_sources": [
+      "pokeapi:official-artwork:1",
+      "pokeapi:official-artwork:7",
+      "pokeapi:official-artwork:813"
+    ],
+    "prepared_references": 4
+  },
+  "findings": [
+    {
+      "severity": "blocking",
+      "kind": "count",
+      "detail": "Four Pokemon are generated: two Bulbasaur, one Squirtle, one Scorbunny. The mid-left duplicate Bulbasaur has invented facial/arm features."
+    },
+    {
+      "severity": "blocking",
+      "kind": "layout",
+      "detail": "Squirtle is in the middle row behind the set information overlay; only a fragment of its feet reaches r3c2, leaving the intended subject card effectively empty."
+    },
+    {
+      "severity": "blocking",
+      "kind": "crop",
+      "detail": "Scorbunny is oversized; ears cross r2c3/r3c3 and left cheek/arm are clipped by r3c3. Bulbasaur's bulb meets/crosses the r3c1 right edge."
+    },
+    {
+      "severity": "blocking",
+      "kind": "anatomy",
+      "detail": "Scorbunny has three small upper teeth instead of the single prominent source tooth. Eyes, two ears and two separate neck ovals are much closer to the source, but do not establish acceptance."
+    }
+  ],
+  "next_attempt": {
+    "controlled_change": "Stronger named count/layout-priority paragraph based on accepted Base1 prefix; versioned separately to retain v10 history.",
+    "keep_unchanged": [
+      "seed",
+      "model and encoder and VAE pins",
+      "2-MP raster",
+      "four reference images",
+      "exact source traits",
+      "configured landscape and depth paragraphs"
+    ],
+    "no_fallback_or_promotion": true
+  },
+  "evidence": {
+    "cards": [
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-a/review/cards/card_r1_c1.png",
+        "rectangle": [
+          0,
+          0,
+          750,
+          1050
+        ],
+        "sha256": "a492e8f2ac92a12ba19777396fd335795eec67f9a8acc117ca5ffe8bed90dcd4"
+      },
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-a/review/cards/card_r1_c2.png",
+        "rectangle": [
+          809,
+          0,
+          1559,
+          1050
+        ],
+        "sha256": "c8998f0d66fa251a09f505b675e25ef9a08ee7527076b891511413dfa9f0324f"
+      },
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-a/review/cards/card_r1_c3.png",
+        "rectangle": [
+          1618,
+          0,
+          2368,
+          1050
+        ],
+        "sha256": "80a9705080b57e4e7d24736359baf160bb180bb4d5278b5bf866684098688f8d"
+      },
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-a/review/cards/card_r2_c1.png",
+        "rectangle": [
+          0,
+          1109,
+          750,
+          2159
+        ],
+        "sha256": "b3fb9d2edc95a50f956daf6ded4eaec7b26119f41f135f8af6f1e74e03d609f2"
+      },
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-a/review/cards/card_r2_c2.png",
+        "rectangle": [
+          809,
+          1109,
+          1559,
+          2159
+        ],
+        "sha256": "6fe31ed5523cfbf295f5b190cfd09c609da6a1b1528f8c323ee512ff5fe984da"
+      },
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-a/review/cards/card_r2_c3.png",
+        "rectangle": [
+          1618,
+          1109,
+          2368,
+          2159
+        ],
+        "sha256": "722b5f6b497cd706c41bcb7050e6c3b342517ff05fa335785fc112e06312262f"
+      },
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-a/review/cards/card_r3_c1.png",
+        "rectangle": [
+          0,
+          2218,
+          750,
+          3268
+        ],
+        "sha256": "5bbf40e29c7d7edc7360925ecb25553cd61aa2251eb0a3e59d2c81afe9c16603"
+      },
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-a/review/cards/card_r3_c2.png",
+        "rectangle": [
+          809,
+          2218,
+          1559,
+          3268
+        ],
+        "sha256": "b33830b7f8fe6f537f69ddd7bc8e0db3d53b11e8f21e24b886b5dcd2db7032af"
+      },
+      {
+        "path": "tmp/oneshot-trials/sv07-source-detail-20260915-a/review/cards/card_r3_c3.png",
+        "rectangle": [
+          1618,
+          2218,
+          2368,
+          3268
+        ],
+        "sha256": "0028ccc6af7a7fc326b3e9176f6a9932e5a1842c21480f354f53b6028f98c026"
+      }
+    ],
+    "human_approval": "pending",
+    "master": {
+      "path": "tmp/oneshot-trials/sv07-source-detail-20260915-a/review/artwork-300dpi.png",
+      "sha256": "2e10222c11d94cebe09ddbf8a8641dc84816615f37d824720548e66442b1db55"
+    },
+    "preview": {
+      "path": "tmp/oneshot-trials/sv07-source-detail-20260915-a/review/poster-de.png",
+      "sha256": "22354296b8bfabc5acac03bd4ec1c66ed6e35377a4ff0027cbe606aa8b26a396"
+    },
+    "production_masters_unchanged": 42,
+    "raw": {
+      "path": "tmp/oneshot-trials/sv07-source-detail-20260915-a/retrieved/oneshot-4ady2qwd/output/sv07_flux2_joint_scene_2mp_seed_260915007_00001_.png",
+      "sha256": "ab6bbdc1c634d6ade7dc41a5292a9c45aa7b8135a3af660c64f053198ad7f513"
+    },
+    "run_sidecar": {
+      "path": "tmp/oneshot-trials/sv07-source-detail-20260915-a/review/artwork-300dpi.run.json",
+      "sha256": "a80452d37256fa8ebb2da60b64d288d3d7ef304a6491f88a6841decc92a451d0"
+    },
+    "scope": "SV07",
+    "variant": "sv07-source-detail-20260915-a",
+    "visual_review": "pending_full_master_and_all_nine_cards",
+    "worker_log": {
+      "path": "tmp/oneshot-trials/sv07-source-detail-20260915-a/retrieved/oneshot-4ady2qwd/comfyui.log",
+      "sha256": "229342a97f928689cdfeee620520b2d62ad18c3702c0175c1e84017e1ac0bdc5"
+    },
+    "worker_run": {
+      "path": "tmp/oneshot-trials/sv07-source-detail-20260915-a/retrieved/oneshot-4ady2qwd/run.json",
+      "sha256": "3b872bf9885c3105b3c4ad6322d4bfd82b9c81d6c1cd5c4b2b3f72c8bf5fde16"
+    }
+  }
+}

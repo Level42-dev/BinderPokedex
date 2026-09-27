@@ -111,3 +111,46 @@ def test_v9_release_news_uses_collector_language_not_project_language():
         notes["whats_new"]["de"]["title"]
         == "Ein Motiv. Neun Karten. Dein Binder."
     )
+
+
+def test_v10_release_news_covers_the_collector_visible_refresh():
+    project_dir = Path(__file__).resolve().parents[2]
+    notes = yaml.safe_load(
+        (project_dir / "config/release_notes/v10.0.yaml").read_text(
+            encoding="utf-8"
+        )
+    )
+
+    assert notes["display_date"] == {
+        "en": "September 2026",
+        "de": "September 2026",
+    }
+    assert (
+        notes["whats_new"]["en"]["title"]
+        == "Fresh Lists. Correct Labels. More Mega Evolution."
+    )
+    assert (
+        notes["whats_new"]["de"]["title"]
+        == "Aktuelle Listen. Korrekte Beschriftungen. Mehr Mega-Entwicklung."
+    )
+
+    copy = json.dumps(notes, ensure_ascii=False)
+    for required in (
+        "Dunkelnacht",
+        "Terapagos & Freunde",
+        "Ns Zoroark-ex",
+        "Schwarze Blitze",
+        "Weiße Flammen",
+        "Stellarkrone",
+    ):
+        assert required in copy
+
+    for internal_term in (
+        "API",
+        "renderer",
+        "fallback",
+        "seed",
+        "ComfyUI",
+        "repository",
+    ):
+        assert internal_term.casefold() not in copy.casefold()

@@ -10,6 +10,9 @@ from typing import Any
 from PIL import Image, ImageDraw
 
 try:
+    from .source_detail import spatial_reference_scales
+    from .grounding import build_grounding_masks
+    from .poster_config import GROUNDED_PROMPT_FILE, build_grounded_prompt_snapshot
     from .composition import (
         cutout_placements,
         joint_scene_canvas_placements,
@@ -34,6 +37,9 @@ try:
     )
     from .poster_io import POSTER_ASSETS, load_poster_scope_data, poster_bundle
 except ImportError:
+    from source_detail import spatial_reference_scales
+    from grounding import build_grounding_masks
+    from poster_config import GROUNDED_PROMPT_FILE, build_grounded_prompt_snapshot
     from composition import (
         cutout_placements,
         joint_scene_canvas_placements,
@@ -147,6 +153,8 @@ def build_identity_lock_references(
     scope: str,
     megapixels: float,
     output_dir: Path | None = None,
+    *,
+    reference_mode: str = "two_pass_source_pixels",
 ) -> Path:
     """Write only the assets consumed by the identity-lock workflow."""
     bundle = poster_bundle(scope, poster_assets=POSTER_ASSETS)
@@ -178,7 +186,11 @@ def build_identity_lock_references(
         )
     path = reference_dir / "inpaint_reference.png"
     reference.save(path, format="PNG", optimize=True)
-    build_upper_context_mask(
+    mask_builder = (
+        build_grounding_masks if reference_mode == "grounded_source_pixels"
+        else build_upper_context_mask
+    )
+    mask_builder(
         width,
         height,
         placements,
@@ -186,8 +198,14 @@ def build_identity_lock_references(
         reference_dir,
     )
     scope_data = load_poster_scope_data(bundle)
-    (reference_dir / IDENTITY_LOCK_PROMPT_FILE).write_text(
-        build_identity_lock_prompt(manifest, scope_data) + "\n",
+    grounded = reference_mode == "grounded_source_pixels"
+    prompt_file = GROUNDED_PROMPT_FILE if grounded else IDENTITY_LOCK_PROMPT_FILE
+    prompt = (
+        build_grounded_prompt_snapshot(manifest, scope_data)
+        if grounded else build_identity_lock_prompt(manifest, scope_data)
+    )
+    (reference_dir / prompt_file).write_text(
+        prompt + "\n",
         encoding="utf-8",
     )
     return path
@@ -221,6 +239,7 @@ def build_joint_scene_references(
     *,
     megapixels: float = 1.0,
     include_cast: bool = True,
+    subject_scales: dict[str, float] | None = None,
 ) -> None:
     """Write unscaled identities and, when requested, the spatial cast."""
     bundle = poster_bundle(scope, poster_assets=POSTER_ASSETS)
@@ -240,6 +259,7 @@ def build_joint_scene_references(
             "standard_3x3",
         ),
         canvas_size=(width, height),
+        subject_scales=subject_scales,
     )
     neutral = _joint_scene_neutral_rgb(manifest)
     cast_path = reference_dir / "joint_scene_cast_reference.png"
@@ -272,6 +292,8 @@ def build_joint_scene_references(
 def build_individual_spatial_joint_references(
     scope: str,
     output_dir: Path | None = None,
+    *,
+    subject_scales: dict[str, float] | None = None,
 ) -> list[Path]:
     """Write one poster-shaped identity-and-position image per subject."""
     bundle = poster_bundle(scope, poster_assets=POSTER_ASSETS)
@@ -290,6 +312,7 @@ def build_individual_spatial_joint_references(
             "standard_3x3",
         ),
         canvas_size=(width, height),
+        subject_scales=subject_scales,
     )
     neutral = _joint_scene_neutral_rgb(manifest)
     outputs = []
@@ -324,20 +347,13 @@ def _write_unscaled_identity_references(
             / str(placement["item"]["file"])
         )
         source = Image.open(source_path).convert("RGBA")
-        if (
-            source.width > JOINT_SCENE_IDENTITY_CANVAS_PX
-            or source.height > JOINT_SCENE_IDENTITY_CANVAS_PX
-        ):
-            raise ValueError(
-                f"Joint-scene identity source {source_path} exceeds the "
-                f"{JOINT_SCENE_IDENTITY_CANVAS_PX}px unscaled canvas"
-            )
+        canvas_px = max(
+            JOINT_SCENE_IDENTITY_CANVAS_PX,
+            ((max(source.size) + 63) // 64) * 64,
+        )
         detail = Image.new(
             "RGB",
-            (
-                JOINT_SCENE_IDENTITY_CANVAS_PX,
-                JOINT_SCENE_IDENTITY_CANVAS_PX,
-            ),
+            (canvas_px, canvas_px),
             neutral,
         )
         detail.paste(
@@ -395,6 +411,26 @@ def prepare(
             raise FileNotFoundError(path)
 
     cutout_manifest = json.loads(required[-1].read_text(encoding="utf-8"))
+    subject_scales = spatial_reference_scales(
+        bundle.manifest, cutout_manifest.get("items", []),
+        reference_mode=effective_reference_mode,
+    )
+    if effective_reference_mode == "spatial_source_detail_joint":
+        try:
+            from .source_detail import validate_source_details
+            from .generation_contract import validate_generation_contract
+        except ImportError:
+            from source_detail import validate_source_details
+            from generation_contract import validate_generation_contract
+        if megapixels != 2.0:
+            raise ValueError("Source detail requires exactly 2 MP")
+        validate_generation_contract({
+            **bundle.manifest.get("artwork", {}).get("generation", {}),
+            "engine": "flux", "mode": "joint_scene",
+            "reference_mode": effective_reference_mode,
+            "generation_megapixels": megapixels,
+        })
+        validate_source_details(bundle.manifest, cutout_manifest.get("items", []), scope_dir)
     cutout_files = [
         scope_dir / "cutouts" / item["file"]
         for item in cutout_manifest.get("items", [])
@@ -442,8 +478,9 @@ def prepare(
                 scope,
                 work_dir,
                 megapixels=megapixels,
+                subject_scales=subject_scales,
                 include_cast=(
-                    effective_reference_mode == "spatial_identity_joint"
+                    effective_reference_mode in {"spatial_identity_joint", "spatial_source_detail_joint"}
                 ),
             )
     else:
@@ -458,7 +495,20 @@ def prepare(
                 REGIONAL_JOINT_SCENE_PROMPT_FILE,
             ),
         )
-        build_identity_lock_references(scope, megapixels, work_dir)
+        _remove_stale(
+            work_dir,
+            (
+                "upper_context_mask.png", "upper_context_generation_mask.png",
+                IDENTITY_LOCK_PROMPT_FILE,
+            ) if effective_reference_mode == "grounded_source_pixels" else (
+                "grounding_mask.png", "grounding_sampling_mask.png",
+                "grounding_mask.json", GROUNDED_PROMPT_FILE,
+            ),
+        )
+        build_identity_lock_references(
+            scope, megapixels, work_dir,
+            reference_mode=effective_reference_mode,
+        )
     return work_dir
 
 
@@ -474,10 +524,12 @@ def main() -> int:
     parser.add_argument(
         "--reference-mode",
         choices=(
+            "spatial_source_detail_joint",
             "individual_spatial_joint",
             "spatial_identity_joint",
             "regional_identity_joint",
             "two_pass_source_pixels",
+            "grounded_source_pixels",
         ),
     )
     args = parser.parse_args()

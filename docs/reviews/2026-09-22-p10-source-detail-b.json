@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-22",
+  "reviewer_kind": "agent",
+  "scope": "Pokedex/sections/gen7",
+  "review_id": "P10",
+  "variant": "p10-source-detail-20260922-b",
+  "status": "not_accepted_far_forepaw_still_partly_exposed",
+  "human_approval": false,
+  "release_ready": false,
+  "promoted": false,
+  "finding_de": "Der schräge rechte Vorderbeinabschnitt ist vorhanden, aber unter seinem roten Streifen ragt noch eine kleine runde Pfotenform bildlinks neben dem langen Vorderbein hervor. Die exakte Quelle verdeckt diese Pfote. B reduziert die zusätzliche Rundung gegenüber A, löst den engen Quellenpunkt jedoch nicht vollständig.",
+  "additional_findings_de": [
+    "Figuren vollständig in ihren Schnittkarten; Flamiau weiterhin sichtbar größer als die vorgegebene kleine Positionssilhouette.",
+    "Bauz und Robball quellnah; keine neue eindeutig falsche Gliedmaße oder grobe Tiefenumkehr festgestellt."
+  ],
+  "inspection": {
+    "raw_viewed": true,
+    "full_master_viewed": true,
+    "german_preview_viewed": true,
+    "physical_cards_viewed": 9,
+    "exact_sources_viewed": 3,
+    "input_reference_images_byte_identical_to_inspected_a": true,
+    "canonical_verify_passed_before_next_manifest_change": true,
+    "production_masters_unchanged": 42
+  },
+  "evidence": {
+    "raw": {
+      "path": "tmp/oneshot-trials/p10-source-detail-20260922-b/retrieved/oneshot-euo9dvis/output/pokedex__sections__gen7_flux2_joint_scene_2mp_seed_260726058_00001_.png",
+      "sha256": "13c6be6c80fc82c7cc91207b8a868b2b7e9d470e9673135b0499380f1c21efc9"
+    },
+    "master": {
+      "path": "tmp/oneshot-trials/p10-source-detail-20260922-b/review/artwork-300dpi.png",
+      "sha256": "dee93c9b7942d6cec06e8bbc46906f9ec3b6d2fb492974355d900141d427e374"
+    },
+    "preview": {
+      "path": "tmp/oneshot-trials/p10-source-detail-20260922-b/review/poster-de.png",
+      "sha256": "f922f4a4b9a8622a8ff67ce006b6c4bdcb178c57aa04c5b9caa4aa7b75c81d51"
+    },
+    "cards": [
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-b/review/cards/card_r1_c1.png",
+        "rectangle": [
+          0,
+          0,
+          750,
+          1050
+        ],
+        "sha256": "3dbc0e1df94a21bdc5966de873a486f464a93811f589b57babe5bc5f0b92999b"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-b/review/cards/card_r1_c2.png",
+        "rectangle": [
+          809,
+          0,
+          1559,
+          1050
+        ],
+        "sha256": "5f14c5479322c6db40843c41e3715e328a02474f67c3f0e981d203ad2a8adebc"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-b/review/cards/card_r1_c3.png",
+        "rectangle": [
+          1618,
+          0,
+          2368,
+          1050
+        ],
+        "sha256": "0334544b928b9e6b309bfb823cea4d1fc576f5c70e6672cd4daf65082e3dd495"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-b/review/cards/card_r2_c1.png",
+        "rectangle": [
+          0,
+          1109,
+          750,
+          2159
+        ],
+        "sha256": "a7bf645a8b4880aac4fee30c12d3b4a913d5f1e935b6e22990060e8d86d0cd8a"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-b/review/cards/card_r2_c2.png",
+        "rectangle": [
+          809,
+          1109,
+          1559,
+          2159
+        ],
+        "sha256": "9b1264f923f23963ab8218758921e25c21bef9df6364e2853099dfb8d08419f7"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-b/review/cards/card_r2_c3.png",
+        "rectangle": [
+          1618,
+          1109,
+          2368,
+          2159
+        ],
+        "sha256": "25355e04be56c21c4dd82ce4869efa06e720ab60c9284f7f435549968446decb"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-b/review/cards/card_r3_c1.png",
+        "rectangle": [
+          0,
+          2218,
+          750,
+          3268
+        ],
+        "sha256": "10d95ded9567c90d61ceabc0697e94c375dedae6b3ddee69f6e4450de41ec172"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-b/review/cards/card_r3_c2.png",
+        "rectangle": [
+          809,
+          2218,
+          1559,
+          3268
+        ],
+        "sha256": "6a89af36ce581f2d4a5aa3be7cde213b39c2d118c0419e973842aaf50b61b642"
+      },
+      {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-b/review/cards/card_r3_c3.png",
+        "rectangle": [
+          1618,
+          2218,
+          2368,
+          3268
+        ],
+        "sha256": "d52c676d30c0a23596b0ed389a5bd8c061b2fc1db8e9b530bda45486ec0a9ef9"
+      }
+    ],
+    "worker_run": {
+      "path": "tmp/oneshot-trials/p10-source-detail-20260922-b/retrieved/oneshot-euo9dvis/run.json",
+      "sha256": "b895052558b0f907f934d8d99d3bed3bb5ca909516e00465bc6abd73acd0d8ae"
+    },
+    "worker_log": {
+      "path": "tmp/oneshot-trials/p10-source-detail-20260922-b/retrieved/oneshot-euo9dvis/comfyui.log",
+      "sha256": "6e0929214d85f17e7e45b79fe9345eb8521bf38deed11f525e40cc543d6ad691"
+    },
+    "run_sidecar": {
+      "path": "tmp/oneshot-trials/p10-source-detail-20260922-b/review/artwork-300dpi.run.json",
+      "sha256": "e249c7deee99dc4508ce50b49f5a7469932d2041eb6c2f746ac6289088810bc4"
+    }
+  },
+  "manifest_snapshot": "tmp/oneshot-trials/p10-source-detail-20260922-b/manifest-snapshot.yaml",
+  "next_change_de": "Dritter Versuch: Littens verdeckte Beingeometrie als kurze sichtbare Streifen-/Konturform beschreiben, statt mit der Anzahl von Vorderbeinen zu beginnen. Nur dieser Merkmalsabsatz ändert sich; anschließend keine vierte automatische Wiederholung."
+}

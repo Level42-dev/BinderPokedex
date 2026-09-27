@@ -46,7 +46,10 @@ class FetchTCGdexScarletVioletEXStep(BaseStep):
         'sv08',    # Surging Sparks
         'sv08.5',  # Blooming Waters
         'sv09',    # Journey Together
-        'sv10',    # Prismatic Evolutions
+        'sv10',    # Destined Rivals
+        'sv10.5b', # Black Bolt
+        'sv10.5w', # White Flare
+        'svp',     # SVP Black Star Promos
     ]
     
     # Mega Evolution sets (2025+)
@@ -54,6 +57,9 @@ class FetchTCGdexScarletVioletEXStep(BaseStep):
         'me01',    # Mega Evolution
         'me02',    # Phantasmal Flames
         'me02.5',  # Ascending Heroes
+        'me03',    # Perfect Order
+        'me04',    # Fated Rivals
+        'me05',    # Pitch Black
         'mep',     # MEP Black Star Promos
     ]
     
@@ -135,6 +141,9 @@ class FetchTCGdexScarletVioletEXStep(BaseStep):
         client = TCGdexClient(language=language)
         
         all_ex_cards = []
+        missing_sets = []
+        incomplete_card_ids = []
+        invalid_card_ids = []
         
         for set_id in all_sets:
             print(f"       Fetching set: {set_id}...")
@@ -142,6 +151,7 @@ class FetchTCGdexScarletVioletEXStep(BaseStep):
             set_data = client.get_set(set_id)
             if not set_data:
                 logger.warning(f"Could not fetch set {set_id}")
+                missing_sets.append(set_id)
                 continue
             
             # Filter for ex cards and get full details
@@ -159,10 +169,12 @@ class FetchTCGdexScarletVioletEXStep(BaseStep):
                 
                 if not full_card:
                     logger.warning(f"Failed to fetch card {card_id}")
+                    incomplete_card_ids.append(card_id)
                     continue
                 
                 # Check if it's a Pokemon card with dexId
                 if full_card.get('category') != 'Pokemon':
+                    invalid_card_ids.append(card_id)
                     continue
                 
                 dex_ids = full_card.get('dexId', [])
@@ -187,11 +199,28 @@ class FetchTCGdexScarletVioletEXStep(BaseStep):
                         f"Card {name} has no valid dexId and name lookup "
                         "failed, skipping"
                     )
+                    invalid_card_ids.append(card_id)
                     continue
                 
                 all_ex_cards.append(full_card)
             
             print(f"          Found {len([c for c in cards if c.get('name', '').endswith(' ex')])} ex cards")
+
+        if missing_sets or incomplete_card_ids or invalid_card_ids:
+            details = []
+            if missing_sets:
+                details.append(f"missing sets: {', '.join(missing_sets)}")
+            if incomplete_card_ids:
+                details.append(
+                    "missing card details: " + ", ".join(incomplete_card_ids)
+                )
+            if invalid_card_ids:
+                details.append(
+                    "invalid ex cards: " + ", ".join(invalid_card_ids)
+                )
+            raise RuntimeError(
+                "Could not fetch complete ex card data (" + "; ".join(details) + ")"
+            )
         
         print(f"    ✅ Fetched total: {len(all_ex_cards)} ex cards")
         

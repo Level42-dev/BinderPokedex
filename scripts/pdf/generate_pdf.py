@@ -55,19 +55,28 @@ except ImportError as e:
     print("\n".join(lines))
     sys.exit(1)
 
-# Add lib to path for imports
-sys.path.insert(0, str(Path(__file__).parent))
+# Use the repository package path so another top-level ``lib`` imported by the
+# fetcher cannot change which PDF modules resolve during a full test run.
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
-from lib.fonts import FontManager
-from lib.variant_pdf_generator import VariantPDFGenerator
-from lib.cli_formatter import CLIFormatter
-from lib.cli_validator import GenerationValidator, LanguageValidator, VariantValidator, DirectoryValidator
-from lib.constants import LANGUAGES
-from lib.generation_options import (
+from scripts.pdf.lib.fonts import FontManager
+from scripts.pdf.lib.variant_pdf_generator import VariantPDFGenerator
+from scripts.pdf.lib.cli_formatter import CLIFormatter
+from scripts.pdf.lib.cli_validator import (
+    GenerationValidator,
+    LanguageValidator,
+    VariantValidator,
+    DirectoryValidator,
+)
+from scripts.pdf.lib.constants import LANGUAGES
+from scripts.pdf.lib.generation_options import (
     POSTER_PAGE_MODES,
     pdf_output_filename,
     prepare_variant_data,
 )
+from scripts.poster_assets.scope_language import filter_variant_data_for_language
 
 # Configure logging - suppress INFO during generation for clean output
 logging.basicConfig(
@@ -233,6 +242,13 @@ Examples:
             "continuous full page"
         ),
     )
+
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=None,
+        help="Write PDFs to this directory inside the project instead of output/",
+    )
     
     parser.add_argument(
         "--test",
@@ -294,6 +310,11 @@ Examples:
     script_dir = Path(__file__).parent  # scripts/pdf/
     project_dir = script_dir.parent.parent  # project root
     data_dir = project_dir / "data" / "output"  # Read from output directory
+    output_dir = project_dir / "output"
+    if args.output_dir is not None:
+        output_dir = args.output_dir.expanduser().resolve()
+        if output_dir == project_dir.resolve() or not output_dir.is_relative_to(project_dir.resolve()):
+            parser.error("--output-dir must be a subdirectory of the project")
     
     if not data_dir.exists():
         logger.error(f"❌ Data directory not found: {data_dir}")
@@ -359,7 +380,7 @@ Examples:
                     scope_name=scope,
                     scope_file=scope_file,
                     languages=languages,
-                    output_dir=project_dir / 'output',
+                    output_dir=output_dir,
                     script_dir=script_dir,
                     skip_images=args.skip_images,
                     skip_poster=args.skip_poster,
@@ -422,7 +443,7 @@ Examples:
         scope_name=args.scope,
         scope_file=scope_file,
         languages=languages,
-        output_dir=project_dir / 'output',
+        output_dir=output_dir,
         script_dir=script_dir,
         skip_images=args.skip_images,
         skip_poster=args.skip_poster,
@@ -700,7 +721,7 @@ def _generate_variant_pdf(
     poster_page_mode="cards",
 ):
     """Generate a PDF for a scope (variant or pokedex)."""
-    from lib.pdf_generator import ImageCache
+    from scripts.pdf.lib.pdf_generator import ImageCache
     
     # Ensure output directory exists
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -723,8 +744,12 @@ def _generate_variant_pdf(
         test_mode=test_mode,
     )
     
-    prepared_variant_data = prepare_variant_data(
+    language_variant_data = filter_variant_data_for_language(
         variant_data,
+        language,
+    )
+    prepared_variant_data = prepare_variant_data(
+        language_variant_data,
         skip_images=skip_images,
         test_mode=test_mode,
     )

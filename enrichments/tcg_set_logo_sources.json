@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "sets": {
+    "sv10.5b": {
+      "de": "https://www.pokemon.com/static-assets/content-assets/cms2-de-de/img/trading-card-game/series/sv_series/sv10pt5/blk/sv10pt5_logo_169_de.png"
+    },
+    "sv10.5w": {
+      "de": "https://www.pokemon.com/static-assets/content-assets/cms2-de-de/img/trading-card-game/series/sv_series/sv10pt5/wht/sv10pt5_logo_169_de.png"
+    }
+  }
+}

@@ -76,9 +76,21 @@ class PosterBundle:
             )
 
 
+class _PosterLoader(yaml.SafeLoader):
+    """Keep YAML semantics while rejecting ambiguous source-detail bindings."""
+
+    def construct_mapping(self, node, deep=False):
+        for key, value in node.value:
+            if key.value in {"source_details", "spatial_reference_scales"} and isinstance(value, yaml.MappingNode):
+                names = [entry.value for entry, _ in value.value]
+                if len(names) != len(set(names)):
+                    raise ValueError(f"Duplicate {key.value} canonical subject key")
+        return super().construct_mapping(node, deep=deep)
+
+
 def load_yaml(path: Path) -> dict[str, Any]:
     with path.open("r", encoding="utf-8") as handle:
-        return yaml.safe_load(handle) or {}
+        return yaml.load(handle, Loader=_PosterLoader) or {}
 
 
 def load_json(path: Path) -> dict[str, Any]:

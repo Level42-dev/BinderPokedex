@@ -329,6 +329,13 @@ def audit_promoted_pairs(
             provenance = load_json_object(provenance_path)
             if provenance.get("kind") != "promoted_poster":
                 continue
+            # A masked composite is not a raw one-shot training target.
+            if (
+                provenance.get("schema_version") == 3
+                and isinstance(provenance.get("composition"), dict)
+                and provenance["composition"].get("kind") == "masked_fallback"
+            ):
+                continue
             asset_key = asset_key_for_provenance(
                 provenance_path,
                 poster_assets=poster_assets,

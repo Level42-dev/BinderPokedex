@@ -1,0 +1,2624 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-14",
+  "scope": "Existing installed artwork only; not new one-shot renders. Artwork decisions are separate from title, PDF, technical promotion and release approval.",
+  "accepted_candidates": [
+    {
+      "asset_key": "ExGen3/sections/mega",
+      "candidate": "exgen3-source-detail-20260914-c",
+      "master_sha256": "eb61f272fd22bd400b2c2555cb2a490fad47c85b3947087a88b96b2e9dce3ebd",
+      "acceptance_date": "2026-09-14",
+      "reviewer_kind": "human",
+      "report": "docs/reviews/2026-09-14-exgen3-oneshot-c.json",
+      "promoted": false,
+      "master": {
+        "file": "tmp/oneshot-trials/exgen3-source-detail-20260914-c/review/artwork-300dpi.png",
+        "sha256": "eb61f272fd22bd400b2c2555cb2a490fad47c85b3947087a88b96b2e9dce3ebd"
+      },
+      "user_statement": "Sieht wirklich gut aus. Nur noch leichte Abweichungen, zb im Auge fehlt der schwarz Strich/Punkt/Pupille. Aber das halte ich für vertretbar!"
+    },
+    {
+      "asset_key": "Base1",
+      "candidate": "base1-source-detail-20260914-b",
+      "master_sha256": "d06f69eb6e010b2670987a2209d3aec50848ac694aaefec64dc70d342ce0d9b4",
+      "acceptance_date": "2026-09-14",
+      "reviewer_kind": "human",
+      "report": "docs/reviews/2026-09-14-base1-oneshot.json",
+      "promoted": false,
+      "master": {
+        "file": "tmp/oneshot-trials/base1-source-detail-20260914-b/review/artwork-300dpi.png",
+        "sha256": "d06f69eb6e010b2670987a2209d3aec50848ac694aaefec64dc70d342ce0d9b4"
+      },
+      "user_statement": "das sieht super aus!"
+    }
+  ],
+  "pending_targets": [
+    {
+      "asset_key": "SV07",
+      "title_de": "Stellarkrone",
+      "master": {
+        "file": "assets/posters/SV07/poster-flux2-artwork.png",
+        "sha256": "876c1c23d1bd31ee832c419845e2f0469b069e0e596e7171b438246c56a4c8ef"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 3
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/SV07/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "ee7af481f4fa42efa7aeec935a40361746c60941f29ee78c3eac0050733d02ab"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_001_bulbasaur.png",
+            "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV07/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "6c66954ce54179a492a687c5bc5d2e00a756f99c586a55cec9b6f310195aa1f8",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_007_squirtle.png",
+            "sha256": "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV07/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "1fb371737c0748617a64acb25b9f91e815fe09195d0b836d86ec46feb408aeb4",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV07/sources/cutouts/pokemon_813_scorbunny.png",
+            "sha256": "0099f4bb576966efc872c03c69616f954c8474d12608a2fd7e91304a9d271167"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV07/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "4e4a9d1f935dd9eaedd577d0b72684a52f8f1d9766ac1d404fb72442382d5a3c",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "review_id": "P01"
+    },
+    {
+      "asset_key": "Base2",
+      "title_de": "Dschungel",
+      "master": {
+        "file": "assets/posters/Base2/poster-flux2-artwork.png",
+        "sha256": "9c0c166cc6bda2f8a8e07ba9affd486c19d9c017b54ed15b9bedba4568d5c45f"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "uncertain": 2,
+        "reject": 1
+      },
+      "user_decision": "repair_candidate_accepted_partial_review",
+      "user_review_extent": "Pikachu appearance and the two repaired foreground grass-blade crossings in candidate E are accepted. E has not replaced the installed original. Relaxo, Evoli and complete panorama acceptance remain open.",
+      "foreground_repair_experiment": {
+        "report": "docs/reviews/2026-09-14-base2-foreground-repair.json",
+        "comparison": "docs/reviews/2026-09-14-base2-foreground-repair.md",
+        "attempted_variants": 3,
+        "agent_result": "all rejected; partial effect only",
+        "correction_completed": false,
+        "human_approval_of_repair": false,
+        "original_replaced": false,
+        "continuation": {
+          "report": "docs/reviews/2026-09-14-base2-contour-repair.json",
+          "comparison": "docs/reviews/2026-09-14-base2-contour-repair.md",
+          "new_rendered_variants": 2,
+          "selected_candidate": "base2-contour-20260914-e",
+          "candidate_master_sha256": "70766e8307e73b36e0d5ff6be18f24c0df0efaae35cc7fb9355eb6948ee291aa",
+          "agent_local_depth_check": "pass; inspect minor contour irregularity and naturalness",
+          "human_review": "accepted_for_pikachu_and_local_grass_repair_only",
+          "operator_acceptance": {
+            "reviewer_kind": "human",
+            "review_date": "2026-09-14",
+            "source": "direct user message in this task",
+            "user_statement": "das sieht prima aus!",
+            "accepted_master_sha256": "70766e8307e73b36e0d5ff6be18f24c0df0efaae35cc7fb9355eb6948ee291aa",
+            "accepted_crop_sha256": "d92ab3abb30aaeaffed2d128891ef69cdff7b329ef82252b0c36c753117002b4",
+            "reviewed_source_sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+            "scope_limit": "Only Pikachu and the two grass-blade crossings in shown candidate E, accepted after the minor contour irregularity was disclosed. Other figures, full panorama, localization, PDFs, promotion and release remain separate.",
+            "release_approval_granted": false
+          },
+          "original_replaced": false
+        }
+      },
+      "preview": {
+        "file": "tmp/poster-workspaces/Base2/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "de85b5c6eab4159edcc0869518b7f953401aa154025f1b2b2d287d40e74933ac"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Base2/sources/cutouts/pokemon_025_pikachu.png",
+            "sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/Base2/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "6c30d13f0d0fcfbc5471b0df131133371e49bf3f61532ea6185029cf3ebd78e7",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "uncertain",
+          "operator_review": {
+            "reviewer_kind": "human",
+            "review_date": "2026-09-14",
+            "source": "direct user message and annotated screenshot in this task",
+            "user_statement": "pikachu an sich passt prima. die 2 halme laufen aber wie gehabt nicht vor ihm lang, obwohl sie das aus dieser pespektive sollten",
+            "character_appearance": "accepted",
+            "scene_depth": "correction_required",
+            "reviewed_master_sha256": "9c0c166cc6bda2f8a8e07ba9affd486c19d9c017b54ed15b9bedba4568d5c45f",
+            "reviewed_crop_sha256": "6c30d13f0d0fcfbc5471b0df131133371e49bf3f61532ea6185029cf3ebd78e7",
+            "reviewed_source_sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+            "annotation": {
+              "file": "tmp/panorama-review-inputs/2026-09-14/p02-pikachu-foreground-guide.png",
+              "sha256": "725015f63b68624ad7dd0847fa3f8d86fc33fc63b763dfa8d3af88441eb0d03f",
+              "role": "User-drawn location and direction guide, not clean artwork or a replacement Pokémon source. Orange strokes are annotations, not desired plant colors."
+            },
+            "correction_scope": "Continue exactly the two existing bottom-left foreground blades in front of Pikachu along the marked intersections: the extended arm and the lower-left torso. Preserve the accepted Pokémon depiction outside the necessary narrow plant occlusion; do not redraw the character or invent additional plants.",
+            "correction_completed": false,
+            "scope_limit": "Only the shown Pikachu depiction is accepted. Not approval of the current grass depth, other figures, the whole panorama, PDFs, promotion, or release.",
+            "release_approval_granted": false
+          },
+          "correction_resolution": {
+            "candidate": "base2-contour-20260914-e",
+            "human_approval_of_repair": true,
+            "report": "docs/reviews/2026-09-14-base2-contour-repair.json",
+            "approval_record": "operator_acceptance",
+            "original_replaced": false,
+            "historical_review_note": "The original operator_review above remains bound to the unchanged installed image; the separate acceptance applies only to repaired candidate E."
+          }
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Base2/sources/cutouts/pokemon_143_snorlax.png",
+            "sha256": "5f1f27c4be078c17521492ac7970d95d92200fa17b8c9696ac8d6ee0e0f4cc45"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/Base2/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "e4597b2e4c2bccd98fab7c83d1738c44ec50cf266bd6e205fe8f4718d620395b",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Base2/sources/cutouts/pokemon_133_eevee.png",
+            "sha256": "4a2657541b849e64f08f25c397cc2156f88eddd7163b86ced4c94050088f2bda"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/Base2/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "41161b6697c1da99625650e4688f386850e7b151e2fa0156a48a779b6213b274",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "uncertain"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "review_id": "P02"
+    },
+    {
+      "asset_key": "ME05",
+      "title_de": "Dunkelnacht",
+      "master": {
+        "file": "assets/posters/ME05/poster-flux2-artwork.png",
+        "sha256": "3120f1f07526c80d74f5cd83aa6bbb09dbc256e423f4d1c3c7ee3ecbf8f95732"
+      },
+      "prior_agent_verdict": "pass",
+      "subject_verdict_counts": {
+        "pass": 3
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "95cac7f042a8bd7b8947733a51a0c94e72b7349f726664f427393f4dcbc77aa5"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ME05/sources/cutouts/pokemon_728_popplio.png",
+            "sha256": "3bfa3104b894f212985122732497b17c78979c6bc9304bd7396e781677f2d7a3"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "bd6ee274c3e65b6ba2dda6c0b5894a2711a72eff97bc96e84c0aabc2331ffd01",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "pass"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ME05/sources/cutouts/pokemon_877_morpeko.png",
+            "sha256": "897a6b183f7e57c17be9db7979f299cccb386b0169e3961fba34244cfbe33c31"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "fd6a81cca2b078e5856876dcdb7a26d1fd26c89bb614041ec55c9f66b5f1d4be",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "pass"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ME05/sources/cutouts/pokemon_802_marshadow.png",
+            "sha256": "4ef2e2ff9af561949c7e315b9b266e561b8ba30c07a906240aa2ba177035ed41"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "c348ef3aac1e140603b9e3eb4e53eb2b4840f58ae7f42c166c3d2f52141aa61e",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "pass"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        },
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-me05-sv08-second-review.json",
+          "sha256": "db6a8daae4b9a1cb29dab1585f430c6180d75443561e2c6bb7f17168ee4995d8"
+        }
+      ],
+      "review_id": "P03"
+    },
+    {
+      "asset_key": "Pokedex/sections/gen1",
+      "title_de": "Pokédex – Generation I",
+      "master": {
+        "file": "assets/posters/Pokedex/sections/gen1/poster-flux2-artwork.png",
+        "sha256": "301976906809649aee6cbad5afa1226643321a7d40bbf6193c8e4305ed17ab21"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 2,
+        "pass": 1
+      },
+      "user_decision": "pending",
+      "preview": null,
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen1/sources/cutouts/pokemon_001_bulbasaur.png",
+            "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen1/card_r3_c1.png",
+            "sha256": "891a8d43b75fa3bacd1376554e368a07b4b5eedf2cc9bf1d5fcd62d57566d00d",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen1/sources/cutouts/pokemon_004_charmander.png",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen1/card_r3_c2.png",
+            "sha256": "a5c1d1a67baf58e31cfc42eb6957f810a75ab0b564ee93bfd5f4838ed4b54b98",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen1/sources/cutouts/pokemon_007_squirtle.png",
+            "sha256": "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen1/card_r3_c3.png",
+            "sha256": "ad743d069688caa28cc3d2810062347bd60d93024a436a364413bb948af09565",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "pass"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "review_id": "P04"
+    },
+    {
+      "asset_key": "Pokedex/sections/gen2",
+      "title_de": "Pokédex – Generation II",
+      "master": {
+        "file": "assets/posters/Pokedex/sections/gen2/poster-flux2-artwork.png",
+        "sha256": "120df09a5614c08d244841e26b827cff0fdbed82a72de5ba6985ad3c6614a487"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 2,
+        "uncertain": 1
+      },
+      "user_decision": "pending",
+      "preview": null,
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen2/sources/cutouts/pokemon_152_chikorita.png",
+            "sha256": "3ffc2eeee9139b0281ab5493b1a6d4b5c1329de5ddf5361f5ee3c93d12c05659"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen2/card_r3_c1.png",
+            "sha256": "f771ccd40b107d1512e02cf76279253eaf0d2850c914a50e6396d0a771ff62b0",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen2/sources/cutouts/pokemon_155_cyndaquil.png",
+            "sha256": "9532b237ef088f8032024b95459303495e261eb2f7f024b79511522e551a9bcd"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen2/card_r3_c2.png",
+            "sha256": "9c6fe1f5d153af840e0e556c66193428afdfeac370d8385c69870ee0233ba2bd",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen2/sources/cutouts/pokemon_158_totodile.png",
+            "sha256": "a0ce9f06497dc2a9a3d34174ff89e0ee1a0745ce8007cc89257e379d9be49525"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen2/card_r3_c3.png",
+            "sha256": "b266273fbf56749f77bcfc915a571c16db45a601708a11f9ac74bae2c4d105a0",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "uncertain"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "review_id": "P05"
+    },
+    {
+      "asset_key": "Pokedex/sections/gen3",
+      "title_de": "Pokédex – Generation III",
+      "master": {
+        "file": "assets/posters/Pokedex/sections/gen3/poster-flux2-artwork.png",
+        "sha256": "4e05fe23e97123fbcdf162396f0ab38bf8f35be7a165e0ea3b638b61892aba49"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 2,
+        "pass": 1
+      },
+      "user_decision": "pending",
+      "preview": null,
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen3/sources/cutouts/pokemon_252_treecko.png",
+            "sha256": "0e066d885e028d3c14a039ebf7b85b12ae2d5cca023d17bf16272f74fb4fae6c"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen3/card_r3_c1.png",
+            "sha256": "469c27d324817b6693146b55b8535bf76b90bc9a9d0ae435627492c53e8b588e",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen3/sources/cutouts/pokemon_255_torchic.png",
+            "sha256": "d234db13f46ac30452288fee011df2857d93bac22f7d038d6b472ef14a651950"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen3/card_r3_c2.png",
+            "sha256": "f3e816e5eba4626958ab5b182b7c3bee088c26080a89a502fe78cdca9790c72c",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "pass"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen3/sources/cutouts/pokemon_258_mudkip.png",
+            "sha256": "89abf9aa5f800efe849acbee7914e98ba574399c2293298606e81ebe43fb5a8d"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen3/card_r3_c3.png",
+            "sha256": "f418254127705f98b8ae9fb989384f0ee8756516efc081b95266d63a57e2f33c",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "review_id": "P06"
+    },
+    {
+      "asset_key": "Pokedex/sections/gen4",
+      "title_de": "Pokédex – Generation IV",
+      "master": {
+        "file": "assets/posters/Pokedex/sections/gen4/poster-flux2-artwork.png",
+        "sha256": "1421252b2f09e23e1fc06260181769dbc9775c6bdc2f1422e23bd1309a79d61d"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "pass": 2,
+        "reject": 1
+      },
+      "user_decision": "pending",
+      "preview": null,
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen4/sources/cutouts/pokemon_387_turtwig.png",
+            "sha256": "34bdf93e84d8e1770074ead9c38b1659bcc937abfa20ddd8a6e53a283ed0e16d"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen4/card_r3_c1.png",
+            "sha256": "0b4239d5250f68d94f425d2daa44b0737f99eeb58c04b634fbf3ee8b7ebc3966",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "pass"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen4/sources/cutouts/pokemon_390_chimchar.png",
+            "sha256": "7ce75f77abcaff1451c67da6fc8de9b6828aacb1a222dd590825c5cab4b20140"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen4/card_r3_c2.png",
+            "sha256": "6cd6d04ffbad47283051bdc03fd2ffba112c3d30dd8adbacef91aa3061915e9c",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen4/sources/cutouts/pokemon_393_piplup.png",
+            "sha256": "84895daf63236a40d6061af37739908b5256876c96a4a34b9f354df5f1ec2ca0"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen4/card_r3_c3.png",
+            "sha256": "ea819fce8690046a59329764ed6dd2acbc1bf907097150ed11c360c066ca0d92",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "pass"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "review_id": "P07"
+    },
+    {
+      "asset_key": "Pokedex/sections/gen5",
+      "title_de": "Pokédex – Generation V",
+      "master": {
+        "file": "assets/posters/Pokedex/sections/gen5/poster-flux2-artwork.png",
+        "sha256": "c21cc3dff19ea8b2186617ab39c0a623147130ec82ca25df6227eb7394e26652"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 2,
+        "pass": 1
+      },
+      "user_decision": "pending",
+      "preview": null,
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen5/sources/cutouts/pokemon_495_snivy.png",
+            "sha256": "e7ff61a0daed598a7676b262c56af766e88bcf91764658eeeae615f6f9937549"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen5/card_r3_c1.png",
+            "sha256": "87fa208a15e271dd8602d05a13c4d91930553c5220e904249dab8163d6421c56",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen5/sources/cutouts/pokemon_498_tepig.png",
+            "sha256": "d7750c56dc5be8ae10a6c270c34a0c46dbf64f289f2eb5670cbe52a9fd41f275"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen5/card_r3_c2.png",
+            "sha256": "1c8f10e4449b7a651ac5d2701ef5fd1f25435652420d08eafd605eb2cbdec48f",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "pass"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen5/sources/cutouts/pokemon_501_oshawott.png",
+            "sha256": "480904e99ed485ba3c8fb5866bac1a2acee76dd6dcee1a1ad3e2aac706576fc7"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen5/card_r3_c3.png",
+            "sha256": "a6f6f25622bc1872a63a863739239fa20cb745c0804ffb6760f8ce4f5bcba2a6",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "review_id": "P08"
+    },
+    {
+      "asset_key": "Pokedex/sections/gen6",
+      "title_de": "Pokédex – Generation VI",
+      "master": {
+        "file": "assets/posters/Pokedex/sections/gen6/poster-flux2-artwork.png",
+        "sha256": "588d433b0338783c87a14a4b48888b7b8288ff3e68fd89104b0d7396c199d0e6"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 1,
+        "uncertain": 1,
+        "pass": 1
+      },
+      "user_decision": "pending",
+      "preview": null,
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen6/sources/cutouts/pokemon_650_chespin.png",
+            "sha256": "565272048cd8eeb2b524d597da6805dbdff28c313bc5346181f1859041320ee7"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen6/card_r3_c1.png",
+            "sha256": "57407297a27d880201a90efe8e31b1c37924d27315cee3637c91c523e290c8a0",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen6/sources/cutouts/pokemon_653_fennekin.png",
+            "sha256": "b638e094ee06adcec959aad2898ce93f8c5fda88feba9c9158d1f16c026c07dd"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen6/card_r3_c2.png",
+            "sha256": "dca86b4589aad975fe6512fd019e8d5495cb48dcf94025018d5e47d0953349dd",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "uncertain"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen6/sources/cutouts/pokemon_656_froakie.png",
+            "sha256": "cbb47c38d234eb7dea4b1d90f8c97ec990f41b6e61f26e7efba90d80a3d1d632"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen6/card_r3_c3.png",
+            "sha256": "381043b14a1625c08f4bf02d222953c28a455faf817c7a2d62a5fef596adf1fe",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "pass"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "review_id": "P09"
+    },
+    {
+      "asset_key": "Pokedex/sections/gen7",
+      "title_de": "Pokédex – Generation VII",
+      "master": {
+        "file": "assets/posters/Pokedex/sections/gen7/poster-flux2-artwork.png",
+        "sha256": "2cf724beabc3c2a21be30f4a287e239292b5e16e59a4f3444bb26f6ba8ae7201"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 1,
+        "pass": 2
+      },
+      "user_decision": "pending",
+      "preview": null,
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen7/sources/cutouts/pokemon_722_rowlet.png",
+            "sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen7/card_r3_c1.png",
+            "sha256": "4b4f65e222c53603585b2708a39922cdc68b2161118006e14cc25e393fe66b24",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen7/sources/cutouts/pokemon_725_litten.png",
+            "sha256": "02391ac457888baf123accfc5ce446fc75df4790b3b000865a21c0f21b622600"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen7/card_r3_c2.png",
+            "sha256": "9926cb5d09cc2bb49501bc0629374146fc40dcc71806559f537f00a499f70caf",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "pass"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen7/sources/cutouts/pokemon_728_popplio.png",
+            "sha256": "3bfa3104b894f212985122732497b17c78979c6bc9304bd7396e781677f2d7a3"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen7/card_r3_c3.png",
+            "sha256": "51ddd739611a86841f3c1f44dd37bae9e9bc3c3acb5b0da980407c61eb2975d4",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "pass"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "review_id": "P10"
+    },
+    {
+      "asset_key": "Pokedex/sections/gen8",
+      "title_de": "Pokédex – Generation VIII",
+      "master": {
+        "file": "assets/posters/Pokedex/sections/gen8/poster-flux2-artwork.png",
+        "sha256": "22cc4173999d2a59b49e039e400f2e188e7d7fd3eba218fc826c56d5a2b81c99"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "uncertain": 1,
+        "reject": 2
+      },
+      "user_decision": "pending",
+      "preview": null,
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen8/sources/cutouts/pokemon_810_grookey.png",
+            "sha256": "0a4b1c0662dd8e0ad7f00bf78c2f958b297bc25c70bbc7273d50b3d39d5de330"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen8/card_r3_c1.png",
+            "sha256": "d57db0c7a4c3815645dd132ed592aa0862aff554a66b7f82ed2ac030e46903a3",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "uncertain"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen8/sources/cutouts/pokemon_813_scorbunny.png",
+            "sha256": "0099f4bb576966efc872c03c69616f954c8474d12608a2fd7e91304a9d271167"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen8/card_r3_c2.png",
+            "sha256": "2d4977ed0b83fec2c5b8ff9c1b556989069d0b5afb240cb7e8edad91bcbed32b",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen8/sources/cutouts/pokemon_816_sobble.png",
+            "sha256": "162c8c4c870624a42aa81f3859f29542d7d713bffd98bb4b4f7ab79ae9a881fb"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen8/card_r3_c3.png",
+            "sha256": "79ca5e37a4077d57e8aa9ba5e8fc62808a4be9e965f16462404bb3a8954a25e2",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "review_id": "P11"
+    },
+    {
+      "asset_key": "Pokedex/sections/gen9",
+      "title_de": "Pokédex – Generation IX",
+      "master": {
+        "file": "assets/posters/Pokedex/sections/gen9/poster-flux2-artwork.png",
+        "sha256": "9b69d26e7fce0838f2769aaa78bb00f7c37dcb72ce67ca224be2150abbb93114"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 2,
+        "pass": 1
+      },
+      "user_decision": "pending",
+      "preview": null,
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen9/sources/cutouts/pokemon_906_sprigatito.png",
+            "sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen9/card_r3_c1.png",
+            "sha256": "7350aa427f2a3ffa07c87792a1fa21d3b619931523bccdfdb29aec79855e151c",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen9/sources/cutouts/pokemon_909_fuecoco.png",
+            "sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen9/card_r3_c2.png",
+            "sha256": "b22c000b74e0992747709178d4537a9e3b020febd2959f565d716e61138add7c",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "pass"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen9/sources/cutouts/pokemon_912_quaxly.png",
+            "sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen9/card_r3_c3.png",
+            "sha256": "db3aee0702bec94702527fe8b1d0d85a0ccc020ac5877c371eb9421bce5e5718",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "review_id": "P12"
+    },
+    {
+      "asset_key": "ExGen1/sections/normal",
+      "title_de": "Pokémon ex - Generation 1",
+      "master": {
+        "file": "assets/posters/ExGen1/sections/normal/poster-flux2-artwork.png",
+        "sha256": "80457937f2507257f9ff45a82e6826e567c86186f0de379b109374d249a860ea"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 2,
+        "pass": 1
+      },
+      "user_decision": "pending",
+      "preview": null,
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen1/sections/normal/sources/cutouts/pokemon_003_venusaur.png",
+            "sha256": "04897191b567f8e6d866e6aa6eef184b6a93f8d0ba9ddaa50b4592ef261edc3b"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/ExGen1/sections/normal/card_r3_c1.png",
+            "sha256": "3bfba4a8900af2533ab342a3685725091e90c020b575fa084f4676ef04fc1b7b",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen1/sections/normal/sources/cutouts/pokemon_009_blastoise.png",
+            "sha256": "1bac4860feebcf5fb5cd27af8c9c4465773e948b68a7436dc65ec49618becd49"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/ExGen1/sections/normal/card_r3_c2.png",
+            "sha256": "1872f236f97fb2f4137d72aa4b7218a1e34580471910daca108e96890b5593c9",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "pass"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen1/sections/normal/sources/cutouts/pokemon_249_lugia.png",
+            "sha256": "f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/ExGen1/sections/normal/card_r3_c3.png",
+            "sha256": "d6c25a2b9b52b1ec9df47640726946bb3cd863c9e84cec24d4c0379c7c869d4c",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "review_id": "P13"
+    },
+    {
+      "asset_key": "ExGen2/sections/normal",
+      "title_de": "Pokémon EX",
+      "master": {
+        "file": "assets/posters/ExGen2/sections/normal/poster-flux2-artwork.png",
+        "sha256": "f968cb0b1687c4853d554e3287be23f8f3cc0efeb66da74f5376121708235811"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 3
+      },
+      "user_decision": "pending",
+      "preview": null,
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen2/sections/normal/sources/cutouts/pokemon_150_mewtwo.png",
+            "sha256": "b7c00037d7ba9fb5cebc2da42ca0da54c7b664f4d7b2348d60ade5c6dc9de256"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/normal/card_r3_c1.png",
+            "sha256": "2da1acb110cf0264a19abb67ed6507aba5e2345ed3cfc1cbb4105835b134d5b9",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen2/sections/normal/sources/cutouts/pokemon_151_mew.png",
+            "sha256": "3e7b29103dae09d0f8e8ff889b1991bdf387a2c6328aacb93fc34e8962584e33"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/normal/card_r3_c2.png",
+            "sha256": "d6db2ad3466725395392b69cf0672da8cccb94ef60d54baac098ad8322467bbc",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen2/sections/normal/sources/cutouts/pokemon_249_lugia.png",
+            "sha256": "f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/normal/card_r3_c3.png",
+            "sha256": "3fcb3d3be3ccb2f0323e06eaea66ae3d9aa03f154edb217775e87570bd49ef3b",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "review_id": "P14"
+    },
+    {
+      "asset_key": "ExGen2/sections/mega",
+      "title_de": "Mega-Pokémon EX",
+      "master": {
+        "file": "assets/posters/ExGen2/sections/mega/poster-flux2-artwork.png",
+        "sha256": "51a3ceff402561ce6a156d8616e1a270ee302c22e04c1f11260794f6ce074fa0"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 3
+      },
+      "user_decision": "pending",
+      "preview": null,
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen2/sections/mega/sources/cutouts/pokemon_150_artwork_10043_mega_mewtwo_x.png",
+            "sha256": "5dd98bb485cf51eb4ede5189d28aeb9c6e426bd08d9abbc37187c02268b188d9"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/mega/card_r3_c1.png",
+            "sha256": "559d245e2ba97077933b4c9b6e50745d77bbd9baf537fbe91caa9f1d703cdd53",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen2/sections/mega/sources/cutouts/pokemon_384_artwork_10079_mega_rayquaza.png",
+            "sha256": "28a9f35caa69df85cde05fcb5e7785d7581b30910b2cd6df508d35fca2a789f4"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/mega/card_r3_c2.png",
+            "sha256": "9195003d03355eac2877dffabdd8f5a00b0ec417a7f7df44ab60edab4f879f3a",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen2/sections/mega/sources/cutouts/pokemon_381_artwork_10063_mega_latios.png",
+            "sha256": "ea327ac2ac56cb1a90153bad84f66bd62d25f8c25093733ed1aef9a5411b8054"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/mega/card_r3_c3.png",
+            "sha256": "af874bf57f586776fbb619c0c6bf911f13babb076e19ebe86f098cb9d62911e8",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "review_id": "P15"
+    },
+    {
+      "asset_key": "ExGen2/sections/primal",
+      "title_de": "Primal Pokémon EX",
+      "master": {
+        "file": "assets/posters/ExGen2/sections/primal/poster-flux2-artwork.png",
+        "sha256": "74c828b35bbf41bd745c80b088179ac41aba9e560a2cfff824504f0c2c85b836"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 2
+      },
+      "user_decision": "pending",
+      "preview": null,
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen2/sections/primal/sources/cutouts/pokemon_382_artwork_10077_primal_kyogre.png",
+            "sha256": "226507487da40a44b8df44c4fd04ecc6398b8873e792dd2ce31ecfa7a8e3777b"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/primal/card_r3_c1.png",
+            "sha256": "f211168cb303bf8959c1e627d7e3f1ccdf145ebef389780c4d7fe99f91483852",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen2/sections/primal/sources/cutouts/pokemon_383_artwork_10078_primal_groudon.png",
+            "sha256": "fd0a131143a3289cde178438f5ea0249ff62cacb6dbb6742c95544c7c42aad5a"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/primal/card_r3_c3.png",
+            "sha256": "7c4bb1a3235c154d0c820c5eb175ee1fdee500e0fcb111988a735b1bfb2b0a06",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-aggregate.json",
+          "sha256": "42e0b46388b044e4122439a9d93f7af54eec9e52f495a75548a0026716900045"
+        }
+      ],
+      "review_id": "P16"
+    },
+    {
+      "asset_key": "Base3",
+      "title_de": "Fossil",
+      "master": {
+        "file": "assets/posters/Base3/poster-flux2-artwork.png",
+        "sha256": "aa861af2f9b212943db476be0fad91358f63f209f262b59e90c2f2a951ba3537"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 2,
+        "uncertain": 1
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/Base3/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "b213fe76e87c6cbe65e05415ab7e90802cb914a7d9a56762391b05b5d06ad753"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Base3/sources/cutouts/pokemon_141_kabutops.png",
+            "sha256": "d59c4a7435ada052c103fded3f49623e1c32858665c7f5135c6bbbe0f1de8527"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/Base3/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "36f95d18f93de4f34f053d4208af65fd1cdfc399eaa3648282850def1728b795",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Base3/sources/cutouts/pokemon_131_lapras.png",
+            "sha256": "0dda58737b5c1d7db8e7b81ff61b41d0f23bc08ddbf166ca61c20d17d1d27113"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/Base3/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "e53546f5cbb8792919b9c47c912da1065c5b096b497a3a27286bac5a86c53912",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/Base3/sources/cutouts/pokemon_094_gengar.png",
+            "sha256": "cd83bb9a7cc3cb159394dc30dda48160965f5470a474d63c921c7eb4884f8d1d"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/Base3/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "f533622e193652404a6fa6ee3da44174c8755ed5cbf3f89c00884742256d8a97",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "uncertain"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "review_id": "P17"
+    },
+    {
+      "asset_key": "SV01",
+      "title_de": "Karmesin & Purpur",
+      "master": {
+        "file": "assets/posters/SV01/poster-flux2-artwork.png",
+        "sha256": "0c5b398a2b5bd52cc7e255d291e76dbfe840078a5931ddf9bf527db512509bfe"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 1,
+        "uncertain": 1,
+        "pass": 1
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/SV01/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "956916b973b98a61b89c53540e17362d4ea75db683e41e30ec8c6a4fe05fcdd7"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV01/sources/cutouts/pokemon_906_sprigatito.png",
+            "sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "eb94e96f85ccc2fe933f85f90f28967065d629995eccba0ba62e89a6d7b87a2b",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV01/sources/cutouts/pokemon_909_fuecoco.png",
+            "sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "1f4af09fd2f172a7c67346e009ba9e46f76b342c5fa25e15d3cfb4fe23fc8d7b",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "uncertain"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV01/sources/cutouts/pokemon_912_quaxly.png",
+            "sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "42cd3edb6b790f0c92186a69f1f635e00456f4a804c031a756bf4bf9c9542f27",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "pass"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "review_id": "P18"
+    },
+    {
+      "asset_key": "SV02",
+      "title_de": "Entwicklungen in Paldea",
+      "master": {
+        "file": "assets/posters/SV02/poster-flux2-artwork.png",
+        "sha256": "54aff4959b4c408246342318956805918bd8676d26518cc8d1f4cca8dc47ec6a"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 2,
+        "uncertain": 1
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/SV02/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "31017860687e4e515c03cfcc2033dd604a250b39adf47e190dc5fb0bba162c30"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV02/sources/cutouts/pokemon_906_sprigatito.png",
+            "sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "123a91b8cfc485dc6f7ad7a0fb2aa0fb2fcdeb8cc464dbad05552ead61db1870",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV02/sources/cutouts/pokemon_909_fuecoco.png",
+            "sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "bc90fda792480785499109babb5935bb4cdcd26a65efb5ccdfe306c1a8d0a029",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV02/sources/cutouts/pokemon_912_quaxly.png",
+            "sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "ee7ee602e7ce1277c872fe6da3a113293c54def45dbc80e413a70bf3f5d0a5cd",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "uncertain"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "review_id": "P19"
+    },
+    {
+      "asset_key": "SV03",
+      "title_de": "Obsidian Flammen",
+      "master": {
+        "file": "assets/posters/SV03/poster-flux2-artwork.png",
+        "sha256": "96edafdfdbdf95e8873c9cc72c5e4c9f6fde2d7aeda1512802147b6123391770"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 2,
+        "pass": 1
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/SV03/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "d685a4c52702be8665f638030cc7e434b0fe7305597758e7cd452c7fdbe747b1"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV03/sources/cutouts/pokemon_722_rowlet.png",
+            "sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "0501d9fca7bdbf36fc2e4a6d5c963351cbc7a6b3659993f9194dd2f6c2f4752a",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV03/sources/cutouts/pokemon_004_charmander.png",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "b0c1fb22066895a3c62f8316f931a8416d03e84fae444ca4bfb18c878ea9cf93",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV03/sources/cutouts/pokemon_656_froakie.png",
+            "sha256": "cbb47c38d234eb7dea4b1d90f8c97ec990f41b6e61f26e7efba90d80a3d1d632"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "086dd49260adfd37a014324f91998972752b79d35340c41ff6ac40bd2a2ef8d9",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "pass"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "review_id": "P20"
+    },
+    {
+      "asset_key": "SV03.5",
+      "title_de": "151",
+      "master": {
+        "file": "assets/posters/SV03.5/poster-flux2-artwork.png",
+        "sha256": "727efeda4772538dc294fe0e458600a371e8fef643cd75c8fc603a1ab126acd8"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 2,
+        "uncertain": 1
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/SV03.5/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "a5b3a13fc036eece43ac77f09b4877ae6589029e4d8fad7b5b03656b43850e82"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV03.5/sources/cutouts/pokemon_001_bulbasaur.png",
+            "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV03.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "56dd916dd041303d68e93037cbe3ee0cdef831bf7a8694ad2dc7a545b9de18bf",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV03.5/sources/cutouts/pokemon_004_charmander.png",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV03.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "8196fdef1d0c51307e6554ff8705e75d5190bb099065fd8f6385b071ad0ae930",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV03.5/sources/cutouts/pokemon_007_squirtle.png",
+            "sha256": "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV03.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "755ec722476707b909999b7c4ce875797cc7178eb0237503cffe00636f9007c5",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "uncertain"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "review_id": "P21"
+    },
+    {
+      "asset_key": "SV04",
+      "title_de": "Paradoxrift",
+      "master": {
+        "file": "assets/posters/SV04/poster-flux2-artwork.png",
+        "sha256": "fbef96b80f577acaa02915ea6b789c447df4a5b28dcac369070ff711a413c30a"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 3
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/SV04/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "3c5ca5f961449808a334166798a4a73ec252ed121b18a3228db13bbb3b95b7e5"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV04/sources/cutouts/pokemon_909_fuecoco.png",
+            "sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "60fbd44d2c98eb5dc9747234b394ebe56a58903053e0552bfd768dcec7610cd5",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV04/sources/cutouts/pokemon_484_palkia.png",
+            "sha256": "c364c56bf8921cdb2e26922307379bc1d8b2f61220f366da467e117be26f33c9"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "e1306c54e24fb20644f7fef1bef650e5f5423dab5f6f93325dc484b6eae71fa4",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV04/sources/cutouts/pokemon_150_mewtwo.png",
+            "sha256": "b7c00037d7ba9fb5cebc2da42ca0da54c7b664f4d7b2348d60ade5c6dc9de256"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "ae99a27bd415c16ba88d18df2532ce68aaa1893476122fbe97edbeccee3e5a4c",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "review_id": "P22"
+    },
+    {
+      "asset_key": "SV04.5",
+      "title_de": "Paldeas Schicksale",
+      "master": {
+        "file": "assets/posters/SV04.5/poster-flux2-artwork.png",
+        "sha256": "05a519ec108167e8eec28f50410252c8be294d90100aedf99a7d215cb15d8c6b"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 1,
+        "uncertain": 1,
+        "pass": 1
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/SV04.5/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "dd25f6c26818d40ccbb830918c17ef654f1a1c1a9e70b1c81805881ff7399c89"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV04.5/sources/cutouts/pokemon_004_charmander.png",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV04.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "f7a62da1871b5a60d96207cba94bbd31d1b40ed8b2d8139c2628ea2fbd18f26c",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV04.5/sources/cutouts/pokemon_025_pikachu.png",
+            "sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV04.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "aca0883ddeea60d1f6f4bd4e2fcf805a388977eabd2ce2297bc62fe4786f66ce",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "uncertain"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV04.5/sources/cutouts/pokemon_131_lapras.png",
+            "sha256": "0dda58737b5c1d7db8e7b81ff61b41d0f23bc08ddbf166ca61c20d17d1d27113"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV04.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "cde58f54b2e67a02bf9ff0d13e37bf74c83984d316b33d07ebb4e21940706670",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "pass"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "review_id": "P23"
+    },
+    {
+      "asset_key": "SV05",
+      "title_de": "Gewalten der Zeit",
+      "master": {
+        "file": "assets/posters/SV05/poster-flux2-artwork.png",
+        "sha256": "2e0deba9d4194f6b11c90fa7a067cf4eecd59c36a8fb57cf272f98b2674aa374"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "uncertain": 1,
+        "reject": 2
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/SV05/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "13bd3c76a6c23d3dfe5ef0e6a43c83dbc7402d204eeed5badb8a00c4fa87f2c4"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV05/sources/cutouts/pokemon_387_turtwig.png",
+            "sha256": "34bdf93e84d8e1770074ead9c38b1659bcc937abfa20ddd8a6e53a283ed0e16d"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "ffbaa5f708d963b26ba5d43a3f5c7cb7745e05e7eb790d9e52311949ce8379c4",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "uncertain"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV05/sources/cutouts/pokemon_725_litten.png",
+            "sha256": "02391ac457888baf123accfc5ce446fc75df4790b3b000865a21c0f21b622600"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "e610663de670e8a158d96a26f78c98f0b51719ce071e77ca0e4f85994792f974",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV05/sources/cutouts/pokemon_158_totodile.png",
+            "sha256": "a0ce9f06497dc2a9a3d34174ff89e0ee1a0745ce8007cc89257e379d9be49525"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "76212e1ef1b435012f1235c20584667d6382d84a8b9ef64864bcb37660cd0c06",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "review_id": "P24"
+    },
+    {
+      "asset_key": "SV06",
+      "title_de": "Maskerade im Zwielicht",
+      "master": {
+        "file": "assets/posters/SV06/poster-flux2-artwork.png",
+        "sha256": "a94d925d2e6d5a252f0c684c754f603284daaecbca5d0fa21f55f008f1755bcc"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 1,
+        "uncertain": 1,
+        "pass": 1
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/SV06/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "5794c1fac63f954923c628c2d01465d78fa666c1e186a05d9958dedb64d66b04"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV06/sources/cutouts/pokemon_810_grookey.png",
+            "sha256": "0a4b1c0662dd8e0ad7f00bf78c2f958b297bc25c70bbc7273d50b3d39d5de330"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV06/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "abebc56ed7fe17b17c8a83789f6116c0e1dd9aac3e0e3f6832287578f9e75db9",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV06/sources/cutouts/pokemon_390_chimchar.png",
+            "sha256": "7ce75f77abcaff1451c67da6fc8de9b6828aacb1a222dd590825c5cab4b20140"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV06/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "9f02e29160bbe0b977c4d857c7a9cd2ee2294c6ccd8f98c9d438d1a8a03d9202",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "uncertain"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV06/sources/cutouts/pokemon_656_froakie.png",
+            "sha256": "cbb47c38d234eb7dea4b1d90f8c97ec990f41b6e61f26e7efba90d80a3d1d632"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV06/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "7afd007fe6df5c1bf2b174a2298a2e934161e8b522cbd2153e4b6e0fdfc67c4b",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "pass"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "review_id": "P25"
+    },
+    {
+      "asset_key": "SV06.5",
+      "title_de": "Nebel der Sagen",
+      "master": {
+        "file": "assets/posters/SV06.5/poster-flux2-artwork.png",
+        "sha256": "847ff1ca298cf6489b775573f73370cf6f562a48f545c3fdc3bec1e7fdfe60e3"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 2,
+        "uncertain": 1
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/SV06.5/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "671b34f946326177a7307d8293fbb3aaf6dcd83846758b37204fbd085d3c3052"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV06.5/sources/cutouts/pokemon_722_rowlet.png",
+            "sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV06.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "f73a5494acd74239351eab39311e072d50af2531de3b707a176b5eb2baa61a4b",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV06.5/sources/cutouts/pokemon_717_yveltal.png",
+            "sha256": "154bd7f904c5db48ddce7cc7ff656f95cd110c7327bee28a895b11fddfcfa4a7"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV06.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "0623a506dcfe3ea0e405871e3d4d169c52886bf84da772fbb006ec0d37eb2bfe",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV06.5/sources/cutouts/pokemon_649_genesect.png",
+            "sha256": "0d77f632c0d27b74998040266b493c817a3643e2257e106a0feaa5fe52002b5a"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV06.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "6a57af6bdb870703b5feef1673e42a3b60023365ea5e3d82ace5fc56ef59c15e",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "uncertain"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
+          "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
+        }
+      ],
+      "review_id": "P26"
+    },
+    {
+      "asset_key": "SV08",
+      "title_de": "Stürmische Funken",
+      "master": {
+        "file": "assets/posters/SV08/poster-flux2-artwork.png",
+        "sha256": "d931776dc062cc9f9db4b632fab658ce678ad6fe2afcc73d33e363f1e51fe7f8"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 1,
+        "pass": 1,
+        "uncertain": 1
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "a6fdc9757cfd99fb784e48983a935db4106181b4826a2b6b4bfe147cf0295204"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV08/sources/cutouts/pokemon_250_ho_oh.png",
+            "sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "783b34d1e30f2c2ba9a9712dd00e6bc53c0bc0474487cc3b24f6d0c6655c62cf",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV08/sources/cutouts/pokemon_909_fuecoco.png",
+            "sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "e45272daf5eb81dcd2ff6b24911670104d27c5948508282e4587c5cd2287dc70",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "pass"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV08/sources/cutouts/pokemon_025_pikachu.png",
+            "sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "644019c208f14b3688b76a1ec697a075bd9d9cdb29428eb0a67aa526d2891e99",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "uncertain"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        },
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-me05-sv08-second-review.json",
+          "sha256": "db6a8daae4b9a1cb29dab1585f430c6180d75443561e2c6bb7f17168ee4995d8"
+        }
+      ],
+      "review_id": "P27"
+    },
+    {
+      "asset_key": "SV08.5",
+      "title_de": "Prismatische Entwicklungen",
+      "master": {
+        "file": "assets/posters/SV08.5/poster-flux2-artwork.png",
+        "sha256": "0fa96a8cf36e05d50bf667354127603aa0a057afb710c4743fe9676db4cd74a9"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "pass": 1,
+        "reject": 2
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/SV08.5/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "601510a0744254250d64e9b2a142fce1521a01741778cf89cb558f0227e5603b"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV08.5/sources/cutouts/pokemon_025_pikachu.png",
+            "sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV08.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "a05b9ee1286c2a557dba4746cefcf3049332871329486d2fb414b64dbf8f09dc",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "pass"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV08.5/sources/cutouts/pokemon_383_groudon.png",
+            "sha256": "0207895137e94107b5efbf9054d3c94f2ae16374f9cd07d3729fb5e86dd271ac"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV08.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "b1c32e4cf2be42ce6edd75f732a944e35a1da82adefb32f8318dd7f5f317e674",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV08.5/sources/cutouts/pokemon_249_lugia.png",
+            "sha256": "f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV08.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "60c467c04df83d0be91d47929039099733e3aa05f05f5dd03ffa941dff5fcb90",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "review_id": "P28"
+    },
+    {
+      "asset_key": "SV09",
+      "title_de": "Reisegefährten",
+      "master": {
+        "file": "assets/posters/SV09/poster-flux2-artwork.png",
+        "sha256": "fea5eaa24c1d7d1f584b9beeef7064a42e0fb56b6e4c74090080c743330059bf"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 2,
+        "uncertain": 1
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/SV09/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "2be7e5c2567694d3d47afab8d9b4bffd22ad6170904fd8ec10a14c349f9b6af1"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV09/sources/cutouts/pokemon_906_sprigatito.png",
+            "sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV09/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "e7d0f1fdb53a225fec04e04d03f00e489eef6929d2e1868ba36e26b961c4cadb",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV09/sources/cutouts/pokemon_255_torchic.png",
+            "sha256": "d234db13f46ac30452288fee011df2857d93bac22f7d038d6b472ef14a651950"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV09/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "037e2f0bfe663c6d10e0247f90e3151303101a14d5eddea75b46b77e38253cd2",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "uncertain"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV09/sources/cutouts/pokemon_643_reshiram.png",
+            "sha256": "da64fe6f0285ea0837a5fd06b150abee0eb5598c47050314ac1ece006d61c135"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV09/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "631a1b127488f3ce43c6a87f20f2d15328cd570483da2420ee31434bb640e143",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "review_id": "P29"
+    },
+    {
+      "asset_key": "SV10",
+      "title_de": "Ewige Rivalen",
+      "master": {
+        "file": "assets/posters/SV10/poster-flux2-artwork.png",
+        "sha256": "d58e13869502dc2e399d9acec2023ae25fd7cf0b10d25d7d6f83d7f1b0a60d18"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 3
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/SV10/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "78d1f6618cf5edd16c879ebcc2395406da84a2265dddebf20955e6995f53ec81"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV10/sources/cutouts/pokemon_155_cyndaquil.png",
+            "sha256": "9532b237ef088f8032024b95459303495e261eb2f7f024b79511522e551a9bcd"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV10/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "b3a4fba8795a75ed90e80a6e3726f8942396bec04573e98cb215990a0a89fab7",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV10/sources/cutouts/pokemon_250_ho_oh.png",
+            "sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV10/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "b09bec10f97aed236010dd488a0d3faf65fed601e792bd50e48eebb11aec594b",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV10/sources/cutouts/pokemon_255_torchic.png",
+            "sha256": "d234db13f46ac30452288fee011df2857d93bac22f7d038d6b472ef14a651950"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV10/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "cf8d1b262472222ba197da039cae2ed156587da470e4df2df5fb9732aebd250b",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "review_id": "P30"
+    },
+    {
+      "asset_key": "SV10.5B",
+      "title_de": "Schwarze Blitze",
+      "master": {
+        "file": "assets/posters/SV10.5B/poster-flux2-artwork.png",
+        "sha256": "802d5dec3ae46e0b9d0ba953d475fa61cc77e7f6a8eb8ea258f7d34b1a9f003b"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "pass": 1,
+        "reject": 2
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/SV10.5B/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "e2ac13d587e1a1cafbf4dffbe697e104ecc4cadbaec87f11aca246f5350ae241"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV10.5B/sources/cutouts/pokemon_495_snivy.png",
+            "sha256": "e7ff61a0daed598a7676b262c56af766e88bcf91764658eeeae615f6f9937549"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV10.5B/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "02d10db47121ad21ebcb2a6b96bd9e586c0208568b1c9e381931c0188070e901",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "pass"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV10.5B/sources/cutouts/pokemon_646_kyurem.png",
+            "sha256": "d67df985a583dc711c2d2f753f516c56e33e4717c113f4b27fcb998c8f33f38b"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV10.5B/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "474a719a0106b6110118a8d987bb5f983992a98a1d1b559e588eb92d58b88d8b",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV10.5B/sources/cutouts/pokemon_644_zekrom.png",
+            "sha256": "3a621c1df54ce8e73a144c58b5cd4d20fa309009c41731852f85445068829fcc"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV10.5B/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "10a63dd78aa9c51f64f22c2c1c2f313dfbf530fa7c107ce8bf40d78dfda7b6bc",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "review_id": "P31"
+    },
+    {
+      "asset_key": "SV10.5W",
+      "title_de": "Weiße Flammen",
+      "master": {
+        "file": "assets/posters/SV10.5W/poster-flux2-artwork.png",
+        "sha256": "da524b22b59dc76537adbf19b66e692f276cb0ebd5b0af7044b5f4c0783c2e0f"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 3
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/SV10.5W/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "130e0e8fe64ebba8a60f935d610d921a429d71df9827918be84f63e738df1986"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV10.5W/sources/cutouts/pokemon_498_tepig.png",
+            "sha256": "d7750c56dc5be8ae10a6c270c34a0c46dbf64f289f2eb5670cbe52a9fd41f275"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV10.5W/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "064efa1bce0775f880b75fef8dc2b976b39310183dd8f2917770313baf5d857e",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV10.5W/sources/cutouts/pokemon_643_reshiram.png",
+            "sha256": "da64fe6f0285ea0837a5fd06b150abee0eb5598c47050314ac1ece006d61c135"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV10.5W/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "ad54ee4337ef3419f6392f0b8547abd8f9fbe6d2f102b9dddf267df86e561acf",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SV10.5W/sources/cutouts/pokemon_501_oshawott.png",
+            "sha256": "480904e99ed485ba3c8fb5866bac1a2acee76dd6dcee1a1ad3e2aac706576fc7"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV10.5W/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "4a397744abb8867c008bcbd553d4ee74746dfd77fa3d3b6020ba54f718c75283",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "review_id": "P32"
+    },
+    {
+      "asset_key": "SVP",
+      "title_de": "SVP Black Star Promos",
+      "master": {
+        "file": "assets/posters/SVP/poster-flux2-artwork.png",
+        "sha256": "6527600191306285021b3ae373b915e51568dcf15e4349418864e44866e85426"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 3
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/SVP/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "19f474ffc94b340a6e77aab1cf8a58f6942fb1ffe8dd5689a042d1033b55336c"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SVP/sources/cutouts/pokemon_906_sprigatito.png",
+            "sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SVP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "bc563133c21ec2fd16100ca40c4da9e6edcc1969af45912c8ee24cfc697bb318",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SVP/sources/cutouts/pokemon_909_fuecoco.png",
+            "sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SVP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "a335550be3d540cbe22ed4060a0548ed2edb7b77d48dd727c85fa3ff6123b791",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/SVP/sources/cutouts/pokemon_912_quaxly.png",
+            "sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SVP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "f0bbd767dd4472e2ad56324edcb29a8b283e308d730c9c97f38ce25993e280a3",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "review_id": "P33"
+    },
+    {
+      "asset_key": "ME01",
+      "title_de": "Mega-Entwicklung",
+      "master": {
+        "file": "assets/posters/ME01/poster-flux2-artwork.png",
+        "sha256": "d189aad3bd442ddc559f341699b4c8a2661a3aa279b29f73960a69280afbc93b"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 2,
+        "uncertain": 1
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/ME01/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "57436917cafd00cc8e062d48343d3e81ce8ec92e1cc4613e4ef524ab96c56ef6"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ME01/sources/cutouts/pokemon_001_bulbasaur.png",
+            "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "a211f4afe9d52cedc070cc3223cc6c6971665557f30126e699ceee2e9bd4d5e2",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ME01/sources/cutouts/pokemon_152_chikorita.png",
+            "sha256": "3ffc2eeee9139b0281ab5493b1a6d4b5c1329de5ddf5361f5ee3c93d12c05659"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "6534d59574b2997c270a6c913f39b29d0a7102e0db9b730cdca2bdd24128a667",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ME01/sources/cutouts/pokemon_251_celebi.png",
+            "sha256": "7596d91f88dfdb24bac29ad2ff37ec9652ae0aa5de9e8dab04fb0ac53ed697f1"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "1f6dfe244a75608a9933d46d5f14ce326615c6df48be17e89d1bff06d396f9c4",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "uncertain"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "review_id": "P34"
+    },
+    {
+      "asset_key": "ME02",
+      "title_de": "Fatale Flammen",
+      "master": {
+        "file": "assets/posters/ME02/poster-flux2-artwork.png",
+        "sha256": "f20acc0f58cc0f21ed7c81567d15ecb34afe5f45c5bfcc3f649bf1e83d8cf28a"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 3
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/ME02/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "1d9a3eaaee785350ecc8509999b9f4c733dc024bae975bc5b9d0a12009e90a68"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ME02/sources/cutouts/pokemon_649_genesect.png",
+            "sha256": "0d77f632c0d27b74998040266b493c817a3643e2257e106a0feaa5fe52002b5a"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "0699853c51c2004759756308e0d1c75d7edc511d55223f1a62486c2940a75673",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ME02/sources/cutouts/pokemon_004_charmander.png",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "8926684b77ce78a4bed5c708dff2ba3c76b13a91e06e0c579c8fb7df9cc2e5ce",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ME02/sources/cutouts/pokemon_643_reshiram.png",
+            "sha256": "da64fe6f0285ea0837a5fd06b150abee0eb5598c47050314ac1ece006d61c135"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "da7b1d4da3b5f831b10b62d988dadd97d22fc7dbc328c06b9920a9336f6322d1",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "review_id": "P35"
+    },
+    {
+      "asset_key": "ME02.5",
+      "title_de": "Erhabene Helden",
+      "master": {
+        "file": "assets/posters/ME02.5/poster-flux2-artwork.png",
+        "sha256": "e2f54fb50dca25a95fb660419c307d9126b2064d18dc7544b8a90d8d4815dd69"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 3
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/ME02.5/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "e6ba2fdc627ebae2a5b0de2ae50f21d493f65a90fbb1bbfa6095aa3b28e45627"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ME02.5/sources/cutouts/pokemon_152_chikorita.png",
+            "sha256": "3ffc2eeee9139b0281ab5493b1a6d4b5c1329de5ddf5361f5ee3c93d12c05659"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME02.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "f9bb31b9fce6f56e4026b100e1393381ff14f4a984139c905f47fc64cdb717d5",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ME02.5/sources/cutouts/pokemon_004_charmander.png",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME02.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "86676f7a217a44d2fb1442916ffcdb40c5917915302d0072d16e505429062168",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ME02.5/sources/cutouts/pokemon_250_ho_oh.png",
+            "sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME02.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "1aa96716a1203debb8ecae2269f9a3bdad358222ab1273388429383c230835fd",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "review_id": "P36"
+    },
+    {
+      "asset_key": "ME03",
+      "title_de": "Optimale Ordnung",
+      "master": {
+        "file": "assets/posters/ME03/poster-flux2-artwork.png",
+        "sha256": "f168f308c04d3cfd617d49378ae74ebc3bb5ad9ccb6fb6fbc8e1f01dcd1a065f"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "pass": 2,
+        "reject": 1
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/ME03/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "725ab97673f8ce54326205f90e67bd7901190da30d3bfbf55f9dae92007e5974"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ME03/sources/cutouts/pokemon_495_snivy.png",
+            "sha256": "e7ff61a0daed598a7676b262c56af766e88bcf91764658eeeae615f6f9937549"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "c0d239ae148a779eff77885dcc23b82d019e39cc37daa11772293b0beeaeb786",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "pass"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ME03/sources/cutouts/pokemon_722_rowlet.png",
+            "sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "080f11cc141a70530bd54da1d6bc269965b6009654a695c548e5355dfb1dfefd",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "pass"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ME03/sources/cutouts/pokemon_718_artwork_10301_mega_zygarde.png",
+            "sha256": "33261872ff2adb38b60f19d6f18a34681555e4243ff4c2ca5f367e9ddd976b55"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "a0993c7b6d2660be55d6b9dc5705bb5ca1ea183fb470febb545148dfae783c3e",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "review_id": "P37"
+    },
+    {
+      "asset_key": "ME04",
+      "title_de": "Wachsendes Chaos",
+      "master": {
+        "file": "assets/posters/ME04/poster-flux2-artwork.png",
+        "sha256": "4206d994cf6cf049fed81817b4d54106e5744999032cf6e33215792ff054e434"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 3
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/ME04/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "0dda42fb67b302efe58de69e220c2b128476512ab5ad519fe3af2cdcb7164a50"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ME04/sources/cutouts/pokemon_650_chespin.png",
+            "sha256": "565272048cd8eeb2b524d597da6805dbdff28c313bc5346181f1859041320ee7"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "d46f0659ee9ea005c9a827be0e4e5280735e40f2a63218f4efe1718070f09674",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ME04/sources/cutouts/pokemon_250_ho_oh.png",
+            "sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "ab200c2febe3ad84f16f01f1533334b7dec4b75a6675f39430979079001ff2c8",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ME04/sources/cutouts/pokemon_653_fennekin.png",
+            "sha256": "b638e094ee06adcec959aad2898ce93f8c5fda88feba9c9158d1f16c026c07dd"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ME04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "b6fb2365ff4609c2741092d6280ab4efc1be5fe7c52b31c683d38dbee9674b24",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "review_id": "P38"
+    },
+    {
+      "asset_key": "MEP",
+      "title_de": "MEP Black Star Promos",
+      "master": {
+        "file": "assets/posters/MEP/poster-flux2-artwork.png",
+        "sha256": "25bf253bd104c6f62db18dee2239bbd316a8158ec07083a5983cdfbf282d191d"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 3
+      },
+      "user_decision": "pending",
+      "preview": {
+        "file": "tmp/poster-workspaces/MEP/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "27d4458f9adefe4727c689ade51044d04e42c6042d33324a79ce6bfcb827a9bd"
+      },
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/MEP/sources/cutouts/pokemon_888_zacian.png",
+            "sha256": "f36c2b196763a2c3389ee00b481b534b94d87907d81c0b0fd2dcf5487db2a533"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/MEP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "add51c78952742787714166b8fb212d8facd32745a7a45b7421c40123babcfe0",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/MEP/sources/cutouts/pokemon_001_bulbasaur.png",
+            "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/MEP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "8ed5706e04161912724404425567db79b65531f30624062b1637cd064a73db50",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/MEP/sources/cutouts/pokemon_004_charmander.png",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/MEP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "048bb4b01be7896b346d08e41e13b744081083a05af966d50286c2973b48cb27",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-late-tcg.json",
+          "sha256": "9c74138305f3e62eb586c6fd6670874c98fe5782faf91930e3f01e5552bff39e"
+        }
+      ],
+      "review_id": "P39"
+    },
+    {
+      "asset_key": "ExGen3/sections/normal",
+      "title_de": "Pokémon ex",
+      "master": {
+        "file": "assets/posters/ExGen3/sections/normal/poster-flux2-artwork.png",
+        "sha256": "30b426a3806f98d8b15d267afd0728f7ede559b094a75f6119dc39f81243f49f"
+      },
+      "prior_agent_verdict": "reject",
+      "subject_verdict_counts": {
+        "reject": 2,
+        "uncertain": 1
+      },
+      "user_decision": "pending",
+      "preview": null,
+      "subjects": [
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen3/sections/normal/sources/cutouts/pokemon_1007_koraidon.png",
+            "sha256": "a292ff6c8c43f3f2c2df404ad14fc84e4ba0db33107692068d70e30ea9b44962"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ExGen3/sections/normal/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "5434108c854b35a84011ac4fcbd71d032906febcda5478184e967bca4b45eda1",
+            "cell": "r3c1"
+          },
+          "prior_agent_verdict": "reject"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen3/sections/normal/sources/cutouts/pokemon_025_pikachu.png",
+            "sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ExGen3/sections/normal/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "73302e556f69c7ca9864fd341746f882e0096b7884298826cabc76f597daa4be",
+            "cell": "r3c2"
+          },
+          "prior_agent_verdict": "uncertain"
+        },
+        {
+          "source": {
+            "file": "tmp/poster-workspaces/ExGen3/sections/normal/sources/cutouts/pokemon_1008_miraidon.png",
+            "sha256": "282add1c4774047944a6c9d377ee0ed739744d2d23bb18ac32133534190a022a"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/ExGen3/sections/normal/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "1217bbc79b8083323b5d160a14fdeaf2b002aa6c76725ae1c7c3b9516ac04a38",
+            "cell": "r3c3"
+          },
+          "prior_agent_verdict": "reject"
+        }
+      ],
+      "physical_crop_count": 9,
+      "reports": [
+        {
+          "file": "docs/reviews/2026-09-12-panorama-audit-exgen3.json",
+          "sha256": "01e8031908bfb74e0a1d295cfef07eb7fb2e25bba27da8810ae5d068f6bc1d12"
+        }
+      ],
+      "review_id": "P40"
+    }
+  ],
+  "verification": {
+    "verified_file_count": 554,
+    "pending_master_count": 40,
+    "pending_source_count": 119,
+    "pending_crop_count": 360,
+    "new_renders_started": 0
+  },
+  "review_policy": {
+    "decisions_are_artwork_specific": true,
+    "operator_review_format": "side_by_side_per_pokemon",
+    "left_image": "exact_physical_card_crop",
+    "right_image": "exact_candidate_source_pokemon",
+    "show_full_panorama_as_additional_context": true,
+    "foreground_occlusion_alone_is_not_rejection": true,
+    "prior_agent_verdicts_are_historical": true,
+    "release_approval_granted": false
+  },
+  "first_chat_batch": [
+    "P01",
+    "P02",
+    "P03"
+  ]
+}

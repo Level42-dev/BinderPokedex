@@ -341,15 +341,20 @@ class EnrichTCGCardsFromPokedexStep(BaseStep):
                 enriched['pokemon_id'] = pokemon_data['pokemon_id']
                 enriched['card_type'] = 'pokemon'
                 
-                # Check if this is a variant card (Mega, ex, GX, V, etc.)
-                original_name = card.get('name', '')
-                variant_markers = self._extract_variant_markers(original_name)
-                
-                # For TCG cards: Use base Pokemon name only (variants handled as suffix/prefix)
-                # This prevents double-rendering (e.g., "Mega Mega-Bisaflor-ex [ex]")
+                # TCG card titles are authoritative because they may contain
+                # ownership or other card-specific wording (for example,
+                # "Ns Zoroark-ex").  Pokédex names only fill genuinely
+                # missing localized fields; the transform step separately
+                # extracts visual variant markers such as ex and Mega.
                 if 'names' in pokemon_data:
+                    observed_languages = card.get('available_languages')
                     for lang, base_name in pokemon_data['names'].items():
-                        enriched[f'name_{lang}'] = base_name  # Just base name, no variants
+                        if (
+                            isinstance(observed_languages, list)
+                            and lang not in observed_languages
+                        ):
+                            continue
+                        enriched.setdefault(f'name_{lang}', base_name)
                 
                 # Add types from Pokedex if missing
                 if not enriched.get('types') and pokemon_data.get('types'):

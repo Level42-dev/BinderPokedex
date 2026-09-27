@@ -1,0 +1,538 @@
+{
+  "asset_name": "flux2",
+  "kind": "promoted_poster",
+  "outputs": {
+    "artwork": {
+      "bytes": 4790618,
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "file": "assets/posters/ME05/poster-flux2-artwork.png",
+      "height": 3268,
+      "mode": "RGBA",
+      "pixel_sha256": "810762543279b834475313c955d23fe8fc452066dafeb9abf76d420d572311e2",
+      "sha256": "3120f1f07526c80d74f5cd83aa6bbb09dbc256e423f4d1c3c7ee3ecbf8f95732",
+      "width": 2368
+    }
+  },
+  "poster_id": "ME05",
+  "promoted_at": "2026-09-12T14:08:41.662327+00:00",
+  "review_language": "de",
+  "run": {
+    "created_at": "2026-09-12T11:20:15.042987+00:00",
+    "generation": {
+      "encoder": "qwen_3_4b.safetensors",
+      "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
+      "engine": "flux",
+      "generation_megapixels": 1.0,
+      "mode": "joint_scene",
+      "model": "flux-2-klein-4b.safetensors",
+      "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
+      "output_dpi": 300,
+      "output_method": "lanczos",
+      "reference_mode": "spatial_identity_joint",
+      "seed": 260912507,
+      "steps": 4,
+      "vae": "flux2-vae.safetensors",
+      "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
+    },
+    "inputs": {
+      "cutout_manifest": {
+        "bytes": 1729,
+        "file": "tmp/poster-workspaces/ME05/sources/cutouts/manifest.json",
+        "sha256": "e7def87d20eab0495a5a8b61d871284492f324d57fb840e8340e2feccc4a929f"
+      },
+      "cutouts": [
+        {
+          "bytes": 95754,
+          "file": "tmp/poster-workspaces/ME05/sources/cutouts/pokemon_728_popplio.png",
+          "height": 475,
+          "mode": "RGBA",
+          "pixel_sha256": "287968b7e4bae522bafd0cdb43e354b191ed55734c533298a0104ae7aff138d3",
+          "sha256": "3bfa3104b894f212985122732497b17c78979c6bc9304bd7396e781677f2d7a3",
+          "width": 475
+        },
+        {
+          "bytes": 89369,
+          "file": "tmp/poster-workspaces/ME05/sources/cutouts/pokemon_877_morpeko.png",
+          "height": 475,
+          "mode": "RGBA",
+          "pixel_sha256": "9b6984fb8ce7a463c8ce5cb30f6d62ac2c7006a50cd8d033ab2f5749fa3f7329",
+          "sha256": "897a6b183f7e57c17be9db7979f299cccb386b0169e3961fba34244cfbe33c31",
+          "width": 475
+        },
+        {
+          "bytes": 171143,
+          "file": "tmp/poster-workspaces/ME05/sources/cutouts/pokemon_802_marshadow.png",
+          "height": 475,
+          "mode": "RGBA",
+          "pixel_sha256": "d51971a04eb0525195db56095d36281e6b28a1cd640a9e12694fea723594f385",
+          "sha256": "4ef2e2ff9af561949c7e315b9b266e561b8ba30c07a906240aa2ba177035ed41",
+          "width": 475
+        }
+      ],
+      "generation_fingerprint": {
+        "components": {
+          "cutouts": [
+            {
+              "height": 475,
+              "mode": "RGBA",
+              "pixel_sha256": "287968b7e4bae522bafd0cdb43e354b191ed55734c533298a0104ae7aff138d3",
+              "pokemon_id": 728,
+              "width": 475
+            },
+            {
+              "height": 475,
+              "mode": "RGBA",
+              "pixel_sha256": "9b6984fb8ce7a463c8ce5cb30f6d62ac2c7006a50cd8d033ab2f5749fa3f7329",
+              "pokemon_id": 877,
+              "width": 475
+            },
+            {
+              "height": 475,
+              "mode": "RGBA",
+              "pixel_sha256": "d51971a04eb0525195db56095d36281e6b28a1cd640a9e12694fea723594f385",
+              "pokemon_id": 802,
+              "width": 475
+            }
+          ],
+          "effective_prompt": {
+            "encoding": "utf-8",
+            "sha256": "b709cd1bccd33e882893ec43234cbbedb81dcd7d5bbe291ddae6be416fa783ed"
+          },
+          "generation": {
+            "encoder": "qwen_3_4b.safetensors",
+            "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
+            "engine": "flux",
+            "generation_megapixels": 1.0,
+            "mode": "joint_scene",
+            "model": "flux-2-klein-4b.safetensors",
+            "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
+            "output_dpi": 300,
+            "output_method": "lanczos",
+            "reference_mode": "spatial_identity_joint",
+            "seed": 260912507,
+            "steps": 4,
+            "vae": "flux2-vae.safetensors",
+            "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
+          },
+          "joint_scene_conditioning": {
+            "cast_max_megapixels": 0.5,
+            "identity_canvas_px": 512,
+            "identity_source_resampling": "none",
+            "reference_neutral_rgb": [
+              226,
+              224,
+              211
+            ],
+            "reference_strategy": "spatial_cast_plus_unscaled_identity"
+          },
+          "layout": {
+            "columns": 3,
+            "name": "standard_3x3",
+            "raster_geometry": {
+              "generation_canvas_px": [
+                848,
+                1168
+              ],
+              "generation_column_spans_px": [
+                [
+                  0,
+                  269
+                ],
+                [
+                  290,
+                  558
+                ],
+                [
+                  579,
+                  848
+                ]
+              ],
+              "generation_row_spans_px": [
+                [
+                  0,
+                  375
+                ],
+                [
+                  396,
+                  772
+                ],
+                [
+                  793,
+                  1168
+                ]
+              ],
+              "name": "cumulative_physical_endpoints",
+              "output_canvas_px": [
+                2368,
+                3268
+              ],
+              "output_column_spans_px": [
+                [
+                  0,
+                  750
+                ],
+                [
+                  809,
+                  1559
+                ],
+                [
+                  1618,
+                  2368
+                ]
+              ],
+              "output_row_spans_px": [
+                [
+                  0,
+                  1050
+                ],
+                [
+                  1109,
+                  2159
+                ],
+                [
+                  2218,
+                  3268
+                ]
+              ],
+              "version": 2
+            },
+            "rows": 3,
+            "safe_cells": {
+              "set_info": {
+                "column": 2,
+                "row": 2
+              },
+              "title": {
+                "column": 2,
+                "row": 1
+              }
+            }
+          },
+          "pipeline_contract": {
+            "name": "poster_generation",
+            "version": 7
+          },
+          "pokemon": {
+            "count": "auto_from_layout_columns",
+            "cutout_source": "pokeapi_official_artwork",
+            "fallback_candidates": [
+              {
+                "pokemon_id": 25
+              },
+              {
+                "pokemon_id": 1
+              },
+              {
+                "pokemon_id": 4
+              },
+              {
+                "pokemon_id": 7
+              },
+              {
+                "pokemon_id": 133
+              },
+              {
+                "pokemon_id": 6
+              }
+            ],
+            "row": "bottom",
+            "strategy": "featured_from_scope"
+          },
+          "scene": {
+            "concept": "the Dunkelnacht expansion and its mysterious nocturnal energy",
+            "ground_noun": "moonlit grass",
+            "lighting": "Cool moonlight enters from the upper left with restrained violet and silver highlights.",
+            "rendering": "Use polished trading-card illustration, clean cel-painted linework, deep but readable nocturnal colors, and spacious atmospheric depth.",
+            "setting": "The artwork contains a broad moonlit valley with layered indigo woodland, dark crystalline ridges, quiet reflective pools, and distant violet cloud ribbons crossing an open midnight sky."
+          },
+          "source_subject_ids": [
+            728,
+            877,
+            802
+          ]
+        },
+        "schema_version": 1,
+        "sha256": "7289e1ac46e639a78d8f1ef7788d071beec5737e383c32635a29d75701e8074f"
+      },
+      "overlay_fingerprint": {
+        "components": {
+          "languages": {
+            "de": {
+              "information": [
+                "Dunkelnacht",
+                "120 Karten",
+                "Veröffentlicht",
+                "17. Juli 2026"
+              ],
+              "title": {
+                "kind": "logo",
+                "pixel_sha256": "9f56948ae96c42819be39effdfb20120d84ddcd0178c95535e021c7b9e961214"
+              }
+            },
+            "en": {
+              "information": [
+                "120 cards",
+                "Released",
+                "July 17, 2026"
+              ],
+              "title": {
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Pitch Black"
+              }
+            },
+            "es": {
+              "information": [
+                "120 cartas",
+                "Publicado",
+                "17 julio 2026"
+              ],
+              "title": {
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Oscuridad Absoluta"
+              }
+            },
+            "fr": {
+              "information": [
+                "120 cartes",
+                "Sortie",
+                "17 juillet 2026"
+              ],
+              "title": {
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Nuit Noire"
+              }
+            },
+            "it": {
+              "information": [
+                "120 carte",
+                "Pubblicato",
+                "17 luglio 2026"
+              ],
+              "title": {
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Buio Pesto"
+              }
+            },
+            "ja": {
+              "information": [
+                "0 枚",
+                "発売日",
+                "2026年7月17日"
+              ],
+              "title": {
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Pitch Black"
+              }
+            },
+            "ko": {
+              "information": [
+                "0 장",
+                "출시일",
+                "2026년 7월 17일"
+              ],
+              "title": {
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Pitch Black"
+              }
+            },
+            "zh_hans": {
+              "information": [
+                "0 张",
+                "发行日期",
+                "2026年7月17日"
+              ],
+              "title": {
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Pitch Black"
+              }
+            },
+            "zh_hant": {
+              "information": [
+                "0 張",
+                "發行日期",
+                "2026年7月17日"
+              ],
+              "title": {
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "Pitch Black"
+              }
+            }
+          },
+          "layout_name": "standard_3x3",
+          "logo_pixels": {
+            "de": {
+              "height": 210,
+              "mode": "RGBA",
+              "pixel_sha256": "9f56948ae96c42819be39effdfb20120d84ddcd0178c95535e021c7b9e961214",
+              "width": 732
+            }
+          },
+          "pipeline_contract": {
+            "name": "poster_overlay",
+            "version": 3
+          },
+          "text_cells": {
+            "set_info": {
+              "column": 2,
+              "max_height_ratio": 0.68,
+              "max_width_ratio": 0.92,
+              "row": 2
+            },
+            "title": {
+              "column": 2,
+              "row": 1
+            }
+          },
+          "text_content": {}
+        },
+        "schema_version": 1,
+        "sha256": "4f3601f3ccde91a40a500feec665ed7a3dc063592bb9733920003c4898325718"
+      },
+      "prompt": {
+        "bytes": 6161,
+        "file": "tmp/render-jobs/v10-me05-4b-spatial-seed-260912507/joint_scene_prompt.generated.txt",
+        "sha256": "de65905a2b449c8a535e2c345d4a2a2ce43b29502f69063a2cd26358075d12a8"
+      },
+      "references": [
+        {
+          "bytes": 53860,
+          "file": "tmp/poster-workspaces/ME05/comfyui_poster/joint_scene_cast_reference.png",
+          "height": 832,
+          "mode": "RGBA",
+          "pixel_sha256": "cd0d3a7ed96bb57010c6dbd317f6d1af20939be7e04c6844df0dc980ca81b65b",
+          "sha256": "147a3f564dd5e51dc038bfebd85324cf4bea9993320d942715d8e1ead3f6eb00",
+          "width": 608
+        },
+        {
+          "bytes": 80563,
+          "file": "tmp/poster-workspaces/ME05/comfyui_poster/identity_reference_1.png",
+          "height": 512,
+          "mode": "RGBA",
+          "pixel_sha256": "fde0d9b1cab3a0d1784bfc57ae720301db3e28f340dcab5e2912cdb3c8760949",
+          "sha256": "4962cece5498462453646efa5ccbce3addd10656d378138891ccea0781f3760e",
+          "width": 512
+        },
+        {
+          "bytes": 69119,
+          "file": "tmp/poster-workspaces/ME05/comfyui_poster/identity_reference_2.png",
+          "height": 512,
+          "mode": "RGBA",
+          "pixel_sha256": "cdec4b97527ade4c8edb5ded46804a12698a8c6c4988fffe6123eb3ab866e302",
+          "sha256": "d7fb99efecc1ca67f6766d7b9cf742d6e383548ed9f384fcddbc43bcc01a0e02",
+          "width": 512
+        },
+        {
+          "bytes": 114415,
+          "file": "tmp/poster-workspaces/ME05/comfyui_poster/identity_reference_3.png",
+          "height": 512,
+          "mode": "RGBA",
+          "pixel_sha256": "df04887b7ee5d9c3259c99a6b0ec6c66c2e4b2b27701975efd16e4310bf43b4e",
+          "sha256": "facf9977a3dbd82c6c30eb02f42562ef8e6da76e1e06b9dd892df820c89d4a60",
+          "width": 512
+        }
+      ],
+      "scope_manifest": {
+        "bytes": 2185,
+        "file": "config/posters/ME05/poster.yaml",
+        "sha256": "476f232033ad8d97f8e4c2e89982ba17775ca886548600ad91084b4e381cabb0"
+      },
+      "workflow": {
+        "bytes": 10785,
+        "file": "tmp/render-jobs/v10-me05-4b-spatial-seed-260912507/workflow_api.json",
+        "sha256": "777d0795ce33fa4303eec70913fc058d1fe8cd6ee15c2685a628121cf33e4b90"
+      }
+    },
+    "kind": "poster_generation_run",
+    "poster_id": "ME05",
+    "raw_artwork": {
+      "bytes": 1299929,
+      "file": "tmp/render-jobs/v10-me05-4b-spatial-seed-260912507/output/me05_flux2_joint_scene_1mp_seed_260912507_00001_.png",
+      "height": 1168,
+      "mode": "RGBA",
+      "pixel_sha256": "f415bfd47de8e7a48439a399b26bff65e497b3136ff7b4c99df34b7efa69e267",
+      "sha256": "ef5f102c94cb37375db4c5d0643d10fdd8ad89917f7fe7f8c2bbb14aa49f6298",
+      "width": 848
+    },
+    "schema_version": 1,
+    "scope": "ME05",
+    "section_id": null,
+    "source_artwork": {
+      "bytes": 4790618,
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "file": "tmp/render-jobs/v10-me05-4b-spatial-seed-260912507/review/me05_flux2_joint_scene_1mp_seed_260912507_00001__300dpi.png",
+      "height": 3268,
+      "mode": "RGBA",
+      "pixel_sha256": "810762543279b834475313c955d23fe8fc452066dafeb9abf76d420d572311e2",
+      "sha256": "3120f1f07526c80d74f5cd83aa6bbb09dbc256e423f4d1c3c7ee3ecbf8f95732",
+      "width": 2368
+    },
+    "source_scope": "ME05",
+    "validation": {
+      "joint_scene_visual_review": {
+        "approval_source": "explicit_promotion_flag",
+        "criteria": [
+          "exact_cast_count",
+          "raw_generation_identity",
+          "text_free_output_identity",
+          "identity_and_form",
+          "silhouette_and_stature",
+          "anatomy_and_face",
+          "colors_and_markings",
+          "placement_and_card_safety",
+          "natural_scene_integration",
+          "coherent_landscape_occlusion"
+        ],
+        "generation_fingerprint_sha256": "7289e1ac46e639a78d8f1ef7788d071beec5737e383c32635a29d75701e8074f",
+        "method": "agent_identity_and_scene_review",
+        "passed": true,
+        "raw_artwork_pixel_sha256": "f415bfd47de8e7a48439a399b26bff65e497b3136ff7b4c99df34b7efa69e267",
+        "raw_artwork_sha256": "ef5f102c94cb37375db4c5d0643d10fdd8ad89917f7fe7f8c2bbb14aa49f6298",
+        "reviewed_artwork_pixel_sha256": "810762543279b834475313c955d23fe8fc452066dafeb9abf76d420d572311e2",
+        "reviewed_artwork_sha256": "3120f1f07526c80d74f5cd83aa6bbb09dbc256e423f4d1c3c7ee3ecbf8f95732",
+        "reviewed_at": "2026-09-12T11:37:22.041327+00:00",
+        "source_cutout_pixel_sha256": [
+          "287968b7e4bae522bafd0cdb43e354b191ed55734c533298a0104ae7aff138d3",
+          "9b6984fb8ce7a463c8ce5cb30f6d62ac2c7006a50cd8d033ab2f5749fa3f7329",
+          "d51971a04eb0525195db56095d36281e6b28a1cd640a9e12694fea723594f385"
+        ],
+        "source_cutout_sha256": [
+          "3bfa3104b894f212985122732497b17c78979c6bc9304bd7396e781677f2d7a3",
+          "897a6b183f7e57c17be9db7979f299cccb386b0169e3961fba34244cfbe33c31",
+          "4ef2e2ff9af561949c7e315b9b266e561b8ba30c07a906240aa2ba177035ed41"
+        ],
+        "source_subject_ids": [
+          728,
+          877,
+          802
+        ],
+        "stage": "raw_and_text_free_print_artwork"
+      }
+    }
+  },
+  "schema_version": 2,
+  "scope": "ME05",
+  "section_id": null,
+  "source_scope": "ME05",
+  "storage": {
+    "derivatives": "regenerated_in_ignored_workspace",
+    "durable_outputs": [
+      "artwork"
+    ],
+    "reproducible_sources": "downloaded_to_ignored_workspace",
+    "schema_version": 1
+  }
+}

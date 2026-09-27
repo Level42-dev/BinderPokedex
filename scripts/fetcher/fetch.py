@@ -45,7 +45,6 @@ from steps.transform_ex_gen2 import TransformBlackWhiteEXStep
 from steps.transform_ex_gen3 import TransformScarletVioletEXStep
 from steps.fetch_tcgdex_set import FetchTCGdexSetStep
 from steps.enrich_tcg_names_multilingual import EnrichTCGNamesMultilingualStep
-from steps.fix_missing_dex_ids import FixMissingDexIdsStep
 from steps.enrich_tcg_cards_from_pokedex import EnrichTCGCardsFromPokedexStep
 from steps.enrich_special_cards import EnrichSpecialCardsStep
 from steps.transform_tcg_set import TransformTCGSetStep
@@ -135,7 +134,6 @@ def create_registry() -> StepRegistry:
     registry.register('transform_ex_gen3', TransformScarletVioletEXStep)
     registry.register('fetch_tcgdex_set', FetchTCGdexSetStep)
     registry.register('enrich_tcg_names_multilingual', EnrichTCGNamesMultilingualStep)
-    registry.register('fix_missing_dex_ids', FixMissingDexIdsStep)
     registry.register('enrich_tcg_cards_from_pokedex', EnrichTCGCardsFromPokedexStep)
     registry.register('enrich_special_cards', EnrichSpecialCardsStep)
     registry.register('transform_tcg_set', TransformTCGSetStep)

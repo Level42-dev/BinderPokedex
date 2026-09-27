@@ -31,8 +31,8 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260751064
+    reference_mode: spatial_identity_joint
+    seed: 260912109
     steps: 4
     generation_megapixels: 1.0
     output_dpi: 300
@@ -45,6 +45,11 @@ artwork:
     rendering: Use energetic cel-painted linework, controlled yellow-violet contrast, and
       strongly layered storm depth.
     ground_noun: highland grass
+    constraints:
+    - Keep the entire lower third as clear, very short grass. No tall blades,
+      flowers, reeds, or large leaves anywhere in front of or beside the three
+      subjects. Build foreground depth from terrain and cast shadows only;
+      every wing, tail, foot, and body outline must remain completely exposed.
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns
@@ -52,6 +57,9 @@ pokemon:
   cutout_source: pokeapi_official_artwork
   fallback_candidates:
   - pokemon_id: 25
+    pokemon_name: Pikachu
+    card_id: sv08-057
+    slot: 3
   - pokemon_id: 1
   - pokemon_id: 4
   - pokemon_id: 7

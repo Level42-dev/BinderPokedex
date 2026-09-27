@@ -1,0 +1,326 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-22",
+  "review_id": "P04",
+  "scope": "Pokedex/sections/gen1",
+  "variant": "p04-source-detail-20260922-b",
+  "status": "user_review_candidate_with_disclosed_claw_inner_contour",
+  "human_approval": false,
+  "promoted": false,
+  "release_ready": false,
+  "requested_tail_underside_correction_visible": true,
+  "findings": [
+    {
+      "subject": "Bisasam",
+      "cell": "r3c1",
+      "severity": "disclosed_source_detail_difference",
+      "detail_de": "B zeigt drei äußere weiße Krallenformen an der bildnahen Vorderpfote. Die mittlere ist runder und trägt eine zusätzliche dunkle Innenkontur; dies kann wie eine überlagerte Spitze wirken. Der vergrößerte Vergleich ist ausdrücklich zur Nutzerentscheidung enthalten. Flecken und Knollenfalten bleiben leicht vereinfacht."
+    },
+    {
+      "subject": "Glumanda",
+      "cell": "r3c2",
+      "severity": "requested_correction_present_with_minor_line_differences",
+      "detail_de": "Die schmale cremefarbene Schwanzunterseite ist entlang der Kurve wieder sichtbar. Pose, beide Arme/Beine, Augen und einzelne Schwanzflamme bleiben quellnah. Zahn-/Fingerlinien sind etwas stärker vereinfacht beziehungsweise betont."
+    },
+    {
+      "subject": "Schiggy",
+      "cell": "r3c3",
+      "severity": "minor_contour_differences",
+      "detail_de": "Geschlossener Mund, beide Augen, segmentierter Bauchpanzer, brauner Rückenpanzer und ein eingerollter Schwanz bleiben quellnah. Finger-/Zehenlinien sind runder und kürzer; keine sicher neue fehlende Gliedmaße."
+    }
+  ],
+  "scene_de": "Kanto-Wiese mit Flussbiegung, Waldschichten, Bergen und kleinem entferntem Gebäude. Genau drei Figuren, keine harten eingefügten Bildrechtecke. Licht und Bodenschatten nach rechts räumlich schlüssig. Vordergrundpflanzen vorhanden; ein Blatt läuft knapp an Bisasams Pfote vorbei, kein sicherer falscher Wechsel der Tiefenreihenfolge festgestellt.",
+  "layout": {
+    "actual_card_containment_agent_review_passed": true,
+    "numeric_target_bounds_compliance_confirmed": false,
+    "detail_de": "Alle sichtbaren Körperteile einschließlich Schwanzflamme, Knolle und Schwanzspirale passen mit Randabstand in die drei tatsächlichen unteren Karten. Figuren teilweise etwas höher/größer als die kleine Referenzvorgabe; keine automatisierte Silhouettenvermessung oder numerische Layoutfreigabe behauptet."
+  },
+  "inspected": {
+    "reviewer_kind": "agent",
+    "independent_reviewer": false,
+    "raw": true,
+    "full_text_free_master": true,
+    "german_preview": true,
+    "physical_cards": [
+      "r1c1",
+      "r1c2",
+      "r1c3",
+      "r2c1",
+      "r2c2",
+      "r2c3",
+      "r3c1",
+      "r3c2",
+      "r3c3"
+    ],
+    "exact_original_sources": 3,
+    "actual_input_references": "Four images viewed for A and confirmed byte-identical for B",
+    "enlarged_bulbasaur_paw_source_pair": true
+  },
+  "generation": {
+    "encoder": "qwen_3_4b.safetensors",
+    "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
+    "engine": "flux",
+    "generation_megapixels": 2,
+    "mode": "joint_scene",
+    "model": "flux-2-klein-4b.safetensors",
+    "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
+    "output_dpi": 300,
+    "output_method": "lanczos",
+    "reference_mode": "spatial_source_detail_joint",
+    "seed": 260782266,
+    "steps": 4,
+    "vae": "flux2-vae.safetensors",
+    "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
+  },
+  "generation_fingerprint_sha256": "065d4824be48ed5677bf68ed1aa29291395a50666be77c1347cc47c566ff661b",
+  "workflow": {
+    "path": "tmp/oneshot-trials/p04-source-detail-20260922-b/workflows/workflow_api_joint_scene_spatial_source_detail_joint_2mp_260782266.json",
+    "sha256": "667bce6a4baae4cbd396924a764073c50e0574dbf745034e41660e80d5f97386"
+  },
+  "manifest": {
+    "file": "config/posters/Pokedex/sections/gen1/poster.yaml",
+    "sha256": "778f51f9a1a7bce0ff51c06abfe7b0d265fbf5b624a17d9a34421eef8ffd13d5"
+  },
+  "manifest_snapshot": {
+    "file": "tmp/oneshot-trials/p04-source-detail-20260922-b/manifest-snapshot.yaml",
+    "sha256": "778f51f9a1a7bce0ff51c06abfe7b0d265fbf5b624a17d9a34421eef8ffd13d5"
+  },
+  "prompt": {
+    "file": "tmp/oneshot-trials/p04-source-detail-20260922-b/workflows/source_detail_joint_prompt.generated.txt",
+    "sha256": "9deea8f25fc296f32e66c54f3d7a945f1696de3aa8592a67125500220c3d0a88"
+  },
+  "references": [
+    {
+      "file": "tmp/oneshot-trials/p04-source-detail-20260922-b/references/identity_reference_1.png",
+      "sha256": "a9331ad3415cef27c68648eb7aba8bb3e10d90859a5c56d022b0870c39dc7529"
+    },
+    {
+      "file": "tmp/oneshot-trials/p04-source-detail-20260922-b/references/identity_reference_2.png",
+      "sha256": "e608b3234c8a3e3d33e893daa82153d5a009c5d293d8dd94c947a7663d303cf2"
+    },
+    {
+      "file": "tmp/oneshot-trials/p04-source-detail-20260922-b/references/identity_reference_3.png",
+      "sha256": "3f82a5c4782969b16a4115d9c0c0225025015455148626d83fe226fb9fb1771c"
+    },
+    {
+      "file": "tmp/oneshot-trials/p04-source-detail-20260922-b/references/joint_scene_cast_reference.png",
+      "sha256": "ced11e091733958304761147d13a3a59fb4d3a3edaefdf4dc5d0d13e9e04c362"
+    }
+  ],
+  "evidence": {
+    "cards": [
+      {
+        "path": "tmp/oneshot-trials/p04-source-detail-20260922-b/review/cards/card_r1_c1.png",
+        "rectangle": [
+          0,
+          0,
+          750,
+          1050
+        ],
+        "sha256": "7223a0ccd83bec217b45a4e853b06bb784579719c1c28e2b0d64f897a10904f7"
+      },
+      {
+        "path": "tmp/oneshot-trials/p04-source-detail-20260922-b/review/cards/card_r1_c2.png",
+        "rectangle": [
+          809,
+          0,
+          1559,
+          1050
+        ],
+        "sha256": "51f707aa4b6657535e1f49b1393fca532331cb0404ceea70a8b7331aeb747a4c"
+      },
+      {
+        "path": "tmp/oneshot-trials/p04-source-detail-20260922-b/review/cards/card_r1_c3.png",
+        "rectangle": [
+          1618,
+          0,
+          2368,
+          1050
+        ],
+        "sha256": "263f822dc4cef0caf8168ce6cf7c9330ee6e5f5a956fb9dcf756abc9428507a9"
+      },
+      {
+        "path": "tmp/oneshot-trials/p04-source-detail-20260922-b/review/cards/card_r2_c1.png",
+        "rectangle": [
+          0,
+          1109,
+          750,
+          2159
+        ],
+        "sha256": "fa31585f4a7dbce32f471055c137887dfc2e768c542ce4efe70279dd93e9d61c"
+      },
+      {
+        "path": "tmp/oneshot-trials/p04-source-detail-20260922-b/review/cards/card_r2_c2.png",
+        "rectangle": [
+          809,
+          1109,
+          1559,
+          2159
+        ],
+        "sha256": "0cf14676223d6ba3fb5288680ee44d94f8c36cccd06191c6345030b09c8d62f0"
+      },
+      {
+        "path": "tmp/oneshot-trials/p04-source-detail-20260922-b/review/cards/card_r2_c3.png",
+        "rectangle": [
+          1618,
+          1109,
+          2368,
+          2159
+        ],
+        "sha256": "3d7c3138fff73830a90c1a865e0a3a1da9092920297a1bbc2bd61825715e9ab3"
+      },
+      {
+        "path": "tmp/oneshot-trials/p04-source-detail-20260922-b/review/cards/card_r3_c1.png",
+        "rectangle": [
+          0,
+          2218,
+          750,
+          3268
+        ],
+        "sha256": "b98a9a3c3ff6e89e3b8206e0e25187eaa2c53b18754a8dae81d60faf0d90dec9"
+      },
+      {
+        "path": "tmp/oneshot-trials/p04-source-detail-20260922-b/review/cards/card_r3_c2.png",
+        "rectangle": [
+          809,
+          2218,
+          1559,
+          3268
+        ],
+        "sha256": "8826999fbb1d64d698761ae879930a7b963be895085c3b5e507843e2bbf57034"
+      },
+      {
+        "path": "tmp/oneshot-trials/p04-source-detail-20260922-b/review/cards/card_r3_c3.png",
+        "rectangle": [
+          1618,
+          2218,
+          2368,
+          3268
+        ],
+        "sha256": "9ded05c9b632641efd9f923b006a34345ca8791d036200e03559768c6a740a88"
+      }
+    ],
+    "human_approval": "pending",
+    "master": {
+      "path": "tmp/oneshot-trials/p04-source-detail-20260922-b/review/artwork-300dpi.png",
+      "sha256": "fb24d96b708d751912fb93f2b308dbdc50846361bb6582572cfb04236a034bdb"
+    },
+    "preview": {
+      "path": "tmp/oneshot-trials/p04-source-detail-20260922-b/review/poster-de.png",
+      "sha256": "dcb0c5c44a9bd6e8b1a6ef0926cc68479bd103592dcc8740dc0ad8a75b06ef76"
+    },
+    "production_masters_unchanged": 42,
+    "raw": {
+      "path": "tmp/oneshot-trials/p04-source-detail-20260922-b/retrieved/oneshot-xd_mlxc3/output/pokedex__sections__gen1_flux2_joint_scene_2mp_seed_260782266_00001_.png",
+      "sha256": "5401f16b536c5b9e4ab2b4942f174409d2916ee52924a01ebac6fd49ae1a1a99"
+    },
+    "run_sidecar": {
+      "path": "tmp/oneshot-trials/p04-source-detail-20260922-b/review/artwork-300dpi.run.json",
+      "sha256": "d9ee1fe407573c229a516d2f04e22ebbe1ef183b90052de15ff98494987b7e3a"
+    },
+    "scope": "Pokedex/sections/gen1",
+    "variant": "p04-source-detail-20260922-b",
+    "visual_review": "pending_full_master_and_all_nine_cards",
+    "worker_log": {
+      "path": "tmp/oneshot-trials/p04-source-detail-20260922-b/retrieved/oneshot-xd_mlxc3/comfyui.log",
+      "sha256": "880dff45e0e71162a8835bd61eb28351f3f9649e258961c59f99f4d3565b7ee9"
+    },
+    "worker_run": {
+      "path": "tmp/oneshot-trials/p04-source-detail-20260922-b/retrieved/oneshot-xd_mlxc3/run.json",
+      "sha256": "2aac101eea9250899f68ddc6c29e81732ed26ddb3c43f56bdce0894457a250fa"
+    }
+  },
+  "subjects": [
+    {
+      "name": "Bisasam",
+      "cell": "r3c1",
+      "source": {
+        "file": "tmp/poster-workspaces/Pokedex/sections/gen1/sources/cutouts/pokemon_001_bulbasaur.png",
+        "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a"
+      },
+      "crop": {
+        "path": "tmp/oneshot-trials/p04-source-detail-20260922-b/review/cards/card_r3_c1.png",
+        "rectangle": [
+          0,
+          2218,
+          750,
+          3268
+        ],
+        "sha256": "b98a9a3c3ff6e89e3b8206e0e25187eaa2c53b18754a8dae81d60faf0d90dec9"
+      }
+    },
+    {
+      "name": "Glumanda",
+      "cell": "r3c2",
+      "source": {
+        "file": "tmp/poster-workspaces/Pokedex/sections/gen1/sources/cutouts/pokemon_004_charmander.png",
+        "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+      },
+      "crop": {
+        "path": "tmp/oneshot-trials/p04-source-detail-20260922-b/review/cards/card_r3_c2.png",
+        "rectangle": [
+          809,
+          2218,
+          1559,
+          3268
+        ],
+        "sha256": "8826999fbb1d64d698761ae879930a7b963be895085c3b5e507843e2bbf57034"
+      }
+    },
+    {
+      "name": "Schiggy",
+      "cell": "r3c3",
+      "source": {
+        "file": "tmp/poster-workspaces/Pokedex/sections/gen1/sources/cutouts/pokemon_007_squirtle.png",
+        "sha256": "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290"
+      },
+      "crop": {
+        "path": "tmp/oneshot-trials/p04-source-detail-20260922-b/review/cards/card_r3_c3.png",
+        "rectangle": [
+          1618,
+          2218,
+          2368,
+          3268
+        ],
+        "sha256": "9ded05c9b632641efd9f923b006a34345ca8791d036200e03559768c6a740a88"
+      }
+    }
+  ],
+  "controlled_comparison_with_a": {
+    "identical_reference_images": [
+      {
+        "file": "tmp/oneshot-trials/p04-source-detail-20260922-b/references/identity_reference_1.png",
+        "sha256": "a9331ad3415cef27c68648eb7aba8bb3e10d90859a5c56d022b0870c39dc7529"
+      },
+      {
+        "file": "tmp/oneshot-trials/p04-source-detail-20260922-b/references/identity_reference_2.png",
+        "sha256": "e608b3234c8a3e3d33e893daa82153d5a009c5d293d8dd94c947a7663d303cf2"
+      },
+      {
+        "file": "tmp/oneshot-trials/p04-source-detail-20260922-b/references/identity_reference_3.png",
+        "sha256": "3f82a5c4782969b16a4115d9c0c0225025015455148626d83fe226fb9fb1771c"
+      },
+      {
+        "file": "tmp/oneshot-trials/p04-source-detail-20260922-b/references/joint_scene_cast_reference.png",
+        "sha256": "ced11e091733958304761147d13a3a59fb4d3a3edaefdf4dc5d0d13e9e04c362"
+      }
+    ],
+    "changed_graph_node": "4",
+    "only_manifest_change": "Bulbasaur source traits",
+    "unchanged_seed": 260782266
+  },
+  "verification": {
+    "canonical_graph_prompt_source_fingerprint_and_job": true,
+    "complete_log_run_and_output_retrieval": true,
+    "all_nine_crop_pixels_geometry_and_dpi": true,
+    "production_masters_unchanged_since_p04_preparation": 42,
+    "focused_tests_passed": 119,
+    "focused_tests_failed": 0
+  },
+  "limits": [
+    "B is not installed and does not inherit P10 or other-set acceptance.",
+    "No independent reviewer or full Pokedex/release PDF verification.",
+    "No third render, local anatomical painting or multistage fallback was performed."
+  ],
+  "next_step": "User reviews the exact full scene and all three source/card comparisons, with the enlarged Bulbasaur claw contour explicitly disclosed."
+}

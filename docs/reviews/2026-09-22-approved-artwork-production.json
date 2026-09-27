@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-22",
+  "reviewer_kind": "agent",
+  "status": "two_exact_candidates_promoted_and_scoped_print_proofs_verified",
+  "release_ready": false,
+  "new_generation_performed": false,
+  "historical_human_decisions_modified": false,
+  "historical_numeric_layout_findings_modified": false,
+  "production_master_baseline_count": 42,
+  "production_masters_changed": 2,
+  "other_production_masters_unchanged": 40,
+  "backup_root": "tmp/v10-production-adoption-20260922/backups",
+  "targets": [
+    {
+      "id": "P15",
+      "scope": "ExGen2/sections/mega",
+      "candidate": "p15-scale-20260915-d",
+      "master_sha256": "ae8d7afad5051c47117650ae03c1b4cbc30c7da8b7083a10f9e7da3d801b55bb",
+      "provenance_sha256": "1b41f9ce76cdeadafd5f295d4b34de4c866da1dfd2a0e4999c3ca494eaf551f2",
+      "generation_fingerprint_sha256": "844c54cb4094414e7b6395e8e3786fedb5ce98641cb1a51cd9463527ff85f98d",
+      "overlay_fingerprint_sha256": "f90824daa55f95839693ef3f7824a6ea3107f011aba4f9b7f3ecf151b1d01a9b",
+      "production_validator_passed": true,
+      "planner_state": "current",
+      "retained_caveat": "Latios nose close to left edge but contained; Rayquaza right clearance narrower than left as disclosed before acceptance."
+    },
+    {
+      "id": "P40",
+      "scope": "ExGen3/sections/normal",
+      "candidate": "p40-source-detail-20260915-b",
+      "master_sha256": "0ec6eb54e7e0797021497ade7a624b025b797fe03217117322199413770befa4",
+      "provenance_sha256": "fde4268852270e4a0253297d3ba1872e860c1c0e6ffe3bb2b4742e55db0a205a",
+      "generation_fingerprint_sha256": "d59e101dcaf74b607af80f6c2f8468047b869c737afe1576f4b5fd82ec6815d7",
+      "overlay_fingerprint_sha256": "2198d6a84d8aefdf56b3b6e9aedd97def1735ab27140f8b086b03db7a3874382",
+      "production_validator_passed": true,
+      "planner_state": "promotion_stale",
+      "planner_reason": "scene_catalog_drift",
+      "planner_diagnosis": "The active reviewed constraints list retains the entire catalog list and appends one layout reminder. The planner compares lists for exact equality, unlike additional mapping fields. Canonical generation and overlay fingerprints are current. A bounded list-prefix comparison correction has been proposed; no planner code changed in this checkpoint."
+    }
+  ],
+  "inspection": {
+    "raw_images_viewed": 2,
+    "full_masters_viewed": 2,
+    "german_previews_viewed": 2,
+    "physical_card_crops_viewed": 18,
+    "exact_original_sources_viewed": 6,
+    "independent_review": "approved_artwork_adoption_review",
+    "independent_critical_findings_for_promoted_bundles": 0,
+    "independent_important_findings_for_promoted_bundles": 0,
+    "independent_scope": "Source/provenance/hash/geometry checks; full masters and previews, six character crops and six sources viewed. Root owns complete raw/all-card and PDF visual review."
+  },
+  "print_proofs": [
+    {
+      "file": "output/pdf/v10-approved-panoramas-20260922/v10_P15_P40_Druckprobe_DE_Schnittkarten.pdf",
+      "sha256": "b545a14ef68950caf654c6454219f9e89435c441993f379190bd430b0622bc20",
+      "pages": 3,
+      "scope": "P15 and P40 panorama pages plus existing project notice",
+      "embedded_images_per_artwork_page": 9,
+      "card_size_mm": [63.5, 88.9],
+      "exact_embedded_pixels_and_positions_verified": true
+    },
+    {
+      "file": "output/pdf/v10-approved-panoramas-20260922/v10_P15_P40_Druckprobe_DE_Gesamtpanoramen.pdf",
+      "sha256": "b10eaaf7c3ac4333015c51082216905d181156b087257306bbdd8346d3db2c54",
+      "pages": 3,
+      "scope": "P15 and P40 continuous panorama pages plus existing project notice",
+      "embedded_images_per_artwork_page": 1,
+      "exact_embedded_pixels_and_positions_verified": true
+    }
+  ],
+  "pdf_verification": {
+    "page_size_mm": [210, 297],
+    "build_label": "v10-proof-20260922 (dirty)",
+    "base_commit": "4abae7695afa1218408e84377fdecbc8a926c68b",
+    "not_a_clean_commit_or_release_build": true,
+    "all_final_pages_rasterized": true,
+    "all_artwork_pages_visually_inspected": true,
+    "final_artwork_page_rasters_pixel_identical_after_notice_append": true,
+    "both_final_notice_pages_visually_inspected": true,
+    "original_release_pdfs_and_zips_rebuilt": false,
+    "new_print_proofs_only": true
+  },
+  "focused_tests": {
+    "command": "tmp/v10-artwork-audit-env/bin/python -m pytest scripts/tests/test_poster_spatial_scale.py scripts/tests/test_poster_source_detail.py scripts/tests/test_poster_fingerprints.py tmp/test_v10_source_detail_transfer.py scripts/tests/test_render_job.py -q",
+    "passed": 119,
+    "failed": 0,
+    "not_a_full_project_suite": true
+  },
+  "next_user_review": {
+    "ids": ["P03", "P10", "P27"],
+    "unchanged_master_source_crop_hashes_verified": 21,
+    "document": "docs/reviews/2026-09-14-panorama-shortlist.md",
+    "no_new_human_approval_recorded": true
+  },
+  "remaining": [
+    "SV07-B reserved Hopplo shadow correction",
+    "Canonical truthful historical-contract import for accepted ExGen3 Mega C and Base1 B; no relabeling as current pipeline v11",
+    "Base1 German title logo subtitle outside artwork approval",
+    "Other rejected or pending panoramas and aggregate sibling sections",
+    "P40 planner constraint-list comparison decision",
+    "Complete final PDF/archive/release verification"
+  ]
+}

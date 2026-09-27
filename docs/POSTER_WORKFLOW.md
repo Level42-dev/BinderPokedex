@@ -136,6 +136,25 @@ are queued on the worker rather than through a publicly exposed API.
 
 ## Required and optional phases
 
+### Development checkpoints and review-master preservation
+
+For the operator-requested ongoing v10 Git backup, commit and push validated
+milestones to the existing development branch, then compare the remote branch
+SHA with local HEAD. A backup commit is not a merge, release, tag or blanket
+artwork approval. Stage an explicit project-file allowlist; never include
+private renderer state, downloaded sources, generated release ZIPs or local
+release metadata. Record any known failing tests without weakening approval gates.
+
+Exact already shown and accepted or partly accepted text-free masters awaiting
+technical integration may be preserved under `assets/reviewed-candidates`.
+Store only the unchanged master and clearly labelled review-only provenance:
+master/report/source hashes, original decision and its exact limits. This archive
+is outside `assets/posters`, has no routing manifest and cannot activate a PDF
+poster. Partial subject approval never becomes full-scene approval. Continue to
+use the normal promotion path when integration and its review gates are complete.
+Raw render jobs and logs remain outside Git; this archive does not claim a full
+backup of every temporary experiment.
+
 | Phase | Required for a normal PDF | Required for a poster PDF | May be repeated |
 | --- | --- | --- | --- |
 | Fetch scope data | yes | yes | whenever source data changes |
@@ -217,6 +236,10 @@ Using promoted provenance as `--run-metadata` is an overlay-only refresh. It
 revalidates the unchanged generation inputs against their recorded supported
 graph contract, then rebuilds the localized preview, card slices, overlay
 fingerprint, and output hashes without starting ComfyUI.
+If the original promotion re-encoded its PNG, the refresh verifies the exact
+registered promoted output and its equality to the reviewed source pixels.
+Different PNG compression alone does not require a new render or approval;
+changed pixels or an unregistered output still fail validation.
 
 Legacy promotions can be upgraded while their original full-manifest,
 cutout-hash, output, and regenerated-overlay checks still pass:
@@ -406,6 +429,17 @@ positive and negative reference chains. A `flux2_dev` model uses the official
 Dev profile with guidance 4, positive references, and `BasicGuider`; its step
 count remains explicit in `artwork.generation.steps`.
 
+The 14 September 2026 operator decision keeps true one-shot generation primary
+and the multi-stage path as a justified last resort. It also allows and desires
+physically plausible, scene-specific foreground overlaps without treating them
+as changes to character identity. The avoidance-first wording described below
+is still the checked-in historical implementation. The source-specific
+experimental ExGen3 C and Base1 B candidates now each have scoped user visual
+acceptance, but their prompt approach has not yet replaced the shared behavior
+or been technically promoted. See the
+[bounded restart review](reviews/2026-09-14-exgen3-oneshot-restart.md) and
+[Base1 transfer review](reviews/2026-09-14-base1-oneshot.md).
+
 The default `individual_spatial_joint` path:
 
 1. derives each target silhouette rectangle from the shared physical layout
@@ -497,12 +531,17 @@ unapproved.
 
 Because `joint_scene` deliberately redraws all pixels, an opaque-source-pixel
 equality audit is not applicable. Its hard gates are a complete generation
-fingerprint and explicit human review of both the actual raw file and the
-deterministically scaled text-free print artwork. All 41 enabled poster bundles
-have passed that gate: 39 with avoidance-first individual-spatial v9,
+fingerprint and explicit visual review of both the actual raw file and the
+deterministically scaled text-free print artwork, plus all physical card crops.
+New approvals require `--reviewer-kind human` or `--reviewer-kind agent`;
+agent inspection must never be recorded as human approval. The 42 installed
+poster bundles carried earlier promotion records: 38 with avoidance-first individual-spatial v9,
 `ExGen2/sections/primal` with its reviewed `landscape_first_v1` prompt profile
-on the same individual-spatial graph, and `SV04.5` with its reviewed mask-free
-spatial-identity v7 contract.
+on the same individual-spatial graph, and `SV04.5`, `ME05`, and `SV08` with
+their mask-free spatial-identity v7 contracts. The 2026-09-12 complete
+source-by-source re-audit invalidates blanket visual-pass claims for the
+installed artwork; consult the current status and hash-bound re-audit reports
+before treating any existing promotion as approved.
 Candidate-specific seeds, hashes, and rejected bounded tests remain recorded
 in the status and experiment log.
 
@@ -550,6 +589,17 @@ accepted result is promoted.
 
 ## 7. Review and promote
 
+For every Pokémon submitted for operator approval, show a side-by-side image
+pair: the exact physical card crop on the left and the exact source Pokémon
+image used by that candidate on the right. Label the pair with the Pokémon's
+name/form, target, candidate and card position. Embed both images rather than
+offering links alone; preserve aspect ratios and provide access to the original
+resolution. Keep the full panorama as additional scene context, not a substitute
+for per-subject comparison. Bind both files to the candidate's recorded source
+and crop hashes; never silently substitute a newly fetched reference. Present
+known deviations separately from the operator's decision. This operator-requested
+review format applies to both one-shot and explicitly selected fallback candidates.
+
 Review all of the following before promotion:
 
 - complete text-free artwork;
@@ -568,7 +618,7 @@ python scripts/poster_assets/promote_comfyui_poster.py \
   --artwork <printed-text-free-artwork.png> \
   --run-metadata <matching.run.json> \
   --name flux2 \
-  --approve-joint-scene
+  --approve-joint-scene --reviewer-kind human
 
 python scripts/poster_assets/validate_promoted_poster.py --scope SV04
 ```
@@ -587,7 +637,7 @@ A `joint_scene` candidate follows a separate fail-closed review contract. Its
 run must contain the complete current generation fingerprint, exact source
 identity records, raw-artwork hashes, and deterministic text-free print hashes.
 After comparing both artifacts and every subject crop with the reviewed
-cutouts, the `--approve-joint-scene` flag above records a timestamped approval
+cutouts, the `--approve-joint-scene` flag and explicit reviewer kind above record a timestamped approval
 bound to those exact pixels and source
 identities; it is not a generic bypass. Promotion still rejects a candidate
 whose recorded generation contract differs from `poster.yaml`. Generation VII
@@ -722,7 +772,7 @@ python scripts/poster_assets/promote_comfyui_poster.py \
   --run-metadata <reported-run-metadata.json> \
   --language de \
   --name flux2 \
-  --approve-joint-scene
+  --approve-joint-scene --reviewer-kind human
 
 python scripts/pdf/generate_pdf.py \
   --scope Pokedex \
@@ -798,6 +848,71 @@ from the image itself. At small resolutions, adjacent cards may intentionally
 differ by one pixel. At 300 dpi, all layouts retain exact 750 × 1050 card
 crops. New runs bind these dimensions and bounds to raster geometry contract v2
 inside their engine-specific generation fingerprint.
+
+## Opt-in source-detail one-shot pilot (contract v10)
+
+The current source-detail prompt contract is v11. It strengthens only the
+leading named inventory and placement/reference-scale instructions following
+pilot count/layout feedback. The v10 prompt and fingerprint remain supported
+for historical reconstruction; the individual traits, scene and foreground
+depth paragraphs are unchanged between v10 and v11.
+
+`flux/joint_scene` also accepts `spatial_source_detail_joint`. This opt-in
+mode retains one shared spatial-layout reference and one separate, unscaled
+individual detail reference per exact subject. It uses one empty target,
+one sampler and one decode at exactly 2 MP with four sampling steps, followed
+by deterministic Lanczos output at 300 dpi. For `standard_3x3` this means a
+1200 × 1664 generation, a 2368 × 3268 master and nine 750 × 1050 card crops.
+The bulk initializer default stays unchanged during pilot validation.
+
+Add inspected English traits for **every** canonical source key; special forms
+use their exact official artwork ID. Replace the illustrative hash below with
+the SHA-256 of the actual cached source PNG. Missing, extra or duplicate keys,
+empty traits and mismatched source bytes fail closed before preparation.
+
+```yaml
+artwork:
+  generation:
+    engine: flux
+    mode: joint_scene
+    reference_mode: spatial_source_detail_joint
+    generation_megapixels: 2.0
+    steps: 4
+    output_method: lanczos
+    output_dpi: 300
+    # Keep the configured model, encoder, VAE, seed and artifact hashes.
+  source_details:
+    pokeapi:official-artwork:813:
+      sha256: "<actual source PNG SHA-256>"
+      traits: "<inspected English description of this exact source artwork>"
+    # Include each remaining canonical subject key exactly once.
+```
+
+The prompt prioritizes exact count and layout-derived bounds, then assigns
+each source description exclusively to its detail reference. It permits
+physically consistent, scene-appropriate foreground overlaps. Source bytes and
+traits bind the v10 generation fingerprint and invalidate older approvals when
+changed. Workflow input records reject altered graphs and stale prompt
+snapshots. Existing modes, historical fingerprints and image approvals retain
+their original contracts; a successful render still requires full visual review.
+
+### Per-subject spatial size adjustment
+
+For this source-detail mode only, an optional `artwork.spatial_reference_scales`
+map can shrink selected subjects in the shared position reference, for example
+`pokeapi:official-artwork:10079: 0.8` for Mega-Rayquaza. Use exact canonical
+artwork keys, never a special form's base-species number. Values must be finite
+numbers in `(0, 1]`; a factor that produces a zero-sized raster is rejected.
+Missing/empty maps preserve the existing reference PNGs, prompt and fingerprint.
+Other reference modes reject nonempty scale maps rather than ignoring them.
+
+The original visible center (within one raster pixel) and bottom baseline are
+retained. The spatial target is resized from the original source; the separate
+individual detail reference and cached source PNG are unchanged. Prompt bounds
+use the same adjustment at the generation raster size. Nonempty overrides are
+bound by an additive `spatial_reference` fingerprint component, version 1;
+historical prompt contracts 10/11 remain unchanged. Every changed generated
+image still requires a new full-poster, all-card and source-identity review.
 
 ## Adding a new individual TCG set
 

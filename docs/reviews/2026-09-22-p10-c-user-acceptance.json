@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-22",
+  "review_id": "P10",
+  "scope": "Pokedex/sections/gen7",
+  "variant": "p10-source-detail-20260922-c",
+  "human_approval": true,
+  "human_feedback_verbatim": "passt alles prima! mach damit weiter",
+  "decision": "accepted_exact_candidate_c_identity_scene_and_disclosed_composition",
+  "accepted_disclosures": [
+    "The far-forepaw contour remains slightly more exposed than the source.",
+    "Litten is larger/higher than the small placement target; all subjects fit their actual physical cards."
+  ],
+  "candidate": {
+    "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/review/artwork-300dpi.png",
+    "sha256": "245da8494f8965864a7fd219383888aec08a32234662d1353419e61210d654d9"
+  },
+  "preview": {
+    "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/review/poster-de.png",
+    "sha256": "2422906113c89fd7eccede269a332ae4c68215e6c121989fa1e2f705034c19f3"
+  },
+  "subjects": [
+    {
+      "name": "Bauz",
+      "cell": "r3c1",
+      "source": {
+        "file": "tmp/poster-workspaces/Pokedex/sections/gen7/sources/cutouts/pokemon_722_rowlet.png",
+        "sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36"
+      },
+      "crop": {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/review/cards/card_r3_c1.png",
+        "rectangle": [
+          0,
+          2218,
+          750,
+          3268
+        ],
+        "sha256": "ddd071d4c36cf3d37203c062d7d740811c1d05cb26cca9c72536f3f24f69ff88"
+      },
+      "accepted": true
+    },
+    {
+      "name": "Flamiau",
+      "cell": "r3c2",
+      "source": {
+        "file": "tmp/poster-workspaces/Pokedex/sections/gen7/sources/cutouts/pokemon_725_litten.png",
+        "sha256": "02391ac457888baf123accfc5ce446fc75df4790b3b000865a21c0f21b622600"
+      },
+      "crop": {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/review/cards/card_r3_c2.png",
+        "rectangle": [
+          809,
+          2218,
+          1559,
+          3268
+        ],
+        "sha256": "6e22e05ab1f7d9ce10a4ed49d2c37fdc205e9920f4881a5d16b2f9e471e32363"
+      },
+      "accepted": true
+    },
+    {
+      "name": "Robball",
+      "cell": "r3c3",
+      "source": {
+        "file": "tmp/poster-workspaces/Pokedex/sections/gen7/sources/cutouts/pokemon_728_popplio.png",
+        "sha256": "3bfa3104b894f212985122732497b17c78979c6bc9304bd7396e781677f2d7a3"
+      },
+      "crop": {
+        "path": "tmp/oneshot-trials/p10-source-detail-20260922-c/review/cards/card_r3_c3.png",
+        "rectangle": [
+          1618,
+          2218,
+          2368,
+          3268
+        ],
+        "sha256": "47f74d133d5e6df60b7280c62c44d457fef3be4398a19cf51e9b7a537874cbc6"
+      },
+      "accepted": true
+    }
+  ],
+  "prior_agent_review": {
+    "path": "docs/reviews/2026-09-22-p10-source-detail-c.json",
+    "sha256": "8245ec48f72b073d7fc91f6534652deeca5044b65f2559dbad8bcb01f8bc7343"
+  },
+  "limits": [
+    "No assertion that the user personally inspected all nine physical crops.",
+    "No numerical small-cast layout pass; original review findings retained.",
+    "Approval does not extend to A/B, changed pixels, other panoramas, full PDF sets or release completion."
+  ],
+  "technical_adoption": "installed_exact_pixels_and_validated; see 2026-09-22-p10-c-production.json",
+  "release_ready": false
+}
