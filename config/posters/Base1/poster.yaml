@@ -36,7 +36,7 @@ title_logo:
     zh_hant: https://assets.tcgdex.net/en/base/base1/logo.png
 
 pdf:
-  enabled: false
+  enabled: true
   artwork_file: poster-flux2-artwork.png
   insertion: after_first_section_cover
 

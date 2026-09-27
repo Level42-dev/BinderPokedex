@@ -46,10 +46,12 @@ from scripts.pdf.generate_pdf import filter_variant_data_for_language
 
 ROOT = Path(__file__).resolve().parents[2]
 RELEASE_POSTER_KEYS = {
+    "Base1",  # Historical B master; original German logo explicitly accepted.
     "Base2",
     "ExGen2/sections/mega",
     "ExGen3/sections/normal",
     "ExGen3/sections/mega",  # Exact historically accepted C master, revalidated.
+    "ME03",  # Exact P37-A master, visually accepted and pixel-verified.
     "ME05",
     "Pokedex/sections/gen1",
     "Pokedex/sections/gen3",
@@ -499,13 +501,13 @@ def test_every_generated_pdf_language_has_complete_poster_copy():
 
 
 def test_standalone_poster_manifests_remain_isolated_single_bundles():
-    for scope in ("Base1", "SV07"):
+    for scope, enabled in (("Base1", True), ("SV07", False)):
         bundles = poster_bundles_for_scope(scope)
         assert len(bundles) == 1
         assert bundles[0].asset_key == scope
         assert bundles[0].section_id is None
         assert bundles[0].insertion == "after_first_section_cover"
-        assert not bundles[0].pdf_enabled
+        assert bundles[0].pdf_enabled is enabled
 
 
 def test_pokedex_index_keeps_nine_manifests_and_routes_accepted_bundles():

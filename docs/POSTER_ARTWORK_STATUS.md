@@ -7,13 +7,15 @@ live in [Poster Workflow](POSTER_WORKFLOW.md), durable product requirements in
 evidence in [Poster Experiment Log](POSTER_ARTWORK_EXPERIMENT_LOG.md).
 
 Installed-artwork audit reopened: 2026-09-12. Full target retriage: 2026-09-14.
-Latest scoped production update: 2026-09-27 (ExGen3 Mega-C historical master
-validated, routed and locally print-checked; P02-H remains unchanged).
-Latest human artwork feedback: 2026-09-25 (P02-H German panorama accepted).
-Latest continuation: 2026-09-27 (the historically accepted ExGen3 Mega-C is
-promoted and PDF-enabled beside its unchanged normal section; Base1-B is
-promoted but PDF-disabled pending a sharp authentic German logo; P16, P37 and
-SV07 remain open; the v10 release build remains open).
+Latest scoped production update: 2026-09-27 (Base1-B with its explicitly accepted
+historical German logo and the separately accepted P37-A/ME03 master are
+PDF-enabled and locally print-checked; P02-H and ExGen3 Mega-C remain unchanged).
+Latest human artwork feedback: 2026-09-27 (P37-A accepted; the historic Base1
+German logo explicitly accepted despite its 250-px source width).
+Latest continuation: 2026-09-27 (40 of 42 configured poster routes enabled;
+only P16/ExGen2 primal and SV07 remain disabled; the complete v10 release
+build remains open). The [Base1/P37 PDF activation record](reviews/2026-09-27-base1-p37-pdf-activation.md)
+binds the exact master hashes, local PDF page checks and known logo limitation.
 Release candidate after the [SV08 exact-artwork adoption](reviews/2026-09-24-sv08-exact-artwork-adoption.md):
 2026-09-24 (36 production-valid panoramas enabled after the
 [P06 exact-artwork reacceptance](reviews/2026-09-24-p06-existing-artwork-acceptance.md);
@@ -31,7 +33,8 @@ the unchanged evidence index containing all 87 source/card pairs and 261
 physical card crops. It is an image-specific judgment, not a general exception
 for future anatomy deviations.
 
-P16 and P37 were marked non-approvable and were not part of the 29. P01's
+P16 and P37 were marked non-approvable in that 23 September batch and were not
+part of the 29; P37-A was separately approved on 27 September. P01's
 Hopplo shadow remains open; P02 was separately resolved on 25 September. P06 was separately
 accepted on 24 September for its exact existing pixels. SVP/MEP promo numbers, all card data, PDF print quality, production
 promotion and a complete v10 release remain independent gates. The approval
@@ -61,17 +64,12 @@ documented quality limitation rather than silently substituted artwork.
 The final code review closed four release-gate gaps: an enabled masked poster
 now rejects changed overlay inputs, missing configured language logos and
 incomplete base evidence; direct PDF generation also checks its approval.
-Four other poster routes remain blocked.
+Four other poster routes remained blocked at that checkpoint.
 
-Remaining disabled routes after the 27 September historical import:
+Remaining disabled routes after the 27 September Base1/P37 activation:
 
-- Base1: the accepted B master is technically promoted, but the available
-  authentic German title logo is too soft at print size; PDF routing stays off.
-- ExGen2/sections/primal and ME03: no approved print-safe candidate. The
-  scoped identity-lock fallback is [documented for P16](reviews/2026-09-27-p16-identity-lock-review.md)
-  and [P37](reviews/2026-09-27-p37-identity-lock-review.md): P16-A fails the
-  scene-continuity/grounding check; P37-A awaits an explicit user image decision.
-  Neither route may silently promote.
+- ExGen2/sections/primal: [P16-A](reviews/2026-09-27-p16-identity-lock-review.md)
+  still fails the scene-continuity/grounding check; no silent promotion.
 - SV07: the installed candidate's generation-provenance contract is unsupported
   (`flux/joint_scene/spatial_source_detail_joint v9`); its historical Hopplo
   review remains a separate visual concern. It needs a validated replacement

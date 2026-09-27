@@ -1113,11 +1113,13 @@ def test_every_release_enabled_poster_passes_production_validation():
     )
     assert {
         bundle.asset_key for bundle in bundles
-    } == {
-        "Base2",
+        } == {
+            "Base1",  # Historical B master; original German logo explicitly accepted.
+            "Base2",
         "ExGen2/sections/mega",
         "ExGen3/sections/normal",
-        "ExGen3/sections/mega",  # Exact historically accepted C master, revalidated.
+            "ExGen3/sections/mega",  # Exact historically accepted C master, revalidated.
+            "ME03",  # Exact P37-A master, visually accepted and pixel-verified.
         "ME05",
         "Pokedex/sections/gen1",
         "Pokedex/sections/gen3",

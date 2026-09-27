@@ -76,7 +76,25 @@ def test_enabled_full_page_draws_one_continuous_physical_poster():
 
 
 def test_scope_without_enabled_poster_has_no_poster_page():
-    assert PosterPageRenderer.from_variant_data({"set_id": "Base1"}, "de") is None
+    assert PosterPageRenderer.from_variant_data({"set_id": "SV07"}, "de") is None
+
+
+@pytest.mark.parametrize("scope,reviewed_sha256", [
+    ("Base1", "d06f69eb6e010b2670987a2209d3aec50848ac694aaefec64dc70d342ce0d9b4"),
+    ("ME03", "fc1df7acd8359153d53eabbaf23c22a189dbc8d694e58ed5cd8a7c3b683e7b76"),
+])
+def test_newly_approved_de_posters_route_exact_reviewed_artwork(scope, reviewed_sha256):
+    renderer = PosterPageRenderer.from_variant_data({"set_id": scope}, "de")
+    assert renderer is not None
+    try:
+        assert renderer.insertion == "after_first_section_cover"
+        provenance = json.loads(
+            (ROOT / "assets" / "posters" / scope / "poster-flux2-provenance.json")
+            .read_text(encoding="utf-8")
+        )
+        assert provenance["run"]["source_artwork"]["sha256"] == reviewed_sha256
+    finally:
+        renderer.cleanup()
 
 
 def test_enabled_poster_can_be_skipped_before_loading_its_assets():
