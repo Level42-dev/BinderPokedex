@@ -13,6 +13,7 @@ from pathlib import Path
 from PIL import Image
 
 try:
+    from .historical_review_import import require_historical_import
     from .masked_fallback import load_and_audit_composition
     from .generation_contract import is_grounded_generation, requires_visual_review
     from .provenance import require_grounding_pixel_validation
@@ -32,6 +33,7 @@ try:
         image_pixel_record,
         load_run_metadata,
         promoted_provenance,
+        rebuild_generation_fingerprint_from_recorded_sources,
         recorded_repository_path,
         require_exact_source_pixel_validation,
         require_joint_scene_visual_review,
@@ -39,6 +41,7 @@ try:
     )
     from .slice_poster import slice_poster
 except ImportError:
+    from historical_review_import import require_historical_import
     from masked_fallback import load_and_audit_composition
     from generation_contract import is_grounded_generation, requires_visual_review
     from provenance import require_grounding_pixel_validation
@@ -58,6 +61,7 @@ except ImportError:
         image_pixel_record,
         load_run_metadata,
         promoted_provenance,
+        rebuild_generation_fingerprint_from_recorded_sources,
         recorded_repository_path,
         require_exact_source_pixel_validation,
         require_joint_scene_visual_review,
@@ -393,6 +397,10 @@ def promote(
             f"{manifest_path}. Review and update artwork.generation before "
             "promoting this candidate."
         )
+    require_historical_import(
+        bundle, run_metadata,
+        verify_original_files=not refreshing_existing_promotion,
+    )
     needs_visual_review = requires_visual_review(recorded_generation)
     if approve_joint_scene and not needs_visual_review:
         raise ValueError(
@@ -429,10 +437,15 @@ def promote(
                         recorded_generation,
                     )
                 )
-            current_fingerprint = build_generation_fingerprint(
-                bundle,
-                pipeline_contract_version=recorded_contract_version,
-            )
+            if run_metadata.get("historical_import") is not None:
+                current_fingerprint = rebuild_generation_fingerprint_from_recorded_sources(
+                    bundle, recorded_fingerprint,
+                )
+            else:
+                current_fingerprint = build_generation_fingerprint(
+                    bundle,
+                    pipeline_contract_version=recorded_contract_version,
+                )
             if (
                 recorded_fingerprint.get("sha256")
                 != current_fingerprint["sha256"]

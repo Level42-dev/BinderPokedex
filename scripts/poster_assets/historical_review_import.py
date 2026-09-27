@@ -14,6 +14,11 @@ from typing import Any
 
 from PIL import Image
 
+try:
+    from .generation_contract import HISTORICAL_SPATIAL_IDENTITY_JOINT_PIPELINE_VERSION
+except ImportError:
+    from generation_contract import HISTORICAL_SPATIAL_IDENTITY_JOINT_PIPELINE_VERSION
+
 
 ROOT = Path(__file__).resolve().parents[2]
 CANDIDATES_PATH = ROOT / "config/posters/historical_review_candidates.json"
@@ -178,3 +183,162 @@ def verify_historical_trial(scope: str, archive_dir: Path, trial_dir: Path) -> d
         "review_report_sha256": report["sha256"],
         "print_dimensions": list(evidence["print_dimensions"]),
     }
+
+
+def require_historical_import(
+    bundle: Any, run: dict[str, Any], *, verify_original_files: bool = False,
+) -> None:
+    """Revalidate the durable historical audit without private worker files.
+
+    Only the two archived candidates can enter this path. Other generations
+    retain the existing ordinary promotion/fingerprint checks unchanged.
+    """
+    scope = bundle.asset_key
+    allowed_items = [
+        item for item in _read(CANDIDATES_PATH, "historical candidate allowlist")["candidates"]
+        if item["scope"] == scope
+    ]
+    if len(allowed_items) > 1:
+        raise ValueError("ambiguous historical import allowlist")
+    historical = run.get("historical_import")
+    generation = bundle.manifest.get("artwork", {}).get("generation")
+    if historical is None:
+        if allowed_items and (
+            generation.get("reference_mode") == "spatial_identity_joint"
+            and generation.get("generation_megapixels") == 2.0
+        ):
+            raise ValueError("historical import is required for this reviewed contract")
+        return
+    if len(allowed_items) != 1 or not isinstance(historical, dict):
+        raise ValueError("historical import is not allowlisted for this scope")
+    allowed = allowed_items[0]
+    if (historical.get("schema_version") != 1
+            or historical.get("contract_name") != "approved_spatial_identity_joint_import"
+            or historical.get("pipeline_version") != HISTORICAL_SPATIAL_IDENTITY_JOINT_PIPELINE_VERSION
+            or historical.get("scope") != scope):
+        raise ValueError("historical import contract or scope mismatch")
+    if run.get("scope") != scope or run.get("generation") != generation or historical.get("generation") != generation:
+        raise ValueError("historical generation differs from active manifest")
+    if historical.get("candidate_id") != allowed["candidate_id"]:
+        raise ValueError("historical candidate differs from allowlist")
+    if historical.get("historical_flags") != {
+        "canonical_promotion_eligible": False,
+        "experimental_prompt_override": True,
+    }:
+        raise ValueError("historical experiment flags were lost")
+    for key, allowed_key in (
+        ("job_sha256", "job_sha256"),
+        ("workflow_sha256", "workflow_sha256"),
+        ("prompt_sha256", "prompt_sha256"),
+        ("review_report_sha256", "review_report_sha256"),
+    ):
+        if historical.get(key) != allowed[allowed_key]:
+            raise ValueError(f"historical {key} differs from allowlist")
+    if historical.get("master") != {
+        "path": allowed["master_path"], "sha256": allowed["master_sha256"],
+    } or run.get("source_artwork", {}).get("sha256") != allowed["master_sha256"]:
+        raise ValueError("historical master differs from accepted artwork")
+    if historical.get("raw", {}).get("sha256") != allowed["raw_sha256"]:
+        raise ValueError("historical raw render differs from original job")
+    sources = historical.get("sources")
+    if not isinstance(sources, list) or len(sources) != 3:
+        raise ValueError("historical three-source record is incomplete")
+    archive_dir = _inside_root(allowed["master_path"], "historical master").parent
+    archive = _read(archive_dir / "review-provenance.json", "archived review provenance")
+    if sources != archive.get("reviewed_original_sources"):
+        raise ValueError("historical source hashes differ from accepted review")
+    prompt = run.get("inputs", {}).get("generation_fingerprint", {}).get("components", {}).get("effective_prompt", {})
+    if prompt.get("sha256") != allowed["prompt_sha256"]:
+        raise ValueError("historical prompt hash differs from original job")
+    pipeline = run.get("inputs", {}).get("generation_fingerprint", {}).get("components", {}).get("pipeline_contract", {})
+    if pipeline != {"name": "poster_generation", "version": HISTORICAL_SPATIAL_IDENTITY_JOINT_PIPELINE_VERSION}:
+        raise ValueError("historical generation fingerprint contract mismatch")
+    if verify_original_files:
+        original_trial = historical.get("original_trial")
+        if not isinstance(original_trial, str):
+            raise ValueError("historical original trial path missing")
+        current = verify_historical_trial(
+            scope, archive_dir, _inside_root(original_trial, "original trial"),
+        )
+        for key, value in current.items():
+            if historical.get(key) != value:
+                raise ValueError(f"historical {key} differs from original files")
+
+
+def write_historical_run_metadata(
+    scope: str, archive_dir: Path, trial_dir: Path, output_path: Path,
+) -> Path:
+    """Write a normal generation sidecar for exactly one verified old trial."""
+    try:
+        from .poster_io import poster_bundle
+        from .provenance import (
+            build_generation_fingerprint, build_overlay_fingerprint,
+            file_record, fingerprint_record,
+        )
+    except ImportError:
+        from poster_io import poster_bundle
+        from provenance import (
+            build_generation_fingerprint, build_overlay_fingerprint,
+            file_record, fingerprint_record,
+        )
+
+    evidence = verify_historical_trial(scope, archive_dir, trial_dir)
+    bundle = poster_bundle(scope)
+    if bundle.asset_key != scope or bundle.manifest["artwork"]["generation"] != evidence["generation"]:
+        raise ValueError("historical generation is not the active scope contract")
+    experiment = _read(trial_dir / "experiment.json", "original experiment")
+    job_dir = _inside_root(experiment["returned_job"], "returned job")
+    master_path = _inside_root(evidence["master"]["path"], "master")
+    raw_path = _inside_root(evidence["raw"]["path"], "raw render")
+    prompt_path = job_dir / "source-detail-prompt.txt"
+    workflow_path = job_dir / "workflow_api.json"
+    cutout_dir = bundle.source_dir / "cutouts"
+    cutout_manifest = _read(cutout_dir / "manifest.json", "cutout manifest")
+    cutouts = [file_record(cutout_dir / item["file"], image=True) for item in cutout_manifest["items"]]
+    source_hashes = [item["sha256"] for item in evidence["sources"]]
+    if [item["sha256"] for item in cutouts] != source_hashes:
+        raise ValueError("current cutout files differ from reviewed original sources")
+    job = _read(job_dir / "job.json", "job")
+    references = [file_record(job_dir / "input" / item["path"], image=True) for item in job["inputs"]]
+    fingerprint = build_generation_fingerprint(
+        bundle, generation=evidence["generation"],
+        pipeline_contract_version=HISTORICAL_SPATIAL_IDENTITY_JOINT_PIPELINE_VERSION,
+    )
+    components = fingerprint["components"]
+    components["effective_prompt"] = {"encoding": "utf-8", "sha256": evidence["prompt_sha256"]}
+    fingerprint = fingerprint_record(components)
+    run = {
+        "schema_version": 1,
+        "kind": "poster_generation_run",
+        "scope": scope,
+        "source_scope": bundle.scope,
+        "poster_id": bundle.poster_id,
+        "section_id": bundle.section_id,
+        "generation": evidence["generation"],
+        "source_artwork": file_record(master_path, image=True),
+        "raw_artwork": file_record(raw_path, image=True),
+        "inputs": {
+            "scope_manifest": file_record(bundle.manifest_path),
+            "prompt": file_record(prompt_path),
+            "workflow": file_record(workflow_path),
+            "cutout_manifest": file_record(cutout_dir / "manifest.json"),
+            "cutouts": cutouts,
+            "references": references,
+            "generation_fingerprint": fingerprint,
+            "overlay_fingerprint": build_overlay_fingerprint(bundle),
+        },
+        "historical_import": {
+            "schema_version": 1,
+            "contract_name": "approved_spatial_identity_joint_import",
+            "pipeline_version": HISTORICAL_SPATIAL_IDENTITY_JOINT_PIPELINE_VERSION,
+            "original_trial": str(trial_dir.resolve().relative_to(ROOT.resolve())),
+            **evidence,
+        },
+    }
+    require_historical_import(bundle, run, verify_original_files=True)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(
+        json.dumps(run, indent=2, sort_keys=True, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    return output_path

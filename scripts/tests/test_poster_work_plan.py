@@ -834,6 +834,26 @@ def test_accepted_legacy_pipeline_is_current_with_optional_upgrade(tmp_path):
     assert "generation_fingerprint_drift" in target(stale)["reason_codes"]
 
 
+def test_planner_reports_reviewed_historical_scope_current(tmp_path):
+    assets, output, catalog = setup_individual(tmp_path, enabled=True)
+    bundle = poster_bundles_for_scope("Alpha", poster_assets=assets)[0]
+    write_promotion(bundle, output, pipeline_contract_version=1)
+    provenance_path = bundle.asset_dir / "poster-flux2-provenance.json"
+    payload = json.loads(provenance_path.read_text(encoding="utf-8"))
+    payload["run"]["historical_import"] = {
+        "schema_version": 1,
+        "contract_name": "approved_spatial_identity_joint_import",
+    }
+    save_json(provenance_path, payload)
+
+    plan = build("Alpha", assets, output, catalog,
+                 validator=lambda _bundle: {"generation_pipeline_contract_status": "accepted_historical"})
+
+    assert target(plan)["state"] == "current"
+    assert "approved_historical_import" in target(plan)["reason_codes"]
+    assert target(plan)["next_actions"] == []
+
+
 def test_overlay_only_change_requests_refresh_without_regeneration(tmp_path):
     assets, output, catalog = setup_individual(tmp_path)
     bundle = poster_bundles_for_scope("Alpha", poster_assets=assets)[0]

@@ -898,7 +898,11 @@ def _promotion_drift_codes(
                     recorded_generation
                 )
             ):
-                pipeline_notes.append("accepted_legacy_pipeline")
+                pipeline_notes.append(
+                    "approved_historical_import"
+                    if run.get("historical_import")
+                    else "accepted_legacy_pipeline"
+                )
     elif not manifest_matches and not drift:
         # A legacy full-manifest mismatch could be only pdf/title/overlay
         # routing, but could equally be an old identity-lock/conditioning
@@ -1151,6 +1155,13 @@ def _plan_bundle(
         and not pipeline_notes
     ):
         pipeline_notes = ["accepted_legacy_pipeline"]
+    if (
+        isinstance(validation_result, dict)
+        and validation_result.get("generation_pipeline_contract_status")
+        == "accepted_historical"
+        and not pipeline_notes
+    ):
+        pipeline_notes = ["approved_historical_import"]
     overlay_actions = (
         ("refresh_promoted_overlay",)
         if overlay_drift
@@ -1158,7 +1169,7 @@ def _plan_bundle(
     )
     pipeline_actions = (
         ("upgrade_generation_pipeline",)
-        if pipeline_notes
+        if "accepted_legacy_pipeline" in pipeline_notes
         else ()
     )
     masked_fallback = (

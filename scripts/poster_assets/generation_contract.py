@@ -25,6 +25,9 @@ SUPPORTED_REFERENCE_MODES = {
 JOINT_SCENE_CAST_MAX_MEGAPIXELS = 0.5
 JOINT_SCENE_IDENTITY_CANVAS_PX = 512
 INDIVIDUAL_SPATIAL_REFERENCE_MEGAPIXELS = 0.5
+# Reserved for the two SHA-pinned archived 2-MP spatial-joint trials. This
+# does not alter CANONICAL_REFERENCE_MODES or the current generator default.
+HISTORICAL_SPATIAL_IDENTITY_JOINT_PIPELINE_VERSION = 8
 
 
 def is_joint_scene_generation(

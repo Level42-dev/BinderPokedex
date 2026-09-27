@@ -138,7 +138,9 @@ SUPPORTED_GENERATION_PIPELINE_CONTRACT_VERSIONS = {
         "identity_lock",
         "two_pass_source_pixels",
     ): frozenset({1, 2, 3}),
-    ("flux", "joint_scene", "spatial_identity_joint"): frozenset({5, 6, 7}),
+    # v8 is reserved for the two SHA-pinned, approved historical 2-MP trials.
+    # It is never selected by current_generation_pipeline_contract_version.
+    ("flux", "joint_scene", "spatial_identity_joint"): frozenset({5, 6, 7, 8}),
     ("flux", "joint_scene", "regional_identity_joint"): frozenset(
         {6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
     ),

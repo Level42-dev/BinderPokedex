@@ -12,6 +12,7 @@ from typing import Any
 from PIL import Image, ImageChops
 
 try:
+    from .historical_review_import import require_historical_import
     from .masked_fallback import decode_mask, encode_mask, outside_pixel_digest
     from .generation_contract import is_grounded_generation
     from .poster_config import build_grounded_prompt_snapshot
@@ -61,6 +62,7 @@ try:
         subject_fingerprint_identity,
     )
 except ImportError:
+    from historical_review_import import require_historical_import
     from masked_fallback import decode_mask, encode_mask, outside_pixel_digest
     from generation_contract import is_grounded_generation
     from poster_config import build_grounded_prompt_snapshot
@@ -464,6 +466,7 @@ def validate(target: str | PosterBundle) -> dict[str, Any]:
             f"Generation metadata drift between {manifest_path} and "
             f"{provenance_path}"
         )
+    require_historical_import(bundle, payload.get("run", {}))
     run_inputs = payload.get("run", {}).get("inputs", {})
     if not isinstance(run_inputs, dict):
         raise ValueError(
@@ -508,7 +511,9 @@ def validate(target: str | PosterBundle) -> dict[str, Any]:
             recorded_generation
         )
         generation_pipeline_contract_status = (
-            "current"
+            "accepted_historical"
+            if payload.get("run", {}).get("historical_import") is not None
+            else "current"
             if generation_pipeline_contract_version == current_contract
             else "accepted_legacy"
         )

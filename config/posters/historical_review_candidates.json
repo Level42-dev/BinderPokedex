@@ -4,6 +4,7 @@
     {
       "scope": "Base1",
       "candidate_id": "base1-source-detail-20260914-b",
+      "master_path": "assets/reviewed-candidates/base1-b/artwork-300dpi.png",
       "master_sha256": "d06f69eb6e010b2670987a2209d3aec50848ac694aaefec64dc70d342ce0d9b4",
       "review_report_sha256": "4f99a728a2912e07bca55d7676da42ca1fe80724a537eb3227d7cf06a9e84501",
       "job_sha256": "7c33f4c1a521fa84d07e985f3177c8aab5bd3c78438b676ac7423bc197c22ab3",
@@ -15,6 +16,7 @@
     {
       "scope": "ExGen3/sections/mega",
       "candidate_id": "exgen3-source-detail-20260914-c",
+      "master_path": "assets/reviewed-candidates/exgen3-mega-c/artwork-300dpi.png",
       "master_sha256": "eb61f272fd22bd400b2c2555cb2a490fad47c85b3947087a88b96b2e9dce3ebd",
       "review_report_sha256": "ce44b6b8897b9555cd6ebfcc5a11155ef072c6bcee7f042b8400b5c44e09b6a0",
       "job_sha256": "cf74b1dfe9bd307a597ed2addfc26c2dd1b9aefc8bd5580a7703bb971b69f1a3",
