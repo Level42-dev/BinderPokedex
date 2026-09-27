@@ -139,6 +139,8 @@ def test_exgen3_keeps_both_sections():
         assert [renderer.section_id for renderer in collection.renderers] == ["normal", "mega"]
         assert [renderer.poster_id for renderer in collection.renderers] == ["normal", "mega"]
         assert all(renderer.insertion == "after_section_cover" for renderer in collection.renderers)
+        assert [renderer.poster_id for renderer in collection.for_section("normal", 0)] == ["normal"]
+        assert [renderer.poster_id for renderer in collection.for_section("mega", 1)] == ["mega"]
     finally:
         collection.cleanup()
 

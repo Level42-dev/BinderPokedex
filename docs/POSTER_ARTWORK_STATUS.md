@@ -68,8 +68,10 @@ Remaining disabled routes after the 27 September historical import:
 - Base1: the accepted B master is technically promoted, but the available
   authentic German title logo is too soft at print size; PDF routing stays off.
 - ExGen2/sections/primal and ME03: no approved print-safe candidate. The
-  scoped identity-lock fallback review is separate and must not silently
-  promote either route.
+  scoped identity-lock fallback is [documented for P16](reviews/2026-09-27-p16-identity-lock-review.md)
+  and [P37](reviews/2026-09-27-p37-identity-lock-review.md): P16-A fails the
+  scene-continuity/grounding check; P37-A awaits an explicit user image decision.
+  Neither route may silently promote.
 - SV07: the installed candidate's generation-provenance contract is unsupported
   (`flux/joint_scene/spatial_source_detail_joint v9`); its historical Hopplo
   review remains a separate visual concern. It needs a validated replacement
