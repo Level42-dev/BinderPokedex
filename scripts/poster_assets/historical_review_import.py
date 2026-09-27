@@ -157,6 +157,8 @@ def verify_historical_trial(scope: str, archive_dir: Path, trial_dir: Path) -> d
         if package.get(f"input/{name}") != item["sha256"]:
             raise ValueError("job input differs from package")
     generation = experiment["generation"]
+    if generation != allowed["generation"]:
+        raise ValueError("historical generation differs from allowlist")
     _models(job["models"], generation)
     _workflow_generation(workflow, generation)
     raw = _record(evidence["raw"], "raw render")
@@ -219,6 +221,8 @@ def require_historical_import(
         raise ValueError("historical import contract or scope mismatch")
     if run.get("scope") != scope or run.get("generation") != generation or historical.get("generation") != generation:
         raise ValueError("historical generation differs from active manifest")
+    if generation != allowed["generation"]:
+        raise ValueError("historical generation differs from allowlist")
     if historical.get("candidate_id") != allowed["candidate_id"]:
         raise ValueError("historical candidate differs from allowlist")
     if historical.get("historical_flags") != {

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+from copy import deepcopy
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -115,6 +116,7 @@ def _fixture(tmp_path: Path, monkeypatch) -> tuple[Path, Path]:
     candidates = root / "config/posters/historical_review_candidates.json"
     _json(candidates, {"schema_version": 1, "candidates": [{
         "scope": "Base1", "candidate_id": "base1-b",
+        "generation": generation,
         "master_path": str(master.relative_to(root)),
         "master_sha256": _sha(master),
         "review_report_sha256": _sha(report),
@@ -162,6 +164,24 @@ def test_scope_seed_and_model_mismatch_rejected(tmp_path, monkeypatch, field, va
         verify_historical_trial("Base1", archive, trial)
 
 
+@pytest.mark.parametrize("field,value", [
+    ("steps", 7),
+    ("reference_mode", "other_mode"),
+    ("generation_megapixels", 1.0),
+    ("output_dpi", 150),
+])
+def test_unpinned_historical_generation_settings_are_rejected(tmp_path, monkeypatch, field, value):
+    from scripts.poster_assets.historical_review_import import verify_historical_trial
+
+    archive, trial = _fixture(tmp_path, monkeypatch)
+    experiment_path = trial / "experiment.json"
+    experiment = json.loads(experiment_path.read_text(encoding="utf-8"))
+    experiment["generation"][field] = value
+    _json(experiment_path, experiment)
+    with pytest.raises(ValueError, match="generation"):
+        verify_historical_trial("Base1", archive, trial)
+
+
 def test_verified_evidence_omits_private_run_fields(tmp_path, monkeypatch):
     from scripts.poster_assets.historical_review_import import verify_historical_trial
 
@@ -204,6 +224,35 @@ def test_historical_contract_is_allowlisted(tmp_path, monkeypatch):
     require_historical_import(bundle, run)
     run["historical_import"]["candidate_id"] = "unreviewed"
     with pytest.raises(ValueError, match="historical|allowlist|candidate"):
+        require_historical_import(bundle, run)
+
+
+def test_historical_generation_cannot_change_in_run_and_manifest_together(tmp_path, monkeypatch):
+    from scripts.poster_assets.historical_review_import import (
+        require_historical_import, verify_historical_trial,
+    )
+
+    archive, trial = _fixture(tmp_path, monkeypatch)
+    evidence = verify_historical_trial("Base1", archive, trial)
+    altered = deepcopy(evidence["generation"])
+    altered["steps"] = 7
+    bundle = SimpleNamespace(asset_key="Base1", manifest={"artwork": {"generation": altered}})
+    run = {
+        "scope": "Base1", "generation": altered,
+        "source_artwork": {"sha256": evidence["master"]["sha256"]},
+        "historical_import": {
+            "schema_version": 1,
+            "contract_name": "approved_spatial_identity_joint_import",
+            "pipeline_version": 8,
+            **evidence,
+            "generation": altered,
+        },
+        "inputs": {"generation_fingerprint": {"components": {
+            "effective_prompt": {"sha256": evidence["prompt_sha256"]},
+            "pipeline_contract": {"name": "poster_generation", "version": 8},
+        }}},
+    }
+    with pytest.raises(ValueError, match="historical generation"):
         require_historical_import(bundle, run)
 
 
