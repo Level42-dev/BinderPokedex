@@ -14,8 +14,26 @@ text_cells:
     max_height_ratio: 0.68
 
 title_logo:
-  file: logo.png
-  source: https://assets.tcgdex.net/en/base/base1/logo.png
+  files:
+    de: logo-de.png
+    en: logo.png
+    fr: logo.png
+    es: logo.png
+    it: logo.png
+    ja: logo.png
+    ko: logo.png
+    zh_hans: logo.png
+    zh_hant: logo.png
+  sources:
+    de: https://tcg.pokemon.com/assets/img/global/logos/de-de/tcg-logo-2x.png
+    en: https://assets.tcgdex.net/en/base/base1/logo.png
+    fr: https://assets.tcgdex.net/en/base/base1/logo.png
+    es: https://assets.tcgdex.net/en/base/base1/logo.png
+    it: https://assets.tcgdex.net/en/base/base1/logo.png
+    ja: https://assets.tcgdex.net/en/base/base1/logo.png
+    ko: https://assets.tcgdex.net/en/base/base1/logo.png
+    zh_hans: https://assets.tcgdex.net/en/base/base1/logo.png
+    zh_hant: https://assets.tcgdex.net/en/base/base1/logo.png
 
 pdf:
   enabled: false

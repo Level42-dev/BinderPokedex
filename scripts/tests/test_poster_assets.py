@@ -1761,6 +1761,20 @@ def test_localized_title_logo_requires_an_exact_language_file():
     assert title_logo_file(manifest, "fr") is None
 
 
+def test_base1_de_logo_is_language_bound():
+    bundle = poster_bundle("Base1")
+    manifest = bundle.manifest
+    de_file = title_logo_file(manifest, "de")
+    assert de_file == "logo-de.png"
+    for language in ("en", "fr", "es", "it", "ja", "ko", "zh_hans", "zh_hant"):
+        assert title_logo_file(manifest, language) == "logo.png"
+    downloads = resolve_logo_downloads(manifest, {"logo_urls": {}})
+    assert ("de", "logo-de.png", manifest["title_logo"]["sources"]["de"]) in downloads
+    incomplete = {"title_logo": {"files": {"de": "logo-de.png"}, "sources": {}}}
+    with pytest.raises(ValueError, match="de"):
+        resolve_logo_downloads(incomplete, {"logo_urls": {}})
+
+
 def test_title_logo_downloads_use_scope_language_urls():
     manifest = {
         "title_logo": {
