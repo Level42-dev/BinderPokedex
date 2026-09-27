@@ -1,3 +1,4 @@
+import hashlib
 import json
 from pathlib import Path
 from types import SimpleNamespace
@@ -93,6 +94,8 @@ def test_newly_approved_de_posters_route_exact_reviewed_artwork(scope, reviewed_
             .read_text(encoding="utf-8")
         )
         assert provenance["run"]["source_artwork"]["sha256"] == reviewed_sha256
+        actual_sha256 = hashlib.sha256(renderer.artwork_path.read_bytes()).hexdigest()
+        assert actual_sha256 == reviewed_sha256
     finally:
         renderer.cleanup()
 

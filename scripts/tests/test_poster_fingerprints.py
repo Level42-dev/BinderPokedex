@@ -1704,12 +1704,36 @@ def test_masked_promotion_records_distinct_one_shot_and_accepted_final(tmp_path,
     assert stored["schema_version"] == 3
     assert stored["run"]["source_artwork"]["sha256"] == fixture.base_sha256
     assert stored["composition"]["kind"] == "masked_fallback"
+    assert stored["composition"]["title_logo_approval"]["logo_pixel_sha256"] == image_pixel_record(
+        fixture.scope_dir / "logo.png"
+    )["pixel_sha256"]
     assert stored["composition"]["final_artwork_sha256"] == sha256_file(fixture.final)
     assert stored["outputs"]["artwork"]["sha256"] == sha256_file(fixture.final)
     assert stored["outputs"]["artwork"]["pixel_sha256"] == image_pixel_record(artwork)["pixel_sha256"]
     result = validator.validate("Example")
     assert result["identity_validation_method"] == "human_masked_fallback_review"
     assert result["localized_overlay_approved"] is False
+
+
+def test_masked_poster_accepts_reencoded_same_pixel_logo(tmp_path, monkeypatch):
+    fixture = _masked_promotion_fixture(tmp_path, monkeypatch)
+    promotion.promote(
+        "Example", fixture.final, language="de",
+        run_metadata_path=fixture.base_run, composition_input_path=fixture.input,
+    )
+    logo_path = fixture.scope_dir / "logo.png"
+    approved_sha256 = sha256_file(logo_path)
+    with Image.open(logo_path) as image:
+        pixels = image.convert("RGBA")
+    pixels.save(logo_path, format="PNG", compress_level=0)
+    assert sha256_file(logo_path) != approved_sha256
+
+    assert validator.validate("Example")["identity_validation_method"] == "human_masked_fallback_review"
+
+    pixels.putpixel((0, 0), (1, 2, 3, 255))
+    pixels.save(logo_path, format="PNG", compress_level=0)
+    with pytest.raises(ValueError, match="Accepted title logo source has drifted"):
+        validator.validate("Example")
 
 
 def test_masked_promotion_rejects_changed_accepted_logo_preview_before_replacement(tmp_path, monkeypatch):

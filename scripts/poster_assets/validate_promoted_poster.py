@@ -166,11 +166,15 @@ def _validate_masked_composition(payload: dict, bundle: PosterBundle, artwork_pa
         or not str(logo.get("status", "")).startswith("accepted_")
         or not isinstance(logo_file, str)
         or not re.fullmatch(r"[0-9a-f]{64}", str(logo.get("logo_sha256", "")))
+        or not re.fullmatch(r"[0-9a-f]{64}", str(logo.get("logo_pixel_sha256", "")))
         or not re.fullmatch(r"[0-9a-f]{64}", str(logo.get("accepted_preview_sha256", "")))
     ):
         raise ValueError("Masked final lacks exact accepted title-logo evidence")
     current_logo = bundle.source_dir / logo_file
-    if current_logo.is_file() and sha256_file(current_logo) != logo["logo_sha256"]:
+    if (
+        current_logo.is_file()
+        and image_pixel_record(current_logo)["pixel_sha256"] != logo["logo_pixel_sha256"]
+    ):
         raise ValueError("Accepted title logo source has drifted")
     if bundle.pdf_enabled and not current_logo.is_file():
         raise ValueError("Enabled masked poster lacks its title logo source")

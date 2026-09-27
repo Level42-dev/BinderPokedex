@@ -476,6 +476,7 @@ def load_and_audit_composition(
         "title_logo_approval": {
             "status": logo_review["status"],
             "logo_sha256": logo_review["logo_sha256"],
+            "logo_pixel_sha256": image_pixel_record(logo_path)["pixel_sha256"],
             "accepted_preview_sha256": logo_review["german_preview_sha256"],
         },
         "localized_overlay_approval": None,
