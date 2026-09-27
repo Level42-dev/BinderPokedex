@@ -242,6 +242,13 @@ Examples:
             "continuous full page"
         ),
     )
+
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=None,
+        help="Write PDFs to this directory inside the project instead of output/",
+    )
     
     parser.add_argument(
         "--test",
@@ -303,6 +310,11 @@ Examples:
     script_dir = Path(__file__).parent  # scripts/pdf/
     project_dir = script_dir.parent.parent  # project root
     data_dir = project_dir / "data" / "output"  # Read from output directory
+    output_dir = project_dir / "output"
+    if args.output_dir is not None:
+        output_dir = args.output_dir.expanduser().resolve()
+        if output_dir == project_dir.resolve() or not output_dir.is_relative_to(project_dir.resolve()):
+            parser.error("--output-dir must be a subdirectory of the project")
     
     if not data_dir.exists():
         logger.error(f"❌ Data directory not found: {data_dir}")
@@ -368,7 +380,7 @@ Examples:
                     scope_name=scope,
                     scope_file=scope_file,
                     languages=languages,
-                    output_dir=project_dir / 'output',
+                    output_dir=output_dir,
                     script_dir=script_dir,
                     skip_images=args.skip_images,
                     skip_poster=args.skip_poster,
@@ -431,7 +443,7 @@ Examples:
         scope_name=args.scope,
         scope_file=scope_file,
         languages=languages,
-        output_dir=project_dir / 'output',
+        output_dir=output_dir,
         script_dir=script_dir,
         skip_images=args.skip_images,
         skip_poster=args.skip_poster,

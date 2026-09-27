@@ -1,3 +1,5 @@
+import hashlib
+import sys
 from unittest.mock import MagicMock
 
 import pytest
@@ -9,6 +11,49 @@ from scripts.pdf.lib.generation_options import (
     validate_poster_page_mode,
 )
 from scripts.pdf.lib.variant_pdf_generator import VariantPDFGenerator
+
+
+def _cli_fixture(tmp_path, monkeypatch):
+    script = tmp_path / "repo/scripts/pdf/generate_pdf.py"
+    script.parent.mkdir(parents=True)
+    scope = tmp_path / "repo/data/output/Base1.json"
+    scope.parent.mkdir(parents=True)
+    scope.write_text("{}", encoding="utf-8")
+    monkeypatch.setattr(generate_pdf, "__file__", str(script))
+    return tmp_path / "repo"
+
+
+def test_output_dir_is_isolated_on_failure(tmp_path, monkeypatch):
+    project = _cli_fixture(tmp_path, monkeypatch)
+    original = project / "output/de/Base1_DE.pdf"
+    original.parent.mkdir(parents=True)
+    original.write_bytes(b"existing release bytes")
+    before = hashlib.sha256(original.read_bytes()).hexdigest()
+    candidate = project / "tmp/pdf-review/Base1"
+
+    def fail(**kwargs):
+        assert kwargs["output_dir"] == candidate.resolve()
+        raise RuntimeError("candidate build failed")
+
+    monkeypatch.setattr(generate_pdf, "generate_scope_pdf", fail)
+    monkeypatch.setattr(sys, "argv", ["generate_pdf.py", "--scope", "Base1", "--language", "de", "--output-dir", str(candidate)])
+    with pytest.raises(RuntimeError, match="candidate build failed"):
+        generate_pdf.main()
+    assert hashlib.sha256(original.read_bytes()).hexdigest() == before
+
+
+def test_default_output_dir_is_unchanged(tmp_path, monkeypatch):
+    project = _cli_fixture(tmp_path, monkeypatch)
+    observed = {}
+
+    def spy(**kwargs):
+        observed.update(kwargs)
+        return 0
+
+    monkeypatch.setattr(generate_pdf, "generate_scope_pdf", spy)
+    monkeypatch.setattr(sys, "argv", ["generate_pdf.py", "--scope", "Base1", "--language", "de"])
+    assert generate_pdf.main() == 0
+    assert observed["output_dir"] == project / "output"
 
 
 def _card(card_id: int) -> dict:
