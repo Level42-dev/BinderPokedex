@@ -132,6 +132,17 @@ def test_pokedex_enabled_generation_bundles_need_no_set_id():
         collection.cleanup()
 
 
+def test_exgen3_keeps_both_sections():
+    scope_data = json.loads((ROOT / "data/output/ExGen3.json").read_text(encoding="utf-8"))
+    collection = PosterPageCollection.from_scope("ExGen3", scope_data, "de")
+    try:
+        assert [renderer.section_id for renderer in collection.renderers] == ["normal", "mega"]
+        assert [renderer.poster_id for renderer in collection.renderers] == ["normal", "mega"]
+        assert all(renderer.insertion == "after_section_cover" for renderer in collection.renderers)
+    finally:
+        collection.cleanup()
+
+
 def test_enabled_aggregate_bindings_create_one_renderer_per_section(
     tmp_path,
     monkeypatch,

@@ -7,12 +7,13 @@ live in [Poster Workflow](POSTER_WORKFLOW.md), durable product requirements in
 evidence in [Poster Experiment Log](POSTER_ARTWORK_EXPERIMENT_LOG.md).
 
 Installed-artwork audit reopened: 2026-09-12. Full target retriage: 2026-09-14.
-Latest scoped production update: 2026-09-25 (P02-H masked-fallback panorama and
-localized German overlay approved, routed, and locally print-checked).
+Latest scoped production update: 2026-09-27 (ExGen3 Mega-C historical master
+validated, routed and locally print-checked; P02-H remains unchanged).
 Latest human artwork feedback: 2026-09-25 (P02-H German panorama accepted).
-Latest continuation: 2026-09-25 (37 production-valid panoramas enabled;
-five configured panorama targets remain invalid/disabled; the v10 release
-build remains open).
+Latest continuation: 2026-09-27 (the historically accepted ExGen3 Mega-C is
+promoted and PDF-enabled beside its unchanged normal section; Base1-B is
+promoted but PDF-disabled pending a sharp authentic German logo; P16, P37 and
+SV07 remain open; the v10 release build remains open).
 Release candidate after the [SV08 exact-artwork adoption](reviews/2026-09-24-sv08-exact-artwork-adoption.md):
 2026-09-24 (36 production-valid panoramas enabled after the
 [P06 exact-artwork reacceptance](reviews/2026-09-24-p06-existing-artwork-acceptance.md);
@@ -60,13 +61,15 @@ documented quality limitation rather than silently substituted artwork.
 The final code review closed four release-gate gaps: an enabled masked poster
 now rejects changed overlay inputs, missing configured language logos and
 incomplete base evidence; direct PDF generation also checks its approval.
-Five unrelated poster routes remain blocked.
+Four other poster routes remain blocked.
 
-Current remaining disabled routes (work-planner audit on 25 September):
+Remaining disabled routes after the 27 September historical import:
 
-- Base1, ExGen2/sections/primal, ExGen3/sections/mega, and ME03: existing
-  candidate/provenance does not carry a current complete visual-identity
-  approval. None may be silently enabled merely because artwork files exist.
+- Base1: the accepted B master is technically promoted, but the available
+  authentic German title logo is too soft at print size; PDF routing stays off.
+- ExGen2/sections/primal and ME03: no approved print-safe candidate. The
+  scoped identity-lock fallback review is separate and must not silently
+  promote either route.
 - SV07: the installed candidate's generation-provenance contract is unsupported
   (`flux/joint_scene/spatial_source_detail_joint v9`); its historical Hopplo
   review remains a separate visual concern. It needs a validated replacement
@@ -96,7 +99,10 @@ This acceptance is bound to the exact candidate master in
 general anatomy exception. The first-example user-review gate is satisfied.
 Source-detail prompt integration is now implemented as an opt-in versioned
 contract, as described in the 15 September pilot below. Technical promotion of
-the earlier ExGen3 Mega C and Base1 B experiments remains pending. P15-D and
+the earlier ExGen3 Mega C and Base1 B experiments was completed on 27 September
+with an explicit historical contract; only ExGen3 Mega-C was PDF-routed after
+the [33-page German print check](reviews/2026-09-27-historical-poster-pdf-integration.md).
+P15-D and
 P40-B were adopted separately on 22 September as detailed below. Existing release PDFs and ZIPs are
 retained as unapproved candidates, not sale-ready artwork.
 No replacement is accepted merely because its render or pixel audit succeeds.

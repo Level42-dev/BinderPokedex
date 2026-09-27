@@ -1117,6 +1117,7 @@ def test_every_release_enabled_poster_passes_production_validation():
         "Base2",
         "ExGen2/sections/mega",
         "ExGen3/sections/normal",
+        "ExGen3/sections/mega",  # Exact historically accepted C master, revalidated.
         "ME05",
         "Pokedex/sections/gen1",
         "Pokedex/sections/gen3",
