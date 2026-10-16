@@ -762,12 +762,23 @@ class EnrichFeaturedElementsStep(BaseStep):
                 logger.warning(f"No set_id in set_info for Pokemon ID {pokemon_id}")
                 return None
             
-            # Build full card ID
-            card_id = f"{set_id}-{local_id}"
+            # A release scope may use a collector-facing code such as 30C
+            # while TCGdex uses a different set ID such as 30th.  Preserve
+            # the card's real upstream identity for images and provenance.
+            card_id = self._card_identifier(card, set_info)
+            if not card_id:
+                logger.warning(f"No stable card ID for Pokemon ID {pokemon_id}")
+                return None
+            suffix = f"-{local_id}"
+            source_set_id = (
+                card_id[:-len(suffix)]
+                if card_id.endswith(suffix)
+                else set_id
+            )
             
             # Build image URL
             # Format: https://assets.tcgdex.net/en/{series}/{set_id}/{localId}/high.png
-            image_url = f"https://assets.tcgdex.net/en/{series_id}/{set_id}/{local_id}/high.png"
+            image_url = f"https://assets.tcgdex.net/en/{series_id}/{source_set_id}/{local_id}/high.png"
             
             # Get Pokemon name
             pokemon_name = card.get('name', {})

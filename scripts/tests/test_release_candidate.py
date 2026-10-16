@@ -116,7 +116,7 @@ def test_release_downloads_include_offline_notices_and_exact_source(tmp_path):
             for name in ("NOTICE.md", "LICENSE", "LICENSE-CODE", "LICENSE-CONTENT.md", "LICENSES/CC-BY-NC-4.0.txt"):
                 assert archive.read(f"{language}/{name}") == (tmp_path / name).read_bytes()
             source = json.loads(archive.read(f"{language}/SOURCE.json"))
-            assert source["repository"] == "https://github.com/Level42-dev/BinderPokedex"
+            assert source["repository"] == "https://github.com/DerFlash/BinderPokedex"
             assert source["commit"] == "a" * 40
             assert source["tag"] == "pr-42-deadbeef"
 

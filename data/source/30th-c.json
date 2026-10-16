@@ -1,0 +1,443 @@
+{
+  "set_info": {
+    "id": "30th-c",
+    "name": "30th Classic Collection",
+    "release_date": "2026-09-16",
+    "card_count": {
+      "firstEd": 0,
+      "holo": 30,
+      "normal": 0,
+      "official": 30,
+      "reverse": 0,
+      "total": 30
+    },
+    "logo": "",
+    "symbol": "",
+    "serie": "me",
+    "serie_name": "Mega Evolution"
+  },
+  "cards": [
+    {
+      "id": "30th-c-001",
+      "localId": "001",
+      "name": "Charizard",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        6
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-002",
+      "localId": "002",
+      "name": "Delcatty",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Colorless"
+      ],
+      "dexId": [
+        301
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-003",
+      "localId": "003",
+      "name": "Metagross",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Lightning"
+      ],
+      "dexId": [
+        376
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-004",
+      "localId": "004",
+      "name": "Genesect EX",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Grass"
+      ],
+      "dexId": [
+        649
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-005",
+      "localId": "005",
+      "name": "Misty",
+      "image": "",
+      "category": "Trainer",
+      "types": [],
+      "dexId": [],
+      "trainerType": "Supporter"
+    },
+    {
+      "id": "30th-c-006",
+      "localId": "006",
+      "name": "Dark Tyranitar",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Darkness"
+      ],
+      "dexId": [
+        248
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-007",
+      "localId": "007",
+      "name": "Sneasel",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Darkness"
+      ],
+      "dexId": [
+        215
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-008",
+      "localId": "008",
+      "name": "Pikachu & Zekrom GX",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Lightning"
+      ],
+      "dexId": [
+        25,
+        644
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-009",
+      "localId": "009",
+      "name": "Greninja BREAK",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Water"
+      ],
+      "dexId": [
+        658
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-010",
+      "localId": "010",
+      "name": "Uxie",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Psychic"
+      ],
+      "dexId": [
+        480
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-011",
+      "localId": "011",
+      "name": "Crobat G",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Psychic"
+      ],
+      "dexId": [
+        169
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-012",
+      "localId": "012",
+      "name": "Raikou",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Lightning"
+      ],
+      "dexId": [
+        243
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-013",
+      "localId": "013",
+      "name": "Buzzwole GX",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fighting"
+      ],
+      "dexId": [
+        794
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-014",
+      "localId": "014",
+      "name": "Pikachu",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Lightning"
+      ],
+      "dexId": [
+        25
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-015",
+      "localId": "015",
+      "name": "Erika's Jigglypuff",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Colorless"
+      ],
+      "dexId": [
+        39
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-016",
+      "localId": "016",
+      "name": "Rayquaza EX",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Dragon"
+      ],
+      "dexId": [
+        384
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-017",
+      "localId": "017",
+      "name": "Solgaleo GX",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Metal"
+      ],
+      "dexId": [
+        791
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-018",
+      "localId": "018",
+      "name": "Gengar",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Psychic"
+      ],
+      "dexId": [
+        94
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-019",
+      "localId": "019",
+      "name": "Darkrai & Cresselia LEGEND",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Psychic"
+      ],
+      "dexId": [
+        491,
+        488
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-020",
+      "localId": "020",
+      "name": "Darkrai & Cresselia LEGEND",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Psychic"
+      ],
+      "dexId": [
+        491,
+        488
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-021",
+      "localId": "021",
+      "name": "N",
+      "image": "",
+      "category": "Trainer",
+      "types": [],
+      "dexId": [],
+      "trainerType": "Supporter"
+    },
+    {
+      "id": "30th-c-022",
+      "localId": "022",
+      "name": "Palkia",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Water"
+      ],
+      "dexId": [
+        484
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-023",
+      "localId": "023",
+      "name": "M Gardevoir EX",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fairy"
+      ],
+      "dexId": [
+        282
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-024",
+      "localId": "024",
+      "name": "Shining Celebi",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Grass"
+      ],
+      "dexId": [
+        251
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-025",
+      "localId": "025",
+      "name": "Scizor ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Metal"
+      ],
+      "dexId": [
+        212
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-026",
+      "localId": "026",
+      "name": "Mew VMAX",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Psychic"
+      ],
+      "dexId": [
+        151
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-027",
+      "localId": "027",
+      "name": "Arceus VSTAR",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Colorless"
+      ],
+      "dexId": [
+        493
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-028",
+      "localId": "028",
+      "name": "Zacian V",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Metal"
+      ],
+      "dexId": [
+        888
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-029",
+      "localId": "029",
+      "name": "Lugia",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Colorless"
+      ],
+      "dexId": [
+        249
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "30th-c-030",
+      "localId": "030",
+      "name": "Magikarp",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Water"
+      ],
+      "dexId": [
+        129
+      ],
+      "trainerType": ""
+    }
+  ],
+  "metadata": {
+    "total_cards": 30,
+    "set_id": "30th-c",
+    "date_fetched": "2026-10-16T18:41:13.677250Z",
+    "source": "TCGdex API v2",
+    "language": "en"
+  }
+}

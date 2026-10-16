@@ -14,7 +14,7 @@ try:
 except ImportError:
     from build_manifest import LANGUAGES
 
-PROJECT_URL = "https://github.com/Level42-dev/BinderPokedex"
+PROJECT_URL = "https://github.com/DerFlash/BinderPokedex"
 NOTICE_FILES = (
     "NOTICE.md", "LICENSE", "LICENSE-CODE", "LICENSE-CONTENT.md",
     "LICENSES/CC-BY-NC-4.0.txt",

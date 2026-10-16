@@ -517,6 +517,14 @@ class TestLocalizedSetLogos:
     def setup_method(self):
         self.step = EnrichTCGNamesMultilingualStep("test_logos")
 
+    def test_missing_anniversary_logo_does_not_use_promo_badge(self):
+        assert self.step._check_local_logo("30th") == ""
+        assert self.step._check_local_logo("30th-c") == ""
+
+    def test_promo_sets_retain_their_shared_badge(self):
+        assert self.step._check_local_logo("svp") == "images/logos/promo/default.png"
+        assert self.step._check_local_logo("mep") == "images/logos/promo/default.png"
+
     def test_missing_german_logo_never_uses_english_url(self, monkeypatch):
         monkeypatch.setattr(self.step, "_validate_url", lambda _url: False)
         english_url = "https://assets.example/en/sv10.5b/logo.png"
@@ -563,6 +571,41 @@ class TestLocalizedSetLogos:
         assert logos["sv10.5w"]["de"].endswith(
             "/sv10pt5/wht/sv10pt5_logo_169_de.png"
         )
+
+        for set_id in ("30th", "30th-c"):
+            for language in ("de", "en", "fr", "es", "it"):
+                assert logos[set_id][language] == (
+                    f"https://assets.tcgdex.net/{language}/me/30th/logo.png"
+                )
+
+
+def test_anniversary_classic_uses_official_french_and_italian_set_names(
+    monkeypatch,
+):
+    class FakeClient:
+        def __init__(self, language):
+            self.language = language
+
+        def get_set(self, _set_id):
+            names = {
+                "fr": "Collection Classique30ᵉ Anniversaire",
+                "it": "Collzione Classica del 30°",
+            }
+            if self.language not in names:
+                return None
+            return {
+                "name": names[self.language],
+                "cards": [{"localId": "001", "name": "Charizard"}],
+            }
+
+    monkeypatch.setattr(multilingual_module, "TCGdexClient", FakeClient)
+    step = EnrichTCGNamesMultilingualStep("anniversary_names")
+    monkeypatch.setattr(step, "_check_local_logo", lambda _set_id: "")
+
+    _cards, names, _logos, _languages = step._fetch_multilingual_names("30th-c")
+
+    assert names["fr"] == "Collection Classique 30ᵉ Anniversaire"
+    assert names["it"] == "Collezione Classica del 30°"
 
 
 class TestPokemonIndexBuilding:

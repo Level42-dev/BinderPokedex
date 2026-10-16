@@ -12,6 +12,20 @@ snapshot.
 The release date boundary is 2026-09-12. Data published after that boundary is
 not silently pulled into v10.0.
 
+### Superseding anniversary decision · 2026-10-16
+
+The original September exclusion of the then-unreleased 30-year expansion
+below is historical. For the final v10.0 candidate, the operator explicitly
+requested its inclusion after publication. `30C` now contains the 161-card
+main set and `30CClassic` the separate 30-card Classic Collection. Both were
+fetched as a bounded October addition; the earlier 31 scopes retain their
+reviewed September source refresh. The combined release snapshot has 67
+source/output files and an October 16 assembly boundary. The two new scopes
+offer only the five languages observed in their source data, preserve printed
+numbers, and each require their own approved panorama and validated PDFs.
+The original publication exclusion remains in force: no tag or GitHub Release
+is created solely by building this candidate.
+
 ## Baseline Evidence
 
 - The German TCGdex SVP response contains 216 card records even though the

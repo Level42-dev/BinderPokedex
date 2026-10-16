@@ -1,0 +1,555 @@
+{
+  "asset_name": "flux2",
+  "kind": "promoted_poster",
+  "outputs": {
+    "artwork": {
+      "bytes": 5336146,
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "file": "assets/posters/30CClassic/poster-flux2-artwork.png",
+      "height": 3268,
+      "mode": "RGBA",
+      "pixel_sha256": "d44aefd4df39146adfc916d26d1b553ff60832ae23ef861a988c8acdc3553742",
+      "sha256": "82802a5386ac83cb2fddab706e9b725bf27aea0877677e62d137a124acc8f201",
+      "width": 2368
+    }
+  },
+  "poster_id": "30CClassic",
+  "promoted_at": "2026-10-16T19:06:11.779613+00:00",
+  "review_language": "de",
+  "run": {
+    "created_at": "2026-10-16T19:01:52.840185+00:00",
+    "generation": {
+      "encoder": "qwen_3_4b.safetensors",
+      "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
+      "engine": "flux",
+      "generation_megapixels": 1.0,
+      "mode": "joint_scene",
+      "model": "flux-2-klein-4b.safetensors",
+      "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
+      "output_dpi": 300,
+      "output_method": "lanczos",
+      "reference_mode": "individual_spatial_joint",
+      "seed": 260769629,
+      "steps": 4,
+      "vae": "flux2-vae.safetensors",
+      "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
+    },
+    "inputs": {
+      "cutout_manifest": {
+        "bytes": 1732,
+        "file": "tmp/poster-workspaces/30CClassic/sources/cutouts/manifest.json",
+        "sha256": "03b471449ad4ef12587a7432cd07fd835e1a449ec32895c11badc33f656c267d"
+      },
+      "cutouts": [
+        {
+          "bytes": 145456,
+          "file": "tmp/poster-workspaces/30CClassic/sources/cutouts/pokemon_006_charizard.png",
+          "height": 475,
+          "mode": "RGBA",
+          "pixel_sha256": "74d958bd46f9b6a472286dd53c1daf9bab39856f498b9b061829cba5691425d3",
+          "sha256": "c1b2a39cd44c5aa183feb06db190fc987d86f5f8af7b342c1e82778f3193f580",
+          "width": 475
+        },
+        {
+          "bytes": 120225,
+          "file": "tmp/poster-workspaces/30CClassic/sources/cutouts/pokemon_025_pikachu.png",
+          "height": 475,
+          "mode": "RGBA",
+          "pixel_sha256": "e1100eee7248e696797b553f2151ad8e62c0eb83df473d0d9151cceb2e61c76c",
+          "sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+          "width": 475
+        },
+        {
+          "bytes": 117611,
+          "file": "tmp/poster-workspaces/30CClassic/sources/cutouts/pokemon_249_lugia.png",
+          "height": 475,
+          "mode": "RGBA",
+          "pixel_sha256": "6662c2d9cc9998ff0bb60c7d551bf5ed27beca009d828377692035d7ec370a90",
+          "sha256": "f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30",
+          "width": 475
+        }
+      ],
+      "generation_fingerprint": {
+        "components": {
+          "cutouts": [
+            {
+              "height": 475,
+              "mode": "RGBA",
+              "pixel_sha256": "74d958bd46f9b6a472286dd53c1daf9bab39856f498b9b061829cba5691425d3",
+              "pokemon_id": 6,
+              "width": 475
+            },
+            {
+              "height": 475,
+              "mode": "RGBA",
+              "pixel_sha256": "e1100eee7248e696797b553f2151ad8e62c0eb83df473d0d9151cceb2e61c76c",
+              "pokemon_id": 25,
+              "width": 475
+            },
+            {
+              "height": 475,
+              "mode": "RGBA",
+              "pixel_sha256": "6662c2d9cc9998ff0bb60c7d551bf5ed27beca009d828377692035d7ec370a90",
+              "pokemon_id": 249,
+              "width": 475
+            }
+          ],
+          "effective_prompt": {
+            "encoding": "utf-8",
+            "sha256": "b81f9cecabebf4c66e3de16fa2abebc7dfdfe43365294115e95b322ac1fffc36"
+          },
+          "generation": {
+            "encoder": "qwen_3_4b.safetensors",
+            "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
+            "engine": "flux",
+            "generation_megapixels": 1.0,
+            "mode": "joint_scene",
+            "model": "flux-2-klein-4b.safetensors",
+            "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
+            "output_dpi": 300,
+            "output_method": "lanczos",
+            "reference_mode": "individual_spatial_joint",
+            "seed": 260769629,
+            "steps": 4,
+            "vae": "flux2-vae.safetensors",
+            "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
+          },
+          "joint_scene_conditioning": {
+            "identity_source_resampling": "canonical_card_fit",
+            "reference_megapixels": 0.5,
+            "reference_neutral_rgb": [
+              226,
+              224,
+              211
+            ],
+            "reference_strategy": "individual_spatial_identity_per_subject"
+          },
+          "layout": {
+            "columns": 3,
+            "name": "standard_3x3",
+            "raster_geometry": {
+              "generation_canvas_px": [
+                848,
+                1168
+              ],
+              "generation_column_spans_px": [
+                [
+                  0,
+                  269
+                ],
+                [
+                  290,
+                  558
+                ],
+                [
+                  579,
+                  848
+                ]
+              ],
+              "generation_row_spans_px": [
+                [
+                  0,
+                  375
+                ],
+                [
+                  396,
+                  772
+                ],
+                [
+                  793,
+                  1168
+                ]
+              ],
+              "name": "cumulative_physical_endpoints",
+              "output_canvas_px": [
+                2368,
+                3268
+              ],
+              "output_column_spans_px": [
+                [
+                  0,
+                  750
+                ],
+                [
+                  809,
+                  1559
+                ],
+                [
+                  1618,
+                  2368
+                ]
+              ],
+              "output_row_spans_px": [
+                [
+                  0,
+                  1050
+                ],
+                [
+                  1109,
+                  2159
+                ],
+                [
+                  2218,
+                  3268
+                ]
+              ],
+              "version": 2
+            },
+            "rows": 3,
+            "safe_cells": {
+              "set_info": {
+                "column": 2,
+                "row": 2
+              },
+              "title": {
+                "column": 2,
+                "row": 1
+              }
+            }
+          },
+          "pipeline_contract": {
+            "name": "poster_generation",
+            "version": 9
+          },
+          "pokemon": {
+            "count": "auto_from_layout_columns",
+            "cutout_source": "pokeapi_official_artwork",
+            "fallback_candidates": [
+              {
+                "pokemon_id": 25
+              },
+              {
+                "pokemon_id": 1
+              },
+              {
+                "pokemon_id": 4
+              },
+              {
+                "pokemon_id": 7
+              },
+              {
+                "pokemon_id": 133
+              },
+              {
+                "pokemon_id": 6
+              }
+            ],
+            "row": "bottom",
+            "strategy": "featured_from_scope"
+          },
+          "scene": {
+            "concept": "the 30 Jahre Klassische Sammlung and three decades of card memories",
+            "constraints": [
+              "Keep the central sky open for a later localized title and maintain clear space around all three source-accurate Pokémon."
+            ],
+            "ground_noun": "meadow grass",
+            "lighting": "Soft golden morning light enters from the upper left and grounds every figure on one continuous meadow.",
+            "rendering": "Use refined hand-painted cel illustration, restrained warm greens and blues, crisp character contours, and graceful atmospheric depth.",
+            "setting": "The artwork contains a timeless storybook meadow with layered old-growth woodland, a calm lake, distant pale mountains, and gentle golden sparkles confined to the far air. The landscape feels nostalgic without recreating any historical card illustration or adding extra creatures."
+          },
+          "source_subject_ids": [
+            6,
+            25,
+            249
+          ]
+        },
+        "schema_version": 1,
+        "sha256": "cf234c315f4e5efb62d6a0bda66bce32a88e4dd2e1a4df4e91e1a90f36249a3b"
+      },
+      "overlay_fingerprint": {
+        "components": {
+          "languages": {
+            "de": {
+              "information": [
+                "30 Jahre: Klassische Sammlung",
+                "30 Karten",
+                "Veröffentlicht",
+                "16. September 2026"
+              ],
+              "title": {
+                "kind": "logo",
+                "pixel_sha256": "1d2f722577a8109d5041e58aa6a40b0344cd05264487a06caa35c298a534a93d"
+              }
+            },
+            "en": {
+              "information": [
+                "30th Classic Collection",
+                "30 cards",
+                "Released",
+                "September 16, 2026"
+              ],
+              "title": {
+                "kind": "logo",
+                "pixel_sha256": "9be3f2698a2a82eaff64ba9e8a362f0e168f1addd01300d886330bc61edd9bfb"
+              }
+            },
+            "es": {
+              "information": [
+                "Colección Clásica del 30.º Aniversario",
+                "30 cartas",
+                "Publicado",
+                "16 septiembre 2026"
+              ],
+              "title": {
+                "kind": "logo",
+                "pixel_sha256": "4015cdc15e33e7ee5437845381142d8525599dc34c9ea5edc02ac7ea8c610b04"
+              }
+            },
+            "fr": {
+              "information": [
+                "Collection Classique 30ᵉ Anniversaire",
+                "30 cartes",
+                "Sortie",
+                "16 septembre 2026"
+              ],
+              "title": {
+                "kind": "logo",
+                "pixel_sha256": "7d139c7cac3bbc74d9b5d9ae9e87af8eed05614c3dbea05eb1c6ef0b30efdf85"
+              }
+            },
+            "it": {
+              "information": [
+                "Collezione Classica del 30°",
+                "30 carte",
+                "Pubblicato",
+                "16 settembre 2026"
+              ],
+              "title": {
+                "kind": "logo",
+                "pixel_sha256": "99cd1c5d2acacb94d9692a37295519d8259d560f99afe00b00d07a41e2393277"
+              }
+            },
+            "ja": {
+              "information": [
+                "0 枚",
+                "発売日",
+                "2026年9月16日"
+              ],
+              "title": {
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "30th Classic Collection"
+              }
+            },
+            "ko": {
+              "information": [
+                "0 장",
+                "출시일",
+                "2026년 9월 16일"
+              ],
+              "title": {
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "30th Classic Collection"
+              }
+            },
+            "zh_hans": {
+              "information": [
+                "0 张",
+                "发行日期",
+                "2026年9月16日"
+              ],
+              "title": {
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "30th Classic Collection"
+              }
+            },
+            "zh_hant": {
+              "information": [
+                "0 張",
+                "發行日期",
+                "2026年9月16日"
+              ],
+              "title": {
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "30th Classic Collection"
+              }
+            }
+          },
+          "layout_name": "standard_3x3",
+          "logo_pixels": {
+            "de": {
+              "height": 401,
+              "mode": "RGBA",
+              "pixel_sha256": "1d2f722577a8109d5041e58aa6a40b0344cd05264487a06caa35c298a534a93d",
+              "width": 735
+            },
+            "en": {
+              "height": 401,
+              "mode": "RGBA",
+              "pixel_sha256": "9be3f2698a2a82eaff64ba9e8a362f0e168f1addd01300d886330bc61edd9bfb",
+              "width": 735
+            },
+            "es": {
+              "height": 401,
+              "mode": "RGBA",
+              "pixel_sha256": "4015cdc15e33e7ee5437845381142d8525599dc34c9ea5edc02ac7ea8c610b04",
+              "width": 735
+            },
+            "fr": {
+              "height": 401,
+              "mode": "RGBA",
+              "pixel_sha256": "7d139c7cac3bbc74d9b5d9ae9e87af8eed05614c3dbea05eb1c6ef0b30efdf85",
+              "width": 735
+            },
+            "it": {
+              "height": 401,
+              "mode": "RGBA",
+              "pixel_sha256": "99cd1c5d2acacb94d9692a37295519d8259d560f99afe00b00d07a41e2393277",
+              "width": 735
+            }
+          },
+          "pipeline_contract": {
+            "name": "poster_overlay",
+            "version": 3
+          },
+          "text_cells": {
+            "set_info": {
+              "column": 2,
+              "max_height_ratio": 0.68,
+              "max_width_ratio": 0.92,
+              "row": 2
+            },
+            "title": {
+              "column": 2,
+              "row": 1
+            }
+          },
+          "text_content": {}
+        },
+        "schema_version": 1,
+        "sha256": "f3ea0bc5ac9232e4ae77ff76edac6e9382fcde8935177abfecd8d55bbfd2829a"
+      },
+      "prompt": {
+        "bytes": 6017,
+        "file": "tmp/poster-workspaces/30CClassic/comfyui_poster/individual_spatial_joint_prompt.generated.txt",
+        "sha256": "f353d56dca549a9e516fcfb3a09eaacb7648153df734bafdb3b1500b7b3ccc93"
+      },
+      "references": [
+        {
+          "bytes": 27056,
+          "file": "tmp/poster-workspaces/30CClassic/comfyui_poster/individual_spatial_reference_1.png",
+          "height": 832,
+          "mode": "RGBA",
+          "pixel_sha256": "30b5a8b1d826907059fb50ad65a539e756d27ce1d03997dff0275894eccf81f9",
+          "sha256": "efecf01550299087ab3d4a205d42fc48ae07965b5c80ecbdc81c09b2cfe1bead",
+          "width": 608
+        },
+        {
+          "bytes": 24392,
+          "file": "tmp/poster-workspaces/30CClassic/comfyui_poster/individual_spatial_reference_2.png",
+          "height": 832,
+          "mode": "RGBA",
+          "pixel_sha256": "b13df667843dcf77dfaecc90bf8bf4ae3f2f128c93b5283ab5ab400455488ef7",
+          "sha256": "a179f44ac88e9672345fc9b8488cd3898789c2bf869d22021da272635a534f36",
+          "width": 608
+        },
+        {
+          "bytes": 22041,
+          "file": "tmp/poster-workspaces/30CClassic/comfyui_poster/individual_spatial_reference_3.png",
+          "height": 832,
+          "mode": "RGBA",
+          "pixel_sha256": "5df95e96e4874ee907332405b5199fb2a9d2742c60ffb09aa979c488ccf2b0f7",
+          "sha256": "f29b83f0ad5433561f5776cb8602a25079e44365fca9db520976ebdae19253fe",
+          "width": 608
+        }
+      ],
+      "scope_manifest": {
+        "bytes": 2538,
+        "file": "config/posters/30CClassic/poster.yaml",
+        "sha256": "416af65a269a34c54721797a5f22f764338efb359af20db83f3d457393ced17d"
+      },
+      "workflow": {
+        "bytes": 10050,
+        "file": "tmp/poster-workspaces/30CClassic/comfyui_poster/workflow_api_joint_scene_individual_spatial_joint_1mp_260769629.json",
+        "sha256": "d352c853024af4d76c06549abd759fc819ab150addc96193c0dfe8d88a68eb64"
+      }
+    },
+    "kind": "poster_generation_run",
+    "poster_id": "30CClassic",
+    "raw_artwork": {
+      "bytes": 1326830,
+      "file": "tmp/render-jobs/v10-30cclassic-oneshot-20261016-b/output/30cclassic_flux2_joint_scene_individual_spatial_1mp_seed_260769629_00001_.png",
+      "height": 1168,
+      "mode": "RGBA",
+      "pixel_sha256": "ee13d9d8ff65a14697e2d8310fb3e660016f3524463ca1bd10a6e1b99eeeb5ae",
+      "sha256": "12cba4ff9dd266d049fb897da11c6265cbf8af88ddcfeff13b3b6baa26e397e0",
+      "width": 848
+    },
+    "schema_version": 1,
+    "scope": "30CClassic",
+    "section_id": null,
+    "source_artwork": {
+      "bytes": 5336146,
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "file": "tmp/poster-workspaces/30CClassic/review-20261016-b/master.png",
+      "height": 3268,
+      "mode": "RGBA",
+      "pixel_sha256": "d44aefd4df39146adfc916d26d1b553ff60832ae23ef861a988c8acdc3553742",
+      "sha256": "82802a5386ac83cb2fddab706e9b725bf27aea0877677e62d137a124acc8f201",
+      "width": 2368
+    },
+    "source_scope": "30CClassic",
+    "validation": {
+      "joint_scene_visual_review": {
+        "approval_source": "explicit_promotion_flag",
+        "criteria": [
+          "exact_cast_count",
+          "raw_generation_identity",
+          "text_free_output_identity",
+          "identity_and_form",
+          "silhouette_and_stature",
+          "anatomy_and_face",
+          "colors_and_markings",
+          "placement_and_card_safety",
+          "natural_scene_integration",
+          "coherent_landscape_occlusion"
+        ],
+        "generation_fingerprint_sha256": "cf234c315f4e5efb62d6a0bda66bce32a88e4dd2e1a4df4e91e1a90f36249a3b",
+        "method": "agent_identity_and_scene_review",
+        "passed": true,
+        "raw_artwork_pixel_sha256": "ee13d9d8ff65a14697e2d8310fb3e660016f3524463ca1bd10a6e1b99eeeb5ae",
+        "raw_artwork_sha256": "12cba4ff9dd266d049fb897da11c6265cbf8af88ddcfeff13b3b6baa26e397e0",
+        "reviewed_artwork_pixel_sha256": "d44aefd4df39146adfc916d26d1b553ff60832ae23ef861a988c8acdc3553742",
+        "reviewed_artwork_sha256": "82802a5386ac83cb2fddab706e9b725bf27aea0877677e62d137a124acc8f201",
+        "reviewed_at": "2026-10-16T19:06:02.663935+00:00",
+        "source_cutout_pixel_sha256": [
+          "74d958bd46f9b6a472286dd53c1daf9bab39856f498b9b061829cba5691425d3",
+          "e1100eee7248e696797b553f2151ad8e62c0eb83df473d0d9151cceb2e61c76c",
+          "6662c2d9cc9998ff0bb60c7d551bf5ed27beca009d828377692035d7ec370a90"
+        ],
+        "source_cutout_sha256": [
+          "c1b2a39cd44c5aa183feb06db190fc987d86f5f8af7b342c1e82778f3193f580",
+          "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+          "f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30"
+        ],
+        "source_subject_ids": [
+          6,
+          25,
+          249
+        ],
+        "stage": "raw_and_text_free_print_artwork"
+      }
+    }
+  },
+  "schema_version": 2,
+  "scope": "30CClassic",
+  "section_id": null,
+  "source_scope": "30CClassic",
+  "storage": {
+    "derivatives": "regenerated_in_ignored_workspace",
+    "durable_outputs": [
+      "artwork"
+    ],
+    "reproducible_sources": "downloaded_to_ignored_workspace",
+    "schema_version": 1
+  }
+}

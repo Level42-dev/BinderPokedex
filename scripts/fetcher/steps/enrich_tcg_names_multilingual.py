@@ -35,6 +35,34 @@ CURATED_LOGO_SOURCES_PATH = (
     / 'enrichments'
     / 'tcg_set_logo_sources.json'
 )
+CURATED_SET_NAME_OVERRIDES_PATH = (
+    Path(__file__).resolve().parents[3]
+    / 'enrichments'
+    / 'tcg_set_name_overrides.json'
+)
+
+
+def load_curated_set_name_overrides(
+    path: Path = CURATED_SET_NAME_OVERRIDES_PATH,
+) -> Dict[str, Dict[str, str]]:
+    """Load source-backed corrections to upstream localized set titles."""
+    payload = json.loads(path.read_text(encoding='utf-8'))
+    if payload.get('schema_version') != 1:
+        raise ValueError(f"Unsupported set-name override schema: {path}")
+    sets = payload.get('sets')
+    if not isinstance(sets, dict):
+        raise ValueError(f"Set-name overrides must contain a sets mapping: {path}")
+    for set_id, names in sets.items():
+        if not isinstance(set_id, str) or set_id != set_id.casefold():
+            raise ValueError(f"Set-name override key must be lowercase: {set_id!r}")
+        if not isinstance(names, dict) or not all(
+            isinstance(language, str)
+            and isinstance(name, str)
+            and name.strip()
+            for language, name in names.items()
+        ):
+            raise ValueError(f"Invalid set-name override: {set_id}")
+    return sets
 
 
 def load_curated_logo_sources(
@@ -256,6 +284,11 @@ class EnrichTCGNamesMultilingualStep(BaseStep):
         for language, source in curated_sources.items():
             if language in available_languages:
                 logo_urls[language] = source
+
+        curated_names = load_curated_set_name_overrides().get(set_id.casefold(), {})
+        for language, name in curated_names.items():
+            if language in available_languages:
+                set_names[language] = name
         
         return names_by_card, set_names, logo_urls, available_languages
     
@@ -372,10 +405,12 @@ class EnrichTCGNamesMultilingualStep(BaseStep):
             # Return relative path
             return f"images/logos/{set_id}/default.png"
         
-        # Try promo logo for promo-style sets (svp, swsh, dp, etc.)
-        promo_logo = project_root / "images" / "logos" / "promo" / "default.png"
-        if promo_logo.exists():
-            return "images/logos/promo/default.png"
+        # The shared badge identifies promo collections only.  Ordinary sets
+        # without an upstream logo must not silently receive a promo title.
+        if set_id.casefold() in {'svp', 'mep'}:
+            promo_logo = project_root / "images" / "logos" / "promo" / "default.png"
+            if promo_logo.exists():
+                return "images/logos/promo/default.png"
         
         return ""
     

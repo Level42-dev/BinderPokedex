@@ -1114,6 +1114,8 @@ def test_every_release_enabled_poster_passes_production_validation():
     assert {
         bundle.asset_key for bundle in bundles
         } == {
+            "30C",  # Anniversary main set, agent-reviewed candidate C.
+            "30CClassic",  # Separate Classic Collection, agent-reviewed candidate B.
             "Base1",  # Historical B master; original German logo explicitly accepted.
             "Base2",
         "ExGen2/sections/mega",

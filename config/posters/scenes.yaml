@@ -4,6 +4,45 @@ version: 1
 # layout-safe, no-text, no-path, and no-landing-pad contract is generated
 # centrally by scripts/poster_assets/poster_config.py.
 scopes:
+  30C:
+    concept: the 30 Jahre anniversary expansion and its day-to-night celebration
+    setting: >-
+      The artwork contains one continuous celebratory meadow and distant
+      woodland beneath an open sky transitioning naturally from warm late
+      afternoon at the left to blue-violet early evening at the right.
+      Small golden light flecks and faint distant fireworks remain in the sky,
+      with no writing, emblems, frames, or extra creatures.
+    lighting: >-
+      Warm sunlight from the upper left blends into soft evening glow on the
+      right while all three figures share coherent contact shadows.
+    rendering: >-
+      Use polished modern trading-card illustration, clear cel-painted
+      linework, joyful but controlled color, and spacious atmospheric depth.
+    ground_noun: meadow grass
+    constraints:
+      - >-
+        Keep celebratory effects small and distant; do not divide the ground
+        plane into separate scenes or crowd the subject silhouettes.
+
+  30CClassic:
+    concept: the 30 Jahre Klassische Sammlung and three decades of card memories
+    setting: >-
+      The artwork contains a timeless storybook meadow with layered old-growth
+      woodland, a calm lake, distant pale mountains, and gentle golden
+      sparkles confined to the far air. The landscape feels nostalgic without
+      recreating any historical card illustration or adding extra creatures.
+    lighting: >-
+      Soft golden morning light enters from the upper left and grounds every
+      figure on one continuous meadow.
+    rendering: >-
+      Use refined hand-painted cel illustration, restrained warm greens and
+      blues, crisp character contours, and graceful atmospheric depth.
+    ground_noun: meadow grass
+    constraints:
+      - >-
+        Keep the central sky open for a later localized title and maintain
+        clear space around all three source-accurate Pokémon.
+
   Base1:
     concept: a nostalgic 1999 Base Set collection
     setting: >-

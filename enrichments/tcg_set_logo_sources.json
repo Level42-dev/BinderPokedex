@@ -1,6 +1,20 @@
 {
   "schema_version": 1,
   "sets": {
+    "30th": {
+      "de": "https://assets.tcgdex.net/de/me/30th/logo.png",
+      "en": "https://assets.tcgdex.net/en/me/30th/logo.png",
+      "fr": "https://assets.tcgdex.net/fr/me/30th/logo.png",
+      "es": "https://assets.tcgdex.net/es/me/30th/logo.png",
+      "it": "https://assets.tcgdex.net/it/me/30th/logo.png"
+    },
+    "30th-c": {
+      "de": "https://assets.tcgdex.net/de/me/30th/logo.png",
+      "en": "https://assets.tcgdex.net/en/me/30th/logo.png",
+      "fr": "https://assets.tcgdex.net/fr/me/30th/logo.png",
+      "es": "https://assets.tcgdex.net/es/me/30th/logo.png",
+      "it": "https://assets.tcgdex.net/it/me/30th/logo.png"
+    },
     "sv10.5b": {
       "de": "https://www.pokemon.com/static-assets/content-assets/cms2-de-de/img/trading-card-game/series/sv_series/sv10pt5/blk/sv10pt5_logo_169_de.png"
     },

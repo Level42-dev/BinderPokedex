@@ -1,5 +1,16 @@
 # Poster Artwork Feature Status
 
+Current v10.0 anniversary extension, 2026-10-16: `30C` and `30CClassic`
+each have a distinct, source-compared and agent-reviewed one-shot panorama.
+The first attempts with a duplicated Feelinara or an edge-close Lugia tail
+were rejected; only accepted candidates C and B were promoted. Both new
+poster routes are PDF-enabled, independently validate at 2368×3268 px and
+effective 300 dpi, and bring the configured/current panorama count to
+**44 of 44**. Their review and provenance boundaries are recorded in the
+[30 Jahre adoption record](reviews/2026-10-16-30-years-panorama-adoption.md).
+The 42 prior routes and their separate human/agent approvals remain unchanged.
+The full v10 PDF/ZIP rebuild and publication are separate gates.
+
 Current SV07 update, 2026-10-16: the operator accepted the exact shadow
 one-shot A after the earlier cautious agent rejection. The shown screenshot
 matches A, not B. Its unchanged 300-dpi text-free master

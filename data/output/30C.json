@@ -1,0 +1,4148 @@
+{
+  "type": "tcg_set",
+  "name": "30th Celebration",
+  "available_languages": [
+    "de",
+    "en",
+    "fr",
+    "es",
+    "it"
+  ],
+  "serie": "me",
+  "serie_name": "Mega Evolution",
+  "set_id": "30C",
+  "release_date": "2026-09-16",
+  "logo_urls": {
+    "de": "https://assets.tcgdex.net/de/me/30th/logo.png",
+    "en": "https://assets.tcgdex.net/en/me/30th/logo.png",
+    "fr": "https://assets.tcgdex.net/fr/me/30th/logo.png",
+    "es": "https://assets.tcgdex.net/es/me/30th/logo.png",
+    "it": "https://assets.tcgdex.net/it/me/30th/logo.png"
+  },
+  "sections": {
+    "all": {
+      "title": {
+        "de": "30 Jahre",
+        "en": "30th Celebration",
+        "fr": "30ᵉ Anniversaire",
+        "es": "Celebración 30.º Aniversario",
+        "it": "30° Anniversario"
+      },
+      "description": {
+        "de": "30 Jahre - Veröffentlichung: 2026-09-16",
+        "en": "30th Celebration - Release: 2026-09-16",
+        "fr": "30ᵉ Anniversaire - Sortie: 2026-09-16",
+        "es": "Celebración 30.º Aniversario - Lanzamiento: 2026-09-16",
+        "it": "30° Anniversario - Uscita: 2026-09-16"
+      },
+      "subtitle": {
+        "de": "[image]https://assets.tcgdex.net/de/me/30th/logo.png[/image]",
+        "en": "[image]https://assets.tcgdex.net/en/me/30th/logo.png[/image]",
+        "fr": "[image]https://assets.tcgdex.net/fr/me/30th/logo.png[/image]",
+        "es": "[image]https://assets.tcgdex.net/es/me/30th/logo.png[/image]",
+        "it": "[image]https://assets.tcgdex.net/it/me/30th/logo.png[/image]"
+      },
+      "cards": [
+        {
+          "id": "30th-001",
+          "localId": "001",
+          "printed_number": "001",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Owei",
+            "en": "Exeggcute",
+            "fr": "Noeunoeuf",
+            "es": "Exeggcute",
+            "it": "Exeggcute"
+          },
+          "type": "pokemon",
+          "pokemon_id": 102,
+          "types": [
+            "Grass"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/102.png"
+        },
+        {
+          "id": "30th-002",
+          "localId": "002",
+          "printed_number": "002",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Alola-Kokowei",
+            "en": "Alolan Exeggutor",
+            "fr": "Noadkoko d'Alola",
+            "es": "Exeggutor de Alola",
+            "it": "Exeggutor di Alola"
+          },
+          "type": "pokemon",
+          "pokemon_id": 103,
+          "types": [
+            "Grass"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10114.png"
+        },
+        {
+          "id": "30th-003",
+          "localId": "003",
+          "printed_number": "003",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Volbeat",
+            "en": "Volbeat",
+            "fr": "Muciole",
+            "es": "Volbeat",
+            "it": "Volbeat"
+          },
+          "type": "pokemon",
+          "pokemon_id": 313,
+          "types": [
+            "Grass"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/313.png"
+        },
+        {
+          "id": "30th-004",
+          "localId": "004",
+          "printed_number": "004",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Illumise",
+            "en": "Illumise",
+            "fr": "Lumivole",
+            "es": "Illumise",
+            "it": "Illumise"
+          },
+          "type": "pokemon",
+          "pokemon_id": 314,
+          "types": [
+            "Grass"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/314.png"
+        },
+        {
+          "id": "30th-005",
+          "localId": "005",
+          "printed_number": "005",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Tropius",
+            "en": "Tropius",
+            "fr": "Tropius",
+            "es": "Tropius",
+            "it": "Tropius"
+          },
+          "type": "pokemon",
+          "pokemon_id": 357,
+          "types": [
+            "Grass"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/357.png"
+        },
+        {
+          "id": "30th-006",
+          "localId": "006",
+          "printed_number": "006",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Kikugi",
+            "en": "Cherubi",
+            "fr": "Ceribou",
+            "es": "Cherubi",
+            "it": "Cherubi"
+          },
+          "type": "pokemon",
+          "pokemon_id": 420,
+          "types": [
+            "Grass"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/420.png"
+        },
+        {
+          "id": "30th-007",
+          "localId": "007",
+          "printed_number": "007",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Kinoso",
+            "en": "Cherrim",
+            "fr": "Ceriflor",
+            "es": "Cherrim",
+            "it": "Cherrim"
+          },
+          "type": "pokemon",
+          "pokemon_id": 421,
+          "types": [
+            "Grass"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/421.png"
+        },
+        {
+          "id": "30th-008",
+          "localId": "008",
+          "printed_number": "008",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Vivillon",
+            "en": "Vivillon",
+            "fr": "Prismillon",
+            "es": "Vivillon",
+            "it": "Vivillon"
+          },
+          "type": "pokemon",
+          "pokemon_id": 666,
+          "types": [
+            "Grass"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/666.png"
+        },
+        {
+          "id": "30th-009",
+          "localId": "009",
+          "printed_number": "009",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Vulpix",
+            "en": "Vulpix",
+            "fr": "Goupix",
+            "es": "Vulpix",
+            "it": "Vulpix"
+          },
+          "type": "pokemon",
+          "pokemon_id": 37,
+          "types": [
+            "Fire"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/37.png"
+        },
+        {
+          "id": "30th-010",
+          "localId": "010",
+          "printed_number": "010",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Vulnona",
+            "en": "Ninetales",
+            "fr": "Feunard",
+            "es": "Ninetales",
+            "it": "Ninetales"
+          },
+          "type": "pokemon",
+          "pokemon_id": 38,
+          "types": [
+            "Fire"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/38.png"
+        },
+        {
+          "id": "30th-011",
+          "localId": "011",
+          "printed_number": "011",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Lavados",
+            "en": "Moltres",
+            "fr": "Sulfura",
+            "es": "Moltres",
+            "it": "Moltres"
+          },
+          "type": "pokemon",
+          "pokemon_id": 146,
+          "types": [
+            "Fire"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/146.png"
+        },
+        {
+          "id": "30th-012",
+          "localId": "012",
+          "printed_number": "012",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Ho-Oh",
+            "en": "Ho-Oh",
+            "fr": "Ho-Oh",
+            "es": "Ho-Oh",
+            "it": "Ho-Oh"
+          },
+          "type": "pokemon",
+          "pokemon_id": 250,
+          "types": [
+            "Fire"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/250.png"
+        },
+        {
+          "id": "30th-013",
+          "localId": "013",
+          "printed_number": "013",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Victini",
+            "en": "Victini",
+            "fr": "Victini",
+            "es": "Victini",
+            "it": "Victini"
+          },
+          "type": "pokemon",
+          "pokemon_id": 494,
+          "types": [
+            "Fire"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/494.png"
+        },
+        {
+          "id": "30th-014",
+          "localId": "014",
+          "printed_number": "014",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Reshiram",
+            "en": "Reshiram",
+            "fr": "Reshiram",
+            "es": "Reshiram",
+            "it": "Reshiram"
+          },
+          "type": "pokemon",
+          "pokemon_id": 643,
+          "types": [
+            "Fire"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/643.png"
+        },
+        {
+          "id": "30th-015",
+          "localId": "015",
+          "printed_number": "015",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Krokel",
+            "en": "Fuecoco",
+            "fr": "Chochodile",
+            "es": "Fuecoco",
+            "it": "Fuecoco"
+          },
+          "type": "pokemon",
+          "pokemon_id": 909,
+          "types": [
+            "Fire"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/909.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-016",
+          "localId": "016",
+          "printed_number": "016",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Flegmon",
+            "en": "Slowpoke",
+            "fr": "Ramoloss",
+            "es": "Slowpoke",
+            "it": "Slowpoke"
+          },
+          "type": "pokemon",
+          "pokemon_id": 79,
+          "types": [
+            "Water"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/79.png"
+        },
+        {
+          "id": "30th-017",
+          "localId": "017",
+          "printed_number": "017",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Lapras",
+            "en": "Lapras",
+            "fr": "Lokhlass",
+            "es": "Lapras",
+            "it": "Lapras"
+          },
+          "type": "pokemon",
+          "pokemon_id": 131,
+          "types": [
+            "Water"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/131.png"
+        },
+        {
+          "id": "30th-018",
+          "localId": "018",
+          "printed_number": "018",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Arktos",
+            "en": "Articuno",
+            "fr": "Artikodin",
+            "es": "Articuno",
+            "it": "Articuno"
+          },
+          "type": "pokemon",
+          "pokemon_id": 144,
+          "types": [
+            "Water"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/144.png"
+        },
+        {
+          "id": "30th-019",
+          "localId": "019",
+          "printed_number": "019",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Kyogre",
+            "en": "Kyogre",
+            "fr": "Kyogre",
+            "es": "Kyogre",
+            "it": "Kyogre"
+          },
+          "type": "pokemon",
+          "pokemon_id": 382,
+          "types": [
+            "Water"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/382.png"
+        },
+        {
+          "id": "30th-020",
+          "localId": "020",
+          "printed_number": "020",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Palkia",
+            "en": "Palkia",
+            "fr": "Palkia",
+            "es": "Palkia",
+            "it": "Palkia"
+          },
+          "type": "pokemon",
+          "pokemon_id": 484,
+          "types": [
+            "Water"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/484.png"
+        },
+        {
+          "id": "30th-021",
+          "localId": "021",
+          "printed_number": "021",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Quajutsu",
+            "en": "Greninja",
+            "fr": "Amphinobi",
+            "es": "Greninja",
+            "it": "Greninja"
+          },
+          "type": "pokemon",
+          "pokemon_id": 658,
+          "types": [
+            "Water"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/658.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-022",
+          "localId": "022",
+          "printed_number": "022",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Lusardin",
+            "en": "Wishiwashi",
+            "fr": "Froussardine",
+            "es": "Wishiwashi",
+            "it": "Wishiwashi"
+          },
+          "type": "pokemon",
+          "pokemon_id": 746,
+          "types": [
+            "Water"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/746.png"
+        },
+        {
+          "id": "30th-023",
+          "localId": "023",
+          "printed_number": "023",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-024",
+          "localId": "024",
+          "printed_number": "024",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-025",
+          "localId": "025",
+          "printed_number": "025",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-026",
+          "localId": "026",
+          "printed_number": "026",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-027",
+          "localId": "027",
+          "printed_number": "027",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-028",
+          "localId": "028",
+          "printed_number": "028",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-029",
+          "localId": "029",
+          "printed_number": "029",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-030",
+          "localId": "030",
+          "printed_number": "030",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-031",
+          "localId": "031",
+          "printed_number": "031",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-032",
+          "localId": "032",
+          "printed_number": "032",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-033",
+          "localId": "033",
+          "printed_number": "033",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-034",
+          "localId": "034",
+          "printed_number": "034",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-035",
+          "localId": "035",
+          "printed_number": "035",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-036",
+          "localId": "036",
+          "printed_number": "036",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-037",
+          "localId": "037",
+          "printed_number": "037",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-038",
+          "localId": "038",
+          "printed_number": "038",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-039",
+          "localId": "039",
+          "printed_number": "039",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-040",
+          "localId": "040",
+          "printed_number": "040",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-041",
+          "localId": "041",
+          "printed_number": "041",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-042",
+          "localId": "042",
+          "printed_number": "042",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-043",
+          "localId": "043",
+          "printed_number": "043",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-044",
+          "localId": "044",
+          "printed_number": "044",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-045",
+          "localId": "045",
+          "printed_number": "045",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-046",
+          "localId": "046",
+          "printed_number": "046",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-047",
+          "localId": "047",
+          "printed_number": "047",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-048",
+          "localId": "048",
+          "printed_number": "048",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-049",
+          "localId": "049",
+          "printed_number": "049",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-050",
+          "localId": "050",
+          "printed_number": "050",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-051",
+          "localId": "051",
+          "printed_number": "051",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-052",
+          "localId": "052",
+          "printed_number": "052",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "30th-053",
+          "localId": "053",
+          "printed_number": "053",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-054",
+          "localId": "054",
+          "printed_number": "054",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-055",
+          "localId": "055",
+          "printed_number": "055",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Zapdos",
+            "en": "Zapdos",
+            "fr": "Électhor",
+            "es": "Zapdos",
+            "it": "Zapdos"
+          },
+          "type": "pokemon",
+          "pokemon_id": 145,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/145.png"
+        },
+        {
+          "id": "30th-056",
+          "localId": "056",
+          "printed_number": "056",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Zekrom",
+            "en": "Zekrom",
+            "fr": "Zekrom",
+            "es": "Zekrom",
+            "it": "Zekrom"
+          },
+          "type": "pokemon",
+          "pokemon_id": 644,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/644.png"
+        },
+        {
+          "id": "30th-057",
+          "localId": "057",
+          "printed_number": "057",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Zeraora",
+            "en": "Zeraora",
+            "fr": "Zeraora",
+            "es": "Zeraora",
+            "it": "Zeraora"
+          },
+          "type": "pokemon",
+          "pokemon_id": 807,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/807.png"
+        },
+        {
+          "id": "30th-058",
+          "localId": "058",
+          "printed_number": "058",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Toxel",
+            "en": "Toxel",
+            "fr": "Toxizap",
+            "es": "Toxel",
+            "it": "Toxel"
+          },
+          "type": "pokemon",
+          "pokemon_id": 848,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/848.png"
+        },
+        {
+          "id": "30th-059",
+          "localId": "059",
+          "printed_number": "059",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Riffex",
+            "en": "Toxtricity",
+            "fr": "Salarsen",
+            "es": "Toxtricity",
+            "it": "Toxtricity"
+          },
+          "type": "pokemon",
+          "pokemon_id": 849,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/849.png"
+        },
+        {
+          "id": "30th-060",
+          "localId": "060",
+          "printed_number": "060",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Riffex",
+            "en": "Toxtricity",
+            "fr": "Salarsen",
+            "es": "Toxtricity",
+            "it": "Toxtricity"
+          },
+          "type": "pokemon",
+          "pokemon_id": 849,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/849.png"
+        },
+        {
+          "id": "30th-061",
+          "localId": "061",
+          "printed_number": "061",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Morpeko",
+            "en": "Morpeko",
+            "fr": "Morpeko",
+            "es": "Morpeko",
+            "it": "Morpeko"
+          },
+          "type": "pokemon",
+          "pokemon_id": 877,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/877.png"
+        },
+        {
+          "id": "30th-062",
+          "localId": "062",
+          "printed_number": "062",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Miraidon",
+            "en": "Miraidon",
+            "fr": "Miraidon",
+            "es": "Miraidon",
+            "it": "Miraidon"
+          },
+          "type": "pokemon",
+          "pokemon_id": 1008,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1008.png"
+        },
+        {
+          "id": "30th-063",
+          "localId": "063",
+          "printed_number": "063",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Mewtu",
+            "en": "Mewtwo",
+            "fr": "Mewtwo",
+            "es": "Mewtwo",
+            "it": "Mewtwo"
+          },
+          "type": "pokemon",
+          "pokemon_id": 150,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png"
+        },
+        {
+          "id": "30th-064",
+          "localId": "064",
+          "printed_number": "064",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Mewtu",
+            "en": "Mewtwo",
+            "fr": "Mewtwo",
+            "es": "Mewtwo",
+            "it": "Mewtwo"
+          },
+          "type": "pokemon",
+          "pokemon_id": 150,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-065",
+          "localId": "065",
+          "printed_number": "065",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Mew",
+            "en": "Mew",
+            "fr": "Mew",
+            "es": "Mew",
+            "it": "Mew"
+          },
+          "type": "pokemon",
+          "pokemon_id": 151,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png"
+        },
+        {
+          "id": "30th-066",
+          "localId": "066",
+          "printed_number": "066",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Mew",
+            "en": "Mew",
+            "fr": "Mew",
+            "es": "Mew",
+            "it": "Mew"
+          },
+          "type": "pokemon",
+          "pokemon_id": 151,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-067",
+          "localId": "067",
+          "printed_number": "067",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Marill",
+            "en": "Marill",
+            "fr": "Marill",
+            "es": "Marill",
+            "it": "Marill"
+          },
+          "type": "pokemon",
+          "pokemon_id": 183,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/183.png"
+        },
+        {
+          "id": "30th-068",
+          "localId": "068",
+          "printed_number": "068",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Azumarill",
+            "en": "Azumarill",
+            "fr": "Azumarill",
+            "es": "Azumarill",
+            "it": "Azumarill"
+          },
+          "type": "pokemon",
+          "pokemon_id": 184,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/184.png"
+        },
+        {
+          "id": "30th-069",
+          "localId": "069",
+          "printed_number": "069",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Psiana",
+            "en": "Espeon",
+            "fr": "Mentali",
+            "es": "Espeon",
+            "it": "Espeon"
+          },
+          "type": "pokemon",
+          "pokemon_id": 196,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/196.png"
+        },
+        {
+          "id": "30th-070",
+          "localId": "070",
+          "printed_number": "070",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Psiana",
+            "en": "Espeon",
+            "fr": "Mentali",
+            "es": "Espeon",
+            "it": "Espeon"
+          },
+          "type": "pokemon",
+          "pokemon_id": 196,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/196.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-071",
+          "localId": "071",
+          "printed_number": "071",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Feelinara",
+            "en": "Sylveon",
+            "fr": "Nymphali",
+            "es": "Sylveon",
+            "it": "Sylveon"
+          },
+          "type": "pokemon",
+          "pokemon_id": 700,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/700.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-072",
+          "localId": "072",
+          "printed_number": "072",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Icognito",
+            "en": "Unown",
+            "fr": "Zarbi",
+            "es": "Unown",
+            "it": "Unown"
+          },
+          "type": "pokemon",
+          "pokemon_id": 201,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/201.png"
+        },
+        {
+          "id": "30th-073",
+          "localId": "073",
+          "printed_number": "073",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Driftlon",
+            "en": "Drifloon",
+            "fr": "Baudrive",
+            "es": "Drifloon",
+            "it": "Drifloon"
+          },
+          "type": "pokemon",
+          "pokemon_id": 425,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/425.png"
+        },
+        {
+          "id": "30th-074",
+          "localId": "074",
+          "printed_number": "074",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Cresselia",
+            "en": "Cresselia",
+            "fr": "Cresselia",
+            "es": "Cresselia",
+            "it": "Cresselia"
+          },
+          "type": "pokemon",
+          "pokemon_id": 488,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/488.png"
+        },
+        {
+          "id": "30th-075",
+          "localId": "075",
+          "printed_number": "075",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Skelabra",
+            "en": "Chandelure",
+            "fr": "Lugulabre",
+            "es": "Chandelure",
+            "it": "Chandelure"
+          },
+          "type": "pokemon",
+          "pokemon_id": 609,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/609.png"
+        },
+        {
+          "id": "30th-076",
+          "localId": "076",
+          "printed_number": "076",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Xerneas",
+            "en": "Xerneas",
+            "fr": "Xerneas",
+            "es": "Xerneas",
+            "it": "Xerneas"
+          },
+          "type": "pokemon",
+          "pokemon_id": 716,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/716.png"
+        },
+        {
+          "id": "30th-077",
+          "localId": "077",
+          "printed_number": "077",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Curelei",
+            "en": "Comfey",
+            "fr": "Guérilande",
+            "es": "Comfey",
+            "it": "Comfey"
+          },
+          "type": "pokemon",
+          "pokemon_id": 764,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/764.png"
+        },
+        {
+          "id": "30th-078",
+          "localId": "078",
+          "printed_number": "078",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Cosmog",
+            "en": "Cosmog",
+            "fr": "Cosmog",
+            "es": "Cosmog",
+            "it": "Cosmog"
+          },
+          "type": "pokemon",
+          "pokemon_id": 789,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/789.png"
+        },
+        {
+          "id": "30th-079",
+          "localId": "079",
+          "printed_number": "079",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Cosmovum",
+            "en": "Cosmoem",
+            "fr": "Cosmovum",
+            "es": "Cosmoem",
+            "it": "Cosmoem"
+          },
+          "type": "pokemon",
+          "pokemon_id": 790,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/790.png"
+        },
+        {
+          "id": "30th-080",
+          "localId": "080",
+          "printed_number": "080",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Lunala",
+            "en": "Lunala",
+            "fr": "Lunala",
+            "es": "Lunala",
+            "it": "Lunala"
+          },
+          "type": "pokemon",
+          "pokemon_id": 792,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/792.png"
+        },
+        {
+          "id": "30th-081",
+          "localId": "081",
+          "printed_number": "081",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Gierspenst",
+            "en": "Gimmighoul",
+            "fr": "Mordudor",
+            "es": "Gimmighoul",
+            "it": "Gimmighoul"
+          },
+          "type": "pokemon",
+          "pokemon_id": 999,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/999.png"
+        },
+        {
+          "id": "30th-082",
+          "localId": "082",
+          "printed_number": "082",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Groudon",
+            "en": "Groudon",
+            "fr": "Groudon",
+            "es": "Groudon",
+            "it": "Groudon"
+          },
+          "type": "pokemon",
+          "pokemon_id": 383,
+          "types": [
+            "Fighting"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/383.png"
+        },
+        {
+          "id": "30th-083",
+          "localId": "083",
+          "printed_number": "083",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Lucario",
+            "en": "Lucario",
+            "fr": "Lucario",
+            "es": "Lucario",
+            "it": "Lucario"
+          },
+          "type": "pokemon",
+          "pokemon_id": 448,
+          "types": [
+            "Fighting"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png"
+        },
+        {
+          "id": "30th-084",
+          "localId": "084",
+          "printed_number": "084",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Branawarz",
+            "en": "Seismitoad",
+            "fr": "Crapustule",
+            "es": "Seismitoad",
+            "it": "Seismitoad"
+          },
+          "type": "pokemon",
+          "pokemon_id": 537,
+          "types": [
+            "Fighting"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/537.png"
+        },
+        {
+          "id": "30th-085",
+          "localId": "085",
+          "printed_number": "085",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Wolwerock",
+            "en": "Lycanroc",
+            "fr": "Lougaroc",
+            "es": "Lycanroc",
+            "it": "Lycanroc"
+          },
+          "type": "pokemon",
+          "pokemon_id": 745,
+          "types": [
+            "Fighting"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/745.png"
+        },
+        {
+          "id": "30th-086",
+          "localId": "086",
+          "printed_number": "086",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Koraidon",
+            "en": "Koraidon",
+            "fr": "Koraidon",
+            "es": "Koraidon",
+            "it": "Koraidon"
+          },
+          "type": "pokemon",
+          "pokemon_id": 1007,
+          "types": [
+            "Fighting"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1007.png"
+        },
+        {
+          "id": "30th-087",
+          "localId": "087",
+          "printed_number": "087",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Nidoran♀",
+            "en": "Nidoran♀",
+            "fr": "Nidoran♀",
+            "es": "Nidoran♀",
+            "it": "Nidoran♀"
+          },
+          "type": "pokemon",
+          "pokemon_id": 29,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/29.png"
+        },
+        {
+          "id": "30th-088",
+          "localId": "088",
+          "printed_number": "088",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Nidorina",
+            "en": "Nidorina",
+            "fr": "Nidorina",
+            "es": "Nidorina",
+            "it": "Nidorina"
+          },
+          "type": "pokemon",
+          "pokemon_id": 30,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/30.png"
+        },
+        {
+          "id": "30th-089",
+          "localId": "089",
+          "printed_number": "089",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Alola-Mauzi",
+            "en": "Alolan Meowth",
+            "fr": "Miaouss d'Alola",
+            "es": "Meowth de Alola",
+            "it": "Meowth di Alola"
+          },
+          "type": "pokemon",
+          "pokemon_id": 52,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/52.png"
+        },
+        {
+          "id": "30th-090",
+          "localId": "090",
+          "printed_number": "090",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Gengar",
+            "en": "Gengar",
+            "fr": "Ectoplasma",
+            "es": "Gengar",
+            "it": "Gengar"
+          },
+          "type": "pokemon",
+          "pokemon_id": 94,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-091",
+          "localId": "091",
+          "printed_number": "091",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Nachtara",
+            "en": "Umbreon",
+            "fr": "Noctali",
+            "es": "Umbreon",
+            "it": "Umbreon"
+          },
+          "type": "pokemon",
+          "pokemon_id": 197,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/197.png"
+        },
+        {
+          "id": "30th-092",
+          "localId": "092",
+          "printed_number": "092",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Nachtara",
+            "en": "Umbreon",
+            "fr": "Noctali",
+            "es": "Umbreon",
+            "it": "Umbreon"
+          },
+          "type": "pokemon",
+          "pokemon_id": 197,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/197.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-093",
+          "localId": "093",
+          "printed_number": "093",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Kramurx",
+            "en": "Murkrow",
+            "fr": "Cornèbre",
+            "es": "Murkrow",
+            "it": "Murkrow"
+          },
+          "type": "pokemon",
+          "pokemon_id": 198,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/198.png"
+        },
+        {
+          "id": "30th-094",
+          "localId": "094",
+          "printed_number": "094",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Zurrokex",
+            "en": "Scraggy",
+            "fr": "Baggiguane",
+            "es": "Scraggy",
+            "it": "Scraggy"
+          },
+          "type": "pokemon",
+          "pokemon_id": 559,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/559.png"
+        },
+        {
+          "id": "30th-095",
+          "localId": "095",
+          "printed_number": "095",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Zorua",
+            "en": "Zorua",
+            "fr": "Zorua",
+            "es": "Zorua",
+            "it": "Zorua"
+          },
+          "type": "pokemon",
+          "pokemon_id": 570,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/570.png"
+        },
+        {
+          "id": "30th-096",
+          "localId": "096",
+          "printed_number": "096",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Zoroark",
+            "en": "Zoroark",
+            "fr": "Zoroark",
+            "es": "Zoroark",
+            "it": "Zoroark"
+          },
+          "type": "pokemon",
+          "pokemon_id": 571,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/571.png"
+        },
+        {
+          "id": "30th-097",
+          "localId": "097",
+          "printed_number": "097",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Kapuno",
+            "en": "Deino",
+            "fr": "Solochi",
+            "es": "Deino",
+            "it": "Deino"
+          },
+          "type": "pokemon",
+          "pokemon_id": 633,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/633.png"
+        },
+        {
+          "id": "30th-098",
+          "localId": "098",
+          "printed_number": "098",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Duodino",
+            "en": "Zweilous",
+            "fr": "Diamat",
+            "es": "Zweilous",
+            "it": "Zweilous"
+          },
+          "type": "pokemon",
+          "pokemon_id": 634,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/634.png"
+        },
+        {
+          "id": "30th-099",
+          "localId": "099",
+          "printed_number": "099",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Trikephalo",
+            "en": "Hydreigon",
+            "fr": "Trioxhydre",
+            "es": "Hydreigon",
+            "it": "Hydreigon"
+          },
+          "type": "pokemon",
+          "pokemon_id": 635,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/635.png"
+        },
+        {
+          "id": "30th-100",
+          "localId": "100",
+          "printed_number": "100",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Yveltal",
+            "en": "Yveltal",
+            "fr": "Yveltal",
+            "es": "Yveltal",
+            "it": "Yveltal"
+          },
+          "type": "pokemon",
+          "pokemon_id": 717,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/717.png"
+        },
+        {
+          "id": "30th-101",
+          "localId": "101",
+          "printed_number": "101",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Galar-Mauzi",
+            "en": "Galarian Meowth",
+            "fr": "Miaouss de Galar",
+            "es": "Meowth de Galar",
+            "it": "Meowth di Galar"
+          },
+          "type": "pokemon",
+          "pokemon_id": 52,
+          "types": [
+            "Metal"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/52.png"
+        },
+        {
+          "id": "30th-102",
+          "localId": "102",
+          "printed_number": "102",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Jirachi",
+            "en": "Jirachi",
+            "fr": "Jirachi",
+            "es": "Jirachi",
+            "it": "Jirachi"
+          },
+          "type": "pokemon",
+          "pokemon_id": 385,
+          "types": [
+            "Metal"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/385.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-103",
+          "localId": "103",
+          "printed_number": "103",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Dialga",
+            "en": "Dialga",
+            "fr": "Dialga",
+            "es": "Dialga",
+            "it": "Dialga"
+          },
+          "type": "pokemon",
+          "pokemon_id": 483,
+          "types": [
+            "Metal"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/483.png"
+        },
+        {
+          "id": "30th-104",
+          "localId": "104",
+          "printed_number": "104",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Tentantel",
+            "en": "Ferrothorn",
+            "fr": "Noacier",
+            "es": "Ferrothorn",
+            "it": "Ferrothorn"
+          },
+          "type": "pokemon",
+          "pokemon_id": 598,
+          "types": [
+            "Metal"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/598.png"
+        },
+        {
+          "id": "30th-105",
+          "localId": "105",
+          "printed_number": "105",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Solgaleo",
+            "en": "Solgaleo",
+            "fr": "Solgaleo",
+            "es": "Solgaleo",
+            "it": "Solgaleo"
+          },
+          "type": "pokemon",
+          "pokemon_id": 791,
+          "types": [
+            "Metal"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/791.png"
+        },
+        {
+          "id": "30th-106",
+          "localId": "106",
+          "printed_number": "106",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Zacian",
+            "en": "Zacian",
+            "fr": "Zacian",
+            "es": "Zacian",
+            "it": "Zacian"
+          },
+          "type": "pokemon",
+          "pokemon_id": 888,
+          "types": [
+            "Metal"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/888.png"
+        },
+        {
+          "id": "30th-107",
+          "localId": "107",
+          "printed_number": "107",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Zamazenta",
+            "en": "Zamazenta",
+            "fr": "Zamazenta",
+            "es": "Zamazenta",
+            "it": "Zamazenta"
+          },
+          "type": "pokemon",
+          "pokemon_id": 889,
+          "types": [
+            "Metal"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/889.png"
+        },
+        {
+          "id": "30th-108",
+          "localId": "108",
+          "printed_number": "108",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Monetigo",
+            "en": "Gholdengo",
+            "fr": "Gromago",
+            "es": "Gholdengo",
+            "it": "Gholdengo"
+          },
+          "type": "pokemon",
+          "pokemon_id": 1000,
+          "types": [
+            "Metal"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1000.png"
+        },
+        {
+          "id": "30th-109",
+          "localId": "109",
+          "printed_number": "109",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Brutalanda",
+            "en": "Salamence",
+            "fr": "Drattak",
+            "es": "Salamence",
+            "it": "Salamence"
+          },
+          "type": "pokemon",
+          "pokemon_id": 373,
+          "types": [
+            "Dragon"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/373.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-110",
+          "localId": "110",
+          "printed_number": "110",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Miniras",
+            "en": "Jangmo-o",
+            "fr": "Bébécaille",
+            "es": "Jangmo-o",
+            "it": "Jangmo-o"
+          },
+          "type": "pokemon",
+          "pokemon_id": 782,
+          "types": [
+            "Dragon"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/782.png"
+        },
+        {
+          "id": "30th-111",
+          "localId": "111",
+          "printed_number": "111",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Mediras",
+            "en": "Hakamo-o",
+            "fr": "Écaïd",
+            "es": "Hakamo-o",
+            "it": "Hakamo-o"
+          },
+          "type": "pokemon",
+          "pokemon_id": 783,
+          "types": [
+            "Dragon"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/783.png"
+        },
+        {
+          "id": "30th-112",
+          "localId": "112",
+          "printed_number": "112",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Grandiras",
+            "en": "Kommo-o",
+            "fr": "Ékaïser",
+            "es": "Kommo-o",
+            "it": "Kommo-o"
+          },
+          "type": "pokemon",
+          "pokemon_id": 784,
+          "types": [
+            "Dragon"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/784.png"
+        },
+        {
+          "id": "30th-113",
+          "localId": "113",
+          "printed_number": "113",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Mauzi",
+            "en": "Meowth",
+            "fr": "Miaouss",
+            "es": "Meowth",
+            "it": "Meowth"
+          },
+          "type": "pokemon",
+          "pokemon_id": 52,
+          "types": [
+            "Colorless"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/52.png"
+        },
+        {
+          "id": "30th-114",
+          "localId": "114",
+          "printed_number": "114",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Kangama",
+            "en": "Kangaskhan",
+            "fr": "Kangourex",
+            "es": "Kangaskhan",
+            "it": "Kangaskhan"
+          },
+          "type": "pokemon",
+          "pokemon_id": 115,
+          "types": [
+            "Colorless"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/115.png"
+        },
+        {
+          "id": "30th-115",
+          "localId": "115",
+          "printed_number": "115",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Ditto",
+            "en": "Ditto",
+            "fr": "Métamorph",
+            "es": "Ditto",
+            "it": "Ditto"
+          },
+          "type": "pokemon",
+          "pokemon_id": 132,
+          "types": [
+            "Colorless"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png"
+        },
+        {
+          "id": "30th-116",
+          "localId": "116",
+          "printed_number": "116",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Evoli",
+            "en": "Eevee",
+            "fr": "Évoli",
+            "es": "Eevee",
+            "it": "Eevee"
+          },
+          "type": "pokemon",
+          "pokemon_id": 133,
+          "types": [
+            "Colorless"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png"
+        },
+        {
+          "id": "30th-117",
+          "localId": "117",
+          "printed_number": "117",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Evoli",
+            "en": "Eevee",
+            "fr": "Évoli",
+            "es": "Eevee",
+            "it": "Eevee"
+          },
+          "type": "pokemon",
+          "pokemon_id": 133,
+          "types": [
+            "Colorless"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png"
+        },
+        {
+          "id": "30th-118",
+          "localId": "118",
+          "printed_number": "118",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Evoli",
+            "en": "Eevee",
+            "fr": "Évoli",
+            "es": "Eevee",
+            "it": "Eevee"
+          },
+          "type": "pokemon",
+          "pokemon_id": 133,
+          "types": [
+            "Colorless"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png"
+        },
+        {
+          "id": "30th-119",
+          "localId": "119",
+          "printed_number": "119",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Relaxo",
+            "en": "Snorlax",
+            "fr": "Ronflex",
+            "es": "Snorlax",
+            "it": "Snorlax"
+          },
+          "type": "pokemon",
+          "pokemon_id": 143,
+          "types": [
+            "Colorless"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/143.png"
+        },
+        {
+          "id": "30th-120",
+          "localId": "120",
+          "printed_number": "120",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Fluffeluff",
+            "en": "Igglybuff",
+            "fr": "Toudoudou",
+            "es": "Igglybuff",
+            "it": "Igglybuff"
+          },
+          "type": "pokemon",
+          "pokemon_id": 174,
+          "types": [
+            "Colorless"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/174.png"
+        },
+        {
+          "id": "30th-121",
+          "localId": "121",
+          "printed_number": "121",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Lugia",
+            "en": "Lugia",
+            "fr": "Lugia",
+            "es": "Lugia",
+            "it": "Lugia"
+          },
+          "type": "pokemon",
+          "pokemon_id": 249,
+          "types": [
+            "Colorless"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/249.png"
+        },
+        {
+          "id": "30th-122",
+          "localId": "122",
+          "printed_number": "122",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Hisui-Zorua",
+            "en": "Hisuian Zorua",
+            "fr": "Zorua de Hisui",
+            "es": "Zorua de Hisui",
+            "it": "Zorua di Hisui"
+          },
+          "type": "pokemon",
+          "pokemon_id": 570,
+          "types": [
+            "Colorless"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/570.png"
+        },
+        {
+          "id": "30th-123",
+          "localId": "123",
+          "printed_number": "123",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Hisui-Zoroark",
+            "en": "Hisuian Zoroark",
+            "fr": "Zoroark de Hisui",
+            "es": "Zoroark de Hisui",
+            "it": "Zoroark di Hisui"
+          },
+          "type": "pokemon",
+          "pokemon_id": 571,
+          "types": [
+            "Colorless"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/571.png"
+        },
+        {
+          "id": "30th-124",
+          "localId": "124",
+          "printed_number": "124",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Meteno",
+            "en": "Minior",
+            "fr": "Météno",
+            "es": "Minior",
+            "it": "Minior"
+          },
+          "type": "pokemon",
+          "pokemon_id": 774,
+          "types": [
+            "Colorless"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/774.png"
+        },
+        {
+          "id": "30th-125",
+          "localId": "125",
+          "printed_number": "125",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Famieps",
+            "en": "Maushold",
+            "fr": "Famignol",
+            "es": "Maushold",
+            "it": "Maushold"
+          },
+          "type": "pokemon",
+          "pokemon_id": 925,
+          "types": [
+            "Colorless"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/925.png"
+        },
+        {
+          "id": "30th-126",
+          "localId": "126",
+          "printed_number": "126",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Poképad",
+            "en": "Poké Pad",
+            "fr": "Poké Registre",
+            "es": "Pokétableta",
+            "it": "Poké Pad"
+          },
+          "type": "trainer",
+          "trainer_type": "Item",
+          "types": [],
+          "pokemon_id": null,
+          "image_url": "images/special_cards/item.png"
+        },
+        {
+          "id": "30th-127",
+          "localId": "127",
+          "printed_number": "127",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Tausch",
+            "en": "Switch",
+            "fr": "Échange",
+            "es": "Cambio",
+            "it": "Scambio"
+          },
+          "type": "trainer",
+          "trainer_type": "Item",
+          "types": [],
+          "pokemon_id": null,
+          "image_url": "images/special_cards/item.png"
+        },
+        {
+          "id": "30th-128",
+          "localId": "128",
+          "printed_number": "128",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Hyperball",
+            "en": "Ultra Ball",
+            "fr": "Hyper Ball",
+            "es": "Ultra Ball",
+            "it": "Ultra Ball"
+          },
+          "type": "trainer",
+          "trainer_type": "Item",
+          "types": [],
+          "pokemon_id": null,
+          "image_url": "images/special_cards/item.png"
+        },
+        {
+          "id": "30th-129",
+          "localId": "129",
+          "printed_number": "129",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Alola-Kokowei",
+            "en": "Alolan Exeggutor",
+            "fr": "Noadkoko d'Alola",
+            "es": "Exeggutor de Alola",
+            "it": "Exeggutor di Alola"
+          },
+          "type": "pokemon",
+          "pokemon_id": 103,
+          "types": [
+            "Grass"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10114.png"
+        },
+        {
+          "id": "30th-130",
+          "localId": "130",
+          "printed_number": "130",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Lavados",
+            "en": "Moltres",
+            "fr": "Sulfura",
+            "es": "Moltres",
+            "it": "Moltres"
+          },
+          "type": "pokemon",
+          "pokemon_id": 146,
+          "types": [
+            "Fire"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/146.png"
+        },
+        {
+          "id": "30th-131",
+          "localId": "131",
+          "printed_number": "131",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Lapras",
+            "en": "Lapras",
+            "fr": "Lokhlass",
+            "es": "Lapras",
+            "it": "Lapras"
+          },
+          "type": "pokemon",
+          "pokemon_id": 131,
+          "types": [
+            "Water"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/131.png"
+        },
+        {
+          "id": "30th-132",
+          "localId": "132",
+          "printed_number": "132",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Arktos",
+            "en": "Articuno",
+            "fr": "Artikodin",
+            "es": "Articuno",
+            "it": "Articuno"
+          },
+          "type": "pokemon",
+          "pokemon_id": 144,
+          "types": [
+            "Water"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/144.png"
+        },
+        {
+          "id": "30th-133",
+          "localId": "133",
+          "printed_number": "133",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Zapdos",
+            "en": "Zapdos",
+            "fr": "Électhor",
+            "es": "Zapdos",
+            "it": "Zapdos"
+          },
+          "type": "pokemon",
+          "pokemon_id": 145,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/145.png"
+        },
+        {
+          "id": "30th-134",
+          "localId": "134",
+          "printed_number": "134",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Riffex",
+            "en": "Toxtricity",
+            "fr": "Salarsen",
+            "es": "Toxtricity",
+            "it": "Toxtricity"
+          },
+          "type": "pokemon",
+          "pokemon_id": 849,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/849.png"
+        },
+        {
+          "id": "30th-135",
+          "localId": "135",
+          "printed_number": "135",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Morpeko",
+            "en": "Morpeko",
+            "fr": "Morpeko",
+            "es": "Morpeko",
+            "it": "Morpeko"
+          },
+          "type": "pokemon",
+          "pokemon_id": 877,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/877.png"
+        },
+        {
+          "id": "30th-136",
+          "localId": "136",
+          "printed_number": "136",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Driftlon",
+            "en": "Drifloon",
+            "fr": "Baudrive",
+            "es": "Drifloon",
+            "it": "Drifloon"
+          },
+          "type": "pokemon",
+          "pokemon_id": 425,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/425.png"
+        },
+        {
+          "id": "30th-137",
+          "localId": "137",
+          "printed_number": "137",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Skelabra",
+            "en": "Chandelure",
+            "fr": "Lugulabre",
+            "es": "Chandelure",
+            "it": "Chandelure"
+          },
+          "type": "pokemon",
+          "pokemon_id": 609,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/609.png"
+        },
+        {
+          "id": "30th-138",
+          "localId": "138",
+          "printed_number": "138",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Wolwerock",
+            "en": "Lycanroc",
+            "fr": "Lougaroc",
+            "es": "Lycanroc",
+            "it": "Lycanroc"
+          },
+          "type": "pokemon",
+          "pokemon_id": 745,
+          "types": [
+            "Fighting"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/745.png"
+        },
+        {
+          "id": "30th-139",
+          "localId": "139",
+          "printed_number": "139",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Alola-Mauzi",
+            "en": "Alolan Meowth",
+            "fr": "Miaouss d'Alola",
+            "es": "Meowth de Alola",
+            "it": "Meowth di Alola"
+          },
+          "type": "pokemon",
+          "pokemon_id": 52,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/52.png"
+        },
+        {
+          "id": "30th-140",
+          "localId": "140",
+          "printed_number": "140",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Zurrokex",
+            "en": "Scraggy",
+            "fr": "Baggiguane",
+            "es": "Scraggy",
+            "it": "Scraggy"
+          },
+          "type": "pokemon",
+          "pokemon_id": 559,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/559.png"
+        },
+        {
+          "id": "30th-141",
+          "localId": "141",
+          "printed_number": "141",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Galar-Mauzi",
+            "en": "Galarian Meowth",
+            "fr": "Miaouss de Galar",
+            "es": "Meowth de Galar",
+            "it": "Meowth di Galar"
+          },
+          "type": "pokemon",
+          "pokemon_id": 52,
+          "types": [
+            "Metal"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/52.png"
+        },
+        {
+          "id": "30th-142",
+          "localId": "142",
+          "printed_number": "142",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Monetigo",
+            "en": "Gholdengo",
+            "fr": "Gromago",
+            "es": "Gholdengo",
+            "it": "Gholdengo"
+          },
+          "type": "pokemon",
+          "pokemon_id": 1000,
+          "types": [
+            "Metal"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1000.png"
+        },
+        {
+          "id": "30th-143",
+          "localId": "143",
+          "printed_number": "143",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Grandiras",
+            "en": "Kommo-o",
+            "fr": "Ékaïser",
+            "es": "Kommo-o",
+            "it": "Kommo-o"
+          },
+          "type": "pokemon",
+          "pokemon_id": 784,
+          "types": [
+            "Dragon"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/784.png"
+        },
+        {
+          "id": "30th-144",
+          "localId": "144",
+          "printed_number": "144",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Mauzi",
+            "en": "Meowth",
+            "fr": "Miaouss",
+            "es": "Meowth",
+            "it": "Meowth"
+          },
+          "type": "pokemon",
+          "pokemon_id": 52,
+          "types": [
+            "Colorless"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/52.png"
+        },
+        {
+          "id": "30th-145",
+          "localId": "145",
+          "printed_number": "145",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Hisui-Zorua",
+            "en": "Hisuian Zorua",
+            "fr": "Zorua de Hisui",
+            "es": "Zorua de Hisui",
+            "it": "Zorua di Hisui"
+          },
+          "type": "pokemon",
+          "pokemon_id": 570,
+          "types": [
+            "Colorless"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/570.png"
+        },
+        {
+          "id": "30th-146",
+          "localId": "146",
+          "printed_number": "146",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Famieps",
+            "en": "Maushold",
+            "fr": "Famignol",
+            "es": "Maushold",
+            "it": "Maushold"
+          },
+          "type": "pokemon",
+          "pokemon_id": 925,
+          "types": [
+            "Colorless"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/925.png"
+        },
+        {
+          "id": "30th-147",
+          "localId": "147",
+          "printed_number": "147",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Krokel",
+            "en": "Fuecoco",
+            "fr": "Chochodile",
+            "es": "Fuecoco",
+            "it": "Fuecoco"
+          },
+          "type": "pokemon",
+          "pokemon_id": 909,
+          "types": [
+            "Fire"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/909.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-148",
+          "localId": "148",
+          "printed_number": "148",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Quajutsu",
+            "en": "Greninja",
+            "fr": "Amphinobi",
+            "es": "Greninja",
+            "it": "Greninja"
+          },
+          "type": "pokemon",
+          "pokemon_id": 658,
+          "types": [
+            "Water"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/658.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-149",
+          "localId": "149",
+          "printed_number": "149",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-150",
+          "localId": "150",
+          "printed_number": "150",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Pikachu",
+            "en": "Pikachu",
+            "fr": "Pikachu",
+            "es": "Pikachu",
+            "it": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-151",
+          "localId": "151",
+          "printed_number": "151",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Mewtu",
+            "en": "Mewtwo",
+            "fr": "Mewtwo",
+            "es": "Mewtwo",
+            "it": "Mewtwo"
+          },
+          "type": "pokemon",
+          "pokemon_id": 150,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-152",
+          "localId": "152",
+          "printed_number": "152",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Mew",
+            "en": "Mew",
+            "fr": "Mew",
+            "es": "Mew",
+            "it": "Mew"
+          },
+          "type": "pokemon",
+          "pokemon_id": 151,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-153",
+          "localId": "153",
+          "printed_number": "153",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Feelinara",
+            "en": "Sylveon",
+            "fr": "Nymphali",
+            "es": "Sylveon",
+            "it": "Sylveon"
+          },
+          "type": "pokemon",
+          "pokemon_id": 700,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/700.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-154",
+          "localId": "154",
+          "printed_number": "154",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Gengar",
+            "en": "Gengar",
+            "fr": "Ectoplasma",
+            "es": "Gengar",
+            "it": "Gengar"
+          },
+          "type": "pokemon",
+          "pokemon_id": 94,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-155",
+          "localId": "155",
+          "printed_number": "155",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Jirachi",
+            "en": "Jirachi",
+            "fr": "Jirachi",
+            "es": "Jirachi",
+            "it": "Jirachi"
+          },
+          "type": "pokemon",
+          "pokemon_id": 385,
+          "types": [
+            "Metal"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/385.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-156",
+          "localId": "156",
+          "printed_number": "156",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Brutalanda",
+            "en": "Salamence",
+            "fr": "Drattak",
+            "es": "Salamence",
+            "it": "Salamence"
+          },
+          "type": "pokemon",
+          "pokemon_id": 373,
+          "types": [
+            "Dragon"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/373.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-157",
+          "localId": "157",
+          "printed_number": "157",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Mewtu",
+            "en": "Mewtwo",
+            "fr": "Mewtwo",
+            "es": "Mewtwo",
+            "it": "Mewtwo"
+          },
+          "type": "pokemon",
+          "pokemon_id": 150,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-158",
+          "localId": "158",
+          "printed_number": "158",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Mew",
+            "en": "Mew",
+            "fr": "Mew",
+            "es": "Mew",
+            "it": "Mew"
+          },
+          "type": "pokemon",
+          "pokemon_id": 151,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "30th-B",
+          "localId": "B",
+          "printed_number": "B",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Mew",
+            "en": "Mew",
+            "fr": "Mew",
+            "es": "Mew",
+            "it": "Mew"
+          },
+          "type": "pokemon",
+          "pokemon_id": 151,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png"
+        },
+        {
+          "id": "30th-G",
+          "localId": "G",
+          "printed_number": "G",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Mew",
+            "en": "Mew",
+            "fr": "Mew",
+            "es": "Mew",
+            "it": "Mew"
+          },
+          "type": "pokemon",
+          "pokemon_id": 151,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png"
+        },
+        {
+          "id": "30th-R",
+          "localId": "R",
+          "printed_number": "R",
+          "available_languages": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it"
+          ],
+          "name": {
+            "de": "Mew",
+            "en": "Mew",
+            "fr": "Mew",
+            "es": "Mew",
+            "it": "Mew"
+          },
+          "type": "pokemon",
+          "pokemon_id": 151,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png"
+        }
+      ],
+      "featured_elements": [
+        {
+          "pokemon_id": 25,
+          "pokemon_name": "Pikachu",
+          "card_id": "30th-028",
+          "set_name": "30th Celebration",
+          "image_url": "https://assets.tcgdex.net/en/me/30th/028/high.png",
+          "local_image_path": "data/section_artwork/pokemon_25_30th-028.png",
+          "rarity": null,
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 25,
+            "official_artwork_id": 25,
+            "subject_key": "pokeapi:official-artwork:25",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+          }
+        },
+        {
+          "pokemon_id": 151,
+          "pokemon_name": "Mew",
+          "card_id": "30th-066",
+          "set_name": "30th Celebration",
+          "image_url": "https://assets.tcgdex.net/en/me/30th/066/high.png",
+          "local_image_path": "data/section_artwork/pokemon_151_30th-066.png",
+          "rarity": null,
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 151,
+            "official_artwork_id": 151,
+            "subject_key": "pokeapi:official-artwork:151",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png"
+          }
+        },
+        {
+          "pokemon_id": 700,
+          "pokemon_name": "Sylveon",
+          "card_id": "30th-071",
+          "set_name": "30th Celebration",
+          "image_url": "https://assets.tcgdex.net/en/me/30th/071/high.png",
+          "local_image_path": "data/section_artwork/pokemon_700_30th-071.png",
+          "rarity": null,
+          "hp": null,
+          "poster_subject": {
+            "source": "pokeapi_official_artwork",
+            "species_id": 700,
+            "official_artwork_id": 700,
+            "subject_key": "pokeapi:official-artwork:700",
+            "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/700.png"
+          }
+        }
+      ]
+    }
+  }
+}

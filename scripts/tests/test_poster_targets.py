@@ -46,6 +46,8 @@ from scripts.pdf.generate_pdf import filter_variant_data_for_language
 
 ROOT = Path(__file__).resolve().parents[2]
 RELEASE_POSTER_KEYS = {
+    "30C",  # Anniversary main set; exact agent-reviewed one-shot C.
+    "30CClassic",  # Separate Classic Collection; exact agent-reviewed one-shot B.
     "Base1",  # Historical B master; original German logo explicitly accepted.
     "Base2",
     "ExGen2/sections/mega",
@@ -383,7 +385,7 @@ def test_every_current_poster_target_has_a_checked_in_manifest():
     manifests = list(POSTER_CONFIG_ROOT.glob("*/poster.yaml"))
     manifests.extend(POSTER_CONFIG_ROOT.glob("*/sections/*/poster.yaml"))
 
-    assert len(manifests) == 42
+    assert len(manifests) == 44
 
 
 def test_poster_storage_classes_are_separate_and_complete():
@@ -397,7 +399,7 @@ def test_poster_storage_classes_are_separate_and_complete():
         for bundle in poster_bundles_for_scope(scope)
     ]
 
-    assert len(bundles) == 42
+    assert len(bundles) == 44
     assert all(
         bundle.config_dir.is_relative_to(POSTER_CONFIG_ROOT)
         for bundle in bundles
@@ -527,7 +529,7 @@ def test_every_generated_pdf_language_has_complete_poster_copy():
                     ) == 1
                 checked.append(f"{bundle.asset_key}/{language}")
 
-    assert len(checked) == 267
+    assert len(checked) == 277
 
 
 def test_standalone_poster_manifests_remain_isolated_single_bundles():

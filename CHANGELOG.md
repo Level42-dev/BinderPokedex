@@ -21,13 +21,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   transferred or directly bootstrapped runtimes can be removed without touching
   the external models.
 
-## [10.0.0] - 2026-09-23
+## [10.0.0] - 2026-10-16
 
 ### ✨ Current Collections and Data
 
-- Refreshed all 31 configured scopes from their current sources, reviewed every
-  changed output, and locked the accepted 63-file dataset with a reproducible
-  snapshot manifest and drift audit.
+- Refreshed the original 31 scopes to the reviewed September data boundary,
+  added the two October anniversary scopes, and locked the resulting 67-file
+  dataset with a reproducible snapshot manifest and drift audit.
+- Added `30 Jahre` (161 cards) and the separate `30 Jahre: Klassische Sammlung`
+  (30 cards). Their observed German, English, French, Spanish, and Italian
+  editions preserve the source card identities and printed numbers.
 - Added the complete ME05 Dunkelnacht collection and updated the Mega Evolution
   era to seven scopes. Energy-only subsets remain intentionally outside the
   printable set collection.
@@ -52,11 +55,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added measured one- or two-line label fitting so long Trainer names stay
   inside their card and cutting boundaries.
 - Added exact German title logos for Schwarze Blitze and Weiße Flammen.
-- Included 34 production-validated panoramas: the five previously valid bundles
-  plus all 29 exact, human-accepted batch artworks. Eight unresolved routes
-  remain disabled and retain their set or section covers: Base1, Base2,
-  ExGen2 Primal, ExGen3 Mega, ME03, Pokédex Generation 3, SV07 Stellarkrone,
-  and SV08 Stürmische Funken.
+- Included all 44 production-validated panorama routes. The 42 earlier routes
+  retain their separate historical approvals, while the two new anniversary
+  panoramas record source-by-source agent review rather than human approval.
 
 ### 🔧 Release Quality
 
@@ -65,6 +66,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   printed promo numbers, German logos, and safe label geometry.
 - Release builds consume the committed data snapshot instead of silently
   fetching mutable card data during publication.
+- Release archives identify the current `DerFlash/BinderPokedex` repository in
+  their offline source notice.
 - Regression tests exercise real PDF poster routing for every release section;
   only validated, explicitly enabled artwork may enter release PDFs.
 - New visual-review records explicitly distinguish agent inspection from human

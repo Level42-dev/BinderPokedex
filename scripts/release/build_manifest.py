@@ -110,6 +110,7 @@ def main() -> int:
             "ex": [scope for scope in scopes if scope.startswith("ExGen")],
             "mega": [scope for scope in scopes if scope.startswith("ME")],
             "scarlet_violet": [scope for scope in scopes if scope.startswith("SV")],
+            "anniversary": [scope for scope in scopes if scope in {"30C", "30CClassic"}],
         },
         "card_counts": count_cards(project_dir, scopes),
         "pdfs": count_pdfs(project_dir),

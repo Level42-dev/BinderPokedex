@@ -1,8 +1,18 @@
 {
-  "boundary": "2026-09-12",
-  "fetched_at": "2026-09-12T02:58:16Z",
-  "file_count": 63,
+  "boundary": "2026-10-16",
+  "fetched_at": "2026-10-16T19:09:03Z",
+  "file_count": 67,
   "files": [
+    {
+      "path": "data/output/30C.json",
+      "sha256": "11002fe7754c9da68f2e440c39844048b6b1e227a6e600ef63a5b1700f34dbd9",
+      "size_bytes": 112365
+    },
+    {
+      "path": "data/output/30CClassic.json",
+      "sha256": "602d90d32f5d07543639efaff56b8af94be825190703c9d8b6b26c26696e50ba",
+      "size_bytes": 24902
+    },
     {
       "path": "data/output/Base1.json",
       "sha256": "414888cdcb680c748288b2adf648ff13cffa2686bdd324b8004ede718005cd55",
@@ -25,8 +35,8 @@
     },
     {
       "path": "data/output/ExGen2.json",
-      "sha256": "ef19e0522558e942eebe41f17972726c73bd801db9c23f19c694d5d8d711e198",
-      "size_bytes": 156631
+      "sha256": "d54bfec220ae87ac60de0850fb7addd7d2721a7ffe1989a618c41e1c15125cc6",
+      "size_bytes": 156775
     },
     {
       "path": "data/output/ExGen3.json",
@@ -157,6 +167,16 @@
       "path": "data/output/SVP.json",
       "sha256": "b719c52e82f260202231462fdfa75f94c7c248dbfb06153d3cf2d899eb3b0b42",
       "size_bytes": 157453
+    },
+    {
+      "path": "data/source/30th-c.json",
+      "sha256": "80f2e79c59ce871fb6660cace4a9f84d12e9eb769c16c115f0fc2e4a43194d54",
+      "size_bytes": 7861
+    },
+    {
+      "path": "data/source/30th.json",
+      "sha256": "aa0e9ef3c0842ef317e53ea4de779db730cd39268776660f4840dfc0fdcea29a",
+      "size_bytes": 45625
     },
     {
       "path": "data/source/base1.json",
