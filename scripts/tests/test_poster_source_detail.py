@@ -69,6 +69,27 @@ def test_real_reference_preparation_and_one_shot_graph(detailed):
     assert "foreground overlaps" in text
 
 
+def test_reviewed_source_detail_instruction_and_output_name_bind_the_workflow(detailed):
+    bundle, output = detailed
+    bundle.manifest["artwork"]["scene"]["final_instruction"] = "Cast a soft shadow to the right."
+    bundle.manifest["artwork"]["source_detail_filename_prefix"] = "reviewed_trial_123"
+    preparation.prepare("Example", 2.0, generation_mode="joint_scene", reference_mode=MODE)
+    graph = workflow.build_workflow("Example", 123, 2.0, generation_mode="joint_scene", reference_mode=MODE)
+    assert graph["4"]["inputs"]["text"].endswith("\n\nCast a soft shadow to the right.")
+    assert graph["73"]["inputs"]["filename_prefix"] == "reviewed_trial_123"
+    fingerprint = provenance.build_generation_fingerprint(bundle, scope_data_dir=output)
+    assert fingerprint["components"]["effective_prompt"]["sha256"] == hashlib.sha256(
+        ("SOURCE DETAIL JOINT SCENE - VERSION 11\n\n" + graph["4"]["inputs"]["text"]).encode("utf-8")
+    ).hexdigest()
+
+
+@pytest.mark.parametrize("prefix", ["", "../escape", "nested/path", " spaces "])
+def test_source_detail_output_name_rejects_unsafe_prefix(detailed, prefix):
+    detailed[0].manifest["artwork"]["source_detail_filename_prefix"] = prefix
+    with pytest.raises(ValueError, match="filename_prefix"):
+        workflow.build_workflow("Example", 123, 2.0, generation_mode="joint_scene", reference_mode=MODE)
+
+
 def test_large_exact_source_is_padded_without_resampling(detailed):
     bundle, _ = detailed
     source_path = bundle.source_dir / "cutouts/pokemon_001.png"

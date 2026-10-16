@@ -76,13 +76,10 @@ def test_enabled_full_page_draws_one_continuous_physical_poster():
     )
 
 
-def test_scope_without_enabled_poster_has_no_poster_page():
-    assert PosterPageRenderer.from_variant_data({"set_id": "SV07"}, "de") is None
-
-
 @pytest.mark.parametrize("scope,reviewed_sha256", [
     ("Base1", "d06f69eb6e010b2670987a2209d3aec50848ac694aaefec64dc70d342ce0d9b4"),
     ("ME03", "fc1df7acd8359153d53eabbaf23c22a189dbc8d694e58ed5cd8a7c3b683e7b76"),
+    ("SV07", "3023482cd91a579d7562ca65d93a4cf5e88b55b4ed4ddc8d07a045aee80838c6"),
 ])
 def test_newly_approved_de_posters_route_exact_reviewed_artwork(scope, reviewed_sha256):
     renderer = PosterPageRenderer.from_variant_data({"set_id": scope}, "de")
@@ -246,10 +243,6 @@ def test_enabled_poster_source_is_text_free_artwork():
         assert renderer.layout_name == "standard_3x3"
     finally:
         renderer.cleanup()
-
-
-def test_disabled_sv07_artwork_is_not_routed_into_release_pdf():
-    assert PosterPageRenderer.from_variant_data({"set_id": "SV07"}, "de") is None
 
 
 @pytest.mark.parametrize(

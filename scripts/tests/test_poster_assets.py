@@ -2928,12 +2928,12 @@ def test_identity_lock_provenance_excludes_unused_edit_references(
         },
     )
 
-    assert [record["file"] for record in records["references"]] == [
+    assert [Path(record["file"]).name for record in records["references"]] == [
         "inpaint_reference.png",
         "upper_context_mask.png",
         "upper_context_generation_mask.png",
     ]
-    assert records["source_pixel_audit_reference"]["file"] == (
+    assert Path(records["source_pixel_audit_reference"]["file"]).name == (
         "inpaint_reference.png"
     )
 

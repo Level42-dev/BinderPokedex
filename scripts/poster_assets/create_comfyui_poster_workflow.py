@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from pathlib import Path
 
 try:
@@ -364,6 +365,15 @@ def build_joint_scene_workflow(
             for index in range(1, len(items) + 1)
         ),
     )
+    configured_prefix = (
+        manifest.get("artwork", {}).get("source_detail_filename_prefix")
+        if source_detail else None
+    )
+    if configured_prefix is not None and (
+        not isinstance(configured_prefix, str)
+        or not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]*", configured_prefix)
+    ):
+        raise ValueError("source_detail_filename_prefix must be a safe filename")
     return _build_full_frame_reference_workflow(
         prompt=final_prompt,
         reference_names=reference_names,
@@ -374,7 +384,7 @@ def build_joint_scene_workflow(
         clip_name=clip_name,
         vae_name=vae_name,
         steps=steps,
-        filename_prefix=(
+        filename_prefix=configured_prefix or (
             f"{poster_asset_slug(scope)}_flux2_joint_scene_"
             f"{megapixel_marker(megapixels)}_seed_{seed}"
         ),

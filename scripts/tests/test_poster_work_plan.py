@@ -1125,6 +1125,7 @@ def test_every_release_enabled_poster_passes_production_validation():
         "Pokedex/sections/gen1",
         "Pokedex/sections/gen3",
         "Pokedex/sections/gen7",
+        "SV07",  # Exact operator-accepted one-shot A.
         "SV08",
     } | {candidate["scope"] for candidate in accepted["candidates"]}
 

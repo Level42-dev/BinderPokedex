@@ -122,6 +122,11 @@ def build_source_detail_prompt(
         "Generate one cohesive text-free full-bleed landscape and all subjects together from an empty target in one sampling pass. " + " ".join(description + constraints),
         "Use physically consistent depth, shared lighting, contact shadows and scene-appropriate foreground overlaps: grass, rocks, water or other natural foreground elements may plausibly overlap lower subject edges while preserving recognizable source details and anatomy. Keep depth ordering coherent and subject scale fixed. Render no extra creatures, people, text, logos, panels, borders or watermarks.",
     ])
+    final_instruction = scene.get("final_instruction")
+    if final_instruction is not None:
+        if not isinstance(final_instruction, str) or not final_instruction.strip():
+            raise ValueError("source_details scene final_instruction must be non-empty text")
+        paragraphs.append(final_instruction.strip())
     return "\n\n".join(paragraphs)
 
 

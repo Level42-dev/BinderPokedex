@@ -1,6 +1,18 @@
 # Poster Artwork Feature Status
 
-Current P16 update, 2026-10-16: the operator visually accepted the exact
+Current SV07 update, 2026-10-16: the operator accepted the exact shadow
+one-shot A after the earlier cautious agent rejection. The shown screenshot
+matches A, not B. Its unchanged 300-dpi text-free master
+`3023482cd91a579d7562ca65d93a4cf5e88b55b4ed4ddc8d07a045aee80838c6`
+is promoted; the source-detail workflow now reproduces its exact prompt,
+four reference images and output graph. The German SV07 PDF was rebuilt with
+the panorama on page 1 and 175 card positions on 22 pages. **All 42
+configured poster routes are now enabled.** The
+[SV07 adoption record](reviews/2026-10-16-sv07-oneshot-a-pdf-activation.md)
+binds the hashes and print-review limits. Full v10 release regeneration and
+deployment remain separate work.
+
+Prior P16 update, 2026-10-16: the operator visually accepted the exact
 terrain-plate candidate B. Its unchanged text-free 300-dpi master
 `fb123a194a70c54f79e2ce1e247acda36bb97909e8d6a86f0107bee6d5bfa08d`
 is promoted with truthful schema-4 `terrain_plate_exact_source_composite`
@@ -9,12 +21,13 @@ routes are now enabled. The German ExGen2 PDF was rebuilt and its panorama,
 nine physical cards, two card labels and the info panel visually checked.
 The German title and two card labels now use `Proto-` according to the
 official German card naming. [The P16 adoption record](reviews/2026-10-16-p16-terrain-pdf-activation.md)
-binds the artifact hashes and PDF page comparison. **SV07 is the only
-remaining disabled poster route**. Two subsequent, isolated
+binds the artifact hashes and PDF page comparison. At that checkpoint,
+SV07 was the only remaining disabled poster route. Two subsequent, isolated
 [shadow-direction one-shots](reviews/2026-10-16-sv07-shadow-oneshot-a-b.md)
 kept the joint-scene method but still produced a leftward foot-shadow defect;
-neither was promoted. The previously rejected local shadow variants likewise
-remain unpromoted.
+neither was promoted at that checkpoint. The operator subsequently accepted
+and promoted A. B and the previously rejected local shadow variants remain
+unpromoted.
 
 This document records the installed artwork and its current review state. Operator commands
 live in [Poster Workflow](POSTER_WORKFLOW.md), durable product requirements in

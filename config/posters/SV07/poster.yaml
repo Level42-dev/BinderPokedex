@@ -11,10 +11,11 @@ text_cells:
     max_width_ratio: 0.92
     max_height_ratio: 0.68
 pdf:
-  enabled: false
+  enabled: true
   artwork_file: poster-flux2-artwork.png
   insertion: after_first_section_cover
 artwork:
+  source_detail_filename_prefix: sv07_shadow_oneshot_a_260915007
   source_details:
     "pokeapi:official-artwork:1":
       sha256: 8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a
@@ -56,6 +57,7 @@ artwork:
     rendering: Use refined trading-card linework, restrained crystalline highlights, rich
       blue depth, and a spacious celestial atmosphere.
     ground_noun: highland grass
+    final_instruction: "For Scorbunny at bottom-right, the upper-left white-gold key light must cast its compact, soft ground-contact shadow toward the lower-right on the same continuous grassy ground plane. The supporting orange-tipped foot touches that ground; the raised foot does not. Do not create a narrow horizontal left-pointing bar, detached dark wedge, pasted patch, or rectangular repair near either foot. Preserve the exact three-character inventory, source-reference anatomy, poses, card-safe locations and single coherent highland landscape."
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns

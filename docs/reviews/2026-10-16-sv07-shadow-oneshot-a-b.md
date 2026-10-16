@@ -1,6 +1,9 @@
 # SV07 shadow-direction one-shot trials A and B
 
-Status: **both rejected by agent review for artwork release; no user approval claimed**.
+Historical status at this trial checkpoint: **both rejected by agent review;
+no user approval had yet been claimed**. The operator later reviewed the
+exact German preview for A and accepted it. See the
+[adoption and PDF record](2026-10-16-sv07-oneshot-a-pdf-activation.md).
 The accepted 2026-09-15 SV07-B
 master (`3d44b64f29b99898f150a4a5bee5cf62d6e928f1658dd9396a4464e76dda2799`)
 and the disabled production PDF route remain unchanged.
@@ -29,8 +32,9 @@ for Bisasam, Schiggy and Hopplo are preserved under ignored
 `tmp/oneshot-trials/sv07-shadow-oneshot-20261016-{a,b}/review/`. Their
 `evidence.json` records the exact job, preview, card and comparison hashes.
 The trial prompts and workflows are in the corresponding ignored job folders.
-No trial is approved or eligible for promotion; no active artwork, manifest,
-PDF or release archive was changed.
+At this trial checkpoint, neither was approved or eligible for promotion, and
+no active artwork, manifest, PDF or release archive was changed. The later
+operator approval supersedes this status only for candidate A.
 
 Next design decision: do not repeat minor seed variations or use the already
 rejected rectangular texture repair. If SV07 is pursued further, test a

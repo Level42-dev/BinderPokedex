@@ -3,7 +3,7 @@
   "kind": "promoted_poster",
   "outputs": {
     "artwork": {
-      "bytes": 7308673,
+      "bytes": 7148867,
       "dpi": [
         299.9994,
         299.9994
@@ -11,28 +11,28 @@
       "file": "assets/posters/SV07/poster-flux2-artwork.png",
       "height": 3268,
       "mode": "RGBA",
-      "pixel_sha256": "183bf7a2cf41f8ce75c564d27f6d02b6cc7ecfc94bfe568aee262f343246b746",
-      "sha256": "876c1c23d1bd31ee832c419845e2f0469b069e0e596e7171b438246c56a4c8ef",
+      "pixel_sha256": "920085da3fb78464ed475af2daf55bb95cede786268f10d62f0d4601547c9bb3",
+      "sha256": "3023482cd91a579d7562ca65d93a4cf5e88b55b4ed4ddc8d07a045aee80838c6",
       "width": 2368
     }
   },
   "poster_id": "SV07",
-  "promoted_at": "2026-09-12T14:09:13.574705+00:00",
+  "promoted_at": "2026-10-16T12:42:37.971212+00:00",
   "review_language": "de",
   "run": {
-    "created_at": "2026-09-12T01:56:28.540749+00:00",
+    "created_at": "2026-10-16T12:36:23.865837+00:00",
     "generation": {
       "encoder": "qwen_3_4b.safetensors",
       "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
       "engine": "flux",
-      "generation_megapixels": 1.0,
+      "generation_megapixels": 2.0,
       "mode": "joint_scene",
       "model": "flux-2-klein-4b.safetensors",
       "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
       "output_dpi": 300,
       "output_method": "lanczos",
-      "reference_mode": "individual_spatial_joint",
-      "seed": 260912007,
+      "reference_mode": "spatial_source_detail_joint",
+      "seed": 260915007,
       "steps": 4,
       "vae": "flux2-vae.safetensors",
       "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
@@ -41,7 +41,7 @@
       "cutout_manifest": {
         "bytes": 1725,
         "file": "tmp/poster-workspaces/SV07/sources/cutouts/manifest.json",
-        "sha256": "524ee0e430994f2dc557583acd51d1c501b6ad55dd3fb1da9ff203b947a8f26c"
+        "sha256": "321bc8367b4e93ab03596b24181e9a1687f0346e3fd250eff991a36e71f40fc0"
       },
       "cutouts": [
         {
@@ -99,68 +99,69 @@
           ],
           "effective_prompt": {
             "encoding": "utf-8",
-            "sha256": "5adbacea3bcc10de17176478e77d709944b402966ad0c233018f2bcc3ffcea29"
+            "sha256": "bf865217d63ea358004dd536b95382dcd31cb62261aafcdb622e0613ea91974c"
           },
           "generation": {
             "encoder": "qwen_3_4b.safetensors",
             "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
             "engine": "flux",
-            "generation_megapixels": 1.0,
+            "generation_megapixels": 2.0,
             "mode": "joint_scene",
             "model": "flux-2-klein-4b.safetensors",
             "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
             "output_dpi": 300,
             "output_method": "lanczos",
-            "reference_mode": "individual_spatial_joint",
-            "seed": 260912007,
+            "reference_mode": "spatial_source_detail_joint",
+            "seed": 260915007,
             "steps": 4,
             "vae": "flux2-vae.safetensors",
             "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
           },
           "joint_scene_conditioning": {
-            "identity_source_resampling": "canonical_card_fit",
-            "reference_megapixels": 0.5,
+            "cast_max_megapixels": 0.5,
+            "identity_canvas_px": 512,
+            "identity_source_resampling": "none",
             "reference_neutral_rgb": [
               226,
               224,
               211
             ],
-            "reference_strategy": "individual_spatial_identity_per_subject"
+            "reference_strategy": "spatial_cast_plus_unscaled_identity"
           },
           "layout": {
             "columns": 3,
             "name": "standard_3x3",
             "raster_geometry": {
               "generation_canvas_px": [
-                848,
-                1168
+                1200,
+                1664
               ],
               "generation_column_spans_px": [
                 [
                   0,
-                  269
+                  380
                 ],
                 [
-                  290,
-                  558
+                  410,
+                  790
                 ],
                 [
-                  579,
-                  848
+                  820,
+                  1200
                 ]
               ],
               "generation_row_spans_px": [
                 [
                   0,
-                  375
+                  535
                 ],
                 [
-                  396,
-                  772
+                  565,
+                  1099
                 ],
                 [
-                  793,
-                  1168
+                  1129,
+                  1664
                 ]
               ],
               "name": "cumulative_physical_endpoints",
@@ -212,7 +213,7 @@
           },
           "pipeline_contract": {
             "name": "poster_generation",
-            "version": 9
+            "version": 11
           },
           "pokemon": {
             "count": "auto_from_layout_columns",
@@ -242,10 +243,25 @@
           },
           "scene": {
             "concept": "the Stellar Crown expansion",
+            "final_instruction": "For Scorbunny at bottom-right, the upper-left white-gold key light must cast its compact, soft ground-contact shadow toward the lower-right on the same continuous grassy ground plane. The supporting orange-tipped foot touches that ground; the raised foot does not. Do not create a narrow horizontal left-pointing bar, detached dark wedge, pasted patch, or rectangular repair near either foot. Preserve the exact three-character inventory, source-reference anatomy, poses, card-safe locations and single coherent highland landscape.",
             "ground_noun": "highland grass",
             "lighting": "Brilliant white-gold stellar light enters from the upper left.",
             "rendering": "Use refined trading-card linework, restrained crystalline highlights, rich blue depth, and a spacious celestial atmosphere.",
             "setting": "The artwork contains an open crystal highland beneath a star-filled daytime sky, distant faceted cliffs, pale grass, and crown-like rays of refracted light high above the horizon."
+          },
+          "source_details": {
+            "pokeapi:official-artwork:1": {
+              "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a",
+              "traits": "Bulbasaur must match this exact low, broad, four-legged pose facing slightly left: turquoise skin, angular dark green spots with the same shapes and positions, wide red eyes with distinct white outer areas and oval white highlights, tiny nostril marks, a wide open pink mouth with the small white upper fangs visible at the corners. Preserve the large folded green bulb and its pointed overlapping leaf contours. Preserve each visible foot, the exact visible white claw tips and the separate small angular foreleg spots; do not add a claw or replace spots with rounded dots. Keep the original body proportions, gaze, expression and open spaces between the legs."
+            },
+            "pokeapi:official-artwork:7": {
+              "sha256": "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290",
+              "traits": "Squirtle must match this exact upright blue turtle pose facing slightly left, with the arms extended as in the reference and two separate standing legs. Preserve the large dark burgundy-black eyes, clear white highlights and pale eye borders; preserve the small smiling closed mouth and nostril. The pale cream chest shell has this exact dark segmented panel pattern and white side rim, with the brown back shell visible at the right. Preserve the rounded blue tail extending to the right with its inward spiral line. Copy the distinct pointed finger and toe contours from the source; do not merge hands with the shell, add claws or change the limb pose."
+            },
+            "pokeapi:official-artwork:813": {
+              "sha256": "0099f4bb576966efc872c03c69616f954c8474d12608a2fd7e91304a9d271167",
+              "traits": "Scorbunny must match this exact slender white rabbit in its energetic one-legged kicking pose. Exactly TWO long upright ears with orange tips and pale yellow narrow inner-ear shapes; the yellow shapes are inside those same two ears, never extra ears. Preserve BOTH separate dark eyes with bright white highlights and orange lower iris areas, the pale tan rectangular nose bandage, the tiny orange triangular nose and the open mauve mouth with its prominent SINGLE white upper front tooth. Preserve TWO separate small orange oval marks at the base of the neck, separated by white fur, never a continuous red collar. Preserve the white cheek tufts, both outstretched arms, the raised foot pointing its sole toward the viewer with orange toe divisions and tan sole patch, and the long supporting leg with orange toe tips. Keep exact limb count, pose, thin body proportions, expression and spacing."
+            }
           },
           "source_subject_ids": [
             1,
@@ -254,7 +270,7 @@
           ]
         },
         "schema_version": 1,
-        "sha256": "3800e5d3433bdabee20517843bfdb43354a254b0e25c69f1acc967240ad5941a"
+        "sha256": "d41525970df110b7396849f514e9f6b24c7fe8882cb2eade2c103975e5be9c16"
       },
       "overlay_fingerprint": {
         "components": {
@@ -423,79 +439,94 @@
         "sha256": "4b9aef09b995a58caade2b0c404aa320311f94e6503578d82a7041c2cc65a306"
       },
       "prompt": {
-        "bytes": 5726,
-        "file": "tmp/poster-workspaces/SV07/comfyui_poster/individual_spatial_joint_prompt.generated.txt",
-        "sha256": "c89bfc2fd42effab9db69f0a757159f9def1690af57504e09b5847da599a5e8b"
+        "bytes": 5652,
+        "file": "tmp/poster-workspaces/SV07/comfyui_poster/source_detail_joint_prompt.generated.txt",
+        "sha256": "1920951b5a7597c8eb1c322e47958b0ab0b4abde97762782256d6da09ddd3661"
       },
       "references": [
         {
-          "bytes": 36691,
-          "file": "tmp/poster-workspaces/SV07/comfyui_poster/individual_spatial_reference_1.png",
+          "bytes": 73655,
+          "file": "tmp/poster-workspaces/SV07/comfyui_poster/joint_scene_cast_reference.png",
           "height": 832,
           "mode": "RGBA",
-          "pixel_sha256": "974c85b442122f71717054da49460bf0e46125ca70b7599d91d755a803988de3",
-          "sha256": "b589d1e80fb63ba393a5f7de3bd996c211f1d2bd8d6a4d121f65a8f459236c5d",
+          "pixel_sha256": "7314a60eb4f8503ab8924b22db2e22eb822e7b93010dcb1d8528043190f8810e",
+          "sha256": "2c80657a5f1638f8782236f20577fd5eb864cced575f916f360325cf2bd3e392",
           "width": 608
         },
         {
-          "bytes": 29658,
-          "file": "tmp/poster-workspaces/SV07/comfyui_poster/individual_spatial_reference_2.png",
-          "height": 832,
+          "bytes": 183658,
+          "file": "tmp/poster-workspaces/SV07/comfyui_poster/identity_reference_1.png",
+          "height": 512,
           "mode": "RGBA",
-          "pixel_sha256": "32e3fe88022690404f9383f6bb47d144af1ecdecbfb0df13d51867fc684658f0",
-          "sha256": "42fedb7b70d491dbb7fed25f3bce4426c134c08160c20688c42c924ad3c26aa8",
-          "width": 608
+          "pixel_sha256": "722c5bee6941d870640e4008d57dfb2e3b1e312eaaf182fb5db75031789ec91b",
+          "sha256": "a9331ad3415cef27c68648eb7aba8bb3e10d90859a5c56d022b0870c39dc7529",
+          "width": 512
         },
         {
-          "bytes": 16606,
-          "file": "tmp/poster-workspaces/SV07/comfyui_poster/individual_spatial_reference_3.png",
-          "height": 832,
+          "bytes": 141127,
+          "file": "tmp/poster-workspaces/SV07/comfyui_poster/identity_reference_2.png",
+          "height": 512,
           "mode": "RGBA",
-          "pixel_sha256": "0d8d27144453970670118edad7c0a20c06ad0115e0b6e914af0536bd8d66957b",
-          "sha256": "b6d57d7231b33559f9d58cdddcc452503435a65e77debd8887d8568c180c4a67",
-          "width": 608
+          "pixel_sha256": "00be97995cf073697a9c7ec639a3e82753527f715fcea79b1164c66a3d04317d",
+          "sha256": "3f82a5c4782969b16a4115d9c0c0225025015455148626d83fe226fb9fb1771c",
+          "width": 512
+        },
+        {
+          "bytes": 52821,
+          "file": "tmp/poster-workspaces/SV07/comfyui_poster/identity_reference_3.png",
+          "height": 512,
+          "mode": "RGBA",
+          "pixel_sha256": "510d6f3886b78ce442f0f4c61df83432e8da110d8c1e3d961e22356aab17d6c9",
+          "sha256": "f7198763565771620aa26d038d07fc1e51c08f43558ed626a443b175c873a03e",
+          "width": 512
         }
       ],
       "scope_manifest": {
-        "bytes": 2177,
+        "bytes": 5422,
         "file": "config/posters/SV07/poster.yaml",
-        "sha256": "ac7526fead813b7b24d7d7094e88c347be60435370193307291c8869ab017c88"
+        "sha256": "eee32c8cc671911927ca416630357946ac6e3057f1352c602e91b4d6a68ddf38"
       },
       "workflow": {
-        "bytes": 9749,
-        "file": "tmp/poster-workspaces/SV07/comfyui_poster/workflow_api_joint_scene_individual_spatial_joint_1mp_260912007.json",
-        "sha256": "c278a8872d10f8d1d9837577b5662f2d85d259bc2b9838ece6d85543eeb7a765"
+        "bytes": 10289,
+        "file": "tmp/poster-workspaces/SV07/comfyui_poster/workflow_api_joint_scene_spatial_source_detail_joint_2mp_260915007.json",
+        "sha256": "42ca9da6be67edfc5eb8689b378d2878ce5061fc622b11e572cb9042fb7aea89"
       }
     },
     "kind": "poster_generation_run",
     "poster_id": "SV07",
     "raw_artwork": {
-      "bytes": 1671273,
-      "file": "tmp/render-jobs/v10-sv07-seed-260912007/output/sv07_flux2_joint_scene_individual_spatial_1mp_seed_260912007_00001_.png",
-      "height": 1168,
+      "bytes": 2858501,
+      "file": "tmp/oneshot-trials/sv07-shadow-oneshot-20261016-a/retrieved/oneshot/output/sv07_shadow_oneshot_a_260915007_00001_.png",
+      "height": 1664,
       "mode": "RGBA",
-      "pixel_sha256": "e912321c7fb885bb517cbda6f8fea3455aa9ee6db294898d66304e254c870065",
-      "sha256": "649b8976c1a032d646b21bc22aaf2a38916789ba128073ca40fe7f15af314720",
-      "width": 848
+      "pixel_sha256": "f354401051615f181e612490e74af27996430b866abab395d69afd3d96034290",
+      "sha256": "135c8fe2f9cf9d7c28d9042af10b2865aad1845bdec3942b478304e2ce36e541",
+      "width": 1200
     },
     "schema_version": 1,
     "scope": "SV07",
     "section_id": null,
     "source_artwork": {
-      "bytes": 7308673,
+      "bytes": 7148867,
       "dpi": [
         299.9994,
         299.9994
       ],
-      "file": "tmp/poster-workspaces/SV07/comfyui_poster/temp/sv07_flux2_joint_scene_individual_spatial_1mp_seed_260912007_to_300dpi.png",
+      "file": "tmp/oneshot-trials/sv07-shadow-oneshot-20261016-a/review/artwork-300dpi.png",
       "height": 3268,
       "mode": "RGBA",
-      "pixel_sha256": "183bf7a2cf41f8ce75c564d27f6d02b6cc7ecfc94bfe568aee262f343246b746",
-      "sha256": "876c1c23d1bd31ee832c419845e2f0469b069e0e596e7171b438246c56a4c8ef",
+      "pixel_sha256": "920085da3fb78464ed475af2daf55bb95cede786268f10d62f0d4601547c9bb3",
+      "sha256": "3023482cd91a579d7562ca65d93a4cf5e88b55b4ed4ddc8d07a045aee80838c6",
       "width": 2368
     },
     "source_scope": "SV07",
     "validation": {
+      "immutable_job": {
+        "comfyui_log_sha256": "91cf7862becbe0a74a721feda3ff113d0289bb4c6187673061ab3ec6cfc7536b",
+        "job_sha256": "d737c52a8fe47b45bcea9b45f7d0632354a699f5739ade71eb9900fcbae5da90",
+        "run_sha256": "e32723830c17085a69ec8f082411a668d7c4c66f281a7e209036f0f33b1cb475",
+        "workflow_sha256": "c4105827101db81cd13db9cc8b6d42f0d9fc3db2acfad8bf65f3c24b1b77fb84"
+      },
       "joint_scene_visual_review": {
         "approval_source": "explicit_promotion_flag",
         "criteria": [
@@ -510,29 +541,14 @@
           "natural_scene_integration",
           "coherent_landscape_occlusion"
         ],
-        "generation_fingerprint_sha256": "3800e5d3433bdabee20517843bfdb43354a254b0e25c69f1acc967240ad5941a",
+        "generation_fingerprint_sha256": "d41525970df110b7396849f514e9f6b24c7fe8882cb2eade2c103975e5be9c16",
         "method": "agent_identity_and_scene_review",
-        "passed": false,
-        "reaudit_revocation": {
-          "date": "2026-09-12",
-          "reviewer_kind": "agent",
-          "method": "source_by_source_visual_reaudit",
-          "previously_passed": true,
-          "verdict": "reject",
-          "master_sha256": "876c1c23d1bd31ee832c419845e2f0469b069e0e596e7171b438246c56a4c8ef",
-          "reports": [
-            {
-              "file": "docs/reviews/2026-09-12-panorama-audit-early-tcg.json",
-              "sha256": "068e65a77ee7b237c94828b882d345de1ea2cc09a6384d60ba03b48acbf79e6d"
-            }
-          ],
-          "reason": "Current exact artwork has rejected or unresolved source-fidelity findings. Historical review fields are retained; the prior approval is withdrawn pending a corrected candidate."
-        },
-        "raw_artwork_pixel_sha256": "e912321c7fb885bb517cbda6f8fea3455aa9ee6db294898d66304e254c870065",
-        "raw_artwork_sha256": "649b8976c1a032d646b21bc22aaf2a38916789ba128073ca40fe7f15af314720",
-        "reviewed_artwork_pixel_sha256": "183bf7a2cf41f8ce75c564d27f6d02b6cc7ecfc94bfe568aee262f343246b746",
-        "reviewed_artwork_sha256": "876c1c23d1bd31ee832c419845e2f0469b069e0e596e7171b438246c56a4c8ef",
-        "reviewed_at": "2026-09-12T11:39:40.061854+00:00",
+        "passed": true,
+        "raw_artwork_pixel_sha256": "f354401051615f181e612490e74af27996430b866abab395d69afd3d96034290",
+        "raw_artwork_sha256": "135c8fe2f9cf9d7c28d9042af10b2865aad1845bdec3942b478304e2ce36e541",
+        "reviewed_artwork_pixel_sha256": "920085da3fb78464ed475af2daf55bb95cede786268f10d62f0d4601547c9bb3",
+        "reviewed_artwork_sha256": "3023482cd91a579d7562ca65d93a4cf5e88b55b4ed4ddc8d07a045aee80838c6",
+        "reviewed_at": "2026-10-16T12:42:23.820387+00:00",
         "source_cutout_pixel_sha256": [
           "f96cfeddc294c4efbbdf1b35cd816341d950e3051dec2128c03f652448b04d10",
           "72949f5da5c7b8cf45d409ded073e210e1f7b27330d7625b993a3de4e584c2e1",
@@ -549,6 +565,12 @@
           813
         ],
         "stage": "raw_and_text_free_print_artwork"
+      },
+      "operator_review": {
+        "approved_master_sha256": "3023482cd91a579d7562ca65d93a4cf5e88b55b4ed4ddc8d07a045aee80838c6",
+        "candidate": "sv07-shadow-oneshot-20261016-a",
+        "decision": "accepted",
+        "screenshot_sha256": "ee09319fe849837c7747ec69b9c0a317aac85af0b4388b27c94556f9e8d11660"
       }
     }
   },

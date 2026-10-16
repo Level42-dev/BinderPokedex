@@ -57,6 +57,7 @@ RELEASE_POSTER_KEYS = {
     "Pokedex/sections/gen1",
     "Pokedex/sections/gen3",
     "Pokedex/sections/gen7",
+    "SV07",  # Exact operator-accepted one-shot A, activated 2026-10-16.
     "SV08",
 } | {
     candidate["scope"]
@@ -530,7 +531,7 @@ def test_every_generated_pdf_language_has_complete_poster_copy():
 
 
 def test_standalone_poster_manifests_remain_isolated_single_bundles():
-    for scope, enabled in (("Base1", True), ("SV07", False)):
+    for scope, enabled in (("Base1", True), ("SV07", True)):
         bundles = poster_bundles_for_scope(scope)
         assert len(bundles) == 1
         assert bundles[0].asset_key == scope
