@@ -17,6 +17,16 @@ from steps.transform_ex_gen2 import TransformBlackWhiteEXStep
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
 
+def test_primal_german_names_follow_official_proto_card_naming(monkeypatch):
+    step = TransformBlackWhiteEXStep('test_exgen2_proto')
+    monkeypatch.setattr(step, '_get_pokeapi_artwork_url', lambda *args: 'https://example.test/10077.png')
+    cards = step._transform_card_list([
+        {"id": "xy7-96", "name": "Primal Kyogre EX", "dexId": [382],
+         "types": ["Water"], "set": {"id": "xy7"}},
+    ], "primal")
+    assert cards[0]["localized_prefix"] == {"de": "Proto-"}
+
+
 def _mega_card(
     card_id: str,
     dex_id: int,

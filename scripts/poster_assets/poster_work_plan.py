@@ -1082,6 +1082,26 @@ def _plan_bundle(
             next_actions=("repair_or_repromote",),
             detail=_detail(error),
         )
+    if provenance.get("schema_version") == 4:
+        try:
+            validated = validate(bundle)
+        except Exception as error:
+            return WorkItem(
+                **base,
+                state="invalid",
+                reason_codes=("promotion_invalid", "terrain_fallback_invalid"),
+                next_actions=("repair_or_repromote",),
+                detail=_detail(error),
+            )
+        return WorkItem(
+            **base,
+            state="current" if bundle.pdf_enabled else "promoted_disabled",
+            reason_codes=(
+                "promotion_current", validated["composition_kind"],
+                "pdf_enabled" if bundle.pdf_enabled else "pdf_disabled",
+            ),
+            next_actions=(),
+        )
     try:
         (
             drift,

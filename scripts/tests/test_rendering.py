@@ -58,6 +58,16 @@ class TestCardStyle:
 
 class TestCardRenderer:
     """Test CardRenderer functionality."""
+
+    def test_primal_prefix_uses_official_german_proto_form(self):
+        card = {
+            "name": {"de": "Kyogre", "en": "Kyogre"},
+            "prefix": "Primal",
+            "localized_prefix": {"de": "Proto-"},
+            "suffix": "[EX]",
+        }
+        assert CardRenderer(language="de")._construct_variant_name(card) == "Proto-Kyogre [EX]"
+        assert CardRenderer(language="en")._construct_variant_name(card) == "Primal Kyogre [EX]"
     
     def test_renderer_initialization(self):
         """Test CardRenderer initializes correctly."""

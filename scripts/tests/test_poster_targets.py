@@ -49,6 +49,7 @@ RELEASE_POSTER_KEYS = {
     "Base1",  # Historical B master; original German logo explicitly accepted.
     "Base2",
     "ExGen2/sections/mega",
+    "ExGen2/sections/primal",  # Exact-source terrain fallback, approved 2026-10-16.
     "ExGen3/sections/normal",
     "ExGen3/sections/mega",  # Exact historically accepted C master, revalidated.
     "ME03",  # Exact P37-A master, visually accepted and pixel-verified.
@@ -64,6 +65,34 @@ RELEASE_POSTER_KEYS = {
         .read_text(encoding="utf-8")
     )["candidates"]
 }
+
+
+def test_p16_pdf_cannot_skip_fallback_validation_when_provenance_reference_is_missing():
+    bundle = next(
+        item for item in poster_bundles_for_scope("ExGen2")
+        if item.section_id == "primal"
+    )
+    manifest = deepcopy(bundle.manifest)
+    manifest["artwork"].pop("provenance_file")
+    invalid = replace(bundle, manifest=manifest)
+    with pytest.raises(ValueError, match="provenance"):
+        poster_page_renderer.PosterPageRenderer.from_bundle(invalid, "de")
+
+
+def test_p16_pdf_cannot_skip_fallback_validation_by_downgrading_schema(tmp_path):
+    bundle = next(
+        item for item in poster_bundles_for_scope("ExGen2")
+        if item.section_id == "primal"
+    )
+    artwork = bundle.asset_dir / bundle.artwork_file
+    (tmp_path / bundle.artwork_file).write_bytes(artwork.read_bytes())
+    provenance_name = bundle.manifest["artwork"]["provenance_file"]
+    provenance = json.loads((bundle.asset_dir / provenance_name).read_text(encoding="utf-8"))
+    provenance["schema_version"] = 2
+    (tmp_path / provenance_name).write_text(json.dumps(provenance), encoding="utf-8")
+    invalid = replace(bundle, asset_dir=tmp_path)
+    with pytest.raises(ValueError, match="schema|terrain|fallback"):
+        poster_page_renderer.PosterPageRenderer.from_bundle(invalid, "de")
 
 
 def test_p02_accepted_h_promotion_is_exact_and_routes_after_overlay_approval():

@@ -159,7 +159,15 @@ class PosterPageRenderer:
         page_mode: str = "cards",
     ) -> "PosterPageRenderer":
         provenance_file = bundle.manifest.get("artwork", {}).get("provenance_file")
-        if bundle.pdf_enabled and provenance_file:
+        fallback_method = bundle.manifest.get("artwork", {}).get("fallback_method")
+        if bundle.pdf_enabled and fallback_method:
+            if fallback_method != "terrain_plate_exact_source_composite":
+                raise ValueError(f"Unsupported poster fallback method: {fallback_method}")
+            if not provenance_file:
+                raise ValueError("Enabled terrain fallback requires a provenance file")
+            from scripts.poster_assets.validate_promoted_poster import validate
+            validate(bundle)
+        elif bundle.pdf_enabled and provenance_file:
             provenance_path = bundle.asset_dir / provenance_file
             provenance = json.loads(provenance_path.read_text(encoding="utf-8"))
             if provenance.get("schema_version") == 3:

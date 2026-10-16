@@ -330,7 +330,7 @@ def audit_promoted_pairs(
             if provenance.get("kind") != "promoted_poster":
                 continue
             # A masked composite is not a raw one-shot training target.
-            if (
+            if provenance.get("schema_version") == 4 or (
                 provenance.get("schema_version") == 3
                 and isinstance(provenance.get("composition"), dict)
                 and provenance["composition"].get("kind") == "masked_fallback"

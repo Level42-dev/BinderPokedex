@@ -61,6 +61,7 @@ try:
         resolve_poster_subject,
         subject_fingerprint_identity,
     )
+    from .terrain_plate_fallback import validate_terrain_fallback
 except ImportError:
     from historical_review_import import require_historical_import
     from masked_fallback import decode_mask, encode_mask, outside_pixel_digest
@@ -111,6 +112,7 @@ except ImportError:
         resolve_poster_subject,
         subject_fingerprint_identity,
     )
+    from terrain_plate_fallback import validate_terrain_fallback
 
 
 POSTER_LANGUAGES = (
@@ -439,6 +441,30 @@ def validate(target: str | PosterBundle) -> dict[str, Any]:
     provenance_path = scope_dir / provenance_file
     payload = json.loads(provenance_path.read_text(encoding="utf-8"))
     schema_version = payload.get("schema_version")
+    if artwork_config.get("fallback_method") == "terrain_plate_exact_source_composite" and schema_version != 4:
+        raise ValueError("Enabled terrain fallback requires schema-4 provenance")
+    if schema_version == 4:
+        scope_data = load_poster_scope_data(bundle)
+        layout = build_page_layout(
+            str(manifest.get("layout", {}).get("name", "standard_3x3"))
+        )
+        selected = select_pokemon(
+            manifest, scope_data, resolve_requested_count(manifest, layout), {},
+        )
+        expected_subjects = [subject_fingerprint_identity(item) for item in selected]
+        _validate_source_subjects(
+            bundle, scope_data,
+            {"run": {"inputs": {"generation_fingerprint": {
+                "components": {"source_subject_ids": payload.get("source_subject_ids")}
+            }}}},
+        )
+        overlay = build_overlay_fingerprint(bundle)
+        result = validate_terrain_fallback(
+            bundle, payload, expected_subjects, overlay["sha256"],
+        )
+        result["provenance"] = provenance_path
+        result["preview"] = None
+        return result
     if schema_version not in {1, 2, 3}:
         raise ValueError(
             f"Unsupported promoted provenance version: {provenance_path}"

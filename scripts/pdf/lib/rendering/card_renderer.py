@@ -423,13 +423,16 @@ class CardRenderer:
         # Use pokemon-specific values if present, otherwise use section values
         prefix = pokemon_prefix if pokemon_prefix is not None else (section_prefix or '')
         suffix = pokemon_suffix if pokemon_suffix is not None else (section_suffix or '')
+        localized_prefix = pokemon_data.get('localized_prefix')
+        if isinstance(localized_prefix, dict) and self.language in localized_prefix:
+            prefix = localized_prefix[self.language]
         
         # Build name with prefix and suffix
         name = base_name
         
         # Add prefix (if present)
         if prefix:
-            name = f"{prefix} {name}"
+            name = f"{prefix}{name}" if str(prefix).endswith('-') else f"{prefix} {name}"
         
         # Handle variant_form (delta, x, y)
         variant_form = pokemon_data.get('variant_form', None)

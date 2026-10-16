@@ -288,7 +288,7 @@ class TransformBlackWhiteEXStep(BaseStep):
                     'section_id': 'primal',
                     'color_hex': '#C1121F',
                     'title': {
-                        'de': 'Primal Pokémon [EX]',
+                        'de': 'Proto-Pokémon [EX]',
                         'en': 'Primal Pokémon [EX]',
                         'fr': 'Pokémon Primo [EX]',
                         'es': 'Pokémon Primigenio [EX]',
@@ -472,6 +472,9 @@ class TransformBlackWhiteEXStep(BaseStep):
                     'rarity': card.get('rarity')
                 }
             }
+
+            if section == 'primal':
+                pokemon_entry['localized_prefix'] = {'de': 'Proto-'}
 
             if section == 'mega' and form_variant:
                 pokemon_entry['variant_form'] = form_variant.lower()

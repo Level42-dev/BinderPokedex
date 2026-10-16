@@ -1117,6 +1117,7 @@ def test_every_release_enabled_poster_passes_production_validation():
             "Base1",  # Historical B master; original German logo explicitly accepted.
             "Base2",
         "ExGen2/sections/mega",
+        "ExGen2/sections/primal",  # Accepted terrain-plate fallback.
         "ExGen3/sections/normal",
             "ExGen3/sections/mega",  # Exact historically accepted C master, revalidated.
             "ME03",  # Exact P37-A master, visually accepted and pixel-verified.

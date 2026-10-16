@@ -558,8 +558,9 @@ The fallback still creates its own scene, places the exact reviewed source
 figures, verifies every fully opaque source pixel, and model-upscales to the
 same 300-dpi print geometry. A manifest describes one active generation
 contract at a time. Switch and promote a fallback deliberately; do not maintain
-two competing active promotions for one scope. No active promoted scope
-currently uses the fallback.
+two competing active promotions for one scope. P16/ExGen2 primal now uses a
+separate, explicitly recorded terrain-plate/exact-source fallback after its
+one-shot and bounded-edit candidates failed visual review.
 
 The override above creates a fallback candidate but does not silently change
 the active manifest. The command prints the candidate and matching run-metadata
@@ -626,7 +627,7 @@ python scripts/poster_assets/validate_promoted_poster.py --scope SV04
 For an aggregate target, use the same asset key for promotion and validation,
 for example `Pokedex/sections/gen1`.
 
-Promotion is transactional and versions only the text-free master plus its
+The standard `promote_comfyui_poster.py` promotion is transactional and versions only the text-free master plus its
 provenance. Localized previews, physical crops, downloaded cutouts, and title
 logos live below `tmp/`. The audit records hashes for models, prompts, source
 figures, references, workflows, and the durable master. Exact-source modes require a
@@ -642,6 +643,16 @@ bound to those exact pixels and source
 identities; it is not a generic bypass. Promotion still rejects a candidate
 whose recorded generation contract differs from `poster.yaml`. Generation VII
 `00018` is the first reviewed promotion using this contract.
+
+The accepted P16 terrain-plate fallback has its own narrow schema-4 contract.
+It retains the one-shot generation settings as the default in `poster.yaml`
+but declares `artwork.fallback_method: terrain_plate_exact_source_composite`.
+The P16-specific `promote_terrain_plate_fallback.py` verifies the complete
+ignored render jobs, their hashes, the source cutouts, the zero-change source
+pixel audits, the exact 300-dpi master and all nine reviewed crops before
+copying only that master and sanitized provenance into `assets/posters/`.
+`validate_promoted_poster.py` rechecks the durable record and routed master
+before PDF rendering; the candidate is never relabeled as a one-shot.
 
 ## 8. Enable and consume the poster
 

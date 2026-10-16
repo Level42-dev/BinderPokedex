@@ -1,5 +1,18 @@
 # Poster Artwork Feature Status
 
+Current P16 update, 2026-10-16: the operator visually accepted the exact
+terrain-plate candidate B. Its unchanged text-free 300-dpi master
+`fb123a194a70c54f79e2ce1e247acda36bb97909e8d6a86f0107bee6d5bfa08d`
+is promoted with truthful schema-4 `terrain_plate_exact_source_composite`
+provenance. The ExGen2 primal PDF route is enabled; **41 of 42** configured
+routes are now enabled. The German ExGen2 PDF was rebuilt and its panorama,
+nine physical cards, two card labels and the info panel visually checked.
+The German title and two card labels now use `Proto-` according to the
+official German card naming. [The P16 adoption record](reviews/2026-10-16-p16-terrain-pdf-activation.md)
+binds the artifact hashes and PDF page comparison. **SV07 is the only
+remaining disabled poster route**; its previously rejected local shadow
+variants were not promoted.
+
 This document records the installed artwork and its current review state. Operator commands
 live in [Poster Workflow](POSTER_WORKFLOW.md), durable product requirements in
 [Poster Requirements](POSTER_ARTWORK_REQUIREMENTS.md), architecture details in
@@ -38,7 +51,7 @@ SV07-A `e648ace21e4f79e210b04748aadffa2e80e6bb076b215ccdf083dd5d636e1771`,
 SV07-B `9f91d92bcb98731bed52b663451490a50ebdaaa60e6fb61534640b8fe969ed88`,
 and SV07-C `a34bd92ca3415df6563d519b46be9576b957351825ee794c00cf664634fa4669`.
 
-Method-change continuation, 2026-10-16: the operator approved a separate
+Historical pre-approval checkpoint, 2026-10-16: the operator approved a separate
 landscape plate for the demonstrably failed P16 fallback and a texture-aware
 retouch of the accepted SV07-B scene. The first full P16 terrain plate (A)
 unexpectedly included unrelated animals and was rejected. The revised P16
@@ -50,10 +63,9 @@ opaque scaled-source pixels. Nine physical card crops and side-by-side
 Kyogre/Groudon source comparisons were created and visually inspected. The
 text-free print candidate has SHA-256
 `fb123a194a70c54f79e2ce1e247acda36bb97909e8d6a86f0107bee6d5bfa08d`.
-It remains **pending operator visual approval**, especially for water and
-ground contact, under ignored
-`tmp/isolated-repair-trials/p16-terrain-20261016-b/`; it is not installed or
-PDF-routed. Complete terrain/upscale job outputs, `run.json`, and
+At this checkpoint it was pending operator visual approval under ignored
+`tmp/isolated-repair-trials/p16-terrain-20261016-b/`; the later acceptance and
+PDF activation are documented at the top of this page. Complete terrain/upscale job outputs, `run.json`, and
 `comfyui.log` were returned and verified. Four local SV07-B shadow-texture
 variants (A-D) preserved Hopplo and the mask boundary but left conspicuous
 copied grass, a ghost patch, or a rectangular edge. All four are rejected;
