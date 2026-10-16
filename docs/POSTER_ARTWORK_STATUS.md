@@ -16,6 +16,27 @@ Latest continuation: 2026-09-27 (40 of 42 configured poster routes enabled;
 only P16/ExGen2 primal and SV07 remain disabled; the complete v10 release
 build remains open). The [Base1/P37 PDF activation record](reviews/2026-09-27-base1-p37-pdf-activation.md)
 binds the exact master hashes, local PDF page checks and known logo limitation.
+Bounded correction update: 2026-10-16 (P16 and SV07 remain disabled). After
+explicit operator approval, five isolated masked render jobs were completed:
+P16 coastal candidates B/C and SV07 shadow candidates A/B/C. Their immutable
+jobs, complete returned `run.json`/`comfyui.log`/two images, masks, nine
+physical crops each, and visual previews remain under ignored
+`tmp/isolated-repair-trials/`; none was promoted or PDF-routed. Every candidate
+changed zero pixels outside its recorded mask. P16-C also restored all 24,992
+fully opaque source-Pokémon pixels exactly, but its new foreground became a
+flat blue field with an obvious cross-image transition. P16-B removed the
+stone slab but left visible dark cutout halos around both Pokémon. SV07-A/B/C
+all retained or recreated a dark left-pointing patch at Hopplo's foot despite
+changes to the latent and input guide. These are **visual rejections**, not
+image approvals; the existing approved SV07-B scene and all active masters
+remain intact. Three cause-driven attempts did not solve either visual defect,
+so further seed/mask variations are paused pending a different design.
+Rejected print-master SHA-256 values: P16-B
+`3017d14a9588c450bb149358425c06fa875d9f3d26f5e1592ab6f5ab794325d4`,
+P16-C `f2a0fdde4a0e718bb7756c8625a5df8bfa204cfba00b323fa5151aa778860793`,
+SV07-A `e648ace21e4f79e210b04748aadffa2e80e6bb076b215ccdf083dd5d636e1771`,
+SV07-B `9f91d92bcb98731bed52b663451490a50ebdaaa60e6fb61534640b8fe969ed88`,
+and SV07-C `a34bd92ca3415df6563d519b46be9576b957351825ee794c00cf664634fa4669`.
 Release candidate after the [SV08 exact-artwork adoption](reviews/2026-09-24-sv08-exact-artwork-adoption.md):
 2026-09-24 (36 production-valid panoramas enabled after the
 [P06 exact-artwork reacceptance](reviews/2026-09-24-p06-existing-artwork-acceptance.md);
