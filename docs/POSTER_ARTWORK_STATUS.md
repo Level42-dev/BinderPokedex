@@ -37,6 +37,28 @@ P16-C `f2a0fdde4a0e718bb7756c8625a5df8bfa204cfba00b323fa5151aa778860793`,
 SV07-A `e648ace21e4f79e210b04748aadffa2e80e6bb076b215ccdf083dd5d636e1771`,
 SV07-B `9f91d92bcb98731bed52b663451490a50ebdaaa60e6fb61534640b8fe969ed88`,
 and SV07-C `a34bd92ca3415df6563d519b46be9576b957351825ee794c00cf664634fa4669`.
+
+Method-change continuation, 2026-10-16: the operator approved a separate
+landscape plate for the demonstrably failed P16 fallback and a texture-aware
+retouch of the accepted SV07-B scene. The first full P16 terrain plate (A)
+unexpectedly included unrelated animals and was rejected. The revised P16
+terrain plate (B) contains a continuous, detailed storm sea and volcanic
+shore without extra subjects or the old slab. The two exact source Pokémon
+were composited onto it; the raw composite retains all 24,992 fully opaque
+source pixels, and the 300-dpi print candidate retains all 188,227 fully
+opaque scaled-source pixels. Nine physical card crops and side-by-side
+Kyogre/Groudon source comparisons were created and visually inspected. The
+text-free print candidate has SHA-256
+`fb123a194a70c54f79e2ce1e247acda36bb97909e8d6a86f0107bee6d5bfa08d`.
+It remains **pending operator visual approval**, especially for water and
+ground contact, under ignored
+`tmp/isolated-repair-trials/p16-terrain-20261016-b/`; it is not installed or
+PDF-routed. Complete terrain/upscale job outputs, `run.json`, and
+`comfyui.log` were returned and verified. Four local SV07-B shadow-texture
+variants (A-D) preserved Hopplo and the mask boundary but left conspicuous
+copied grass, a ghost patch, or a rectangular edge. All four are rejected;
+the accepted SV07-B source and active SV07 assets remain unchanged. Simple
+pixel/texture replacement is therefore paused rather than used in a PDF.
 Release candidate after the [SV08 exact-artwork adoption](reviews/2026-09-24-sv08-exact-artwork-adoption.md):
 2026-09-24 (36 production-valid panoramas enabled after the
 [P06 exact-artwork reacceptance](reviews/2026-09-24-p06-existing-artwork-acceptance.md);
