@@ -2,7 +2,7 @@
 
 Project maintainer / Projektverantwortlicher: **Björn Teichmann**
 
-Source / Quelle: https://github.com/Level42-dev/BinderPokedex
+Source / Quelle: https://github.com/DerFlash/BinderPokedex
 
 ## English
 
