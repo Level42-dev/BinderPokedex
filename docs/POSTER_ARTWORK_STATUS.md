@@ -10,8 +10,11 @@ nine physical cards, two card labels and the info panel visually checked.
 The German title and two card labels now use `Proto-` according to the
 official German card naming. [The P16 adoption record](reviews/2026-10-16-p16-terrain-pdf-activation.md)
 binds the artifact hashes and PDF page comparison. **SV07 is the only
-remaining disabled poster route**; its previously rejected local shadow
-variants were not promoted.
+remaining disabled poster route**. Two subsequent, isolated
+[shadow-direction one-shots](reviews/2026-10-16-sv07-shadow-oneshot-a-b.md)
+kept the joint-scene method but still produced a leftward foot-shadow defect;
+neither was promoted. The previously rejected local shadow variants likewise
+remain unpromoted.
 
 This document records the installed artwork and its current review state. Operator commands
 live in [Poster Workflow](POSTER_WORKFLOW.md), durable product requirements in
