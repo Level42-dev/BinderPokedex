@@ -5,10 +5,10 @@
     "release_date": "2025-05-30",
     "card_count": {
       "firstEd": 0,
-      "holo": 104,
-      "normal": 149,
+      "holo": 119,
+      "normal": 152,
       "official": 182,
-      "reverse": 169,
+      "reverse": 165,
       "total": 244
     },
     "logo": "https://assets.tcgdex.net/en/sv/sv10/logo.png",
@@ -3297,7 +3297,7 @@
   "metadata": {
     "total_cards": 244,
     "set_id": "sv10",
-    "date_fetched": "2026-03-31T22:09:38.868761Z",
+    "date_fetched": "2026-09-12T02:52:28.263689Z",
     "source": "TCGdex API v2",
     "language": "en"
   }

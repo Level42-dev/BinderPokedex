@@ -1,0 +1,555 @@
+{
+  "asset_name": "flux2",
+  "kind": "promoted_poster",
+  "outputs": {
+    "artwork": {
+      "bytes": 4876679,
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "file": "assets/posters/30C/poster-flux2-artwork.png",
+      "height": 3268,
+      "mode": "RGBA",
+      "pixel_sha256": "1ddb8e1dc94cb674d7ac72298c5f33f2b29cbfcf290a275b03cee9813c21da86",
+      "sha256": "8585866405e2eb874a9c550be36e0dfaacd751fb44ee05c9328f92633b9463be",
+      "width": 2368
+    }
+  },
+  "poster_id": "30C",
+  "promoted_at": "2026-10-16T19:06:00.040025+00:00",
+  "review_language": "de",
+  "run": {
+    "created_at": "2026-10-16T19:04:45.727843+00:00",
+    "generation": {
+      "encoder": "qwen_3_8b.safetensors",
+      "encoder_sha256": "f0ff9239d56269ca1d05e5f86da6a79fac111af464955681f11c7ab0ec5ef6c1",
+      "engine": "flux",
+      "generation_megapixels": 1.0,
+      "mode": "joint_scene",
+      "model": "flux-2-klein-9b-fp8.safetensors",
+      "model_sha256": "865ba09f5b4c3cbd3468a4bd3acb9fcb2f8740c54317482f0bcd4ed1d3655cee",
+      "output_dpi": 300,
+      "output_method": "lanczos",
+      "reference_mode": "individual_spatial_joint",
+      "seed": 260735816,
+      "steps": 4,
+      "vae": "flux2-vae.safetensors",
+      "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
+    },
+    "inputs": {
+      "cutout_manifest": {
+        "bytes": 1708,
+        "file": "tmp/poster-workspaces/30C/sources/cutouts/manifest.json",
+        "sha256": "d3491e4462956c4b64d64ab04a41f02ee1e39679ea0eea17c6af7e85e69ac630"
+      },
+      "cutouts": [
+        {
+          "bytes": 120225,
+          "file": "tmp/poster-workspaces/30C/sources/cutouts/pokemon_025_pikachu.png",
+          "height": 475,
+          "mode": "RGBA",
+          "pixel_sha256": "e1100eee7248e696797b553f2151ad8e62c0eb83df473d0d9151cceb2e61c76c",
+          "sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+          "width": 475
+        },
+        {
+          "bytes": 134189,
+          "file": "tmp/poster-workspaces/30C/sources/cutouts/pokemon_151_mew.png",
+          "height": 475,
+          "mode": "RGBA",
+          "pixel_sha256": "f1408e4b91b0b915d33b8b5f8b5a819bee2007d2e201739c0d48dd4460f26614",
+          "sha256": "3e7b29103dae09d0f8e8ff889b1991bdf387a2c6328aacb93fc34e8962584e33",
+          "width": 475
+        },
+        {
+          "bytes": 138124,
+          "file": "tmp/poster-workspaces/30C/sources/cutouts/pokemon_700_sylveon.png",
+          "height": 475,
+          "mode": "RGBA",
+          "pixel_sha256": "06ebc0aa4d49396b898334dd32f3adeca1f38e207e5336997b34a721956d703b",
+          "sha256": "9fc9dc71f85b14a7e21e5a3033f4418e9c5cb16708effc6eb89d0d62c05e5747",
+          "width": 475
+        }
+      ],
+      "generation_fingerprint": {
+        "components": {
+          "cutouts": [
+            {
+              "height": 475,
+              "mode": "RGBA",
+              "pixel_sha256": "e1100eee7248e696797b553f2151ad8e62c0eb83df473d0d9151cceb2e61c76c",
+              "pokemon_id": 25,
+              "width": 475
+            },
+            {
+              "height": 475,
+              "mode": "RGBA",
+              "pixel_sha256": "f1408e4b91b0b915d33b8b5f8b5a819bee2007d2e201739c0d48dd4460f26614",
+              "pokemon_id": 151,
+              "width": 475
+            },
+            {
+              "height": 475,
+              "mode": "RGBA",
+              "pixel_sha256": "06ebc0aa4d49396b898334dd32f3adeca1f38e207e5336997b34a721956d703b",
+              "pokemon_id": 700,
+              "width": 475
+            }
+          ],
+          "effective_prompt": {
+            "encoding": "utf-8",
+            "sha256": "96a9f0fdfdcfe89c163ad8308d9d19738640dcbd7a74ca361bfb69277c16a571"
+          },
+          "generation": {
+            "encoder": "qwen_3_8b.safetensors",
+            "encoder_sha256": "f0ff9239d56269ca1d05e5f86da6a79fac111af464955681f11c7ab0ec5ef6c1",
+            "engine": "flux",
+            "generation_megapixels": 1.0,
+            "mode": "joint_scene",
+            "model": "flux-2-klein-9b-fp8.safetensors",
+            "model_sha256": "865ba09f5b4c3cbd3468a4bd3acb9fcb2f8740c54317482f0bcd4ed1d3655cee",
+            "output_dpi": 300,
+            "output_method": "lanczos",
+            "reference_mode": "individual_spatial_joint",
+            "seed": 260735816,
+            "steps": 4,
+            "vae": "flux2-vae.safetensors",
+            "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
+          },
+          "joint_scene_conditioning": {
+            "identity_source_resampling": "canonical_card_fit",
+            "reference_megapixels": 0.5,
+            "reference_neutral_rgb": [
+              226,
+              224,
+              211
+            ],
+            "reference_strategy": "individual_spatial_identity_per_subject"
+          },
+          "layout": {
+            "columns": 3,
+            "name": "standard_3x3",
+            "raster_geometry": {
+              "generation_canvas_px": [
+                848,
+                1168
+              ],
+              "generation_column_spans_px": [
+                [
+                  0,
+                  269
+                ],
+                [
+                  290,
+                  558
+                ],
+                [
+                  579,
+                  848
+                ]
+              ],
+              "generation_row_spans_px": [
+                [
+                  0,
+                  375
+                ],
+                [
+                  396,
+                  772
+                ],
+                [
+                  793,
+                  1168
+                ]
+              ],
+              "name": "cumulative_physical_endpoints",
+              "output_canvas_px": [
+                2368,
+                3268
+              ],
+              "output_column_spans_px": [
+                [
+                  0,
+                  750
+                ],
+                [
+                  809,
+                  1559
+                ],
+                [
+                  1618,
+                  2368
+                ]
+              ],
+              "output_row_spans_px": [
+                [
+                  0,
+                  1050
+                ],
+                [
+                  1109,
+                  2159
+                ],
+                [
+                  2218,
+                  3268
+                ]
+              ],
+              "version": 2
+            },
+            "rows": 3,
+            "safe_cells": {
+              "set_info": {
+                "column": 2,
+                "row": 2
+              },
+              "title": {
+                "column": 2,
+                "row": 1
+              }
+            }
+          },
+          "pipeline_contract": {
+            "name": "poster_generation",
+            "version": 9
+          },
+          "pokemon": {
+            "count": "auto_from_layout_columns",
+            "cutout_source": "pokeapi_official_artwork",
+            "fallback_candidates": [
+              {
+                "pokemon_id": 25
+              },
+              {
+                "pokemon_id": 1
+              },
+              {
+                "pokemon_id": 4
+              },
+              {
+                "pokemon_id": 7
+              },
+              {
+                "pokemon_id": 133
+              },
+              {
+                "pokemon_id": 6
+              }
+            ],
+            "row": "bottom",
+            "strategy": "featured_from_scope"
+          },
+          "scene": {
+            "concept": "the 30 Jahre anniversary expansion and its day-to-night celebration",
+            "constraints": [
+              "Keep celebratory effects small and distant; do not divide the ground plane into separate scenes or crowd the subject silhouettes."
+            ],
+            "ground_noun": "meadow grass",
+            "lighting": "Warm sunlight from the upper left blends into soft evening glow on the right while all three figures share coherent contact shadows.",
+            "rendering": "Use polished modern trading-card illustration, clear cel-painted linework, joyful but controlled color, and spacious atmospheric depth.",
+            "setting": "The artwork contains one continuous celebratory meadow and distant woodland beneath an open sky transitioning naturally from warm late afternoon at the left to blue-violet early evening at the right. Small golden light flecks and faint distant fireworks remain in the sky, with no writing, emblems, frames, or extra creatures."
+          },
+          "source_subject_ids": [
+            25,
+            151,
+            700
+          ]
+        },
+        "schema_version": 1,
+        "sha256": "3058b1171168a23d008e5563070ba0a8f5a7c0f23399339c61abcfa8ab43af01"
+      },
+      "overlay_fingerprint": {
+        "components": {
+          "languages": {
+            "de": {
+              "information": [
+                "30 Jahre",
+                "161 Karten",
+                "Veröffentlicht",
+                "16. September 2026"
+              ],
+              "title": {
+                "kind": "logo",
+                "pixel_sha256": "1d2f722577a8109d5041e58aa6a40b0344cd05264487a06caa35c298a534a93d"
+              }
+            },
+            "en": {
+              "information": [
+                "30th Celebration",
+                "161 cards",
+                "Released",
+                "September 16, 2026"
+              ],
+              "title": {
+                "kind": "logo",
+                "pixel_sha256": "9be3f2698a2a82eaff64ba9e8a362f0e168f1addd01300d886330bc61edd9bfb"
+              }
+            },
+            "es": {
+              "information": [
+                "Celebración 30.º Aniversario",
+                "161 cartas",
+                "Publicado",
+                "16 septiembre 2026"
+              ],
+              "title": {
+                "kind": "logo",
+                "pixel_sha256": "4015cdc15e33e7ee5437845381142d8525599dc34c9ea5edc02ac7ea8c610b04"
+              }
+            },
+            "fr": {
+              "information": [
+                "30ᵉ Anniversaire",
+                "161 cartes",
+                "Sortie",
+                "16 septembre 2026"
+              ],
+              "title": {
+                "kind": "logo",
+                "pixel_sha256": "7d139c7cac3bbc74d9b5d9ae9e87af8eed05614c3dbea05eb1c6ef0b30efdf85"
+              }
+            },
+            "it": {
+              "information": [
+                "30° Anniversario",
+                "161 carte",
+                "Pubblicato",
+                "16 settembre 2026"
+              ],
+              "title": {
+                "kind": "logo",
+                "pixel_sha256": "99cd1c5d2acacb94d9692a37295519d8259d560f99afe00b00d07a41e2393277"
+              }
+            },
+            "ja": {
+              "information": [
+                "0 枚",
+                "発売日",
+                "2026年9月16日"
+              ],
+              "title": {
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "30th Celebration"
+              }
+            },
+            "ko": {
+              "information": [
+                "0 장",
+                "출시일",
+                "2026년 9월 16일"
+              ],
+              "title": {
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "30th Celebration"
+              }
+            },
+            "zh_hans": {
+              "information": [
+                "0 张",
+                "发行日期",
+                "2026年9月16日"
+              ],
+              "title": {
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "30th Celebration"
+              }
+            },
+            "zh_hant": {
+              "information": [
+                "0 張",
+                "發行日期",
+                "2026年9月16日"
+              ],
+              "title": {
+                "kind": "text",
+                "renderer": "direct_outlined_v1",
+                "value": "30th Celebration"
+              }
+            }
+          },
+          "layout_name": "standard_3x3",
+          "logo_pixels": {
+            "de": {
+              "height": 401,
+              "mode": "RGBA",
+              "pixel_sha256": "1d2f722577a8109d5041e58aa6a40b0344cd05264487a06caa35c298a534a93d",
+              "width": 735
+            },
+            "en": {
+              "height": 401,
+              "mode": "RGBA",
+              "pixel_sha256": "9be3f2698a2a82eaff64ba9e8a362f0e168f1addd01300d886330bc61edd9bfb",
+              "width": 735
+            },
+            "es": {
+              "height": 401,
+              "mode": "RGBA",
+              "pixel_sha256": "4015cdc15e33e7ee5437845381142d8525599dc34c9ea5edc02ac7ea8c610b04",
+              "width": 735
+            },
+            "fr": {
+              "height": 401,
+              "mode": "RGBA",
+              "pixel_sha256": "7d139c7cac3bbc74d9b5d9ae9e87af8eed05614c3dbea05eb1c6ef0b30efdf85",
+              "width": 735
+            },
+            "it": {
+              "height": 401,
+              "mode": "RGBA",
+              "pixel_sha256": "99cd1c5d2acacb94d9692a37295519d8259d560f99afe00b00d07a41e2393277",
+              "width": 735
+            }
+          },
+          "pipeline_contract": {
+            "name": "poster_overlay",
+            "version": 3
+          },
+          "text_cells": {
+            "set_info": {
+              "column": 2,
+              "max_height_ratio": 0.68,
+              "max_width_ratio": 0.92,
+              "row": 2
+            },
+            "title": {
+              "column": 2,
+              "row": 1
+            }
+          },
+          "text_content": {}
+        },
+        "schema_version": 1,
+        "sha256": "9e1057e59761409a4b7ee240f546871c023e9678f56d5efc75a3796c5aeda0de"
+      },
+      "prompt": {
+        "bytes": 6085,
+        "file": "tmp/poster-workspaces/30C/comfyui_poster/individual_spatial_joint_prompt.generated.txt",
+        "sha256": "1a8f2febadef9ed1bcbed1a08ee92cc72b044c2b0e755805d6869b0692731839"
+      },
+      "references": [
+        {
+          "bytes": 24506,
+          "file": "tmp/poster-workspaces/30C/comfyui_poster/individual_spatial_reference_1.png",
+          "height": 832,
+          "mode": "RGBA",
+          "pixel_sha256": "6420d8d5d3918dd2a866f16d2ec42b739151e8dba1d25bbdfba7be08bd9b111f",
+          "sha256": "7746cc9a22423cc64d3b97ac734519278d7e4ce610f5b3a212b70adbfa05773d",
+          "width": 608
+        },
+        {
+          "bytes": 21522,
+          "file": "tmp/poster-workspaces/30C/comfyui_poster/individual_spatial_reference_2.png",
+          "height": 832,
+          "mode": "RGBA",
+          "pixel_sha256": "d99ddd0e9e85b47cf173e953abb7b97c776879e31daf8d9f7834b779397e02d4",
+          "sha256": "7faf3993aad617c38917f187bb8e4f590437a3649e5dad8e10b923a3937cad43",
+          "width": 608
+        },
+        {
+          "bytes": 26215,
+          "file": "tmp/poster-workspaces/30C/comfyui_poster/individual_spatial_reference_3.png",
+          "height": 832,
+          "mode": "RGBA",
+          "pixel_sha256": "2423f379321ecc754959a140960f12569c6d99d09ca817659e44373549222631",
+          "sha256": "ce93170fa868728150b02f3f0f623d0b313cbea61d4d72f8f308ca1cbeaaa345",
+          "width": 608
+        }
+      ],
+      "scope_manifest": {
+        "bytes": 2619,
+        "file": "config/posters/30C/poster.yaml",
+        "sha256": "df787a119808aef078dce52f8abe25e556c5b49a2ca17d367b2a3e56eeb136eb"
+      },
+      "workflow": {
+        "bytes": 10111,
+        "file": "tmp/poster-workspaces/30C/comfyui_poster/workflow_api_joint_scene_individual_spatial_joint_1mp_260735816.json",
+        "sha256": "e452ddc1dea3da24a1d47e6c7b51c4edc5a25b82f5f8544f3636374bff3ff65f"
+      }
+    },
+    "kind": "poster_generation_run",
+    "poster_id": "30C",
+    "raw_artwork": {
+      "bytes": 1294614,
+      "file": "tmp/render-jobs/v10-30c-oneshot-9b-20261016-c/output/30c_flux2_joint_scene_individual_spatial_1mp_seed_260735816_00001_.png",
+      "height": 1168,
+      "mode": "RGBA",
+      "pixel_sha256": "3aac7279a3ccb5e5c49a3fb2f8f3481aab4cfffca7afe3b490a43fd88ca29bd2",
+      "sha256": "6dcd054055ca27afd63c602e6f020aea2ed37c105e769d9092bf582f0f00f3a1",
+      "width": 848
+    },
+    "schema_version": 1,
+    "scope": "30C",
+    "section_id": null,
+    "source_artwork": {
+      "bytes": 4876679,
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "file": "tmp/poster-workspaces/30C/review-20261016-c/master.png",
+      "height": 3268,
+      "mode": "RGBA",
+      "pixel_sha256": "1ddb8e1dc94cb674d7ac72298c5f33f2b29cbfcf290a275b03cee9813c21da86",
+      "sha256": "8585866405e2eb874a9c550be36e0dfaacd751fb44ee05c9328f92633b9463be",
+      "width": 2368
+    },
+    "source_scope": "30C",
+    "validation": {
+      "joint_scene_visual_review": {
+        "approval_source": "explicit_promotion_flag",
+        "criteria": [
+          "exact_cast_count",
+          "raw_generation_identity",
+          "text_free_output_identity",
+          "identity_and_form",
+          "silhouette_and_stature",
+          "anatomy_and_face",
+          "colors_and_markings",
+          "placement_and_card_safety",
+          "natural_scene_integration",
+          "coherent_landscape_occlusion"
+        ],
+        "generation_fingerprint_sha256": "3058b1171168a23d008e5563070ba0a8f5a7c0f23399339c61abcfa8ab43af01",
+        "method": "agent_identity_and_scene_review",
+        "passed": true,
+        "raw_artwork_pixel_sha256": "3aac7279a3ccb5e5c49a3fb2f8f3481aab4cfffca7afe3b490a43fd88ca29bd2",
+        "raw_artwork_sha256": "6dcd054055ca27afd63c602e6f020aea2ed37c105e769d9092bf582f0f00f3a1",
+        "reviewed_artwork_pixel_sha256": "1ddb8e1dc94cb674d7ac72298c5f33f2b29cbfcf290a275b03cee9813c21da86",
+        "reviewed_artwork_sha256": "8585866405e2eb874a9c550be36e0dfaacd751fb44ee05c9328f92633b9463be",
+        "reviewed_at": "2026-10-16T19:05:47.841197+00:00",
+        "source_cutout_pixel_sha256": [
+          "e1100eee7248e696797b553f2151ad8e62c0eb83df473d0d9151cceb2e61c76c",
+          "f1408e4b91b0b915d33b8b5f8b5a819bee2007d2e201739c0d48dd4460f26614",
+          "06ebc0aa4d49396b898334dd32f3adeca1f38e207e5336997b34a721956d703b"
+        ],
+        "source_cutout_sha256": [
+          "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+          "3e7b29103dae09d0f8e8ff889b1991bdf387a2c6328aacb93fc34e8962584e33",
+          "9fc9dc71f85b14a7e21e5a3033f4418e9c5cb16708effc6eb89d0d62c05e5747"
+        ],
+        "source_subject_ids": [
+          25,
+          151,
+          700
+        ],
+        "stage": "raw_and_text_free_print_artwork"
+      }
+    }
+  },
+  "schema_version": 2,
+  "scope": "30C",
+  "section_id": null,
+  "source_scope": "30C",
+  "storage": {
+    "derivatives": "regenerated_in_ignored_workspace",
+    "durable_outputs": [
+      "artwork"
+    ],
+    "reproducible_sources": "downloaded_to_ignored_workspace",
+    "schema_version": 1
+  }
+}

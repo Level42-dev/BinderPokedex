@@ -79,6 +79,34 @@ def test_featured_enrichment_preserves_cover_and_exact_form_subject(
     ] == [10062, 10034, 10035]
 
 
+def test_featured_card_uses_api_identity_when_scope_name_differs(
+    monkeypatch,
+    tmp_path: Path,
+):
+    step = EnrichFeaturedElementsStep("featured")
+    downloaded = []
+
+    def record_download(url, _destination):
+        downloaded.append(url)
+        return True
+
+    monkeypatch.setattr(step, "_download_and_cache_image", record_download)
+    element = step._fetch_card_image_from_tcg_set_card(
+        25,
+        {
+            "id": "30th-028",
+            "localId": "028",
+            "pokemon_id": 25,
+            "name": {"en": "Pikachu"},
+        },
+        tmp_path,
+        {"id": "30c", "name": "30th Celebration", "serie": "me"},
+    )
+
+    assert element["card_id"] == "30th-028"
+    assert downloaded == ["https://assets.tcgdex.net/en/me/30th/028/high.png"]
+
+
 def test_internal_mega_marker_becomes_prompt_friendly_exact_form_name():
     assert poster_display_name_from_card(
         {
@@ -304,6 +332,43 @@ def test_mega_artwork_resolution_never_falls_back_to_base(monkeypatch):
             pokemon_name="Latias",
             base_id=380,
         )
+
+
+@pytest.mark.parametrize(
+    ('pokemon_name', 'form_suffix', 'expected_slug', 'artwork_id'),
+    [
+        ('Charizard X', 'X', 'charizard-mega-x', 10034),
+        ('Charizard Y', 'Y', 'charizard-mega-y', 10035),
+    ],
+)
+def test_mega_artwork_does_not_duplicate_explicit_xy_suffix(
+    monkeypatch,
+    pokemon_name,
+    form_suffix,
+    expected_slug,
+    artwork_id,
+):
+    requested_urls = []
+
+    def fake_get(url, **_kwargs):
+        requested_urls.append(url)
+        return SimpleNamespace(
+            status_code=200,
+            json=lambda: {'id': artwork_id},
+        )
+
+    monkeypatch.setattr(pokemon_utils.requests, 'get', fake_get)
+
+    result = pokemon_utils.get_mega_artwork_url(
+        pokemon_name=pokemon_name,
+        base_id=6,
+        form_suffix=form_suffix,
+    )
+
+    assert requested_urls == [
+        f'https://pokeapi.co/api/v2/pokemon/{expected_slug}'
+    ]
+    assert result == PosterSubject(6, artwork_id).image_url
 
 
 def _checked_in_subjects(scope: str, section_id: str):

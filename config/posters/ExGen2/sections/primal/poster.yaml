@@ -21,6 +21,7 @@ text_content:
 artwork:
   promoted_file: poster-flux2-artwork.png
   provenance_file: poster-flux2-provenance.json
+  fallback_method: terrain_plate_exact_source_composite
   prompt_profile: landscape_first_v1
   identity_lock:
     overscan_ratio: 0.04

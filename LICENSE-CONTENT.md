@@ -90,7 +90,7 @@ and identify the source and licence:
 > BinderPokedex — original project contributions by Björn Teichmann and any
 > additional creators identified with the material; only their licensed,
 > protectable contributions are covered. Source:
-> https://github.com/Level42-dev/BinderPokedex. CC BY-NC 4.0:
+> https://github.com/DerFlash/BinderPokedex. CC BY-NC 4.0:
 > https://creativecommons.org/licenses/by-nc/4.0/. Provided as-is, without
 > warranties. Pokémon and other third-party material are excluded from this
 > grant; no affiliation or endorsement is implied.

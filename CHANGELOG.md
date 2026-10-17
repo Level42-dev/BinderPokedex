@@ -21,6 +21,63 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   transferred or directly bootstrapped runtimes can be removed without touching
   the external models.
 
+## [10.0.0] - 2026-10-16
+
+### ✨ Current Collections and Data
+
+- Refreshed the original 31 scopes to the reviewed September data boundary,
+  added the two October anniversary scopes, and locked the resulting 67-file
+  dataset with a reproducible snapshot manifest and drift audit.
+- Added `30 Jahre` (161 cards) and the separate `30 Jahre: Klassische Sammlung`
+  (30 cards). Their observed German, English, French, Spanish, and Italian
+  editions preserve the source card identities and printed numbers.
+- Added the complete ME05 Dunkelnacht collection and updated the Mega Evolution
+  era to seven scopes. Energy-only subsets remain intentionally outside the
+  printable set collection.
+- Recorded exact per-card language availability so a PDF no longer presents an
+  untranslated card as if it had been released in the selected language.
+- Preserved localized TCG identities such as `Ns Zoroark-ex` while keeping the
+  National Pokédex on canonical owner-free species names.
+- Kept the ex logo in its localized position when the Trainer name follows the
+  species, fixing duplicate ex labels in French, Spanish, and Italian cards.
+
+### 🐛 German PDF and Promo Corrections
+
+- Corrected the German Basic Energy names in SV01, SV02, SV03, and SV06.5.
+- Reconciled SVP with 216 numbered German cards through `#224`, the eight
+  number gaps in the German snapshot, and the unnumbered `Terapagos & Freunde` promo for 217 German
+  inserts in total.
+- Rebuilt MEP from its original promo identities, including `Serpiroyal #064`
+  and `Glutexo #079`, instead of renumbering the selected cards sequentially.
+- Panorama information cards now use the exact same language selection as the
+  card pages, including unnumbered promos; their counts no longer include cards
+  available only in another language.
+- Added measured one- or two-line label fitting so long Trainer names stay
+  inside their card and cutting boundaries.
+- Added exact German title logos for Schwarze Blitze and Weiße Flammen.
+- Included all 44 production-validated panorama routes. The 42 earlier routes
+  retain their separate historical approvals, while the two new anniversary
+  panoramas record source-by-source agent review rather than human approval.
+
+### 🔧 Release Quality
+
+- Added fail-closed refresh behavior, change classification, release snapshot
+  verification, and regression coverage for localized names, language filters,
+  printed promo numbers, German logos, and safe label geometry.
+- Release builds consume the committed data snapshot instead of silently
+  fetching mutable card data during publication.
+- Release archives identify the current `DerFlash/BinderPokedex` repository in
+  their offline source notice.
+- Regression tests exercise real PDF poster routing for every release section;
+  only validated, explicitly enabled artwork may enter release PDFs.
+- New visual-review records explicitly distinguish agent inspection from human
+  approval while retaining the same source, raw, print, and crop checks.
+- The poster planner uses the importer's canonical subject selection, including
+  explicit card slots, instead of incorrectly flagging a valid curated cast as stale.
+- Overlay refresh accepts an existing promotion's registered PNG encoding only
+  when its decoded pixels still match the reviewed source; fresh renders retain
+  their exact source-byte requirement.
+
 ## [9.0.0] - 2026-08-11
 
 ### ✨ Major Feature: Poster Artwork for Every Binder

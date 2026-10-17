@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-22",
+  "review_id": "P10",
+  "scope": "Pokedex/sections/gen7",
+  "variant": "p10-source-detail-20260922-c",
+  "status": "accepted_and_installed_with_scoped_print_proofs",
+  "human_acceptance_file": "docs/reviews/2026-09-22-p10-c-user-acceptance.json",
+  "technical_reviewer_kind": "agent",
+  "technical_checks": {
+    "unchanged_other_masters": 41,
+    "exact_pixel_pairs": 11,
+    "production_validator_passed": true,
+    "generation_current": true,
+    "overlay_current": true,
+    "master": {
+      "path": "assets/posters/Pokedex/sections/gen7/poster-flux2-artwork.png",
+      "sha256": "245da8494f8965864a7fd219383888aec08a32234662d1353419e61210d654d9"
+    },
+    "provenance": {
+      "path": "assets/posters/Pokedex/sections/gen7/poster-flux2-provenance.json",
+      "sha256": "0ed307aff5a756f2a9b9ff9daa6ceabca1acc78c7630064e71928563662060e7"
+    }
+  },
+  "previous_bundle": {
+    "directory": "tmp/v10-p10-adoption-20260922/previous-bundle",
+    "master_sha256": "2cf724beabc3c2a21be30f4a287e239292b5e16e59a4f3444bb26f6ba8ae7201",
+    "provenance_sha256": "24b7c22c905e75c6537ab8594218f902f47f957a887f6bd3f0eae1caba1034dd"
+  },
+  "print_proofs": {
+    "pdfs": [
+      {
+        "path": "output/pdf/v10-p10-c-20260922/v10_P10_C_Druckprobe_DE_Schnittkarten.pdf",
+        "sha256": "5aa219368951e93188af51a8ad17525d904bbd8536c65fb550749e3d28a1c451",
+        "pages": 2
+      },
+      {
+        "path": "output/pdf/v10-p10-c-20260922/v10_P10_C_Druckprobe_DE_Gesamtpanorama.pdf",
+        "sha256": "a6cf5998cbed5a647f1062b36f836931c78a34906f09c297ee445a75f5f8d76b",
+        "pages": 2
+      }
+    ],
+    "first_pages_pixel_identical_to_previously_verified_proofs": true,
+    "correct_dirty_build_and_source_commit": true
+  },
+  "visual_review": {
+    "all_four_pdf_pages": true,
+    "final_notice_pages": true,
+    "first_pages_pixel_identical_to_initial_verified_rendering": true,
+    "all_nine_panorama_cards_prior_review_preserved_by_exact_hashes": true
+  },
+  "physical_checks": {
+    "a4_pages": true,
+    "cards_mm": [
+      63.5,
+      88.9
+    ],
+    "nine_exact_card_images": true,
+    "full_panorama_exact_pixels": true,
+    "placement_matrices_verified": true
+  },
+  "tests": {
+    "passed": 119,
+    "failed": 0,
+    "scope": "focused renderer/source/fingerprint/spatial/transport/job tests, not full project suite"
+  },
+  "notes": [
+    "Initial proof drafts retained with their old metadata; final proofs use the explicit base commit and dirty label.",
+    "Read-only technical report initially hit a PosixPath JSON serialization error after checks; corrected output serialization and reran all pixel/production checks successfully.",
+    "Poppler exited successfully with nonfatal unwritable font-cache warnings; final rendered pages inspected.",
+    "Missing optional svglib was reported; these proofs use raster poster rendering, not SVG templates."
+  ],
+  "limits": {
+    "numeric_small_cast_layout_pass": false,
+    "full_pokedex_pdf_rebuilt": false,
+    "existing_release_pdfs_and_archives_rebuilt": false,
+    "physical_paper_test": false,
+    "independent_reviewer": false,
+    "release_ready": false,
+    "published": false
+  }
+}

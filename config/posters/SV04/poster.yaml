@@ -31,21 +31,37 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260786561
+    reference_mode: spatial_source_detail_joint
+    seed: 260787570
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
   scene:
     concept: the Paradox Rift expansion
-    setting: The artwork contains a vast rift valley where ancient fern-covered stone formations
-      face distant sleek crystalline structures, divided only by atmospheric depth and a narrow
-      ribbon of sky.
+    setting: The artwork contains a vast rift valley where ancient fern-covered stone formations face
+      distant sleek crystalline structures, divided only by atmospheric depth and a narrow ribbon of sky.
     lighting: Cool futuristic light and warm prehistoric sunlight meet high in the scene.
-    rendering: Use polished cel-painted linework, restrained teal and amber contrast, and
-      convincing deep perspective.
+    rendering: Use polished cel-painted linework, restrained teal and amber contrast, and convincing deep
+      perspective.
     ground_noun: valley floor
+  source_details:
+    pokeapi:official-artwork:909:
+      sha256: 0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b
+      traits: Match the exact red Fuecoco source, its square yellow belly plate, black eye patches, yellow
+        crest, friendly open mouth with a visible lower tooth, short legs and two separate scalloped hands.
+        Do not flatten the lower tooth or make smooth mitten-like hands.
+    pokeapi:official-artwork:484:
+      sha256: c364c56bf8921cdb2e26922307379bc1d8b2f61220f366da467e117be26f33c9
+      traits: Match the exact white-and-pink Palkia source with its long neck, angular head crest, shoulder
+        guards, purple round shoulder markings, chest plates, long tail and clearly separated finger claws
+        on both hands. Keep the armored hands anatomically attached and source-shaped.
+    pokeapi:official-artwork:150:
+      sha256: b7c00037d7ba9fb5cebc2da42ca0da54c7b664f4d7b2348d60ade5c6dc9de256
+      traits: 'Match this exact Mewtwo source pose: pale humanoid body, distinct purple belly and long
+        purple tail, horn-like head projections, focused eye, narrow neck and the source''s individually
+        separated fingers on both hands. Preserve the extended hand structure; do not make mitten-like
+        hands.'
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns

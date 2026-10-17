@@ -15,9 +15,6 @@ pipeline:
 - step: enrich_tcg_names_multilingual
   params:
     set_id: me04
-- step: fix_missing_dex_ids
-  params:
-    pokedex_path: data/output/Pokedex.json
 - step: enrich_tcg_cards_from_pokedex
   params:
     pokedex_file: data/output/Pokedex.json

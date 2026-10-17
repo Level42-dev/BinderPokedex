@@ -31,21 +31,38 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260773151
+    reference_mode: spatial_source_detail_joint
+    seed: 260774160
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
   scene:
     concept: the Destined Rivals expansion
-    setting: The artwork contains a tense valley framed by opposing warm and cool mountain
-      fronts, a distant weathered fortress with blank walls, and converging storm clouds high
-      over the horizon.
+    setting: The artwork contains a tense valley framed by opposing warm and cool mountain fronts, a distant
+      weathered fortress with blank walls, and converging storm clouds high over the horizon.
     lighting: Red-gold light and cold blue light oppose one another in the upper sky.
-    rendering: Use dramatic trading-card linework, disciplined rival color contrast, and cinematic
-      atmospheric depth.
+    rendering: Use dramatic trading-card linework, disciplined rival color contrast, and cinematic atmospheric
+      depth.
     ground_noun: valley grass
+  source_details:
+    pokeapi:official-artwork:155:
+      sha256: 9532b237ef088f8032024b95459303495e261eb2f7f024b79511522e551a9bcd
+      traits: Match this exact Cyndaquil right-facing side pose. Preserve the long narrow pale-cream snout,
+        one simple closed-eye arc, deep blue-teal cap and back, cream belly and short separate limbs with
+        tiny light toe tips. The single orange-and-yellow flame is a broad jagged fan emerging from the
+        back toward image-left, not an extra tail or limb. Keep the source's compact body, curved back-to-snout
+        outline and quiet closed-eye expression; do not add an open eye or new markings.
+    pokeapi:official-artwork:250:
+      sha256: 2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274
+      traits: Match the exact red, cream, yellow and green Ho-Oh source pose. Preserve its distinctly
+        lobed yellow-red head crest instead of flattening it into a fan, hooked beak, layered neck feathers,
+        individually patterned wing feathers and long separate colored tail feathers.
+    pokeapi:official-artwork:255:
+      sha256: d234db13f46ac30452288fee011df2857d93bac22f7d038d6b472ef14a651950
+      traits: Match the exact orange Torchic source pose with its three-point head tuft, short beak, black
+        eyes, cream downy neck feathers and two short legs. Preserve both feet and their actual overlap
+        and angle as drawn in the source; do not fuse them into one invented claw.
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns
@@ -75,4 +92,3 @@ title_logo:
     fr: logos/logo-fr.png
     es: logos/logo-es.png
     it: logos/logo-it.png
-    ja: logos/logo-ja.png

@@ -31,21 +31,50 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: spatial_identity_joint
-    seed: 260789456
+    reference_mode: spatial_source_detail_joint
+    seed: 260790467
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
   scene:
     concept: the Paldean Fates expansion
-    setting: The artwork contains a moonlit Paldean meadow with iridescent mineral outcrops,
-      soft jewel-toned woodland, distant reflective water, and fine prismatic light suspended
-      in the upper atmosphere.
+    setting: The artwork contains a moonlit Paldean meadow with iridescent mineral outcrops, soft jewel-toned
+      woodland, distant reflective water, and fine prismatic light suspended in the upper atmosphere.
     lighting: Silvery moonlight from the upper left creates restrained rainbow highlights.
-    rendering: Use luminous trading-card illustration, clean linework, controlled iridescence,
-      and soft nocturnal depth.
+    rendering: Use luminous trading-card illustration, clean linework, controlled iridescence, and soft
+      nocturnal depth.
     ground_noun: meadow
+  source_details:
+    pokeapi:official-artwork:4:
+      sha256: a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8
+      traits: 'Match this exact smiling Charmander source pose with both short arms extended sideways,
+        two planted legs with white claws, tall blue eyes with dark pupils and white highlights, and an
+        open pink mouth with the small separate white corner teeth. Preserve the broad pale cream throat
+        and belly. The single curved tail rises to the image-right: critically, its LOWER EDGE carries
+        a clearly visible narrow pale cream underside from behind the body along the entire upward curve
+        to just beneath the flame. Keep that light continuous stripe distinct from the orange-brown upper
+        tail; it must not become orange or dark brown. Copy the pointed orange-and-yellow flame, the head
+        angle and compact source proportions. Do not add extra tails, limbs or flame ornaments.'
+    pokeapi:official-artwork:25:
+      sha256: bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f
+      traits: 'Pikachu must match this exact cheerful yellow source pose: exactly two long black-tipped
+        ears, two separate dark round eyes with white highlights, red cheek circles and the open pink
+        mouth with distinct tongue. Preserve the image-left arm extended outward and the image-right arm
+        bent toward the chest with its separate small pointed finger contours. Copy the two small standing
+        feet and one continuous large yellow zigzag tail with its brown base. Preserve the source''s body
+        proportions, expression, eye spacing, ear angles and hand pose; no extra fingers, ears, tails
+        or facial marks. Scene-appropriate foreground overlap is allowed without changing these defining
+        features.'
+    pokeapi:official-artwork:131:
+      sha256: 0dda58737b5c1d7db8e7b81ff61b41d0f23bc08ddbf166ca61c20d17d1d27113
+      traits: 'Match the exact blue Lapras source pose and color pattern. CRITICAL SOURCE MARKINGS:
+        copy every clearly visible DARK BLUE oval spot as its own filled patch, not a shadow:
+        one high on the neck below the head, another lower on the neck, and the separate dark-blue
+        spots beside and below the shell on the blue body. The long neck must be visibly spotted,
+        never a smooth plain-blue tube. Keep the gentle face, paired head ears, cream underside,
+        brown ridged shell and four separate flippers. Do not replace the neck spots with shell
+        texture, grass or rock marks.'
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns

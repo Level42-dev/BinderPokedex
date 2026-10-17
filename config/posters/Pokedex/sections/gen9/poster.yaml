@@ -5,10 +5,8 @@ poster_id: gen9
 source:
   scope: Pokedex
   section_id: gen9
-
 layout:
   name: standard_3x3
-
 text_cells:
   title:
     row: 1
@@ -18,28 +16,23 @@ text_cells:
     column: 2
     max_width_ratio: 0.92
     max_height_ratio: 0.68
-
 text_content:
   mode: section_summary
-
 artwork:
   promoted_file: poster-flux2-artwork.png
   provenance_file: poster-flux2-provenance.json
   identity_lock:
     overscan_ratio: 0.04
-    max_protected_start_ratio: 0.70
-    transition_ratio: 0.10
+    max_protected_start_ratio: 0.7
+    transition_ratio: 0.1
     subject_clearance_ratio: 0.02
   scene:
     concept: a bright Paldea valley landscape with a warm Mediterranean mood
-    setting: >-
-      The artwork contains a sunlit Paldea-inspired valley with olive
-      woodland, warm ochre hills, a distant blue coast, and a tiny
-      blank-facade academy silhouette low on the horizon.
+    setting: The artwork contains a sunlit Paldea-inspired valley with olive woodland, warm ochre hills,
+      a distant blue coast, and a tiny blank-facade academy silhouette low on the horizon.
     lighting: Clear Mediterranean morning light enters from the upper left.
-    rendering: >-
-      Use bright contemporary cel-painted linework, restrained warm natural
-      colors, and spacious panoramic depth.
+    rendering: Use bright contemporary cel-painted linework, restrained warm natural colors, and spacious
+      panoramic depth.
     ground_noun: valley grass
   generation:
     engine: flux
@@ -50,23 +43,40 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260778637
+    reference_mode: spatial_source_detail_joint
+    seed: 260779646
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
-
+  source_details:
+    pokeapi:official-artwork:906:
+      sha256: cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a
+      traits: Match the exact bright-green Sprigatito source, with its leaf-shaped face mask, reddish
+        eyes, broad ears with pink interiors, fluffy neck leaves, compact kitten paws and tiny pointed
+        mouth fangs. Keep the fangs visible when the source mouth is unobstructed.
+    pokeapi:official-artwork:909:
+      sha256: 0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b
+      traits: Match the exact red Fuecoco source, its square yellow belly plate, black eye patches, yellow
+        crest, friendly open mouth with a visible lower tooth, short legs and two separate scalloped hands.
+        Do not flatten the lower tooth or make smooth mitten-like hands.
+    pokeapi:official-artwork:912:
+      sha256: 5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f
+      traits: Match the exact white Quaxly source with its rounded blue hair crest, blue eyes, yellow
+        bill and feet, distinct wing arms and clean open space between the legs. Do not invent any finger-like
+        white appendage beneath a wing or between the legs.
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns
   row: bottom
   cutout_source: pokeapi_official_artwork
   fallback_candidates: []
-
 conditioning:
   identity_defaults:
-    neutral_rgb: [226, 224, 211]
+    neutral_rgb:
+    - 226
+    - 224
+    - 211
     canvas_px: 512
     min_subject_px: 150
     max_subject_px: 350

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "scope": "Base2",
+  "review_id": "P02",
+  "candidate": "G",
+  "asset_kind": "text_free_master",
+  "artwork_file": "artwork-300dpi.png",
+  "artwork_sha256": "373acf45e9ee0df523494213637134eb6cb4917330feb1a21f12c83c83c64b81",
+  "composition": "one-shot A plus two separate bounded FLUX.2 masked foreground repairs",
+  "one_shot_master_sha256": "67f4e6dcfa88260aa35cb75c843b47c9975ddd3985154d3f318addb69a892e4d",
+  "one_shot_trial_evidence_sha256": "152b50fc0bce2df520f9a2dc331be0041b3c9c18ae7dedaabe1dc2d2bb2426af",
+  "pikachu_repair_evidence_sha256": "27d5693c43c21028998da66cc6cabee99addff02a4d86d0b93fe8b09dea65c94",
+  "eevee_repair_evidence_sha256": "b8bab4be9899a1aeabc12980057fcd8a5c7a22dff22274df00c6e958c4697823",
+  "pikachu_repair_mask_sha256": "e9bc690edbf71e9c2f332de041d29f8a68cdc5b2f61170083977c8193b13ce89",
+  "eevee_repair_mask_sha256": "d6268a686701582668b420365aced9d5dbafc6cddec90a2ef14e0031a6c36602",
+  "pixel_audit": {
+    "changed_editable_pixels": 9042,
+    "editable_pixels": 9084,
+    "changed_outside_mask_pixels": 0
+  },
+  "unchanged_physical_cards": 7,
+  "human_approval": "rejected",
+  "production_promotion": false,
+  "pdf_routing": false,
+  "review_report": "docs/reviews/2026-09-24-p02-correction-trials.md"
+}

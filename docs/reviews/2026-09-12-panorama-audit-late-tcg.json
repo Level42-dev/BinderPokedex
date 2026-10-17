@@ -1,0 +1,2181 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-12",
+  "reviewer": "independent_source_by_source_visual_audit_late_tcg",
+  "status": "complete",
+  "policy": "Compared exact provenance-bound source references with generated physical crops. Shading, rendering style and pose variation allowed; missing defining anatomy, markings or obstructed boundaries rejected. Uncertain is not approval. Historical passed flags not used as anatomy evidence.",
+  "coverage": {
+    "targets": 14,
+    "source_images_actually_viewed": 42,
+    "full_previews_actually_viewed": 14,
+    "physical_crops_actually_viewed": 126,
+    "all_source_file_hashes_match_provenance": true,
+    "all_source_pixel_hashes_match_provenance": true,
+    "all_master_file_and_pixel_hashes_match_provenance": true,
+    "all_subject_crop_pixels_match_master": true,
+    "master_crop_comparison_region": "Each r3 physical crop at local x 0..749, y 0..959; excludes bottom localization footer and verifies every subject against the promoted master.",
+    "cache_gaps": []
+  },
+  "targets": [
+    {
+      "asset_key": "SV08",
+      "verdict": "uncertain",
+      "master": {
+        "file": "assets/posters/SV08/poster-flux2-artwork.png",
+        "sha256": "d931776dc062cc9f9db4b632fab658ce678ad6fe2afcc73d33e363f1e51fe7f8"
+      },
+      "full_preview": {
+        "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "a6fdc9757cfd99fb784e48983a935db4106181b4826a2b6b4bfe147cf0295204",
+        "actually_viewed": true
+      },
+      "scene_observations": "Storm valley reads as one continuous landscape; all three subjects contained in bottom cells, no foreground plants cross bodies. Hovering Ho-Oh and Pikachu have visible ground shadows.",
+      "crop_coverage": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "3d971a0cbc0df95fa04e8993d830827783a76f5bcca88a3803cfc179471e54de",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "9375d8483143ff16c13141e06e664c24054d7b64447577261d79434933f312f1",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "de50743fcf442ed8dbe2a84e6c86d55a48c32cbf5b3d29526a1e4e970bf7d5cf",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "25505ca1b5b0daa45bf343d4b9c6b18e05eebd5c9b348dfccde24220c78c2dd4",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "ea4e494d260bcdf50716f464b76962b5aa3fc927f2d2baf2e006cd9ae9e697ff",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "d3b573e130b23d90406dbb931ae9c8643ad5806a8123588d38372a7668a7e61c",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "783b34d1e30f2c2ba9a9712dd00e6bc53c0bc0474487cc3b24f6d0c6655c62cf",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "e45272daf5eb81dcd2ff6b24911670104d27c5948508282e4587c5cd2287dc70",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "644019c208f14b3688b76a1ec697a075bd9d9cdb29428eb0a67aa526d2891e99",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        }
+      ],
+      "subjects": [
+        {
+          "identity": 250,
+          "source_file": "tmp/poster-workspaces/SV08/sources/cutouts/pokemon_250_ho_oh.png",
+          "source_sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274",
+          "source_expected_sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274",
+          "source_pixel_sha256": "27c1eb01dc8b91b25c89dd2c948aafa26722d2b563e8c00728926b10ff077f4c",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c1",
+          "output_file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "output_sha256": "783b34d1e30f2c2ba9a9712dd00e6bc53c0bc0474487cc3b24f6d0c6655c62cf",
+          "output_actually_viewed": true,
+          "verdict": "uncertain",
+          "feature_observations": "Ho-Oh wing fans, white breast, green neck band, yellow crest/beak/tail and two blue feet retained. However the visible eye is a near-blank pale oval; source red iris/dark pupil not clearly retained at physical crop resolution. Face requires closer re-review; not approved."
+        },
+        {
+          "identity": 909,
+          "source_file": "tmp/poster-workspaces/SV08/sources/cutouts/pokemon_909_fuecoco.png",
+          "source_sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b",
+          "source_expected_sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b",
+          "source_pixel_sha256": "6f87f462a8639a983688199cd116cbbe580a356acf62ca1f46a4eb805a268d1e",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c2",
+          "output_file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "output_sha256": "e45272daf5eb81dcd2ff6b24911670104d27c5948508282e4587c5cd2287dc70",
+          "output_actually_viewed": true,
+          "verdict": "pass",
+          "feature_observations": "Fuecoco retains paired crest blades, two oval eyes and nostrils, white face, three visible teeth, two short arms, paired two-claw feet, yellow belly patch and full tail. Clean ground contact and outline."
+        },
+        {
+          "identity": 25,
+          "source_file": "tmp/poster-workspaces/SV08/sources/cutouts/pokemon_025_pikachu.png",
+          "source_sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+          "source_expected_sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+          "source_pixel_sha256": "e1100eee7248e696797b553f2151ad8e62c0eb83df473d0d9151cceb2e61c76c",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c3",
+          "output_file": "tmp/poster-workspaces/SV08/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "output_sha256": "644019c208f14b3688b76a1ec697a075bd9d9cdb29428eb0a67aa526d2891e99",
+          "output_actually_viewed": true,
+          "verdict": "pass",
+          "feature_observations": "Pikachu retains two black-tipped ears, paired eyes/red cheeks, open mouth, two arms and feet, and complete angular brown-rooted lightning tail. Extended hand is slightly rough but separated tips remain; no plant crosses the body."
+        }
+      ]
+    },
+    {
+      "asset_key": "SV08.5",
+      "verdict": "reject",
+      "master": {
+        "file": "assets/posters/SV08.5/poster-flux2-artwork.png",
+        "sha256": "0fa96a8cf36e05d50bf667354127603aa0a057afb710c4743fe9676db4cd74a9"
+      },
+      "full_preview": {
+        "file": "tmp/poster-workspaces/SV08.5/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "601510a0744254250d64e9b2a142fce1521a01741778cf89cb558f0227e5603b",
+        "actually_viewed": true
+      },
+      "scene_observations": "Coherent alpine lake and meadow, three bottom-cell subjects and their shadows. Foreground blade intersects Lugia tail tip; no extra creatures.",
+      "crop_coverage": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/SV08.5/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "592c80f05f11e9d8b3bb6c15a3708bce2f947ec36523ef10599767591004b671",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/SV08.5/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "b441a1e5ddb7d4e006088c931c0fd38a3238f7f10906b772f4eaaf8052ee4f19",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/SV08.5/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "4d19641e816230a9655f0550b4d9563ac114fcf0d6dda3eee7a1b0849026e723",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/SV08.5/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "a7ea92252e8c52b51f9ee79762da1893860fac3b86dc8d1843bf5bd60d9b83b0",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/SV08.5/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "a79f5b91f595cbc23214144fc4e1237f419e38c77ba53f0d160b8dd188183b84",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/SV08.5/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "38a7c5cbca3a84aa2b118c50fec22072912ab9672addab2d448d5eb20653b91f",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/SV08.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "a05b9ee1286c2a557dba4746cefcf3049332871329486d2fb414b64dbf8f09dc",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/SV08.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "b1c32e4cf2be42ce6edd75f732a944e35a1da82adefb32f8318dd7f5f317e674",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/SV08.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "60c467c04df83d0be91d47929039099733e3aa05f05f5dd03ffa941dff5fcb90",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        }
+      ],
+      "subjects": [
+        {
+          "identity": 25,
+          "source_file": "tmp/poster-workspaces/SV08.5/sources/cutouts/pokemon_025_pikachu.png",
+          "source_sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+          "source_expected_sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f",
+          "source_pixel_sha256": "e1100eee7248e696797b553f2151ad8e62c0eb83df473d0d9151cceb2e61c76c",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c1",
+          "output_file": "tmp/poster-workspaces/SV08.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "output_sha256": "a05b9ee1286c2a557dba4746cefcf3049332871329486d2fb414b64dbf8f09dc",
+          "output_actually_viewed": true,
+          "verdict": "pass",
+          "feature_observations": "Two black-tipped ears, glossy eyes, red cheeks, small paws/feet and full angular brown-rooted tail retained. Raised paw simplifies fingers but does not visibly add a limb. No body cropping."
+        },
+        {
+          "identity": 383,
+          "source_file": "tmp/poster-workspaces/SV08.5/sources/cutouts/pokemon_383_groudon.png",
+          "source_sha256": "0207895137e94107b5efbf9054d3c94f2ae16374f9cd07d3729fb5e86dd271ac",
+          "source_expected_sha256": "0207895137e94107b5efbf9054d3c94f2ae16374f9cd07d3729fb5e86dd271ac",
+          "source_pixel_sha256": "b54d5e6c6fe573bb087226173cedd66703d936aa26ba0707e3fbf0542df261c0",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c2",
+          "output_file": "tmp/poster-workspaces/SV08.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "output_sha256": "b1c32e4cf2be42ce6edd75f732a944e35a1da82adefb32f8318dd7f5f317e674",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Groudon source yellow iris/dark pupil becomes nearly blank pale eye. Jaw is inflated into a rounded wide-open purple mouth and the far hand/claws visually attach around this mouth. Segmented armor, dorsal spikes and paired three-claw feet remain, but face and hand/jaw separation fail."
+        },
+        {
+          "identity": 249,
+          "source_file": "tmp/poster-workspaces/SV08.5/sources/cutouts/pokemon_249_lugia.png",
+          "source_sha256": "f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30",
+          "source_expected_sha256": "f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30",
+          "source_pixel_sha256": "6662c2d9cc9998ff0bb60c7d551bf5ed27beca009d828377692035d7ec370a90",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c3",
+          "output_file": "tmp/poster-workspaces/SV08.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "output_sha256": "60c467c04df83d0be91d47929039099733e3aa05f05f5dd03ffa941dff5fcb90",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Lugia retains paired hand-wings, blue breast/back plates, long neck, two feet and long tail. Foreground grass crosses the tail tip at the right edge of its silhouette. Upper wing segmentation is less distinct than source and face/eye highly compressed, so this is not a clean source-faithful approval."
+        }
+      ]
+    },
+    {
+      "asset_key": "SV09",
+      "verdict": "reject",
+      "master": {
+        "file": "assets/posters/SV09/poster-flux2-artwork.png",
+        "sha256": "fea5eaa24c1d7d1f584b9beeef7064a42e0fb56b6e4c74090080c743330059bf"
+      },
+      "full_preview": {
+        "file": "tmp/poster-workspaces/SV09/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "2be7e5c2567694d3d47afab8d9b4bffd22ad6170904fd8ec10a14c349f9b6af1",
+        "actually_viewed": true
+      },
+      "scene_observations": "Continuous pastoral hills/campsite and three contained subjects. Reshiram feet intersect foreground grass blades. No extra creatures.",
+      "crop_coverage": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/SV09/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "95623e20b840d77b1012d4fec3363e25e8bbc4f0e51b2ce8b6891e711b0f3127",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/SV09/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "e3cc1b04c37188e3742d37399081a96da013e388941a5033a696bf8b427a7184",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/SV09/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "1e39a9c998244c0dda3ab7cced7f84e2c1da6cc6f93e3e8b975698c3615bf010",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/SV09/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "3192a95bbd232e8df8640fb877c3106ed024190c230953b9345675a824b4e287",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/SV09/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "995778a7e2e86b4e312f37c796d53f33360ba62f93dc0b52cc882a7542158d5a",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/SV09/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "947ad2dd7dab73d879828f3a7471d76a492670c3ce05ebbf36991d181796fe8c",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/SV09/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "e7d0f1fdb53a225fec04e04d03f00e489eef6929d2e1868ba36e26b961c4cadb",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/SV09/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "037e2f0bfe663c6d10e0247f90e3151303101a14d5eddea75b46b77e38253cd2",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/SV09/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "631a1b127488f3ce43c6a87f20f2d15328cd570483da2420ee31434bb640e143",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        }
+      ],
+      "subjects": [
+        {
+          "identity": 906,
+          "source_file": "tmp/poster-workspaces/SV09/sources/cutouts/pokemon_906_sprigatito.png",
+          "source_sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a",
+          "source_expected_sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a",
+          "source_pixel_sha256": "bbb27600106084f27dc56d019f37f6c1c17bba9a3ea8138fd79e7d03b5200b81",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c1",
+          "output_file": "tmp/poster-workspaces/SV09/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "output_sha256": "e7d0f1fdb53a225fec04e04d03f00e489eef6929d2e1868ba36e26b961c4cadb",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Sprigatito ears, pink eyes, green facial mask, leafy collar, visible legs and tail retained, but both small upper fangs visible in the exact open-mouth source are absent from generated open mouth."
+        },
+        {
+          "identity": 255,
+          "source_file": "tmp/poster-workspaces/SV09/sources/cutouts/pokemon_255_torchic.png",
+          "source_sha256": "d234db13f46ac30452288fee011df2857d93bac22f7d038d6b472ef14a651950",
+          "source_expected_sha256": "d234db13f46ac30452288fee011df2857d93bac22f7d038d6b472ef14a651950",
+          "source_pixel_sha256": "671e8746fd27fa08b1fc031d94ed88e5d0538116c15c0872ed51e0789254699d",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c2",
+          "output_file": "tmp/poster-workspaces/SV09/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "output_sha256": "037e2f0bfe663c6d10e0247f90e3151303101a14d5eddea75b46b77e38253cd2",
+          "output_actually_viewed": true,
+          "verdict": "uncertain",
+          "feature_observations": "Torchic crest, beak, eyes and paired yellow wing tufts retained. Leading foot appears to have an additional long overlapping toe compared with three distinct forward toes in source; foot digit count needs closer adjudication. No foliage across body."
+        },
+        {
+          "identity": 643,
+          "source_file": "tmp/poster-workspaces/SV09/sources/cutouts/pokemon_643_reshiram.png",
+          "source_sha256": "da64fe6f0285ea0837a5fd06b150abee0eb5598c47050314ac1ece006d61c135",
+          "source_expected_sha256": "da64fe6f0285ea0837a5fd06b150abee0eb5598c47050314ac1ece006d61c135",
+          "source_pixel_sha256": "670636862ff3fad6116dc4ae9a9955e34b0b5d6167dd2c7d6cf74ced1b021cf1",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c3",
+          "output_file": "tmp/poster-workspaces/SV09/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "output_sha256": "631a1b127488f3ce43c6a87f20f2d15328cd570483da2420ee31434bb640e143",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Reshiram eye compressed into a closed dark bar without the source cyan eye; head crest reduced. Foreground grass crosses both lower foot outlines. Neck rings, turbine tail and paired wings remain, but clean feet and face fidelity fail."
+        }
+      ]
+    },
+    {
+      "asset_key": "SV10",
+      "verdict": "reject",
+      "master": {
+        "file": "assets/posters/SV10/poster-flux2-artwork.png",
+        "sha256": "d58e13869502dc2e399d9acec2023ae25fd7cf0b10d25d7d6f83d7f1b0a60d18"
+      },
+      "full_preview": {
+        "file": "tmp/poster-workspaces/SV10/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "78d1f6618cf5edd16c879ebcc2395406da84a2265dddebf20955e6995f53ec81",
+        "actually_viewed": true
+      },
+      "scene_observations": "Storm-lit river valley continuous across all cells; exact three subjects. Tall blades intrude into Cyndaquil foot and Torchic rear-foot/body region; Ho-Oh tail grazes short grass.",
+      "crop_coverage": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/SV10/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "a0f1178581652b361f8f1d1b61d2b65f760c07bfc34a9fc29ad8c0b89624a820",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/SV10/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "be6c7de07326451980fa01d0c19cc3132c4094ab5e64c2268ca7230c686431a0",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/SV10/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "8c3dc9dea89632f7c108c6986ccb2f0d4ff7a62ec578e0407dad7f6f96297669",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/SV10/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "aef299153c9000866ad245b33a7ed6396edadb31c369f9c71a52c0c587c57d50",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/SV10/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "8a299dcd1373fbb18b5b3c07fa960940331dc42d02bb847bc7739ef38f6a425b",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/SV10/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "187bd18b7c975bed404ad9d874965f80910c83a41ef47a99bff9f29b6eb606af",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/SV10/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "b3a4fba8795a75ed90e80a6e3726f8942396bec04573e98cb215990a0a89fab7",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/SV10/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "b09bec10f97aed236010dd488a0d3faf65fed601e792bd50e48eebb11aec594b",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/SV10/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "cf8d1b262472222ba197da039cae2ed156587da470e4df2df5fb9732aebd250b",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        }
+      ],
+      "subjects": [
+        {
+          "identity": 155,
+          "source_file": "tmp/poster-workspaces/SV10/sources/cutouts/pokemon_155_cyndaquil.png",
+          "source_sha256": "9532b237ef088f8032024b95459303495e261eb2f7f024b79511522e551a9bcd",
+          "source_expected_sha256": "9532b237ef088f8032024b95459303495e261eb2f7f024b79511522e551a9bcd",
+          "source_pixel_sha256": "b54e467594c5b93a7d563140f2cbf9b0af9bc33bbef72d9fc0c976bc39c095e7",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c1",
+          "output_file": "tmp/poster-workspaces/SV10/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "output_sha256": "b3a4fba8795a75ed90e80a6e3726f8942396bec04573e98cb215990a0a89fab7",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Cyndaquil long snout, closed eye, blue dorsal cap, two arms and flame fan preserved. Foreground blade crosses its left hind-foot/leg outline; small gray source feet become tan claw-like tips. Clean silhouette fails."
+        },
+        {
+          "identity": 250,
+          "source_file": "tmp/poster-workspaces/SV10/sources/cutouts/pokemon_250_ho_oh.png",
+          "source_sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274",
+          "source_expected_sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274",
+          "source_pixel_sha256": "27c1eb01dc8b91b25c89dd2c948aafa26722d2b563e8c00728926b10ff077f4c",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c2",
+          "output_file": "tmp/poster-workspaces/SV10/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "output_sha256": "b09bec10f97aed236010dd488a0d3faf65fed601e792bd50e48eebb11aec594b",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Ho-Oh rounded multi-lobed crown becomes a flat trapezoidal wedge; green collar becomes yellow and red eye becomes cyan-white. Wings and gold tail recognizable, but crest anatomy and facial/collar markings differ materially."
+        },
+        {
+          "identity": 255,
+          "source_file": "tmp/poster-workspaces/SV10/sources/cutouts/pokemon_255_torchic.png",
+          "source_sha256": "d234db13f46ac30452288fee011df2857d93bac22f7d038d6b472ef14a651950",
+          "source_expected_sha256": "d234db13f46ac30452288fee011df2857d93bac22f7d038d6b472ef14a651950",
+          "source_pixel_sha256": "671e8746fd27fa08b1fc031d94ed88e5d0538116c15c0872ed51e0789254699d",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c3",
+          "output_file": "tmp/poster-workspaces/SV10/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "output_sha256": "cf8d1b262472222ba197da039cae2ed156587da470e4df2df5fb9732aebd250b",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Torchic leading foot has four long forward toe tips versus three in the source. Tall diagonal grass overlaps rear foot/lower right body boundary. Eyes, beak, crest and yellow tufts otherwise retain identity."
+        }
+      ]
+    },
+    {
+      "asset_key": "SV10.5B",
+      "verdict": "reject",
+      "master": {
+        "file": "assets/posters/SV10.5B/poster-flux2-artwork.png",
+        "sha256": "802d5dec3ae46e0b9d0ba953d475fa61cc77e7f6a8eb8ea258f7d34b1a9f003b"
+      },
+      "full_preview": {
+        "file": "tmp/poster-workspaces/SV10.5B/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "e2ac13d587e1a1cafbf4dffbe697e104ecc4cadbaec87f11aca246f5350ae241",
+        "actually_viewed": true
+      },
+      "scene_observations": "Rain and lightning over city/river landscape coherent, exactly three contained subjects. Rain lines cross the scene without hiding anatomy; dark plants frame edges.",
+      "crop_coverage": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/SV10.5B/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "f162ab5167aaab7aa6c8b39376116bd96f46884246e8cff6f9dda8c56e0b91f0",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/SV10.5B/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "4a5ef99bb7dde2aa3433eb1caecd5032592bd66a627d1a9acbe42500c5590089",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/SV10.5B/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "ffdb1f00d5ddd9bb5df34f566e3f6e910e6b86ae424ca543cd5710aacdd7635f",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/SV10.5B/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "38dd42b767a7bb33f7c57dfe50ff26640c1f34d0ece7c037c94262fd539f94b8",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/SV10.5B/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "78f892a3318c1c4c025aff6671c53f6fa7e18ec81e072e51ec4a295d1c8fabf5",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/SV10.5B/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "87cfd0c10420ed6ec4ca913d652c3cd6ceefafaa6ad853d86225c8cd8de97d2e",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/SV10.5B/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "02d10db47121ad21ebcb2a6b96bd9e586c0208568b1c9e381931c0188070e901",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/SV10.5B/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "474a719a0106b6110118a8d987bb5f983992a98a1d1b559e588eb92d58b88d8b",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/SV10.5B/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "10a63dd78aa9c51f64f22c2c1c2f313dfbf530fa7c107ce8bf40d78dfda7b6bc",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        }
+      ],
+      "subjects": [
+        {
+          "identity": 495,
+          "source_file": "tmp/poster-workspaces/SV10.5B/sources/cutouts/pokemon_495_snivy.png",
+          "source_sha256": "e7ff61a0daed598a7676b262c56af766e88bcf91764658eeeae615f6f9937549",
+          "source_expected_sha256": "e7ff61a0daed598a7676b262c56af766e88bcf91764658eeeae615f6f9937549",
+          "source_pixel_sha256": "a75f5938c2496b9b044bcb6222aa4bd94fde50b5735370347625fe3a9ee295db",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c1",
+          "output_file": "tmp/poster-workspaces/SV10.5B/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "output_sha256": "02d10db47121ad21ebcb2a6b96bd9e586c0208568b1c9e381931c0188070e901",
+          "output_actually_viewed": true,
+          "verdict": "pass",
+          "feature_observations": "Snivy narrow snout, half-lidded red eye, yellow collar curls, pale belly, two slim arms and feet, and complete multi-point leaf tail match source. Silhouette stays clear of foreground grass; rain line is thin and does not obscure features."
+        },
+        {
+          "identity": 646,
+          "source_file": "tmp/poster-workspaces/SV10.5B/sources/cutouts/pokemon_646_kyurem.png",
+          "source_sha256": "d67df985a583dc711c2d2f753f516c56e33e4717c113f4b27fcb998c8f33f38b",
+          "source_expected_sha256": "d67df985a583dc711c2d2f753f516c56e33e4717c113f4b27fcb998c8f33f38b",
+          "source_pixel_sha256": "da284b9bac2441f23931c268112c18342059a4c9a36e583290a6245ea3979280",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c2",
+          "output_file": "tmp/poster-workspaces/SV10.5B/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "output_sha256": "474a719a0106b6110118a8d987bb5f983992a98a1d1b559e588eb92d58b88d8b",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Kyurem tall ice wing has only one circular yellow-ringed port, whereas exact source has two, one beside each outer horn. Small hand and foot white claws become dark indistinct tips; source toothed snout simplified to closed jaw. Wing port loss alone is a defining-part failure."
+        },
+        {
+          "identity": 644,
+          "source_file": "tmp/poster-workspaces/SV10.5B/sources/cutouts/pokemon_644_zekrom.png",
+          "source_sha256": "3a621c1df54ce8e73a144c58b5cd4d20fa309009c41731852f85445068829fcc",
+          "source_expected_sha256": "3a621c1df54ce8e73a144c58b5cd4d20fa309009c41731852f85445068829fcc",
+          "source_pixel_sha256": "59576e8df21328450c48c812176c49d26e828097c5c67318b3739adc8c347026",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c3",
+          "output_file": "tmp/poster-workspaces/SV10.5B/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "output_sha256": "10a63dd78aa9c51f64f22c2c1c2f313dfbf530fa7c107ce8bf40d78dfda7b6bc",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Zekrom red eye is absent in generated face. Raised right hand loses distinct rounded digits and becomes angular folded structure attached to wing/tail region. Three front foot lobes remain but rear foot becomes unsegmented flat tip. Wings/turbine tail recognizable, anatomy fidelity fails."
+        }
+      ]
+    },
+    {
+      "asset_key": "SV10.5W",
+      "verdict": "reject",
+      "master": {
+        "file": "assets/posters/SV10.5W/poster-flux2-artwork.png",
+        "sha256": "da524b22b59dc76537adbf19b66e692f276cb0ebd5b0af7044b5f4c0783c2e0f"
+      },
+      "full_preview": {
+        "file": "tmp/poster-workspaces/SV10.5W/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "130e0e8fe64ebba8a60f935d610d921a429d71df9827918be84f63e738df1986",
+        "actually_viewed": true
+      },
+      "scene_observations": "Sunset birch valley continuous; three subjects contained, natural shadow directions. Foreground blade intersects Tepig hind leg.",
+      "crop_coverage": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/SV10.5W/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "56675a0060f82c487aa69036dcf61eb3b2caffe35b801396848843f1b0d37ede",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/SV10.5W/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "a8f03a6f01d974f7140d9d6ba1c58920f80ea4835b577c43ab3cc05bdecedc44",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/SV10.5W/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "d0fb3e1cd3f283a7831419df478e3fc7c1fab141f98ed5a6fd99cd23e03d821a",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/SV10.5W/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "2857d0249aefad93d9d4cb39b1bb306993c5870250e2e532298b4bf5c0664868",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/SV10.5W/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "a78382e9a790def1252baef36c66da1b7219498067ec666bfd532bd2a397a973",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/SV10.5W/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "0707960fc0098baae4645c6ce8ed09188e266962dcb949739b9bd2ac266c2696",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/SV10.5W/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "064efa1bce0775f880b75fef8dc2b976b39310183dd8f2917770313baf5d857e",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/SV10.5W/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "ad54ee4337ef3419f6392f0b8547abd8f9fbe6d2f102b9dddf267df86e561acf",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/SV10.5W/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "4a397744abb8867c008bcbd553d4ee74746dfd77fa3d3b6020ba54f718c75283",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        }
+      ],
+      "subjects": [
+        {
+          "identity": 498,
+          "source_file": "tmp/poster-workspaces/SV10.5W/sources/cutouts/pokemon_498_tepig.png",
+          "source_sha256": "d7750c56dc5be8ae10a6c270c34a0c46dbf64f289f2eb5670cbe52a9fd41f275",
+          "source_expected_sha256": "d7750c56dc5be8ae10a6c270c34a0c46dbf64f289f2eb5670cbe52a9fd41f275",
+          "source_pixel_sha256": "71b68cb64b98197b2d22a474dfbcddd8952bc766c65e4f0405e2ed7dfd8b4e11",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c1",
+          "output_file": "tmp/poster-workspaces/SV10.5W/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "output_sha256": "064efa1bce0775f880b75fef8dc2b976b39310183dd8f2917770313baf5d857e",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Tepig long dark ears, yellow forehead patch, two nostrils, dark rump band, coiled tail/red ball and visible running limbs retained. Foreground blade crosses rear hind-foot outline, and grassy contact merges dark front hoof tips; clean exposed feet fail."
+        },
+        {
+          "identity": 643,
+          "source_file": "tmp/poster-workspaces/SV10.5W/sources/cutouts/pokemon_643_reshiram.png",
+          "source_sha256": "da64fe6f0285ea0837a5fd06b150abee0eb5598c47050314ac1ece006d61c135",
+          "source_expected_sha256": "da64fe6f0285ea0837a5fd06b150abee0eb5598c47050314ac1ece006d61c135",
+          "source_pixel_sha256": "670636862ff3fad6116dc4ae9a9955e34b0b5d6167dd2c7d6cf74ced1b021cf1",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c2",
+          "output_file": "tmp/poster-workspaces/SV10.5W/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "output_sha256": "ad54ee4337ef3419f6392f0b8547abd8f9fbe6d2f102b9dddf267df86e561acf",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Reshiram source cyan eye becomes a narrow pale/closed slit, and broad raised wing is reduced to three long feather tips instead of source fan with additional lower tip. Neck rings and turbine tail survive, but face and wing anatomy not adequately retained."
+        },
+        {
+          "identity": 501,
+          "source_file": "tmp/poster-workspaces/SV10.5W/sources/cutouts/pokemon_501_oshawott.png",
+          "source_sha256": "480904e99ed485ba3c8fb5866bac1a2acee76dd6dcee1a1ad3e2aac706576fc7",
+          "source_expected_sha256": "480904e99ed485ba3c8fb5866bac1a2acee76dd6dcee1a1ad3e2aac706576fc7",
+          "source_pixel_sha256": "7d95563acab903da681aa4f6896726f6e691fe6441e6f2f3878e4492369d6237",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c3",
+          "output_file": "tmp/poster-workspaces/SV10.5W/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "output_sha256": "4a397744abb8867c008bcbd553d4ee74746dfd77fa3d3b6020ba54f718c75283",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Oshawott retains blue ears, black eyes, brown nose, collar, shell, two flippers, feet and tail. All six prominent source cheek whisker/freckle dots are absent; defining facial markings fail despite correct silhouette."
+        }
+      ]
+    },
+    {
+      "asset_key": "SVP",
+      "verdict": "reject",
+      "master": {
+        "file": "assets/posters/SVP/poster-flux2-artwork.png",
+        "sha256": "6527600191306285021b3ae373b915e51568dcf15e4349418864e44866e85426"
+      },
+      "full_preview": {
+        "file": "tmp/poster-workspaces/SVP/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "19f474ffc94b340a6e77aab1cf8a58f6942fb1ffe8dd5689a042d1033b55336c",
+        "actually_viewed": true
+      },
+      "scene_observations": "Sunset field/academy scene coherent and three subjects contained. Tall blades cross Sprigatito front legs and Quaxly feet; these are visible physical-crop defects.",
+      "crop_coverage": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/SVP/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "cb6865a1035844555593a2b23f5aea3d93cc8ee76633ad5114df487fe8c41e97",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/SVP/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "68a99451f2e1b74aa4bfc50754d19b7f12e43eb69c6346661590ce004dc22b37",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/SVP/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "e2470ee7e50da3c2cc1401e5610fae17380f9569205bb3bb0113bb7c539df09f",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/SVP/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "6f4c113bb01ccea2c2505073d6e3a484a7b84e0a9e7be0f5b2e9104ea5a79867",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/SVP/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "dcf57e995f9c2d879793b8b700b4613e3aae93d863978cadae4a44124b09f636",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/SVP/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "75834dc1f5cae214657bd447c4da378156d1c674f85a5556e7294fb351372389",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/SVP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "bc563133c21ec2fd16100ca40c4da9e6edcc1969af45912c8ee24cfc697bb318",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/SVP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "a335550be3d540cbe22ed4060a0548ed2edb7b77d48dd727c85fa3ff6123b791",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/SVP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "f0bbd767dd4472e2ad56324edcb29a8b283e308d730c9c97f38ce25993e280a3",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        }
+      ],
+      "subjects": [
+        {
+          "identity": 906,
+          "source_file": "tmp/poster-workspaces/SVP/sources/cutouts/pokemon_906_sprigatito.png",
+          "source_sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a",
+          "source_expected_sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a",
+          "source_pixel_sha256": "bbb27600106084f27dc56d019f37f6c1c17bba9a3ea8138fd79e7d03b5200b81",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c1",
+          "output_file": "tmp/poster-workspaces/SVP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "output_sha256": "bc563133c21ec2fd16100ca40c4da9e6edcc1969af45912c8ee24cfc697bb318",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Sprigatito pink eyes, face mask, ears, collar and tail retained; open mouth loses both source upper fangs. Two foreground blades cross front-paw/leg boundaries, one rising beside the chest."
+        },
+        {
+          "identity": 909,
+          "source_file": "tmp/poster-workspaces/SVP/sources/cutouts/pokemon_909_fuecoco.png",
+          "source_sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b",
+          "source_expected_sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b",
+          "source_pixel_sha256": "6f87f462a8639a983688199cd116cbbe580a356acf62ca1f46a4eb805a268d1e",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c2",
+          "output_file": "tmp/poster-workspaces/SVP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "output_sha256": "a335550be3d540cbe22ed4060a0548ed2edb7b77d48dd727c85fa3ff6123b791",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Fuecoco has correct crest, eyes, nostrils, arms, two-claw feet, yellow patch and tail. Of the source three visible teeth only upper fang and right lower tooth remain; left lower tooth is replaced by dark mouth edge."
+        },
+        {
+          "identity": 912,
+          "source_file": "tmp/poster-workspaces/SVP/sources/cutouts/pokemon_912_quaxly.png",
+          "source_sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f",
+          "source_expected_sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f",
+          "source_pixel_sha256": "0c34c412b2dffca8c3d88946d77a3547e03ae7ba7488c9368fadb53b07b3a6f9",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c3",
+          "output_file": "tmp/poster-workspaces/SVP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "output_sha256": "f0bbd767dd4472e2ad56324edcb29a8b283e308d730c9c97f38ce25993e280a3",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Quaxly source has clear separation between its two blue legs; output adds a white hanging lobe between them. Two small beak nostrils disappear, and foreground blade touches/crosses foot region. Blue cap crest and paired eyes/wings otherwise recognizable."
+        }
+      ]
+    },
+    {
+      "asset_key": "ME01",
+      "verdict": "reject",
+      "master": {
+        "file": "assets/posters/ME01/poster-flux2-artwork.png",
+        "sha256": "d189aad3bd442ddc559f341699b4c8a2661a3aa279b29f73960a69280afbc93b"
+      },
+      "full_preview": {
+        "file": "tmp/poster-workspaces/ME01/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "57436917cafd00cc8e062d48343d3e81ce8ec92e1cc4613e4ef524ab96c56ef6",
+        "actually_viewed": true
+      },
+      "scene_observations": "Crystal garden ruins continuous; exactly three bottom-row subjects with ground shadows. Celebi right hand touches a tall leaf, Chikorita fully unobstructed.",
+      "crop_coverage": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/ME01/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "1c550f3f8b2277f8eb32027ba3a5f85ae9ff32f9fcd8b8f85911017abad419d4",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/ME01/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "e71f020cdd5bd92ab84a8688b2b71962ef5e15e403b807839f48a53647498863",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/ME01/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "20b682a2982f708754bef8b40e48de6952d43068a67d6d21ce4b4ac9b25e4b06",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/ME01/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "c7b1ba1b95c999bc5cc0ca8ca473c268a3c3515eb64ac8013e1848dfe35c856f",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/ME01/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "8751061e6ea99c7a475edbc5a98b986cac7511f5d70ec666cd6b9dc1a3d0bd54",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/ME01/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "9538030fe0864cf3616a21a33b24150682ca1588273d6e3b2f3c03a3062e1072",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/ME01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "a211f4afe9d52cedc070cc3223cc6c6971665557f30126e699ceee2e9bd4d5e2",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/ME01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "6534d59574b2997c270a6c913f39b29d0a7102e0db9b730cdca2bdd24128a667",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/ME01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "1f6dfe244a75608a9933d46d5f14ce326615c6df48be17e89d1bff06d396f9c4",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        }
+      ],
+      "subjects": [
+        {
+          "identity": 1,
+          "source_file": "tmp/poster-workspaces/ME01/sources/cutouts/pokemon_001_bulbasaur.png",
+          "source_sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a",
+          "source_expected_sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a",
+          "source_pixel_sha256": "f96cfeddc294c4efbbdf1b35cd816341d950e3051dec2128c03f652448b04d10",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c1",
+          "output_file": "tmp/poster-workspaces/ME01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "output_sha256": "a211f4afe9d52cedc070cc3223cc6c6971665557f30126e699ceee2e9bd4d5e2",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Bulbasaur bulb lobes, red eyes, ear tips and dark skin patches recognizable. Generated right rear foot has at least four small white claws instead of source three; left mouth corner also develops a cluster of tooth-like marks. This is not anatomy-faithful despite clear body placement."
+        },
+        {
+          "identity": 152,
+          "source_file": "tmp/poster-workspaces/ME01/sources/cutouts/pokemon_152_chikorita.png",
+          "source_sha256": "3ffc2eeee9139b0281ab5493b1a6d4b5c1329de5ddf5361f5ee3c93d12c05659",
+          "source_expected_sha256": "3ffc2eeee9139b0281ab5493b1a6d4b5c1329de5ddf5361f5ee3c93d12c05659",
+          "source_pixel_sha256": "30acf73b389c25cf7460b45a71f064af19b82302ba1affb0ac10002a6513d8c0",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c2",
+          "output_file": "tmp/poster-workspaces/ME01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "output_sha256": "6534d59574b2997c270a6c913f39b29d0a7102e0db9b730cdca2bdd24128a667",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Chikorita gains a long pointed tail-like appendage projecting right, absent in exact reference, while source short limbs with small pale toe caps become large rounded flipper-like limbs without those caps. Neck buds are smeared/incomplete, with one black blotch instead of source green bud."
+        },
+        {
+          "identity": 251,
+          "source_file": "tmp/poster-workspaces/ME01/sources/cutouts/pokemon_251_celebi.png",
+          "source_sha256": "7596d91f88dfdb24bac29ad2ff37ec9652ae0aa5de9e8dab04fb0ac53ed697f1",
+          "source_expected_sha256": "7596d91f88dfdb24bac29ad2ff37ec9652ae0aa5de9e8dab04fb0ac53ed697f1",
+          "source_pixel_sha256": "ab1936141a2f148374bdcbd895cc88d806941e7a6f8873af86fe0141b42ff197",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c3",
+          "output_file": "tmp/poster-workspaces/ME01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "output_sha256": "1f6dfe244a75608a9933d46d5f14ce326615c6df48be17e89d1bff06d396f9c4",
+          "output_actually_viewed": true,
+          "verdict": "uncertain",
+          "feature_observations": "Celebi blue eyes, swept head crest, paired antennae with blue tips, visible wing, outstretched three-point hands and dangling foot mostly match. Source small smile cannot be discerned in output; right fingertips tangent to foreground blade. Face and hand clearance need re-review before approval."
+        }
+      ]
+    },
+    {
+      "asset_key": "ME02",
+      "verdict": "reject",
+      "master": {
+        "file": "assets/posters/ME02/poster-flux2-artwork.png",
+        "sha256": "f20acc0f58cc0f21ed7c81567d15ecb34afe5f45c5bfcc3f649bf1e83d8cf28a"
+      },
+      "full_preview": {
+        "file": "tmp/poster-workspaces/ME02/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "1d9a3eaaee785350ecc8509999b9f4c733dc024bae975bc5b9d0a12009e90a68",
+        "actually_viewed": true
+      },
+      "scene_observations": "Burning misty forest gorge continuous; subjects placed in separate bottom cells. Grass crosses Genesect left lower leg and Reshiram far foot.",
+      "crop_coverage": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/ME02/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "99747fb0439bca826532e074c322a0ea8cbeda6ae85037a3737deb7e5dbc6d80",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/ME02/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "6dc5de54a7ec4ea4964a690feb504475447f2fad29509e6c65088159bb8f0248",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/ME02/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "13042b9dfca58f5971db5a2baf435919a3741766f98ae560ab4eeccf0075aca2",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/ME02/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "9352dcbfcf3d8f5c96c22a4dd4b3833d6c115d31d6b7e56a7407be5062184890",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/ME02/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "ca92c26960e57ada56b0e7de12157a7a7ef52243ee7dc5caf8ec8dc8ea3d7dd2",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/ME02/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "8c9ce325edb171444c47f6de8283b88a9eb6fccb2312e7f4331785f570f87110",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/ME02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "0699853c51c2004759756308e0d1c75d7edc511d55223f1a62486c2940a75673",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/ME02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "8926684b77ce78a4bed5c708dff2ba3c76b13a91e06e0c579c8fb7df9cc2e5ce",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/ME02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "da7b1d4da3b5f831b10b62d988dadd97d22fc7dbc328c06b9920a9336f6322d1",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        }
+      ],
+      "subjects": [
+        {
+          "identity": 649,
+          "source_file": "tmp/poster-workspaces/ME02/sources/cutouts/pokemon_649_genesect.png",
+          "source_sha256": "0d77f632c0d27b74998040266b493c817a3643e2257e106a0feaa5fe52002b5a",
+          "source_expected_sha256": "0d77f632c0d27b74998040266b493c817a3643e2257e106a0feaa5fe52002b5a",
+          "source_pixel_sha256": "ba0da4edff8f653873e90108012847154227d0d6ebd3583159a2db1f2c107bfa",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c1",
+          "output_file": "tmp/poster-workspaces/ME02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "output_sha256": "0699853c51c2004759756308e0d1c75d7edc511d55223f1a62486c2940a75673",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Genesect cannon, drive block, segmented neck, scythe arms and legs retained. Source eye shows two distinct oval internal marks; output replaces them by bright flame-like vertical streaks. Source tooth row disappears. Foreground blade crosses left lower leg."
+        },
+        {
+          "identity": 4,
+          "source_file": "tmp/poster-workspaces/ME02/sources/cutouts/pokemon_004_charmander.png",
+          "source_sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+          "source_expected_sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+          "source_pixel_sha256": "84b721fa96a4480ee20afd28765c279e15d45b0f73c13f74c7988cf06a3b68df",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c2",
+          "output_file": "tmp/poster-workspaces/ME02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "output_sha256": "8926684b77ce78a4bed5c708dff2ba3c76b13a91e06e0c579c8fb7df9cc2e5ce",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Charmander blue eyes, belly patch, arms, tail flame and paired three-claw feet retained, but source multiple visible upper/lower teeth reduce to only a right corner fang and left-side dark notch; one of the two source nostrils is absent. Hand digit tips are also blunt/fused."
+        },
+        {
+          "identity": 643,
+          "source_file": "tmp/poster-workspaces/ME02/sources/cutouts/pokemon_643_reshiram.png",
+          "source_sha256": "da64fe6f0285ea0837a5fd06b150abee0eb5598c47050314ac1ece006d61c135",
+          "source_expected_sha256": "da64fe6f0285ea0837a5fd06b150abee0eb5598c47050314ac1ece006d61c135",
+          "source_pixel_sha256": "670636862ff3fad6116dc4ae9a9955e34b0b5d6167dd2c7d6cf74ced1b021cf1",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c3",
+          "output_file": "tmp/poster-workspaces/ME02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "output_sha256": "da7b1d4da3b5f831b10b62d988dadd97d22fc7dbc328c06b9920a9336f6322d1",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Reshiram broad raised wing loses a source long feather tip (three prominent generated tips); face becomes a broad rounded muzzle with hazy multicolor eye, and foreground leaf crosses far foot. Turbine and neck rings remain recognizable; anatomy and boundary fidelity fail."
+        }
+      ]
+    },
+    {
+      "asset_key": "ME02.5",
+      "verdict": "reject",
+      "master": {
+        "file": "assets/posters/ME02.5/poster-flux2-artwork.png",
+        "sha256": "e2f54fb50dca25a95fb660419c307d9126b2064d18dc7544b8a90d8d4815dd69"
+      },
+      "full_preview": {
+        "file": "tmp/poster-workspaces/ME02.5/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "e6ba2fdc627ebae2a5b0de2ae50f21d493f65a90fbb1bbfa6095aa3b28e45627",
+        "actually_viewed": true
+      },
+      "scene_observations": "Waterfall valley continuous and three subjects fully assigned to bottom cells. Foreground blade crosses Chikorita left limb and touches Ho-Oh tail.",
+      "crop_coverage": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/ME02.5/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "846699b4b9a02caea56a711d633244b714afee8f98b8979998632d24f550021d",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/ME02.5/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "f8e78ef25c211f91885318124c4416214ba6310d1a1ca091cd784fee9a144aae",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/ME02.5/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "2e05b03b48a4aba51af75df443ad4f2e27433b998eefbc62bc1948b72a040e30",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/ME02.5/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "12d18572523d3caa4a35d7e34c0d410aaf07f3e4607d4b46d72eabd34f807c05",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/ME02.5/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "66f64aaedf7d11fb83102f49cbd58909667be08aa9db29775c223ef8fe52448f",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/ME02.5/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "9110ff0c394194928f3d7f94f05f3096d8362c3f9728426e65452d7b68b22658",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/ME02.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "f9bb31b9fce6f56e4026b100e1393381ff14f4a984139c905f47fc64cdb717d5",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/ME02.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "86676f7a217a44d2fb1442916ffcdb40c5917915302d0072d16e505429062168",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/ME02.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "1aa96716a1203debb8ecae2269f9a3bdad358222ab1273388429383c230835fd",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        }
+      ],
+      "subjects": [
+        {
+          "identity": 152,
+          "source_file": "tmp/poster-workspaces/ME02.5/sources/cutouts/pokemon_152_chikorita.png",
+          "source_sha256": "3ffc2eeee9139b0281ab5493b1a6d4b5c1329de5ddf5361f5ee3c93d12c05659",
+          "source_expected_sha256": "3ffc2eeee9139b0281ab5493b1a6d4b5c1329de5ddf5361f5ee3c93d12c05659",
+          "source_pixel_sha256": "30acf73b389c25cf7460b45a71f064af19b82302ba1affb0ac10002a6513d8c0",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c1",
+          "output_file": "tmp/poster-workspaces/ME02.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "output_sha256": "f9bb31b9fce6f56e4026b100e1393381ff14f4a984139c905f47fc64cdb717d5",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Chikorita head leaf, red eyes, smile and green neck buds retained. Tall diagonal blade crosses left forelimb, and rounded source feet/pale toe caps collapse into pointed green nubs. No extra tail here, unlike ME01."
+        },
+        {
+          "identity": 4,
+          "source_file": "tmp/poster-workspaces/ME02.5/sources/cutouts/pokemon_004_charmander.png",
+          "source_sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+          "source_expected_sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+          "source_pixel_sha256": "84b721fa96a4480ee20afd28765c279e15d45b0f73c13f74c7988cf06a3b68df",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c2",
+          "output_file": "tmp/poster-workspaces/ME02.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "output_sha256": "86676f7a217a44d2fb1442916ffcdb40c5917915302d0072d16e505429062168",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Charmander retains blue eyes, cream belly, flame tail and two outstretched arms/legs. Nearly all reference teeth are absent from the equally open mouth; left hand becomes a two-point notch and right foot claws are poorly separated. Face/hand fidelity fails."
+        },
+        {
+          "identity": 250,
+          "source_file": "tmp/poster-workspaces/ME02.5/sources/cutouts/pokemon_250_ho_oh.png",
+          "source_sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274",
+          "source_expected_sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274",
+          "source_pixel_sha256": "27c1eb01dc8b91b25c89dd2c948aafa26722d2b563e8c00728926b10ff077f4c",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c3",
+          "output_file": "tmp/poster-workspaces/ME02.5/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "output_sha256": "1aa96716a1203debb8ecae2269f9a3bdad358222ab1273388429383c230835fd",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Ho-Oh rounded layered crown becomes a flat wedge, red iris becomes pale cyan/white and green collar shrinks to a pale stripe. Gold tail feathers become rounded paddle tips rather than source ragged feather ends. Two feet and both wings remain, but crown/eye/collar identity details fail."
+        }
+      ]
+    },
+    {
+      "asset_key": "ME03",
+      "verdict": "reject",
+      "master": {
+        "file": "assets/posters/ME03/poster-flux2-artwork.png",
+        "sha256": "f168f308c04d3cfd617d49378ae74ebc3bb5ad9ccb6fb6fbc8e1f01dcd1a065f"
+      },
+      "full_preview": {
+        "file": "tmp/poster-workspaces/ME03/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "725ab97673f8ce54326205f90e67bd7901190da30d3bfbf55f9dae92007e5974",
+        "actually_viewed": true
+      },
+      "scene_observations": "Terraced green lake scene continuous, three contained subjects. Mega Zygarde tail is covered by purple flower and lower body touches long grass.",
+      "crop_coverage": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/ME03/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "522cb5bfa8528c55fd1373d412819aa6b69a801a2f1b6d17a7668ef78d592dad",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/ME03/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "5789432768cc01c9ef7b389d90d0bda33d15c961d04f3becd5b434a703ce4e11",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/ME03/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "7c819fbe188058c77d912678d75525377f67706984b0d3151a0e68a072c1653c",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/ME03/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "23433462bfe24703108b58eec58237af865b610b4aa507f265a586383e4c0f11",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/ME03/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "c694f06d3b339d5ff98bff4d411a0d2992c42262b0e3098759ea0dbea605dbb8",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/ME03/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "8bf62d23bddcbaccc5a07fbf29ca4aac0fa204819970609899db1b5fc91337f9",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/ME03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "c0d239ae148a779eff77885dcc23b82d019e39cc37daa11772293b0beeaeb786",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/ME03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "080f11cc141a70530bd54da1d6bc269965b6009654a695c548e5355dfb1dfefd",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/ME03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "a0993c7b6d2660be55d6b9dc5705bb5ca1ea183fb470febb545148dfae783c3e",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        }
+      ],
+      "subjects": [
+        {
+          "identity": 495,
+          "source_file": "tmp/poster-workspaces/ME03/sources/cutouts/pokemon_495_snivy.png",
+          "source_sha256": "e7ff61a0daed598a7676b262c56af766e88bcf91764658eeeae615f6f9937549",
+          "source_expected_sha256": "e7ff61a0daed598a7676b262c56af766e88bcf91764658eeeae615f6f9937549",
+          "source_pixel_sha256": "a75f5938c2496b9b044bcb6222aa4bd94fde50b5735370347625fe3a9ee295db",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c1",
+          "output_file": "tmp/poster-workspaces/ME03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "output_sha256": "c0d239ae148a779eff77885dcc23b82d019e39cc37daa11772293b0beeaeb786",
+          "output_actually_viewed": true,
+          "verdict": "pass",
+          "feature_observations": "Snivy half-lidded red eye, pointed snout, yellow collar, pale underside, paired short arms and curved feet plus leaf tail retain source shape and marking arrangement. Outline exposed and shadow follows body/tail."
+        },
+        {
+          "identity": 722,
+          "source_file": "tmp/poster-workspaces/ME03/sources/cutouts/pokemon_722_rowlet.png",
+          "source_sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36",
+          "source_expected_sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36",
+          "source_pixel_sha256": "2e6530175cdf2ef2877c923dd19fe4ff967c72eba9d7ef2c495684acc59e425b",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c2",
+          "output_file": "tmp/poster-workspaces/ME03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "output_sha256": "080f11cc141a70530bd54da1d6bc269965b6009654a695c548e5355dfb1dfefd",
+          "output_actually_viewed": true,
+          "verdict": "pass",
+          "feature_observations": "Rowlet paired oval eyes and white face discs, two-tone beak, green bow leaves, tucked wings, gray belly and two split orange feet match source. Beak seam is slightly rough but no missing anatomical part; full oval silhouette clear."
+        },
+        {
+          "identity": {
+            "pokemon_id": 718,
+            "poster_subject": {
+              "official_artwork_id": 10301,
+              "source": "pokeapi_official_artwork"
+            }
+          },
+          "source_file": "tmp/poster-workspaces/ME03/sources/cutouts/pokemon_718_artwork_10301_mega_zygarde.png",
+          "source_sha256": "33261872ff2adb38b60f19d6f18a34681555e4243ff4c2ca5f367e9ddd976b55",
+          "source_expected_sha256": "33261872ff2adb38b60f19d6f18a34681555e4243ff4c2ca5f367e9ddd976b55",
+          "source_pixel_sha256": "b46d221140831a0b2a04803a5b4388d35f26ba3c1f14706c479007b06533bd0b",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c3",
+          "output_file": "tmp/poster-workspaces/ME03/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "output_sha256": "a0993c7b6d2660be55d6b9dc5705bb5ca1ea183fb470febb545148dfae783c3e",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Exact Mega Zygarde reference (718, official artwork 10301) has crisp white hexagon/ring markings down green torso, patterned hanging lower body and dark facial elements. Output torso dissolves into green-white streaks, losing ring geometry and body segmentation; tiny head/arms merge into black knot. Blue cannon-face accents absent and purple flower occludes curled tail. Major form/marking failure."
+        }
+      ]
+    },
+    {
+      "asset_key": "ME04",
+      "verdict": "reject",
+      "master": {
+        "file": "assets/posters/ME04/poster-flux2-artwork.png",
+        "sha256": "4206d994cf6cf049fed81817b4d54106e5744999032cf6e33215792ff054e434"
+      },
+      "full_preview": {
+        "file": "tmp/poster-workspaces/ME04/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "0dda42fb67b302efe58de69e220c2b128476512ab5ad519fe3af2cdcb7164a50",
+        "actually_viewed": true
+      },
+      "scene_observations": "Sunset storm canyon continuous with exact three subjects; Ho-Oh fully clear, Chespin feet merge slightly into short grass. No card-edge clipping.",
+      "crop_coverage": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/ME04/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "34f87fcbc8e1955907ab0d34e2fd3c9f7b69ab40713a96b7317a1631811bb742",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/ME04/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "f0f24c2ce8bb037cf1840b383e77918fa1f0440d1bfd8677ef7549da4c9be48a",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/ME04/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "dc4c75d96f77b0dca669d4658171a920080e247a2f1d9a8b7bd3b9985c3bfd27",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/ME04/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "78c7aa127b8fa89b127588b4fda4e2849b317dab08901f366ff67fd9c4920803",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/ME04/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "9610f1b9c3e5a6cf90a33703eb3ea534527d6dc12b09b99e73ad095e16468fdf",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/ME04/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "5727f387b5113d55599e3d202e0e947552de0e6e5ef9dbd4f9ee1f23ea92b0bc",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/ME04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "d46f0659ee9ea005c9a827be0e4e5280735e40f2a63218f4efe1718070f09674",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/ME04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "ab200c2febe3ad84f16f01f1533334b7dec4b75a6675f39430979079001ff2c8",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/ME04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "b6fb2365ff4609c2741092d6280ab4efc1be5fe7c52b31c683d38dbee9674b24",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        }
+      ],
+      "subjects": [
+        {
+          "identity": 650,
+          "source_file": "tmp/poster-workspaces/ME04/sources/cutouts/pokemon_650_chespin.png",
+          "source_sha256": "565272048cd8eeb2b524d597da6805dbdff28c313bc5346181f1859041320ee7",
+          "source_expected_sha256": "565272048cd8eeb2b524d597da6805dbdff28c313bc5346181f1859041320ee7",
+          "source_pixel_sha256": "2d476961e61fcbfcad17257f451779d702695af3461f35c85cf33b2c13e95974",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c1",
+          "output_file": "tmp/poster-workspaces/ME04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "output_sha256": "d46f0659ee9ea005c9a827be0e4e5280735e40f2a63218f4efe1718070f09674",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Chespin five head spikes, cheek triangles, arms and orange-tipped tail retained. Large single white upper tooth becomes thin broken mouth streak; orange nose gains distorted dark subdivisions. Smooth white foot caps become multiple claw-like grooves/tips, unlike source."
+        },
+        {
+          "identity": 250,
+          "source_file": "tmp/poster-workspaces/ME04/sources/cutouts/pokemon_250_ho_oh.png",
+          "source_sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274",
+          "source_expected_sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274",
+          "source_pixel_sha256": "27c1eb01dc8b91b25c89dd2c948aafa26722d2b563e8c00728926b10ff077f4c",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c2",
+          "output_file": "tmp/poster-workspaces/ME04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "output_sha256": "ab200c2febe3ad84f16f01f1533334b7dec4b75a6675f39430979079001ff2c8",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Ho-Oh loses green neck band entirely. Crown again flattened into wedge, visible red eye replaced by black/white speck; tail fan shortened with broad white rounded ends rather than source feather profile. Wings and two feet survive but defining face/neck/crown fail."
+        },
+        {
+          "identity": 653,
+          "source_file": "tmp/poster-workspaces/ME04/sources/cutouts/pokemon_653_fennekin.png",
+          "source_sha256": "b638e094ee06adcec959aad2898ce93f8c5fda88feba9c9158d1f16c026c07dd",
+          "source_expected_sha256": "b638e094ee06adcec959aad2898ce93f8c5fda88feba9c9158d1f16c026c07dd",
+          "source_pixel_sha256": "48ba52540c9e8d073b492d22e323efbb1436e9fa0128da6f9a301c32b6ec56a3",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c3",
+          "output_file": "tmp/poster-workspaces/ME04/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "output_sha256": "b6fb2365ff4609c2741092d6280ab4efc1be5fe7c52b31c683d38dbee9674b24",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Fennekin source black nose is changed to orange striped snout, and a conspicuous pale rectangular lobe appears under chin absent in reference. Red eye contains fractured highlight/pupil pattern. Ear fur, yellow body and red-tipped tail retained, but face anatomy fails."
+        }
+      ]
+    },
+    {
+      "asset_key": "ME05",
+      "verdict": "pass",
+      "master": {
+        "file": "assets/posters/ME05/poster-flux2-artwork.png",
+        "sha256": "3120f1f07526c80d74f5cd83aa6bbb09dbc256e423f4d1c3c7ee3ecbf8f95732"
+      },
+      "full_preview": {
+        "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "95cac7f042a8bd7b8947733a51a0c94e72b7349f726664f427393f4dcbc77aa5",
+        "actually_viewed": true
+      },
+      "scene_observations": "Moonlit mountain river coherent across all nine cells. Exactly three subjects, all contained and complete with visible shadows. Marshadow head-plume tip is tangent to distant rock but remains legible; no foliage obscures defining parts.",
+      "crop_coverage": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "88ce9d2bb95bfd8a6a41a2d4ec4b8b8a7446a5321f8c2f8485ebc19d286b27cd",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "c3d3285eae393e089916040527f46d21a8e48f1beb5a1bbabb907eb6b9b287df",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "39b95d27feb51d105e2ac2cf720079924fe32b9f7ee69aa6ecbf10a81e06efaf",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "c3efdc3d461e284b8451a03d7fc2adec775f726600497f596a8e6badfb463d1c",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "f5588be32939076162e2a33008022b3b5861e14aa7bbc717a705959f971bd7d1",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "a7e36640507dd8b422178f00aff4dbe7a059b453403be7bf5e790b0683338c10",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "bd6ee274c3e65b6ba2dda6c0b5894a2711a72eff97bc96e84c0aabc2331ffd01",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "fd6a81cca2b078e5856876dcdb7a26d1fd26c89bb614041ec55c9f66b5f1d4be",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "c348ef3aac1e140603b9e3eb4e53eb2b4840f58ae7f42c166c3d2f52141aa61e",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        }
+      ],
+      "subjects": [
+        {
+          "identity": 728,
+          "source_file": "tmp/poster-workspaces/ME05/sources/cutouts/pokemon_728_popplio.png",
+          "source_sha256": "3bfa3104b894f212985122732497b17c78979c6bc9304bd7396e781677f2d7a3",
+          "source_expected_sha256": "3bfa3104b894f212985122732497b17c78979c6bc9304bd7396e781677f2d7a3",
+          "source_pixel_sha256": "287968b7e4bae522bafd0cdb43e354b191ed55734c533298a0104ae7aff138d3",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c1",
+          "output_file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "output_sha256": "bd6ee274c3e65b6ba2dda6c0b5894a2711a72eff97bc96e84c0aabc2331ffd01",
+          "output_actually_viewed": true,
+          "verdict": "pass",
+          "feature_observations": "Popplio retains pink ball nose, visible oval eye, two whisker lines, open mouth/tongue, paired ear flaps, blue ruff, two front flippers each with two white stripes, and both rear flippers. All tips exposed and seated silhouette coherent."
+        },
+        {
+          "identity": 877,
+          "source_file": "tmp/poster-workspaces/ME05/sources/cutouts/pokemon_877_morpeko.png",
+          "source_sha256": "897a6b183f7e57c17be9db7979f299cccb386b0169e3961fba34244cfbe33c31",
+          "source_expected_sha256": "897a6b183f7e57c17be9db7979f299cccb386b0169e3961fba34244cfbe33c31",
+          "source_pixel_sha256": "9b6984fb8ce7a463c8ce5cb30f6d62ac2c7006a50cd8d033ab2f5749fa3f7329",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c2",
+          "output_file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "output_sha256": "fd6a81cca2b078e5856876dcdb7a26d1fd26c89bb614041ec55c9f66b5f1d4be",
+          "output_actually_viewed": true,
+          "verdict": "pass",
+          "feature_observations": "Morpeko Full Belly form retains left brown/right charcoal panels with jagged yellow center, two ear lobes each, round eyes, pink cheeks, one upper tooth, two arms and feet, and held pale seed. Tooth slightly rounded but present; outlines complete and clear."
+        },
+        {
+          "identity": 802,
+          "source_file": "tmp/poster-workspaces/ME05/sources/cutouts/pokemon_802_marshadow.png",
+          "source_sha256": "4ef2e2ff9af561949c7e315b9b266e561b8ba30c07a906240aa2ba177035ed41",
+          "source_expected_sha256": "4ef2e2ff9af561949c7e315b9b266e561b8ba30c07a906240aa2ba177035ed41",
+          "source_pixel_sha256": "d51971a04eb0525195db56095d36281e6b28a1cd640a9e12694fea723594f385",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c3",
+          "output_file": "tmp/poster-workspaces/ME05/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "output_sha256": "c348ef3aac1e140603b9e3eb4e53eb2b4840f58ae7f42c166c3d2f52141aa61e",
+          "output_actually_viewed": true,
+          "verdict": "pass",
+          "feature_observations": "Marshadow retains two curled side plumes and central head plume, black eye surrounds, yellow/orange nested eye markings, small mouth, ruff, two mitten arms with oval upper marks, paired short legs and trailing ground-shadow tail. No missing lobes or introduced digits; physical crop contains complete form."
+        }
+      ]
+    },
+    {
+      "asset_key": "MEP",
+      "verdict": "reject",
+      "master": {
+        "file": "assets/posters/MEP/poster-flux2-artwork.png",
+        "sha256": "25bf253bd104c6f62db18dee2239bbd316a8158ec07083a5983cdfbf282d191d"
+      },
+      "full_preview": {
+        "file": "tmp/poster-workspaces/MEP/comfyui_poster/promotion/poster-flux2.png",
+        "sha256": "27d4458f9adefe4727c689ade51044d04e42c6042d33324a79ce6bfcb827a9bd",
+        "actually_viewed": true
+      },
+      "scene_observations": "Sunny grassland/standing-stone panorama continuous; exact three subjects but tall grass hides foot boundaries, especially Bulbasaur/Charmander. No card-edge clipping.",
+      "crop_coverage": [
+        {
+          "cell": "r1c1",
+          "file": "tmp/poster-workspaces/MEP/comfyui_poster/promotion/poster-flux2-cards/card_r1_c1.png",
+          "sha256": "5035391510cc2d06029bb79d44fc542d22b3a4a884291b0b15213a2ecb82b59c",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c2",
+          "file": "tmp/poster-workspaces/MEP/comfyui_poster/promotion/poster-flux2-cards/card_r1_c2.png",
+          "sha256": "35910b488b6b2eae69d2c94afc453def1bb147db7d308e19eca46c54d103d6a7",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r1c3",
+          "file": "tmp/poster-workspaces/MEP/comfyui_poster/promotion/poster-flux2-cards/card_r1_c3.png",
+          "sha256": "d348fb4376897360dbad945c54cb2dbac826b6d05699cd33673b080650b84605",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c1",
+          "file": "tmp/poster-workspaces/MEP/comfyui_poster/promotion/poster-flux2-cards/card_r2_c1.png",
+          "sha256": "fc8fdd1a90b18ca3918efec83479cec8e79c7c73af50ebe9bd623c944d54f3a7",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c2",
+          "file": "tmp/poster-workspaces/MEP/comfyui_poster/promotion/poster-flux2-cards/card_r2_c2.png",
+          "sha256": "6c9a67b93d550df690c7ea7479975fb562b9451b54ea6e65fc57058d34da6d73",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r2c3",
+          "file": "tmp/poster-workspaces/MEP/comfyui_poster/promotion/poster-flux2-cards/card_r2_c3.png",
+          "sha256": "7ba6b879cf8c6fb1dc0391e9aa15ba6b26a7114df64deece052d6c0272b93a81",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c1",
+          "file": "tmp/poster-workspaces/MEP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "sha256": "add51c78952742787714166b8fb212d8facd32745a7a45b7421c40123babcfe0",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c2",
+          "file": "tmp/poster-workspaces/MEP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "sha256": "8ed5706e04161912724404425567db79b65531f30624062b1637cd064a73db50",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        },
+        {
+          "cell": "r3c3",
+          "file": "tmp/poster-workspaces/MEP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "sha256": "048bb4b01be7896b346d08e41e13b744081083a05af966d50286c2973b48cb27",
+          "actually_viewed": true,
+          "dimensions": [
+            750,
+            1050
+          ]
+        }
+      ],
+      "subjects": [
+        {
+          "identity": 888,
+          "source_file": "tmp/poster-workspaces/MEP/sources/cutouts/pokemon_888_zacian.png",
+          "source_sha256": "f36c2b196763a2c3389ee00b481b534b94d87907d81c0b0fd2dcf5487db2a533",
+          "source_expected_sha256": "f36c2b196763a2c3389ee00b481b534b94d87907d81c0b0fd2dcf5487db2a533",
+          "source_pixel_sha256": "60ed070f524f35d74e85ccdd0103896aa9f49fe9f2a1f774a502b482a68823cd",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c1",
+          "output_file": "tmp/poster-workspaces/MEP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+          "output_sha256": "add51c78952742787714166b8fb212d8facd32745a7a45b7421c40123babcfe0",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Zacian Hero form retains four legs, pink mane/tail and blue long chest fur. Source yellow eye becomes pale/indistinct and braided pink ropes under body flatten into one wavy band; one of the paired pale diagonal flank marks disappears. Rear foot ends partly buried in grass. Defining eye/markings fail."
+        },
+        {
+          "identity": 1,
+          "source_file": "tmp/poster-workspaces/MEP/sources/cutouts/pokemon_001_bulbasaur.png",
+          "source_sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a",
+          "source_expected_sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a",
+          "source_pixel_sha256": "f96cfeddc294c4efbbdf1b35cd816341d950e3051dec2128c03f652448b04d10",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c2",
+          "output_file": "tmp/poster-workspaces/MEP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+          "output_sha256": "8ed5706e04161912724404425567db79b65531f30624062b1637cd064a73db50",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Bulbasaur loses small square and triangular forehead/face spots, leaving only large upper patch. Upper fangs no longer clear. Tall grass obscures rear foot and partially front claws, preventing confirmation of complete feet. Bulb and red eyes retained but markings/boundaries fail."
+        },
+        {
+          "identity": 4,
+          "source_file": "tmp/poster-workspaces/MEP/sources/cutouts/pokemon_004_charmander.png",
+          "source_sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+          "source_expected_sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+          "source_pixel_sha256": "84b721fa96a4480ee20afd28765c279e15d45b0f73c13f74c7988cf06a3b68df",
+          "source_file_hash_verified": true,
+          "source_actually_viewed": true,
+          "cell": "r3c3",
+          "output_file": "tmp/poster-workspaces/MEP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+          "output_sha256": "048bb4b01be7896b346d08e41e13b744081083a05af966d50286c2973b48cb27",
+          "output_actually_viewed": true,
+          "verdict": "reject",
+          "feature_observations": "Charmander retains blue eyes, pale belly, long flame tail, two arms and legs. Open mouth loses most source teeth and one nostril; grass obscures both sets of foot claws, while a diagonal blade crosses tail base. Complete clean anatomy not retained."
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "target_counts": {
+      "uncertain": 1,
+      "reject": 12,
+      "pass": 1
+    },
+    "subject_counts": {
+      "uncertain": 3,
+      "pass": 9,
+      "reject": 30
+    }
+  }
+}

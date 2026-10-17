@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-23",
+  "decision": "accepted_exact_29_panorama_artwork_candidates",
+  "human_approval": true,
+  "human_feedback_verbatim": "Die Anzahl der Finger sind immer mal wieder ein kleines Problem - vor allem, wenn sie nur durch eine durch Striche geteilte Hand dargestellt werden. Aber in den konkreten Fällen sind sie für mich alle aktuell unproblematisch und hiermit abgenommen!",
+  "accepted_scope": "The 29 exact artwork variants shown in the collected gallery, including the disclosed minor finger/hand line differences, are accepted as artwork only.",
+  "gallery": {
+    "path": "docs/reviews/2026-09-22-panorama-batch-gallery.md",
+    "sha256": "90c8625ad6078570e98dd2cb77d5ebf28a7dfd7bed9561a594096756f8362d0b"
+  },
+  "evidence": {
+    "path": "docs/reviews/2026-09-22-panorama-batch-evidence.json",
+    "sha256": "2854fdbf2502e30fccf6a5c85b89ccf1246d7394d6cbe1f207f9255c41f8999b"
+  },
+  "candidate_count": 29,
+  "candidates": [
+    {
+      "review_id": "P05",
+      "scope": "Pokedex/sections/gen2",
+      "variant": "p05-source-detail-20260922-d",
+      "master_sha256": "ed0b8e1934588d4a7617c5821dcae835bad9f5bc757bc72e7fc1133bfa81cf82",
+      "preview_sha256": "98f34818596db99678912b8224e7d9c7f398436186f615cf078c6d0152cd54fd"
+    },
+    {
+      "review_id": "P07",
+      "scope": "Pokedex/sections/gen4",
+      "variant": "p07-batch-20260922-b",
+      "master_sha256": "6cb096641b830851e87428c9a8d3825b9dcf016818f69ead53a5c7121f92062c",
+      "preview_sha256": "9efc848f2a6e26c601cd5cbcaca2d28659d19ccca4b463026f2b251c543d3ba9"
+    },
+    {
+      "review_id": "P08",
+      "scope": "Pokedex/sections/gen5",
+      "variant": "p08-batch-20260922-a",
+      "master_sha256": "53cbd5a3f6a91e1ef0725e9e8ac872387e1248df602cdefecb30a8a39ecd29c9",
+      "preview_sha256": "dfc62e9d2bab3860ee00c4c0e49f5289a3c29894ab6596856e97723f2d83d498"
+    },
+    {
+      "review_id": "P09",
+      "scope": "Pokedex/sections/gen6",
+      "variant": "p09-batch-20260922-a",
+      "master_sha256": "e60684632ceb0bfad55d394706c36a026e19dba025f25eb028cdf684d32ba4ef",
+      "preview_sha256": "ad8e12d34f7caa84c97c903ec87d05f9ae0fcdd9a97b3ca7ec0eb85195b70553"
+    },
+    {
+      "review_id": "P11",
+      "scope": "Pokedex/sections/gen8",
+      "variant": "p11-batch-20260922-a",
+      "master_sha256": "e7cd202e96cc577db36b370f5171cfed98b4698da3f67ca714bb438830eb6d05",
+      "preview_sha256": "5eb850050f06ad52f5223ce7ad19929f87fa89e45267e5a5b6c1f7adaf86ea62"
+    },
+    {
+      "review_id": "P12",
+      "scope": "Pokedex/sections/gen9",
+      "variant": "p12-batch-20260922-a",
+      "master_sha256": "3669378fb6c7530a82a45b1c3cb573525ac7912c6ff76db9f0a8ba291da83c53",
+      "preview_sha256": "4410c7a68f2d20f73e008583331412aa4367a2de0c86524bcf57ddc423af7f09"
+    },
+    {
+      "review_id": "P13",
+      "scope": "ExGen1/sections/normal",
+      "variant": "p13-batch-20260922-a",
+      "master_sha256": "d3a9bea00447de6c0df558f6979681f49e86f5392ba25b3ab087e05fefb05557",
+      "preview_sha256": "de1aa0c07614f7a7045adc783f48a4e536ca9360e46c7581c4762e3f7a9eed06"
+    },
+    {
+      "review_id": "P14",
+      "scope": "ExGen2/sections/normal",
+      "variant": "p14-batch-20260922-b",
+      "master_sha256": "a2a39bedce61820387039aa528039890326ed7bc6ef032bdb7af164e1a0f91c4",
+      "preview_sha256": "fd6f546b1c2a25d29dffa6108aa4b6dd8c6f4a30151c5f3b90d949d141a9c5a7"
+    },
+    {
+      "review_id": "P17",
+      "scope": "Base3",
+      "variant": "p17-batch-20260922-b",
+      "master_sha256": "6377efa79e83fe2bd706017a41667db2d6619441d808c1cc3f71644974f33bfd",
+      "preview_sha256": "531fd535b11d1783b94797711a5d7ac50cbd521dc096e58327fa51bbab6fbfa9"
+    },
+    {
+      "review_id": "P18",
+      "scope": "SV01",
+      "variant": "p18-batch-20260922-b",
+      "master_sha256": "a952cb5ded85f41e32e6e5851c7d43e30e89be56ef42ce99f08c9f813d8ec09f",
+      "preview_sha256": "5f2675a8e43b14659be93e9a96ae7610c3464ecf7870087fd422e67a7a93624b"
+    },
+    {
+      "review_id": "P19",
+      "scope": "SV02",
+      "variant": "p19-batch-20260922-b",
+      "master_sha256": "3cae82d5c3a29b9aaac2503ef0afa266a0ff5085b4d936bc54318bf3395f5bd8",
+      "preview_sha256": "3b4b9e6d285ed4ea625f7a939e39dd959f45db025f1616d1a165a8f0239d3e2f"
+    },
+    {
+      "review_id": "P20",
+      "scope": "SV03",
+      "variant": "p20-batch-20260922-b",
+      "master_sha256": "868dd69b9b6cdf94ee06aaca084e8434a575fde097eac704ccd1846fc7fd14bb",
+      "preview_sha256": "4f31a633a8c90fb4074791baea6bd04c31de1e603e75cdad07b4d219f6cb53e4"
+    },
+    {
+      "review_id": "P21",
+      "scope": "SV03.5",
+      "variant": "p21-batch-20260922-b",
+      "master_sha256": "47ae99820a848f208008befd6c959c3393ed6d4f14f5f453682589299473464a",
+      "preview_sha256": "9e415142105cde7b263a5dc2f5c9d1780d76c8c5359297bea8d6ae1f1c1a1080"
+    },
+    {
+      "review_id": "P22",
+      "scope": "SV04",
+      "variant": "p22-batch-20260922-b",
+      "master_sha256": "1250ba297a9bb68ab116d9f4ccca0efddef52d96442c10d363beb474dcbceb65",
+      "preview_sha256": "6271b0972911778c0f812d875f261e8ce4a9ce974c52542d61e6713ebc4a0d9f"
+    },
+    {
+      "review_id": "P23",
+      "scope": "SV04.5",
+      "variant": "p23-batch-20260922-d",
+      "master_sha256": "cc0931eef931dbc080ca860c9163c0b9ab37965a6cd51853b17731d758f2445e",
+      "preview_sha256": "5effcce58d0b35b1fe6185e269324ae02bb3225f6b232d1a9f45e4b1e37b5dd2"
+    },
+    {
+      "review_id": "P24",
+      "scope": "SV05",
+      "variant": "p24-batch-20260922-b",
+      "master_sha256": "5906999f2cf695791ca67d84c1bce2ed0e15cd134e705410b07c7693fa9c3a88",
+      "preview_sha256": "9ca1de2b2615aa96636894ac52017b17a4a8279b15086ef527765c4ebd29616d"
+    },
+    {
+      "review_id": "P25",
+      "scope": "SV06",
+      "variant": "p25-batch-20260922-b",
+      "master_sha256": "d7e7fa2fe895049eb6d05f92afaaa8aac53046788c3e7b305fd57a5b4f227a67",
+      "preview_sha256": "75a3214f4dd3eed6730f72aeb7583b3c342be521afe00530d1a1ffc01af3ef03"
+    },
+    {
+      "review_id": "P26",
+      "scope": "SV06.5",
+      "variant": "p26-batch-20260922-b",
+      "master_sha256": "06d93ca7eea6d0dd961df3df6122a74e45bacf05785059d9eb5119f21e1baac9",
+      "preview_sha256": "df9a3d231edc872abb9bf29bdbaf24caa32cd086b31590015ce8af63e4c4f6ee"
+    },
+    {
+      "review_id": "P28",
+      "scope": "SV08.5",
+      "variant": "p28-batch-20260922-b",
+      "master_sha256": "ad690494a14b3998a2a9ac86ffc522ce1cf3df84b1db6805dd1d6217c9e121e8",
+      "preview_sha256": "05eae6429782bc72b5f455cd007710d6e9c694d7726db87a91d281fdc5adfa8e"
+    },
+    {
+      "review_id": "P29",
+      "scope": "SV09",
+      "variant": "p29-batch-20260922-b",
+      "master_sha256": "f520e268290bcb16638481a7391fdbf6ab46ad28abf6915e74e22de3508f841c",
+      "preview_sha256": "ffbc98c52decb7b057c0c3b40a089a5c40c9191e870a54eb08e9f9134ec292a0"
+    },
+    {
+      "review_id": "P30",
+      "scope": "SV10",
+      "variant": "p30-batch-20260922-b",
+      "master_sha256": "79ef9332fd67b1e368f127f5cce64055d35363705b9fdd395d0f0404c7dadbdd",
+      "preview_sha256": "60cdbce0472611dc63cb5872074562a61a900016ef945d8b91ed2812643182cc"
+    },
+    {
+      "review_id": "P31",
+      "scope": "SV10.5B",
+      "variant": "p31-batch-20260922-b",
+      "master_sha256": "9045ba28e1d0109836e994277376570ab4956f3941b88540b39e490e956b3fca",
+      "preview_sha256": "a780a298d70885b1ba69f0f0c3d7ba782d720a705df156194cdb9df607c03263"
+    },
+    {
+      "review_id": "P32",
+      "scope": "SV10.5W",
+      "variant": "p32-batch-20260922-b",
+      "master_sha256": "953a96ab998cf7106bcdb48b2ccd529d1993843a62b6bee0285b510d7f54bc06",
+      "preview_sha256": "7423de086b1a2293168b266cdd5bc11e86f3143b2df2cea1e872fdde22e21937"
+    },
+    {
+      "review_id": "P33",
+      "scope": "SVP",
+      "variant": "p33-batch-20260922-b",
+      "master_sha256": "63ab635defb8330d01fce514bd14080d40a3715fbd1eb961736ed9b43230c924",
+      "preview_sha256": "66d905d04fdc1a469b58d657d36b6ef9cad8beee24ea6b27287e95e1886e2395"
+    },
+    {
+      "review_id": "P34",
+      "scope": "ME01",
+      "variant": "p34-batch-20260922-b",
+      "master_sha256": "02fad0ecbc18c47b25e9eaf0c542d9928f97fb2529bd3ede305e6bef62948f5d",
+      "preview_sha256": "15e2a542f8ac2635055b27b071895f8b1271eb962e9b0b105f0e1b9677de91e6"
+    },
+    {
+      "review_id": "P35",
+      "scope": "ME02",
+      "variant": "p35-batch-20260922-b",
+      "master_sha256": "994973afcecaa6f4508d8e31c083e7439793b3d2ecb40b90e6535f9c58e9d236",
+      "preview_sha256": "c4da4fddc7df6765b9003513b68f0d8765204f1d08b838e0ef86469302585940"
+    },
+    {
+      "review_id": "P36",
+      "scope": "ME02.5",
+      "variant": "p36-batch-20260922-b",
+      "master_sha256": "34ece29bdea31475c29177fb320e8aa04dee7fcb3faf575abcf725ddeb9e407f",
+      "preview_sha256": "fb912bf1aa0b9176a910c8dc100cf5942bbeb969fa3fa17d1609ee7eca18bd30"
+    },
+    {
+      "review_id": "P38",
+      "scope": "ME04",
+      "variant": "p38-batch-20260922-b",
+      "master_sha256": "ddcaad6b7911534db808ce548dce9e62d3f406d8732138476c827896e228bae2",
+      "preview_sha256": "b6c37d1283259124863bfbc1deee7f39cb146b35b3dc430d552a2c9cbb467dca"
+    },
+    {
+      "review_id": "P39",
+      "scope": "MEP",
+      "variant": "p39-batch-20260922-b",
+      "master_sha256": "88e3a5ef794b6fd3e825758998f288f0662f9c422c7ba6019db71f09ee0b9c42",
+      "preview_sha256": "1c0d034fd00eca18586464580d2a6d20714a909b95ef88056aa6ada2e9bcc660"
+    }
+  ],
+  "not_accepted": [
+    "P16 and P37 rejected render trials",
+    "P01 Hopplo shadow and P02 remaining subject decisions",
+    "P06 identity/detail uncertainty",
+    "Promo selection, counts and card numbers for SVP and MEP",
+    "PDF print layouts, data correctness, full v10 release"
+  ],
+  "production_promotion": "pending_separate_technical_validation",
+  "released_pdfs_changed": false
+}

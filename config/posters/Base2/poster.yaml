@@ -10,6 +10,12 @@ text_cells:
     column: 2
     max_width_ratio: 0.92
     max_height_ratio: 0.68
+text_content:
+  mode: set_summary
+  release_date_overrides:
+    de:
+      value: "2000-06"
+      precision: month
 pdf:
   enabled: true
   artwork_file: poster-flux2-artwork.png
@@ -31,10 +37,10 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260764516
+    reference_mode: spatial_source_detail_joint
+    seed: 260924002
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
   scene:
@@ -49,6 +55,20 @@ artwork:
     constraints:
     - Keep dense leaves, vines, rocks, and the river in the distance or at the outer edges
       so the protected subject silhouettes remain readable.
+    - Two long broad jungle-grass blades rise from the near left and bottom foreground and pass naturally in front of Pikachu's extended arm and lower belly, as real foreground vegetation would. Keep its face unobstructed and give Relaxo and Evoli equally convincing ground contact.
+  source_details:
+    pokeapi:official-artwork:133:
+      sha256: 4a2657541b849e64f08f25c397cc2156f88eddd7163b86ced4c94050088f2bda
+      traits: >-
+        Match the exact standing Evoli source: warm brown four-legged body with all four feet on the ground, very large pointed ears with dark inner areas, black oval eyes and white highlights, tiny nose and a subtle closed smile. Preserve the jagged cream neck ruff and its large bushy tail rising to image-right with a cream tip. Do not invent red cheek markings, change it to a seated pose or hide its standing legs.
+    pokeapi:official-artwork:143:
+      sha256: 5f1f27c4be078c17521492ac7970d95d92200fa17b8c9696ac8d6ee0e0f4cc45
+      traits: >-
+        Match the exact seated Relaxo source: broad teal-blue body, pointed ears, closed narrow eyes, cream face and enormous round cream belly. Preserve the continuous curved smiling mouth and its two separate small upward white teeth. Both arms extend to the sides and show their small white claws. Both large forward-facing feet retain the brown oval paw pads and exactly the distinct white source toe claws, without extra spikes.
+    pokeapi:official-artwork:25:
+      sha256: bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f
+      traits: >-
+        Match this exact cheerful Pikachu source pose: two long black-tipped ears, two round dark eyes with white highlights, red cheeks, an open pink mouth, the image-left arm stretched outward, the other bent toward the chest, two small standing feet and one zigzag yellow tail with its brown base. Keep the face and all limb contours source-close. Two long jungle grass blades may naturally pass in front of its extended arm and lower belly; they are foreground scenery, not new body outlines.
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns
@@ -76,5 +96,5 @@ title_logo:
     de: logos/logo-de.png
     en: logos/logo-en.png
     fr: logos/logo-fr.png
-    es: logos/logo-es.png
-    it: logos/logo-it.png
+  sources:
+    de: https://assets.tcgdex.net/fr/base/base2/logo.png

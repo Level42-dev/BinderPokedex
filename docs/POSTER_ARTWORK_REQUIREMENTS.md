@@ -8,7 +8,21 @@ accepted assets are listed in
 edit-training experiment is specified in
 [Poster Artwork Integration LoRA](POSTER_ARTWORK_TRAINING.md).
 
-Last reviewed: 2026-08-11
+Last reviewed: 2026-09-22
+
+**Historical visual baseline (12 September):** The source-by-source re-audit
+supersedes the older artwork acceptance statements below: 41 of 42 installed
+panoramas were rejected, only ME05 passed. Their historical files remain, but
+the 41 approval flags have been revoked. See the
+[complete audit](reviews/2026-09-12-panorama-audit.md). The operator has approved
+an ExGen3-first source-locked grounding prototype; implementation and technical
+tests do not reinstate any visual approval. On 14 September the operator
+reaffirmed genuine one-shot generation as the preferred correction path and
+reserved the multi-stage approach for a separately justified last resort. The
+ExGen3-only restart and revised occlusion acceptance are recorded in
+[the bounded comparison](reviews/2026-09-14-exgen3-oneshot-restart.md).
+Later exact-image acceptances and scoped technical adoptions supersede this
+baseline only for their own artifacts; see [current status](POSTER_ARTWORK_STATUS.md).
 
 ## Decisions
 
@@ -17,16 +31,16 @@ Last reviewed: 2026-08-11
 | Default binder format | `standard_3x3` on A4 portrait at physical card size |
 | Wide layouts | Keep `wide_4x3` and `wide_4x4` at physical card size; paginate their cutouts across A4 and reserve A3 for a continuous one-sheet print |
 | Generation timing | Explicit optional post-fetch step, before PDF generation |
-| Generation host | The operator explicitly chooses local Apple MPS or an isolated remote Apple Silicon worker before GPU work; remote endpoints and credentials stay outside tracked files |
+| Generation host | Reuse the active workspace's complete private renderer marker; ask local/remote only for a fresh, incomplete or unreachable configuration. Remote endpoints and credentials stay outside tracked files |
 | PDF behavior | Consume only promoted local artwork; never launch ComfyUI implicitly |
 | Cover fallback | Use the promoted poster as the section start page; keep the existing section cover only when no promoted poster is enabled or the build explicitly skips posters |
 | Poster presentation | Render enabled posters as cuttable physical cards by default; optionally render the same localized poster as one continuous physical-grid-sized image centered on its PDF page |
 | Generator | FLUX.2 `joint_scene` remains the mode for new candidates with avoidance-first `individual_spatial_joint` v9 as the default; earlier reviewed contracts remain reproducible |
-| Fallback | FLUX.2 `identity_lock` remains explicitly selectable when a one-shot cannot pass identity or placement review |
+| Fallback | FLUX.2 `identity_lock` remains available only as an explicitly justified last resort after documented one-shot investigation; individual failed candidates do not trigger it automatically |
 | Prompt ownership | Set-specific creative briefs in one catalog plus one centrally generated identity, placement, depth, and safe-area contract |
 | Character identity | Supplied Official Artwork is the authority for form, stature, anatomy, silhouette, pose, color, and markings |
 | Form identity | Card/cover imagery and poster subjects are separate; Mega, Primal, X/Y, regional, and other forms keep their exact allowlisted Official Artwork identity |
-| Promotion | Human visual review plus deterministic validation is mandatory |
+| Promotion | Explicit, hash-bound visual review plus deterministic validation is mandatory; record whether the reviewer is human or agent, without claiming agent review is operator approval |
 | Missing poster | A scope without an enabled promotion uses its normal cover path; enabled-but-missing promoted artwork is an error; `--skip-poster` explicitly forces the cover-based path |
 | CI boundary | Pull requests build and validate a complete release candidate without publishing; only `v*` tags may publish |
 | Rejected experiments | Anima, FLUX.1 Canny, Qwen, SDXL, DreamO, direct edit, and direct inpaint remain evidence in the log and Git history, not live production options |
@@ -45,7 +59,7 @@ gates at the same time:
 | Coherent scene depth | Hard | Shadows and ground contact agree. A connected landscape element either stays clear of a character or keeps one physically plausible front/behind relationship for its entire visible intersection; ending at a silhouette or switching depth around it fails |
 | Deterministic print output | Hard | Text-free output reaches the exact configured 300-dpi dimensions through deterministic resampling; typography, logo, slicing, and PDF use remain deterministic |
 | Set-specific scene quality | Preferred | The result is attractive, recognizable for the scope, and preserves the requested text-safe regions |
-| Foreground intersections | Avoid by default | The one-shot plans the known character bounds as naturally low, continuous ground without camera-near scenery crossing a silhouette. A visible crossing is no longer requested; an accidental crossing still fails unless its depth is coherent |
+| Foreground intersections | Desired when scene-appropriate | Existing near-camera landscape elements may cover small exterior parts with consistent depth. This is not a character-identity change. Preserve defining features for review; do not invent unrelated vegetation, hide malformed anatomy, truncate plants at silhouettes, or force every scene to contain an overlap. The checked-in avoidance-first prompt is historical behavior pending a reviewed replacement |
 
 Minor print-scale simplification of a non-defining line may be accepted only
 after direct comparison at final card size. A changed body-part count, facial
@@ -53,7 +67,12 @@ structure, defining contour, marking, form, or gross proportion always fails.
 
 `identity_lock` uses a different hard gate: every fully opaque source pixel
 must be byte-identical after generation. Its weaker local terrain interaction
-is the accepted cost of exact identity preservation.
+is a known limitation of the historical two-pass contract, not sufficient
+acceptance for the new version-10 correction. The explicitly selected
+`grounded_source_pixels` prototype must additionally preserve every
+nonzero-alpha source pixel and all pixels outside reviewed ground masks,
+produce convincing contacts/shadows, and pass the same full source/raw/print
+visual review. No broad upper-context blend is used in that new contract.
 
 ## Experiment and decision rule
 
@@ -69,6 +88,10 @@ is the accepted cost of exact identity preservation.
    into an alleged one-shot.
 
 ## Architecture evidence
+
+The following acceptance descriptions are historical experiment records.
+Current asset approval is determined by the September re-audit and the linked
+status document, not by these older rollout summaries.
 
 | Architecture | Final scene jointly generated | Identity | Card containment | Scene integration | Role |
 | --- | --- | --- | --- | --- | --- |
@@ -93,17 +116,17 @@ is the accepted cost of exact identity preservation.
 | `PA-005` | Full prompts cannot drift per set | Done | Creative scene is scope-specific; technical requirements are generated centrally |
 | `PA-006` | Poster preparation is an optional post-fetch phase | Done | One-scope and batch initialization exist and preserve reviewed manifests |
 | `PA-007` | Generation follows the scope contract | Done | Runner reads FLUX.2 model, mode, reference topology, seed, steps, generation size, output method, and dpi from `poster.yaml`; explicit overrides are recorded |
-| `PA-008` | Figures remain authentic | Done with human gate | One-shot promotion binds review to raw/print pixels and exact source identities; fallback enforces exact opaque pixels |
+| `PA-008` | Figures remain authentic | Reopened by source audit | Technical review binding exists, but 41 installed panoramas failed direct source comparison. The approved grounding prototype adds nonzero-alpha protection; full visual acceptance remains mandatory |
 | `PA-009` | Artwork matches typography and card cuts | Done | Prompt safe cells and subject placement derive from the same physical layout used by finalization and slicing |
 | `PA-010` | Only promoted artwork enters a normal PDF | Done | `pdf.enabled` plus a local tracked promoted file gates inclusion |
 | `PA-011` | Poster use is optional per build | Done | `--skip-poster` bypasses poster discovery and writes a separate build |
 | `PA-012` | Every promotion is reproducible and auditable | Done | Provenance records model, prompt, source, references, workflow, review/audit, and output hashes |
 | `PA-013` | Aggregate sections can own separate posters | Done | `posters.yaml` routes isolated leaf manifests and replaces each matching cover with its enabled poster |
 | `PA-014` | 4×3/4×4 cutouts print on the standard A4 renderer | Done | A 4×3 renderer keeps source columns 1–3 together on page one and places source column 4 vertically in page two's first column; cutting guides remain around empty cells |
-| `PA-015` | Aggregate variants receive section-specific scenes and curated subject/reference sets | Done | All 15 current aggregate sections have exact catalog coverage and reviewed enabled promotions |
+| `PA-015` | Aggregate variants receive section-specific scenes and curated subject/reference sets | Configuration done; artwork review reopened | All 15 aggregate sections have exact catalog coverage and installed promotions; their revoked visual approvals must be replaced |
 | `PA-015A` | Variant subjects retain their exact form | Done | Selection, cutouts, planner, fingerprints, promotion, and validation bind exact Official Artwork identity |
 | `PA-016` | Post-fetch orchestration detects stale inputs | Done | Read-only planner separates expensive generation drift from cheap overlay/routing changes |
-| `PA-017` | Joint generation can provide natural grounding without losing identity or card safety | Done for 41 promoted scopes | Thirty-nine avoidance-first v9 bundles, the reviewed Primal landscape-first individual-spatial bundle, and the reviewed mask-free `SV04.5` spatial-v7 bundle pass identity, card, scene, exact-count, and deterministic-output gates |
+| `PA-017` | Generation provides natural grounding without losing identity or card safety | Reopened; scoped corrections in progress | The 12 September baseline passed only ME05. Later exact-image decisions and technical adoptions are listed in Poster Status; no blanket approval follows from renderer tests or a Git checkpoint |
 | `PA-018` | Runtime remains KISS after experiments | Done | Production exposes only FLUX.2 `joint_scene` and `identity_lock`; all three reference topologies use the canonical joint workflow builder and common empty-target sampler path, with no separate experiment entry point |
 | `PA-019` | Pull requests prove a release can be built without publishing | Done | PRs validate promotions, build every PDF/archive/manifest, and upload only a temporary artifact |
 | `PA-020` | Raster card geometry closes exactly on every real canvas | Done | Cumulative physical endpoints drive preparation, finalization, slicing, promotion, and validation |
@@ -111,16 +134,16 @@ is the accepted cost of exact identity preservation.
 | `PA-022` | Poster copy works in every language emitted for its scope | Done | Tests cover all 266 current target/language combinations; aggregate copy is complete in all nine PDF languages and TCG sets follow their advertised language inventory |
 | `PA-023` | A poster carries the semantic information of its preceding cover | Done | Scope JSON is the only semantic copy source. Set posters show localized set name, card count, release date, title/logo, and project identity; aggregate posters show section title, subtitle/region, Pokémon count, description/range, collection title, and project identity. The renderer automatically removes an identical upper/info title, infers supported inline logo tokens, and keeps the cover-only cutting hint/build timestamp as operational metadata |
 | `PA-024` | An enabled poster replaces its preceding cover without removing the fallback path | Done | The renderer emits exactly one section start page: promoted poster when enabled, otherwise the canonical cover; `--skip-poster` explicitly selects covers |
-| `PA-025` | Every current set and subsection is represented in the poster work plan | Done | 41 checked-in manifests cover 26 individual sets and 15 aggregate sections; tests reject missing or stale scene and manifest coverage |
+| `PA-025` | Every current set and subsection is represented in the poster work plan | Configuration done | 42 checked-in manifests cover 27 individual sets and 15 aggregate sections; configuration coverage does not imply visual approval |
 | `PA-026` | A scope with fewer canonical subjects is not padded with duplicates or unrelated forms | Done | Section manifests accept one to the layout column count; two-subject `ExGen2/primal` uses the two outer bottom cards while the normal 3×3 default remains three subjects |
 | `PA-027` | The existing cover path remains available when no poster can be consumed | Done | Missing or disabled poster routes leave the section cover and normal card pages intact; `--skip-poster` bypasses poster discovery before asset loading |
 | `PA-028` | One promoted poster can be emitted either as physical cards or as a continuous page | Done for A4 3×3 | `cards` remains the default with nine 63.5 × 88.9 mm images and cutting guides; `--poster-page-mode full-page` draws one 200.5 × 276.7 mm image centered on A4 without cutting guides and writes a distinct filename |
 | `PA-029` | A learned integration path cannot weaken current identity, layout, depth, or fallback guarantees | In progress | Versioned pair contract, audit tooling, and an immutable aligned teacher-target builder exist; exact canonical source pixels are restored after the teacher pass, every target still needs human integration review, production stays unchanged, and promotion requires an unseen five-fixture comparison against both retained paths |
-| `PA-RW-001` | Artwork generation explicitly supports local or remote execution without storing worker endpoints | Done | Root agent guidance requires the operator choice before GPU work; the linked remote-worker guide uses immutable hash-pinned jobs, private SSH configuration, loopback-only ComfyUI, returned logs/metadata, and the unchanged human promotion gate |
+| `PA-RW-001` | Artwork generation explicitly supports local or remote execution without storing worker endpoints | Done | Root guidance reuses a complete active workspace marker and asks only when needed; immutable hash-pinned jobs, private SSH configuration, loopback-only ComfyUI, returned logs/metadata and explicit visual review remain required |
 | `PA-RW-002` | Remote runtime dependencies and reusable model weights have independent lifecycles | Done | A checksum-pinned standalone bootstrap builds portable Python, locked packages, and ComfyUI entirely below an ephemeral runtime root; `ComfyUI/models` links to an external operator-selected cache, bundles never dereference it, and validated destruction preserves it |
 | `PA-030` | Custom layouts can be generated without changing release assets | Done | The custom-layout workspace command clones manifests and deterministic source inputs below ignored `tmp/`; aggregate workspaces accept explicit per-section fallback Pokémon for complete wide layouts, an optional hybrid mode copies unselected existing promotions, and `BINDER_POKEDEX_POSTER_ASSETS` routes generation, promotion, validation, slicing, and PDF discovery without writing tracked release assets |
 
-## Current production boundary
+## Historical production boundary (before the September re-audit)
 
 - All 41 promoted 3×3 bundles are enabled.
 - All 41 current poster targets are configured, promoted, and enabled.

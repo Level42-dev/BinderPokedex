@@ -1,0 +1,172 @@
+{
+  "review_id": "P40",
+  "scope": "ExGen3/sections/normal",
+  "variant": "p40-source-detail-20260915-b",
+  "reviewed_on": "2026-09-15",
+  "agent_visual_decision": "identity_and_composition_feedback_candidate_not_release_ready",
+  "independent_visual_decision": "reject_oneshot_for_promotion_due_to_layout",
+  "human_approval": "accepted_identity_and_composition",
+  "release_ready": false,
+  "layout_contract_pass": false,
+  "generation": {
+    "encoder": "qwen_3_4b.safetensors",
+    "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
+    "engine": "flux",
+    "generation_megapixels": 2,
+    "mode": "joint_scene",
+    "model": "flux-2-klein-4b.safetensors",
+    "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
+    "output_dpi": 300,
+    "output_method": "lanczos",
+    "reference_mode": "spatial_source_detail_joint",
+    "seed": 260711318,
+    "steps": 4,
+    "vae": "flux2-vae.safetensors",
+    "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
+  },
+  "generation_fingerprint": "d59e101dcaf74b607af80f6c2f8468047b869c737afe1576f4b5fd82ec6815d7",
+  "raw": {
+    "path": "tmp/oneshot-trials/p40-source-detail-20260915-b/retrieved/oneshot-yxrogdpl/output/exgen3__sections__normal_flux2_joint_scene_2mp_seed_260711318_00001_.png",
+    "sha256": "73992687c05670f2b89bcbe41689eb9c8ecd9ee24de3c15a7b43e554ee068cff"
+  },
+  "master": {
+    "path": "tmp/oneshot-trials/p40-source-detail-20260915-b/review/artwork-300dpi.png",
+    "sha256": "0ec6eb54e7e0797021497ade7a624b025b797fe03217117322199413770befa4"
+  },
+  "preview": {
+    "path": "tmp/oneshot-trials/p40-source-detail-20260915-b/review/poster-de.png",
+    "sha256": "39bde4d9e731218e7b626bcd132330497b078d296b112fbd9f653274a0db4e78"
+  },
+  "sealed_creation_evidence": {
+    "path": "tmp/oneshot-trials/p40-source-detail-20260915-b/review/evidence.json",
+    "sha256": "e205cf0d993376e44ab3c91b15e425a5c1bac097bc86b8a66d61490ed2eeff61"
+  },
+  "source_pairs": [
+    {
+      "name": "Koraidon",
+      "card": {
+        "path": "tmp/oneshot-trials/p40-source-detail-20260915-b/review/cards/card_r3_c1.png",
+        "rectangle": [
+          0,
+          2218,
+          750,
+          3268
+        ],
+        "sha256": "3ef6bc9f70baaf323a27f19e4f561b1c9932f2319960fe3789ab1672b02a1eb3"
+      },
+      "source": {
+        "key": "pokeapi:official-artwork:1007",
+        "path": "tmp/poster-workspaces/ExGen3/sections/normal/sources/cutouts/pokemon_1007_koraidon.png",
+        "sha256": "a292ff6c8c43f3f2c2df404ad14fc84e4ba0db33107692068d70e30ea9b44962"
+      }
+    },
+    {
+      "name": "Pikachu",
+      "card": {
+        "path": "tmp/oneshot-trials/p40-source-detail-20260915-b/review/cards/card_r3_c2.png",
+        "rectangle": [
+          809,
+          2218,
+          1559,
+          3268
+        ],
+        "sha256": "baceb6fb7557fc874e3dde1a5b49bbc6d8ea519c333b61cae781018d152c3f4b"
+      },
+      "source": {
+        "key": "pokeapi:official-artwork:25",
+        "path": "tmp/poster-workspaces/ExGen3/sections/normal/sources/cutouts/pokemon_025_pikachu.png",
+        "sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f"
+      }
+    },
+    {
+      "name": "Miraidon",
+      "card": {
+        "path": "tmp/oneshot-trials/p40-source-detail-20260915-b/review/cards/card_r3_c3.png",
+        "rectangle": [
+          1618,
+          2218,
+          2368,
+          3268
+        ],
+        "sha256": "db4b4e99f3be615abd56124dee54fdad6c5b52c432efad27bb37b7ab487d2e93"
+      },
+      "source": {
+        "key": "pokeapi:official-artwork:1008",
+        "path": "tmp/poster-workspaces/ExGen3/sections/normal/sources/cutouts/pokemon_1008_miraidon.png",
+        "sha256": "282add1c4774047944a6c9d377ee0ed739744d2d23bb18ac32133534190a022a"
+      }
+    }
+  ],
+  "directly_viewed_by_controller_and_independent_reviewer": {
+    "raw": true,
+    "full_master": true,
+    "german_preview": true,
+    "all_nine_physical_cards": true,
+    "three_exact_originals": true,
+    "four_prepared_references": true,
+    "complete_prompt": true
+  },
+  "controlled_a_b_comparison": {
+    "changed": [
+      "Only one final scene-layout reminder was added; exact source descriptions, sources and prepared references are unchanged."
+    ],
+    "unchanged": [
+      "seed",
+      "all four prepared reference image hashes",
+      "exact source PNG bytes",
+      "model, encoder and VAE pins",
+      "2-MP generation target and four steps",
+      "one empty target, sampler and decode",
+      "all graph nodes except text node 4",
+      "deterministic 300-dpi print pipeline"
+    ]
+  },
+  "findings": [
+    "Miraidon's two visible lightning tips now terminate inside r3c3 with a visible top gap. All three figures are physically contained, but are larger/higher than the specified small bottom-row source layout.",
+    "Miraidon's electric appendages and chest zigzags are source-close. Some linework/marking contours are interpreted; no new decisive anatomical replacement was found. Pikachu's tiny extended-hand mark is a cosmetic/uncertain detail, not an extra face.",
+    "The academy-like building remains near the scene center rather than the requested outer horizon. This is disclosed composition drift.",
+    "A's initial claim that both lightning tips were cut was overstated: targeted re-view implicates only the image-left tip at the edge; the image-right tip was edge-near but not proved cut. This visual qualification is not full silhouette segmentation."
+  ],
+  "measured_layout_counterexample": {
+    "kind": "selected_violet_glow_pixel_not_full_silhouette_segmentation",
+    "canvas_pixel": [
+      2159,
+      2261
+    ],
+    "rgb": [
+      171,
+      167,
+      212
+    ],
+    "canvas_height": 3268,
+    "pixel_y_percent": 69.19,
+    "specified_subject_top_percent": 75.9,
+    "physical_card_top": 2218,
+    "pixel_vertical_padding": 43,
+    "interpretation": "This measured bright-glow pixel is inside the physical card but above the specified source-layout band. The actual outermost contour/glow is not automatically segmented by this color sample."
+  },
+  "technical_verification": {
+    "canonical_verify_passed": true,
+    "complete_job_log_and_all_outputs_retrieved": true,
+    "nine_pixel_exact_crops_and_300_dpi": true,
+    "installed_masters_unchanged": 42,
+    "prompt_seconds": 62.01
+  },
+  "next_step": "Retain this exact accepted B image unchanged. Resolve technical promotion and print-clearance checks separately; no further P40 generation requested.",
+  "promotion_or_pdf_zip_rebuild": false,
+  "user_decision": {
+    "recorded_on": "2026-09-15",
+    "quote": "P15 Rayquaza ist wirklich sehr knapp. Hie rwürde ich mir noch etwas mehr Platz drumherum wünschen!\nDer Rest passt prima!",
+    "applies_to_master_sha256": "0ec6eb54e7e0797021497ade7a624b025b797fe03217117322199413770befa4",
+    "accepted": [
+      "All three shown identities",
+      "The shown larger cast composition and central building"
+    ],
+    "remaining": [
+      "Canonical technical promotion and final print-clearance checks; no new figure edit requested"
+    ],
+    "scope": "Exact B master and the six card/source hashes in source_pairs; no approval transfers to changed pixels, other images or a release",
+    "fresh_canonical_evidence_verification_passed": true,
+    "preserves_original_agent_findings_and_sealed_creation_evidence": true
+  }
+}

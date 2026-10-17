@@ -2,6 +2,7 @@ import sys
 
 import pytest
 
+from scripts.fetcher.fetch import get_all_scopes
 from scripts.poster_assets import run_comfyui_poster as poster_runner
 from scripts.poster_assets.generation_contract import (
     validate_generation_contract,
@@ -15,6 +16,10 @@ from scripts.poster_assets.generation_options import (
     metadata_from_workflow_options,
     resolve_generation_options,
 )
+
+
+def test_me05_is_a_release_scope():
+    assert "ME05" in get_all_scopes()
 
 
 def test_matching_flux_manifest_drives_workflow_and_canonical_metadata():

@@ -33,13 +33,13 @@ def test_generated_pdf_preserves_cards_and_includes_printable_notice(
     assert len(pdf.pages) == 3  # Cover, original card sheet, printable notice.
     assert "Sample" in pdf.pages[1].extract_text()
     for page in pdf.pages:
-        assert "github.com/Level42-dev/BinderPokedex" in page.extract_text()
+        assert "github.com/DerFlash/BinderPokedex" in page.extract_text()
     notice = pdf.pages[-1].extract_text()
     for expected in (
         "Björn Teichmann", "BinderPokedex Contributors", "CC BY-NC 4.0", "third-party",
         "test-release", "a" * 12, "creativecommons.org/licenses/by-nc/4.0/",
     ):
         assert expected in notice
-    assert "github.com/Level42-dev/BinderPokedex" in pdf.metadata.subject
+    assert "github.com/DerFlash/BinderPokedex" in pdf.metadata.subject
     if generator_kind == "legacy":
         assert generator.page_count == len(pdf.pages)

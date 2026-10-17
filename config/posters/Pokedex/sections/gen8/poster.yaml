@@ -5,10 +5,8 @@ poster_id: gen8
 source:
   scope: Pokedex
   section_id: gen8
-
 layout:
   name: standard_3x3
-
 text_cells:
   title:
     row: 1
@@ -18,28 +16,24 @@ text_cells:
     column: 2
     max_width_ratio: 0.92
     max_height_ratio: 0.68
-
 text_content:
   mode: section_summary
-
 artwork:
   promoted_file: poster-flux2-artwork.png
   provenance_file: poster-flux2-provenance.json
   identity_lock:
     overscan_ratio: 0.04
-    max_protected_start_ratio: 0.70
-    transition_ratio: 0.10
+    max_protected_start_ratio: 0.7
+    transition_ratio: 0.1
     subject_clearance_ratio: 0.02
   scene:
     concept: a detailed Galar upland landscape beneath dramatic weather
-    setting: >-
-      The artwork contains a Galar-inspired green upland with stone walls
-      confined to the distance, rolling moorland, a misty lake, and a tiny
-      brick town silhouette with blank facades below dramatic clouds.
+    setting: The artwork contains a Galar-inspired green upland with stone walls confined to the distance,
+      rolling moorland, a misty lake, and a tiny brick town silhouette with blank facades below dramatic
+      clouds.
     lighting: Broken gold sunlight enters from the upper left through cool clouds.
-    rendering: >-
-      Use detailed trading-card linework, restrained emerald and slate
-      colors, and broad weather-filled depth.
+    rendering: Use detailed trading-card linework, restrained emerald and slate colors, and broad weather-filled
+      depth.
     ground_noun: upland grass
   generation:
     engine: flux
@@ -50,23 +44,47 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260715406
+    reference_mode: spatial_source_detail_joint
+    seed: 260716415
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
-
+  source_details:
+    pokeapi:official-artwork:810:
+      sha256: 0a4b1c0662dd8e0ad7f00bf78c2f958b297bc25c70bbc7273d50b3d39d5de330
+      traits: Match the exact little green Grookey source with its brown ears and face, orange snout,
+        large eyes, green leafy hair tuft, short limbs and slim stick held at the top of the head. Keep
+        the stick separate from its arms.
+    pokeapi:official-artwork:813:
+      sha256: 0099f4bb576966efc872c03c69616f954c8474d12608a2fd7e91304a9d271167
+      traits: Scorbunny must match this exact slender white rabbit in its energetic one-legged kicking
+        pose. Exactly TWO long upright ears with orange tips and pale yellow narrow inner-ear shapes;
+        the yellow shapes are inside those same two ears, never extra ears. Preserve BOTH separate dark
+        eyes with bright white highlights and orange lower iris areas, the pale tan rectangular nose bandage,
+        the tiny orange triangular nose and the open mauve mouth with its prominent SINGLE white upper
+        front tooth. Preserve TWO separate small orange oval marks at the base of the neck, separated
+        by white fur, never a continuous red collar. Preserve the white cheek tufts, both outstretched
+        arms, the raised foot pointing its sole toward the viewer with orange toe divisions and tan sole
+        patch, and the long supporting leg with orange toe tips. Keep exact limb count, pose, thin body
+        proportions, expression and spacing.
+    pokeapi:official-artwork:816:
+      sha256: 162c8c4c870624a42aa81f3859f29542d7d713bffd98bb4b4f7ab79ae9a881fb
+      traits: 'Match the exact pale-blue Sobble source: huge wet-looking eyes, yellow forehead crest,
+        slim arms, narrow separated legs, curled tail and seated source pose. Do not merge a leg into
+        a hand or redraw the eyes as dots.'
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns
   row: bottom
   cutout_source: pokeapi_official_artwork
   fallback_candidates: []
-
 conditioning:
   identity_defaults:
-    neutral_rgb: [226, 224, 211]
+    neutral_rgb:
+    - 226
+    - 224
+    - 211
     canvas_px: 512
     min_subject_px: 150
     max_subject_px: 350

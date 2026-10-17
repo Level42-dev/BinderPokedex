@@ -1,0 +1,44 @@
+scope: 30C
+description: 'TCG Set: 30 Years (30th) - Complete anniversary main set'
+target_file: data/output/30C.json
+pipeline:
+- step: validate_pokedex_exists
+  params:
+    pokedex_file: data/output/Pokedex.json
+- step: load_tcg_set
+  params:
+    source_file: data/source/30th.json
+- step: fetch_tcgdex_set
+  params:
+    set_id: 30th
+    output_file: data/source/30th.json
+- step: enrich_tcg_names_multilingual
+  params:
+    set_id: 30th
+- step: enrich_tcg_cards_from_pokedex
+  params:
+    pokedex_file: data/output/Pokedex.json
+- step: enrich_special_cards
+  params:
+    images_dir: images/special_cards
+- step: transform_tcg_set
+  params:
+    set_id: 30C
+- step: transform_to_sections_format
+- step: enrich_featured_elements
+  params:
+    max_cards: 3
+    force: false
+    cache_dir: data/section_artwork
+    section_featured_card_ids:
+      all:
+      - 30th-028
+      - 30th-066
+      - 30th-071
+- step: save_output
+  params:
+    output_file: data/output/30C.json
+- step: cache_pokemon_images
+  params:
+    cache_dir: data/pokemon_images_cache
+    skip_existing: true

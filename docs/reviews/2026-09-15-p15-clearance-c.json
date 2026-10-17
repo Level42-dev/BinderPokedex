@@ -1,0 +1,279 @@
+{
+  "review_id": "P15",
+  "variant": "p15-clearance-20260915-c",
+  "scope": "ExGen2/sections/mega",
+  "reviewed_on": "2026-09-15",
+  "agent_visual_decision": "rejected_requested_rayquaza_clearance_not_achieved",
+  "human_approval": "not_requested_for_rejected_candidate",
+  "release_ready": false,
+  "layout_contract_pass": false,
+  "generation": {
+    "encoder": "qwen_3_4b.safetensors",
+    "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
+    "engine": "flux",
+    "generation_megapixels": 2,
+    "mode": "joint_scene",
+    "model": "flux-2-klein-4b.safetensors",
+    "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
+    "output_dpi": 300,
+    "output_method": "lanczos",
+    "reference_mode": "spatial_source_detail_joint",
+    "seed": 260736802,
+    "steps": 4,
+    "vae": "flux2-vae.safetensors",
+    "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
+  },
+  "generation_fingerprint_sha256": "eab7005c42a81e8da5a0e9fa4db75eb8aac8ab5dda9793cdbc4672e15d479c49",
+  "raw": {
+    "path": "tmp/oneshot-trials/p15-clearance-20260915-c/retrieved/oneshot-7dep24i2/output/exgen2__sections__mega_flux2_joint_scene_2mp_seed_260736802_00001_.png",
+    "sha256": "edc86206fda9e650ab6204eacd2bdb2f310e88777289f12fa111d6bf410bcc1b"
+  },
+  "master": {
+    "path": "tmp/oneshot-trials/p15-clearance-20260915-c/review/artwork-300dpi.png",
+    "sha256": "3e7ae11ec1e76dcae3038f8288225b4def0afe6cb62de44f2b0849ff4bfdea52"
+  },
+  "preview": {
+    "path": "tmp/oneshot-trials/p15-clearance-20260915-c/review/poster-de.png",
+    "sha256": "11a044f150cac95e4859a9cd4c757f27c69698eccbc6188cccd5821f1cb343f5"
+  },
+  "sealed_creation_evidence": {
+    "path": "tmp/oneshot-trials/p15-clearance-20260915-c/review/evidence.json",
+    "sha256": "9cb3a923df6027a7bdac40e6524bab1e7c613d64ddedc600c69b408e29287553"
+  },
+  "manifest_snapshot": {
+    "path": "docs/reviews/2026-09-15-p15-clearance-c-manifest.yaml",
+    "sha256": "070bc1241c6f9d101f716369c20deb7146f4659d2eb4d0d72eaf396de871a43f"
+  },
+  "source_pairs": [
+    {
+      "name": "Mega-Mewtu X",
+      "card": {
+        "path": "tmp/oneshot-trials/p15-clearance-20260915-c/review/cards/card_r3_c1.png",
+        "rectangle": [
+          0,
+          2218,
+          750,
+          3268
+        ],
+        "sha256": "3f1f38c1cc3a62989bcfaa94a9f2fe0313b212d965931437c715e50c267aa2c5"
+      },
+      "source": {
+        "key": "pokeapi:official-artwork:10043",
+        "path": "tmp/poster-workspaces/ExGen2/sections/mega/sources/cutouts/pokemon_150_artwork_10043_mega_mewtwo_x.png",
+        "sha256": "5dd98bb485cf51eb4ede5189d28aeb9c6e426bd08d9abbc37187c02268b188d9"
+      }
+    },
+    {
+      "name": "Mega-Rayquaza",
+      "card": {
+        "path": "tmp/oneshot-trials/p15-clearance-20260915-c/review/cards/card_r3_c2.png",
+        "rectangle": [
+          809,
+          2218,
+          1559,
+          3268
+        ],
+        "sha256": "c51cce053038e1eff1d15b927be110ad9783c52380a21b581a2d10371c1d0e8d"
+      },
+      "source": {
+        "key": "pokeapi:official-artwork:10079",
+        "path": "tmp/poster-workspaces/ExGen2/sections/mega/sources/cutouts/pokemon_384_artwork_10079_mega_rayquaza.png",
+        "sha256": "28a9f35caa69df85cde05fcb5e7785d7581b30910b2cd6df508d35fca2a789f4"
+      }
+    },
+    {
+      "name": "Mega-Latios",
+      "card": {
+        "path": "tmp/oneshot-trials/p15-clearance-20260915-c/review/cards/card_r3_c3.png",
+        "rectangle": [
+          1618,
+          2218,
+          2368,
+          3268
+        ],
+        "sha256": "8dc0ce3d5ef1d6dd5e09d81f4e8ea44f3d7630d2e14892991e31b5cdad2cffd9"
+      },
+      "source": {
+        "key": "pokeapi:official-artwork:10063",
+        "path": "tmp/poster-workspaces/ExGen2/sections/mega/sources/cutouts/pokemon_381_artwork_10063_mega_latios.png",
+        "sha256": "ea327ac2ac56cb1a90153bad84f66bd62d25f8c25093733ed1aef9a5411b8054"
+      }
+    }
+  ],
+  "physical_cards": [
+    {
+      "path": "tmp/oneshot-trials/p15-clearance-20260915-c/review/cards/card_r1_c1.png",
+      "rectangle": [
+        0,
+        0,
+        750,
+        1050
+      ],
+      "sha256": "728d1308cf4dbec449e3ebba29da088e5087575f087507576719c390b0e1d76c"
+    },
+    {
+      "path": "tmp/oneshot-trials/p15-clearance-20260915-c/review/cards/card_r1_c2.png",
+      "rectangle": [
+        809,
+        0,
+        1559,
+        1050
+      ],
+      "sha256": "9397d112c327f79490994eda29dfec18f0a2f733145af92a6472200ac14676d0"
+    },
+    {
+      "path": "tmp/oneshot-trials/p15-clearance-20260915-c/review/cards/card_r1_c3.png",
+      "rectangle": [
+        1618,
+        0,
+        2368,
+        1050
+      ],
+      "sha256": "5090f626b3e529f832c29ec000eac10f9a4834b3c5dd0f5543712ed7d5c7deac"
+    },
+    {
+      "path": "tmp/oneshot-trials/p15-clearance-20260915-c/review/cards/card_r2_c1.png",
+      "rectangle": [
+        0,
+        1109,
+        750,
+        2159
+      ],
+      "sha256": "562cb07e4ddd749aed43f236fb8355e4a0c27f36552002d033379a3799464148"
+    },
+    {
+      "path": "tmp/oneshot-trials/p15-clearance-20260915-c/review/cards/card_r2_c2.png",
+      "rectangle": [
+        809,
+        1109,
+        1559,
+        2159
+      ],
+      "sha256": "482c98fcb89b65ddb253c517824f7ed7ebadde4c05a6506965bdcb5ffcc4a4bb"
+    },
+    {
+      "path": "tmp/oneshot-trials/p15-clearance-20260915-c/review/cards/card_r2_c3.png",
+      "rectangle": [
+        1618,
+        1109,
+        2368,
+        2159
+      ],
+      "sha256": "853124ef9cba6347c8caa65dfa592918ee0f65741872f5a0ac1e089eda352f7b"
+    },
+    {
+      "path": "tmp/oneshot-trials/p15-clearance-20260915-c/review/cards/card_r3_c1.png",
+      "rectangle": [
+        0,
+        2218,
+        750,
+        3268
+      ],
+      "sha256": "3f1f38c1cc3a62989bcfaa94a9f2fe0313b212d965931437c715e50c267aa2c5"
+    },
+    {
+      "path": "tmp/oneshot-trials/p15-clearance-20260915-c/review/cards/card_r3_c2.png",
+      "rectangle": [
+        809,
+        2218,
+        1559,
+        3268
+      ],
+      "sha256": "c51cce053038e1eff1d15b927be110ad9783c52380a21b581a2d10371c1d0e8d"
+    },
+    {
+      "path": "tmp/oneshot-trials/p15-clearance-20260915-c/review/cards/card_r3_c3.png",
+      "rectangle": [
+        1618,
+        2218,
+        2368,
+        3268
+      ],
+      "sha256": "8dc0ce3d5ef1d6dd5e09d81f4e8ea44f3d7630d2e14892991e31b5cdad2cffd9"
+    }
+  ],
+  "directly_viewed_by_controller": {
+    "raw": true,
+    "full_text_free_master": true,
+    "german_preview": true,
+    "all_nine_actual_cards": true,
+    "three_exact_originals": true,
+    "four_prepared_references": true,
+    "complete_prompt": true
+  },
+  "independent_visual_review_this_candidate": false,
+  "controlled_b_c_change": {
+    "changed": "Only one Rayquaza clearance reminder was appended to the scene paragraph in text node 4",
+    "unchanged": [
+      "All four reference hashes",
+      "All exact source PNGs and source-trait paragraphs",
+      "Seed and model/encoder/VAE pins",
+      "Layout contract and physical slicing",
+      "One empty 2-MP target, sampler and decode"
+    ]
+  },
+  "findings": [
+    {
+      "severity": "blocking_user_request",
+      "subject": "Mega-Rayquaza",
+      "card": "r3c2",
+      "detail": "The requested breathing room is not achieved. The image-left head fin and energy ribbon remain visually almost against the cut edge. A distinctive teal body pixel still occurs at x10, just as in B; requested safe landscape strip was 60 px. Right side gains only about 15 px by the same interior-pixel proxy. The proxy understates full outline/glow extent and is not complete silhouette segmentation."
+    },
+    {
+      "severity": "preserved_identity_not_approval",
+      "subject": "All three",
+      "detail": "Mewtwo X retains a single connected tail and gray face; Latios retains a small root-wing triangle with plain upper wing. Rayquaza's pose, visible eye, mouth/teeth, fins and ribbons remain recognizable; the second small claw remains difficult to distinguish. No decisive new identity break was observed, but all generated pixels changed and the B acceptance does not transfer."
+    },
+    {
+      "severity": "observation",
+      "detail": "The whole scene remains coherent and text-free before deterministic overlays. All nine real cards were inspected; upper six contain landscape and intended title/info overlays, without Pokemon spill. No additional definite foreground-depth defect was found. Broader configured small-cast size compliance is not established."
+    }
+  ],
+  "clearance_pixel_proxy": {
+    "method": "distinctive teal interior pixels in y110..899; proof of too-small clearance, NOT complete silhouette segmentation",
+    "requested_left_and_right_padding_px": 60,
+    "measurements": [
+      {
+        "variant": "p15-source-detail-20260915-b",
+        "bbox_inclusive": [
+          10,
+          228,
+          735,
+          817
+        ],
+        "left_teal_interior_margin_px": 10,
+        "right_teal_interior_margin_px": 14,
+        "hit_count": 75546
+      },
+      {
+        "variant": "p15-clearance-20260915-c",
+        "bbox_inclusive": [
+          10,
+          240,
+          720,
+          818
+        ],
+        "left_teal_interior_margin_px": 10,
+        "right_teal_interior_margin_px": 29,
+        "hit_count": 71524
+      }
+    ],
+    "worker": {
+      "mps_logged": true,
+      "prompt_seconds": [
+        "66.93"
+      ],
+      "traceback_seen": false,
+      "token_truncation_warning": false
+    }
+  },
+  "technical_verification": {
+    "canonical_verify_passed_with_c_manifest": true,
+    "complete_job_log_and_output_retrieved": true,
+    "nine_pixel_exact_crops_and_dpi_verified": true,
+    "production_master_baselines_unchanged": 42,
+    "covering_suite": "60 passed in 7.27s"
+  },
+  "next_step": "Reject C and preserve its immutable job and exact manifest snapshot. Restore the verified B source manifest. Request approval for a narrowly scoped per-subject spatial-reference scale adjustment for Rayquaza (about 15-20% smaller), keeping one-shot synthesis; no fourth automatic prompt-only attempt or multistage fallback.",
+  "production_promotion_or_pdf_zip_rebuild": false
+}

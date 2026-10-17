@@ -1,0 +1,793 @@
+{
+  "review_date": "2026-09-14",
+  "reviewer_kind": "agent",
+  "scope": "Read-only Re-Triage der 12 zugewiesenen Panorama-Ziele P04–P12, P18, P19 und P33. Keine Promotion, keine menschliche Freigabe, kein vollständiger Neun-Karten-/PDF-Release-Audit.",
+  "method": {
+    "visual": "Jeder vollständige textfreie Master und jedes physische Subjekt-Crop/Originalquellbild-Paar wurde in dieser Sitzung tatsächlich mit view_image betrachtet. Alle 84 Datei-Referenzen zusätzlich per SHA-256 gegen die Queue geprüft; keine Abweichungen. Keine alten Ablehnungsberichte zur Herleitung der visuellen Befunde verwendet.",
+    "rubric": "Quelle definiert Form, Gesicht, sichtbare Anatomie, Proportionen und Zeichnung. Plausible Vordergrundüberdeckung ist erwünscht; verdeckte Körperteile werden nicht als fehlend gezählt. Kleine nicht definierende Drucklinien separat als minor für menschliches Urteil. present_for_human_review ist keine Annahme.",
+    "generation_direction": "Bei klaren Figurenfehlern genuine joint_scene one-shot mit spatial+individual source-detail Referenzen, exaktem Cast/Layout und 2 MP. Maskierte Landschaftsreparatur nur bei eng begrenztem Tiefenproblem und quellnaher Identität; kein allgemeiner autonomer Detektor, keine Anatomiekorrektur.",
+    "limits": "Nur vollständige Master und 36 Subjektpaare visuell geprüft. Raw-Generation, sechs weitere Karten je Ziel, PDF und vollständige Overlays nicht geprüft. Einige Queue-Crops enthalten bereits den deterministischen unteren Schriftzug; Master jeweils zusätzlich textfrei geprüft."
+  },
+  "targets": [
+    {
+      "review_id": "P04",
+      "asset_key": "Pokedex/sections/gen1",
+      "title_de": "Pokédex – Generation I",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Glumanders helle Schwanzunterseite fehlt auf einer frei sichtbaren, ausreichend großen Fläche. Dieser Identitätsfehler lässt sich nicht durch eine reine Landschaftsmaske beheben. Bisasams kleine Flecken-/Krallenvereinfachungen gesondert dem Menschen zeigen.",
+      "subjects": [
+        {
+          "name": "Bisasam",
+          "cell": "r3c1",
+          "identity": "acceptable_with_minor_differences",
+          "depth": "plausible_foreground_overlap",
+          "severity": "minor",
+          "finding_de": "Knolle, Augen, Körperhaltung und sichtbare Gliedmaßen bleiben erkennbar quellnah. Kleine Flecken auf den Vorderbeinen sind runder bzw. anders konturiert, Krallenspitzen weicher. Die große Vordergrundpflanze verdeckt einen Teil des bildlinken Vorderbeins plausibel; daraus wird kein fehlendes Bein abgeleitet.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen1/sources/cutouts/pokemon_001_bulbasaur.png",
+            "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen1/card_r3_c1.png",
+            "sha256": "891a8d43b75fa3bacd1376554e368a07b4b5eedf2cc9bf1d5fcd62d57566d00d"
+          }
+        },
+        {
+          "name": "Glumanda",
+          "cell": "r3c2",
+          "identity": "clear_defect",
+          "depth": "no_clear_defect",
+          "severity": "hard",
+          "finding_de": "Die in der Quelle deutlich cremefarbene Unterseite des gebogenen Schwanzes ist im Crop orange/braun wie die Oberseite. Die Fläche ist frei sichtbar; dies ist eine fehlende Farbzeichnung, kein Grasüberlappungs- oder bloßes Linienproblem. Arme, Beine und Schwanzflamme sind vorhanden.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen1/sources/cutouts/pokemon_004_charmander.png",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen1/card_r3_c2.png",
+            "sha256": "a5c1d1a67baf58e31cfc42eb6957f810a75ab0b564ee93bfd5f4838ed4b54b98"
+          }
+        },
+        {
+          "name": "Schiggy",
+          "cell": "r3c3",
+          "identity": "acceptable_with_minor_differences",
+          "depth": "plausible_foreground_overlap",
+          "severity": "minor",
+          "finding_de": "Gesicht, Panzer, sichtbare Hände/Füße und eingerollter Schwanz stimmen strukturell überein. Panzerlinien sind gleichmäßiger und einzelne Fingerkonturen knapper. Das schmale Gras vor der Schwanzunterkante ist als Vordergrund lesbar.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen1/sources/cutouts/pokemon_007_squirtle.png",
+            "sha256": "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen1/card_r3_c3.png",
+            "sha256": "ad743d069688caa28cc3d2810062347bd60d93024a436a364413bb948af09565"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/Pokedex/sections/gen1/poster-flux2-artwork.png",
+        "sha256": "301976906809649aee6cbad5afa1226643321a7d40bbf6193c8e4305ed17ab21"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P05",
+      "asset_key": "Pokedex/sections/gen2",
+      "title_de": "Pokédex – Generation II",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Karnimanis frei sichtbarer Standfuß hat eine andere Zehen-/Fußsilhouette als die breite zweigeteilte Quellform. Zusätzlich endet ein Blatt bei Endivie am Halsknopf. Eine reine Tiefenreparatur würde die Fußanatomie nicht lösen.",
+      "subjects": [
+        {
+          "name": "Endivie",
+          "cell": "r3c1",
+          "identity": "acceptable_with_minor_differences",
+          "depth": "local_contour_termination_defect",
+          "severity": "minor",
+          "finding_de": "Kopfblatt, Gesicht und Körperhaltung sind quellnah; Fußenddetails sind vereinfacht. Ein breites diagonales Vordergrundblatt endet stumpf direkt im mittleren sichtbaren Halsknopf und liest sich dort wie angeheftet. Dieses lokale Tiefenproblem ist von der Identität zu trennen.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen2/sources/cutouts/pokemon_152_chikorita.png",
+            "sha256": "3ffc2eeee9139b0281ab5493b1a6d4b5c1329de5ddf5361f5ee3c93d12c05659"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen2/card_r3_c1.png",
+            "sha256": "f771ccd40b107d1512e02cf76279253eaf0d2850c914a50e6396d0a771ff62b0"
+          }
+        },
+        {
+          "name": "Feurigel",
+          "cell": "r3c2",
+          "identity": "acceptable_with_minor_differences",
+          "depth": "no_clear_defect",
+          "severity": "minor",
+          "finding_de": "Lange Schnauze, geschlossenes Auge, Rückenfarbteilung und Feuerbüschel sind vorhanden. Fußspitzen haben zusätzliche kleine Kerben gegenüber den glatten ovalen Quellabschlüssen; diese kleinen Konturlinien allein rechtfertigen hier keinen pauschalen Ausschluss.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen2/sources/cutouts/pokemon_155_cyndaquil.png",
+            "sha256": "9532b237ef088f8032024b95459303495e261eb2f7f024b79511522e551a9bcd"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen2/card_r3_c2.png",
+            "sha256": "9c6fe1f5d153af840e0e556c66193428afdfeac370d8385c69870ee0233ba2bd"
+          }
+        },
+        {
+          "name": "Karnimani",
+          "cell": "r3c3",
+          "identity": "clear_defect",
+          "depth": "plausible_foreground_overlap",
+          "severity": "hard",
+          "finding_de": "Der frei sichtbare Standfuß ist in mehrere schmale, spitze Zehenabschnitte aufgeteilt, während die Quelle einen breiten Fuß mit großer, einfacher Teilung zeigt. Das verändert die Fußsilhouette; keine Zählung verdeckter Zehen. Offenes Maul, Bauchzeichnung und rote Rücken-/Schwanzzacken sind ansonsten erkennbar erhalten. Das Gras an der Schwanzspitze ist separat als Vordergrund lesbar.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen2/sources/cutouts/pokemon_158_totodile.png",
+            "sha256": "a0ce9f06497dc2a9a3d34174ff89e0ee1a0745ce8007cc89257e379d9be49525"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen2/card_r3_c3.png",
+            "sha256": "b266273fbf56749f77bcfc915a571c16db45a601708a11f9ac74bae2c4d105a0"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/Pokedex/sections/gen2/poster-flux2-artwork.png",
+        "sha256": "120df09a5614c08d244841e26b827cff0fdbed82a72de5ba6985ad3c6614a487"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P06",
+      "asset_key": "Pokedex/sections/gen3",
+      "title_de": "Pokédex – Generation III",
+      "route": "uncertain_needs_detail",
+      "reason_de": "Gegenprüfung am 14. September mit erneuter Originalansicht aller drei Crop/Quellpaare: Die zunächst behauptete stumpfe Blattkappung bei Hydropi ist nicht belastbar; eine natürliche verjüngte Spitze an der Kinnkontur ist ebenfalls plausibel. Kein eindeutiger Tiefensprung belegt. Geckarbors deutlich verdickte, weniger getrennte Finger und Flemlis eng überlagerte Fußlinien brauchen zudem genauere anatomische Prüfung. Daher keine Einstufung als erwiesener reiner Landschaftsfehler und kein Reparaturlauf.",
+      "subjects": [
+        {
+          "name": "Geckarbor",
+          "cell": "r3c1",
+          "identity": "uncertain_detail",
+          "depth": "plausible_foreground_overlap",
+          "severity": "uncertain",
+          "finding_de": "Augen, roter Bauch, geteilte Kopfsilhouette und breiter eingerollter Schwanz entsprechen der Quelle. Gegenprüfung: Beide Hände sind deutlich dicker als in der Quelle; schmale Fingerhälse und einzeln abgesetzte runde Enden gehen in kompakte gelappte Formen über. Ob dies die definierende Fingerstruktur überschreitet, ist nicht als bloße Drucklinie abschließend geklärt. Das Vordergrundblatt über dem bildlinken Fuß erklärt dessen teilweise Verdeckung; kein fehlender Zeh wird behauptet.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen3/sources/cutouts/pokemon_252_treecko.png",
+            "sha256": "0e066d885e028d3c14a039ebf7b85b12ae2d5cca023d17bf16272f74fb4fae6c"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen3/card_r3_c1.png",
+            "sha256": "469c27d324817b6693146b55b8535bf76b90bc9a9d0ae435627492c53e8b588e"
+          }
+        },
+        {
+          "name": "Flemmli",
+          "cell": "r3c2",
+          "identity": "uncertain_detail",
+          "depth": "no_clear_defect",
+          "severity": "uncertain",
+          "finding_de": "Gegenprüfung: Haube, Halsfedern, Schnabel und die Stellung eines aufgesetzten sowie eines nach hinten angewinkelten Fußes sind sicher sichtbar. Die Enden des angehobenen Fußes erscheinen als eng gestaffelte schräge Segmente; am aufgesetzten Fuß liegen mehrere Konturen dicht beieinander. Aus diesen Überlagerungen ist keine sichere abweichende Zehenzahl ableitbar. Die frühere pauschale Aussage unveränderter Gliedmaßen wird deshalb eingeschränkt: keine klare Fehlanatomie bewiesen, genaue Fußkonturen noch zu klären.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen3/sources/cutouts/pokemon_255_torchic.png",
+            "sha256": "d234db13f46ac30452288fee011df2857d93bac22f7d038d6b472ef14a651950"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen3/card_r3_c2.png",
+            "sha256": "f3e816e5eba4626958ab5b182b7c3bee088c26080a89a502fe78cdca9790c72c"
+          }
+        },
+        {
+          "name": "Hydropi",
+          "cell": "r3c3",
+          "identity": "acceptable_with_minor_differences",
+          "depth": "uncertain_tangent",
+          "severity": "uncertain",
+          "finding_de": "Gegenprüfung: Kopfflosse, orange Kiemen, helle Unterseite, sichtbare Beine und Schwanzflosse sind quellnah. Das diagonale Vordergrundblatt nähert sich von unten rechts der hellen Kinn-/Brustkontur und wird dort schmal. Seine obere Spitze kann als natürliche Verjüngung mit Tangente an der Figur gelesen werden. Eine breit abgeschnittene Blattkante oder ein tatsächlicher Wechsel von vorne nach hinten ist nicht sicher sichtbar; die vorherige Behauptung einer stumpfen Kappung wird zurückgenommen. Verdeckte Körperteile werden nicht als fehlend bewertet.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen3/sources/cutouts/pokemon_258_mudkip.png",
+            "sha256": "89abf9aa5f800efe849acbee7914e98ba574399c2293298606e81ebe43fb5a8d"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen3/card_r3_c3.png",
+            "sha256": "f418254127705f98b8ae9fb989384f0ee8756516efc081b95266d63a57e2f33c"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/Pokedex/sections/gen3/poster-flux2-artwork.png",
+        "sha256": "4e05fe23e97123fbcdf162396f0ab38bf8f35be7a165e0ea3b638b61892aba49"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P07",
+      "asset_key": "Pokedex/sections/gen4",
+      "title_de": "Pokédex – Generation IV",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Panflams frei sichtbare aufgestützte Hand verliert einen in der Quelle getrennten langen Finger; zusätzlich wird die Bauchspirale unklar. Das betrifft Anatomie und ist kein Landschaftsproblem.",
+      "subjects": [
+        {
+          "name": "Chelast",
+          "cell": "r3c1",
+          "identity": "acceptable_with_minor_differences",
+          "depth": "plausible_foreground_overlap",
+          "severity": "minor",
+          "finding_de": "Kopftrieb, gelber Kiefer, Panzer und gelbe Fußabschlüsse stimmen in Form und Lage überein. Unterhals ist heller und die Beine etwas gerader modelliert. Gras am hinteren Fuß wird als Verdeckung gewertet, nicht als verlorene Anatomie.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen4/sources/cutouts/pokemon_387_turtwig.png",
+            "sha256": "34bdf93e84d8e1770074ead9c38b1659bcc937abfa20ddd8a6e53a283ed0e16d"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen4/card_r3_c1.png",
+            "sha256": "0b4239d5250f68d94f425d2daa44b0737f99eeb58c04b634fbf3ee8b7ebc3966"
+          }
+        },
+        {
+          "name": "Panflam",
+          "cell": "r3c2",
+          "identity": "clear_defect",
+          "depth": "no_clear_defect",
+          "severity": "hard",
+          "finding_de": "Die auf dem Boden liegende, frei sichtbare Hand zeigt drei lange Finger plus seitlichen Daumen; in der Quelle sind vier lange Finger plus Daumen getrennt erkennbar. Die cremefarbene Bauchspirale wird zudem zu einer undeutlichen kleinen Linienform. Kopf, Ohren und Flammenposition sind grundsätzlich erhalten.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen4/sources/cutouts/pokemon_390_chimchar.png",
+            "sha256": "7ce75f77abcaff1451c67da6fc8de9b6828aacb1a222dd590825c5cab4b20140"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen4/card_r3_c2.png",
+            "sha256": "6cd6d04ffbad47283051bdc03fd2ffba112c3d30dd8adbacef91aa3061915e9c"
+          }
+        },
+        {
+          "name": "Plinfa",
+          "cell": "r3c3",
+          "identity": "acceptable_with_minor_differences",
+          "depth": "no_clear_defect",
+          "severity": "minor",
+          "finding_de": "Gesichtsmaske, Augen, Brustpunkte, Flügel und Füße folgen der Quelle. Die feine Trennlinie des Schnabels ist stark vereinfacht; seine äußere Form bleibt erhalten. Diese kleine Linie ist für menschliches Urteil offenzulegen.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen4/sources/cutouts/pokemon_393_piplup.png",
+            "sha256": "84895daf63236a40d6061af37739908b5256876c96a4a34b9f354df5f1ec2ca0"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen4/card_r3_c3.png",
+            "sha256": "ea819fce8690046a59329764ed6dd2acbc1bf907097150ed11c360c066ca0d92"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/Pokedex/sections/gen4/poster-flux2-artwork.png",
+        "sha256": "1421252b2f09e23e1fc06260181769dbc9775c6bdc2f1422e23bd1309a79d61d"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P08",
+      "asset_key": "Pokedex/sections/gen5",
+      "title_de": "Pokédex – Generation V",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Ottaros charakteristische Wangenpunkte fehlen weitgehend auf frei sichtbaren Flächen. Ein weiterer Lauf mit individuellen Gesichtsdetails ist angemessen; eine Grasmaske behebt das nicht.",
+      "subjects": [
+        {
+          "name": "Serpifeu",
+          "cell": "r3c1",
+          "identity": "acceptable_with_minor_differences",
+          "depth": "local_contour_termination_defect",
+          "severity": "minor",
+          "finding_de": "Kopfform, Augenlid, gelber Kragen und Blattschwanz stimmen strukturell. Die kleine Mundlinie ist kaum sichtbar und Handspitzen sind fransiger. Zwei Vordergrundblätter treffen direkt auf die Hände und wirken dort konturbegrenzt; das ist ein separater lokaler Tiefenbefund, nicht fehlende Anatomie.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen5/sources/cutouts/pokemon_495_snivy.png",
+            "sha256": "e7ff61a0daed598a7676b262c56af766e88bcf91764658eeeae615f6f9937549"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen5/card_r3_c1.png",
+            "sha256": "87fa208a15e271dd8602d05a13c4d91930553c5220e904249dab8163d6421c56"
+          }
+        },
+        {
+          "name": "Floink",
+          "cell": "r3c2",
+          "identity": "acceptable_with_minor_differences",
+          "depth": "no_clear_defect",
+          "severity": "minor",
+          "finding_de": "Ohren, gelbe Gesichtszeichnung, Rüssel, offenes Maul, Ringelschwanz und schwarze Körper-/Fußbereiche sind erhalten. Rundere Körperkontur und vereinfachte Innenlinien sind klein gegenüber der grundsätzlich quellnahen Pose.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen5/sources/cutouts/pokemon_498_tepig.png",
+            "sha256": "d7750c56dc5be8ae10a6c270c34a0c46dbf64f289f2eb5670cbe52a9fd41f275"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen5/card_r3_c2.png",
+            "sha256": "1c8f10e4449b7a651ac5d2701ef5fd1f25435652420d08eafd605eb2cbdec48f"
+          }
+        },
+        {
+          "name": "Ottaro",
+          "cell": "r3c3",
+          "identity": "clear_defect",
+          "depth": "plausible_foreground_overlap",
+          "severity": "hard",
+          "finding_de": "Die Quelle zeigt markante dunkle Punktgruppen auf beiden Wangen. Im Crop fehlt die bildrechte Gruppe ganz, bildlinks bleibt nur eine undeutliche kleine Spur. Gesicht ist dort frei sichtbar. Muschel, Ohren, Arme und Schwanz sind erhalten; ein Grasblatt vor dem Schwanz ist eine unabhängige plausible Verdeckung.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen5/sources/cutouts/pokemon_501_oshawott.png",
+            "sha256": "480904e99ed485ba3c8fb5866bac1a2acee76dd6dcee1a1ad3e2aac706576fc7"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen5/card_r3_c3.png",
+            "sha256": "a6f6f25622bc1872a63a863739239fa20cb745c0804ffb6760f8ce4f5bcba2a6"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/Pokedex/sections/gen5/poster-flux2-artwork.png",
+        "sha256": "c21cc3dff19ea8b2186617ab39c0a623147130ec82ca25df6227eb7394e26652"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P09",
+      "asset_key": "Pokedex/sections/gen6",
+      "title_de": "Pokédex – Generation VI",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Igamaros sichtbare Wangenzeichnung und der weiße obere Zahn gehen verloren. Das sind Gesichtsmerkmale; die Szene sollte mit stärkeren individuellen Referenzdetails gemeinsam neu entstehen.",
+      "subjects": [
+        {
+          "name": "Igamaro",
+          "cell": "r3c1",
+          "identity": "clear_defect",
+          "depth": "plausible_foreground_overlap",
+          "severity": "hard",
+          "finding_de": "Der dunkle kantige Fleck auf der bildlinken Wange der Quelle fehlt; dort erscheint nur rötliche Schattierung. Der deutlich weiße obere Zahn im geöffneten Quellmaul ist zu einer winzigen Randlinie reduziert. Kopfstacheln und Schwanz sind vorhanden. Gras vor den weißen Fußspitzen wird nicht als erfundene Krallen oder fehlende Füße interpretiert.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen6/sources/cutouts/pokemon_650_chespin.png",
+            "sha256": "565272048cd8eeb2b524d597da6805dbdff28c313bc5346181f1859041320ee7"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen6/card_r3_c1.png",
+            "sha256": "57407297a27d880201a90efe8e31b1c37924d27315cee3637c91c523e290c8a0"
+          }
+        },
+        {
+          "name": "Fynx",
+          "cell": "r3c2",
+          "identity": "acceptable_with_minor_differences",
+          "depth": "plausible_foreground_overlap",
+          "severity": "minor",
+          "finding_de": "Große Ohren mit roten Büscheln, weiße Schnauze, Schwanzspitze und angehobenes Vorderbein sind quellnah. Kleine Krallen-/Felllinien an den unteren Pfoten unterscheiden sich; Gras kann die Enden überdecken. Keine belastbare Zählung verdeckter Zehen.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen6/sources/cutouts/pokemon_653_fennekin.png",
+            "sha256": "b638e094ee06adcec959aad2898ce93f8c5fda88feba9c9158d1f16c026c07dd"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen6/card_r3_c2.png",
+            "sha256": "dca86b4589aad975fe6512fd019e8d5495cb48dcf94025018d5e47d0953349dd"
+          }
+        },
+        {
+          "name": "Froxy",
+          "cell": "r3c3",
+          "identity": "acceptable_with_minor_differences",
+          "depth": "no_clear_defect",
+          "severity": "minor",
+          "finding_de": "Augen, Nasenblasen, Schaumkragen und beide Armpositionen sind erhalten. Handenden und Mundkurve sind glatter bzw. leicht anders modelliert. Die frei sichtbaren Hauptformen bleiben konsistent zur Quelle.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen6/sources/cutouts/pokemon_656_froakie.png",
+            "sha256": "cbb47c38d234eb7dea4b1d90f8c97ec990f41b6e61f26e7efba90d80a3d1d632"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen6/card_r3_c3.png",
+            "sha256": "381043b14a1625c08f4bf02d222953c28a455faf817c7a2d62a5fef596adf1fe"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/Pokedex/sections/gen6/poster-flux2-artwork.png",
+        "sha256": "588d433b0338783c87a14a4b48888b7b8288ff3e68fd89104b0d7396c199d0e6"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P10",
+      "asset_key": "Pokedex/sections/gen7",
+      "title_de": "Pokédex – Generation VII",
+      "route": "present_for_human_review",
+      "reason_de": "Nach direkter Paaransicht kein klarer definierender Form- oder Anatomiefehler. Reduzierte kleine Augen-/Pfotenlinien bei Flamiau und die Fußüberdeckung bei Bauz müssen offen gezeigt werden. Präsentation ist ausdrücklich keine Freigabe.",
+      "subjects": [
+        {
+          "name": "Bauz",
+          "cell": "r3c1",
+          "identity": "acceptable_with_minor_differences",
+          "depth": "plausible_foreground_overlap",
+          "severity": "minor",
+          "finding_de": "Runde Silhouette, weiße Gesichtsmaske, zweifarbiger Schnabel, Blattschleife und Flügel bleiben erhalten. Das Blatt im Vordergrund überdeckt einen Teil des bildlinken Fußes plausibel; daraus folgt kein fehlender Fuß. Kleine Schnabel- und Fußlinien sind vereinfacht.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen7/sources/cutouts/pokemon_722_rowlet.png",
+            "sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen7/card_r3_c1.png",
+            "sha256": "4b4f65e222c53603585b2708a39922cdc68b2161118006e14cc25e393fe66b24"
+          }
+        },
+        {
+          "name": "Flamiau",
+          "cell": "r3c2",
+          "identity": "acceptable_with_minor_differences",
+          "depth": "no_clear_defect",
+          "severity": "minor",
+          "finding_de": "Stirnzeichnung, roter Schnauzenbereich, Backenbüschel, sichtbare gestreifte Beine und Schwanzbüschel sind vorhanden. Warme schmale Akzente in den gelben Augen und die feinen Teilungslinien der vorderen Pfote sind gegenüber der Quelle reduziert. Diese kleinen Druckdetails dem Menschen zeigen; keine ungesicherte Behauptung eines fehlenden hinter dem Kopf liegenden Beins.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen7/sources/cutouts/pokemon_725_litten.png",
+            "sha256": "02391ac457888baf123accfc5ce446fc75df4790b3b000865a21c0f21b622600"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen7/card_r3_c2.png",
+            "sha256": "9926cb5d09cc2bb49501bc0629374146fc40dcc71806559f537f00a499f70caf"
+          }
+        },
+        {
+          "name": "Robball",
+          "cell": "r3c3",
+          "identity": "acceptable_with_minor_differences",
+          "depth": "no_clear_defect",
+          "severity": "minor",
+          "finding_de": "Nase, offenes Maul, Halskrause, Vorderflossen samt weißen Streifen und beide hinteren Flossen sind erhalten. Krause und Flossenkonturen sind etwas kompakter, ohne klaren definierenden Strukturfehler.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen7/sources/cutouts/pokemon_728_popplio.png",
+            "sha256": "3bfa3104b894f212985122732497b17c78979c6bc9304bd7396e781677f2d7a3"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen7/card_r3_c3.png",
+            "sha256": "51ddd739611a86841f3c1f44dd37bae9e9bc3c3acb5b0da980407c61eb2975d4"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/Pokedex/sections/gen7/poster-flux2-artwork.png",
+        "sha256": "2cf724beabc3c2a21be30f4a287e239292b5e16e59a4f3444bb26f6ba8ae7201"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P11",
+      "asset_key": "Pokedex/sections/gen8",
+      "title_de": "Pokédex – Generation VIII",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Hopplos Hals- und Sohlenzeichnungen sowie Memmeons Augen und sitzende Bein-/Armstruktur weichen klar ab. Mehrere individuelle Identitätsdetails erfordern einen neuen gemeinsamen Szenenlauf.",
+      "subjects": [
+        {
+          "name": "Chimpep",
+          "cell": "r3c1",
+          "identity": "acceptable_with_minor_differences",
+          "depth": "plausible_foreground_overlap",
+          "severity": "minor",
+          "finding_de": "Stock, Kopfblätter, Gesichtsmaske, orange Hände und eingerollter Schwanz sind vorhanden. Die Mundlinie ist flacher, Fingerkonturen gröber. Gras erklärt die partielle Fußverdeckung; verdeckte Zehen werden nicht gezählt.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen8/sources/cutouts/pokemon_810_grookey.png",
+            "sha256": "0a4b1c0662dd8e0ad7f00bf78c2f958b297bc25c70bbc7273d50b3d39d5de330"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen8/card_r3_c1.png",
+            "sha256": "d57db0c7a4c3815645dd132ed592aa0862aff554a66b7f82ed2ac030e46903a3"
+          }
+        },
+        {
+          "name": "Hopplo",
+          "cell": "r3c2",
+          "identity": "clear_defect",
+          "depth": "no_clear_defect",
+          "severity": "hard",
+          "finding_de": "Die zwei orangefarbenen Halsflecken der Quelle sind durch einen dunklen Halsstrich ersetzt. Das begrenzte beige Rechteck auf der angehobenen Fußsohle wird zu einem breiten orangebraunen Querband. Diese klaren Zeichnungsänderungen liegen frei sichtbar und sind keine Szenenüberdeckung.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen8/sources/cutouts/pokemon_813_scorbunny.png",
+            "sha256": "0099f4bb576966efc872c03c69616f954c8474d12608a2fd7e91304a9d271167"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen8/card_r3_c2.png",
+            "sha256": "2d4977ed0b83fec2c5b8ff9c1b556989069d0b5afb240cb7e8edad91bcbed32b"
+          }
+        },
+        {
+          "name": "Memmeon",
+          "cell": "r3c3",
+          "identity": "clear_defect",
+          "depth": "plausible_foreground_overlap",
+          "severity": "hard",
+          "finding_de": "Die großen blauen Irisflächen der Quelle werden fast ganz zu schwarzen Augen. Die nach innen gekrümmten Arme und deutlich angewinkelten Sitzbeine sind in eine geradere, stützende Vorderbein-/Fußstruktur umgeformt. Die Schwanzverdeckung durch Gras ist hiervon unabhängig und kein Identitätsfehler.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen8/sources/cutouts/pokemon_816_sobble.png",
+            "sha256": "162c8c4c870624a42aa81f3859f29542d7d713bffd98bb4b4f7ab79ae9a881fb"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen8/card_r3_c3.png",
+            "sha256": "79ca5e37a4077d57e8aa9ba5e8fc62808a4be9e965f16462404bb3a8954a25e2"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/Pokedex/sections/gen8/poster-flux2-artwork.png",
+        "sha256": "22cc4173999d2a59b49e039e400f2e188e7d7fd3eba218fc826c56d5a2b81c99"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P12",
+      "asset_key": "Pokedex/sections/gen9",
+      "title_de": "Pokédex – Generation IX",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Feloris sichtbare Fangzähne fehlen, und bei Kwaks sitzt unter dem bildrechten Flügel ein nicht quellgetreuer fingerartiger Fortsatz. Kleine Linien allein tragen die Ablehnung nicht.",
+      "subjects": [
+        {
+          "name": "Felori",
+          "cell": "r3c1",
+          "identity": "clear_defect",
+          "depth": "no_clear_defect",
+          "severity": "hard",
+          "finding_de": "Im offenen Maul fehlen die beiden kleinen, aber in der Quelle getrennt sichtbaren Fangzähne. Körper und Wangen sind zudem deutlich cremefarbener; diese Farbverschiebung allein wird wegen Szenenlicht nicht zum alleinigen Ablehnungsgrund gemacht. Ohren, Maske, Blattkragen und Schwanz sind vorhanden.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen9/sources/cutouts/pokemon_906_sprigatito.png",
+            "sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen9/card_r3_c1.png",
+            "sha256": "7350aa427f2a3ffa07c87792a1fa21d3b619931523bccdfdb29aec79855e151c"
+          }
+        },
+        {
+          "name": "Krokel",
+          "cell": "r3c2",
+          "identity": "acceptable_with_minor_differences",
+          "depth": "no_clear_defect",
+          "severity": "minor",
+          "finding_de": "Kopfhaube, großes Maul mit den sichtbaren Zähnen, Bauchplatte und dunkle Fußspitzen sind erhalten. Fingerenden und der kleine gelbe Rückenakzent sind stark vereinfacht; die Hauptanatomie bleibt erkennbar. Detailansicht bei menschlicher Prüfung erforderlich.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen9/sources/cutouts/pokemon_909_fuecoco.png",
+            "sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen9/card_r3_c2.png",
+            "sha256": "b22c000b74e0992747709178d4537a9e3b020febd2959f565d716e61138add7c"
+          }
+        },
+        {
+          "name": "Kwaks",
+          "cell": "r3c3",
+          "identity": "clear_defect",
+          "depth": "local_contour_termination_defect",
+          "severity": "hard",
+          "finding_de": "Unter dem bildrechten gefalteten Flügel entsteht ein dunkler, fingerartig gegliederter Fortsatz statt der glatten kleinen Quellkontur. Die Grasblattspitze endet zudem direkt am bildrechten Fußrand. Der Fortsatz betrifft die Figur, eine reine Grasreparatur reicht nicht.",
+          "source": {
+            "file": "tmp/poster-workspaces/Pokedex/sections/gen9/sources/cutouts/pokemon_912_quaxly.png",
+            "sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f"
+          },
+          "crop": {
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen9/card_r3_c3.png",
+            "sha256": "db3aee0702bec94702527fe8b1d0d85a0ccc020ac5877c371eb9421bce5e5718"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/Pokedex/sections/gen9/poster-flux2-artwork.png",
+        "sha256": "9b69d26e7fce0838f2769aaa78bb00f7c37dcb72ce67ca224be2150abbb93114"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P18",
+      "asset_key": "SV01",
+      "title_de": "Karmesin & Purpur",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Feloris Fangzähne und Krokels sichtbar gezackte Handkonturen sind nicht erhalten. Diese Zielbilder werden unabhängig von akzeptierten anderen Kandidaten beurteilt.",
+      "subjects": [
+        {
+          "name": "Felori",
+          "cell": "r3c1",
+          "identity": "clear_defect",
+          "depth": "no_clear_defect",
+          "severity": "hard",
+          "finding_de": "Die Quelle zeigt zwei kleine obere Fangzähne, der frei sichtbare Mund des Crops hat eine glatte zahnlose Oberkante. Gesicht, Blattkragen, Ohren und Schwanz sind ansonsten quellnah; hellere Körperfarbe wird gesondert als Farb-/Lichtabweichung offengelegt.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV01/sources/cutouts/pokemon_906_sprigatito.png",
+            "sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "eb94e96f85ccc2fe933f85f90f28967065d629995eccba0ba62e89a6d7b87a2b"
+          }
+        },
+        {
+          "name": "Krokel",
+          "cell": "r3c2",
+          "identity": "clear_defect",
+          "depth": "no_clear_defect",
+          "severity": "hard",
+          "finding_de": "Beide kurzen Hände werden zu rundlichen Flossen bzw. Fäustlingen; die offen sichtbaren gezackten Fingerenden der Quelle sind nicht nachgebildet. Das beeinflusst die Kontur der Gliedmaßen. Kopf, Bauchplatte, Schwanz und dunkle Fußspitzen sind vorhanden.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV01/sources/cutouts/pokemon_909_fuecoco.png",
+            "sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "1f4af09fd2f172a7c67346e009ba9e46f76b342c5fa25e15d3cfb4fe23fc8d7b"
+          }
+        },
+        {
+          "name": "Kwaks",
+          "cell": "r3c3",
+          "identity": "acceptable_with_minor_differences",
+          "depth": "no_clear_defect",
+          "severity": "minor",
+          "finding_de": "Haube mit weißer Welle, Augen, Schnabel, Flügel und blaue Füße sind erhalten. Fußkonturen und Flügelende sind glatter, feine Nasen-/Federlinien vereinfacht. Der gelieferte Crop trägt unten rechts den deterministischen Schriftzug Binder Pokedex; der zusätzlich geprüfte Master ist textfrei.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV01/sources/cutouts/pokemon_912_quaxly.png",
+            "sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV01/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "42cd3edb6b790f0c92186a69f1f635e00456f4a804c031a756bf4bf9c9542f27"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/SV01/poster-flux2-artwork.png",
+        "sha256": "0c5b398a2b5bd52cc7e255d291e76dbfe840078a5931ddf9bf527db512509bfe"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P19",
+      "asset_key": "SV02",
+      "title_de": "Entwicklungen in Paldea",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Feloris Fangzähne fehlen; bei Krokel fehlt ein in der Quelle frei sichtbarer unterer Zahn. Zusätzlich zeigt Kwaks einen ungeklärten hellen Fortsatz zwischen den Beinen. Bereits die klaren Gesichtsdefekte begründen den neuen gemeinsamen Szenenlauf.",
+      "subjects": [
+        {
+          "name": "Felori",
+          "cell": "r3c1",
+          "identity": "clear_defect",
+          "depth": "plausible_foreground_overlap",
+          "severity": "hard",
+          "finding_de": "Beide kleinen Fangzähne der Quelle sind im offenen Crop-Maul nicht sichtbar, ohne dass eine Pflanze das Gesicht verdeckt. Blattkragen, Gesichtsmuster und Schwanz sind erhalten. Die schmale Grasüberdeckung am hinteren Fuß wird nicht als fehlende Anatomie bewertet.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV02/sources/cutouts/pokemon_906_sprigatito.png",
+            "sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "123a91b8cfc485dc6f7ad7a0fb2aa0fb2fcdeb8cc464dbad05552ead61db1870"
+          }
+        },
+        {
+          "name": "Krokel",
+          "cell": "r3c2",
+          "identity": "clear_defect",
+          "depth": "no_clear_defect",
+          "severity": "hard",
+          "finding_de": "Der untere Zahn am bildlinken Maulrand ist in der Quelle deutlich weiß, im Crop bleibt dort eine orange/dunkle Kontur. Der obere Zahn und der untere bildrechte Zahn sind vorhanden. Da das Maul frei sichtbar ist, ist die fehlende Zahnform ein Identitätsbefund.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV02/sources/cutouts/pokemon_909_fuecoco.png",
+            "sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "bc90fda792480785499109babb5935bb4cdcd26a65efb5ccdfe306c1a8d0a029"
+          }
+        },
+        {
+          "name": "Kwaks",
+          "cell": "r3c3",
+          "identity": "uncertain_detail",
+          "depth": "plausible_foreground_overlap",
+          "severity": "uncertain",
+          "finding_de": "Haube, Schnabel und Hauptkörper sind quellnah. Zwischen den blauen Beinen erscheint ein heller länglicher, körperfarbener Bereich, wo die Quelle einen offenen Zwischenraum zeigt; aus dem Crop allein ist nicht sicher, ob zusätzliche Körperform oder ungewöhnlich heller Hintergrund. Gras an den Fußspitzen wird als Vordergrund gewertet. Crop enthält den deterministischen Schriftzug, Master separat textfrei betrachtet.",
+          "source": {
+            "file": "tmp/poster-workspaces/SV02/sources/cutouts/pokemon_912_quaxly.png",
+            "sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SV02/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "ee7ee602e7ce1277c872fe6da3a113293c54def45dbc80e413a70bf3f5d0a5cd"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/SV02/poster-flux2-artwork.png",
+        "sha256": "54aff4959b4c408246342318956805918bd8676d26518cc8d1f4cca8dc47ec6a"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    },
+    {
+      "review_id": "P33",
+      "asset_key": "SVP",
+      "title_de": "SVP Black Star Promos",
+      "route": "oneshot_regeneration_candidate",
+      "reason_de": "Feloris Mund verliert Zähne und Zungenabgrenzung; Krokel verliert einen sichtbaren unteren Zahn. Kwaks besitzt zusätzlich einen klaren weißen Fortsatz zwischen den Beinen. Dies sind Figurenfehler, keine reine Landschaftsreparatur.",
+      "subjects": [
+        {
+          "name": "Felori",
+          "cell": "r3c1",
+          "identity": "clear_defect",
+          "depth": "plausible_foreground_overlap",
+          "severity": "hard",
+          "finding_de": "Der offene Mund ist als einheitliche rosa Fläche ohne die beiden Fangzähne und ohne die helle getrennte Zunge der Quelle gezeichnet. Maske, Blattkragen und Schwanz bleiben erkennbar. Überlagerungen an den Pfoten werden nicht als fehlende Gliedmaßen gezählt.",
+          "source": {
+            "file": "tmp/poster-workspaces/SVP/sources/cutouts/pokemon_906_sprigatito.png",
+            "sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SVP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c1.png",
+            "sha256": "bc563133c21ec2fd16100ca40c4da9e6edcc1969af45912c8ee24cfc697bb318"
+          }
+        },
+        {
+          "name": "Krokel",
+          "cell": "r3c2",
+          "identity": "clear_defect",
+          "depth": "plausible_foreground_overlap",
+          "severity": "hard",
+          "finding_de": "Der weiße untere Zahn am bildlinken Maulrand der Quelle fehlt im Crop; der obere und der bildrechte untere Zahn bleiben. Die Hände sind zusätzlich rundlicher und weniger gezackt. Etwas Gras vor den Fußspitzen erklärt dortige Verdeckung, nicht den Gesichtsfehler.",
+          "source": {
+            "file": "tmp/poster-workspaces/SVP/sources/cutouts/pokemon_909_fuecoco.png",
+            "sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SVP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c2.png",
+            "sha256": "a335550be3d540cbe22ed4060a0548ed2edb7b77d48dd727c85fa3ff6123b791"
+          }
+        },
+        {
+          "name": "Kwaks",
+          "cell": "r3c3",
+          "identity": "clear_defect",
+          "depth": "local_contour_termination_defect",
+          "severity": "hard",
+          "finding_de": "Zwischen den blauen Beinen hängt ein klar abgegrenzter weißer länglicher Fortsatz vom Unterkörper; in der Quelle ist dieser Bereich offen. Eine große diagonale Grasspitze endet genau an diesem Fortsatz/Fußbereich, wodurch zusätzlich die Tiefe unklar wird. Haube und Gesicht sind sonst erhalten. Crop enthält den deterministischen Schriftzug; Master separat textfrei betrachtet.",
+          "source": {
+            "file": "tmp/poster-workspaces/SVP/sources/cutouts/pokemon_912_quaxly.png",
+            "sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f"
+          },
+          "crop": {
+            "file": "tmp/poster-workspaces/SVP/comfyui_poster/promotion/poster-flux2-cards/card_r3_c3.png",
+            "sha256": "f0bbd767dd4472e2ad56324edcb29a8b283e308d730c9c97f38ce25993e280a3"
+          }
+        }
+      ],
+      "master": {
+        "file": "assets/posters/SVP/poster-flux2-artwork.png",
+        "sha256": "6527600191306285021b3ae373b915e51568dcf15e4349418864e44866e85426"
+      },
+      "full_master_viewed": true,
+      "all_subject_pairs_viewed": true,
+      "all_nine_cards_visually_reviewed": false,
+      "human_approval": false
+    }
+  ]
+}

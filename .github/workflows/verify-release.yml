@@ -29,5 +29,5 @@ jobs:
     uses: ./.github/workflows/build-release.yml
     with:
       release_tag: pr-${{ github.event.pull_request.number || 'manual' }}-${{ github.sha }}
-      release_notes_tag: v9.0
+      release_notes_tag: v10.0
       artifact_retention_days: 3

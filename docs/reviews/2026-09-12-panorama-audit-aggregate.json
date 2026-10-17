@@ -1,0 +1,3119 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-09-12",
+  "scope": "Independent source-by-source visual audit of 13 assigned aggregate panoramas; no generation, promotion or original modification.",
+  "method": "Original source cutouts and each full committed master were actually opened with view_image. All nine physical 750x1050 crops per target were then individually opened with view_image. Byte SHA-256 source and master matches bind observations to exact provenance assets; existing legacy passed flags were not accepted as anatomy evidence. Stylized shading differences alone do not trigger rejection. Uncertainty does not authorize promotion.",
+  "summary": {
+    "targets": 13,
+    "subjects": 38,
+    "full_masters_viewed": 13,
+    "original_sources_viewed": 38,
+    "physical_crops_viewed": 117,
+    "source_hash_matches": 38,
+    "master_hash_matches": 13,
+    "source_cache_gaps": 0,
+    "localized_overlay_reviews": 0,
+    "target_verdicts": {
+      "reject": 13,
+      "pass": 0,
+      "uncertain": 0
+    },
+    "subject_verdicts": {
+      "reject": 25,
+      "pass": 10,
+      "uncertain": 3
+    }
+  },
+  "targets": [
+    {
+      "asset_key": "Pokedex/sections/gen1",
+      "verdict": "reject",
+      "provenance": {
+        "file": "assets/posters/Pokedex/sections/gen1/poster-flux2-provenance.json",
+        "sha256": "0728302c6e9d8c044b7848433c1f8757b719d579f6fd9db682448a08aa188bc1"
+      },
+      "artwork": {
+        "file": "assets/posters/Pokedex/sections/gen1/poster-flux2-artwork.png",
+        "sha256": "301976906809649aee6cbad5afa1226643321a7d40bbf6193c8e4305ed17ab21",
+        "pixel_sha256_from_provenance": "e71246f07bcfc124aa9b02906eb27544d81ddad780d6fafceb222091825ecb17",
+        "byte_hash_matches_provenance": true
+      },
+      "inspection": {
+        "full_text_free_master_viewed": true,
+        "all_original_sources_viewed": true,
+        "physical_crops_viewed": [
+          {
+            "row": 1,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen1/card_r1_c1.png",
+            "sha256": "3ec4e9718e708b6b82cdd2b04e4038d0952319265edeadd5b7db21666105e814",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen1/card_r1_c2.png",
+            "sha256": "10972783fb7b758cd070073940497de8fcda39f15ef75e9fc6281294823be995",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen1/card_r1_c3.png",
+            "sha256": "33c978b795c43eedfce709bc747e0da0d12f9bd8fabbaa98ea97ee876767d0ae",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen1/card_r2_c1.png",
+            "sha256": "0dffcd1ef42d138ce5f2b55a1c17c3577342d12781554f2cc356b5629ec168ac",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen1/card_r2_c2.png",
+            "sha256": "391cac5049d3f7c04f1f3f038c72085417b6127dd3cb3189b71d168eb3f661d6",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen1/card_r2_c3.png",
+            "sha256": "7633ee6d5ab6c057a5e2b88e06330544a0877f3486b9cd0a1b3598fe38cae987",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen1/card_r3_c1.png",
+            "sha256": "891a8d43b75fa3bacd1376554e368a07b4b5eedf2cc9bf1d5fcd62d57566d00d",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen1/card_r3_c2.png",
+            "sha256": "a5c1d1a67baf58e31cfc42eb6957f810a75ab0b564ee93bfd5f4838ed4b54b98",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen1/card_r3_c3.png",
+            "sha256": "ad743d069688caa28cc3d2810062347bd60d93024a436a364413bb948af09565",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          }
+        ],
+        "physical_geometry": {
+          "generation_canvas_px": [
+            848,
+            1168
+          ],
+          "generation_column_spans_px": [
+            [
+              0,
+              269
+            ],
+            [
+              290,
+              558
+            ],
+            [
+              579,
+              848
+            ]
+          ],
+          "generation_row_spans_px": [
+            [
+              0,
+              375
+            ],
+            [
+              396,
+              772
+            ],
+            [
+              793,
+              1168
+            ]
+          ],
+          "name": "cumulative_physical_endpoints",
+          "output_canvas_px": [
+            2368,
+            3268
+          ],
+          "output_column_spans_px": [
+            [
+              0,
+              750
+            ],
+            [
+              809,
+              1559
+            ],
+            [
+              1618,
+              2368
+            ]
+          ],
+          "output_row_spans_px": [
+            [
+              0,
+              1050
+            ],
+            [
+              1109,
+              2159
+            ],
+            [
+              2218,
+              3268
+            ]
+          ],
+          "version": 2
+        },
+        "localized_overlay_viewed": false,
+        "localized_overlay_reason": "Expected promotion directory absent. Diagnostic crops were extracted without resampling from committed text-free master at provenance physical output spans, with root authorization. Localized overlay/PDF review remains separate."
+      },
+      "scene_observations": "Coherent meadow, river bend, mountains and blank research building; all six upper cards contain scenery only. Ground shadows fall right. All three subjects fit r3 cells, but one foreground leaf crosses Bulbasaur's left forefoot.",
+      "subjects": [
+        {
+          "source_identity": 1,
+          "source_name": "pokemon_001_bulbasaur",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen1/sources/cutouts/pokemon_001_bulbasaur.png",
+          "source_sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a",
+          "verified_source_sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "f96cfeddc294c4efbbdf1b35cd816341d950e3051dec2128c03f652448b04d10",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen1/poster-flux2-artwork.png",
+          "artwork_sha256": "301976906809649aee6cbad5afa1226643321a7d40bbf6193c8e4305ed17ab21",
+          "cell": {
+            "row": 3,
+            "column": 1
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen1/card_r3_c1.png",
+          "physical_crop_sha256": "891a8d43b75fa3bacd1376554e368a07b4b5eedf2cc9bf1d5fcd62d57566d00d",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Bulbasaur: bulb lobes, pointed ears, red eyes and forehead spots match the source. Source has three distinct white claws on each visible foot; generated main forefoot has two white round nails plus a skin-coloured point, and rear-foot white claws disappear into grass. Foreground leaf obscures the left forefoot boundary."
+        },
+        {
+          "source_identity": 4,
+          "source_name": "pokemon_004_charmander",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen1/sources/cutouts/pokemon_004_charmander.png",
+          "source_sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+          "verified_source_sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "84b721fa96a4480ee20afd28765c279e15d45b0f73c13f74c7988cf06a3b68df",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen1/poster-flux2-artwork.png",
+          "artwork_sha256": "301976906809649aee6cbad5afa1226643321a7d40bbf6193c8e4305ed17ab21",
+          "cell": {
+            "row": 3,
+            "column": 2
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen1/card_r3_c2.png",
+          "physical_crop_sha256": "a5c1d1a67baf58e31cfc42eb6957f810a75ab0b564ee93bfd5f4838ed4b54b98",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Charmander: blue eyes, two arms, three claws on both feet, cream belly and single flame-tail retained. Upper fangs are present on physical crop (not absent as preliminary full-view impression); the source's two lower white fangs are missing from the fully open generated mouth."
+        },
+        {
+          "source_identity": 7,
+          "source_name": "pokemon_007_squirtle",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen1/sources/cutouts/pokemon_007_squirtle.png",
+          "source_sha256": "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290",
+          "verified_source_sha256": "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "72949f5da5c7b8cf45d409ded073e210e1f7b27330d7625b993a3de4e584c2e1",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen1/poster-flux2-artwork.png",
+          "artwork_sha256": "301976906809649aee6cbad5afa1226643321a7d40bbf6193c8e4305ed17ab21",
+          "cell": {
+            "row": 3,
+            "column": 3
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen1/card_r3_c3.png",
+          "physical_crop_sha256": "ad743d069688caa28cc3d2810062347bd60d93024a436a364413bb948af09565",
+          "physical_crop_viewed": true,
+          "verdict": "pass",
+          "observations": "Squirtle: two red-brown eyes, cream segmented plastron, brown rear shell with pale rim, paired arms/legs and single curled blue tail retained. Three-point paw silhouettes are readable, and entire tail and feet remain inside the card."
+        }
+      ]
+    },
+    {
+      "asset_key": "Pokedex/sections/gen2",
+      "verdict": "reject",
+      "provenance": {
+        "file": "assets/posters/Pokedex/sections/gen2/poster-flux2-provenance.json",
+        "sha256": "8c7fcfd71e0685fb9aafc52775764ef150801cc814b3f745f4238fc0c0479981"
+      },
+      "artwork": {
+        "file": "assets/posters/Pokedex/sections/gen2/poster-flux2-artwork.png",
+        "sha256": "120df09a5614c08d244841e26b827cff0fdbed82a72de5ba6985ad3c6614a487",
+        "pixel_sha256_from_provenance": "0fa77c1d847f563931ebc788dfda9a14602d0f7df5ecf25431e455d71e1b8df0",
+        "byte_hash_matches_provenance": true
+      },
+      "inspection": {
+        "full_text_free_master_viewed": true,
+        "all_original_sources_viewed": true,
+        "physical_crops_viewed": [
+          {
+            "row": 1,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen2/card_r1_c1.png",
+            "sha256": "10e9489016d689f1a1a88ffbc6efe09d974fe5da3146613238cef9ea566b1879",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen2/card_r1_c2.png",
+            "sha256": "8307603f3976f479ba0686de8c0085bf1f031c1d7cdc307f5ecc0eb193c2ca19",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen2/card_r1_c3.png",
+            "sha256": "9731421108d896ab837929144f2b9e84ea47c9328376f20d06e160a49f0f2b47",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen2/card_r2_c1.png",
+            "sha256": "a053bba53cccb9290507f9fa57c53f1f7b80413e4d338e1b19abe42b88f2ee1a",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen2/card_r2_c2.png",
+            "sha256": "a14ebe021be662517b0f7863b6d3b98e0e73c72278d759d428687f08c696d624",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen2/card_r2_c3.png",
+            "sha256": "fbddee14e4d076a8a83e9bedd588ddaa47b190ba0a2aea0c6ccd8b81cfe3ad85",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen2/card_r3_c1.png",
+            "sha256": "f771ccd40b107d1512e02cf76279253eaf0d2850c914a50e6396d0a771ff62b0",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen2/card_r3_c2.png",
+            "sha256": "9c6fe1f5d153af840e0e556c66193428afdfeac370d8385c69870ee0233ba2bd",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen2/card_r3_c3.png",
+            "sha256": "b266273fbf56749f77bcfc915a571c16db45a601708a11f9ac74bae2c4d105a0",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          }
+        ],
+        "physical_geometry": {
+          "generation_canvas_px": [
+            848,
+            1168
+          ],
+          "generation_column_spans_px": [
+            [
+              0,
+              269
+            ],
+            [
+              290,
+              558
+            ],
+            [
+              579,
+              848
+            ]
+          ],
+          "generation_row_spans_px": [
+            [
+              0,
+              375
+            ],
+            [
+              396,
+              772
+            ],
+            [
+              793,
+              1168
+            ]
+          ],
+          "name": "cumulative_physical_endpoints",
+          "output_canvas_px": [
+            2368,
+            3268
+          ],
+          "output_column_spans_px": [
+            [
+              0,
+              750
+            ],
+            [
+              809,
+              1559
+            ],
+            [
+              1618,
+              2368
+            ]
+          ],
+          "output_row_spans_px": [
+            [
+              0,
+              1050
+            ],
+            [
+              1109,
+              2159
+            ],
+            [
+              2218,
+              3268
+            ]
+          ],
+          "version": 2
+        },
+        "localized_overlay_viewed": false,
+        "localized_overlay_reason": "Expected promotion directory absent. Diagnostic crops were extracted without resampling from committed text-free master at provenance physical output spans, with root authorization. Localized overlay/PDF review remains separate."
+      },
+      "scene_observations": "Continuous autumn valley, village, river and mountain scene; six upper crops contain no invented creatures. Bottom characters fully contained; Chikorita alone suffers foreground grass crossing body.",
+      "subjects": [
+        {
+          "source_identity": 152,
+          "source_name": "pokemon_152_chikorita",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen2/sources/cutouts/pokemon_152_chikorita.png",
+          "source_sha256": "3ffc2eeee9139b0281ab5493b1a6d4b5c1329de5ddf5361f5ee3c93d12c05659",
+          "verified_source_sha256": "3ffc2eeee9139b0281ab5493b1a6d4b5c1329de5ddf5361f5ee3c93d12c05659",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "30acf73b389c25cf7460b45a71f064af19b82302ba1affb0ac10002a6513d8c0",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen2/poster-flux2-artwork.png",
+          "artwork_sha256": "120df09a5614c08d244841e26b827cff0fdbed82a72de5ba6985ad3c6614a487",
+          "cell": {
+            "row": 3,
+            "column": 1
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen2/card_r3_c1.png",
+          "physical_crop_sha256": "f771ccd40b107d1512e02cf76279253eaf0d2850c914a50e6396d0a771ff62b0",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Chikorita retains one head leaf, red eyes and rounded body. Source neck buds form distinct green nodules; generated foreground grass merges into a front neck bud and another blade crosses the face/body. Source rounded pale toenails are also lost on visible feet."
+        },
+        {
+          "source_identity": 155,
+          "source_name": "pokemon_155_cyndaquil",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen2/sources/cutouts/pokemon_155_cyndaquil.png",
+          "source_sha256": "9532b237ef088f8032024b95459303495e261eb2f7f024b79511522e551a9bcd",
+          "verified_source_sha256": "9532b237ef088f8032024b95459303495e261eb2f7f024b79511522e551a9bcd",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "b54e467594c5b93a7d563140f2cbf9b0af9bc33bbef72d9fc0c976bc39c095e7",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen2/poster-flux2-artwork.png",
+          "artwork_sha256": "120df09a5614c08d244841e26b827cff0fdbed82a72de5ba6985ad3c6614a487",
+          "cell": {
+            "row": 3,
+            "column": 2
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen2/card_r3_c2.png",
+          "physical_crop_sha256": "9c6fe1f5d153af840e0e556c66193428afdfeac370d8385c69870ee0233ba2bd",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Cyndaquil retains closed eye, long snout, two small forearms, dark back and one back-flame cluster. Each source foot ends in a single broad pale nail; crop replaces these with three tiny claw/toe marks, an anatomical change."
+        },
+        {
+          "source_identity": 158,
+          "source_name": "pokemon_158_totodile",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen2/sources/cutouts/pokemon_158_totodile.png",
+          "source_sha256": "a0ce9f06497dc2a9a3d34174ff89e0ee1a0745ce8007cc89257e379d9be49525",
+          "verified_source_sha256": "a0ce9f06497dc2a9a3d34174ff89e0ee1a0745ce8007cc89257e379d9be49525",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "b873fb5dfe88086f59ab95bc6612f1c86239f00c896cb442be4ce79da5c5ca5d",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen2/poster-flux2-artwork.png",
+          "artwork_sha256": "120df09a5614c08d244841e26b827cff0fdbed82a72de5ba6985ad3c6614a487",
+          "cell": {
+            "row": 3,
+            "column": 3
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen2/card_r3_c3.png",
+          "physical_crop_sha256": "b266273fbf56749f77bcfc915a571c16db45a601708a11f9ac74bae2c4d105a0",
+          "physical_crop_viewed": true,
+          "verdict": "uncertain",
+          "observations": "Totodile retains open jaws, two upper fangs, lower teeth, yellow chest chevron and red dorsal/tail plates. Ground foot contains finer digit-like divisions than source, and raised hand ends have pale blobs absent from the blue jagged source hand. At this render resolution I cannot reliably separate intended fingers, highlights and grass from anatomical additions; do not approve anatomy without a clearer rerender."
+        }
+      ]
+    },
+    {
+      "asset_key": "Pokedex/sections/gen3",
+      "verdict": "reject",
+      "provenance": {
+        "file": "assets/posters/Pokedex/sections/gen3/poster-flux2-provenance.json",
+        "sha256": "2e2a11eae7259c7a7763d87c82ce57ff6600d487c51aec6c18508078ec603174"
+      },
+      "artwork": {
+        "file": "assets/posters/Pokedex/sections/gen3/poster-flux2-artwork.png",
+        "sha256": "4e05fe23e97123fbcdf162396f0ab38bf8f35be7a165e0ea3b638b61892aba49",
+        "pixel_sha256_from_provenance": "61b59d0464dfd7871ea92abdc7800f6899b4eaf6ac48453c0d66d5565a4d667c",
+        "byte_hash_matches_provenance": true
+      },
+      "inspection": {
+        "full_text_free_master_viewed": true,
+        "all_original_sources_viewed": true,
+        "physical_crops_viewed": [
+          {
+            "row": 1,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen3/card_r1_c1.png",
+            "sha256": "8e6dcdf730711b23c6b51d6d3f14c67eada9fe5da6840c99ed2ca53fcd6ee13f",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen3/card_r1_c2.png",
+            "sha256": "87061a5bab48bb2c55ebd2f0348726cad8e12a51d827017ccf5a58362344ebca",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen3/card_r1_c3.png",
+            "sha256": "6fb84a9b738e37df8efc595559a75b003fd081d6de75209b586d1acbf97d2d2c",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen3/card_r2_c1.png",
+            "sha256": "b67cf1dee6fff69c8169ae562a77ec960dbedd9e539d337bca3e2e68ff5081e1",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen3/card_r2_c2.png",
+            "sha256": "be867364b2590f2e19329b772d86637ec01ddf4bc76a061c61e67bbd84a037b6",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen3/card_r2_c3.png",
+            "sha256": "24ba01c81cb0035717e8de832dd5464f0b16e44aa34474024cc8df48a5ad2d41",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen3/card_r3_c1.png",
+            "sha256": "469c27d324817b6693146b55b8535bf76b90bc9a9d0ae435627492c53e8b588e",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen3/card_r3_c2.png",
+            "sha256": "f3e816e5eba4626958ab5b182b7c3bee088c26080a89a502fe78cdca9790c72c",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen3/card_r3_c3.png",
+            "sha256": "f418254127705f98b8ae9fb989384f0ee8756516efc081b95266d63a57e2f33c",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          }
+        ],
+        "physical_geometry": {
+          "generation_canvas_px": [
+            848,
+            1168
+          ],
+          "generation_column_spans_px": [
+            [
+              0,
+              269
+            ],
+            [
+              290,
+              558
+            ],
+            [
+              579,
+              848
+            ]
+          ],
+          "generation_row_spans_px": [
+            [
+              0,
+              375
+            ],
+            [
+              396,
+              772
+            ],
+            [
+              793,
+              1168
+            ]
+          ],
+          "name": "cumulative_physical_endpoints",
+          "output_canvas_px": [
+            2368,
+            3268
+          ],
+          "output_column_spans_px": [
+            [
+              0,
+              750
+            ],
+            [
+              809,
+              1559
+            ],
+            [
+              1618,
+              2368
+            ]
+          ],
+          "output_row_spans_px": [
+            [
+              0,
+              1050
+            ],
+            [
+              1109,
+              2159
+            ],
+            [
+              2218,
+              3268
+            ]
+          ],
+          "version": 2
+        },
+        "localized_overlay_viewed": false,
+        "localized_overlay_reason": "Expected promotion directory absent. Diagnostic crops were extracted without resampling from committed text-free master at provenance physical output spans, with root authorization. Localized overlay/PDF review remains separate."
+      },
+      "scene_observations": "Watercolour bay and tropical woodland are coherent across all six upper crops, without additional creatures; three subjects cast consistent rightward shadows and remain inside bottom cards.",
+      "subjects": [
+        {
+          "source_identity": 252,
+          "source_name": "pokemon_252_treecko",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen3/sources/cutouts/pokemon_252_treecko.png",
+          "source_sha256": "0e066d885e028d3c14a039ebf7b85b12ae2d5cca023d17bf16272f74fb4fae6c",
+          "verified_source_sha256": "0e066d885e028d3c14a039ebf7b85b12ae2d5cca023d17bf16272f74fb4fae6c",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "37c41a06e09d6658d643f5311b585c7adc85dbce09602f6118ef9157ccb3f8a3",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen3/poster-flux2-artwork.png",
+          "artwork_sha256": "4e05fe23e97123fbcdf162396f0ab38bf8f35be7a165e0ea3b638b61892aba49",
+          "cell": {
+            "row": 3,
+            "column": 1
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen3/card_r3_c1.png",
+          "physical_crop_sha256": "469c27d324817b6693146b55b8535bf76b90bc9a9d0ae435627492c53e8b588e",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Treecko preserves split head crest, yellow slit-pupil eyes, pink throat/belly, three rounded fingers per hand and three rounded toes per foot, plus the thick curled leaf tail. A foreground blade crosses and cuts the left foot outline; anatomical identity is otherwise faithful."
+        },
+        {
+          "source_identity": 255,
+          "source_name": "pokemon_255_torchic",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen3/sources/cutouts/pokemon_255_torchic.png",
+          "source_sha256": "d234db13f46ac30452288fee011df2857d93bac22f7d038d6b472ef14a651950",
+          "verified_source_sha256": "d234db13f46ac30452288fee011df2857d93bac22f7d038d6b472ef14a651950",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "671e8746fd27fa08b1fc031d94ed88e5d0538116c15c0872ed51e0789254699d",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen3/poster-flux2-artwork.png",
+          "artwork_sha256": "4e05fe23e97123fbcdf162396f0ab38bf8f35be7a165e0ea3b638b61892aba49",
+          "cell": {
+            "row": 3,
+            "column": 2
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen3/card_r3_c2.png",
+          "physical_crop_sha256": "f3e816e5eba4626958ab5b182b7c3bee088c26080a89a502fe78cdca9790c72c",
+          "physical_crop_viewed": true,
+          "verdict": "pass",
+          "observations": "Torchic preserves three-lobed yellow head plume, orange head/body, two black eyes, yellow beak, paired feathered yellow wings and two legs with source-like spread front toes and tucked rear toes. Crop has clear boundaries and contact shadow."
+        },
+        {
+          "source_identity": 258,
+          "source_name": "pokemon_258_mudkip",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen3/sources/cutouts/pokemon_258_mudkip.png",
+          "source_sha256": "89abf9aa5f800efe849acbee7914e98ba574399c2293298606e81ebe43fb5a8d",
+          "verified_source_sha256": "89abf9aa5f800efe849acbee7914e98ba574399c2293298606e81ebe43fb5a8d",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "5f3608561fbb30f36203b6bbf47071ccf5793393a1d176d3c024b7947aefa19b",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen3/poster-flux2-artwork.png",
+          "artwork_sha256": "4e05fe23e97123fbcdf162396f0ab38bf8f35be7a165e0ea3b638b61892aba49",
+          "cell": {
+            "row": 3,
+            "column": 3
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen3/card_r3_c3.png",
+          "physical_crop_sha256": "f418254127705f98b8ae9fb989384f0ee8756516efc081b95266d63a57e2f33c",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Mudkip preserves tall divided head fin, paired orange cheek gills, white jaw/belly, blue forelegs and pale fan tail. Foreground plant blade runs across white chest, right foreleg and tail root, obscuring the source's rear-leg separation and breaking clean body boundaries."
+        }
+      ]
+    },
+    {
+      "asset_key": "Pokedex/sections/gen4",
+      "verdict": "reject",
+      "provenance": {
+        "file": "assets/posters/Pokedex/sections/gen4/poster-flux2-provenance.json",
+        "sha256": "a5b2490fb4c7e460a02ca40d21a1a80384b40472381393ea2305457d44496bd2"
+      },
+      "artwork": {
+        "file": "assets/posters/Pokedex/sections/gen4/poster-flux2-artwork.png",
+        "sha256": "1421252b2f09e23e1fc06260181769dbc9775c6bdc2f1422e23bd1309a79d61d",
+        "pixel_sha256_from_provenance": "1c83865d06587a3e5bd75c3b172db6a885c02acfcc70bbea9b9fbcd1cc3a79bd",
+        "byte_hash_matches_provenance": true
+      },
+      "inspection": {
+        "full_text_free_master_viewed": true,
+        "all_original_sources_viewed": true,
+        "physical_crops_viewed": [
+          {
+            "row": 1,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen4/card_r1_c1.png",
+            "sha256": "fc5745d0952dec140a9f4e547c8117732465485617a5db24e15d594a2a0d4d5b",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen4/card_r1_c2.png",
+            "sha256": "9adbee4a58d3312e9632485be029cb42ce9c4b5e0672e32cd23fe312385dd6ef",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen4/card_r1_c3.png",
+            "sha256": "80703c1193961b3a2210adbe2008e335975f0a16e85824a3ae0e3955e9c676f5",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen4/card_r2_c1.png",
+            "sha256": "9181c6d43ce05fa2441a3ddfd584bb34deddc8b60f5759a6b010919791d25244",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen4/card_r2_c2.png",
+            "sha256": "d69a487b1d79b90e5ad76b28da97d233716c780f061021672deb388d46c1cfbc",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen4/card_r2_c3.png",
+            "sha256": "07aa5583e779972fab32ce11f1f5f03d26b58db15b18be93d92e4b0d0c3508c5",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen4/card_r3_c1.png",
+            "sha256": "0b4239d5250f68d94f425d2daa44b0737f99eeb58c04b634fbf3ee8b7ebc3966",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen4/card_r3_c2.png",
+            "sha256": "6cd6d04ffbad47283051bdc03fd2ffba112c3d30dd8adbacef91aa3061915e9c",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen4/card_r3_c3.png",
+            "sha256": "ea819fce8690046a59329764ed6dd2acbc1bf907097150ed11c360c066ca0d92",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          }
+        ],
+        "physical_geometry": {
+          "generation_canvas_px": [
+            848,
+            1168
+          ],
+          "generation_column_spans_px": [
+            [
+              0,
+              269
+            ],
+            [
+              290,
+              558
+            ],
+            [
+              579,
+              848
+            ]
+          ],
+          "generation_row_spans_px": [
+            [
+              0,
+              375
+            ],
+            [
+              396,
+              772
+            ],
+            [
+              793,
+              1168
+            ]
+          ],
+          "name": "cumulative_physical_endpoints",
+          "output_canvas_px": [
+            2368,
+            3268
+          ],
+          "output_column_spans_px": [
+            [
+              0,
+              750
+            ],
+            [
+              809,
+              1559
+            ],
+            [
+              1618,
+              2368
+            ]
+          ],
+          "output_row_spans_px": [
+            [
+              0,
+              1050
+            ],
+            [
+              1109,
+              2159
+            ],
+            [
+              2218,
+              3268
+            ]
+          ],
+          "version": 2
+        },
+        "localized_overlay_viewed": false,
+        "localized_overlay_reason": "Expected promotion directory absent. Diagnostic crops were extracted without resampling from committed text-free master at provenance physical output spans, with root authorization. Localized overlay/PDF review remains separate."
+      },
+      "scene_observations": "Snow mountains, conifer valley and connected river remain coherent through all nine crops. Upper six cards contain scenery only; three characters are contained with ground shadows.",
+      "subjects": [
+        {
+          "source_identity": 387,
+          "source_name": "pokemon_387_turtwig",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen4/sources/cutouts/pokemon_387_turtwig.png",
+          "source_sha256": "34bdf93e84d8e1770074ead9c38b1659bcc937abfa20ddd8a6e53a283ed0e16d",
+          "verified_source_sha256": "34bdf93e84d8e1770074ead9c38b1659bcc937abfa20ddd8a6e53a283ed0e16d",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "a863b05ce702ed5f50a451563484b2f596230810e582d52e0eb12fd9b2218cf7",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen4/poster-flux2-artwork.png",
+          "artwork_sha256": "1421252b2f09e23e1fc06260181769dbc9775c6bdc2f1422e23bd1309a79d61d",
+          "cell": {
+            "row": 3,
+            "column": 1
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen4/card_r3_c1.png",
+          "physical_crop_sha256": "0b4239d5250f68d94f425d2daa44b0737f99eeb58c04b634fbf3ee8b7ebc3966",
+          "physical_crop_viewed": true,
+          "verdict": "pass",
+          "observations": "Turtwig retains two leaves on one brown head twig, angular brown scalp patch, yellow jaw/eye rim, dark-bordered segmented shell and three exposed short legs with yellow zigzag socks. Minor grass at rear foot does not hide its leg outline."
+        },
+        {
+          "source_identity": 390,
+          "source_name": "pokemon_390_chimchar",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen4/sources/cutouts/pokemon_390_chimchar.png",
+          "source_sha256": "7ce75f77abcaff1451c67da6fc8de9b6828aacb1a222dd590825c5cab4b20140",
+          "verified_source_sha256": "7ce75f77abcaff1451c67da6fc8de9b6828aacb1a222dd590825c5cab4b20140",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "016b06764dd680b0d6fc80bbb89635dc05de59b972ae40a6ce0515baac8cfc11",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen4/poster-flux2-artwork.png",
+          "artwork_sha256": "1421252b2f09e23e1fc06260181769dbc9775c6bdc2f1422e23bd1309a79d61d",
+          "cell": {
+            "row": 3,
+            "column": 2
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen4/card_r3_c2.png",
+          "physical_crop_sha256": "6cd6d04ffbad47283051bdc03fd2ffba112c3d30dd8adbacef91aa3061915e9c",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Chimchar retains ears, head curl, cream face/belly and rear flame, but source's spread ground hand has four fingers plus thumb; artwork shows only three elongated fingers plus thumb. Bent rear hand and chest marking are also compressed into indistinct loops."
+        },
+        {
+          "source_identity": 393,
+          "source_name": "pokemon_393_piplup",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen4/sources/cutouts/pokemon_393_piplup.png",
+          "source_sha256": "84895daf63236a40d6061af37739908b5256876c96a4a34b9f354df5f1ec2ca0",
+          "verified_source_sha256": "84895daf63236a40d6061af37739908b5256876c96a4a34b9f354df5f1ec2ca0",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "101b477012d5a1ec1b882746723807bb1c1214ec7fb4b8114f5b25348f6bce24",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen4/poster-flux2-artwork.png",
+          "artwork_sha256": "1421252b2f09e23e1fc06260181769dbc9775c6bdc2f1422e23bd1309a79d61d",
+          "cell": {
+            "row": 3,
+            "column": 3
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen4/card_r3_c3.png",
+          "physical_crop_sha256": "ea819fce8690046a59329764ed6dd2acbc1bf907097150ed11c360c066ca0d92",
+          "physical_crop_viewed": true,
+          "verdict": "pass",
+          "observations": "Piplup preserves dark-blue hood, white face patch, oval eye, yellow beak, two white chest ovals, paired flippers, forked tail and two yellow feet with toe divisions. Body and feet are clearly bounded in the card."
+        }
+      ]
+    },
+    {
+      "asset_key": "Pokedex/sections/gen5",
+      "verdict": "reject",
+      "provenance": {
+        "file": "assets/posters/Pokedex/sections/gen5/poster-flux2-provenance.json",
+        "sha256": "ddf18b3f848b48e33e1359e4f0045a44a62dedc144a0c4d66286b812f2c8e337"
+      },
+      "artwork": {
+        "file": "assets/posters/Pokedex/sections/gen5/poster-flux2-artwork.png",
+        "sha256": "c21cc3dff19ea8b2186617ab39c0a623147130ec82ca25df6227eb7394e26652",
+        "pixel_sha256_from_provenance": "e902a8653eb0d329d868c28c63327b837c6614a3870b4342804ce280229b0f7c",
+        "byte_hash_matches_provenance": true
+      },
+      "inspection": {
+        "full_text_free_master_viewed": true,
+        "all_original_sources_viewed": true,
+        "physical_crops_viewed": [
+          {
+            "row": 1,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen5/card_r1_c1.png",
+            "sha256": "8346962626f56b56c029e70adc57ea09dcb2b47d760dd7797c5db103bdb3f16b",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen5/card_r1_c2.png",
+            "sha256": "6db722b8423f278a63f77ebf52eab3585c17043eacbe979b8e82396c14a19617",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen5/card_r1_c3.png",
+            "sha256": "6921b442051bd7732937484efe8bcf2368a5ef0d1b0294c8c960609057202a71",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen5/card_r2_c1.png",
+            "sha256": "8e6e086a32dc814f61232031b564de170b70ee4020b00420fab684fd74ef5a0e",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen5/card_r2_c2.png",
+            "sha256": "1bf94c92ed826f01e604be797a1ec4c5f9383b5a17eecd31549dc9e7434e5315",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen5/card_r2_c3.png",
+            "sha256": "d40500b11be3ed48e719cf9226abbdfc30fe2e0dacf68e4b1bcefb2539679046",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen5/card_r3_c1.png",
+            "sha256": "87fa208a15e271dd8602d05a13c4d91930553c5220e904249dab8163d6421c56",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen5/card_r3_c2.png",
+            "sha256": "1c8f10e4449b7a651ac5d2701ef5fd1f25435652420d08eafd605eb2cbdec48f",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen5/card_r3_c3.png",
+            "sha256": "a6f6f25622bc1872a63a863739239fa20cb745c0804ffb6760f8ce4f5bcba2a6",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          }
+        ],
+        "physical_geometry": {
+          "generation_canvas_px": [
+            848,
+            1168
+          ],
+          "generation_column_spans_px": [
+            [
+              0,
+              269
+            ],
+            [
+              290,
+              558
+            ],
+            [
+              579,
+              848
+            ]
+          ],
+          "generation_row_spans_px": [
+            [
+              0,
+              375
+            ],
+            [
+              396,
+              772
+            ],
+            [
+              793,
+              1168
+            ]
+          ],
+          "name": "cumulative_physical_endpoints",
+          "output_canvas_px": [
+            2368,
+            3268
+          ],
+          "output_column_spans_px": [
+            [
+              0,
+              750
+            ],
+            [
+              809,
+              1559
+            ],
+            [
+              1618,
+              2368
+            ]
+          ],
+          "output_row_spans_px": [
+            [
+              0,
+              1050
+            ],
+            [
+              1109,
+              2159
+            ],
+            [
+              2218,
+              3268
+            ]
+          ],
+          "version": 2
+        },
+        "localized_overlay_viewed": false,
+        "localized_overlay_reason": "Expected promotion directory absent. Diagnostic crops were extracted without resampling from committed text-free master at provenance physical output spans, with root authorization. Localized overlay/PDF review remains separate."
+      },
+      "scene_observations": "Urban riverside and bridge have coherent depth/reflections, with six upper crops free of extra creatures. Characters stay within bottom cards. Long rightward shadows match lighting.",
+      "subjects": [
+        {
+          "source_identity": 495,
+          "source_name": "pokemon_495_snivy",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen5/sources/cutouts/pokemon_495_snivy.png",
+          "source_sha256": "e7ff61a0daed598a7676b262c56af766e88bcf91764658eeeae615f6f9937549",
+          "verified_source_sha256": "e7ff61a0daed598a7676b262c56af766e88bcf91764658eeeae615f6f9937549",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "a75f5938c2496b9b044bcb6222aa4bd94fde50b5735370347625fe3a9ee295db",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen5/poster-flux2-artwork.png",
+          "artwork_sha256": "c21cc3dff19ea8b2186617ab39c0a623147130ec82ca25df6227eb7394e26652",
+          "cell": {
+            "row": 3,
+            "column": 1
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen5/card_r3_c1.png",
+          "physical_crop_sha256": "87fa208a15e271dd8602d05a13c4d91930553c5220e904249dab8163d6421c56",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Snivy retains pointed snout, half-lidded red eye, paired yellow collar curls, two small three-point arms and branched leaf tail. A large foreground grass blade crosses the lower belly and left leg and meets the right hand, preventing clean containment of its silhouette."
+        },
+        {
+          "source_identity": 498,
+          "source_name": "pokemon_498_tepig",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen5/sources/cutouts/pokemon_498_tepig.png",
+          "source_sha256": "d7750c56dc5be8ae10a6c270c34a0c46dbf64f289f2eb5670cbe52a9fd41f275",
+          "verified_source_sha256": "d7750c56dc5be8ae10a6c270c34a0c46dbf64f289f2eb5670cbe52a9fd41f275",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "71b68cb64b98197b2d22a474dfbcddd8952bc766c65e4f0405e2ed7dfd8b4e11",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen5/poster-flux2-artwork.png",
+          "artwork_sha256": "c21cc3dff19ea8b2186617ab39c0a623147130ec82ca25df6227eb7394e26652",
+          "cell": {
+            "row": 3,
+            "column": 2
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen5/card_r3_c2.png",
+          "physical_crop_sha256": "1c8f10e4449b7a651ac5d2701ef5fd1f25435652420d08eafd605eb2cbdec48f",
+          "physical_crop_viewed": true,
+          "verdict": "pass",
+          "observations": "Tepig preserves two long dark ears, yellow forehead blaze, oval eye, pink snout with two nostrils, open mouth, dark rump band, three source-visible legs and coiled tail with red sphere. No extra limbs or cut body boundaries."
+        },
+        {
+          "source_identity": 501,
+          "source_name": "pokemon_501_oshawott",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen5/sources/cutouts/pokemon_501_oshawott.png",
+          "source_sha256": "480904e99ed485ba3c8fb5866bac1a2acee76dd6dcee1a1ad3e2aac706576fc7",
+          "verified_source_sha256": "480904e99ed485ba3c8fb5866bac1a2acee76dd6dcee1a1ad3e2aac706576fc7",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "7d95563acab903da681aa4f6896726f6e691fe6441e6f2f3878e4492369d6237",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen5/poster-flux2-artwork.png",
+          "artwork_sha256": "c21cc3dff19ea8b2186617ab39c0a623147130ec82ca25df6227eb7394e26652",
+          "cell": {
+            "row": 3,
+            "column": 3
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen5/card_r3_c3.png",
+          "physical_crop_sha256": "a6f6f25622bc1872a63a863739239fa20cb745c0804ffb6760f8ce4f5bcba2a6",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Oshawott retains white head, two dark ears, dark eyes, brown nose, downturned mouth, two white arms, scalloped collar, yellow belly shell and two three-toe blue feet. Source shows three cheek freckles on each side; these become a faint smudge on one side and disappear on the other. A foreground blade crosses the blue tail."
+        }
+      ]
+    },
+    {
+      "asset_key": "Pokedex/sections/gen6",
+      "verdict": "reject",
+      "provenance": {
+        "file": "assets/posters/Pokedex/sections/gen6/poster-flux2-provenance.json",
+        "sha256": "5281bff7b89732593b36d76799daee700ae827f3673560d5f18d4221343ecbcc"
+      },
+      "artwork": {
+        "file": "assets/posters/Pokedex/sections/gen6/poster-flux2-artwork.png",
+        "sha256": "588d433b0338783c87a14a4b48888b7b8288ff3e68fd89104b0d7396c199d0e6",
+        "pixel_sha256_from_provenance": "a8726ca0f2ee6b259c13945245a06bd72176dbcc4b4c27d26512470116853853",
+        "byte_hash_matches_provenance": true
+      },
+      "inspection": {
+        "full_text_free_master_viewed": true,
+        "all_original_sources_viewed": true,
+        "physical_crops_viewed": [
+          {
+            "row": 1,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen6/card_r1_c1.png",
+            "sha256": "3f03665ad865575c24cd8b79376a481ccf9e05ced323dcfff37d35884e2a5e64",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen6/card_r1_c2.png",
+            "sha256": "0d02280a174f6ee79305282cef05ab4d68f714d9917aa29b1196c5e6514c2e34",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen6/card_r1_c3.png",
+            "sha256": "9cce269cf78a67f7b3f0209c38f86060c79c85b4578ee2e74dbd31fd35478dd0",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen6/card_r2_c1.png",
+            "sha256": "5c287faa703a94987af6b3bc6a803b1f06be12baf3515aece7f336582584836f",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen6/card_r2_c2.png",
+            "sha256": "72226e78745e93c56078428df32d75ce0cad4f2b9c43e0cf724c73d7bfc41d4e",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen6/card_r2_c3.png",
+            "sha256": "281ad4c57f3beefe2ed3a92e792da2b3ecab0060e2343ddeabebbc6f7c122569",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen6/card_r3_c1.png",
+            "sha256": "57407297a27d880201a90efe8e31b1c37924d27315cee3637c91c523e290c8a0",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen6/card_r3_c2.png",
+            "sha256": "dca86b4589aad975fe6512fd019e8d5495cb48dcf94025018d5e47d0953349dd",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen6/card_r3_c3.png",
+            "sha256": "381043b14a1625c08f4bf02d222953c28a455faf817c7a2d62a5fef596adf1fe",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          }
+        ],
+        "physical_geometry": {
+          "generation_canvas_px": [
+            848,
+            1168
+          ],
+          "generation_column_spans_px": [
+            [
+              0,
+              269
+            ],
+            [
+              290,
+              558
+            ],
+            [
+              579,
+              848
+            ]
+          ],
+          "generation_row_spans_px": [
+            [
+              0,
+              375
+            ],
+            [
+              396,
+              772
+            ],
+            [
+              793,
+              1168
+            ]
+          ],
+          "name": "cumulative_physical_endpoints",
+          "output_canvas_px": [
+            2368,
+            3268
+          ],
+          "output_column_spans_px": [
+            [
+              0,
+              750
+            ],
+            [
+              809,
+              1559
+            ],
+            [
+              1618,
+              2368
+            ]
+          ],
+          "output_row_spans_px": [
+            [
+              0,
+              1050
+            ],
+            [
+              1109,
+              2159
+            ],
+            [
+              2218,
+              3268
+            ]
+          ],
+          "version": 2
+        },
+        "localized_overlay_viewed": false,
+        "localized_overlay_reason": "Expected promotion directory absent. Diagnostic crops were extracted without resampling from committed text-free master at provenance physical output spans, with root authorization. Localized overlay/PDF review remains separate."
+      },
+      "scene_observations": "Open flower meadow, winding river and distant glass structure are coherent. All nine cards inspected; no additional creatures. Subjects stay inside bottom cells; dense grass compromises Chespin's feet.",
+      "subjects": [
+        {
+          "source_identity": 650,
+          "source_name": "pokemon_650_chespin",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen6/sources/cutouts/pokemon_650_chespin.png",
+          "source_sha256": "565272048cd8eeb2b524d597da6805dbdff28c313bc5346181f1859041320ee7",
+          "verified_source_sha256": "565272048cd8eeb2b524d597da6805dbdff28c313bc5346181f1859041320ee7",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "2d476961e61fcbfcad17257f451779d702695af3461f35c85cf33b2c13e95974",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen6/poster-flux2-artwork.png",
+          "artwork_sha256": "588d433b0338783c87a14a4b48888b7b8288ff3e68fd89104b0d7396c199d0e6",
+          "cell": {
+            "row": 3,
+            "column": 1
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen6/card_r3_c1.png",
+          "physical_crop_sha256": "57407297a27d880201a90efe8e31b1c37924d27315cee3637c91c523e290c8a0",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Chespin retains five head spikes and orange tail tip, but source's large white upper tooth is reduced to a tiny sliver and the left brown cheek patch disappears. Source feet end in two smooth pointed white claws; generated broad white feet are crossed by dense dark grass strokes, so claw count and boundaries are unreadable. The apparent many toes in full view are grass, not confirmed added anatomy."
+        },
+        {
+          "source_identity": 653,
+          "source_name": "pokemon_653_fennekin",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen6/sources/cutouts/pokemon_653_fennekin.png",
+          "source_sha256": "b638e094ee06adcec959aad2898ce93f8c5fda88feba9c9158d1f16c026c07dd",
+          "verified_source_sha256": "b638e094ee06adcec959aad2898ce93f8c5fda88feba9c9158d1f16c026c07dd",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "48ba52540c9e8d073b492d22e323efbb1436e9fa0128da6f9a301c32b6ec56a3",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen6/poster-flux2-artwork.png",
+          "artwork_sha256": "588d433b0338783c87a14a4b48888b7b8288ff3e68fd89104b0d7396c199d0e6",
+          "cell": {
+            "row": 3,
+            "column": 2
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen6/card_r3_c2.png",
+          "physical_crop_sha256": "dca86b4589aad975fe6512fd019e8d5495cb48dcf94025018d5e47d0953349dd",
+          "physical_crop_viewed": true,
+          "verdict": "uncertain",
+          "observations": "Fennekin keeps both huge yellow/red ears, red eyes, white cheeks, black nose and red-tipped bushy tail. Front leg pose is changed; source has two separate thin rear legs beneath body, while crop resolves only one triangular rear-leg shape. Cannot confirm whether the second rear leg is legitimate occlusion or lost anatomy."
+        },
+        {
+          "source_identity": 656,
+          "source_name": "pokemon_656_froakie",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen6/sources/cutouts/pokemon_656_froakie.png",
+          "source_sha256": "cbb47c38d234eb7dea4b1d90f8c97ec990f41b6e61f26e7efba90d80a3d1d632",
+          "verified_source_sha256": "cbb47c38d234eb7dea4b1d90f8c97ec990f41b6e61f26e7efba90d80a3d1d632",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "e9003e7398727fc9af1c4e6802623b4395c0663b1edbd299a53d96a24b474ce2",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen6/poster-flux2-artwork.png",
+          "artwork_sha256": "588d433b0338783c87a14a4b48888b7b8288ff3e68fd89104b0d7396c199d0e6",
+          "cell": {
+            "row": 3,
+            "column": 3
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen6/card_r3_c3.png",
+          "physical_crop_sha256": "381043b14a1625c08f4bf02d222953c28a455faf817c7a2d62a5fef596adf1fe",
+          "physical_crop_viewed": true,
+          "verdict": "pass",
+          "observations": "Froakie retains two raised yellow eyes, paired white nose bubbles, large white back/neck foam, bent blue hindlegs, a raised white hand and three-lobed ground hand. Visible finger silhouettes match source configuration; body remains separate from nearby flowers."
+        }
+      ]
+    },
+    {
+      "asset_key": "Pokedex/sections/gen7",
+      "verdict": "reject",
+      "provenance": {
+        "file": "assets/posters/Pokedex/sections/gen7/poster-flux2-provenance.json",
+        "sha256": "792dc0859ffef98550dee1f4bfef880e1c63e7dd2f6b39105214c6c0529561c1"
+      },
+      "artwork": {
+        "file": "assets/posters/Pokedex/sections/gen7/poster-flux2-artwork.png",
+        "sha256": "2cf724beabc3c2a21be30f4a287e239292b5e16e59a4f3444bb26f6ba8ae7201",
+        "pixel_sha256_from_provenance": "3605bbd93a5be69929fbfab571919fd9b185ac889a592d30e359197ac077b548",
+        "byte_hash_matches_provenance": true
+      },
+      "inspection": {
+        "full_text_free_master_viewed": true,
+        "all_original_sources_viewed": true,
+        "physical_crops_viewed": [
+          {
+            "row": 1,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen7/card_r1_c1.png",
+            "sha256": "9bd2f56b630965692653c1d4acc993a5e4d5cda9973777e4bb593d6b1f91ee62",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen7/card_r1_c2.png",
+            "sha256": "f63a51bb68518af19f573d4ebbf84f802df09e712017c0a61c3b21f7016ab0a0",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen7/card_r1_c3.png",
+            "sha256": "b65dbf2e0558e2107705c9536138fcecf287ff74196004250d11cfc5776eee75",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen7/card_r2_c1.png",
+            "sha256": "090b848adc14ba616f436630e0830e1b555ade6693b8c208bd32fdc25b435f26",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen7/card_r2_c2.png",
+            "sha256": "daefea36554e64756cafbe49b13afb725fa01df9e4483a5a00d44a553589bcfd",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen7/card_r2_c3.png",
+            "sha256": "ccadbc2caeabd57f0c0c869757b7f9228a784a50290b74045e9829fed9b04e37",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen7/card_r3_c1.png",
+            "sha256": "4b4f65e222c53603585b2708a39922cdc68b2161118006e14cc25e393fe66b24",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen7/card_r3_c2.png",
+            "sha256": "9926cb5d09cc2bb49501bc0629374146fc40dcc71806559f537f00a499f70caf",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen7/card_r3_c3.png",
+            "sha256": "51ddd739611a86841f3c1f44dd37bae9e9bc3c3acb5b0da980407c61eb2975d4",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          }
+        ],
+        "physical_geometry": {
+          "generation_canvas_px": [
+            848,
+            1168
+          ],
+          "generation_column_spans_px": [
+            [
+              0,
+              269
+            ],
+            [
+              290,
+              558
+            ],
+            [
+              579,
+              848
+            ]
+          ],
+          "generation_row_spans_px": [
+            [
+              0,
+              375
+            ],
+            [
+              396,
+              772
+            ],
+            [
+              793,
+              1168
+            ]
+          ],
+          "name": "cumulative_physical_endpoints",
+          "output_canvas_px": [
+            2368,
+            3268
+          ],
+          "output_column_spans_px": [
+            [
+              0,
+              750
+            ],
+            [
+              809,
+              1559
+            ],
+            [
+              1618,
+              2368
+            ]
+          ],
+          "output_row_spans_px": [
+            [
+              0,
+              1050
+            ],
+            [
+              1109,
+              2159
+            ],
+            [
+              2218,
+              3268
+            ]
+          ],
+          "version": 2
+        },
+        "localized_overlay_viewed": false,
+        "localized_overlay_reason": "Expected promotion directory absent. Diagnostic crops were extracted without resampling from committed text-free master at provenance physical output spans, with root authorization. Localized overlay/PDF review remains separate."
+      },
+      "scene_observations": "Tropical cove, islands and palms form continuous scenery in all six upper cells. All three bottom subjects are contained; Rowlet's left foot is obscured by foreground foliage.",
+      "subjects": [
+        {
+          "source_identity": 722,
+          "source_name": "pokemon_722_rowlet",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen7/sources/cutouts/pokemon_722_rowlet.png",
+          "source_sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36",
+          "verified_source_sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "2e6530175cdf2ef2877c923dd19fe4ff967c72eba9d7ef2c495684acc59e425b",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen7/poster-flux2-artwork.png",
+          "artwork_sha256": "2cf724beabc3c2a21be30f4a287e239292b5e16e59a4f3444bb26f6ba8ae7201",
+          "cell": {
+            "row": 3,
+            "column": 1
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen7/card_r3_c1.png",
+          "physical_crop_sha256": "4b4f65e222c53603585b2708a39922cdc68b2161118006e14cc25e393fe66b24",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Rowlet retains paired white facial discs, two dark eyes, white/orange beak, green bow-tie leaves, two folded brown wings and pale belly. Source has two separated orange toes visible on the left foot; generated blade covers one toe and merges with foot edge, leaving the toe anatomy unreviewable."
+        },
+        {
+          "source_identity": 725,
+          "source_name": "pokemon_725_litten",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen7/sources/cutouts/pokemon_725_litten.png",
+          "source_sha256": "02391ac457888baf123accfc5ce446fc75df4790b3b000865a21c0f21b622600",
+          "verified_source_sha256": "02391ac457888baf123accfc5ce446fc75df4790b3b000865a21c0f21b622600",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "f4a2fdf0a76857dede5af6ae625093ada7273ae71e383fd04ec97c94184acaae",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen7/poster-flux2-artwork.png",
+          "artwork_sha256": "2cf724beabc3c2a21be30f4a287e239292b5e16e59a4f3444bb26f6ba8ae7201",
+          "cell": {
+            "row": 3,
+            "column": 2
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen7/card_r3_c2.png",
+          "physical_crop_sha256": "9926cb5d09cc2bb49501bc0629374146fc40dcc71806559f537f00a499f70caf",
+          "physical_crop_viewed": true,
+          "verdict": "pass",
+          "observations": "Litten preserves pointed ears, yellow slit-pupil eyes, red double-bar forehead marking, red cheek whisker tufts, two visible striped legs and upward curved tufted tail. No added limbs; visible markings and walking silhouette remain aligned with source."
+        },
+        {
+          "source_identity": 728,
+          "source_name": "pokemon_728_popplio",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen7/sources/cutouts/pokemon_728_popplio.png",
+          "source_sha256": "3bfa3104b894f212985122732497b17c78979c6bc9304bd7396e781677f2d7a3",
+          "verified_source_sha256": "3bfa3104b894f212985122732497b17c78979c6bc9304bd7396e781677f2d7a3",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "287968b7e4bae522bafd0cdb43e354b191ed55734c533298a0104ae7aff138d3",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen7/poster-flux2-artwork.png",
+          "artwork_sha256": "2cf724beabc3c2a21be30f4a287e239292b5e16e59a4f3444bb26f6ba8ae7201",
+          "cell": {
+            "row": 3,
+            "column": 3
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen7/card_r3_c3.png",
+          "physical_crop_sha256": "51ddd739611a86841f3c1f44dd37bae9e9bc3c3acb5b0da980407c61eb2975d4",
+          "physical_crop_viewed": true,
+          "verdict": "pass",
+          "observations": "Popplio retains round red nose, white muzzle, open mouth, side ears, pale neck frill, two large blue foreflippers each with two white marks and paired rear flippers. All flipper tips have clear margins inside card, with a plausible ground shadow."
+        }
+      ]
+    },
+    {
+      "asset_key": "Pokedex/sections/gen8",
+      "verdict": "reject",
+      "provenance": {
+        "file": "assets/posters/Pokedex/sections/gen8/poster-flux2-provenance.json",
+        "sha256": "3b5b0290b00f2a540624fd585bf0f80a831f3da0d25547fbb573680d50d1a925"
+      },
+      "artwork": {
+        "file": "assets/posters/Pokedex/sections/gen8/poster-flux2-artwork.png",
+        "sha256": "22cc4173999d2a59b49e039e400f2e188e7d7fd3eba218fc826c56d5a2b81c99",
+        "pixel_sha256_from_provenance": "b00f7fa94ec52a6bdb5b10a0890e5f84d1783a4a09d487dac53b1e92ef98ff77",
+        "byte_hash_matches_provenance": true
+      },
+      "inspection": {
+        "full_text_free_master_viewed": true,
+        "all_original_sources_viewed": true,
+        "physical_crops_viewed": [
+          {
+            "row": 1,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen8/card_r1_c1.png",
+            "sha256": "34b1d23cbe17aec3ec751f83d8c9cb96a61eea9e271070936f123c2d9ac53330",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen8/card_r1_c2.png",
+            "sha256": "8acc07b3c91baca91e46536ce0539e173970002a26158364860a43b64dfc8328",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen8/card_r1_c3.png",
+            "sha256": "aba1a105d8221a09b0f8ad6d15014d8548e42b0992d028dd201119dc0bb8d0d1",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen8/card_r2_c1.png",
+            "sha256": "69f3729f8817f607c71b5bc4d9248bb29587c2f2b5f2e42b8c9642eaa793445d",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen8/card_r2_c2.png",
+            "sha256": "180823ddeb8f82ec0230c94ab5c519d5f10708e177cf3ac49971cc61e2729bd3",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen8/card_r2_c3.png",
+            "sha256": "93795a915bfee55237ec429a86d31916ff364ed6303c42185edffc199489455f",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen8/card_r3_c1.png",
+            "sha256": "d57db0c7a4c3815645dd132ed592aa0862aff554a66b7f82ed2ac030e46903a3",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen8/card_r3_c2.png",
+            "sha256": "2d4977ed0b83fec2c5b8ff9c1b556989069d0b5afb240cb7e8edad91bcbed32b",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen8/card_r3_c3.png",
+            "sha256": "79ca5e37a4077d57e8aa9ba5e8fc62808a4be9e965f16462404bb3a8954a25e2",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          }
+        ],
+        "physical_geometry": {
+          "generation_canvas_px": [
+            848,
+            1168
+          ],
+          "generation_column_spans_px": [
+            [
+              0,
+              269
+            ],
+            [
+              290,
+              558
+            ],
+            [
+              579,
+              848
+            ]
+          ],
+          "generation_row_spans_px": [
+            [
+              0,
+              375
+            ],
+            [
+              396,
+              772
+            ],
+            [
+              793,
+              1168
+            ]
+          ],
+          "name": "cumulative_physical_endpoints",
+          "output_canvas_px": [
+            2368,
+            3268
+          ],
+          "output_column_spans_px": [
+            [
+              0,
+              750
+            ],
+            [
+              809,
+              1559
+            ],
+            [
+              1618,
+              2368
+            ]
+          ],
+          "output_row_spans_px": [
+            [
+              0,
+              1050
+            ],
+            [
+              1109,
+              2159
+            ],
+            [
+              2218,
+              3268
+            ]
+          ],
+          "version": 2
+        },
+        "localized_overlay_viewed": false,
+        "localized_overlay_reason": "Expected promotion directory absent. Diagnostic crops were extracted without resampling from committed text-free master at provenance physical output spans, with root authorization. Localized overlay/PDF review remains separate."
+      },
+      "scene_observations": "Overcast rolling countryside, lake, stone walls and village are coherent in all upper crops. Three bottom characters are contained, but Grookey's ground extremities and Sobble's tail suffer vegetation overlap.",
+      "subjects": [
+        {
+          "source_identity": 810,
+          "source_name": "pokemon_810_grookey",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen8/sources/cutouts/pokemon_810_grookey.png",
+          "source_sha256": "0a4b1c0662dd8e0ad7f00bf78c2f958b297bc25c70bbc7273d50b3d39d5de330",
+          "verified_source_sha256": "0a4b1c0662dd8e0ad7f00bf78c2f958b297bc25c70bbc7273d50b3d39d5de330",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "1007dc8ec519ceb248b9a19942d488e3974128e63416c80d54b6eba894c60d35",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen8/poster-flux2-artwork.png",
+          "artwork_sha256": "22cc4173999d2a59b49e039e400f2e188e7d7fd3eba218fc826c56d5a2b81c99",
+          "cell": {
+            "row": 3,
+            "column": 1
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen8/card_r3_c1.png",
+          "physical_crop_sha256": "d57db0c7a4c3815645dd132ed592aa0862aff554a66b7f82ed2ac030e46903a3",
+          "physical_crop_viewed": true,
+          "verdict": "uncertain",
+          "observations": "Grookey keeps two head leaves with brown stick, round ears, yellow face mask, orange muzzle and hands, and curled brown tail. Raised hand digits remain visible, but source has exposed orange toes beneath both bent legs; crop blends feet into dark grass and the ground hand so the second foot cannot be confirmed."
+        },
+        {
+          "source_identity": 813,
+          "source_name": "pokemon_813_scorbunny",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen8/sources/cutouts/pokemon_813_scorbunny.png",
+          "source_sha256": "0099f4bb576966efc872c03c69616f954c8474d12608a2fd7e91304a9d271167",
+          "verified_source_sha256": "0099f4bb576966efc872c03c69616f954c8474d12608a2fd7e91304a9d271167",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "f88fc484d3b27caaf14d4bb02b3e9df6dc534154404af128db1597fe5f8e609e",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen8/poster-flux2-artwork.png",
+          "artwork_sha256": "22cc4173999d2a59b49e039e400f2e188e7d7fd3eba218fc826c56d5a2b81c99",
+          "cell": {
+            "row": 3,
+            "column": 2
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen8/card_r3_c2.png",
+          "physical_crop_sha256": "2d4977ed0b83fec2c5b8ff9c1b556989069d0b5afb240cb7e8edad91bcbed32b",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Scorbunny retains two orange-tipped long ears, yellow nose band, paired arms, orange eye irises and raised padded foot. Source has two orange neck/chest spots; artwork replaces them with a single dark neck line and omits both orange patches. Ground foot/toe separations are also compressed."
+        },
+        {
+          "source_identity": 816,
+          "source_name": "pokemon_816_sobble",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen8/sources/cutouts/pokemon_816_sobble.png",
+          "source_sha256": "162c8c4c870624a42aa81f3859f29542d7d713bffd98bb4b4f7ab79ae9a881fb",
+          "verified_source_sha256": "162c8c4c870624a42aa81f3859f29542d7d713bffd98bb4b4f7ab79ae9a881fb",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "52f49d77a019e0c1ffbb8fcef6a807ce9f8405a7a48154aee4d6312b48f5b26a",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen8/poster-flux2-artwork.png",
+          "artwork_sha256": "22cc4173999d2a59b49e039e400f2e188e7d7fd3eba218fc826c56d5a2b81c99",
+          "cell": {
+            "row": 3,
+            "column": 3
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen8/card_r3_c3.png",
+          "physical_crop_sha256": "79ca5e37a4077d57e8aa9ba5e8fc62808a4be9e965f16462404bb3a8954a25e2",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Sobble retains two-lobed yellow crest, blue cheek marks and coiled blue tail, but source has slender mitten-like hands curved inward beside bent knees. Generated forehands terminate in pale claw-like blocks on the ground and the bent-leg/hand silhouette is changed substantially. Plant crosses the tail and rear body."
+        }
+      ]
+    },
+    {
+      "asset_key": "Pokedex/sections/gen9",
+      "verdict": "reject",
+      "provenance": {
+        "file": "assets/posters/Pokedex/sections/gen9/poster-flux2-provenance.json",
+        "sha256": "7edcb8c3a6e95a1cab7dbad9e036de93687a7e92a873ca0e7aaf3653abbec0bc"
+      },
+      "artwork": {
+        "file": "assets/posters/Pokedex/sections/gen9/poster-flux2-artwork.png",
+        "sha256": "9b69d26e7fce0838f2769aaa78bb00f7c37dcb72ce67ca224be2150abbb93114",
+        "pixel_sha256_from_provenance": "1dc86b4aadb4c06f39db81715c8cd9781d0c3cf6593a7270d4c4da4623ef3135",
+        "byte_hash_matches_provenance": true
+      },
+      "inspection": {
+        "full_text_free_master_viewed": true,
+        "all_original_sources_viewed": true,
+        "physical_crops_viewed": [
+          {
+            "row": 1,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen9/card_r1_c1.png",
+            "sha256": "f58091d6bc6598fb1e5c67cc7c100657ccd1eb984d9f6903b76d953f38a5dfff",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen9/card_r1_c2.png",
+            "sha256": "7c6ffd42bc604c9c69c858f83003dc52ef1f6ac49be9697fa229c0968f19b4e7",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen9/card_r1_c3.png",
+            "sha256": "8713d17e699710cde7f8f02ca5f6b1014e4973314b87c33b81ed34541f3a3952",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen9/card_r2_c1.png",
+            "sha256": "1301951902fe682c4093e186b843abc2e45887bdf10c7f3886f568cc08bd88fa",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen9/card_r2_c2.png",
+            "sha256": "5eb861a9eaed0a32d314321d601c4de36f4bdd45c2c7888cf4a387ea597b1343",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen9/card_r2_c3.png",
+            "sha256": "5d100c3f74c4fd9985edec61327dd87f4392e6847f8d68bf72995f1e889216f8",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen9/card_r3_c1.png",
+            "sha256": "7350aa427f2a3ffa07c87792a1fa21d3b619931523bccdfdb29aec79855e151c",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen9/card_r3_c2.png",
+            "sha256": "b22c000b74e0992747709178d4537a9e3b020febd2959f565d716e61138add7c",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen9/card_r3_c3.png",
+            "sha256": "db3aee0702bec94702527fe8b1d0d85a0ccc020ac5877c371eb9421bce5e5718",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          }
+        ],
+        "physical_geometry": {
+          "generation_canvas_px": [
+            848,
+            1168
+          ],
+          "generation_column_spans_px": [
+            [
+              0,
+              269
+            ],
+            [
+              290,
+              558
+            ],
+            [
+              579,
+              848
+            ]
+          ],
+          "generation_row_spans_px": [
+            [
+              0,
+              375
+            ],
+            [
+              396,
+              772
+            ],
+            [
+              793,
+              1168
+            ]
+          ],
+          "name": "cumulative_physical_endpoints",
+          "output_canvas_px": [
+            2368,
+            3268
+          ],
+          "output_column_spans_px": [
+            [
+              0,
+              750
+            ],
+            [
+              809,
+              1559
+            ],
+            [
+              1618,
+              2368
+            ]
+          ],
+          "output_row_spans_px": [
+            [
+              0,
+              1050
+            ],
+            [
+              1109,
+              2159
+            ],
+            [
+              2218,
+              3268
+            ]
+          ],
+          "version": 2
+        },
+        "localized_overlay_viewed": false,
+        "localized_overlay_reason": "Expected promotion directory absent. Diagnostic crops were extracted without resampling from committed text-free master at provenance physical output spans, with root authorization. Localized overlay/PDF review remains separate."
+      },
+      "scene_observations": "Warm coastal hills, distant buildings and foreground clearing are coherent; all nine crops inspected, six upper ones are scenery only. Characters fit their bottom cells with consistent shadows.",
+      "subjects": [
+        {
+          "source_identity": 906,
+          "source_name": "pokemon_906_sprigatito",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen9/sources/cutouts/pokemon_906_sprigatito.png",
+          "source_sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a",
+          "verified_source_sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "bbb27600106084f27dc56d019f37f6c1c17bba9a3ea8138fd79e7d03b5200b81",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen9/poster-flux2-artwork.png",
+          "artwork_sha256": "9b69d26e7fce0838f2769aaa78bb00f7c37dcb72ce67ca224be2150abbb93114",
+          "cell": {
+            "row": 3,
+            "column": 1
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen9/card_r3_c1.png",
+          "physical_crop_sha256": "7350aa427f2a3ffa07c87792a1fa21d3b619931523bccdfdb29aec79855e151c",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Sprigatito retains green leaf face mask, large pink eyes, pointed ears, cheek tufts, leaf collar and fluffy tail with three source-visible legs. The two tiny upper fangs visible in the open source mouth are absent in the generated open mouth."
+        },
+        {
+          "source_identity": 909,
+          "source_name": "pokemon_909_fuecoco",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen9/sources/cutouts/pokemon_909_fuecoco.png",
+          "source_sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b",
+          "verified_source_sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "6f87f462a8639a983688199cd116cbbe580a356acf62ca1f46a4eb805a268d1e",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen9/poster-flux2-artwork.png",
+          "artwork_sha256": "9b69d26e7fce0838f2769aaa78bb00f7c37dcb72ce67ca224be2150abbb93114",
+          "cell": {
+            "row": 3,
+            "column": 2
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen9/card_r3_c2.png",
+          "physical_crop_sha256": "b22c000b74e0992747709178d4537a9e3b020febd2959f565d716e61138add7c",
+          "physical_crop_viewed": true,
+          "verdict": "pass",
+          "observations": "Fuecoco preserves paired yellow head tufts, white face, two dark nostrils, one upper and two lower teeth, paired small forearms, yellow belly square, cream underside and two dark claws on each visible foot. Silhouette has clear boundaries and no crossing plants."
+        },
+        {
+          "source_identity": 912,
+          "source_name": "pokemon_912_quaxly",
+          "source_file": "tmp/poster-workspaces/Pokedex/sections/gen9/sources/cutouts/pokemon_912_quaxly.png",
+          "source_sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f",
+          "verified_source_sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "0c34c412b2dffca8c3d88946d77a3547e03ae7ba7488c9368fadb53b07b3a6f9",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/Pokedex/sections/gen9/poster-flux2-artwork.png",
+          "artwork_sha256": "9b69d26e7fce0838f2769aaa78bb00f7c37dcb72ce67ca224be2150abbb93114",
+          "cell": {
+            "row": 3,
+            "column": 3
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/Pokedex/sections/gen9/card_r3_c3.png",
+          "physical_crop_sha256": "db3aee0702bec94702527fe8b1d0d85a0ccc020ac5877c371eb9421bce5e5718",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Quaxly retains teal quiff with white wave mark, blue eyes, yellow bill and blue webbed feet. Source right wing ends in a small smooth feather tip; generated right wing ends in a separate grey three-finger hand/claw shape. A plant blade meets the right webbed foot boundary."
+        }
+      ]
+    },
+    {
+      "asset_key": "ExGen1/sections/normal",
+      "verdict": "reject",
+      "provenance": {
+        "file": "assets/posters/ExGen1/sections/normal/poster-flux2-provenance.json",
+        "sha256": "0919e402095e3e0f1b71fc2a076ecf84620dd85cd4bc0d7788b167df873269cb"
+      },
+      "artwork": {
+        "file": "assets/posters/ExGen1/sections/normal/poster-flux2-artwork.png",
+        "sha256": "80457937f2507257f9ff45a82e6826e567c86186f0de379b109374d249a860ea",
+        "pixel_sha256_from_provenance": "410632669ce8173cd00c149469675ecf5e9be3fe378de0aa0e2776808bc604c1",
+        "byte_hash_matches_provenance": true
+      },
+      "inspection": {
+        "full_text_free_master_viewed": true,
+        "all_original_sources_viewed": true,
+        "physical_crops_viewed": [
+          {
+            "row": 1,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/ExGen1/sections/normal/card_r1_c1.png",
+            "sha256": "39a9b77b0685ce7afb0e1e363322bbb401bbdc5803eb9288e835b7bde252e07b",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/ExGen1/sections/normal/card_r1_c2.png",
+            "sha256": "ba55c43723eee48c13cf3cdbcda00c1ea1015e9206c8e2299b87aac36e36cbac",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/ExGen1/sections/normal/card_r1_c3.png",
+            "sha256": "81ea63433d3d1e4ad5ea44ae761996d03b8cdb907757aafbd74cc1cec075060e",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/ExGen1/sections/normal/card_r2_c1.png",
+            "sha256": "9ef9cf3f1dd45bce48ba0dd70e49d47657a386a2d93e70790fa31a70a4520136",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/ExGen1/sections/normal/card_r2_c2.png",
+            "sha256": "4b472d70a041c61b579132331a5bbca4891e9f94e49b23ab9017d8ad795d083d",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/ExGen1/sections/normal/card_r2_c3.png",
+            "sha256": "8587e3646b30524f51d918c85fa7dc6d0e74611c86729c20c7f50ae93028b122",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/ExGen1/sections/normal/card_r3_c1.png",
+            "sha256": "3bfba4a8900af2533ab342a3685725091e90c020b575fa084f4676ef04fc1b7b",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/ExGen1/sections/normal/card_r3_c2.png",
+            "sha256": "1872f236f97fb2f4137d72aa4b7218a1e34580471910daca108e96890b5593c9",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/ExGen1/sections/normal/card_r3_c3.png",
+            "sha256": "d6c25a2b9b52b1ec9df47640726946bb3cd863c9e84cec24d4c0379c7c869d4c",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          }
+        ],
+        "physical_geometry": {
+          "generation_canvas_px": [
+            848,
+            1168
+          ],
+          "generation_column_spans_px": [
+            [
+              0,
+              269
+            ],
+            [
+              290,
+              558
+            ],
+            [
+              579,
+              848
+            ]
+          ],
+          "generation_row_spans_px": [
+            [
+              0,
+              375
+            ],
+            [
+              396,
+              772
+            ],
+            [
+              793,
+              1168
+            ]
+          ],
+          "name": "cumulative_physical_endpoints",
+          "output_canvas_px": [
+            2368,
+            3268
+          ],
+          "output_column_spans_px": [
+            [
+              0,
+              750
+            ],
+            [
+              809,
+              1559
+            ],
+            [
+              1618,
+              2368
+            ]
+          ],
+          "output_row_spans_px": [
+            [
+              0,
+              1050
+            ],
+            [
+              1109,
+              2159
+            ],
+            [
+              2218,
+              3268
+            ]
+          ],
+          "version": 2
+        },
+        "localized_overlay_viewed": false,
+        "localized_overlay_reason": "Expected promotion directory absent. Diagnostic crops were extracted without resampling from committed text-free master at provenance physical output spans, with root authorization. Localized overlay/PDF review remains separate."
+      },
+      "scene_observations": "Coastal research meadow with palms and one blank building is coherent in all six upper crops. Exactly three selected creatures occupy bottom cells; flying Lugia is contained.",
+      "subjects": [
+        {
+          "source_identity": 3,
+          "source_name": "pokemon_003_venusaur",
+          "source_file": "tmp/poster-workspaces/ExGen1/sections/normal/sources/cutouts/pokemon_003_venusaur.png",
+          "source_sha256": "04897191b567f8e6d866e6aa6eef184b6a93f8d0ba9ddaa50b4592ef261edc3b",
+          "verified_source_sha256": "04897191b567f8e6d866e6aa6eef184b6a93f8d0ba9ddaa50b4592ef261edc3b",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "c712365648ec3c21469e36aa0b2ee2fe6de83527da79e28174b0cb00fdf5eba3",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/ExGen1/sections/normal/poster-flux2-artwork.png",
+          "artwork_sha256": "80457937f2507257f9ff45a82e6826e567c86186f0de379b109374d249a860ea",
+          "cell": {
+            "row": 3,
+            "column": 1
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/ExGen1/sections/normal/card_r3_c1.png",
+          "physical_crop_sha256": "3bfba4a8900af2533ab342a3685725091e90c020b575fa084f4676ef04fc1b7b",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Venusaur retains broad pink flower, central yellow crown, brown trunk, leaf canopy, pointed ears and red eyes. Source four lower fangs disappear into the generated smooth pink mouth; foreground leaves hide/cross left forefoot and rear-foot claw boundaries."
+        },
+        {
+          "source_identity": 9,
+          "source_name": "pokemon_009_blastoise",
+          "source_file": "tmp/poster-workspaces/ExGen1/sections/normal/sources/cutouts/pokemon_009_blastoise.png",
+          "source_sha256": "1bac4860feebcf5fb5cd27af8c9c4465773e948b68a7436dc65ec49618becd49",
+          "verified_source_sha256": "1bac4860feebcf5fb5cd27af8c9c4465773e948b68a7436dc65ec49618becd49",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "1ac8b2c741d3f07e6ebe6b96443d789bae0c1bc85ca5dbd6075cb6db09a85d09",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/ExGen1/sections/normal/poster-flux2-artwork.png",
+          "artwork_sha256": "80457937f2507257f9ff45a82e6826e567c86186f0de379b109374d249a860ea",
+          "cell": {
+            "row": 3,
+            "column": 2
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/ExGen1/sections/normal/card_r3_c2.png",
+          "physical_crop_sha256": "1872f236f97fb2f4137d72aa4b7218a1e34580471910daca108e96890b5593c9",
+          "physical_crop_viewed": true,
+          "verdict": "pass",
+          "observations": "Blastoise retains rear-view brown segmented shell with pale rim, two cylindrical shoulder cannons, blue limbs, visible hand claws and three pale toes on right foot plus broad blue tail. No extra cannon or limb; all appendages stay in the cell."
+        },
+        {
+          "source_identity": 249,
+          "source_name": "pokemon_249_lugia",
+          "source_file": "tmp/poster-workspaces/ExGen1/sections/normal/sources/cutouts/pokemon_249_lugia.png",
+          "source_sha256": "f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30",
+          "verified_source_sha256": "f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "6662c2d9cc9998ff0bb60c7d551bf5ed27beca009d828377692035d7ec370a90",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/ExGen1/sections/normal/poster-flux2-artwork.png",
+          "artwork_sha256": "80457937f2507257f9ff45a82e6826e567c86186f0de379b109374d249a860ea",
+          "cell": {
+            "row": 3,
+            "column": 3
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/ExGen1/sections/normal/card_r3_c3.png",
+          "physical_crop_sha256": "d6c25a2b9b52b1ec9df47640726946bb3cd863c9e84cec24d4c0379c7c869d4c",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Lugia retains spread finger-wings, blue belly and dorsal plates, long neck/tail, but source eye and blue eye-mask area become a row of white segmented bumps without a readable eye. Source left foot has broad divided toes; crop adds multiple narrow toe-like marks. A plant meets/crosses tail tip."
+        }
+      ]
+    },
+    {
+      "asset_key": "ExGen2/sections/normal",
+      "verdict": "reject",
+      "provenance": {
+        "file": "assets/posters/ExGen2/sections/normal/poster-flux2-provenance.json",
+        "sha256": "8584b29283be06080236a322054caeb6e8b25cd4068b41f3c7c175b219af07a9"
+      },
+      "artwork": {
+        "file": "assets/posters/ExGen2/sections/normal/poster-flux2-artwork.png",
+        "sha256": "f968cb0b1687c4853d554e3287be23f8f3cc0efeb66da74f5376121708235811",
+        "pixel_sha256_from_provenance": "8667d611063214cd16470d53075866b6b3db93280584a0447f0e945e33fad5c4",
+        "byte_hash_matches_provenance": true
+      },
+      "inspection": {
+        "full_text_free_master_viewed": true,
+        "all_original_sources_viewed": true,
+        "physical_crops_viewed": [
+          {
+            "row": 1,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/normal/card_r1_c1.png",
+            "sha256": "460106091d07c9b487bf3bb108c44dbb07ce016f0cd191a47ad9ded84e986f81",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/normal/card_r1_c2.png",
+            "sha256": "7010cd8552096169af8d7eeb388a99cc37feaf19647e8ca6339ca9eb1523d04c",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/normal/card_r1_c3.png",
+            "sha256": "6e630b6bc2240f4862a4bc2abceeeb9d8820af788b4f1b8a98b9d80c20fd7fbe",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/normal/card_r2_c1.png",
+            "sha256": "5d2f1b693ba7fad907c315ed3752c0276fd1feb5a29310354e3514b1b26b869c",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/normal/card_r2_c2.png",
+            "sha256": "a99547cbde6cb57a87eff4160ba8a4184105d235f502ed87624bd74cb2c775a6",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/normal/card_r2_c3.png",
+            "sha256": "23dc2204aa32b864116c94a6663977edf833517af7bdf62ab26fb7b0a53ea31b",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/normal/card_r3_c1.png",
+            "sha256": "2da1acb110cf0264a19abb67ed6507aba5e2345ed3cfc1cbb4105835b134d5b9",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/normal/card_r3_c2.png",
+            "sha256": "d6db2ad3466725395392b69cf0672da8cccb94ef60d54baac098ad8322467bbc",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/normal/card_r3_c3.png",
+            "sha256": "3fcb3d3be3ccb2f0323e06eaea66ae3d9aa03f154edb217775e87570bd49ef3b",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          }
+        ],
+        "physical_geometry": {
+          "generation_canvas_px": [
+            848,
+            1168
+          ],
+          "generation_column_spans_px": [
+            [
+              0,
+              269
+            ],
+            [
+              290,
+              558
+            ],
+            [
+              579,
+              848
+            ]
+          ],
+          "generation_row_spans_px": [
+            [
+              0,
+              375
+            ],
+            [
+              396,
+              772
+            ],
+            [
+              793,
+              1168
+            ]
+          ],
+          "name": "cumulative_physical_endpoints",
+          "output_canvas_px": [
+            2368,
+            3268
+          ],
+          "output_column_spans_px": [
+            [
+              0,
+              750
+            ],
+            [
+              809,
+              1559
+            ],
+            [
+              1618,
+              2368
+            ]
+          ],
+          "output_row_spans_px": [
+            [
+              0,
+              1050
+            ],
+            [
+              1109,
+              2159
+            ],
+            [
+              2218,
+              3268
+            ]
+          ],
+          "version": 2
+        },
+        "localized_overlay_viewed": false,
+        "localized_overlay_reason": "Expected promotion directory absent. Diagnostic crops were extracted without resampling from committed text-free master at provenance physical output spans, with root authorization. Localized overlay/PDF review remains separate."
+      },
+      "scene_observations": "Cliff-lined river and bridge connect coherently across cards. Two tiny bird-like marks appear in r2c3 sky, outside assigned cast. Three principal subjects are fully contained; several feet/tail boundaries meet grass.",
+      "subjects": [
+        {
+          "source_identity": 150,
+          "source_name": "pokemon_150_mewtwo",
+          "source_file": "tmp/poster-workspaces/ExGen2/sections/normal/sources/cutouts/pokemon_150_mewtwo.png",
+          "source_sha256": "b7c00037d7ba9fb5cebc2da42ca0da54c7b664f4d7b2348d60ade5c6dc9de256",
+          "verified_source_sha256": "b7c00037d7ba9fb5cebc2da42ca0da54c7b664f4d7b2348d60ade5c6dc9de256",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "ba8ef7c35c88cb509fa1617beab0041a3f8e8317041b1c97cc598fe1f936eefa",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/ExGen2/sections/normal/poster-flux2-artwork.png",
+          "artwork_sha256": "f968cb0b1687c4853d554e3287be23f8f3cc0efeb66da74f5376121708235811",
+          "cell": {
+            "row": 3,
+            "column": 1
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/ExGen2/sections/normal/card_r3_c1.png",
+          "physical_crop_sha256": "2da1acb110cf0264a19abb67ed6507aba5e2345ed3cfc1cbb4105835b134d5b9",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Mewtwo keeps two head projections, purple tail/belly and long legs, but source outstretched hand has three spherical fingertip pads; crop retains one sphere while two other tips become fused short tubes. Downward hand loses rounded fingertip pads, and neck acquires jagged dark segmented detail absent from source."
+        },
+        {
+          "source_identity": 151,
+          "source_name": "pokemon_151_mew",
+          "source_file": "tmp/poster-workspaces/ExGen2/sections/normal/sources/cutouts/pokemon_151_mew.png",
+          "source_sha256": "3e7b29103dae09d0f8e8ff889b1991bdf387a2c6328aacb93fc34e8962584e33",
+          "verified_source_sha256": "3e7b29103dae09d0f8e8ff889b1991bdf387a2c6328aacb93fc34e8962584e33",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "f1408e4b91b0b915d33b8b5f8b5a819bee2007d2e201739c0d48dd4460f26614",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/ExGen2/sections/normal/poster-flux2-artwork.png",
+          "artwork_sha256": "f968cb0b1687c4853d554e3287be23f8f3cc0efeb66da74f5376121708235811",
+          "cell": {
+            "row": 3,
+            "column": 2
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/ExGen2/sections/normal/card_r3_c2.png",
+          "physical_crop_sha256": "d6db2ad3466725395392b69cf0672da8cccb94ef60d54baac098ad8322467bbc",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Mew retains pink body, two ears, blue eyes and looping long thin tail with widened tip. Source short arms have tiny separated fingers; generated arm ends are smooth rectangular stumps. Feet gain long claw-like divisions and overlap grass rather than retaining source smooth rounded three-toe ends."
+        },
+        {
+          "source_identity": 249,
+          "source_name": "pokemon_249_lugia",
+          "source_file": "tmp/poster-workspaces/ExGen2/sections/normal/sources/cutouts/pokemon_249_lugia.png",
+          "source_sha256": "f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30",
+          "verified_source_sha256": "f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "6662c2d9cc9998ff0bb60c7d551bf5ed27beca009d828377692035d7ec370a90",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/ExGen2/sections/normal/poster-flux2-artwork.png",
+          "artwork_sha256": "f968cb0b1687c4853d554e3287be23f8f3cc0efeb66da74f5376121708235811",
+          "cell": {
+            "row": 3,
+            "column": 3
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/ExGen2/sections/normal/card_r3_c3.png",
+          "physical_crop_sha256": "3fcb3d3be3ccb2f0323e06eaea66ae3d9aa03f154edb217775e87570bd49ef3b",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Lugia's source eye/blue mask is replaced by white segmented projections under the blue crest, leaving no readable eye. Wings and blue belly/dorsal plates remain identifiable, but feet acquire fine extra divisions and foreground grass crosses tail and foot edges."
+        }
+      ]
+    },
+    {
+      "asset_key": "ExGen2/sections/mega",
+      "verdict": "reject",
+      "provenance": {
+        "file": "assets/posters/ExGen2/sections/mega/poster-flux2-provenance.json",
+        "sha256": "1d496678766a8626fe1c10570aa6d455a16a5c01546c74f073424db92441608d"
+      },
+      "artwork": {
+        "file": "assets/posters/ExGen2/sections/mega/poster-flux2-artwork.png",
+        "sha256": "51a3ceff402561ce6a156d8616e1a270ee302c22e04c1f11260794f6ce074fa0",
+        "pixel_sha256_from_provenance": "5599e86f8c5e4d1a024c4d253502876ee755e41d84702e12f768be9ff5c006df",
+        "byte_hash_matches_provenance": true
+      },
+      "inspection": {
+        "full_text_free_master_viewed": true,
+        "all_original_sources_viewed": true,
+        "physical_crops_viewed": [
+          {
+            "row": 1,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/mega/card_r1_c1.png",
+            "sha256": "c5e5a50f44d962344e22a55d06a15c5dd5d6e804b7d867ebbfc6e4a15e5e4e33",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/mega/card_r1_c2.png",
+            "sha256": "35d1003f30d540b22cfd4b8ca518ee97ba2db0d20f851844143abd8fb17892aa",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/mega/card_r1_c3.png",
+            "sha256": "f82fd769fe8f24ca95976ea213a3225ff9d5549c19cd7d99550fde43a516cbdf",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/mega/card_r2_c1.png",
+            "sha256": "26f36d062e53b3f5c9e52adab9c2ecc6f06714946977726ecfb5b8c54b0e70a9",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/mega/card_r2_c2.png",
+            "sha256": "8a6f8bdbc4da192825eeb313e26138ff203a251634212a39618218ecdab6469d",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/mega/card_r2_c3.png",
+            "sha256": "f1b708c0c6407f63ecdc38714d86706ce3b2411d1ca19355426573c5b116f6b0",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/mega/card_r3_c1.png",
+            "sha256": "559d245e2ba97077933b4c9b6e50745d77bbd9baf537fbe91caa9f1d703cdd53",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/mega/card_r3_c2.png",
+            "sha256": "9195003d03355eac2877dffabdd8f5a00b0ec417a7f7df44ab60edab4f879f3a",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/mega/card_r3_c3.png",
+            "sha256": "af874bf57f586776fbb619c0c6bf911f13babb076e19ebe86f098cb9d62911e8",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          }
+        ],
+        "physical_geometry": {
+          "generation_canvas_px": [
+            848,
+            1168
+          ],
+          "generation_column_spans_px": [
+            [
+              0,
+              269
+            ],
+            [
+              290,
+              558
+            ],
+            [
+              579,
+              848
+            ]
+          ],
+          "generation_row_spans_px": [
+            [
+              0,
+              375
+            ],
+            [
+              396,
+              772
+            ],
+            [
+              793,
+              1168
+            ]
+          ],
+          "name": "cumulative_physical_endpoints",
+          "output_canvas_px": [
+            2368,
+            3268
+          ],
+          "output_column_spans_px": [
+            [
+              0,
+              750
+            ],
+            [
+              809,
+              1559
+            ],
+            [
+              1618,
+              2368
+            ]
+          ],
+          "output_row_spans_px": [
+            [
+              0,
+              1050
+            ],
+            [
+              1109,
+              2159
+            ],
+            [
+              2218,
+              3268
+            ]
+          ],
+          "version": 2
+        },
+        "localized_overlay_viewed": false,
+        "localized_overlay_reason": "Expected promotion directory absent. Diagnostic crops were extracted without resampling from committed text-free master at provenance physical output spans, with root authorization. Localized overlay/PDF review remains separate."
+      },
+      "scene_observations": "Crystal-studded meadow, terraces and river are coherent. All nine cards inspected; three chosen Mega forms remain inside bottom cells, but detail fidelity fails in every subject.",
+      "subjects": [
+        {
+          "source_identity": {
+            "pokemon_id": 150,
+            "poster_subject": {
+              "official_artwork_id": 10043,
+              "source": "pokeapi_official_artwork"
+            }
+          },
+          "source_name": "pokemon_150_artwork_10043_mega_mewtwo_x",
+          "source_file": "tmp/poster-workspaces/ExGen2/sections/mega/sources/cutouts/pokemon_150_artwork_10043_mega_mewtwo_x.png",
+          "source_sha256": "5dd98bb485cf51eb4ede5189d28aeb9c6e426bd08d9abbc37187c02268b188d9",
+          "verified_source_sha256": "5dd98bb485cf51eb4ede5189d28aeb9c6e426bd08d9abbc37187c02268b188d9",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "5cb6f08bfa45ba919a4c4490ea815a511d7811f8157ccd014736454271371397",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/ExGen2/sections/mega/poster-flux2-artwork.png",
+          "artwork_sha256": "51a3ceff402561ce6a156d8616e1a270ee302c22e04c1f11260794f6ce074fa0",
+          "cell": {
+            "row": 3,
+            "column": 1
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/ExGen2/sections/mega/card_r3_c1.png",
+          "physical_crop_sha256": "559d245e2ba97077933b4c9b6e50745d77bbd9baf537fbe91caa9f1d703cdd53",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Mega Mewtwo X retains pointed head projections, enlarged purple shoulder collar and purple belly/tail. Source open raised hand has three spherical finger pads; generated fist merges them into overlapping knuckles. Source feet have three broad rounded toes; generated feet have multiple small toe/claw ridges, partly buried in grass."
+        },
+        {
+          "source_identity": {
+            "pokemon_id": 384,
+            "poster_subject": {
+              "official_artwork_id": 10079,
+              "source": "pokeapi_official_artwork"
+            }
+          },
+          "source_name": "pokemon_384_artwork_10079_mega_rayquaza",
+          "source_file": "tmp/poster-workspaces/ExGen2/sections/mega/sources/cutouts/pokemon_384_artwork_10079_mega_rayquaza.png",
+          "source_sha256": "28a9f35caa69df85cde05fcb5e7785d7581b30910b2cd6df508d35fca2a789f4",
+          "verified_source_sha256": "28a9f35caa69df85cde05fcb5e7785d7581b30910b2cd6df508d35fca2a789f4",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "c62bb4f8a03ed1dba5591c040d3b226d4fe4d6f1706e5d8e0031c06b8b1a6de9",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/ExGen2/sections/mega/poster-flux2-artwork.png",
+          "artwork_sha256": "51a3ceff402561ce6a156d8616e1a270ee302c22e04c1f11260794f6ce074fa0",
+          "cell": {
+            "row": 3,
+            "column": 2
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/ExGen2/sections/mega/card_r3_c2.png",
+          "physical_crop_sha256": "9195003d03355eac2877dffabdd8f5a00b0ec417a7f7df44ab60edab4f879f3a",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Mega Rayquaza retains long paired jaw horns, serpentine coil and luminous streamers, but source sharp teeth and distinct eye/jaw details are smeared into dark streaks. Source arm and three-clawed hand near upper neck are replaced by an indistinct green/yellow region; an extra foot-like projection appears at the lower-right coil. Orange body rings also lose their source ring structure."
+        },
+        {
+          "source_identity": {
+            "pokemon_id": 381,
+            "poster_subject": {
+              "official_artwork_id": 10063,
+              "source": "pokeapi_official_artwork"
+            }
+          },
+          "source_name": "pokemon_381_artwork_10063_mega_latios",
+          "source_file": "tmp/poster-workspaces/ExGen2/sections/mega/sources/cutouts/pokemon_381_artwork_10063_mega_latios.png",
+          "source_sha256": "ea327ac2ac56cb1a90153bad84f66bd62d25f8c25093733ed1aef9a5411b8054",
+          "verified_source_sha256": "ea327ac2ac56cb1a90153bad84f66bd62d25f8c25093733ed1aef9a5411b8054",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "ac10273e8377e4cede5aa1afe33ac90e2886f956f2c06115b5535997040d45c4",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/ExGen2/sections/mega/poster-flux2-artwork.png",
+          "artwork_sha256": "51a3ceff402561ce6a156d8616e1a270ee302c22e04c1f11260794f6ce074fa0",
+          "cell": {
+            "row": 3,
+            "column": 3
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/ExGen2/sections/mega/card_r3_c3.png",
+          "physical_crop_sha256": "af874bf57f586776fbb619c0c6bf911f13babb076e19ebe86f098cb9d62911e8",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Mega Latios source wing contains hollow white triangular marking. Crop turns it into a yellow iris with black pupil, inventing an eye on the wing. Source pointed head plumes become blunt uneven prongs; visible lower limb tip intersects a foreground blade. Purple wing/body silhouette otherwise identifies the Mega form."
+        }
+      ]
+    },
+    {
+      "asset_key": "ExGen2/sections/primal",
+      "verdict": "reject",
+      "provenance": {
+        "file": "assets/posters/ExGen2/sections/primal/poster-flux2-provenance.json",
+        "sha256": "de6ae44a4de4df7dae8e1902e3368af97ae5682f0dfd9f6f47ecd7f13aacf1b9"
+      },
+      "artwork": {
+        "file": "assets/posters/ExGen2/sections/primal/poster-flux2-artwork.png",
+        "sha256": "74c828b35bbf41bd745c80b088179ac41aba9e560a2cfff824504f0c2c85b836",
+        "pixel_sha256_from_provenance": "2dbb6554ad335f2ad294196afea4df66f35ca99ae0e6790074496f09d06a5ae2",
+        "byte_hash_matches_provenance": true
+      },
+      "inspection": {
+        "full_text_free_master_viewed": true,
+        "all_original_sources_viewed": true,
+        "physical_crops_viewed": [
+          {
+            "row": 1,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/primal/card_r1_c1.png",
+            "sha256": "e5b64c9c21470ddfe93cf2b7f79a1e520ad1991b72be89669283f0cd7ae64524",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/primal/card_r1_c2.png",
+            "sha256": "eec37a03592b5dd29460bf569210f0c5bdf085461a3045adedccaf92ab8febea",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 1,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/primal/card_r1_c3.png",
+            "sha256": "dd432eeaa0f08ef802305856c8124ca0d158b14571ace4eb6dc3da4596989e22",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/primal/card_r2_c1.png",
+            "sha256": "7250457e02388025a232aa6400e7a8784c769b74118a89da7c4408c72b27dab8",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/primal/card_r2_c2.png",
+            "sha256": "deb49f37268325c6b00fa4e3bde1d027d8ecf3fc205814f9c8f349de2681549b",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 2,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/primal/card_r2_c3.png",
+            "sha256": "e3e251757b29f5defb142dc497e2e3a860d9ec1bf09457ec5c461e1c918982b5",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 1,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/primal/card_r3_c1.png",
+            "sha256": "f211168cb303bf8959c1e627d7e3f1ccdf145ebef389780c4d7fe99f91483852",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 2,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/primal/card_r3_c2.png",
+            "sha256": "dd0038038831e038e8f92d2b0b9aa09de7ef29724d57dc45c1a7168e31f9e07a",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          },
+          {
+            "row": 3,
+            "column": 3,
+            "file": "tmp/panorama-audit-aggregate/ExGen2/sections/primal/card_r3_c3.png",
+            "sha256": "7c4bb1a3235c154d0c820c5eb175ee1fdee500e0fcb111988a735b1bfb2b0a06",
+            "width": 750,
+            "height": 1050,
+            "viewed": true
+          }
+        ],
+        "physical_geometry": {
+          "generation_canvas_px": [
+            848,
+            1168
+          ],
+          "generation_column_spans_px": [
+            [
+              0,
+              269
+            ],
+            [
+              290,
+              558
+            ],
+            [
+              579,
+              848
+            ]
+          ],
+          "generation_row_spans_px": [
+            [
+              0,
+              375
+            ],
+            [
+              396,
+              772
+            ],
+            [
+              793,
+              1168
+            ]
+          ],
+          "name": "cumulative_physical_endpoints",
+          "output_canvas_px": [
+            2368,
+            3268
+          ],
+          "output_column_spans_px": [
+            [
+              0,
+              750
+            ],
+            [
+              809,
+              1559
+            ],
+            [
+              1618,
+              2368
+            ]
+          ],
+          "output_row_spans_px": [
+            [
+              0,
+              1050
+            ],
+            [
+              1109,
+              2159
+            ],
+            [
+              2218,
+              3268
+            ]
+          ],
+          "version": 2
+        },
+        "localized_overlay_viewed": false,
+        "localized_overlay_reason": "Expected promotion directory absent. Diagnostic crops were extracted without resampling from committed text-free master at provenance physical output spans, with root authorization. Localized overlay/PDF review remains separate."
+      },
+      "scene_observations": "Stormy coastal inlet with rain, wet rocks and rough water is continuous across nine cards. Bottom middle cell is scenery-only as expected for two subjects. Both creatures fit their physical cells.",
+      "subjects": [
+        {
+          "source_identity": {
+            "pokemon_id": 382,
+            "poster_subject": {
+              "official_artwork_id": 10077,
+              "source": "pokeapi_official_artwork"
+            }
+          },
+          "source_name": "pokemon_382_artwork_10077_primal_kyogre",
+          "source_file": "tmp/poster-workspaces/ExGen2/sections/primal/sources/cutouts/pokemon_382_artwork_10077_primal_kyogre.png",
+          "source_sha256": "226507487da40a44b8df44c4fd04ecc6398b8873e792dd2ce31ecfa7a8e3777b",
+          "verified_source_sha256": "226507487da40a44b8df44c4fd04ecc6398b8873e792dd2ce31ecfa7a8e3777b",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "bdc782a89b7fa4936ced73d2fc7fbaac0867103c044194a3bc9578410fe87053",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/ExGen2/sections/primal/poster-flux2-artwork.png",
+          "artwork_sha256": "74c828b35bbf41bd745c80b088179ac41aba9e560a2cfff824504f0c2c85b836",
+          "cell": {
+            "row": 3,
+            "column": 1
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/ExGen2/sections/primal/card_r3_c1.png",
+          "physical_crop_sha256": "f211168cb303bf8959c1e627d7e3f1ccdf145ebef389780c4d7fe99f91483852",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Primal Kyogre retains four white flipper tips per side, blue body, pale circuit paths and two branched tail lobes. Source tail lobes have separated narrow finger-like branches; generated lobes fuse into flat sheets with light stripes. Source circular flipper emblems contain distinct inner spots, lost in solid generated discs."
+        },
+        {
+          "source_identity": {
+            "pokemon_id": 383,
+            "poster_subject": {
+              "official_artwork_id": 10078,
+              "source": "pokeapi_official_artwork"
+            }
+          },
+          "source_name": "pokemon_383_artwork_10078_primal_groudon",
+          "source_file": "tmp/poster-workspaces/ExGen2/sections/primal/sources/cutouts/pokemon_383_artwork_10078_primal_groudon.png",
+          "source_sha256": "fd0a131143a3289cde178438f5ea0249ff62cacb6dbb6742c95544c7c42aad5a",
+          "verified_source_sha256": "fd0a131143a3289cde178438f5ea0249ff62cacb6dbb6742c95544c7c42aad5a",
+          "source_hash_matches_provenance": true,
+          "source_pixel_sha256_from_provenance": "3097d54d4f86d699df12cfa858dd627517776f0971773c03953fd34e3784a69b",
+          "source_viewed": true,
+          "artwork_file": "assets/posters/ExGen2/sections/primal/poster-flux2-artwork.png",
+          "artwork_sha256": "74c828b35bbf41bd745c80b088179ac41aba9e560a2cfff824504f0c2c85b836",
+          "cell": {
+            "row": 3,
+            "column": 3
+          },
+          "physical_crop_file": "tmp/panorama-audit-aggregate/ExGen2/sections/primal/card_r3_c3.png",
+          "physical_crop_sha256": "7c4bb1a3235c154d0c820c5eb175ee1fdee500e0fcb111988a735b1bfb2b0a06",
+          "physical_crop_viewed": true,
+          "verdict": "reject",
+          "observations": "Primal Groudon retains red/black armour, pale glowing patterns, tail fin and head crest, but source has three large toe claws per foot; generated left foot has four small claws. Additional disconnected white hook/tusk shapes appear on abdomen between the hands. Several source black lateral tail spikes become flat dark patches, and foliage crosses right foot."
+        }
+      ]
+    }
+  ]
+}

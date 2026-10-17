@@ -5,10 +5,8 @@ poster_id: gen6
 source:
   scope: Pokedex
   section_id: gen6
-
 layout:
   name: standard_3x3
-
 text_cells:
   title:
     row: 1
@@ -18,28 +16,23 @@ text_cells:
     column: 2
     max_width_ratio: 0.92
     max_height_ratio: 0.68
-
 text_content:
   mode: section_summary
-
 artwork:
   promoted_file: poster-flux2-artwork.png
   provenance_file: poster-flux2-provenance.json
   identity_lock:
     overscan_ratio: 0.04
-    max_protected_start_ratio: 0.70
-    transition_ratio: 0.10
+    max_protected_start_ratio: 0.7
+    transition_ratio: 0.1
     subject_clearance_ratio: 0.02
   scene:
     concept: an elegant Kalos flower-country landscape with an airy spring mood
-    setting: >-
-      The artwork contains an elegant Kalos-inspired flower meadow with
-      clipped distant woodland, pale limestone hills, a narrow reflective
-      canal, and a tiny unmarked glass landmark on the far horizon.
+    setting: The artwork contains an elegant Kalos-inspired flower meadow with clipped distant woodland,
+      pale limestone hills, a narrow reflective canal, and a tiny unmarked glass landmark on the far horizon.
     lighting: Luminous spring daylight enters from the upper left.
-    rendering: >-
-      Use graceful premium-card linework, restrained floral colors, and
-      bright airy atmospheric depth.
+    rendering: Use graceful premium-card linework, restrained floral colors, and bright airy atmospheric
+      depth.
     ground_noun: meadow
   generation:
     engine: flux
@@ -50,23 +43,40 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260758584
+    reference_mode: spatial_source_detail_joint
+    seed: 260759593
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
-
+  source_details:
+    pokeapi:official-artwork:650:
+      sha256: 565272048cd8eeb2b524d597da6805dbdff28c313bc5346181f1859041320ee7
+      traits: Match the exact small Chespin source with its green spined hood, tan face, dark nose, pink
+        cheeks, visible little upper tooth, cream belly, short forearms and individually outlined feet.
+        Preserve its asymmetric source pose, mouth and toe tips instead of smoothing them away.
+    pokeapi:official-artwork:653:
+      sha256: b638e094ee06adcec959aad2898ce93f8c5fda88feba9c9158d1f16c026c07dd
+      traits: Match the exact yellow Fennekin source with its oversized pointed ears, flame-orange inner
+        ear fur, tiny dark nose, narrow bright eyes, cream cheek tufts, slim fox legs and bushy orange-tipped
+        tail. Keep the source's leg pose and face profile rather than a generic seated fox.
+    pokeapi:official-artwork:656:
+      sha256: cbb47c38d234eb7dea4b1d90f8c97ec990f41b6e61f26e7efba90d80a3d1d632
+      traits: 'Match the exact blue Froakie source: large yellow eyes, pale foam scarf around the neck,
+        rounded face, slim hind legs and individually separated fingers and toes. Keep the foam as a collar,
+        not an extra limb.'
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns
   row: bottom
   cutout_source: pokeapi_official_artwork
   fallback_candidates: []
-
 conditioning:
   identity_defaults:
-    neutral_rgb: [226, 224, 211]
+    neutral_rgb:
+    - 226
+    - 224
+    - 211
     canvas_px: 512
     min_subject_px: 150
     max_subject_px: 350

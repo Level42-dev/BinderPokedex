@@ -1,0 +1,3286 @@
+{
+  "schema_version": 1,
+  "purpose": "local_exact_artwork_approval_only",
+  "human_approval": "pending",
+  "candidate_count": 29,
+  "source_card_pair_count": 87,
+  "all_physical_card_count": 261,
+  "cases": [
+    {
+      "review_id": "P05",
+      "scope": "Pokedex/sections/gen2",
+      "variant": "p05-source-detail-20260922-d",
+      "human_approval": "pending",
+      "note": "Karnimanis breite Zehenform und Endivies Blattansatz genau prüfen.",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p05-source-detail-20260922-d/retrieved/oneshot-_edv79rv/output/pokedex__sections__gen2_flux2_joint_scene_2mp_seed_260753031_00001_.png",
+          "sha256": "007316370891bffaa996ed811e4050b118a838551b80dce1a6d714ecbda4b41d"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p05-source-detail-20260922-d/review/artwork-300dpi.png",
+          "sha256": "ed0b8e1934588d4a7617c5821dcae835bad9f5bc757bc72e7fc1133bfa81cf82"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p05-source-detail-20260922-d/review/poster-de.png",
+          "sha256": "98f34818596db99678912b8224e7d9c7f398436186f615cf078c6d0152cd54fd"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p05-source-detail-20260922-d/review/artwork-300dpi.run.json",
+          "sha256": "1f133f19114dbcb103676366337414ad17980c709793279247a6cda1f49498cf"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p05-source-detail-20260922-d/retrieved/oneshot-_edv79rv/run.json",
+          "sha256": "b5bec5332edf1b337b56a46c42f728fc3901cf525a7c600472add5a5628ae38c"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p05-source-detail-20260922-d/retrieved/oneshot-_edv79rv/comfyui.log",
+          "sha256": "efeede72424e8f422abc222380bb6a0c1ad43af1b014b6a402782cae964703de"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p05-source-detail-20260922-d/review/cards/card_r1_c1.png",
+          "sha256": "07b0089c425c27b9a0957f3e8b53b83b84256577df2eeab8cd0f54eebf603fb3"
+        },
+        {
+          "path": "tmp/oneshot-trials/p05-source-detail-20260922-d/review/cards/card_r1_c2.png",
+          "sha256": "e9c121cc4748acb14429378f4d710dcf8259c5834365b9b4f0b483024af19879"
+        },
+        {
+          "path": "tmp/oneshot-trials/p05-source-detail-20260922-d/review/cards/card_r1_c3.png",
+          "sha256": "70d60bc47bd166a3f844b2a0e26fa17588ad9b05e7562a010d8815795ac238a7"
+        },
+        {
+          "path": "tmp/oneshot-trials/p05-source-detail-20260922-d/review/cards/card_r2_c1.png",
+          "sha256": "a5ff238d706f65fa26deb4693f1a7a6a5378569411cb72a027b524182d796c4f"
+        },
+        {
+          "path": "tmp/oneshot-trials/p05-source-detail-20260922-d/review/cards/card_r2_c2.png",
+          "sha256": "306a9fe529f6fcb724abeeaf04d8e4bf38183ae8e412324e3f3c59b80bb3bfc9"
+        },
+        {
+          "path": "tmp/oneshot-trials/p05-source-detail-20260922-d/review/cards/card_r2_c3.png",
+          "sha256": "d2f002b13f57d4f889d84e8619b46f691f49c5c6679cd652cb830096f4092b93"
+        },
+        {
+          "path": "tmp/oneshot-trials/p05-source-detail-20260922-d/review/cards/card_r3_c1.png",
+          "sha256": "b902f0bf8efa2a618b9f11cfcd860375b849038eabab710cf2152e0598f1d0c8"
+        },
+        {
+          "path": "tmp/oneshot-trials/p05-source-detail-20260922-d/review/cards/card_r3_c2.png",
+          "sha256": "b3dd20dc09d839a99db981c21bdb0aaec9d8d410022a507e1975512f7ce3a005"
+        },
+        {
+          "path": "tmp/oneshot-trials/p05-source-detail-20260922-d/review/cards/card_r3_c3.png",
+          "sha256": "fb85f91d1d07ef36042770eec6f028d84a735a1f156b3611ea80b42263ed4d52"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Endivie",
+          "subject_key": "pokeapi:official-artwork:152",
+          "source": {
+            "path": "tmp/poster-workspaces/Pokedex/sections/gen2/sources/cutouts/pokemon_152_chikorita.png",
+            "sha256": "3ffc2eeee9139b0281ab5493b1a6d4b5c1329de5ddf5361f5ee3c93d12c05659"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p05-source-detail-20260922-d/review/cards/card_r3_c1.png",
+            "sha256": "b902f0bf8efa2a618b9f11cfcd860375b849038eabab710cf2152e0598f1d0c8"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Feurigel",
+          "subject_key": "pokeapi:official-artwork:155",
+          "source": {
+            "path": "tmp/poster-workspaces/Pokedex/sections/gen2/sources/cutouts/pokemon_155_cyndaquil.png",
+            "sha256": "9532b237ef088f8032024b95459303495e261eb2f7f024b79511522e551a9bcd"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p05-source-detail-20260922-d/review/cards/card_r3_c2.png",
+            "sha256": "b3dd20dc09d839a99db981c21bdb0aaec9d8d410022a507e1975512f7ce3a005"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Karnimani",
+          "subject_key": "pokeapi:official-artwork:158",
+          "source": {
+            "path": "tmp/poster-workspaces/Pokedex/sections/gen2/sources/cutouts/pokemon_158_totodile.png",
+            "sha256": "a0ce9f06497dc2a9a3d34174ff89e0ee1a0745ce8007cc89257e379d9be49525"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p05-source-detail-20260922-d/review/cards/card_r3_c3.png",
+            "sha256": "fb85f91d1d07ef36042770eec6f028d84a735a1f156b3611ea80b42263ed4d52"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P07",
+      "scope": "Pokedex/sections/gen4",
+      "variant": "p07-batch-20260922-b",
+      "human_approval": "pending",
+      "note": "Panflams stützende Hand: Variante A verworfen; bitte die Finger von B prüfen.",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p07-batch-20260922-b/retrieved/oneshot-og_c5r1p/output/pokedex__sections__gen4_flux2_joint_scene_2mp_seed_260735885_00001_.png",
+          "sha256": "12135df58d3b67f46c19727c6d46cea0f83b0cf2b47ea2c262c25b62bf31daf7"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p07-batch-20260922-b/review/artwork-300dpi.png",
+          "sha256": "6cb096641b830851e87428c9a8d3825b9dcf016818f69ead53a5c7121f92062c"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p07-batch-20260922-b/review/poster-de.png",
+          "sha256": "9efc848f2a6e26c601cd5cbcaca2d28659d19ccca4b463026f2b251c543d3ba9"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p07-batch-20260922-b/review/artwork-300dpi.run.json",
+          "sha256": "cb42552d767a3b00f84ac1be37aecd8f450e1c1d35896a257ab938ca534f9a69"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p07-batch-20260922-b/retrieved/oneshot-og_c5r1p/run.json",
+          "sha256": "c98e50a60dc41022162a2953795e19ba7e71a7e0bc992c9ad5d49c3f6d5f87ec"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p07-batch-20260922-b/retrieved/oneshot-og_c5r1p/comfyui.log",
+          "sha256": "ef4233c117113f51a32d5696273999c8933ed908ca2fb7a807a01a9f6ea963e7"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p07-batch-20260922-b/review/cards/card_r1_c1.png",
+          "sha256": "880ad8b88b2fb3b111b2c88d869ce3ac34264fad72716b21085c0db0f621bacc"
+        },
+        {
+          "path": "tmp/oneshot-trials/p07-batch-20260922-b/review/cards/card_r1_c2.png",
+          "sha256": "7a83c945f6ea56d1a7b27e99719b39b3106e9f0bd879f7d2a7f47ef0d548ddc3"
+        },
+        {
+          "path": "tmp/oneshot-trials/p07-batch-20260922-b/review/cards/card_r1_c3.png",
+          "sha256": "a31d073e9fa83adfe9bc359061a4b6f4b1915ebcc866b28693ee82f5fa7a375a"
+        },
+        {
+          "path": "tmp/oneshot-trials/p07-batch-20260922-b/review/cards/card_r2_c1.png",
+          "sha256": "55fbe4982161799ba7702b925b3d6176cb5b9ae48c90e4d3e2cd439916c03ecc"
+        },
+        {
+          "path": "tmp/oneshot-trials/p07-batch-20260922-b/review/cards/card_r2_c2.png",
+          "sha256": "314c2709229c6c24ee60b440d96ae959f012c705a0278be6996bd3d8143ac9f3"
+        },
+        {
+          "path": "tmp/oneshot-trials/p07-batch-20260922-b/review/cards/card_r2_c3.png",
+          "sha256": "e5b3f55987e9514eeb611fcd9fa0ed98683e596667e92fe2a93fe0111274fd59"
+        },
+        {
+          "path": "tmp/oneshot-trials/p07-batch-20260922-b/review/cards/card_r3_c1.png",
+          "sha256": "94b5e807096de3c3703b7830ab32d51e4d647abcb6523f11c272f43cc1023f48"
+        },
+        {
+          "path": "tmp/oneshot-trials/p07-batch-20260922-b/review/cards/card_r3_c2.png",
+          "sha256": "4c4a46315770562c58bcf429b9411bedf08be9758a0e3e3aad12bc93e3846c27"
+        },
+        {
+          "path": "tmp/oneshot-trials/p07-batch-20260922-b/review/cards/card_r3_c3.png",
+          "sha256": "dd4bcf256e4dff4b9c69e64d9bd9edebe41687ed77d9f2876d9d2466f407dc0a"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Chelast",
+          "subject_key": "pokeapi:official-artwork:387",
+          "source": {
+            "path": "tmp/poster-workspaces/Pokedex/sections/gen4/sources/cutouts/pokemon_387_turtwig.png",
+            "sha256": "34bdf93e84d8e1770074ead9c38b1659bcc937abfa20ddd8a6e53a283ed0e16d"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p07-batch-20260922-b/review/cards/card_r3_c1.png",
+            "sha256": "94b5e807096de3c3703b7830ab32d51e4d647abcb6523f11c272f43cc1023f48"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Panflam",
+          "subject_key": "pokeapi:official-artwork:390",
+          "source": {
+            "path": "tmp/poster-workspaces/Pokedex/sections/gen4/sources/cutouts/pokemon_390_chimchar.png",
+            "sha256": "7ce75f77abcaff1451c67da6fc8de9b6828aacb1a222dd590825c5cab4b20140"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p07-batch-20260922-b/review/cards/card_r3_c2.png",
+            "sha256": "4c4a46315770562c58bcf429b9411bedf08be9758a0e3e3aad12bc93e3846c27"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Plinfa",
+          "subject_key": "pokeapi:official-artwork:393",
+          "source": {
+            "path": "tmp/poster-workspaces/Pokedex/sections/gen4/sources/cutouts/pokemon_393_piplup.png",
+            "sha256": "84895daf63236a40d6061af37739908b5256876c96a4a34b9f354df5f1ec2ca0"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p07-batch-20260922-b/review/cards/card_r3_c3.png",
+            "sha256": "dd4bcf256e4dff4b9c69e64d9bd9edebe41687ed77d9f2876d9d2466f407dc0a"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P08",
+      "scope": "Pokedex/sections/gen5",
+      "variant": "p08-batch-20260922-a",
+      "human_approval": "pending",
+      "note": "",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p08-batch-20260922-a/retrieved/oneshot-rlyhwzm2/output/pokedex__sections__gen5_flux2_joint_scene_2mp_seed_260736048_00001_.png",
+          "sha256": "67d74567575384762ac764b273875ee816294422f5ae8df716a6d35aafee1910"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p08-batch-20260922-a/review/artwork-300dpi.png",
+          "sha256": "53cbd5a3f6a91e1ef0725e9e8ac872387e1248df602cdefecb30a8a39ecd29c9"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p08-batch-20260922-a/review/poster-de.png",
+          "sha256": "dfc62e9d2bab3860ee00c4c0e49f5289a3c29894ab6596856e97723f2d83d498"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p08-batch-20260922-a/review/artwork-300dpi.run.json",
+          "sha256": "d58eae4ec2bcef43357512f4e78e74449392a0187bc5399174b64573df07a1ef"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p08-batch-20260922-a/retrieved/oneshot-rlyhwzm2/run.json",
+          "sha256": "b7d17e4e4557a195876ad860e8a87c91bb567ad81bf0c3174acfc8df271f6cf7"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p08-batch-20260922-a/retrieved/oneshot-rlyhwzm2/comfyui.log",
+          "sha256": "86312b65391cc6cdec7e294e418b4209b11966a1ab29c9b6771e57009c366e77"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p08-batch-20260922-a/review/cards/card_r1_c1.png",
+          "sha256": "2d319278cb20aa5a3fa57509dc5bfefd46fa8bc86f8b1b49f1a7e157ee3a5afe"
+        },
+        {
+          "path": "tmp/oneshot-trials/p08-batch-20260922-a/review/cards/card_r1_c2.png",
+          "sha256": "51a5192599bac35c5ee7d0844651b2a9161a567d1a7e3e6fac24826fdc1aadc8"
+        },
+        {
+          "path": "tmp/oneshot-trials/p08-batch-20260922-a/review/cards/card_r1_c3.png",
+          "sha256": "d664f9afdf67dc41d95786806ab9e62627e3dd39116c3f165a156191c49b3712"
+        },
+        {
+          "path": "tmp/oneshot-trials/p08-batch-20260922-a/review/cards/card_r2_c1.png",
+          "sha256": "5f7e7e4aafe0b34afe79a9338b52af4bd3131aabf1ae2c0e7dffdd0ed28d8c21"
+        },
+        {
+          "path": "tmp/oneshot-trials/p08-batch-20260922-a/review/cards/card_r2_c2.png",
+          "sha256": "58b8fd5241312b7e77d1e85a028c41e989e4ccb82870d849ff98ccb3046be409"
+        },
+        {
+          "path": "tmp/oneshot-trials/p08-batch-20260922-a/review/cards/card_r2_c3.png",
+          "sha256": "4b1a4c0407e5f5e049e62bdfa8357a488b8bc2e37cfaa1996790514cebefb1fb"
+        },
+        {
+          "path": "tmp/oneshot-trials/p08-batch-20260922-a/review/cards/card_r3_c1.png",
+          "sha256": "d056faac20fd3a125df8942c52d2a5a4aa10a710bc2d9bda94c1cd27651fce04"
+        },
+        {
+          "path": "tmp/oneshot-trials/p08-batch-20260922-a/review/cards/card_r3_c2.png",
+          "sha256": "f6db53d5d4f29b964e1a05b9b1b799725ebde82c0cd873d90bdd77ff4c710b6b"
+        },
+        {
+          "path": "tmp/oneshot-trials/p08-batch-20260922-a/review/cards/card_r3_c3.png",
+          "sha256": "62faebab53b9c673732d7c42eca9693d6001cd4803350814df502fd0137784b6"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Serpifeu",
+          "subject_key": "pokeapi:official-artwork:495",
+          "source": {
+            "path": "tmp/poster-workspaces/Pokedex/sections/gen5/sources/cutouts/pokemon_495_snivy.png",
+            "sha256": "e7ff61a0daed598a7676b262c56af766e88bcf91764658eeeae615f6f9937549"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p08-batch-20260922-a/review/cards/card_r3_c1.png",
+            "sha256": "d056faac20fd3a125df8942c52d2a5a4aa10a710bc2d9bda94c1cd27651fce04"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Floink",
+          "subject_key": "pokeapi:official-artwork:498",
+          "source": {
+            "path": "tmp/poster-workspaces/Pokedex/sections/gen5/sources/cutouts/pokemon_498_tepig.png",
+            "sha256": "d7750c56dc5be8ae10a6c270c34a0c46dbf64f289f2eb5670cbe52a9fd41f275"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p08-batch-20260922-a/review/cards/card_r3_c2.png",
+            "sha256": "f6db53d5d4f29b964e1a05b9b1b799725ebde82c0cd873d90bdd77ff4c710b6b"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Ottaro",
+          "subject_key": "pokeapi:official-artwork:501",
+          "source": {
+            "path": "tmp/poster-workspaces/Pokedex/sections/gen5/sources/cutouts/pokemon_501_oshawott.png",
+            "sha256": "480904e99ed485ba3c8fb5866bac1a2acee76dd6dcee1a1ad3e2aac706576fc7"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p08-batch-20260922-a/review/cards/card_r3_c3.png",
+            "sha256": "62faebab53b9c673732d7c42eca9693d6001cd4803350814df502fd0137784b6"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P09",
+      "scope": "Pokedex/sections/gen6",
+      "variant": "p09-batch-20260922-a",
+      "human_approval": "pending",
+      "note": "",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p09-batch-20260922-a/retrieved/oneshot-qsvr66xz/output/pokedex__sections__gen6_flux2_joint_scene_2mp_seed_260759593_00001_.png",
+          "sha256": "01d8973f4014afd1ee7f138794673130fbdde85d0d33acc38e6f2fdba7e1e038"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p09-batch-20260922-a/review/artwork-300dpi.png",
+          "sha256": "e60684632ceb0bfad55d394706c36a026e19dba025f25eb028cdf684d32ba4ef"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p09-batch-20260922-a/review/poster-de.png",
+          "sha256": "ad8e12d34f7caa84c97c903ec87d05f9ae0fcdd9a97b3ca7ec0eb85195b70553"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p09-batch-20260922-a/review/artwork-300dpi.run.json",
+          "sha256": "136748b23689d787a0127d0894be797faaff5485eeaa0860d953f75a982491cc"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p09-batch-20260922-a/retrieved/oneshot-qsvr66xz/run.json",
+          "sha256": "c04b0311dee65186187fde06a949b312a03b03a9dc759083241ccadbd5ff4c50"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p09-batch-20260922-a/retrieved/oneshot-qsvr66xz/comfyui.log",
+          "sha256": "84f563c22850db8c90bd19a032a4f5d6cc44ed9b6fcf889271636ef049dd191c"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p09-batch-20260922-a/review/cards/card_r1_c1.png",
+          "sha256": "7b6b579fd443db6bbb40e806e3276c48df2712c438bc934ec97979a36d4ae508"
+        },
+        {
+          "path": "tmp/oneshot-trials/p09-batch-20260922-a/review/cards/card_r1_c2.png",
+          "sha256": "76d83326a6f7615e4c324a973fc87403ac7c287ffb9eef6edba2a9bd8c9d1c41"
+        },
+        {
+          "path": "tmp/oneshot-trials/p09-batch-20260922-a/review/cards/card_r1_c3.png",
+          "sha256": "9b58da31fe35850011514bf15655b06120f37c3f4b3a861a91f9ad793ea0008c"
+        },
+        {
+          "path": "tmp/oneshot-trials/p09-batch-20260922-a/review/cards/card_r2_c1.png",
+          "sha256": "0026057804f985d54ad76f230cbe996ae7366cb9c982db9ffefdca6fa6b14171"
+        },
+        {
+          "path": "tmp/oneshot-trials/p09-batch-20260922-a/review/cards/card_r2_c2.png",
+          "sha256": "20e052cc6a718148d4e97192220c5a7096af5032f8a0516c1a00211e3ef2ab2c"
+        },
+        {
+          "path": "tmp/oneshot-trials/p09-batch-20260922-a/review/cards/card_r2_c3.png",
+          "sha256": "d8e48ad6ab61c5944ea53bde784b174eb480548eb30992d7a8a7e66eda0129e7"
+        },
+        {
+          "path": "tmp/oneshot-trials/p09-batch-20260922-a/review/cards/card_r3_c1.png",
+          "sha256": "7b47184d1e1b5ea5a9ae2bb8aa0818a11f421aa96e712dede3ab3916430fe1ee"
+        },
+        {
+          "path": "tmp/oneshot-trials/p09-batch-20260922-a/review/cards/card_r3_c2.png",
+          "sha256": "ba1f6836582ed1bb3612c16582a27ede9fc3dd3169853424c9fee3a1d1aaf438"
+        },
+        {
+          "path": "tmp/oneshot-trials/p09-batch-20260922-a/review/cards/card_r3_c3.png",
+          "sha256": "f263fad0721f77e7d696f6d938d35364d3028464198edb36344fb4a2afc8b170"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Igamaro",
+          "subject_key": "pokeapi:official-artwork:650",
+          "source": {
+            "path": "tmp/poster-workspaces/Pokedex/sections/gen6/sources/cutouts/pokemon_650_chespin.png",
+            "sha256": "565272048cd8eeb2b524d597da6805dbdff28c313bc5346181f1859041320ee7"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p09-batch-20260922-a/review/cards/card_r3_c1.png",
+            "sha256": "7b47184d1e1b5ea5a9ae2bb8aa0818a11f421aa96e712dede3ab3916430fe1ee"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Fynx",
+          "subject_key": "pokeapi:official-artwork:653",
+          "source": {
+            "path": "tmp/poster-workspaces/Pokedex/sections/gen6/sources/cutouts/pokemon_653_fennekin.png",
+            "sha256": "b638e094ee06adcec959aad2898ce93f8c5fda88feba9c9158d1f16c026c07dd"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p09-batch-20260922-a/review/cards/card_r3_c2.png",
+            "sha256": "ba1f6836582ed1bb3612c16582a27ede9fc3dd3169853424c9fee3a1d1aaf438"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Froxy",
+          "subject_key": "pokeapi:official-artwork:656",
+          "source": {
+            "path": "tmp/poster-workspaces/Pokedex/sections/gen6/sources/cutouts/pokemon_656_froakie.png",
+            "sha256": "cbb47c38d234eb7dea4b1d90f8c97ec990f41b6e61f26e7efba90d80a3d1d632"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p09-batch-20260922-a/review/cards/card_r3_c3.png",
+            "sha256": "f263fad0721f77e7d696f6d938d35364d3028464198edb36344fb4a2afc8b170"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P11",
+      "scope": "Pokedex/sections/gen8",
+      "variant": "p11-batch-20260922-a",
+      "human_approval": "pending",
+      "note": "",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p11-batch-20260922-a/retrieved/oneshot-p4jczluy/output/pokedex__sections__gen8_flux2_joint_scene_2mp_seed_260716415_00001_.png",
+          "sha256": "b8cd968da6221b51730b4fa4f2570c20aacfebb2a8c76675481e38afc1f81d11"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p11-batch-20260922-a/review/artwork-300dpi.png",
+          "sha256": "e7cd202e96cc577db36b370f5171cfed98b4698da3f67ca714bb438830eb6d05"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p11-batch-20260922-a/review/poster-de.png",
+          "sha256": "5eb850050f06ad52f5223ce7ad19929f87fa89e45267e5a5b6c1f7adaf86ea62"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p11-batch-20260922-a/review/artwork-300dpi.run.json",
+          "sha256": "700f289e842370a70a34f82de217734e96b76f86c155ecb4372b863471aaae7c"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p11-batch-20260922-a/retrieved/oneshot-p4jczluy/run.json",
+          "sha256": "1134251a7bfe355ba7ca64717a8470bd464e60f1ceed69822bcbe794093bc66d"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p11-batch-20260922-a/retrieved/oneshot-p4jczluy/comfyui.log",
+          "sha256": "f1c0a721bb5a95ce47aac91df9cf3142c3889504039ddfd120d194cdaf36745b"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p11-batch-20260922-a/review/cards/card_r1_c1.png",
+          "sha256": "d8cd2d93d1b6ac80b7da0462380c56aeee2c075328669f441da686522caa9e0a"
+        },
+        {
+          "path": "tmp/oneshot-trials/p11-batch-20260922-a/review/cards/card_r1_c2.png",
+          "sha256": "311eccfe6fc5de0876386cec5371a4d375aec0759b47be37b975d2fce12844e0"
+        },
+        {
+          "path": "tmp/oneshot-trials/p11-batch-20260922-a/review/cards/card_r1_c3.png",
+          "sha256": "8d14c7bb56638e3195ea2f73724d97782dcf7b13744a82d56c6cfa2ea434f6e8"
+        },
+        {
+          "path": "tmp/oneshot-trials/p11-batch-20260922-a/review/cards/card_r2_c1.png",
+          "sha256": "acad79cb8c67603dcd08516af0ca68d25b7f13b8b14ae901182380391b5845c1"
+        },
+        {
+          "path": "tmp/oneshot-trials/p11-batch-20260922-a/review/cards/card_r2_c2.png",
+          "sha256": "e199f60ca7ca0331499c5652eda9f2998ebfbc2799ea2c6e0153bb7a6bceef65"
+        },
+        {
+          "path": "tmp/oneshot-trials/p11-batch-20260922-a/review/cards/card_r2_c3.png",
+          "sha256": "563c5fc20df9750cb5932d0b31293be1fd7aded50263a4e16e9b56057f365c18"
+        },
+        {
+          "path": "tmp/oneshot-trials/p11-batch-20260922-a/review/cards/card_r3_c1.png",
+          "sha256": "70bf340f4e8343c038a7eb3a09d7d8c705c3674511e1b2b7ce577f4a50ed8acc"
+        },
+        {
+          "path": "tmp/oneshot-trials/p11-batch-20260922-a/review/cards/card_r3_c2.png",
+          "sha256": "4a6d4775354d895e52087a900f2c9b94332ff6c757fd9116406a7fccfa9a2ac3"
+        },
+        {
+          "path": "tmp/oneshot-trials/p11-batch-20260922-a/review/cards/card_r3_c3.png",
+          "sha256": "e8aa5e279a9da98dc0dfb46d3e101b3c0a5276c8d23c11835d10e7ba6c31bcb4"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Chimpep",
+          "subject_key": "pokeapi:official-artwork:810",
+          "source": {
+            "path": "tmp/poster-workspaces/Pokedex/sections/gen8/sources/cutouts/pokemon_810_grookey.png",
+            "sha256": "0a4b1c0662dd8e0ad7f00bf78c2f958b297bc25c70bbc7273d50b3d39d5de330"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p11-batch-20260922-a/review/cards/card_r3_c1.png",
+            "sha256": "70bf340f4e8343c038a7eb3a09d7d8c705c3674511e1b2b7ce577f4a50ed8acc"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Hopplo",
+          "subject_key": "pokeapi:official-artwork:813",
+          "source": {
+            "path": "tmp/poster-workspaces/Pokedex/sections/gen8/sources/cutouts/pokemon_813_scorbunny.png",
+            "sha256": "0099f4bb576966efc872c03c69616f954c8474d12608a2fd7e91304a9d271167"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p11-batch-20260922-a/review/cards/card_r3_c2.png",
+            "sha256": "4a6d4775354d895e52087a900f2c9b94332ff6c757fd9116406a7fccfa9a2ac3"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Memmeon",
+          "subject_key": "pokeapi:official-artwork:816",
+          "source": {
+            "path": "tmp/poster-workspaces/Pokedex/sections/gen8/sources/cutouts/pokemon_816_sobble.png",
+            "sha256": "162c8c4c870624a42aa81f3859f29542d7d713bffd98bb4b4f7ab79ae9a881fb"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p11-batch-20260922-a/review/cards/card_r3_c3.png",
+            "sha256": "e8aa5e279a9da98dc0dfb46d3e101b3c0a5276c8d23c11835d10e7ba6c31bcb4"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P12",
+      "scope": "Pokedex/sections/gen9",
+      "variant": "p12-batch-20260922-a",
+      "human_approval": "pending",
+      "note": "",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p12-batch-20260922-a/retrieved/oneshot-gj1qv3ym/output/pokedex__sections__gen9_flux2_joint_scene_2mp_seed_260779646_00001_.png",
+          "sha256": "582f8427c145d07b2090ddadfaec832db89b12f90c822fe74897164dbcfd2b04"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p12-batch-20260922-a/review/artwork-300dpi.png",
+          "sha256": "3669378fb6c7530a82a45b1c3cb573525ac7912c6ff76db9f0a8ba291da83c53"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p12-batch-20260922-a/review/poster-de.png",
+          "sha256": "4410c7a68f2d20f73e008583331412aa4367a2de0c86524bcf57ddc423af7f09"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p12-batch-20260922-a/review/artwork-300dpi.run.json",
+          "sha256": "9965f26ea46531b79311ddc37871ea4fe9a4200bd25ce23d3c22f6c20c3026d2"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p12-batch-20260922-a/retrieved/oneshot-gj1qv3ym/run.json",
+          "sha256": "da36c61bf8eaa5f0e1c96325336f4a90f295a4871f25afe8846a93eff0ce596f"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p12-batch-20260922-a/retrieved/oneshot-gj1qv3ym/comfyui.log",
+          "sha256": "e00a38e7fbf3682a684d31d82feb21c0545221ce20c6ad4eea89ca1939651bea"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p12-batch-20260922-a/review/cards/card_r1_c1.png",
+          "sha256": "dd8c948385bacc3b43729cfcf3c8d619cde1032df1c564ea60c05ec401b20798"
+        },
+        {
+          "path": "tmp/oneshot-trials/p12-batch-20260922-a/review/cards/card_r1_c2.png",
+          "sha256": "a32991ccbd3628d9bd8d7d124f011e99aeaf9a7ba65c6df4ff7b114723f52d54"
+        },
+        {
+          "path": "tmp/oneshot-trials/p12-batch-20260922-a/review/cards/card_r1_c3.png",
+          "sha256": "43adff916e09cf00f14751b0b24ff124f73e7c8742cd67f712313bc70c3db842"
+        },
+        {
+          "path": "tmp/oneshot-trials/p12-batch-20260922-a/review/cards/card_r2_c1.png",
+          "sha256": "f4346e78120060045ada768bc019584dd738cea48587afc3735810050dfcc3aa"
+        },
+        {
+          "path": "tmp/oneshot-trials/p12-batch-20260922-a/review/cards/card_r2_c2.png",
+          "sha256": "7823101cb1b38e0e75dac5e36c5e61ef9abe0ad64b181bb495274e862d066584"
+        },
+        {
+          "path": "tmp/oneshot-trials/p12-batch-20260922-a/review/cards/card_r2_c3.png",
+          "sha256": "1544bff602852981a5bb4b0610da3e4c40fde6f081073145804e0d5538ed9f94"
+        },
+        {
+          "path": "tmp/oneshot-trials/p12-batch-20260922-a/review/cards/card_r3_c1.png",
+          "sha256": "fd961998c83249cffdb39fabc8f3bab0108c5717e2221b4b06e5c09fe1b741bf"
+        },
+        {
+          "path": "tmp/oneshot-trials/p12-batch-20260922-a/review/cards/card_r3_c2.png",
+          "sha256": "ca15e8559cb131c8048e3da030d2d5558756c14a9898967976d926d70b2d1856"
+        },
+        {
+          "path": "tmp/oneshot-trials/p12-batch-20260922-a/review/cards/card_r3_c3.png",
+          "sha256": "0ef79981a5d76b0e7fbfc84a2aac1a6f3f5f925847cec1abb575d9c2946cfc2d"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Felori",
+          "subject_key": "pokeapi:official-artwork:906",
+          "source": {
+            "path": "tmp/poster-workspaces/Pokedex/sections/gen9/sources/cutouts/pokemon_906_sprigatito.png",
+            "sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p12-batch-20260922-a/review/cards/card_r3_c1.png",
+            "sha256": "fd961998c83249cffdb39fabc8f3bab0108c5717e2221b4b06e5c09fe1b741bf"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Krokel",
+          "subject_key": "pokeapi:official-artwork:909",
+          "source": {
+            "path": "tmp/poster-workspaces/Pokedex/sections/gen9/sources/cutouts/pokemon_909_fuecoco.png",
+            "sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p12-batch-20260922-a/review/cards/card_r3_c2.png",
+            "sha256": "ca15e8559cb131c8048e3da030d2d5558756c14a9898967976d926d70b2d1856"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Kwaks",
+          "subject_key": "pokeapi:official-artwork:912",
+          "source": {
+            "path": "tmp/poster-workspaces/Pokedex/sections/gen9/sources/cutouts/pokemon_912_quaxly.png",
+            "sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p12-batch-20260922-a/review/cards/card_r3_c3.png",
+            "sha256": "0ef79981a5d76b0e7fbfc84a2aac1a6f3f5f925847cec1abb575d9c2946cfc2d"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P13",
+      "scope": "ExGen1/sections/normal",
+      "variant": "p13-batch-20260922-a",
+      "human_approval": "pending",
+      "note": "",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p13-batch-20260922-a/retrieved/oneshot-2h27t0b9/output/exgen1__sections__normal_flux2_joint_scene_2mp_seed_260738087_00001_.png",
+          "sha256": "5b0a5a2c18ee5640eae6c19a81401601b775113ad2f8c6fa7aa60aff2438b58d"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p13-batch-20260922-a/review/artwork-300dpi.png",
+          "sha256": "d3a9bea00447de6c0df558f6979681f49e86f5392ba25b3ab087e05fefb05557"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p13-batch-20260922-a/review/poster-de.png",
+          "sha256": "de1aa0c07614f7a7045adc783f48a4e536ca9360e46c7581c4762e3f7a9eed06"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p13-batch-20260922-a/review/artwork-300dpi.run.json",
+          "sha256": "00109fe6abb6c49cd6f03f8c6865ffa9fc7196ea104294a6d3d88574ae4b901b"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p13-batch-20260922-a/retrieved/oneshot-2h27t0b9/run.json",
+          "sha256": "118ced0dc1398144b479e5f1f46125ac3d35b75187c52fad9ed0b2374e4e19c3"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p13-batch-20260922-a/retrieved/oneshot-2h27t0b9/comfyui.log",
+          "sha256": "c94090a7d222768c3a4468d91d48b596e3ca68428a761d5d664f69860caa3a00"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p13-batch-20260922-a/review/cards/card_r1_c1.png",
+          "sha256": "bb51085f757bee85eef8079e07399fdcf9970fb2b676f65fe3e9636f21af62de"
+        },
+        {
+          "path": "tmp/oneshot-trials/p13-batch-20260922-a/review/cards/card_r1_c2.png",
+          "sha256": "e43876ba210ec7b0e7d58959bb8406a21680f2a6328967073d2f27b3f1c5197d"
+        },
+        {
+          "path": "tmp/oneshot-trials/p13-batch-20260922-a/review/cards/card_r1_c3.png",
+          "sha256": "11bc827665d082b6342b4bc69d5f28cb16f76af35a2a10d41b0b6250885a5cdc"
+        },
+        {
+          "path": "tmp/oneshot-trials/p13-batch-20260922-a/review/cards/card_r2_c1.png",
+          "sha256": "d75352a8655b3fc60594e7924a7be6f653080f4312318f6de83de1a9a8eb4e61"
+        },
+        {
+          "path": "tmp/oneshot-trials/p13-batch-20260922-a/review/cards/card_r2_c2.png",
+          "sha256": "635f783efd44581094a53cf7e0b0b2e64e1920094d2a474fa323bc865d7db8f0"
+        },
+        {
+          "path": "tmp/oneshot-trials/p13-batch-20260922-a/review/cards/card_r2_c3.png",
+          "sha256": "1ebc402e4df909c349dd711d8ba1769a6110ee31eafefe0fad128f794e9e1b15"
+        },
+        {
+          "path": "tmp/oneshot-trials/p13-batch-20260922-a/review/cards/card_r3_c1.png",
+          "sha256": "39e3c34f29033ac72647ce45df5e6c5c8cb034025fded3096be2e1d6c6f01107"
+        },
+        {
+          "path": "tmp/oneshot-trials/p13-batch-20260922-a/review/cards/card_r3_c2.png",
+          "sha256": "3547d3233185443259a24d6fb2e26ef02d7632ed44484701306d1e5149a1c724"
+        },
+        {
+          "path": "tmp/oneshot-trials/p13-batch-20260922-a/review/cards/card_r3_c3.png",
+          "sha256": "d3aa6b7f04a01513cdfb0458faaa8940dc06ff69518a8e922a68dad4da06f847"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Bisaflor",
+          "subject_key": "pokeapi:official-artwork:3",
+          "source": {
+            "path": "tmp/poster-workspaces/ExGen1/sections/normal/sources/cutouts/pokemon_003_venusaur.png",
+            "sha256": "04897191b567f8e6d866e6aa6eef184b6a93f8d0ba9ddaa50b4592ef261edc3b"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p13-batch-20260922-a/review/cards/card_r3_c1.png",
+            "sha256": "39e3c34f29033ac72647ce45df5e6c5c8cb034025fded3096be2e1d6c6f01107"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Turtok",
+          "subject_key": "pokeapi:official-artwork:9",
+          "source": {
+            "path": "tmp/poster-workspaces/ExGen1/sections/normal/sources/cutouts/pokemon_009_blastoise.png",
+            "sha256": "1bac4860feebcf5fb5cd27af8c9c4465773e948b68a7436dc65ec49618becd49"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p13-batch-20260922-a/review/cards/card_r3_c2.png",
+            "sha256": "3547d3233185443259a24d6fb2e26ef02d7632ed44484701306d1e5149a1c724"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Lugia",
+          "subject_key": "pokeapi:official-artwork:249",
+          "source": {
+            "path": "tmp/poster-workspaces/ExGen1/sections/normal/sources/cutouts/pokemon_249_lugia.png",
+            "sha256": "f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p13-batch-20260922-a/review/cards/card_r3_c3.png",
+            "sha256": "d3aa6b7f04a01513cdfb0458faaa8940dc06ff69518a8e922a68dad4da06f847"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P14",
+      "scope": "ExGen2/sections/normal",
+      "variant": "p14-batch-20260922-b",
+      "human_approval": "pending",
+      "note": "",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p14-batch-20260922-b/retrieved/oneshot-z6g4ra6u/output/exgen2__sections__normal_flux2_joint_scene_2mp_seed_260738087_00001_.png",
+          "sha256": "2dc343e54bd0befb2c8d2e5885646f80712c7aac7239871b9428cda5dec9298e"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p14-batch-20260922-b/review/artwork-300dpi.png",
+          "sha256": "a2a39bedce61820387039aa528039890326ed7bc6ef032bdb7af164e1a0f91c4"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p14-batch-20260922-b/review/poster-de.png",
+          "sha256": "fd6f546b1c2a25d29dffa6108aa4b6dd8c6f4a30151c5f3b90d949d141a9c5a7"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p14-batch-20260922-b/review/artwork-300dpi.run.json",
+          "sha256": "b06d24720d1e517cfdcaa9fab103f20663d53a55c65af0bed3e464bbbf875661"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p14-batch-20260922-b/retrieved/oneshot-z6g4ra6u/run.json",
+          "sha256": "7b3705920f0a8c6ccf16520159f4ba181bf7b0661423561a89098e7c678858fc"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p14-batch-20260922-b/retrieved/oneshot-z6g4ra6u/comfyui.log",
+          "sha256": "4cffc1a89d7658e193d634f6b61c4c5037fe920c4d8170bf5f7a799c16116ffc"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p14-batch-20260922-b/review/cards/card_r1_c1.png",
+          "sha256": "ffbd19b320a1badc2cef92884d49ce46111c9a47bdca8259e999506039163aa3"
+        },
+        {
+          "path": "tmp/oneshot-trials/p14-batch-20260922-b/review/cards/card_r1_c2.png",
+          "sha256": "f56de18962df7aa0bab83f72e73ddbd05be451ba0c259007ca2ac7fc9d14d3ee"
+        },
+        {
+          "path": "tmp/oneshot-trials/p14-batch-20260922-b/review/cards/card_r1_c3.png",
+          "sha256": "dcaa7b3f0cacc2b695895decfdc208d3c78fb7252e122c01efdbec5e31528840"
+        },
+        {
+          "path": "tmp/oneshot-trials/p14-batch-20260922-b/review/cards/card_r2_c1.png",
+          "sha256": "dde74f13761e4d449f04d6c1a27934b5c5f0863726a3a501d0ae9d9aa0ca8837"
+        },
+        {
+          "path": "tmp/oneshot-trials/p14-batch-20260922-b/review/cards/card_r2_c2.png",
+          "sha256": "79522c999808f9f1363e09af8681716851336adb65a54e0f0df315dd9413c772"
+        },
+        {
+          "path": "tmp/oneshot-trials/p14-batch-20260922-b/review/cards/card_r2_c3.png",
+          "sha256": "52d56cee1a8beeb1cb154e26d92f39c4300edf1470f478e969fa49ed8a7d4376"
+        },
+        {
+          "path": "tmp/oneshot-trials/p14-batch-20260922-b/review/cards/card_r3_c1.png",
+          "sha256": "f125b89dec23a058ef3249497224fd9c7a3254f41e97e0626a5ec9f26009fff1"
+        },
+        {
+          "path": "tmp/oneshot-trials/p14-batch-20260922-b/review/cards/card_r3_c2.png",
+          "sha256": "92e8237d711a4f223c7b93652ac76b93abdc8030e21d004961577fb93f7f75ef"
+        },
+        {
+          "path": "tmp/oneshot-trials/p14-batch-20260922-b/review/cards/card_r3_c3.png",
+          "sha256": "603631db49673a7815574514f37543ec1ee70ae320f472c2df6c584d0f0bf300"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Mewtu",
+          "subject_key": "pokeapi:official-artwork:150",
+          "source": {
+            "path": "tmp/poster-workspaces/ExGen2/sections/normal/sources/cutouts/pokemon_150_mewtwo.png",
+            "sha256": "b7c00037d7ba9fb5cebc2da42ca0da54c7b664f4d7b2348d60ade5c6dc9de256"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p14-batch-20260922-b/review/cards/card_r3_c1.png",
+            "sha256": "f125b89dec23a058ef3249497224fd9c7a3254f41e97e0626a5ec9f26009fff1"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Mew",
+          "subject_key": "pokeapi:official-artwork:151",
+          "source": {
+            "path": "tmp/poster-workspaces/ExGen2/sections/normal/sources/cutouts/pokemon_151_mew.png",
+            "sha256": "3e7b29103dae09d0f8e8ff889b1991bdf387a2c6328aacb93fc34e8962584e33"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p14-batch-20260922-b/review/cards/card_r3_c2.png",
+            "sha256": "92e8237d711a4f223c7b93652ac76b93abdc8030e21d004961577fb93f7f75ef"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Lugia",
+          "subject_key": "pokeapi:official-artwork:249",
+          "source": {
+            "path": "tmp/poster-workspaces/ExGen2/sections/normal/sources/cutouts/pokemon_249_lugia.png",
+            "sha256": "f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p14-batch-20260922-b/review/cards/card_r3_c3.png",
+            "sha256": "603631db49673a7815574514f37543ec1ee70ae320f472c2df6c584d0f0bf300"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P17",
+      "scope": "Base3",
+      "variant": "p17-batch-20260922-b",
+      "human_approval": "pending",
+      "note": "",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p17-batch-20260922-b/retrieved/oneshot-gd2uboa3/output/base3_flux2_joint_scene_2mp_seed_260756501_00001_.png",
+          "sha256": "260c5e1398d4c4c3ea4a08e17f9b65b7bd2e278c00837ebaf8431dd1217d743b"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p17-batch-20260922-b/review/artwork-300dpi.png",
+          "sha256": "6377efa79e83fe2bd706017a41667db2d6619441d808c1cc3f71644974f33bfd"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p17-batch-20260922-b/review/poster-de.png",
+          "sha256": "531fd535b11d1783b94797711a5d7ac50cbd521dc096e58327fa51bbab6fbfa9"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p17-batch-20260922-b/review/artwork-300dpi.run.json",
+          "sha256": "d4386a229b597977166d5ee3ef293e3b975cb4d8c31826dfefeb1d8c97417fb3"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p17-batch-20260922-b/retrieved/oneshot-gd2uboa3/run.json",
+          "sha256": "54876de6dd52281dd0d6854a296999f1e16099626b3434f208bd6c0fa984ea84"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p17-batch-20260922-b/retrieved/oneshot-gd2uboa3/comfyui.log",
+          "sha256": "d49b249630a0bf04f8d18f226be476c2062bb78cc60051578a901874f9b98eda"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p17-batch-20260922-b/review/cards/card_r1_c1.png",
+          "sha256": "8de1b0ee3a91a0c95d5b5dc56001aca64fafe06125057ee94e625e8ded93e3b1"
+        },
+        {
+          "path": "tmp/oneshot-trials/p17-batch-20260922-b/review/cards/card_r1_c2.png",
+          "sha256": "1cb01ffd3884d76e8956393d55c684b749bd485a7917139435ddcc64c64001e9"
+        },
+        {
+          "path": "tmp/oneshot-trials/p17-batch-20260922-b/review/cards/card_r1_c3.png",
+          "sha256": "ada74bd8b719fb9fe9bcec41da2d813f902ca28c21ab375f6796662bd28870f4"
+        },
+        {
+          "path": "tmp/oneshot-trials/p17-batch-20260922-b/review/cards/card_r2_c1.png",
+          "sha256": "61db9052e1d247e072233016760a3cca0a92569a39ae23164447bfefdcee0c7f"
+        },
+        {
+          "path": "tmp/oneshot-trials/p17-batch-20260922-b/review/cards/card_r2_c2.png",
+          "sha256": "ab37e5aee0cdeae4bafce31c0fd1ff08ad01c9a05f24d0cacc9883a2071fa774"
+        },
+        {
+          "path": "tmp/oneshot-trials/p17-batch-20260922-b/review/cards/card_r2_c3.png",
+          "sha256": "263a18a9ec3abb25080e18ed8a66566be37d3904041530afe0d1238e01ae66b2"
+        },
+        {
+          "path": "tmp/oneshot-trials/p17-batch-20260922-b/review/cards/card_r3_c1.png",
+          "sha256": "8a1076098c3ea280adf5ad440bef54179aa70e9446f372e577b41819752a28df"
+        },
+        {
+          "path": "tmp/oneshot-trials/p17-batch-20260922-b/review/cards/card_r3_c2.png",
+          "sha256": "be2c4da9e2c82ded7d5b9d99e3037d525ebdf2cd651f99fe1e15bf177ef974b3"
+        },
+        {
+          "path": "tmp/oneshot-trials/p17-batch-20260922-b/review/cards/card_r3_c3.png",
+          "sha256": "9cff0c7f4f4084be6c4406d670aba5057bc7d3eeb386589747f5d7bdd682a105"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Kabutops",
+          "subject_key": "pokeapi:official-artwork:141",
+          "source": {
+            "path": "tmp/poster-workspaces/Base3/sources/cutouts/pokemon_141_kabutops.png",
+            "sha256": "d59c4a7435ada052c103fded3f49623e1c32858665c7f5135c6bbbe0f1de8527"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p17-batch-20260922-b/review/cards/card_r3_c1.png",
+            "sha256": "8a1076098c3ea280adf5ad440bef54179aa70e9446f372e577b41819752a28df"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Lapras",
+          "subject_key": "pokeapi:official-artwork:131",
+          "source": {
+            "path": "tmp/poster-workspaces/Base3/sources/cutouts/pokemon_131_lapras.png",
+            "sha256": "0dda58737b5c1d7db8e7b81ff61b41d0f23bc08ddbf166ca61c20d17d1d27113"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p17-batch-20260922-b/review/cards/card_r3_c2.png",
+            "sha256": "be2c4da9e2c82ded7d5b9d99e3037d525ebdf2cd651f99fe1e15bf177ef974b3"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Gengar",
+          "subject_key": "pokeapi:official-artwork:94",
+          "source": {
+            "path": "tmp/poster-workspaces/Base3/sources/cutouts/pokemon_094_gengar.png",
+            "sha256": "cd83bb9a7cc3cb159394dc30dda48160965f5470a474d63c921c7eb4884f8d1d"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p17-batch-20260922-b/review/cards/card_r3_c3.png",
+            "sha256": "9cff0c7f4f4084be6c4406d670aba5057bc7d3eeb386589747f5d7bdd682a105"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P18",
+      "scope": "SV01",
+      "variant": "p18-batch-20260922-b",
+      "human_approval": "pending",
+      "note": "",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p18-batch-20260922-b/retrieved/oneshot-ovyeth7f/output/sv01_flux2_joint_scene_2mp_seed_260736955_00001_.png",
+          "sha256": "56fd6c9c24733bc8b6f90ec5840cccc1efed77a552c877d8df1221528acd5055"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p18-batch-20260922-b/review/artwork-300dpi.png",
+          "sha256": "a952cb5ded85f41e32e6e5851c7d43e30e89be56ef42ce99f08c9f813d8ec09f"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p18-batch-20260922-b/review/poster-de.png",
+          "sha256": "5f2675a8e43b14659be93e9a96ae7610c3464ecf7870087fd422e67a7a93624b"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p18-batch-20260922-b/review/artwork-300dpi.run.json",
+          "sha256": "1bae07f5996bf8d5eaeeb2854a6eb0e4cae182662cce1029ac2557190768896c"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p18-batch-20260922-b/retrieved/oneshot-ovyeth7f/run.json",
+          "sha256": "11bfd6cd998aa281b4e62d8757cf323170b1efcd4f4f9301fc4d2a43fea45239"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p18-batch-20260922-b/retrieved/oneshot-ovyeth7f/comfyui.log",
+          "sha256": "5e48ea9ecc1f324752ed39accf1865e87b202078909a388a650a03887e3abd27"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p18-batch-20260922-b/review/cards/card_r1_c1.png",
+          "sha256": "6237d56101934aa440af2a10e4e6dc2e293e406fb7052dd0a30b6455aa322975"
+        },
+        {
+          "path": "tmp/oneshot-trials/p18-batch-20260922-b/review/cards/card_r1_c2.png",
+          "sha256": "57f1c16c922a2d2c0293e1fc3b4c31502825814d2ea34204882645bebec6b7eb"
+        },
+        {
+          "path": "tmp/oneshot-trials/p18-batch-20260922-b/review/cards/card_r1_c3.png",
+          "sha256": "a0704f40d3fbe040ec1b4c55d2e73a55a71146125ceeb4fef9abb6361270d635"
+        },
+        {
+          "path": "tmp/oneshot-trials/p18-batch-20260922-b/review/cards/card_r2_c1.png",
+          "sha256": "7321a3cb9f34224f2d749add2bade4fbbf6e8b47b3eeec5d8b318363154e0881"
+        },
+        {
+          "path": "tmp/oneshot-trials/p18-batch-20260922-b/review/cards/card_r2_c2.png",
+          "sha256": "cb0de9b587412c6031f6a6a03be805ea92d50b971e075404889940778c981b71"
+        },
+        {
+          "path": "tmp/oneshot-trials/p18-batch-20260922-b/review/cards/card_r2_c3.png",
+          "sha256": "84f7cab9d5c7e2053bd2fbe0ae6193b4fb5aaff3d94e4c6af43fc94ad0f84c2c"
+        },
+        {
+          "path": "tmp/oneshot-trials/p18-batch-20260922-b/review/cards/card_r3_c1.png",
+          "sha256": "831d29e63ae2428f4a2956ca852b333e681747970e6886d530206b11de1a8356"
+        },
+        {
+          "path": "tmp/oneshot-trials/p18-batch-20260922-b/review/cards/card_r3_c2.png",
+          "sha256": "9f0d906454c3e4b445bb36e12c0dd25dadb8dfe2d9111091345b8a1bd20ff11a"
+        },
+        {
+          "path": "tmp/oneshot-trials/p18-batch-20260922-b/review/cards/card_r3_c3.png",
+          "sha256": "68de6ac31b9f8ff0c1f5d9e5ddba7f27ae9aa117482ff3c81f61cf22b315796f"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Felori",
+          "subject_key": "pokeapi:official-artwork:906",
+          "source": {
+            "path": "tmp/poster-workspaces/SV01/sources/cutouts/pokemon_906_sprigatito.png",
+            "sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p18-batch-20260922-b/review/cards/card_r3_c1.png",
+            "sha256": "831d29e63ae2428f4a2956ca852b333e681747970e6886d530206b11de1a8356"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Krokel",
+          "subject_key": "pokeapi:official-artwork:909",
+          "source": {
+            "path": "tmp/poster-workspaces/SV01/sources/cutouts/pokemon_909_fuecoco.png",
+            "sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p18-batch-20260922-b/review/cards/card_r3_c2.png",
+            "sha256": "9f0d906454c3e4b445bb36e12c0dd25dadb8dfe2d9111091345b8a1bd20ff11a"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Kwaks",
+          "subject_key": "pokeapi:official-artwork:912",
+          "source": {
+            "path": "tmp/poster-workspaces/SV01/sources/cutouts/pokemon_912_quaxly.png",
+            "sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p18-batch-20260922-b/review/cards/card_r3_c3.png",
+            "sha256": "68de6ac31b9f8ff0c1f5d9e5ddba7f27ae9aa117482ff3c81f61cf22b315796f"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P19",
+      "scope": "SV02",
+      "variant": "p19-batch-20260922-b",
+      "human_approval": "pending",
+      "note": "",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p19-batch-20260922-b/retrieved/oneshot-rldrfc35/output/sv02_flux2_joint_scene_2mp_seed_260778145_00001_.png",
+          "sha256": "49a721f092197229e3f7c19e7dfbdfb9a2612637e6975e4df5910f3533860d41"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p19-batch-20260922-b/review/artwork-300dpi.png",
+          "sha256": "3cae82d5c3a29b9aaac2503ef0afa266a0ff5085b4d936bc54318bf3395f5bd8"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p19-batch-20260922-b/review/poster-de.png",
+          "sha256": "3b4b9e6d285ed4ea625f7a939e39dd959f45db025f1616d1a165a8f0239d3e2f"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p19-batch-20260922-b/review/artwork-300dpi.run.json",
+          "sha256": "9c1f16ba15078c78e7d9a69686e198ebef1b560feedbae1551d8cc8c6349e496"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p19-batch-20260922-b/retrieved/oneshot-rldrfc35/run.json",
+          "sha256": "0699b16150572234406ddf1205d8e88e0160ee61dcaff50ecbb64b0b4aec1665"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p19-batch-20260922-b/retrieved/oneshot-rldrfc35/comfyui.log",
+          "sha256": "f30a3d8d68bef905bd1dd3d89c3749c0e3170d170031ac3201679dcccede8786"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p19-batch-20260922-b/review/cards/card_r1_c1.png",
+          "sha256": "99acdeef8ff12df0fb0ace620388b3b7a6239ccae245da26fb851c757bf7989a"
+        },
+        {
+          "path": "tmp/oneshot-trials/p19-batch-20260922-b/review/cards/card_r1_c2.png",
+          "sha256": "f2804d5dba5a25e5fce0820c35bb9d09ce185b9cdd6015f2b74fec3a4b0ed070"
+        },
+        {
+          "path": "tmp/oneshot-trials/p19-batch-20260922-b/review/cards/card_r1_c3.png",
+          "sha256": "cae1f32a425b15502b3d9f4578a75c9ea77229a9a0f71f168243856381bc0d93"
+        },
+        {
+          "path": "tmp/oneshot-trials/p19-batch-20260922-b/review/cards/card_r2_c1.png",
+          "sha256": "d9a9e5c5beca904522238f3073671585a4a94bb24cd7afc9ab0e32844ddf07bf"
+        },
+        {
+          "path": "tmp/oneshot-trials/p19-batch-20260922-b/review/cards/card_r2_c2.png",
+          "sha256": "63c34991825ff90be23686579743b889ad7c99a0df11b28e32d86c61790b3f83"
+        },
+        {
+          "path": "tmp/oneshot-trials/p19-batch-20260922-b/review/cards/card_r2_c3.png",
+          "sha256": "511c1a9bf67f97046267102aefd7c10603bfc97fb20cf5387d84435d296b900c"
+        },
+        {
+          "path": "tmp/oneshot-trials/p19-batch-20260922-b/review/cards/card_r3_c1.png",
+          "sha256": "731319a48970cb7aea15a0da53fe1f0a4a195a88d066dbce897ffcb464bb3670"
+        },
+        {
+          "path": "tmp/oneshot-trials/p19-batch-20260922-b/review/cards/card_r3_c2.png",
+          "sha256": "dbeac10a7dc9859cd3652e5d540a33877045a1cae696164942dc30a8e2cef172"
+        },
+        {
+          "path": "tmp/oneshot-trials/p19-batch-20260922-b/review/cards/card_r3_c3.png",
+          "sha256": "4870be77e48aecdebe7a19e8d5769dc70df3fbee2e5a2972a29b209f15396292"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Felori",
+          "subject_key": "pokeapi:official-artwork:906",
+          "source": {
+            "path": "tmp/poster-workspaces/SV02/sources/cutouts/pokemon_906_sprigatito.png",
+            "sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p19-batch-20260922-b/review/cards/card_r3_c1.png",
+            "sha256": "731319a48970cb7aea15a0da53fe1f0a4a195a88d066dbce897ffcb464bb3670"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Krokel",
+          "subject_key": "pokeapi:official-artwork:909",
+          "source": {
+            "path": "tmp/poster-workspaces/SV02/sources/cutouts/pokemon_909_fuecoco.png",
+            "sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p19-batch-20260922-b/review/cards/card_r3_c2.png",
+            "sha256": "dbeac10a7dc9859cd3652e5d540a33877045a1cae696164942dc30a8e2cef172"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Kwaks",
+          "subject_key": "pokeapi:official-artwork:912",
+          "source": {
+            "path": "tmp/poster-workspaces/SV02/sources/cutouts/pokemon_912_quaxly.png",
+            "sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p19-batch-20260922-b/review/cards/card_r3_c3.png",
+            "sha256": "4870be77e48aecdebe7a19e8d5769dc70df3fbee2e5a2972a29b209f15396292"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P20",
+      "scope": "SV03",
+      "variant": "p20-batch-20260922-b",
+      "human_approval": "pending",
+      "note": "",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p20-batch-20260922-b/retrieved/oneshot-mqokf7m7/output/sv03_flux2_joint_scene_2mp_seed_260719257_00001_.png",
+          "sha256": "15d67e9a53471e3232f0c1436aa97dd757fd661fd3194163d834002e5437e2cf"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p20-batch-20260922-b/review/artwork-300dpi.png",
+          "sha256": "868dd69b9b6cdf94ee06aaca084e8434a575fde097eac704ccd1846fc7fd14bb"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p20-batch-20260922-b/review/poster-de.png",
+          "sha256": "4f31a633a8c90fb4074791baea6bd04c31de1e603e75cdad07b4d219f6cb53e4"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p20-batch-20260922-b/review/artwork-300dpi.run.json",
+          "sha256": "0c9bced3192eea7848fe1de1e936b5b2b97a9c35be835a113f6d49aadb43656f"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p20-batch-20260922-b/retrieved/oneshot-mqokf7m7/run.json",
+          "sha256": "931bcec32a55937b620c9c260b94b0ad6cd62c83613d4f196a853cd06563e977"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p20-batch-20260922-b/retrieved/oneshot-mqokf7m7/comfyui.log",
+          "sha256": "0364bb660749095872bcd7e18c02f101e3ab74858df7fe07028f08b98fc66b1f"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p20-batch-20260922-b/review/cards/card_r1_c1.png",
+          "sha256": "4fa53bd858e9db6e5f43525e4a3d3193728b4e788bd5b197c3ec84b35b748d6b"
+        },
+        {
+          "path": "tmp/oneshot-trials/p20-batch-20260922-b/review/cards/card_r1_c2.png",
+          "sha256": "5b001446661b0b233ef59429951429dd9b9b2c344c02dee753f422c28fd927b2"
+        },
+        {
+          "path": "tmp/oneshot-trials/p20-batch-20260922-b/review/cards/card_r1_c3.png",
+          "sha256": "0746cf094d1952db4823ca4bdd9ec1037b79e948039f6b827cf6477b2ff94f22"
+        },
+        {
+          "path": "tmp/oneshot-trials/p20-batch-20260922-b/review/cards/card_r2_c1.png",
+          "sha256": "d2d70dcb519db535c7997472e9b2e620d97d39f88375766582ed72bc840f7f68"
+        },
+        {
+          "path": "tmp/oneshot-trials/p20-batch-20260922-b/review/cards/card_r2_c2.png",
+          "sha256": "1969039a93ae10076464a50d1c88e5865f61d03a3f26b1d66d73fce826f32bc2"
+        },
+        {
+          "path": "tmp/oneshot-trials/p20-batch-20260922-b/review/cards/card_r2_c3.png",
+          "sha256": "1908f81072143035d904130fe65a58e8ad31090362dd4d134e2310653fdea2e2"
+        },
+        {
+          "path": "tmp/oneshot-trials/p20-batch-20260922-b/review/cards/card_r3_c1.png",
+          "sha256": "5cd6207fb497fa2804aefdac0ff40d5d3427c6a25b1a9607c0b7bdf5ed85849f"
+        },
+        {
+          "path": "tmp/oneshot-trials/p20-batch-20260922-b/review/cards/card_r3_c2.png",
+          "sha256": "be1a1d99dc0789fb47fd14baee3dcb8c7f67c33061170b30fc11efd718590f9a"
+        },
+        {
+          "path": "tmp/oneshot-trials/p20-batch-20260922-b/review/cards/card_r3_c3.png",
+          "sha256": "25dfc9a83505ff10e2cf83c984c10d0e8694532988f8b2f86b5ef25989b0b782"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Bauz",
+          "subject_key": "pokeapi:official-artwork:722",
+          "source": {
+            "path": "tmp/poster-workspaces/SV03/sources/cutouts/pokemon_722_rowlet.png",
+            "sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p20-batch-20260922-b/review/cards/card_r3_c1.png",
+            "sha256": "5cd6207fb497fa2804aefdac0ff40d5d3427c6a25b1a9607c0b7bdf5ed85849f"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Glumanda",
+          "subject_key": "pokeapi:official-artwork:4",
+          "source": {
+            "path": "tmp/poster-workspaces/SV03/sources/cutouts/pokemon_004_charmander.png",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p20-batch-20260922-b/review/cards/card_r3_c2.png",
+            "sha256": "be1a1d99dc0789fb47fd14baee3dcb8c7f67c33061170b30fc11efd718590f9a"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Froxy",
+          "subject_key": "pokeapi:official-artwork:656",
+          "source": {
+            "path": "tmp/poster-workspaces/SV03/sources/cutouts/pokemon_656_froakie.png",
+            "sha256": "cbb47c38d234eb7dea4b1d90f8c97ec990f41b6e61f26e7efba90d80a3d1d632"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p20-batch-20260922-b/review/cards/card_r3_c3.png",
+            "sha256": "25dfc9a83505ff10e2cf83c984c10d0e8694532988f8b2f86b5ef25989b0b782"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P21",
+      "scope": "SV03.5",
+      "variant": "p21-batch-20260922-b",
+      "human_approval": "pending",
+      "note": "",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p21-batch-20260922-b/retrieved/oneshot-gqx_ipz1/output/sv03.5_flux2_joint_scene_2mp_seed_260727110_00001_.png",
+          "sha256": "a4e431b2cec41fe084ead6e6e7d4adb8a129999823da297379bdc2df456669b5"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p21-batch-20260922-b/review/artwork-300dpi.png",
+          "sha256": "47ae99820a848f208008befd6c959c3393ed6d4f14f5f453682589299473464a"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p21-batch-20260922-b/review/poster-de.png",
+          "sha256": "9e415142105cde7b263a5dc2f5c9d1780d76c8c5359297bea8d6ae1f1c1a1080"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p21-batch-20260922-b/review/artwork-300dpi.run.json",
+          "sha256": "fb7fca96ff615bf5a7a5fec3449c49a1a4b63cb49c7cd96e4228f51ec32956a9"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p21-batch-20260922-b/retrieved/oneshot-gqx_ipz1/run.json",
+          "sha256": "7562e5fe44560f4da4d69c619a1aa9e3d08a22e53aa4f5d09d360b4dbf46c39f"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p21-batch-20260922-b/retrieved/oneshot-gqx_ipz1/comfyui.log",
+          "sha256": "b2b00e02346b8651a62b88294556d73a8f0fb0b8146fb1823626bfd6216b17fc"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p21-batch-20260922-b/review/cards/card_r1_c1.png",
+          "sha256": "7693d5b309bf9e8d55405f7c06a328f8637b5616c11d66d8cf2da0049454fd99"
+        },
+        {
+          "path": "tmp/oneshot-trials/p21-batch-20260922-b/review/cards/card_r1_c2.png",
+          "sha256": "24ea0624396d28c6234e4b7a7da15a8ab7924edb0bb16bb5779c601d8ce752dd"
+        },
+        {
+          "path": "tmp/oneshot-trials/p21-batch-20260922-b/review/cards/card_r1_c3.png",
+          "sha256": "03695c3e9e7a891b34808f975aed87382672e61906487c240de6c0e1f7a12055"
+        },
+        {
+          "path": "tmp/oneshot-trials/p21-batch-20260922-b/review/cards/card_r2_c1.png",
+          "sha256": "67d1de81a8609675a8c9eb0a9149e7ad360845d23799b97cde66a40a4155da92"
+        },
+        {
+          "path": "tmp/oneshot-trials/p21-batch-20260922-b/review/cards/card_r2_c2.png",
+          "sha256": "05d40eeb388c5e4aeaf0fa3c96e259463f31dbd955139cd49b1ce3f235281c5b"
+        },
+        {
+          "path": "tmp/oneshot-trials/p21-batch-20260922-b/review/cards/card_r2_c3.png",
+          "sha256": "43bbcfecca057133ff440f6b8dc2ad80d37a74728e65b9d6750b2fa8e02b7569"
+        },
+        {
+          "path": "tmp/oneshot-trials/p21-batch-20260922-b/review/cards/card_r3_c1.png",
+          "sha256": "3c737d8ae17f1fcdb9c789a84b19ec5d8bf25dc1d5e112cf9bba635037a60d39"
+        },
+        {
+          "path": "tmp/oneshot-trials/p21-batch-20260922-b/review/cards/card_r3_c2.png",
+          "sha256": "718452d7358152a114c15029fc13c817c976e5841b9d37a2ca40339b95e2cdbd"
+        },
+        {
+          "path": "tmp/oneshot-trials/p21-batch-20260922-b/review/cards/card_r3_c3.png",
+          "sha256": "309943de23b219c11e2f5f7e5d13e61cf0d8c5c969fd177e8402db01edab9328"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Bisasam",
+          "subject_key": "pokeapi:official-artwork:1",
+          "source": {
+            "path": "tmp/poster-workspaces/SV03.5/sources/cutouts/pokemon_001_bulbasaur.png",
+            "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p21-batch-20260922-b/review/cards/card_r3_c1.png",
+            "sha256": "3c737d8ae17f1fcdb9c789a84b19ec5d8bf25dc1d5e112cf9bba635037a60d39"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Glumanda",
+          "subject_key": "pokeapi:official-artwork:4",
+          "source": {
+            "path": "tmp/poster-workspaces/SV03.5/sources/cutouts/pokemon_004_charmander.png",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p21-batch-20260922-b/review/cards/card_r3_c2.png",
+            "sha256": "718452d7358152a114c15029fc13c817c976e5841b9d37a2ca40339b95e2cdbd"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Schiggy",
+          "subject_key": "pokeapi:official-artwork:7",
+          "source": {
+            "path": "tmp/poster-workspaces/SV03.5/sources/cutouts/pokemon_007_squirtle.png",
+            "sha256": "8a4752fc89907ec628635865afcf13868d136b82f1e6f39e00ba590754a43290"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p21-batch-20260922-b/review/cards/card_r3_c3.png",
+            "sha256": "309943de23b219c11e2f5f7e5d13e61cf0d8c5c969fd177e8402db01edab9328"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P22",
+      "scope": "SV04",
+      "variant": "p22-batch-20260922-b",
+      "human_approval": "pending",
+      "note": "",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p22-batch-20260922-b/retrieved/oneshot-uyrk9uml/output/sv04_flux2_joint_scene_2mp_seed_260787570_00001_.png",
+          "sha256": "09a0a466401de9c9667dec2953f7f0330fff0997adb339763e8cd5538b7ba855"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p22-batch-20260922-b/review/artwork-300dpi.png",
+          "sha256": "1250ba297a9bb68ab116d9f4ccca0efddef52d96442c10d363beb474dcbceb65"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p22-batch-20260922-b/review/poster-de.png",
+          "sha256": "6271b0972911778c0f812d875f261e8ce4a9ce974c52542d61e6713ebc4a0d9f"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p22-batch-20260922-b/review/artwork-300dpi.run.json",
+          "sha256": "c23413f0c800a74e567fb2b547b6096c6b46e9751cf1bd307ac0f1f0a04fd86f"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p22-batch-20260922-b/retrieved/oneshot-uyrk9uml/run.json",
+          "sha256": "fd3a420952c3d8545e77c0fba0676b7dea960ae73723003a492f4e1b490f625b"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p22-batch-20260922-b/retrieved/oneshot-uyrk9uml/comfyui.log",
+          "sha256": "39baacf4dd7e63b3cb3d1d0b8e76b8f959eab9a5c80f968530bcf64a2c7b548b"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p22-batch-20260922-b/review/cards/card_r1_c1.png",
+          "sha256": "2647be7467acb58aa80ff71ac78d410ce50ee60b6e7847695d560b794ff7fce8"
+        },
+        {
+          "path": "tmp/oneshot-trials/p22-batch-20260922-b/review/cards/card_r1_c2.png",
+          "sha256": "aa3f66004df6e8709972b1b2487e7a4184ade26706fa850c8d91dbaf91f7810e"
+        },
+        {
+          "path": "tmp/oneshot-trials/p22-batch-20260922-b/review/cards/card_r1_c3.png",
+          "sha256": "7294a4662d2119aa97b4439a0d96ccdf7cae6d40187012b986d67d7494df6299"
+        },
+        {
+          "path": "tmp/oneshot-trials/p22-batch-20260922-b/review/cards/card_r2_c1.png",
+          "sha256": "bd5b914cc6f87d252fd28bdcb3cc28110b75b0fd43af935def98ffc88ea87893"
+        },
+        {
+          "path": "tmp/oneshot-trials/p22-batch-20260922-b/review/cards/card_r2_c2.png",
+          "sha256": "84b6ccaf046b55382067a111068ce2c2bbb63b1a8cff31b73aa9443682463805"
+        },
+        {
+          "path": "tmp/oneshot-trials/p22-batch-20260922-b/review/cards/card_r2_c3.png",
+          "sha256": "035f1fa55a1122842ec06894c1cdf20705ed608bd241f80062b08f6660eb03f9"
+        },
+        {
+          "path": "tmp/oneshot-trials/p22-batch-20260922-b/review/cards/card_r3_c1.png",
+          "sha256": "9baead4f3d07f8b2f215c64a516a5a296b7b15c5e1726eff6b48bae6c8533ea5"
+        },
+        {
+          "path": "tmp/oneshot-trials/p22-batch-20260922-b/review/cards/card_r3_c2.png",
+          "sha256": "dd1ecbf70ee0229227c3943683d36725808572bbc4434e9966f0385d97f3d678"
+        },
+        {
+          "path": "tmp/oneshot-trials/p22-batch-20260922-b/review/cards/card_r3_c3.png",
+          "sha256": "ebb6db3991aadf01936b8d8b24c463ca25c621b8eef05fe8aaa3e50889146af8"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Krokel",
+          "subject_key": "pokeapi:official-artwork:909",
+          "source": {
+            "path": "tmp/poster-workspaces/SV04/sources/cutouts/pokemon_909_fuecoco.png",
+            "sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p22-batch-20260922-b/review/cards/card_r3_c1.png",
+            "sha256": "9baead4f3d07f8b2f215c64a516a5a296b7b15c5e1726eff6b48bae6c8533ea5"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Palkia",
+          "subject_key": "pokeapi:official-artwork:484",
+          "source": {
+            "path": "tmp/poster-workspaces/SV04/sources/cutouts/pokemon_484_palkia.png",
+            "sha256": "c364c56bf8921cdb2e26922307379bc1d8b2f61220f366da467e117be26f33c9"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p22-batch-20260922-b/review/cards/card_r3_c2.png",
+            "sha256": "dd1ecbf70ee0229227c3943683d36725808572bbc4434e9966f0385d97f3d678"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Mewtu",
+          "subject_key": "pokeapi:official-artwork:150",
+          "source": {
+            "path": "tmp/poster-workspaces/SV04/sources/cutouts/pokemon_150_mewtwo.png",
+            "sha256": "b7c00037d7ba9fb5cebc2da42ca0da54c7b664f4d7b2348d60ade5c6dc9de256"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p22-batch-20260922-b/review/cards/card_r3_c3.png",
+            "sha256": "ebb6db3991aadf01936b8d8b24c463ca25c621b8eef05fe8aaa3e50889146af8"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P23",
+      "scope": "SV04.5",
+      "variant": "p23-batch-20260922-d",
+      "human_approval": "pending",
+      "note": "Lapras: dunkle Flecken nach zwei verworfenen Versuchen in D wieder sichtbar.",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p23-batch-20260922-d/retrieved/oneshot-r83zgrvn/output/sv04.5_flux2_joint_scene_2mp_seed_260790467_00001_.png",
+          "sha256": "c8badafbca8c8f2f60f180d35c659cd98cbc2b1cd4ca9ee82c2f075d2e70ffed"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p23-batch-20260922-d/review/artwork-300dpi.png",
+          "sha256": "cc0931eef931dbc080ca860c9163c0b9ab37965a6cd51853b17731d758f2445e"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p23-batch-20260922-d/review/poster-de.png",
+          "sha256": "5effcce58d0b35b1fe6185e269324ae02bb3225f6b232d1a9f45e4b1e37b5dd2"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p23-batch-20260922-d/review/artwork-300dpi.run.json",
+          "sha256": "ddeb713f29fba2fc7eff6a7b5b9572618690d5ed7ce7db1d1e8d4051f87e971e"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p23-batch-20260922-d/retrieved/oneshot-r83zgrvn/run.json",
+          "sha256": "817a76d04576bcffaec769648a8b1ef80b2aa875efa4da77eb203dd7a8ee9baa"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p23-batch-20260922-d/retrieved/oneshot-r83zgrvn/comfyui.log",
+          "sha256": "6df1cf3f5c6a9504c68a796d5088c86f490a04ffb08d7f97a2e7ab7fc05178d6"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p23-batch-20260922-d/review/cards/card_r1_c1.png",
+          "sha256": "2ba920a9552042ac77343d7439a00693fb1a7b1dec9d5ababa5475ff248dd939"
+        },
+        {
+          "path": "tmp/oneshot-trials/p23-batch-20260922-d/review/cards/card_r1_c2.png",
+          "sha256": "a237aefa4f4843363a45ca7f5228c0a44a527261923ba3ca44d7f386a9d38e58"
+        },
+        {
+          "path": "tmp/oneshot-trials/p23-batch-20260922-d/review/cards/card_r1_c3.png",
+          "sha256": "b60b84fdae45105791a31f09d4ef48d7a66e86a5cb2d228ea251316056b57c34"
+        },
+        {
+          "path": "tmp/oneshot-trials/p23-batch-20260922-d/review/cards/card_r2_c1.png",
+          "sha256": "798aa4455ee83f84b60c3135cb68881001c55a8cfa923081302575bbf996583f"
+        },
+        {
+          "path": "tmp/oneshot-trials/p23-batch-20260922-d/review/cards/card_r2_c2.png",
+          "sha256": "814da5f0ab14473d6c9abad1549ee0bfd455d13fe54dd15ab266585576cbf4dd"
+        },
+        {
+          "path": "tmp/oneshot-trials/p23-batch-20260922-d/review/cards/card_r2_c3.png",
+          "sha256": "451cddaa014664121a316ae95829f9c689a604cc31fb11cd568e75bc4cd2d8ce"
+        },
+        {
+          "path": "tmp/oneshot-trials/p23-batch-20260922-d/review/cards/card_r3_c1.png",
+          "sha256": "16d0f8947b7d45996b41781dd6f43597dd2aecd14c2c6b8017200aec4f7c56ed"
+        },
+        {
+          "path": "tmp/oneshot-trials/p23-batch-20260922-d/review/cards/card_r3_c2.png",
+          "sha256": "61d98c326f7ded55574b08709f9a2a0fae73f3930742aaf4f96dc39e8664359b"
+        },
+        {
+          "path": "tmp/oneshot-trials/p23-batch-20260922-d/review/cards/card_r3_c3.png",
+          "sha256": "febba81d0cef9b0ce203bbcdd0572e6e99e7465c5bb7c511746d352b39a1863f"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Glumanda",
+          "subject_key": "pokeapi:official-artwork:4",
+          "source": {
+            "path": "tmp/poster-workspaces/SV04.5/sources/cutouts/pokemon_004_charmander.png",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p23-batch-20260922-d/review/cards/card_r3_c1.png",
+            "sha256": "16d0f8947b7d45996b41781dd6f43597dd2aecd14c2c6b8017200aec4f7c56ed"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Pikachu",
+          "subject_key": "pokeapi:official-artwork:25",
+          "source": {
+            "path": "tmp/poster-workspaces/SV04.5/sources/cutouts/pokemon_025_pikachu.png",
+            "sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p23-batch-20260922-d/review/cards/card_r3_c2.png",
+            "sha256": "61d98c326f7ded55574b08709f9a2a0fae73f3930742aaf4f96dc39e8664359b"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Lapras",
+          "subject_key": "pokeapi:official-artwork:131",
+          "source": {
+            "path": "tmp/poster-workspaces/SV04.5/sources/cutouts/pokemon_131_lapras.png",
+            "sha256": "0dda58737b5c1d7db8e7b81ff61b41d0f23bc08ddbf166ca61c20d17d1d27113"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p23-batch-20260922-d/review/cards/card_r3_c3.png",
+            "sha256": "febba81d0cef9b0ce203bbcdd0572e6e99e7465c5bb7c511746d352b39a1863f"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P24",
+      "scope": "SV05",
+      "variant": "p24-batch-20260922-b",
+      "human_approval": "pending",
+      "note": "Flamiaus hintere Bein-/Hüftpartie bitte besonders prüfen.",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p24-batch-20260922-b/retrieved/oneshot-4498lfli/output/sv05_flux2_joint_scene_2mp_seed_260738367_00001_.png",
+          "sha256": "048329d766b93138fd8435b6fa8845ce48e30904f46002772acb2dcc429ec346"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p24-batch-20260922-b/review/artwork-300dpi.png",
+          "sha256": "5906999f2cf695791ca67d84c1bce2ed0e15cd134e705410b07c7693fa9c3a88"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p24-batch-20260922-b/review/poster-de.png",
+          "sha256": "9ca1de2b2615aa96636894ac52017b17a4a8279b15086ef527765c4ebd29616d"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p24-batch-20260922-b/review/artwork-300dpi.run.json",
+          "sha256": "82220034e15e6918e14de0f447e2085098aea51fe9f03c8fa7a3103e4110ad63"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p24-batch-20260922-b/retrieved/oneshot-4498lfli/run.json",
+          "sha256": "a7acca29be769b34f46ec73190108dc4e2d7d7c6212520746477aa97f4a89288"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p24-batch-20260922-b/retrieved/oneshot-4498lfli/comfyui.log",
+          "sha256": "849b6d9fbab47646002168a8f4e0568953d4fd00b2015280093e369f219cabcc"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p24-batch-20260922-b/review/cards/card_r1_c1.png",
+          "sha256": "7968195fb033c22fbc2741581ff1f0833d620d8f1ef53478b89843dfb6bf5f8d"
+        },
+        {
+          "path": "tmp/oneshot-trials/p24-batch-20260922-b/review/cards/card_r1_c2.png",
+          "sha256": "c1686cedefde622cab2fd79d5f8658efc3ff5b03f6b8a94770ee6b5e9698e47f"
+        },
+        {
+          "path": "tmp/oneshot-trials/p24-batch-20260922-b/review/cards/card_r1_c3.png",
+          "sha256": "0e40e5ed69673cae1fc46546433cd5afa7b26c66e2dcd581e627c24c7f68d37b"
+        },
+        {
+          "path": "tmp/oneshot-trials/p24-batch-20260922-b/review/cards/card_r2_c1.png",
+          "sha256": "edf27948cd9a1e8b2c5268cf13ad33a79135b648ca8dd0d7245d3535db64e278"
+        },
+        {
+          "path": "tmp/oneshot-trials/p24-batch-20260922-b/review/cards/card_r2_c2.png",
+          "sha256": "886fbaf85f8774d7339dfe9be8c65834ebe53ff77810e3d48286f8c100c81dd4"
+        },
+        {
+          "path": "tmp/oneshot-trials/p24-batch-20260922-b/review/cards/card_r2_c3.png",
+          "sha256": "654cb27367ef2fa0680d9b8ec981115a50b48fbc0fb4598995d3ef75aadcde4b"
+        },
+        {
+          "path": "tmp/oneshot-trials/p24-batch-20260922-b/review/cards/card_r3_c1.png",
+          "sha256": "60463ab470d6b5b32dc53755c4549e5839124cbee83a15c4744961127630b840"
+        },
+        {
+          "path": "tmp/oneshot-trials/p24-batch-20260922-b/review/cards/card_r3_c2.png",
+          "sha256": "ee3078f57896e01aa232a034d8fdde52f666f00b8370e3bc7d14129da383ce78"
+        },
+        {
+          "path": "tmp/oneshot-trials/p24-batch-20260922-b/review/cards/card_r3_c3.png",
+          "sha256": "d5ece3ace785b05a41730dda375927180f1f434de443520ba9b37d18148ec1a4"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Chelast",
+          "subject_key": "pokeapi:official-artwork:387",
+          "source": {
+            "path": "tmp/poster-workspaces/SV05/sources/cutouts/pokemon_387_turtwig.png",
+            "sha256": "34bdf93e84d8e1770074ead9c38b1659bcc937abfa20ddd8a6e53a283ed0e16d"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p24-batch-20260922-b/review/cards/card_r3_c1.png",
+            "sha256": "60463ab470d6b5b32dc53755c4549e5839124cbee83a15c4744961127630b840"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Flamiau",
+          "subject_key": "pokeapi:official-artwork:725",
+          "source": {
+            "path": "tmp/poster-workspaces/SV05/sources/cutouts/pokemon_725_litten.png",
+            "sha256": "02391ac457888baf123accfc5ce446fc75df4790b3b000865a21c0f21b622600"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p24-batch-20260922-b/review/cards/card_r3_c2.png",
+            "sha256": "ee3078f57896e01aa232a034d8fdde52f666f00b8370e3bc7d14129da383ce78"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Karnimani",
+          "subject_key": "pokeapi:official-artwork:158",
+          "source": {
+            "path": "tmp/poster-workspaces/SV05/sources/cutouts/pokemon_158_totodile.png",
+            "sha256": "a0ce9f06497dc2a9a3d34174ff89e0ee1a0745ce8007cc89257e379d9be49525"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p24-batch-20260922-b/review/cards/card_r3_c3.png",
+            "sha256": "d5ece3ace785b05a41730dda375927180f1f434de443520ba9b37d18148ec1a4"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P25",
+      "scope": "SV06",
+      "variant": "p25-batch-20260922-b",
+      "human_approval": "pending",
+      "note": "",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p25-batch-20260922-b/retrieved/oneshot-_j5h0ulm/output/sv06_flux2_joint_scene_2mp_seed_260782711_00001_.png",
+          "sha256": "3c9c78aaf54ef3f688f764d4b0af01cd2749d6bbbc10838e4f34dbd260fb98ef"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p25-batch-20260922-b/review/artwork-300dpi.png",
+          "sha256": "d7e7fa2fe895049eb6d05f92afaaa8aac53046788c3e7b305fd57a5b4f227a67"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p25-batch-20260922-b/review/poster-de.png",
+          "sha256": "75a3214f4dd3eed6730f72aeb7583b3c342be521afe00530d1a1ffc01af3ef03"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p25-batch-20260922-b/review/artwork-300dpi.run.json",
+          "sha256": "9167b0c8db54a15892d9ecc66724e5e15881b68fa6305655d5a8dcf2d3c25367"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p25-batch-20260922-b/retrieved/oneshot-_j5h0ulm/run.json",
+          "sha256": "4319c2f7117da587079818812bbc68784f8bac1b8c7de8601278a552b2374889"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p25-batch-20260922-b/retrieved/oneshot-_j5h0ulm/comfyui.log",
+          "sha256": "82199ed7bb5958ceaf6f45ef08ffd5365fb25bdbc05037407ac347e94f5dd1c6"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p25-batch-20260922-b/review/cards/card_r1_c1.png",
+          "sha256": "c124bfdd58bdc854c8da022270377b02bacb8124e1bee3b6e6373ace2d2af74c"
+        },
+        {
+          "path": "tmp/oneshot-trials/p25-batch-20260922-b/review/cards/card_r1_c2.png",
+          "sha256": "457b059b3229030f43aebc3d6f9022a30132e9c06d32f3620ef279f66c30ac9b"
+        },
+        {
+          "path": "tmp/oneshot-trials/p25-batch-20260922-b/review/cards/card_r1_c3.png",
+          "sha256": "9fa1a0ce8b7f814004dde8e8b39560bf9eea11c7f05bf42694eb52b21c650214"
+        },
+        {
+          "path": "tmp/oneshot-trials/p25-batch-20260922-b/review/cards/card_r2_c1.png",
+          "sha256": "677fd8f438e80f7f77fc24d69f55d35e04beea3460a72e259fcbf2cdb4c5df25"
+        },
+        {
+          "path": "tmp/oneshot-trials/p25-batch-20260922-b/review/cards/card_r2_c2.png",
+          "sha256": "3154ffa84e7959c5d68795c75371bfa7b7f17ba62cb75e6646a2cc80f95b86df"
+        },
+        {
+          "path": "tmp/oneshot-trials/p25-batch-20260922-b/review/cards/card_r2_c3.png",
+          "sha256": "fc7bb29997282df56189d809142a1ffc0397ec48a6e07f04a7c2031aa13d0577"
+        },
+        {
+          "path": "tmp/oneshot-trials/p25-batch-20260922-b/review/cards/card_r3_c1.png",
+          "sha256": "7f8c3b9ef5962f6a16451f7a41129183d8f82dcb6d05ab14f48ccdbce13d9253"
+        },
+        {
+          "path": "tmp/oneshot-trials/p25-batch-20260922-b/review/cards/card_r3_c2.png",
+          "sha256": "9d0afb1ed956d91a0bec16ec9661924d58560739bf37fe4a742276a4b8f62c61"
+        },
+        {
+          "path": "tmp/oneshot-trials/p25-batch-20260922-b/review/cards/card_r3_c3.png",
+          "sha256": "a0322b18821a7c98f4ad621f116e86e7099d37325cb85cb32b893cdb0da82a02"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Chimpep",
+          "subject_key": "pokeapi:official-artwork:810",
+          "source": {
+            "path": "tmp/poster-workspaces/SV06/sources/cutouts/pokemon_810_grookey.png",
+            "sha256": "0a4b1c0662dd8e0ad7f00bf78c2f958b297bc25c70bbc7273d50b3d39d5de330"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p25-batch-20260922-b/review/cards/card_r3_c1.png",
+            "sha256": "7f8c3b9ef5962f6a16451f7a41129183d8f82dcb6d05ab14f48ccdbce13d9253"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Panflam",
+          "subject_key": "pokeapi:official-artwork:390",
+          "source": {
+            "path": "tmp/poster-workspaces/SV06/sources/cutouts/pokemon_390_chimchar.png",
+            "sha256": "7ce75f77abcaff1451c67da6fc8de9b6828aacb1a222dd590825c5cab4b20140"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p25-batch-20260922-b/review/cards/card_r3_c2.png",
+            "sha256": "9d0afb1ed956d91a0bec16ec9661924d58560739bf37fe4a742276a4b8f62c61"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Froxy",
+          "subject_key": "pokeapi:official-artwork:656",
+          "source": {
+            "path": "tmp/poster-workspaces/SV06/sources/cutouts/pokemon_656_froakie.png",
+            "sha256": "cbb47c38d234eb7dea4b1d90f8c97ec990f41b6e61f26e7efba90d80a3d1d632"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p25-batch-20260922-b/review/cards/card_r3_c3.png",
+            "sha256": "a0322b18821a7c98f4ad621f116e86e7099d37325cb85cb32b893cdb0da82a02"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P26",
+      "scope": "SV06.5",
+      "variant": "p26-batch-20260922-b",
+      "human_approval": "pending",
+      "note": "",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p26-batch-20260922-b/retrieved/oneshot-q2hu9lpu/output/sv06.5_flux2_joint_scene_2mp_seed_260734700_00001_.png",
+          "sha256": "06bde4c1591db0fd70ef0644776889d53414f5dbe9a615eb0aa210c73604a5b7"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p26-batch-20260922-b/review/artwork-300dpi.png",
+          "sha256": "06d93ca7eea6d0dd961df3df6122a74e45bacf05785059d9eb5119f21e1baac9"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p26-batch-20260922-b/review/poster-de.png",
+          "sha256": "df9a3d231edc872abb9bf29bdbaf24caa32cd086b31590015ce8af63e4c4f6ee"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p26-batch-20260922-b/review/artwork-300dpi.run.json",
+          "sha256": "68329e5cc111534b4edb6aacd2698957912527aee88971a237cc6350750512f1"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p26-batch-20260922-b/retrieved/oneshot-q2hu9lpu/run.json",
+          "sha256": "eb7f6e5cedb1bdfb5d40ed7d8949016797611646327da46ef7fee5530409a864"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p26-batch-20260922-b/retrieved/oneshot-q2hu9lpu/comfyui.log",
+          "sha256": "c18a9a611c095a705afc5c766adb7a19592a9acc1d60883ffc3c90dd97b45137"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p26-batch-20260922-b/review/cards/card_r1_c1.png",
+          "sha256": "ce497051e8ba8aaf0b7579c43bd0e9fcaef1f516595d62c164c775d32a878a84"
+        },
+        {
+          "path": "tmp/oneshot-trials/p26-batch-20260922-b/review/cards/card_r1_c2.png",
+          "sha256": "d04f6eab84a7fb03adf82ba048a8e8d046576b77dad4c76377fa55d233f92d59"
+        },
+        {
+          "path": "tmp/oneshot-trials/p26-batch-20260922-b/review/cards/card_r1_c3.png",
+          "sha256": "5d91e1e7d11101c88799e8af5b89d8fc4c25d35ee99b3ca0263be09a7001de4f"
+        },
+        {
+          "path": "tmp/oneshot-trials/p26-batch-20260922-b/review/cards/card_r2_c1.png",
+          "sha256": "bdd75eda2569b3ba2bd33d79526268dd77e0360432d9922d5c322a83120462e6"
+        },
+        {
+          "path": "tmp/oneshot-trials/p26-batch-20260922-b/review/cards/card_r2_c2.png",
+          "sha256": "cd2c85b516e7a562f743603621860cc435972eae779bb660edc971dacbe3f0a2"
+        },
+        {
+          "path": "tmp/oneshot-trials/p26-batch-20260922-b/review/cards/card_r2_c3.png",
+          "sha256": "c73e0446882f29d1b564a2ee07ae7a8c25e019faf0249b262b0a5bfefc966a78"
+        },
+        {
+          "path": "tmp/oneshot-trials/p26-batch-20260922-b/review/cards/card_r3_c1.png",
+          "sha256": "e6b07c6b01df3cee22a702f6ef89aa29d9edb759a4ccb7cd1358e751c3aa6343"
+        },
+        {
+          "path": "tmp/oneshot-trials/p26-batch-20260922-b/review/cards/card_r3_c2.png",
+          "sha256": "4da20994111139f0347a7ab03d90fbd106def30da2b2af1f474e1551d3dc6c68"
+        },
+        {
+          "path": "tmp/oneshot-trials/p26-batch-20260922-b/review/cards/card_r3_c3.png",
+          "sha256": "36b9ae4b129c5df95aad7cb4a65e1ebc60273a2ba398f0df4637b484297a813b"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Bauz",
+          "subject_key": "pokeapi:official-artwork:722",
+          "source": {
+            "path": "tmp/poster-workspaces/SV06.5/sources/cutouts/pokemon_722_rowlet.png",
+            "sha256": "5456dc8d55b3fd305bb7ddd4b1f94f07b51e3691414abaf4d60c7a7745f09c36"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p26-batch-20260922-b/review/cards/card_r3_c1.png",
+            "sha256": "e6b07c6b01df3cee22a702f6ef89aa29d9edb759a4ccb7cd1358e751c3aa6343"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Yveltal",
+          "subject_key": "pokeapi:official-artwork:717",
+          "source": {
+            "path": "tmp/poster-workspaces/SV06.5/sources/cutouts/pokemon_717_yveltal.png",
+            "sha256": "154bd7f904c5db48ddce7cc7ff656f95cd110c7327bee28a895b11fddfcfa4a7"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p26-batch-20260922-b/review/cards/card_r3_c2.png",
+            "sha256": "4da20994111139f0347a7ab03d90fbd106def30da2b2af1f474e1551d3dc6c68"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Genesect",
+          "subject_key": "pokeapi:official-artwork:649",
+          "source": {
+            "path": "tmp/poster-workspaces/SV06.5/sources/cutouts/pokemon_649_genesect.png",
+            "sha256": "0d77f632c0d27b74998040266b493c817a3643e2257e106a0feaa5fe52002b5a"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p26-batch-20260922-b/review/cards/card_r3_c3.png",
+            "sha256": "36b9ae4b129c5df95aad7cb4a65e1ebc60273a2ba398f0df4637b484297a813b"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P28",
+      "scope": "SV08.5",
+      "variant": "p28-batch-20260922-b",
+      "human_approval": "pending",
+      "note": "",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p28-batch-20260922-b/retrieved/oneshot-w4o2bzbq/output/sv08.5_flux2_joint_scene_2mp_seed_260798704_00001_.png",
+          "sha256": "d36f25f1ccb903d9651a7001a609337eb2f49f041afa67f50e24f0725c51ea1d"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p28-batch-20260922-b/review/artwork-300dpi.png",
+          "sha256": "ad690494a14b3998a2a9ac86ffc522ce1cf3df84b1db6805dd1d6217c9e121e8"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p28-batch-20260922-b/review/poster-de.png",
+          "sha256": "05eae6429782bc72b5f455cd007710d6e9c694d7726db87a91d281fdc5adfa8e"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p28-batch-20260922-b/review/artwork-300dpi.run.json",
+          "sha256": "7bcd7d3fd8a7bbf623e9604fa7e929cfbcb588237023e2b5c6e68369a802a50c"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p28-batch-20260922-b/retrieved/oneshot-w4o2bzbq/run.json",
+          "sha256": "06347be19cf7be718fd281bcb0a9d4c4c9bd6c778160890816ccc4884f36b69f"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p28-batch-20260922-b/retrieved/oneshot-w4o2bzbq/comfyui.log",
+          "sha256": "15c8dd2f21363be4467c56e8891d075177d91a2b2cba4533cf8394add6eaee9a"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p28-batch-20260922-b/review/cards/card_r1_c1.png",
+          "sha256": "914ecef08e0da316c824e9d7a1335b59ab534274df666467a0eda0c877274979"
+        },
+        {
+          "path": "tmp/oneshot-trials/p28-batch-20260922-b/review/cards/card_r1_c2.png",
+          "sha256": "8f59f3bd916649b4318215bc3f325f4e1a3d98fb94eede29580cff12b3e7982e"
+        },
+        {
+          "path": "tmp/oneshot-trials/p28-batch-20260922-b/review/cards/card_r1_c3.png",
+          "sha256": "27b4321630143fc13101b84ac3b8f28c6455aec5eb06c3ae61b979a7f0bd69f8"
+        },
+        {
+          "path": "tmp/oneshot-trials/p28-batch-20260922-b/review/cards/card_r2_c1.png",
+          "sha256": "ba5c493632266fd3b6364d80c09680fc79075464de2e3621c6999ec1feb034d2"
+        },
+        {
+          "path": "tmp/oneshot-trials/p28-batch-20260922-b/review/cards/card_r2_c2.png",
+          "sha256": "68b504c4745578c3875641c25c421cf500cdf476c87db703f1c9fc2a669e5739"
+        },
+        {
+          "path": "tmp/oneshot-trials/p28-batch-20260922-b/review/cards/card_r2_c3.png",
+          "sha256": "4893fde202289b680c7289a3c0afa5ae5de08eec212a91ce21a70d338917557d"
+        },
+        {
+          "path": "tmp/oneshot-trials/p28-batch-20260922-b/review/cards/card_r3_c1.png",
+          "sha256": "250de4be4d235a3cc620b4302ab21220aa053ac81d47cb522ad8dd1eb697fa98"
+        },
+        {
+          "path": "tmp/oneshot-trials/p28-batch-20260922-b/review/cards/card_r3_c2.png",
+          "sha256": "3f99320b9ccdea578f2519dffbe53012c15231f36f3c1720e5df389a0c73fecc"
+        },
+        {
+          "path": "tmp/oneshot-trials/p28-batch-20260922-b/review/cards/card_r3_c3.png",
+          "sha256": "74d8a4c10990872cf8c13b025fdc6ed8bd92f34dd507eb67e719119be251bd5a"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Pikachu",
+          "subject_key": "pokeapi:official-artwork:25",
+          "source": {
+            "path": "tmp/poster-workspaces/SV08.5/sources/cutouts/pokemon_025_pikachu.png",
+            "sha256": "bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p28-batch-20260922-b/review/cards/card_r3_c1.png",
+            "sha256": "250de4be4d235a3cc620b4302ab21220aa053ac81d47cb522ad8dd1eb697fa98"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Groudon",
+          "subject_key": "pokeapi:official-artwork:383",
+          "source": {
+            "path": "tmp/poster-workspaces/SV08.5/sources/cutouts/pokemon_383_groudon.png",
+            "sha256": "0207895137e94107b5efbf9054d3c94f2ae16374f9cd07d3729fb5e86dd271ac"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p28-batch-20260922-b/review/cards/card_r3_c2.png",
+            "sha256": "3f99320b9ccdea578f2519dffbe53012c15231f36f3c1720e5df389a0c73fecc"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Lugia",
+          "subject_key": "pokeapi:official-artwork:249",
+          "source": {
+            "path": "tmp/poster-workspaces/SV08.5/sources/cutouts/pokemon_249_lugia.png",
+            "sha256": "f0142e5542c2466782a3736e1fdedcbaa65778e6aa1786f8b896e019fcc00c30"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p28-batch-20260922-b/review/cards/card_r3_c3.png",
+            "sha256": "74d8a4c10990872cf8c13b025fdc6ed8bd92f34dd507eb67e719119be251bd5a"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P29",
+      "scope": "SV09",
+      "variant": "p29-batch-20260922-b",
+      "human_approval": "pending",
+      "note": "",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p29-batch-20260922-b/retrieved/oneshot-zb0ae5q3/output/sv09_flux2_joint_scene_2mp_seed_260748630_00001_.png",
+          "sha256": "91828fb2e182884fe420b4b2c45b4c72ded9d51e54dd481040d2f29265617c59"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p29-batch-20260922-b/review/artwork-300dpi.png",
+          "sha256": "f520e268290bcb16638481a7391fdbf6ab46ad28abf6915e74e22de3508f841c"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p29-batch-20260922-b/review/poster-de.png",
+          "sha256": "ffbc98c52decb7b057c0c3b40a089a5c40c9191e870a54eb08e9f9134ec292a0"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p29-batch-20260922-b/review/artwork-300dpi.run.json",
+          "sha256": "c88d0ae4dea731c7e09f5f0f89b79f24f0ff6fa67b4cd4edfc41854b10174792"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p29-batch-20260922-b/retrieved/oneshot-zb0ae5q3/run.json",
+          "sha256": "16219ce00bc1bc5be3246c8fd42893678fa0f62268f9c2e5627b45f77bf6a252"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p29-batch-20260922-b/retrieved/oneshot-zb0ae5q3/comfyui.log",
+          "sha256": "2e3bf103dd66fb10ee02401dd94a7186890c963519d9d4ac5115f8d14c0e1c24"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p29-batch-20260922-b/review/cards/card_r1_c1.png",
+          "sha256": "4f593a824fed281dbaa44b7587f6c8e1ff7a994f4a5e34215c615edca198de12"
+        },
+        {
+          "path": "tmp/oneshot-trials/p29-batch-20260922-b/review/cards/card_r1_c2.png",
+          "sha256": "b72dc196ddbc2f9a3968149861ec2adb00ba08b3ef24f21c65eb9aadc5aa38a6"
+        },
+        {
+          "path": "tmp/oneshot-trials/p29-batch-20260922-b/review/cards/card_r1_c3.png",
+          "sha256": "570960f9ab3c8422eeb7d8a817895c2509be53bd8c4ea1c776f43878555c01f3"
+        },
+        {
+          "path": "tmp/oneshot-trials/p29-batch-20260922-b/review/cards/card_r2_c1.png",
+          "sha256": "38ce7e3feefa2ec2b70441681533d99bd0f89afa94ebcd9128681d5739264b73"
+        },
+        {
+          "path": "tmp/oneshot-trials/p29-batch-20260922-b/review/cards/card_r2_c2.png",
+          "sha256": "38f6d61f4804aa3532e9252cb75195924242d91e08892ed64074b389c31153ae"
+        },
+        {
+          "path": "tmp/oneshot-trials/p29-batch-20260922-b/review/cards/card_r2_c3.png",
+          "sha256": "e8eedc04a48a69c4dc9a9e618b2a1607e7526254ddfe732eba1462da010eb393"
+        },
+        {
+          "path": "tmp/oneshot-trials/p29-batch-20260922-b/review/cards/card_r3_c1.png",
+          "sha256": "880b21203384e398b6408e3dd7ef09c83f7eed63d6d22253e667b37c816c961f"
+        },
+        {
+          "path": "tmp/oneshot-trials/p29-batch-20260922-b/review/cards/card_r3_c2.png",
+          "sha256": "cc53fd232b17b4b8c74aa4bf9224927f67e8ca29ab72917f852cb6e386630be6"
+        },
+        {
+          "path": "tmp/oneshot-trials/p29-batch-20260922-b/review/cards/card_r3_c3.png",
+          "sha256": "d05cc496ef67c9c3635d59b44b74391a34910f0afb0cec317a1e1f53905d4406"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Felori",
+          "subject_key": "pokeapi:official-artwork:906",
+          "source": {
+            "path": "tmp/poster-workspaces/SV09/sources/cutouts/pokemon_906_sprigatito.png",
+            "sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p29-batch-20260922-b/review/cards/card_r3_c1.png",
+            "sha256": "880b21203384e398b6408e3dd7ef09c83f7eed63d6d22253e667b37c816c961f"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Flemmli",
+          "subject_key": "pokeapi:official-artwork:255",
+          "source": {
+            "path": "tmp/poster-workspaces/SV09/sources/cutouts/pokemon_255_torchic.png",
+            "sha256": "d234db13f46ac30452288fee011df2857d93bac22f7d038d6b472ef14a651950"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p29-batch-20260922-b/review/cards/card_r3_c2.png",
+            "sha256": "cc53fd232b17b4b8c74aa4bf9224927f67e8ca29ab72917f852cb6e386630be6"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Reshiram",
+          "subject_key": "pokeapi:official-artwork:643",
+          "source": {
+            "path": "tmp/poster-workspaces/SV09/sources/cutouts/pokemon_643_reshiram.png",
+            "sha256": "da64fe6f0285ea0837a5fd06b150abee0eb5598c47050314ac1ece006d61c135"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p29-batch-20260922-b/review/cards/card_r3_c3.png",
+            "sha256": "d05cc496ef67c9c3635d59b44b74391a34910f0afb0cec317a1e1f53905d4406"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P30",
+      "scope": "SV10",
+      "variant": "p30-batch-20260922-b",
+      "human_approval": "pending",
+      "note": "",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p30-batch-20260922-b/retrieved/oneshot-x6z1_nnk/output/sv10_flux2_joint_scene_2mp_seed_260774160_00001_.png",
+          "sha256": "122e4554bcaf3ffb4275c6ec0a9019a5022a9308091bce1714b1fefcf1bcbe16"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p30-batch-20260922-b/review/artwork-300dpi.png",
+          "sha256": "79ef9332fd67b1e368f127f5cce64055d35363705b9fdd395d0f0404c7dadbdd"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p30-batch-20260922-b/review/poster-de.png",
+          "sha256": "60cdbce0472611dc63cb5872074562a61a900016ef945d8b91ed2812643182cc"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p30-batch-20260922-b/review/artwork-300dpi.run.json",
+          "sha256": "c13a07b49ee74f383536d7c4bbadc8c2e72f511f7009e62812932bcc511be039"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p30-batch-20260922-b/retrieved/oneshot-x6z1_nnk/run.json",
+          "sha256": "571c4225501f12a004ddf5b684a28cac2562060048ed6de6be41ab21b7a73f4a"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p30-batch-20260922-b/retrieved/oneshot-x6z1_nnk/comfyui.log",
+          "sha256": "64f625fe65cc5dee902820b4ce3a290c05c1c165cf8ca708025585df9548f99c"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p30-batch-20260922-b/review/cards/card_r1_c1.png",
+          "sha256": "ad8ad8e21e02f95f5fcc6f6c5cc2e58d40fc3ecdf2fb7a764e010c69ea7bf579"
+        },
+        {
+          "path": "tmp/oneshot-trials/p30-batch-20260922-b/review/cards/card_r1_c2.png",
+          "sha256": "b17519739c03508a2c094aab5841534655e25ff924bcba7dd922328e2b9b46ff"
+        },
+        {
+          "path": "tmp/oneshot-trials/p30-batch-20260922-b/review/cards/card_r1_c3.png",
+          "sha256": "118d74c7a6f940de698b8b104b34bcaed5dc99bd9f797945c92415805e86c7d3"
+        },
+        {
+          "path": "tmp/oneshot-trials/p30-batch-20260922-b/review/cards/card_r2_c1.png",
+          "sha256": "2080c26b9cac65c9a99d7793370257ddf6af86e39cec5e8f1cf5ce2f15ee2c00"
+        },
+        {
+          "path": "tmp/oneshot-trials/p30-batch-20260922-b/review/cards/card_r2_c2.png",
+          "sha256": "c1c31206a58f807484295e57c77b5c9c4e4f8a48815179577895378412188957"
+        },
+        {
+          "path": "tmp/oneshot-trials/p30-batch-20260922-b/review/cards/card_r2_c3.png",
+          "sha256": "ebe3cf992d808a38be246ed86ba02fa96248d6a28fd58d8e4891a551195666ac"
+        },
+        {
+          "path": "tmp/oneshot-trials/p30-batch-20260922-b/review/cards/card_r3_c1.png",
+          "sha256": "7749c37686c339dda3f75e58c0ba5be33293e32a158cbe7bb63eb44238e6deab"
+        },
+        {
+          "path": "tmp/oneshot-trials/p30-batch-20260922-b/review/cards/card_r3_c2.png",
+          "sha256": "32a8a105ea5e28ef0bd84b8cc97bcf6d23045d943ca1a8a83ad010224a9b920a"
+        },
+        {
+          "path": "tmp/oneshot-trials/p30-batch-20260922-b/review/cards/card_r3_c3.png",
+          "sha256": "7925d4af1e597c6f62f577ccdc1f3b491e8394ca0d2d34f28efd2fcd3f919f91"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Feurigel",
+          "subject_key": "pokeapi:official-artwork:155",
+          "source": {
+            "path": "tmp/poster-workspaces/SV10/sources/cutouts/pokemon_155_cyndaquil.png",
+            "sha256": "9532b237ef088f8032024b95459303495e261eb2f7f024b79511522e551a9bcd"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p30-batch-20260922-b/review/cards/card_r3_c1.png",
+            "sha256": "7749c37686c339dda3f75e58c0ba5be33293e32a158cbe7bb63eb44238e6deab"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Ho-Oh",
+          "subject_key": "pokeapi:official-artwork:250",
+          "source": {
+            "path": "tmp/poster-workspaces/SV10/sources/cutouts/pokemon_250_ho_oh.png",
+            "sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p30-batch-20260922-b/review/cards/card_r3_c2.png",
+            "sha256": "32a8a105ea5e28ef0bd84b8cc97bcf6d23045d943ca1a8a83ad010224a9b920a"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Flemmli",
+          "subject_key": "pokeapi:official-artwork:255",
+          "source": {
+            "path": "tmp/poster-workspaces/SV10/sources/cutouts/pokemon_255_torchic.png",
+            "sha256": "d234db13f46ac30452288fee011df2857d93bac22f7d038d6b472ef14a651950"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p30-batch-20260922-b/review/cards/card_r3_c3.png",
+            "sha256": "7925d4af1e597c6f62f577ccdc1f3b491e8394ca0d2d34f28efd2fcd3f919f91"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P31",
+      "scope": "SV10.5B",
+      "variant": "p31-batch-20260922-b",
+      "human_approval": "pending",
+      "note": "",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p31-batch-20260922-b/retrieved/oneshot-sk36vqjc/output/sv10.5b_flux2_joint_scene_2mp_seed_260790108_00001_.png",
+          "sha256": "73727fed2eeb0f6c5ddb69bb0c4c5204f5fe4d9eedb96a959d3b619f3f8e5a10"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p31-batch-20260922-b/review/artwork-300dpi.png",
+          "sha256": "9045ba28e1d0109836e994277376570ab4956f3941b88540b39e490e956b3fca"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p31-batch-20260922-b/review/poster-de.png",
+          "sha256": "a780a298d70885b1ba69f0f0c3d7ba782d720a705df156194cdb9df607c03263"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p31-batch-20260922-b/review/artwork-300dpi.run.json",
+          "sha256": "5f508d9c42261b64018877a71be13ae57802c57391b3d7fa1d985b27e6540278"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p31-batch-20260922-b/retrieved/oneshot-sk36vqjc/run.json",
+          "sha256": "b1453cba6f106fd9600b9674e1de01e9c06f6f371ee3147c50f3d3c86efed289"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p31-batch-20260922-b/retrieved/oneshot-sk36vqjc/comfyui.log",
+          "sha256": "0f0cb7fe08e32c754568aeebf14edeabd2849d12763b20ce363b4ac8262294a5"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p31-batch-20260922-b/review/cards/card_r1_c1.png",
+          "sha256": "e93e4c440d0b80e14d8b169eb15408da55d4cef07b132e8e2e8b40f68a40333f"
+        },
+        {
+          "path": "tmp/oneshot-trials/p31-batch-20260922-b/review/cards/card_r1_c2.png",
+          "sha256": "e0190ec9c3af16cd9eed6d8222aa2b1a46669c8695021f7b67af86f91b14e766"
+        },
+        {
+          "path": "tmp/oneshot-trials/p31-batch-20260922-b/review/cards/card_r1_c3.png",
+          "sha256": "ae873513a2c61d92eae2976b6d93a73ff7abfa1ed25bacb595e3355e110b6017"
+        },
+        {
+          "path": "tmp/oneshot-trials/p31-batch-20260922-b/review/cards/card_r2_c1.png",
+          "sha256": "d375a0cf36d5d55477f403e9673e1de86c82d4b1bac744cd8c343d3bd0f99a65"
+        },
+        {
+          "path": "tmp/oneshot-trials/p31-batch-20260922-b/review/cards/card_r2_c2.png",
+          "sha256": "bb0923c4274d329812d673da32864d84fe3e171a3690974d6eb5c239b8898c0a"
+        },
+        {
+          "path": "tmp/oneshot-trials/p31-batch-20260922-b/review/cards/card_r2_c3.png",
+          "sha256": "200b88d61406d36af1413567619c1622c442662e844457a10ce18249beb3564a"
+        },
+        {
+          "path": "tmp/oneshot-trials/p31-batch-20260922-b/review/cards/card_r3_c1.png",
+          "sha256": "ccb3b96fb957fc91c477b698daab9010be3be7d2232d45dfe4501c3f9222a719"
+        },
+        {
+          "path": "tmp/oneshot-trials/p31-batch-20260922-b/review/cards/card_r3_c2.png",
+          "sha256": "3d9f98613c78b86c0a38ff0c0e3f330cad0117c529d46e1f99d4c25a8b28a464"
+        },
+        {
+          "path": "tmp/oneshot-trials/p31-batch-20260922-b/review/cards/card_r3_c3.png",
+          "sha256": "c7559ae27cadf3b4c3f80492a9169bd838a6ca5137ee419725b3c7e009239ba4"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Serpifeu",
+          "subject_key": "pokeapi:official-artwork:495",
+          "source": {
+            "path": "tmp/poster-workspaces/SV10.5B/sources/cutouts/pokemon_495_snivy.png",
+            "sha256": "e7ff61a0daed598a7676b262c56af766e88bcf91764658eeeae615f6f9937549"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p31-batch-20260922-b/review/cards/card_r3_c1.png",
+            "sha256": "ccb3b96fb957fc91c477b698daab9010be3be7d2232d45dfe4501c3f9222a719"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Kyurem",
+          "subject_key": "pokeapi:official-artwork:646",
+          "source": {
+            "path": "tmp/poster-workspaces/SV10.5B/sources/cutouts/pokemon_646_kyurem.png",
+            "sha256": "d67df985a583dc711c2d2f753f516c56e33e4717c113f4b27fcb998c8f33f38b"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p31-batch-20260922-b/review/cards/card_r3_c2.png",
+            "sha256": "3d9f98613c78b86c0a38ff0c0e3f330cad0117c529d46e1f99d4c25a8b28a464"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Zekrom",
+          "subject_key": "pokeapi:official-artwork:644",
+          "source": {
+            "path": "tmp/poster-workspaces/SV10.5B/sources/cutouts/pokemon_644_zekrom.png",
+            "sha256": "3a621c1df54ce8e73a144c58b5cd4d20fa309009c41731852f85445068829fcc"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p31-batch-20260922-b/review/cards/card_r3_c3.png",
+            "sha256": "c7559ae27cadf3b4c3f80492a9169bd838a6ca5137ee419725b3c7e009239ba4"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P32",
+      "scope": "SV10.5W",
+      "variant": "p32-batch-20260922-b",
+      "human_approval": "pending",
+      "note": "",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p32-batch-20260922-b/retrieved/oneshot-dx8s43w_/output/sv10.5w_flux2_joint_scene_2mp_seed_260763848_00001_.png",
+          "sha256": "5f4ea979c46395194bc9ae8d095a29b0212bf04ed6f59c5b920e4c2020c8707f"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p32-batch-20260922-b/review/artwork-300dpi.png",
+          "sha256": "953a96ab998cf7106bcdb48b2ccd529d1993843a62b6bee0285b510d7f54bc06"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p32-batch-20260922-b/review/poster-de.png",
+          "sha256": "7423de086b1a2293168b266cdd5bc11e86f3143b2df2cea1e872fdde22e21937"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p32-batch-20260922-b/review/artwork-300dpi.run.json",
+          "sha256": "ae4c3a21f8cca592fb94ad6277fd3ed2f643bae11e07d843dad257f4e9466ef9"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p32-batch-20260922-b/retrieved/oneshot-dx8s43w_/run.json",
+          "sha256": "542e6e41ced97fb014c65f712692b84202dd09c1720f233fd8c3b4a9c7642737"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p32-batch-20260922-b/retrieved/oneshot-dx8s43w_/comfyui.log",
+          "sha256": "606ad9be3bf365ca23b34f0a3124ab58e1682a366f029c4806e0a1d93552d13f"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p32-batch-20260922-b/review/cards/card_r1_c1.png",
+          "sha256": "2732e8e7eacdd2dd14606aa884e982e980c436e6044f08162d43b42149140f55"
+        },
+        {
+          "path": "tmp/oneshot-trials/p32-batch-20260922-b/review/cards/card_r1_c2.png",
+          "sha256": "de9e68199fb847b33bccc2d731087d6fec1d26c0380c4d01f21cbc9c9925dcab"
+        },
+        {
+          "path": "tmp/oneshot-trials/p32-batch-20260922-b/review/cards/card_r1_c3.png",
+          "sha256": "1b2e4c6a68430e71c785ad4c458efd2ebdeb4143aa55f888c0a5427479d51658"
+        },
+        {
+          "path": "tmp/oneshot-trials/p32-batch-20260922-b/review/cards/card_r2_c1.png",
+          "sha256": "5560595ab614153c6706594942d1139c6c9fda618676049d38116bee8e2ac3eb"
+        },
+        {
+          "path": "tmp/oneshot-trials/p32-batch-20260922-b/review/cards/card_r2_c2.png",
+          "sha256": "6eec51956f8b64298814485a5ad12c41d5a20a65e4443a0416a76db0695f4f8b"
+        },
+        {
+          "path": "tmp/oneshot-trials/p32-batch-20260922-b/review/cards/card_r2_c3.png",
+          "sha256": "84fbd3e13570c439825ea528f77a09efb4421e04b66c3cdcd7961b47aa461f40"
+        },
+        {
+          "path": "tmp/oneshot-trials/p32-batch-20260922-b/review/cards/card_r3_c1.png",
+          "sha256": "21825902987b5506f9873acca630c7cd1749ffb2e2a418fa8652fb31520f4876"
+        },
+        {
+          "path": "tmp/oneshot-trials/p32-batch-20260922-b/review/cards/card_r3_c2.png",
+          "sha256": "d8d381b83a904c15a5bb9146941202b64188732faf55da0b77d3a3b2e75fdd19"
+        },
+        {
+          "path": "tmp/oneshot-trials/p32-batch-20260922-b/review/cards/card_r3_c3.png",
+          "sha256": "425cf6dde959af8f18c5668593299403dc91ee90bf74f09c926ca93483b0f941"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Floink",
+          "subject_key": "pokeapi:official-artwork:498",
+          "source": {
+            "path": "tmp/poster-workspaces/SV10.5W/sources/cutouts/pokemon_498_tepig.png",
+            "sha256": "d7750c56dc5be8ae10a6c270c34a0c46dbf64f289f2eb5670cbe52a9fd41f275"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p32-batch-20260922-b/review/cards/card_r3_c1.png",
+            "sha256": "21825902987b5506f9873acca630c7cd1749ffb2e2a418fa8652fb31520f4876"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Reshiram",
+          "subject_key": "pokeapi:official-artwork:643",
+          "source": {
+            "path": "tmp/poster-workspaces/SV10.5W/sources/cutouts/pokemon_643_reshiram.png",
+            "sha256": "da64fe6f0285ea0837a5fd06b150abee0eb5598c47050314ac1ece006d61c135"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p32-batch-20260922-b/review/cards/card_r3_c2.png",
+            "sha256": "d8d381b83a904c15a5bb9146941202b64188732faf55da0b77d3a3b2e75fdd19"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Ottaro",
+          "subject_key": "pokeapi:official-artwork:501",
+          "source": {
+            "path": "tmp/poster-workspaces/SV10.5W/sources/cutouts/pokemon_501_oshawott.png",
+            "sha256": "480904e99ed485ba3c8fb5866bac1a2acee76dd6dcee1a1ad3e2aac706576fc7"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p32-batch-20260922-b/review/cards/card_r3_c3.png",
+            "sha256": "425cf6dde959af8f18c5668593299403dc91ee90bf74f09c926ca93483b0f941"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P33",
+      "scope": "SVP",
+      "variant": "p33-batch-20260922-b",
+      "human_approval": "pending",
+      "note": "Nur Artwork: Promo-Anzahl und Nummern sind hier nicht freigegeben.",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p33-batch-20260922-b/retrieved/oneshot-e_0_nmoy/output/svp_flux2_joint_scene_2mp_seed_260767639_00001_.png",
+          "sha256": "d454415812793ef587043e35639fadf502ffae4f79c3d213c8ded3f0a727adc7"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p33-batch-20260922-b/review/artwork-300dpi.png",
+          "sha256": "63ab635defb8330d01fce514bd14080d40a3715fbd1eb961736ed9b43230c924"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p33-batch-20260922-b/review/poster-de.png",
+          "sha256": "66d905d04fdc1a469b58d657d36b6ef9cad8beee24ea6b27287e95e1886e2395"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p33-batch-20260922-b/review/artwork-300dpi.run.json",
+          "sha256": "41d0caa7d1d38f76c126a0640f41a14bfc09b020ba16870ee9a39886692643a6"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p33-batch-20260922-b/retrieved/oneshot-e_0_nmoy/run.json",
+          "sha256": "032b3f07b7c76781ff551e0deef403c680e2459115eaa532cee2dbe2416e7d82"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p33-batch-20260922-b/retrieved/oneshot-e_0_nmoy/comfyui.log",
+          "sha256": "9af5951ff24c6fc00dd9a5135fe84dc3084d493384912f11bebdb6d5f8483b73"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p33-batch-20260922-b/review/cards/card_r1_c1.png",
+          "sha256": "885405728cde816a87cc48e6a758276bccba6b056b87d187120a550110827aa4"
+        },
+        {
+          "path": "tmp/oneshot-trials/p33-batch-20260922-b/review/cards/card_r1_c2.png",
+          "sha256": "9c0a508975b7c442b0c7ad75d8e7b8460a58f34a23073632d950762f64dff882"
+        },
+        {
+          "path": "tmp/oneshot-trials/p33-batch-20260922-b/review/cards/card_r1_c3.png",
+          "sha256": "6f97ee197dca1abbc3eeac8c122f1bcf3582306106be21e50939bac1d4dd88a1"
+        },
+        {
+          "path": "tmp/oneshot-trials/p33-batch-20260922-b/review/cards/card_r2_c1.png",
+          "sha256": "44b6b541461feb40b42d79b8f835707c6082f7c793e988fbaec258b29b926f37"
+        },
+        {
+          "path": "tmp/oneshot-trials/p33-batch-20260922-b/review/cards/card_r2_c2.png",
+          "sha256": "1cec7905b5d3f4d8a6867ac304a319d2f62076e15cc60630433e3f8047d08bf1"
+        },
+        {
+          "path": "tmp/oneshot-trials/p33-batch-20260922-b/review/cards/card_r2_c3.png",
+          "sha256": "8d67cba1e3e09179cb130e5dbd9bbf2ab490e2098a6dc465c1b0c40a506c9d46"
+        },
+        {
+          "path": "tmp/oneshot-trials/p33-batch-20260922-b/review/cards/card_r3_c1.png",
+          "sha256": "ce239788d9a91cd7d00833b1beff0cd419a286fd5d688d2fd147a86c4b0b0afe"
+        },
+        {
+          "path": "tmp/oneshot-trials/p33-batch-20260922-b/review/cards/card_r3_c2.png",
+          "sha256": "d0a4567b379c4edd16a0953231e815c27fabc78b46b3daf613cfe9223fbe70b7"
+        },
+        {
+          "path": "tmp/oneshot-trials/p33-batch-20260922-b/review/cards/card_r3_c3.png",
+          "sha256": "9fb7c346b923969681c3469af02346f0c0601cd142c24be2acdd283a99dc83e0"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Felori",
+          "subject_key": "pokeapi:official-artwork:906",
+          "source": {
+            "path": "tmp/poster-workspaces/SVP/sources/cutouts/pokemon_906_sprigatito.png",
+            "sha256": "cb9053d02cc7ef92a721eb13c77610649ff419c2c8885efb0851ecc377a71e6a"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p33-batch-20260922-b/review/cards/card_r3_c1.png",
+            "sha256": "ce239788d9a91cd7d00833b1beff0cd419a286fd5d688d2fd147a86c4b0b0afe"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Krokel",
+          "subject_key": "pokeapi:official-artwork:909",
+          "source": {
+            "path": "tmp/poster-workspaces/SVP/sources/cutouts/pokemon_909_fuecoco.png",
+            "sha256": "0308edd6c21008f2260916bdb4f2579ec11e89f2dac4196cf818105507f1dd0b"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p33-batch-20260922-b/review/cards/card_r3_c2.png",
+            "sha256": "d0a4567b379c4edd16a0953231e815c27fabc78b46b3daf613cfe9223fbe70b7"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Kwaks",
+          "subject_key": "pokeapi:official-artwork:912",
+          "source": {
+            "path": "tmp/poster-workspaces/SVP/sources/cutouts/pokemon_912_quaxly.png",
+            "sha256": "5003d8ca8f90402039214d2ed1e8531b7e7687211ad2cbec7113ba9f43c2622f"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p33-batch-20260922-b/review/cards/card_r3_c3.png",
+            "sha256": "9fb7c346b923969681c3469af02346f0c0601cd142c24be2acdd283a99dc83e0"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P34",
+      "scope": "ME01",
+      "variant": "p34-batch-20260922-b",
+      "human_approval": "pending",
+      "note": "Endivies Körper-/Pfotenform bitte besonders prüfen.",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p34-batch-20260922-b/retrieved/oneshot-yg_ubjjn/output/me01_flux2_joint_scene_2mp_seed_260764296_00001_.png",
+          "sha256": "5b6091b3fb75d9df97b4dc0d5c68f3af1b79e0dd8744dac57365aed1d45ffea2"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p34-batch-20260922-b/review/artwork-300dpi.png",
+          "sha256": "02fad0ecbc18c47b25e9eaf0c542d9928f97fb2529bd3ede305e6bef62948f5d"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p34-batch-20260922-b/review/poster-de.png",
+          "sha256": "15e2a542f8ac2635055b27b071895f8b1271eb962e9b0b105f0e1b9677de91e6"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p34-batch-20260922-b/review/artwork-300dpi.run.json",
+          "sha256": "82dd95b1cfd356919135a4b82c64879dfc2586dbfc136a615085493af402205d"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p34-batch-20260922-b/retrieved/oneshot-yg_ubjjn/run.json",
+          "sha256": "3e68dd42dd7c3c5adce0749c54849e25f786aa0befff73d6ed579a61638a8197"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p34-batch-20260922-b/retrieved/oneshot-yg_ubjjn/comfyui.log",
+          "sha256": "71a0f17b2e3d0864d12904cc8894abbefbcfd64c43aeb6130fcbe58b19e37a1b"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p34-batch-20260922-b/review/cards/card_r1_c1.png",
+          "sha256": "350be63e67f775c780480578cd160eb4a45717c353b2684bfa2dbdb4f288577e"
+        },
+        {
+          "path": "tmp/oneshot-trials/p34-batch-20260922-b/review/cards/card_r1_c2.png",
+          "sha256": "801e1f7315d6a2a7d6304ccb8a7e2a6b95851dca1a3a39666adb9f88890c31f9"
+        },
+        {
+          "path": "tmp/oneshot-trials/p34-batch-20260922-b/review/cards/card_r1_c3.png",
+          "sha256": "ad856cb6f021f041ef4d75990c1210350bbadd5bb60aed425bc87619727a5bd3"
+        },
+        {
+          "path": "tmp/oneshot-trials/p34-batch-20260922-b/review/cards/card_r2_c1.png",
+          "sha256": "0bb195fbfc21257814ce1c5944a0bf3b8b47e7b72b669dfd41735fbd7453a8b6"
+        },
+        {
+          "path": "tmp/oneshot-trials/p34-batch-20260922-b/review/cards/card_r2_c2.png",
+          "sha256": "59112ac5c419622cde5b2dd2e7b8027b545db38e4c3e997e4c8379c30dd3ab12"
+        },
+        {
+          "path": "tmp/oneshot-trials/p34-batch-20260922-b/review/cards/card_r2_c3.png",
+          "sha256": "8eb867f4c43c8852075675d772db72cc391c4280e6ed17ae64e831ec898a662a"
+        },
+        {
+          "path": "tmp/oneshot-trials/p34-batch-20260922-b/review/cards/card_r3_c1.png",
+          "sha256": "3f4801e3d3039c6b0118a7ef3ba322b772507f6aee8462ced1496616fa340e04"
+        },
+        {
+          "path": "tmp/oneshot-trials/p34-batch-20260922-b/review/cards/card_r3_c2.png",
+          "sha256": "16401b1d3512aacfd317a26d801355e79c3171eac9e49db3c19a02ef350f945f"
+        },
+        {
+          "path": "tmp/oneshot-trials/p34-batch-20260922-b/review/cards/card_r3_c3.png",
+          "sha256": "820c697915eca76e7bafe856f4d1e021494b5f054317453c9663e629f70cfbbf"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Bisasam",
+          "subject_key": "pokeapi:official-artwork:1",
+          "source": {
+            "path": "tmp/poster-workspaces/ME01/sources/cutouts/pokemon_001_bulbasaur.png",
+            "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p34-batch-20260922-b/review/cards/card_r3_c1.png",
+            "sha256": "3f4801e3d3039c6b0118a7ef3ba322b772507f6aee8462ced1496616fa340e04"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Endivie",
+          "subject_key": "pokeapi:official-artwork:152",
+          "source": {
+            "path": "tmp/poster-workspaces/ME01/sources/cutouts/pokemon_152_chikorita.png",
+            "sha256": "3ffc2eeee9139b0281ab5493b1a6d4b5c1329de5ddf5361f5ee3c93d12c05659"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p34-batch-20260922-b/review/cards/card_r3_c2.png",
+            "sha256": "16401b1d3512aacfd317a26d801355e79c3171eac9e49db3c19a02ef350f945f"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Celebi",
+          "subject_key": "pokeapi:official-artwork:251",
+          "source": {
+            "path": "tmp/poster-workspaces/ME01/sources/cutouts/pokemon_251_celebi.png",
+            "sha256": "7596d91f88dfdb24bac29ad2ff37ec9652ae0aa5de9e8dab04fb0ac53ed697f1"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p34-batch-20260922-b/review/cards/card_r3_c3.png",
+            "sha256": "820c697915eca76e7bafe856f4d1e021494b5f054317453c9663e629f70cfbbf"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P35",
+      "scope": "ME02",
+      "variant": "p35-batch-20260922-b",
+      "human_approval": "pending",
+      "note": "",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p35-batch-20260922-b/retrieved/oneshot-36wkapdn/output/me02_flux2_joint_scene_2mp_seed_260724244_00001_.png",
+          "sha256": "9014c96d62447ca5392274f9851f941b230486e24325585eeb1fce7927ee7e0b"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p35-batch-20260922-b/review/artwork-300dpi.png",
+          "sha256": "994973afcecaa6f4508d8e31c083e7439793b3d2ecb40b90e6535f9c58e9d236"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p35-batch-20260922-b/review/poster-de.png",
+          "sha256": "c4da4fddc7df6765b9003513b68f0d8765204f1d08b838e0ef86469302585940"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p35-batch-20260922-b/review/artwork-300dpi.run.json",
+          "sha256": "e10e004424701e7d8a595a34c00638334c1cd47427921e7377683d3737658f54"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p35-batch-20260922-b/retrieved/oneshot-36wkapdn/run.json",
+          "sha256": "0467ba4c0892d23a728638c38f0daf714def8e7997c04c7f719f4076092cd46b"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p35-batch-20260922-b/retrieved/oneshot-36wkapdn/comfyui.log",
+          "sha256": "039ec1718909a60c03993435170235030aa03ccb21f1ba10cd3e96a389978aaf"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p35-batch-20260922-b/review/cards/card_r1_c1.png",
+          "sha256": "9b3fea7cff755f44ed48e708736184d92ef7aff422190c9d1fb6f3dd76c26652"
+        },
+        {
+          "path": "tmp/oneshot-trials/p35-batch-20260922-b/review/cards/card_r1_c2.png",
+          "sha256": "591031348dd63a445ea7b9592ba34f392cf0f2a9d3f5cb444c3e438265d1d2fa"
+        },
+        {
+          "path": "tmp/oneshot-trials/p35-batch-20260922-b/review/cards/card_r1_c3.png",
+          "sha256": "9c48b7505ac0bf5b0243bf487c688fb60e211ca4b516336a4346472e3563c957"
+        },
+        {
+          "path": "tmp/oneshot-trials/p35-batch-20260922-b/review/cards/card_r2_c1.png",
+          "sha256": "a6e6535afbdafbba0d9514636e130db53c9855f6c27239ed089315b9522d880d"
+        },
+        {
+          "path": "tmp/oneshot-trials/p35-batch-20260922-b/review/cards/card_r2_c2.png",
+          "sha256": "808412d86453dd60e292b133d9fbed3be95e52632980707affc526f0cdde1c3d"
+        },
+        {
+          "path": "tmp/oneshot-trials/p35-batch-20260922-b/review/cards/card_r2_c3.png",
+          "sha256": "3bc55aabb62e54ff5051fb4a77f2930b8361826c286f53ced2841863ccd3046c"
+        },
+        {
+          "path": "tmp/oneshot-trials/p35-batch-20260922-b/review/cards/card_r3_c1.png",
+          "sha256": "675f8401f4311b623f926bf22e3c54b7f9a7e29657fa20307c28076113c9888a"
+        },
+        {
+          "path": "tmp/oneshot-trials/p35-batch-20260922-b/review/cards/card_r3_c2.png",
+          "sha256": "9c36830d5c5eca5e4d8cf0964f21a8f846e80e80242d4fe4e2a2437efc88c10a"
+        },
+        {
+          "path": "tmp/oneshot-trials/p35-batch-20260922-b/review/cards/card_r3_c3.png",
+          "sha256": "d626e5bf9997d6c116694d4723f1cb97e25e47e852689213a75bdb1caca447e2"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Genesect",
+          "subject_key": "pokeapi:official-artwork:649",
+          "source": {
+            "path": "tmp/poster-workspaces/ME02/sources/cutouts/pokemon_649_genesect.png",
+            "sha256": "0d77f632c0d27b74998040266b493c817a3643e2257e106a0feaa5fe52002b5a"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p35-batch-20260922-b/review/cards/card_r3_c1.png",
+            "sha256": "675f8401f4311b623f926bf22e3c54b7f9a7e29657fa20307c28076113c9888a"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Glumanda",
+          "subject_key": "pokeapi:official-artwork:4",
+          "source": {
+            "path": "tmp/poster-workspaces/ME02/sources/cutouts/pokemon_004_charmander.png",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p35-batch-20260922-b/review/cards/card_r3_c2.png",
+            "sha256": "9c36830d5c5eca5e4d8cf0964f21a8f846e80e80242d4fe4e2a2437efc88c10a"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Reshiram",
+          "subject_key": "pokeapi:official-artwork:643",
+          "source": {
+            "path": "tmp/poster-workspaces/ME02/sources/cutouts/pokemon_643_reshiram.png",
+            "sha256": "da64fe6f0285ea0837a5fd06b150abee0eb5598c47050314ac1ece006d61c135"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p35-batch-20260922-b/review/cards/card_r3_c3.png",
+            "sha256": "d626e5bf9997d6c116694d4723f1cb97e25e47e852689213a75bdb1caca447e2"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P36",
+      "scope": "ME02.5",
+      "variant": "p36-batch-20260922-b",
+      "human_approval": "pending",
+      "note": "",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p36-batch-20260922-b/retrieved/oneshot-e33thq_7/output/me02.5_flux2_joint_scene_2mp_seed_260756790_00001_.png",
+          "sha256": "7f401c5a742679733da02d0f832781530d38b54b2ed9229b5296e5edbcd76d33"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p36-batch-20260922-b/review/artwork-300dpi.png",
+          "sha256": "34ece29bdea31475c29177fb320e8aa04dee7fcb3faf575abcf725ddeb9e407f"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p36-batch-20260922-b/review/poster-de.png",
+          "sha256": "fb912bf1aa0b9176a910c8dc100cf5942bbeb969fa3fa17d1609ee7eca18bd30"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p36-batch-20260922-b/review/artwork-300dpi.run.json",
+          "sha256": "93a4cd0fb74fac85a5cb33ffb2a76ab63027f368a98ef12ebf2821ecf9aba388"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p36-batch-20260922-b/retrieved/oneshot-e33thq_7/run.json",
+          "sha256": "2289f66951658e4389881707f159f0ccee496f8df8cd1c94326efc06823ac229"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p36-batch-20260922-b/retrieved/oneshot-e33thq_7/comfyui.log",
+          "sha256": "31893c2fb6d5302d73d9a22ee36d7f1d27756384a34aef9ed01b852709da8987"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p36-batch-20260922-b/review/cards/card_r1_c1.png",
+          "sha256": "af6edc3feb7ef9d082f10a79bb5a1eb279aa313d266f65476294223921ade7a4"
+        },
+        {
+          "path": "tmp/oneshot-trials/p36-batch-20260922-b/review/cards/card_r1_c2.png",
+          "sha256": "954231c826750ead2ef1dbbcd3c8e6f9293c3f3e53ff64556b17be97a4503c72"
+        },
+        {
+          "path": "tmp/oneshot-trials/p36-batch-20260922-b/review/cards/card_r1_c3.png",
+          "sha256": "da8a358bf4fd8e9071dda04c3b85e14584beb55e48031f98e9320ed4fe6e019a"
+        },
+        {
+          "path": "tmp/oneshot-trials/p36-batch-20260922-b/review/cards/card_r2_c1.png",
+          "sha256": "34ba569b92fe5b1d194c225b80f0929fe7adfce5a5ea66afb110f1d63548ba9c"
+        },
+        {
+          "path": "tmp/oneshot-trials/p36-batch-20260922-b/review/cards/card_r2_c2.png",
+          "sha256": "109a0fe770a9e0d9b619604cff34e5e832e395345e4bd4f27d786d67447d7839"
+        },
+        {
+          "path": "tmp/oneshot-trials/p36-batch-20260922-b/review/cards/card_r2_c3.png",
+          "sha256": "2e50473039ebcd661622bf59543556893086c012e2580e2abbf5d7ec1a3dd8aa"
+        },
+        {
+          "path": "tmp/oneshot-trials/p36-batch-20260922-b/review/cards/card_r3_c1.png",
+          "sha256": "b7f78efe0121be260f287da6a832c029f9b7c077eb29cd4ba2d7b10790384b21"
+        },
+        {
+          "path": "tmp/oneshot-trials/p36-batch-20260922-b/review/cards/card_r3_c2.png",
+          "sha256": "f39855beda2c3fe809e2fdc1c1b897cc29a30bfc52a61930b1e451222869488f"
+        },
+        {
+          "path": "tmp/oneshot-trials/p36-batch-20260922-b/review/cards/card_r3_c3.png",
+          "sha256": "ab959d872b4b348ac4ce341c51acbaeb4958237a5de6ae41a0e80f2c07676ecf"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Endivie",
+          "subject_key": "pokeapi:official-artwork:152",
+          "source": {
+            "path": "tmp/poster-workspaces/ME02.5/sources/cutouts/pokemon_152_chikorita.png",
+            "sha256": "3ffc2eeee9139b0281ab5493b1a6d4b5c1329de5ddf5361f5ee3c93d12c05659"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p36-batch-20260922-b/review/cards/card_r3_c1.png",
+            "sha256": "b7f78efe0121be260f287da6a832c029f9b7c077eb29cd4ba2d7b10790384b21"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Glumanda",
+          "subject_key": "pokeapi:official-artwork:4",
+          "source": {
+            "path": "tmp/poster-workspaces/ME02.5/sources/cutouts/pokemon_004_charmander.png",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p36-batch-20260922-b/review/cards/card_r3_c2.png",
+            "sha256": "f39855beda2c3fe809e2fdc1c1b897cc29a30bfc52a61930b1e451222869488f"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Ho-Oh",
+          "subject_key": "pokeapi:official-artwork:250",
+          "source": {
+            "path": "tmp/poster-workspaces/ME02.5/sources/cutouts/pokemon_250_ho_oh.png",
+            "sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p36-batch-20260922-b/review/cards/card_r3_c3.png",
+            "sha256": "ab959d872b4b348ac4ce341c51acbaeb4958237a5de6ae41a0e80f2c07676ecf"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P38",
+      "scope": "ME04",
+      "variant": "p38-batch-20260922-b",
+      "human_approval": "pending",
+      "note": "",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p38-batch-20260922-b/retrieved/oneshot-90wz8alu/output/me04_flux2_joint_scene_2mp_seed_260735276_00001_.png",
+          "sha256": "c38ce01f46f78b6efd3ac429cc2d1fec9e01fe10579a3d1a7aa0727584c69009"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p38-batch-20260922-b/review/artwork-300dpi.png",
+          "sha256": "ddcaad6b7911534db808ce548dce9e62d3f406d8732138476c827896e228bae2"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p38-batch-20260922-b/review/poster-de.png",
+          "sha256": "b6c37d1283259124863bfbc1deee7f39cb146b35b3dc430d552a2c9cbb467dca"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p38-batch-20260922-b/review/artwork-300dpi.run.json",
+          "sha256": "8dee69f566d67552c6000ec7f52245cdeb4043cdc4826950709a0552f48f0337"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p38-batch-20260922-b/retrieved/oneshot-90wz8alu/run.json",
+          "sha256": "5a8a1298b8ac4e420aa5c8f76b6edfda409a6202c1d6c7690d06a1d93063cd94"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p38-batch-20260922-b/retrieved/oneshot-90wz8alu/comfyui.log",
+          "sha256": "d3684a73374a1efec36ce240c247349d4d8dd80f0ab35f0e709a56dce30e0841"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p38-batch-20260922-b/review/cards/card_r1_c1.png",
+          "sha256": "262afe9e416b49ceb2bc9b8afa364c51ee20042a148849610778da41dc5b8b98"
+        },
+        {
+          "path": "tmp/oneshot-trials/p38-batch-20260922-b/review/cards/card_r1_c2.png",
+          "sha256": "65b5415a5651f2228280238306ecc02758e2a3ae2242eb11f993aeaac3867cab"
+        },
+        {
+          "path": "tmp/oneshot-trials/p38-batch-20260922-b/review/cards/card_r1_c3.png",
+          "sha256": "ca22ae0e427bbd903661381a8e0c47532bf8a1da6b8ac0e58b15583b41c02270"
+        },
+        {
+          "path": "tmp/oneshot-trials/p38-batch-20260922-b/review/cards/card_r2_c1.png",
+          "sha256": "f5e48ef809802141795d8ee7e562c646b60e1b68d3124b4c8bbf58ee8803b36e"
+        },
+        {
+          "path": "tmp/oneshot-trials/p38-batch-20260922-b/review/cards/card_r2_c2.png",
+          "sha256": "4881c05adb721cf266a3d9be32d669e4892b4dce89c999805abebb0ac7d160bd"
+        },
+        {
+          "path": "tmp/oneshot-trials/p38-batch-20260922-b/review/cards/card_r2_c3.png",
+          "sha256": "c7e345e8ae9a239f67bad8817ad35648433060a3ebbd0fe3e0d605b2ffe8bf56"
+        },
+        {
+          "path": "tmp/oneshot-trials/p38-batch-20260922-b/review/cards/card_r3_c1.png",
+          "sha256": "a912ca2e6fe31bf3e2ae4287b67abf470a5716b7e597068596727b80b5ff21b3"
+        },
+        {
+          "path": "tmp/oneshot-trials/p38-batch-20260922-b/review/cards/card_r3_c2.png",
+          "sha256": "36471a769a8942ce9d4844e87caf52f10157d7cb4b464cb63bbfabeb09b8e0df"
+        },
+        {
+          "path": "tmp/oneshot-trials/p38-batch-20260922-b/review/cards/card_r3_c3.png",
+          "sha256": "fc77c665e139e93d75f279027932832d8fcaad8a71022f31c893070d34e5d675"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Igamaro",
+          "subject_key": "pokeapi:official-artwork:650",
+          "source": {
+            "path": "tmp/poster-workspaces/ME04/sources/cutouts/pokemon_650_chespin.png",
+            "sha256": "565272048cd8eeb2b524d597da6805dbdff28c313bc5346181f1859041320ee7"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p38-batch-20260922-b/review/cards/card_r3_c1.png",
+            "sha256": "a912ca2e6fe31bf3e2ae4287b67abf470a5716b7e597068596727b80b5ff21b3"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Ho-Oh",
+          "subject_key": "pokeapi:official-artwork:250",
+          "source": {
+            "path": "tmp/poster-workspaces/ME04/sources/cutouts/pokemon_250_ho_oh.png",
+            "sha256": "2365831e6c95a5c0448e905a461530a4c18d46f8c4ca5bb57f3a0a5a05a87274"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p38-batch-20260922-b/review/cards/card_r3_c2.png",
+            "sha256": "36471a769a8942ce9d4844e87caf52f10157d7cb4b464cb63bbfabeb09b8e0df"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Fynx",
+          "subject_key": "pokeapi:official-artwork:653",
+          "source": {
+            "path": "tmp/poster-workspaces/ME04/sources/cutouts/pokemon_653_fennekin.png",
+            "sha256": "b638e094ee06adcec959aad2898ce93f8c5fda88feba9c9158d1f16c026c07dd"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p38-batch-20260922-b/review/cards/card_r3_c3.png",
+            "sha256": "fc77c665e139e93d75f279027932832d8fcaad8a71022f31c893070d34e5d675"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    },
+    {
+      "review_id": "P39",
+      "scope": "MEP",
+      "variant": "p39-batch-20260922-b",
+      "human_approval": "pending",
+      "note": "Bisasams Mund leicht vereinfacht. Promo-Anzahl und Nummern sind nicht freigegeben.",
+      "files": {
+        "raw": {
+          "path": "tmp/oneshot-trials/p39-batch-20260922-b/retrieved/oneshot-miw65bcq/output/mep_flux2_joint_scene_2mp_seed_260755085_00001_.png",
+          "sha256": "5f0f4a318123c6baa62e734b9ddbf1b430db585041e37e51c4b3958357fcb447"
+        },
+        "master": {
+          "path": "tmp/oneshot-trials/p39-batch-20260922-b/review/artwork-300dpi.png",
+          "sha256": "88e3a5ef794b6fd3e825758998f288f0662f9c422c7ba6019db71f09ee0b9c42"
+        },
+        "preview": {
+          "path": "tmp/oneshot-trials/p39-batch-20260922-b/review/poster-de.png",
+          "sha256": "1c0d034fd00eca18586464580d2a6d20714a909b95ef88056aa6ada2e9bcc660"
+        },
+        "run_sidecar": {
+          "path": "tmp/oneshot-trials/p39-batch-20260922-b/review/artwork-300dpi.run.json",
+          "sha256": "06c6dcba572d1cad05179f1f4e9087763996053d87b88dbdde9be57df37892b2"
+        },
+        "worker_run": {
+          "path": "tmp/oneshot-trials/p39-batch-20260922-b/retrieved/oneshot-miw65bcq/run.json",
+          "sha256": "03931e2b0adf11b62afb3efbe94b89af777f567e48a5fde29dde273849fb35f9"
+        },
+        "worker_log": {
+          "path": "tmp/oneshot-trials/p39-batch-20260922-b/retrieved/oneshot-miw65bcq/comfyui.log",
+          "sha256": "2808809fca2f75c5ee28efc51379f9a05f15b71eb21bb7e1efaa822fea362bf3"
+        }
+      },
+      "cards": [
+        {
+          "path": "tmp/oneshot-trials/p39-batch-20260922-b/review/cards/card_r1_c1.png",
+          "sha256": "6e641fd357ad85397d3b8047d4d62d48247d15aa01d90565387e16610f4a725f"
+        },
+        {
+          "path": "tmp/oneshot-trials/p39-batch-20260922-b/review/cards/card_r1_c2.png",
+          "sha256": "3b320d2250a0e857b487e9694b796a6b8569a23b58cc16273129249ec7745c12"
+        },
+        {
+          "path": "tmp/oneshot-trials/p39-batch-20260922-b/review/cards/card_r1_c3.png",
+          "sha256": "25576ce364f6f1634048a8c8c6db2ac3f4fed8b4dec4094de89e0a41934f7eff"
+        },
+        {
+          "path": "tmp/oneshot-trials/p39-batch-20260922-b/review/cards/card_r2_c1.png",
+          "sha256": "83f37dfcd12f2783f982d582acf304c21959118bda84f1d220d2a1fa4df4c418"
+        },
+        {
+          "path": "tmp/oneshot-trials/p39-batch-20260922-b/review/cards/card_r2_c2.png",
+          "sha256": "f29c9bf68cb72d2e0c26077c8261930c1bb91e32547c01477f4b842c8ac73dd5"
+        },
+        {
+          "path": "tmp/oneshot-trials/p39-batch-20260922-b/review/cards/card_r2_c3.png",
+          "sha256": "fca081585684561005960ce76bae8f80f79bba84c8515e40230a02351d1dfa55"
+        },
+        {
+          "path": "tmp/oneshot-trials/p39-batch-20260922-b/review/cards/card_r3_c1.png",
+          "sha256": "b65c028bd5a1296b9757e84cd1dc610f9fbea7e902a48e127fafab91e465d2c4"
+        },
+        {
+          "path": "tmp/oneshot-trials/p39-batch-20260922-b/review/cards/card_r3_c2.png",
+          "sha256": "c909a185774bec52054892114f8423e1b57ac10b129a2854f76d2a51a66e650a"
+        },
+        {
+          "path": "tmp/oneshot-trials/p39-batch-20260922-b/review/cards/card_r3_c3.png",
+          "sha256": "73bfdf9235c5b75904fcda4237706926c554bc0d82b924ec9d6fcd09a265383a"
+        }
+      ],
+      "sources": [
+        {
+          "name_de": "Zacian",
+          "subject_key": "pokeapi:official-artwork:888",
+          "source": {
+            "path": "tmp/poster-workspaces/MEP/sources/cutouts/pokemon_888_zacian.png",
+            "sha256": "f36c2b196763a2c3389ee00b481b534b94d87907d81c0b0fd2dcf5487db2a533"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p39-batch-20260922-b/review/cards/card_r3_c1.png",
+            "sha256": "b65c028bd5a1296b9757e84cd1dc610f9fbea7e902a48e127fafab91e465d2c4"
+          },
+          "slot": "r3c1"
+        },
+        {
+          "name_de": "Bisasam",
+          "subject_key": "pokeapi:official-artwork:1",
+          "source": {
+            "path": "tmp/poster-workspaces/MEP/sources/cutouts/pokemon_001_bulbasaur.png",
+            "sha256": "8e8f5588a41f5dc9006b029347e26f3eb20761160a16e2b0e4df8fb7ea9eb24a"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p39-batch-20260922-b/review/cards/card_r3_c2.png",
+            "sha256": "c909a185774bec52054892114f8423e1b57ac10b129a2854f76d2a51a66e650a"
+          },
+          "slot": "r3c2"
+        },
+        {
+          "name_de": "Glumanda",
+          "subject_key": "pokeapi:official-artwork:4",
+          "source": {
+            "path": "tmp/poster-workspaces/MEP/sources/cutouts/pokemon_004_charmander.png",
+            "sha256": "a1ece1866497c8b11df3853190781c45f724a33a839cb5525597466d03deafd8"
+          },
+          "card": {
+            "path": "tmp/oneshot-trials/p39-batch-20260922-b/review/cards/card_r3_c3.png",
+            "sha256": "73bfdf9235c5b75904fcda4237706926c554bc0d82b924ec9d6fcd09a265383a"
+          },
+          "slot": "r3c3"
+        }
+      ]
+    }
+  ],
+  "rejected_trials": [
+    {
+      "review_id": "P16",
+      "variant": "p16-batch-20260922-b",
+      "reason": "Kyogre und Groudon überschreiten ihre Einlegergrenzen",
+      "preview": {
+        "path": "tmp/oneshot-trials/p16-batch-20260922-b/review/poster-de.png",
+        "sha256": "34ddb7ce161ed5dc300f3c0484e7c231a1efb1b4bdf556c963281c2dc71e2dfc"
+      },
+      "card": {
+        "path": "tmp/oneshot-trials/p16-batch-20260922-b/review/cards/card_r3_c1.png",
+        "sha256": "0724209cf1056aceb5bef3e0aef9e6c9f218ce59458d4bfb1949d98bcb657404"
+      }
+    },
+    {
+      "review_id": "P37",
+      "variant": "p37-batch-20260922-d",
+      "reason": "Mega-Zygardes violettes Kanonen-Emblem wird links abgeschnitten",
+      "preview": {
+        "path": "tmp/oneshot-trials/p37-batch-20260922-d/review/poster-de.png",
+        "sha256": "16a0a368ca20587d98d959fb8e75eabb26658d39dd4582261eca024ae09e3a11"
+      },
+      "card": {
+        "path": "tmp/oneshot-trials/p37-batch-20260922-d/review/cards/card_r3_c3.png",
+        "sha256": "4504932a59c4645651d49b6ed906ffe677f9bc38319a0cc0f515d9e5fb4143c5"
+      }
+    }
+  ]
+}

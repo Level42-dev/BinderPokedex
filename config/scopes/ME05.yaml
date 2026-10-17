@@ -1,0 +1,44 @@
+scope: ME05
+description: 'TCG Set: Mega Evolution ME05 (me05) - Complete set with all cards'
+target_file: data/output/ME05.json
+pipeline:
+- step: validate_pokedex_exists
+  params:
+    pokedex_file: data/output/Pokedex.json
+- step: load_tcg_set
+  params:
+    source_file: data/source/me05.json
+- step: fetch_tcgdex_set
+  params:
+    set_id: me05
+    output_file: data/source/me05.json
+- step: enrich_tcg_names_multilingual
+  params:
+    set_id: me05
+- step: enrich_tcg_cards_from_pokedex
+  params:
+    pokedex_file: data/output/Pokedex.json
+- step: enrich_special_cards
+  params:
+    images_dir: images/special_cards
+- step: transform_tcg_set
+  params:
+    set_id: ME05
+- step: transform_to_sections_format
+- step: enrich_featured_elements
+  params:
+    max_cards: 3
+    force: false
+    cache_dir: data/section_artwork
+    section_featured_card_ids:
+      all:
+      - me05-018
+      - me05-055
+      - me05-040
+- step: save_output
+  params:
+    output_file: data/output/ME05.json
+- step: cache_pokemon_images
+  params:
+    cache_dir: data/pokemon_images_cache
+    skip_existing: true

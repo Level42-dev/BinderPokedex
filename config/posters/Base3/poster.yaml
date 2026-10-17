@@ -31,24 +31,40 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260755492
+    reference_mode: spatial_source_detail_joint
+    seed: 260756501
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
   scene:
     concept: the mysterious 1999 Fossil expansion and its ancient island discoveries
-    setting: The artwork contains a windswept late-1990s cel-painted island basin with pale
-      fossil-bearing cliffs, weathered stone strata, sparse coastal woodland, and a distant
-      sea visible beneath layered storm clouds.
+    setting: The artwork contains a windswept late-1990s cel-painted island basin with pale fossil-bearing
+      cliffs, weathered stone strata, sparse coastal woodland, and a distant sea visible beneath layered
+      storm clouds.
     lighting: Cool silver daylight meets a restrained amber break from the upper left.
-    rendering: Use nostalgic hand-painted cel-animation linework, muted stone and ocean colors,
-      and spacious archaeological atmospheric depth.
+    rendering: Use nostalgic hand-painted cel-animation linework, muted stone and ocean colors, and spacious
+      archaeological atmospheric depth.
     ground_noun: coastal grass
     constraints:
-    - Keep fossils, cliff details, and other prominent geology distant or at the outer edges,
-      away from the protected subject silhouettes.
+    - Keep fossils, cliff details, and other prominent geology distant or at the outer edges, away from
+      the protected subject silhouettes.
+  source_details:
+    pokeapi:official-artwork:141:
+      sha256: d59c4a7435ada052c103fded3f49623e1c32858665c7f5135c6bbbe0f1de8527
+      traits: 'Match the exact Kabutops source: brown segmented shell head, narrow eyes, slim upright
+        torso, two separate scythe forearms, angular legs and their visible foot shape. Keep the scythes
+        as arms rather than extra horns, and do not invent or merge feet.'
+    pokeapi:official-artwork:131:
+      sha256: 0dda58737b5c1d7db8e7b81ff61b41d0f23bc08ddbf166ca61c20d17d1d27113
+      traits: Match the exact blue Lapras source pose, its long curved neck, gentle face, paired head
+        ears, cream underside, brown shell with separate raised ridges, flippers, and every visible darker
+        blue spot on neck and body. Do not turn the spotted neck into a smooth unmarked surface.
+    pokeapi:official-artwork:94:
+      sha256: cd83bb9a7cc3cb159394dc30dda48160965f5470a474d63c921c7eb4884f8d1d
+      traits: Match the exact purple Gengar source, its red eyes, wide toothy grin, pointed head and back
+        spikes, short clawed arms, low legs and stocky ghost silhouette. Keep the grin and teeth sharply
+        defined.
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns
@@ -73,8 +89,5 @@ conditioning:
     bottom_padding_px: 24
 title_logo:
   files:
-    de: logos/logo-de.png
     en: logos/logo-en.png
     fr: logos/logo-fr.png
-    es: logos/logo-es.png
-    it: logos/logo-it.png

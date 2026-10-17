@@ -10,7 +10,8 @@ never publishes a GitHub Release.
 
 ```text
 Build Release Candidate (reusable, read-only)
-  -> fetch every configured scope
+  -> verify the committed source/output snapshot byte-for-byte
+  -> fetch only reproducible poster logo sources
   -> validate every PDF-enabled promoted poster
   -> generate every scope in every supported language
   -> create all language ZIP archives
@@ -27,6 +28,12 @@ Create Release (v* tag only)
   -> download the verified artifact
   -> publish the GitHub Release
 ```
+
+The reusable build never contacts mutable card-data APIs. It consumes the
+reviewed files bound by `data/snapshot.json`; any missing, additional, or
+changed source/output JSON file stops the job before rendering. Refreshes use
+the single audited command sequence documented in
+[Data Fetcher](DATA_FETCHER.md#canonical-reviewed-refresh).
 
 The reusable build and pull-request caller have only `contents: read`
 permission. Only the `publish` job in `Create Release` has `contents: write`.
@@ -59,13 +66,18 @@ are generated and reviewed locally, then promoted as versioned repository
 assets. The shared release build runs:
 
 ```bash
-python scripts/poster_assets/validate_promoted_poster.py --all-enabled
+python scripts/poster_assets/validate_promoted_poster.py --all-enabled --require-current-overlay
 ```
 
-after fetching current scope data and before generating PDFs. The build fails
+after verifying the reviewed scope data and before generating PDFs. The build fails
 when an enabled bundle has missing files, provenance or manifest drift, changed
 prompt inputs, invalid source-pixel evidence, incorrect dimensions, or wrong
 print metadata.
+
+The release-only overlay gate compares current title-logo pixels and other
+localized overlay inputs with the promoted provenance. A changed remote logo
+stops the build before any PDF is generated; ordinary local validation can
+still report overlay drift while a corrected logo is reviewed.
 
 The normal PDF command then discovers every enabled legacy manifest and every
 enabled aggregate binding from `posters.yaml`, adds localized logo/text, slices
@@ -101,7 +113,7 @@ and therefore builds:
 - the exact file set consumed by the publish job.
 
 The temporary manifest keeps its `pr-<number>-<sha>` build label while loading
-the explicitly configured upcoming release-news contract (`v9.0` for the
+the explicitly configured upcoming release-news contract (`v10.0` for the
 current feature branch). A tagged release instead uses its own tag for both
 fields. This makes missing or malformed major-release news fail before merge.
 

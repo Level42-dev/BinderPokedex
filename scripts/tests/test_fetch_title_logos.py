@@ -3,6 +3,8 @@ from types import SimpleNamespace
 from PIL import Image, ImageChops
 
 from scripts.poster_assets import fetch_title_logos as title_logos
+from scripts.poster_assets.finalize_comfyui_poster import title_logo_file
+from scripts.poster_assets.poster_io import load_poster_scope_data, poster_bundle
 
 
 def test_title_logo_fetch_copies_repository_local_source(tmp_path, monkeypatch):
@@ -42,3 +44,15 @@ def test_title_logo_fetch_copies_repository_local_source(tmp_path, monkeypatch):
         assert copied.mode == "RGBA"
         assert copied.size == original.size
         assert ImageChops.difference(copied, original).getbbox() is None
+
+
+def test_base2_german_title_resolves_a_real_set_logo():
+    bundle = poster_bundle("Base2")
+    scope_data = load_poster_scope_data(bundle)
+
+    assert title_logo_file(bundle.manifest, "de") == "logos/logo-de.png"
+    assert (
+        "de",
+        "logos/logo-de.png",
+        "https://assets.tcgdex.net/fr/base/base2/logo.png",
+    ) in title_logos.resolve_logo_downloads(bundle.manifest, scope_data)

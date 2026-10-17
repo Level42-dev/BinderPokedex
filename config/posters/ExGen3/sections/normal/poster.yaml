@@ -19,6 +19,16 @@ text_cells:
 text_content:
   mode: section_summary
 artwork:
+  source_details:
+    "pokeapi:official-artwork:1007":
+      sha256: a292ff6c8c43f3f2c2df404ad14fc84e4ba0db33107692068d70e30ea9b44962
+      traits: "Koraidon must match this exact strong red upright standing pose, with the small reptilian face clearly visible at the TOP and the narrow yellow eye. Preserve the white, pink and blue feather crest and the long segmented pale head tendril curving behind it. The large dark grooved chest-throat wheel is a body structure with red and white edge points, NOT a face; do not put eyes or a mouth on the wheel. Preserve both separate arms and pale pointed hand claws, the broad red-and-white standing feet, pale belly, white back spikes and long red tail with white triangular edges. Copy the exact source silhouette, anatomy, pose and gaze."
+    "pokeapi:official-artwork:25":
+      sha256: bd2163009d392e192c134a5f1c4ccceafd5d7c57a704373c6b6be4be0091cc5f
+      traits: "Pikachu must match this exact cheerful yellow source pose: exactly two long black-tipped ears, two separate dark round eyes with white highlights, red cheek circles and the open pink mouth with distinct tongue. Preserve the image-left arm extended outward and the image-right arm bent toward the chest with its separate small pointed finger contours. Copy the two small standing feet and one continuous large yellow zigzag tail with its brown base. Preserve the source's body proportions, expression, eye spacing, ear angles and hand pose; no extra fingers, ears, tails or facial marks. Scene-appropriate foreground overlap is allowed without changing these defining features."
+    "pokeapi:official-artwork:1008":
+      sha256: 282add1c4774047944a6c9d377ee0ed739744d2d23bb18ac32133534190a022a
+      traits: "Miraidon must match this exact upright floating violet-blue source pose. Preserve the small angular pale face, its separate narrow eye and the tall dark central head crest. Exactly two long head appendages branch into jagged white, violet and pale yellow ELECTRIC LIGHTNING shapes, never feathers or leaf-shaped fans. Preserve the source's pale chest with sharp cyan-white zigzag bands and the yellow border; do not replace it with a smooth oval shield or generic diagonal stripes. Keep the two separate arms with pale segmented fingers, bent lower limbs, violet body panels and the long lower curved yellow-white-violet tail and energy shapes in their exact source arrangement. The chest is not a second head."
   promoted_file: poster-flux2-artwork.png
   provenance_file: poster-flux2-provenance.json
   identity_lock:
@@ -40,6 +50,11 @@ artwork:
     constraints:
     - Keep the academy, cliffs, crystals, and other landmarks distant and toward the outer
       edges, away from the protected subject silhouettes.
+    - Preserve the SMALL cast scale and exact low bottom-row placement from IMAGE 1. This
+      includes the highest tips of Miraidon's lightning and their entire glow, Koraidon's
+      crest and tendril, and Pikachu's ears and tail. Keep every complete silhouette within
+      its specified bottom-row bounds with open landscape above it; no enlarged figure or
+      appendage may rise out of that band. The large detail references do not set scene scale.
   generation:
     engine: flux
     model: flux-2-klein-4b.safetensors
@@ -49,10 +64,10 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
+    reference_mode: spatial_source_detail_joint
     seed: 260711318
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
 pokemon:

@@ -47,6 +47,17 @@ class FontManager:
     CJK_LANGUAGES = ['ja', 'ko', 'zh_hans', 'zh_hant']
 
     JAPANESE_CID_FONT = 'HeiseiKakuGo-W5'
+
+    # ReportLab ships these Unicode CID font definitions on every supported
+    # platform.  They keep PDF generation functional in minimal Linux/CI
+    # environments where macOS or distribution-specific TrueType fonts are
+    # unavailable.
+    CJK_CID_FALLBACKS = {
+        'ja': JAPANESE_CID_FONT,
+        'ko': 'HYGothic-Medium',
+        'zh_hans': 'STSong-Light',
+        'zh_hant': 'MSung-Light',
+    }
     
     # Path to Songti TrueType Collection (Japanese, Simplified Chinese)
     SONGTI_PATH = Path('/System/Library/Fonts/Supplemental/Songti.ttc')
@@ -92,15 +103,21 @@ class FontManager:
         logger.info("Registering fonts for multi-language support...")
 
         # Songti's macOS TTC face omits valid Japanese glyphs such as 現 and
-        # 時. ReportLab's Japanese CID font has complete Japanese coverage and
-        # is available consistently on macOS and Linux PDF builds.
-        try:
-            pdfmetrics.registerFont(UnicodeCIDFont(cls.JAPANESE_CID_FONT))
-            cls._font_cache[cls.JAPANESE_CID_FONT] = True
-            logger.info("✓ Registered Japanese CID font")
-        except Exception as e:
-            cls._font_cache[cls.JAPANESE_CID_FONT] = False
-            logger.warning(f"✗ Could not register Japanese CID font: {e}")
+        # 時. Register a language-specific built-in CID fallback for every CJK
+        # language before probing optional system fonts.
+        for language, font_name in cls.CJK_CID_FALLBACKS.items():
+            try:
+                pdfmetrics.registerFont(UnicodeCIDFont(font_name))
+                cls._font_cache[font_name] = True
+                logger.info(
+                    f"✓ Registered built-in {language} CID font '{font_name}'"
+                )
+            except Exception as e:
+                cls._font_cache[font_name] = False
+                logger.warning(
+                    f"✗ Could not register {language} CID font "
+                    f"'{font_name}': {e}"
+                )
         
         # Register Songti font for Simplified Chinese
         if cls.SONGTI_PATH.exists():
@@ -218,27 +235,6 @@ class FontManager:
         cls._font_cache['Helvetica'] = True
         cls._font_cache['Helvetica-Bold'] = True
 
-        # Remap any unregistered CJK fonts to the best available fallback.
-        # This handles Linux/CI environments where macOS-specific fonts
-        # (AppleGothic, STHeitiMedium) are absent but a Noto/WQY font was
-        # registered as SongtiBold.
-        fallback_cjk = next(
-            (name for name in ('SongtiBold', 'STHeitiMedium', 'AppleGothic')
-             if cls._font_cache.get(name)),
-            None
-        )
-        if fallback_cjk:
-            for lang in cls.CJK_LANGUAGES:
-                info = cls.LANGUAGE_FONTS[lang]
-                for key in ('font', 'font_bold'):
-                    requested = info[key]
-                    if not cls._font_cache.get(requested):
-                        cls.LANGUAGE_FONTS[lang][key] = fallback_cjk
-                        logger.warning(
-                            f"⚠️  '{requested}' not registered for language '{lang}', "
-                            f"falling back to '{fallback_cjk}'"
-                        )
-
         cls._fonts_registered = True
         logger.info(f"Font registration complete")
     
@@ -263,7 +259,31 @@ class FontManager:
         
         font_info = cls.LANGUAGE_FONTS[language]
         font_key = 'font_bold' if bold else 'font'
-        return font_info[font_key]
+        requested = font_info[font_key]
+        if cls._font_cache.get(requested):
+            return requested
+
+        fallback = cls.CJK_CID_FALLBACKS.get(language)
+        if fallback and cls._font_cache.get(fallback):
+            logger.warning(
+                f"⚠️  '{requested}' is not registered for language "
+                f"'{language}', falling back to '{fallback}'"
+            )
+            return fallback
+
+        return 'Helvetica-Bold' if bold else 'Helvetica'
+
+    @classmethod
+    def get_symbol_font_name(cls) -> str:
+        """Return a registered font for Unicode gender symbols."""
+        for font_name in (
+            cls.CJK_CID_FALLBACKS['zh_hans'],
+            'SongtiBold',
+            cls.JAPANESE_CID_FONT,
+        ):
+            if cls._font_cache.get(font_name):
+                return font_name
+        return 'Helvetica-Bold'
     
     @classmethod
     def get_supported_languages(cls) -> list:

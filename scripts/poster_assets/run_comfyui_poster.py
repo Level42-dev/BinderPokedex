@@ -3,11 +3,14 @@
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
 
 from PIL import Image, ImageStat
 
 try:
+    from .generation_contract import is_grounded_generation
+    from .provenance import grounded_output_record, audit_grounded_generation
     from .create_comfyui_poster_workflow import (
         megapixel_marker,
         page_dimensions,
@@ -45,6 +48,8 @@ try:
     from .source_pixel_audit import audit_exact_source_pixels
     from .upscale_comfyui_poster import upscale
 except ImportError:
+    from generation_contract import is_grounded_generation
+    from provenance import grounded_output_record, audit_grounded_generation
     from create_comfyui_poster_workflow import (
         megapixel_marker,
         page_dimensions,
@@ -86,6 +91,53 @@ except ImportError:
 ENGINE = "flux"
 DEFAULT_GENERATION_MEGAPIXELS = 1.0
 DEFAULT_OUTPUT_DPI = 300
+
+
+def select_generation_outputs(
+    outputs: list[dict], workflow_path: Path, work_dir: Path, generation: dict,
+) -> dict[str, Path]:
+    """Resolve labeled outputs without trusting worker result order."""
+    images = [
+        item for item in outputs
+        if item.get("type") == "output" and item.get("filename")
+    ]
+    grounded = is_grounded_generation(generation)
+    if len(images) != (2 if grounded else 1):
+        expected = "two labeled" if grounded else "exactly one"
+        raise RuntimeError(f"Expected {expected} output image(s), got: {outputs}")
+    root = (work_dir / "output").resolve()
+    paths = []
+    for item in images:
+        path = (
+            root / str(item.get("subfolder", "")) / str(item["filename"])
+        ).resolve()
+        if not path.is_relative_to(root):
+            raise ValueError("ComfyUI output escapes the current job directory")
+        if not path.is_file():
+            raise FileNotFoundError(f"ComfyUI reported a missing output: {path}")
+        paths.append(path)
+    if not grounded:
+        return {"final": paths[0]}
+    graph = json.loads(workflow_path.read_text(encoding="utf-8"))
+    result = {}
+    for role in ("final", "baseline"):
+        prefixes = [
+            n["inputs"]["filename_prefix"] for n in graph.values()
+            if n.get("class_type") == "SaveImage"
+            and str(n.get("inputs", {}).get("filename_prefix", "")).endswith("_" + role)
+        ]
+        matches = [
+            path for path in paths
+            if len(prefixes) == 1
+            and path.name.startswith(Path(prefixes[0]).name + "_")
+        ]
+        if len(matches) != 1:
+            raise ValueError(f"Grounding job lacks one distinct {role} output")
+        grounded_output_record(matches[0], workflow_path, role)
+        result[role] = matches[0]
+    if result["final"] == result["baseline"]:
+        raise ValueError("Grounding job output roles must be distinct")
+    return result
 
 
 def configured_generation(scope: str) -> dict[str, object]:
@@ -282,6 +334,12 @@ def run(
     )
     workflow_options["flux_reference_mode"] = effective_reference_mode
     joint_scene = is_joint_scene_generation(generation_metadata)
+    if effective_reference_mode == "spatial_source_detail_joint":
+        validate_generation_contract({
+            **generation_metadata, "generation_megapixels": megapixels,
+            "output_method": "lanczos", "output_dpi": output_dpi,
+            "output_megapixels": output_megapixels,
+        })
     work_dir = prepare(
         scope,
         megapixels,
@@ -307,31 +365,39 @@ def run(
         server=server,
         timeout=timeout,
     )
-    images = [
-        item
-        for item in outputs
-        if item.get("type") == "output" and item.get("filename")
-    ]
-    if len(images) != 1:
-        raise RuntimeError(
-            f"Expected exactly one output image, got: {outputs}"
-        )
-
-    raw_path = (
-        work_dir
-        / "output"
-        / str(images[0].get("subfolder", ""))
-        / str(images[0]["filename"])
+    roles = select_generation_outputs(
+        outputs, workflow_path, work_dir, generation_metadata,
     )
-    if not raw_path.is_file():
-        raise FileNotFoundError(
-            "ComfyUI reported an output that does not exist: "
-            f"{raw_path}"
-        )
+    raw_path = roles["final"]
     validate_raw_artwork(raw_path)
 
     validation: dict[str, object] = {}
-    if flux_mode == "identity_lock":
+    if is_grounded_generation(generation_metadata):
+        audit_generation = {
+            **generation_metadata,
+            "seed": seed,
+            "generation_megapixels": megapixels,
+        }
+        if output_dpi is not None:
+            audit_generation.update(
+                output_dpi=output_dpi,
+                output_method="model_upscale",
+                upscale_model=upscale_model,
+            )
+        else:
+            audit_generation.update(
+                output_megapixels=(
+                    output_megapixels
+                    if output_megapixels is not None else megapixels
+                ),
+                output_method="lanczos",
+            )
+        audited = audit_grounded_generation(
+            scope, workflow_path, audit_generation,
+            raw_path, roles["baseline"],
+        )
+        validation = audited["validation"]
+    elif flux_mode == "identity_lock":
         source_reference = work_dir / "inpaint_reference.png"
         source_pixel_audit = audit_exact_source_pixels(
             source_reference,
@@ -449,6 +515,7 @@ def run(
         workflow_path,
         generation,
         raw_artwork_path=raw_path,
+        baseline_artwork_path=roles.get("baseline"),
         additional_workflows=(
             {"upscale_workflow": upscale_workflow_path}
             if upscale_workflow_path is not None
@@ -502,10 +569,12 @@ def main() -> int:
     parser.add_argument(
         "--flux-reference-mode",
         choices=(
+            "spatial_source_detail_joint",
             "individual_spatial_joint",
             "spatial_identity_joint",
             "regional_identity_joint",
             "two_pass_source_pixels",
+            "grounded_source_pixels",
         ),
         help="Override the selected mode's reference topology",
     )

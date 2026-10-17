@@ -1,0 +1,44 @@
+scope: 30CClassic
+description: 'TCG Set: 30 Years Classic Collection (30th-c) - Complete classic subset'
+target_file: data/output/30CClassic.json
+pipeline:
+- step: validate_pokedex_exists
+  params:
+    pokedex_file: data/output/Pokedex.json
+- step: load_tcg_set
+  params:
+    source_file: data/source/30th-c.json
+- step: fetch_tcgdex_set
+  params:
+    set_id: 30th-c
+    output_file: data/source/30th-c.json
+- step: enrich_tcg_names_multilingual
+  params:
+    set_id: 30th-c
+- step: enrich_tcg_cards_from_pokedex
+  params:
+    pokedex_file: data/output/Pokedex.json
+- step: enrich_special_cards
+  params:
+    images_dir: images/special_cards
+- step: transform_tcg_set
+  params:
+    set_id: 30CClassic
+- step: transform_to_sections_format
+- step: enrich_featured_elements
+  params:
+    max_cards: 3
+    force: false
+    cache_dir: data/section_artwork
+    section_featured_card_ids:
+      all:
+      - 30th-c-001
+      - 30th-c-014
+      - 30th-c-029
+- step: save_output
+  params:
+    output_file: data/output/30CClassic.json
+- step: cache_pokemon_images
+  params:
+    cache_dir: data/pokemon_images_cache
+    skip_existing: true

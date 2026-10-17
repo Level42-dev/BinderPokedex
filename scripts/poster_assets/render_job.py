@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import contextlib
 import hashlib
 import json
 import os
@@ -11,11 +12,14 @@ import re
 import shutil
 import socket
 import subprocess
+import tempfile
 import time
 import urllib.error
 import urllib.request
 from pathlib import Path, PurePosixPath
 from typing import Any
+
+import yaml
 
 try:
     from .queue_comfyui_workflow import (
@@ -32,9 +36,23 @@ except ImportError:
 
 
 FORMAT_VERSION = 1
+EXTENSION_FORMAT_VERSION = 2
+REGION_EXTENSION_NAME = "binder_region_joint"
+REGION_NODE_NAME = "RegionConstrainedJointGuider"
 COMFYUI_COMMIT = "87d23b81765161624889febfb3b81f19f3c8435b"
 SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 ANSI_RE = re.compile(r"\x1b\[[0-9;]*m")
+
+
+def require_custom_node(server: str, node_name: str) -> None:
+    """Refuse a pilot workflow unless ComfyUI registered its job-local node."""
+    try:
+        with urllib.request.urlopen(f"{server}/object_info/{node_name}", timeout=10) as response:
+            info = json.loads(response.read())
+    except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+        raise RuntimeError(f"Could not verify custom node {node_name}") from exc
+    if not isinstance(info, dict) or node_name not in info:
+        raise RuntimeError(f"Custom node {node_name} is not registered")
 
 
 def sha256_file(path: Path) -> str:
@@ -86,12 +104,34 @@ def load_json(path: Path) -> dict[str, Any]:
     return value
 
 
+def _checked_extension_source(source: Path) -> list[Path]:
+    source = Path(source).expanduser()
+    if source.is_symlink() or not source.is_dir():
+        raise ValueError("extension source must be a symlink-free directory")
+    source = source.resolve()
+    files: list[Path] = []
+    for item in sorted(source.iterdir()):
+        if item.is_symlink():
+            raise ValueError("extension source contains a symlink")
+        if item.name == "__pycache__" and item.is_dir():
+            continue
+        if not item.is_file() or item.suffix != ".py":
+            raise ValueError("extension source may contain only Python files")
+        files.append(item)
+    if not any(item.name == "__init__.py" for item in files):
+        raise ValueError("extension source requires __init__.py")
+    return files
+
+
 def prepare_job(
     workflow_path: Path,
     job_dir: Path,
     input_specs: list[str],
     model_specs: list[str],
+    *,
+    extension_source: Path | None = None,
 ) -> Path:
+    extension_files = _checked_extension_source(extension_source) if extension_source is not None else None
     workflow_path = workflow_path.expanduser().resolve()
     workflow = load_json(workflow_path)
     if not workflow or not all(
@@ -140,7 +180,7 @@ def prepare_job(
         )
 
     manifest = {
-        "format_version": FORMAT_VERSION,
+        "format_version": EXTENSION_FORMAT_VERSION if extension_files is not None else FORMAT_VERSION,
         "comfyui_commit": COMFYUI_COMMIT,
         "workflow": {
             "path": bundled_workflow.name,
@@ -152,6 +192,15 @@ def prepare_job(
             key=lambda item: item["path"],
         ),
     }
+    if extension_files is not None:
+        extension_dir = job_dir / "extensions" / REGION_EXTENSION_NAME
+        extension_dir.mkdir(parents=True, exist_ok=False)
+        copied = []
+        for source in extension_files:
+            destination = extension_dir / source.name
+            shutil.copy2(source, destination)
+            copied.append({"path": source.name, "sha256": sha256_file(destination)})
+        manifest["extensions"] = {"name": REGION_EXTENSION_NAME, "files": copied}
     manifest_path.write_text(
         json.dumps(manifest, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
@@ -174,7 +223,7 @@ def validate_job(job_dir: Path, models_root: Path) -> dict[str, Any]:
     job_dir = job_dir.expanduser().resolve()
     models_root = models_root.expanduser().resolve()
     manifest = load_json(job_dir / "job.json")
-    if manifest.get("format_version") != FORMAT_VERSION:
+    if manifest.get("format_version") not in (FORMAT_VERSION, EXTENSION_FORMAT_VERSION):
         raise ValueError("Unsupported render-job format_version")
     if manifest.get("comfyui_commit") != COMFYUI_COMMIT:
         raise ValueError("Render job uses an unsupported ComfyUI commit")
@@ -206,7 +255,52 @@ def validate_job(job_dir: Path, models_root: Path) -> dict[str, Any]:
             str(item["sha256"]),
             label="model",
         )
+    if manifest["format_version"] == EXTENSION_FORMAT_VERSION:
+        _validate_extension(job_dir, manifest.get("extensions"))
+    elif "extensions" in manifest:
+        raise ValueError("Format-1 render job cannot include an extension")
     return manifest
+
+
+def _validate_extension(job_dir: Path, record: object) -> None:
+    if not isinstance(record, dict) or record.get("name") != REGION_EXTENSION_NAME:
+        raise ValueError("Render job has no approved regional extension")
+    entries = record.get("files")
+    if not isinstance(entries, list) or not entries:
+        raise ValueError("Render job has no extension files")
+    root = job_dir / "extensions"
+    folder = root / REGION_EXTENSION_NAME
+    if root.is_symlink() or folder.is_symlink() or not folder.is_dir():
+        raise ValueError("Render job extension is missing or contains a symlink")
+    names: set[str] = set()
+    for entry in entries:
+        if not isinstance(entry, dict):
+            raise ValueError("Invalid extension path record")
+        value = entry.get("path")
+        if not isinstance(value, str):
+            raise ValueError("Invalid extension path")
+        try:
+            relative = safe_relative_path(value, field="extension path")
+        except ValueError as exc:
+            raise ValueError("Invalid extension path") from exc
+        if len(relative.parts) != 1 or relative.suffix != ".py" or value != relative.as_posix() or value in names:
+            raise ValueError("Invalid or duplicate extension path")
+        names.add(value)
+        path = folder / relative
+        if path.is_symlink():
+            raise ValueError("Render job extension contains a symlink")
+        verify_file(path, str(entry.get("sha256", "")), label="extension")
+    if "__init__.py" not in names:
+        raise ValueError("Render job extension has no __init__.py")
+    actual = set()
+    for path in folder.iterdir():
+        if path.is_symlink():
+            raise ValueError("Render job extension contains a symlink")
+        if not path.is_file() or path.suffix != ".py":
+            raise ValueError("Render job contains unlisted extension content")
+        actual.add(path.name)
+    if actual != names:
+        raise ValueError("Render job contains unlisted extension files")
 
 
 def wait_for_server(server: str, log_path: Path, process: subprocess.Popen) -> None:
@@ -265,6 +359,10 @@ def run_job(
             f"ComfyUI commit mismatch: expected {manifest['comfyui_commit']}, "
             f"got {actual_commit}"
         )
+    if manifest["format_version"] == EXTENSION_FORMAT_VERSION:
+        collision = comfyui_root / "custom_nodes" / REGION_EXTENSION_NAME
+        if collision.exists() or collision.is_symlink():
+            raise ValueError("Regional extension name collision in worker custom_nodes")
 
     output_dir = job_dir / "output"
     temp_dir = job_dir / "temp"
@@ -289,30 +387,45 @@ def run_job(
     environment = os.environ.copy()
     environment["PYTHONUNBUFFERED"] = "1"
     started = time.time()
-    with log_path.open("w", encoding="utf-8") as log:
-        process = subprocess.Popen(
-            command,
-            cwd=comfyui_root,
-            env=environment,
-            stdout=log,
-            stderr=subprocess.STDOUT,
-            text=True,
-        )
-        try:
-            wait_for_server(server, log_path, process)
-            validate_server_input_directory(server, job_dir / "input")
-            outputs = queue_workflow(
-                job_dir / manifest["workflow"]["path"],
-                server=server,
-                timeout=timeout,
+    with contextlib.ExitStack() as stack:
+        if manifest["format_version"] == EXTENSION_FORMAT_VERSION:
+            temporary = stack.enter_context(tempfile.TemporaryDirectory(prefix="binder-region-node-"))
+            config = Path(temporary) / "extra_model_paths.yaml"
+            config.write_text(
+                yaml.safe_dump({"pilot": {"custom_nodes": str(job_dir / "extensions")}}),
+                encoding="utf-8",
             )
-        finally:
-            process.terminate()
+            command.extend((
+                "--extra-model-paths-config", str(config),
+                "--disable-all-custom-nodes", "--whitelist-custom-nodes", REGION_EXTENSION_NAME,
+            ))
+            environment["PYTHONDONTWRITEBYTECODE"] = "1"
+        with log_path.open("w", encoding="utf-8") as log:
+            process = subprocess.Popen(
+                command,
+                cwd=comfyui_root,
+                env=environment,
+                stdout=log,
+                stderr=subprocess.STDOUT,
+                text=True,
+            )
             try:
-                process.wait(timeout=20)
-            except subprocess.TimeoutExpired:
-                process.kill()
-                process.wait(timeout=10)
+                wait_for_server(server, log_path, process)
+                if manifest["format_version"] == EXTENSION_FORMAT_VERSION:
+                    require_custom_node(server, REGION_NODE_NAME)
+                validate_server_input_directory(server, job_dir / "input")
+                outputs = queue_workflow(
+                    job_dir / manifest["workflow"]["path"],
+                    server=server,
+                    timeout=timeout,
+                )
+            finally:
+                process.terminate()
+                try:
+                    process.wait(timeout=20)
+                except subprocess.TimeoutExpired:
+                    process.kill()
+                    process.wait(timeout=10)
 
     output_records = []
     for item in outputs:
@@ -333,7 +446,7 @@ def run_job(
         raise RuntimeError("ComfyUI completed without an output image")
 
     record = {
-        "format_version": FORMAT_VERSION,
+        "format_version": manifest["format_version"],
         "started_at_unix": started,
         "finished_at_unix": time.time(),
         "hostname": socket.gethostname(),
@@ -363,6 +476,7 @@ def build_parser() -> argparse.ArgumentParser:
     prepare_parser.add_argument("--job-dir", type=Path, required=True)
     prepare_parser.add_argument("--input", action="append", default=[])
     prepare_parser.add_argument("--model", action="append", default=[])
+    prepare_parser.add_argument("--extension-source", type=Path)
 
     validate_parser = subparsers.add_parser("validate")
     validate_parser.add_argument("--job-dir", type=Path, required=True)
@@ -387,6 +501,7 @@ def main() -> int:
                 args.job_dir,
                 args.input,
                 args.model,
+                extension_source=args.extension_source,
             )
         )
         return 0

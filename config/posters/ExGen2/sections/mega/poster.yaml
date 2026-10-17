@@ -19,6 +19,18 @@ text_cells:
 text_content:
   mode: section_summary
 artwork:
+  spatial_reference_scales:
+    "pokeapi:official-artwork:10079": 0.8
+  source_details:
+    "pokeapi:official-artwork:10043":
+      sha256: 5dd98bb485cf51eb4ede5189d28aeb9c6e426bd08d9abbc37187c02268b188d9
+      traits: "Mega Mewtwo X must match this exact upright muscular source pose, not ordinary Mewtwo or Mega Mewtwo Y. Preserve the angular light gray head with two pointed horns and the narrow blue eye with dark pupil; keep the surrounding face light gray as in the source. Preserve the pink-violet shoulder arcs and belly, the bent image-left arm with its fist in front of the torso, and the raised image-right hand with three distinct round fingertips. Keep both long pale legs and the separated rounded toes exactly as shown. There is exactly ONE continuous pink-violet tail behind the image-left shoulder: one stem ending in one inward-curled oval tip. Every visible tail part belongs to that same connected stem; no second tip, extra stem or detached oval. Copy the source's open spaces, proportions, expression and viewing direction."
+    "pokeapi:official-artwork:10079":
+      sha256: 28a9f35caa69df85cde05fcb5e7785d7581b30910b2cd6df508d35fca2a789f4
+      traits: "Mega Rayquaza must match this exact long green serpentine body in its single continuous curled loop, with its head facing down-left and its tapering tail continuing toward the right. Preserve the angular layered head plates, the narrow visible eye, open mouth and separate pale pointed teeth. Copy the two small clawed arms, the geometric body fins, dark panel outlines and circular orange-yellow markings in their source locations. The long gold-orange appendages with diamond-shaped sections are slender flowing energy ribbons, not additional snakes, heads or arms. Preserve the source's complete body path and all distinct head, jaw, claw and fin contours."
+    "pokeapi:official-artwork:10063":
+      sha256: ea327ac2ac56cb1a90153bad84f66bd62d25f8c25093733ed1aef9a5411b8054
+      traits: "Mega Latios must match this exact elongated white-and-lavender flying pose with the real head at the far LEFT. Preserve the visible red eye, blue forehead area, narrow beak-like mouth, long pale neck and two jagged pale head crests. There is exactly ONE SMALL white-outlined hollow triangular marking near the image-left ROOT of the lavender near-wing surface, just behind the neck. Its center is plain gray-lavender, not an eye. The long dark purple upper wing stretches toward the far RIGHT and is completely PLAIN and UNMARKED. Preserve the source's shallow swept-back wing profile, lighter lavender base, separate lower fins and sharp white contours. Do not add another large upper wing, enlarge or duplicate the small triangle, or place a mark, eye or pupil on the long plain wing. Copy the original wing/body proportions, orientation and spaces between appendages."
   promoted_file: poster-flux2-artwork.png
   provenance_file: poster-flux2-provenance.json
   identity_lock:
@@ -47,10 +59,10 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
+    reference_mode: spatial_source_detail_joint
     seed: 260736802
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
 pokemon:

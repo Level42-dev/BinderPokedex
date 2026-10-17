@@ -5,10 +5,8 @@ poster_id: gen5
 source:
   scope: Pokedex
   section_id: gen5
-
 layout:
   name: standard_3x3
-
 text_cells:
   title:
     row: 1
@@ -18,28 +16,23 @@ text_cells:
     column: 2
     max_width_ratio: 0.92
     max_height_ratio: 0.68
-
 text_content:
   mode: section_summary
-
 artwork:
   promoted_file: poster-flux2-artwork.png
   provenance_file: poster-flux2-provenance.json
   identity_lock:
     overscan_ratio: 0.04
-    max_protected_start_ratio: 0.70
-    transition_ratio: 0.10
+    max_protected_start_ratio: 0.7
+    transition_ratio: 0.1
     subject_clearance_ratio: 0.02
   scene:
     concept: a polished Unova riverside landscape balancing nature and a distant city
-    setting: >-
-      The artwork contains a broad Unova-inspired riverside park where
-      natural woodland opens toward a distant modern skyline with completely
-      blank facades and a graceful bridge low on the horizon.
+    setting: The artwork contains a broad Unova-inspired riverside park where natural woodland opens toward
+      a distant modern skyline with completely blank facades and a graceful bridge low on the horizon.
     lighting: Clear early-evening light enters from the upper left.
-    rendering: >-
-      Use polished cel-painted linework, balanced urban and natural colors,
-      and deep readable perspective.
+    rendering: Use polished cel-painted linework, balanced urban and natural colors, and deep readable
+      perspective.
     ground_noun: park grass
   generation:
     engine: flux
@@ -50,23 +43,40 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
-    seed: 260735039
+    reference_mode: spatial_source_detail_joint
+    seed: 260736048
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
-
+  source_details:
+    pokeapi:official-artwork:495:
+      sha256: e7ff61a0daed598a7676b262c56af766e88bcf91764658eeeae615f6f9937549
+      traits: Match the exact small green Snivy source with its pointed face, narrow reddish eyes, pale
+        belly, short arms, yellow collar arcs and broad leaf-like tail. Keep the tail a single plant-shaped
+        appendage, not a new limb.
+    pokeapi:official-artwork:498:
+      sha256: d7750c56dc5be8ae10a6c270c34a0c46dbf64f289f2eb5670cbe52a9fd41f275
+      traits: Match the exact orange Tepig source with its oval yellow snout, black shoulder and ear markings,
+        four short feet and thin curled tail ending in a dark puff. Preserve the happy piglet face and
+        source body proportions.
+    pokeapi:official-artwork:501:
+      sha256: 480904e99ed485ba3c8fb5866bac1a2acee76dd6dcee1a1ad3e2aac706576fc7
+      traits: Match the exact white-and-blue Oshawott source with its dark-blue ears, orange oval nose,
+        three clear dark cheek freckles on each side, blue arms and feet, and the yellow shell held on
+        its pale belly. Keep the freckles and shell visibly separate from the face and body.
 pokemon:
   strategy: featured_from_scope
   count: auto_from_layout_columns
   row: bottom
   cutout_source: pokeapi_official_artwork
   fallback_candidates: []
-
 conditioning:
   identity_defaults:
-    neutral_rgb: [226, 224, 211]
+    neutral_rgb:
+    - 226
+    - 224
+    - 211
     canvas_px: 512
     min_subject_px: 150
     max_subject_px: 350

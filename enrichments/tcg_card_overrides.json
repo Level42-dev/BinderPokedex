@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "sets": {
+    "sv01": {
+      "cards": {
+        "257": {
+          "names": {
+            "de": "Basis-Elektro-Energie"
+          }
+        },
+        "258": {
+          "names": {
+            "de": "Basis-Kampf-Energie"
+          }
+        }
+      }
+    },
+    "sv02": {
+      "cards": {
+        "278": {
+          "names": {
+            "de": "Basis-Pflanzen-Energie"
+          }
+        },
+        "279": {
+          "names": {
+            "de": "Basis-Wasser-Energie"
+          }
+        }
+      }
+    },
+    "sv03": {
+      "cards": {
+        "230": {
+          "names": {
+            "de": "Basis-Feuer-Energie"
+          }
+        }
+      }
+    },
+    "sv06.5": {
+      "cards": {
+        "098": {
+          "names": {
+            "de": "Basis-Finsternis-Energie"
+          }
+        },
+        "099": {
+          "names": {
+            "de": "Basis-Metall-Energie"
+          }
+        }
+      }
+    },
+    "svp": {
+      "cards": {
+        "500": {
+          "names": {
+            "de": "Terapagos & Freunde",
+            "en": "Terapagos & Friends"
+          },
+          "available_languages": [
+            "de",
+            "en"
+          ],
+          "printed_number": null
+        }
+      }
+    }
+  }
+}

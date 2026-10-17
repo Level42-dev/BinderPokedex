@@ -18,6 +18,7 @@ from fonts import FontManager
 from text_renderer import TextRenderer
 from pdf_generator import PDFGenerator
 from constants import LANGUAGES
+from scripts.pdf.lib.rendering import CardRenderer
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -27,6 +28,31 @@ logger = logging.getLogger(__name__)
 def isolate_pdf_output(tmp_path, monkeypatch):
     """Keep legacy rendering tests out of the production output directory."""
     monkeypatch.setattr("pdf_generator.OUTPUT_DIR", tmp_path / "output")
+
+
+@pytest.mark.parametrize(
+    ("language", "name", "expected"),
+    [
+        ("fr", "Zoroark-ex de N", "Zoroark [EX_NEW] de N"),
+        ("es", "Zoroark ex de N", "Zoroark [EX_NEW] de N"),
+        ("it", "Zoroark-ex di N", "Zoroark [EX_NEW] di N"),
+        ("de", "Ns Zoroark", "Ns Zoroark [EX_NEW]"),
+        ("en", "N's Zoroark", "N's Zoroark [EX_NEW]"),
+        ("fr", "Exagide", "Exagide [EX_NEW]"),
+    ],
+)
+def test_trainer_owned_name_keeps_one_ex_at_its_localized_position(
+    language, name, expected,
+):
+    """An owner after the species must not produce a second, trailing ex."""
+    renderer = CardRenderer(language=language)
+
+    actual = renderer._construct_variant_name({
+        "name": {language: name},
+        "suffix": "[EX_NEW]",
+    })
+
+    assert actual == expected
 
 
 def test_pdf_generation_basic():

@@ -15,9 +15,9 @@ except ImportError:
     from constants import CARD_HEIGHT, CARD_WIDTH, PAGE_HEIGHT, PAGE_WIDTH
 
 
-PROJECT_URL = "https://github.com/Level42-dev/BinderPokedex"
+PROJECT_URL = "https://github.com/DerFlash/BinderPokedex"
 LICENSE_URL = "https://creativecommons.org/licenses/by-nc/4.0/"
-FOOTER_TEXT = "BinderPokedex | github.com/Level42-dev/BinderPokedex | Notices: final page"
+FOOTER_TEXT = "BinderPokedex | github.com/DerFlash/BinderPokedex | Notices: final page"
 
 
 def build_identity() -> tuple[str, str]:
@@ -85,7 +85,7 @@ def append_project_notice(canvas_obj, language: str) -> None:
     cursor = _paragraph(canvas_obj, "<b>BinderPokedex</b>", card_x, card_top - 5 * mm, card_width, 14, 17)
     card_blocks = [
         "Project design / Projektgestaltung:<br/>Björn Teichmann / BinderPokedex<br/>BinderPokedex Contributors",
-        "github.com/Level42-dev/BinderPokedex",
+        "github.com/DerFlash/BinderPokedex",
         "Marked, protected project design:<br/><b>CC BY-NC 4.0</b><br/>creativecommons.org/licenses/by-nc/4.0/",
         "Pokémon and other third-party material excluded. No endorsement.",
         "Keep credits; identify changes.<br/>As-is, without warranties (CC section 5).<br/>Details: LICENSE-CONTENT.md / NOTICE.md",

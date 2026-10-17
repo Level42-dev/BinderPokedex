@@ -8,6 +8,7 @@ Tests the transformation of TCG cards to target format, including:
 """
 
 import json
+import subprocess
 import sys
 import pytest
 from pathlib import Path
@@ -27,6 +28,26 @@ from scripts.poster_assets.poster_subject import (
 )
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+
+
+def test_transform_step_imports_without_prior_repository_path_bootstrap(tmp_path):
+    """The fetcher step must not depend on earlier imports adding repo root."""
+    fetcher_dir = REPO_ROOT / "scripts" / "fetcher"
+    code = (
+        "import sys\n"
+        f"sys.path.insert(0, {str(fetcher_dir)!r})\n"
+        f"sys.path = [path for path in sys.path if path != {str(REPO_ROOT)!r}]\n"
+        "import steps.transform_tcg_set\n"
+    )
+    result = subprocess.run(
+        [sys.executable, "-c", code],
+        cwd=tmp_path,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+
+    assert result.returncode == 0, result.stderr
 
 
 class TestVariantSuffixPrefixDetection:
@@ -177,6 +198,37 @@ class TestCardTransformation:
         assert card['name']['fr'] == 'Bulbizarre'
         assert 'suffix' not in card  # No suffix for base card
         assert 'prefix' not in card
+
+    @pytest.mark.parametrize(
+        ('pokemon_id', 'name', 'artwork_id'),
+        [
+            (901, 'Bloodmoon Ursaluna', 10272),
+            (646, 'Black Kyurem ex', 10022),
+            (1017, 'Hearthflame Mask Ogerpon ex', 10274),
+        ],
+    )
+    def test_transform_uses_exact_named_form_artwork(
+        self,
+        pokemon_id,
+        name,
+        artwork_id,
+    ):
+        cards = [{
+            'localId': '001',
+            'name': name,
+            'card_type': 'pokemon',
+            'pokemon_id': pokemon_id,
+            'types': ['Colorless'],
+            'name_en': name,
+        }]
+
+        [card] = self.step._transform_cards(cards)
+
+        assert card['image_url'] == PosterSubject(
+            pokemon_id,
+            artwork_id,
+        ).image_url
+        assert poster_subject_from_card(card)['official_artwork_id'] == artwork_id
     
     def test_transform_variant_pokemon_card(self, monkeypatch):
         """Test transformation of variant Pokemon card."""
@@ -213,6 +265,25 @@ class TestCardTransformation:
         # Variants as separate fields
         assert card['suffix'] == '[EX_NEW]'
         assert card['prefix'] == 'Mega'
+
+    def test_transform_retains_trainer_owner_while_extracting_ex_suffix(self):
+        cards = [{
+            'id': 'sv09-189',
+            'localId': '189',
+            'name': "N's Zoroark ex",
+            'card_type': 'pokemon',
+            'pokemon_id': 571,
+            'types': ['Darkness'],
+            'name_de': 'Ns Zoroark-ex',
+            'name_en': "N's Zoroark ex",
+            'available_languages': ['de', 'en'],
+        }]
+
+        [card] = self.step._transform_cards(cards)
+
+        assert card['name']['de'] == 'Ns Zoroark'
+        assert card['name']['en'] == "N's Zoroark"
+        assert card['suffix'] == '[EX_NEW]'
 
     def test_transform_corrected_mega_absol_never_requests_castform_mega(
         self,
@@ -278,6 +349,27 @@ class TestCardTransformation:
         assert card['image_url'] is None
         assert isinstance(card['name'], dict)
         assert card['name']['de'] == "Acerola's Mischief"
+
+    def test_transform_preserves_identity_languages_and_blank_number(self):
+        cards = [{
+            'id': 'svp-500',
+            'localId': '500',
+            'printed_number': None,
+            'available_languages': ['de', 'en'],
+            'name': 'Terapagos & Friends',
+            'card_type': 'pokemon',
+            'pokemon_id': 1024,
+            'types': ['Colorless'],
+            'name_de': 'Terapagos & Freunde',
+            'name_en': 'Terapagos & Friends',
+        }]
+
+        [card] = self.step._transform_cards(cards)
+
+        assert card['id'] == 'svp-500'
+        assert card['localId'] == '500'
+        assert card['printed_number'] is None
+        assert card['available_languages'] == ['de', 'en']
     
     def test_transform_multiple_cards(self):
         """Test transformation of multiple cards."""

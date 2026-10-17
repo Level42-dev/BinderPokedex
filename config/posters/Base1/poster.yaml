@@ -14,8 +14,26 @@ text_cells:
     max_height_ratio: 0.68
 
 title_logo:
-  file: logo.png
-  source: https://assets.tcgdex.net/en/base/base1/logo.png
+  files:
+    de: logo-de.png
+    en: logo.png
+    fr: logo.png
+    es: logo.png
+    it: logo.png
+    ja: logo.png
+    ko: logo.png
+    zh_hans: logo.png
+    zh_hant: logo.png
+  sources:
+    de: https://tcg.pokemon.com/assets/img/global/logos/de-de/tcg-logo-2x.png
+    en: https://assets.tcgdex.net/en/base/base1/logo.png
+    fr: https://assets.tcgdex.net/en/base/base1/logo.png
+    es: https://assets.tcgdex.net/en/base/base1/logo.png
+    it: https://assets.tcgdex.net/en/base/base1/logo.png
+    ja: https://assets.tcgdex.net/en/base/base1/logo.png
+    ko: https://assets.tcgdex.net/en/base/base1/logo.png
+    zh_hans: https://assets.tcgdex.net/en/base/base1/logo.png
+    zh_hant: https://assets.tcgdex.net/en/base/base1/logo.png
 
 pdf:
   enabled: true
@@ -54,10 +72,10 @@ artwork:
     vae: flux2-vae.safetensors
     vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
     mode: joint_scene
-    reference_mode: individual_spatial_joint
+    reference_mode: spatial_identity_joint
     seed: 260726503
     steps: 4
-    generation_megapixels: 1.0
+    generation_megapixels: 2.0
     output_dpi: 300
     output_method: lanczos
 

@@ -84,6 +84,25 @@ def test_build_manifest_can_exercise_planned_news_for_a_pr(tmp_path: Path, monke
     assert manifest["release_notes"]["summary"]["en"] == "Poster artwork"
 
 
+def test_v10_manifest_groups_anniversary_scopes_separately(tmp_path: Path, monkeypatch):
+    for directory in ("config/scopes", "config/release_notes", "data/output"):
+        (tmp_path / directory).mkdir(parents=True)
+    for scope in ("30C", "30CClassic"):
+        (tmp_path / "config/scopes" / f"{scope}.yaml").write_text(f"scope: {scope}\n")
+        (tmp_path / "data/output" / f"{scope}.json").write_text(
+            json.dumps({"sections": {"main": {"cards": []}}}), encoding="utf-8"
+        )
+    (tmp_path / "config/release_notes/v10.0.yaml").write_text("summary: {}\n")
+    monkeypatch.setattr(
+        "sys.argv",
+        ["build_manifest.py", "--tag", "v10.0", "--project-dir", str(tmp_path)],
+    )
+
+    assert build_manifest() == 0
+    manifest = json.loads((tmp_path / "release-manifest.json").read_text())
+    assert manifest["scope_groups"]["anniversary"] == ["30C", "30CClassic"]
+
+
 def test_v9_release_news_uses_collector_language_not_project_language():
     project_dir = Path(__file__).resolve().parents[2]
     notes = yaml.safe_load(
@@ -111,3 +130,48 @@ def test_v9_release_news_uses_collector_language_not_project_language():
         notes["whats_new"]["de"]["title"]
         == "Ein Motiv. Neun Karten. Dein Binder."
     )
+
+
+def test_v10_release_news_covers_the_collector_visible_refresh():
+    project_dir = Path(__file__).resolve().parents[2]
+    notes = yaml.safe_load(
+        (project_dir / "config/release_notes/v10.0.yaml").read_text(
+            encoding="utf-8"
+        )
+    )
+
+    assert notes["display_date"] == {
+        "en": "October 2026",
+        "de": "Oktober 2026",
+    }
+    assert (
+        notes["whats_new"]["en"]["title"]
+        == "30 Years. Complete Panoramas. Correct Card Lists."
+    )
+    assert (
+        notes["whats_new"]["de"]["title"]
+        == "30 Jahre. Alle Panoramen. Korrekte Kartenlisten."
+    )
+
+    copy = json.dumps(notes, ensure_ascii=False)
+    for required in (
+        "Dunkelnacht",
+        "Terapagos & Freunde",
+        "Ns Zoroark-ex",
+        "Schwarze Blitze",
+        "Weiße Flammen",
+        "Stellarkrone",
+        "30 Jahre",
+        "Klassische Sammlung",
+    ):
+        assert required in copy
+
+    for internal_term in (
+        "API",
+        "renderer",
+        "fallback",
+        "seed",
+        "ComfyUI",
+        "repository",
+    ):
+        assert internal_term.casefold() not in copy.casefold()

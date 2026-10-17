@@ -53,17 +53,17 @@ Technische Details: [vollständiges Changelog](CHANGELOG.md).
 - **1.025+ Pokémon** über alle 9 Generationen (Kanto → Paldea) im National Pokédex
 - **Offizielle Artwork** von PokéAPI und TCGdex - authentische Bilder aus Spielen und TCG
 - **3×3 Kartenlayout** (9 pro Seite) - perfekt für Standard-Binderblätter
-- **Poster-Panoramen aus neun Karten** für jedes aktuelle Set, jede
-  Pokédex-Generation und jedes EX-Kapitel
+- **Poster-Panoramen aus neun Karten** sowie saubere Set-Einleger für jedes
+  aktuelle Set, jede Pokédex-Generation und jedes EX-Kapitel
 - **Neu: Eigene Posterlayouts** ✨ – temporäre kompakte 2×2- oder breite
   4×3-Artworks im bestehenden A4-Druckraster erzeugen, ohne die mitgelieferten
   Release-PDFs oder Poster-Assets zu verändern
 - **Komplette TCG-Unterstützung** 🎴
   - **3 EX-Generationen:** ExGen1 (2003-2007), ExGen2 (2012-2016), ExGen3 (2023+)
   - **17 Karmesin-&-Purpur-Sets:** Komplette Karmesin & Purpur-Ära (SV01-SV10 + Spezial-Sets)
-  - **Mega-Evolution-Ära:** ME01, ME02, ME02.5, ME03, ME04, MEP
+  - **Mega-Evolution-Ära:** ME01, ME02, ME02.5, ME03, ME04, ME05, MEP
   - Auto-Discovery und Batch-Generierung
-- **Scope-basiertes System** mit 30 Scopes insgesamt
+- **Scope-basiertes System** mit 31 Scopes insgesamt
 - **Strukturierte PDFs** mit thematischen Trennern und Featured-Pokémon-Headern
 - **Modulare Pipeline** zum Daten-Fetching mit flexibler Konfiguration
 - **Druckfertig A4** - einfach laden, drucken und binden! 📎
@@ -121,7 +121,7 @@ cd BinderPokedex
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
-# Verfügbare Scopes anzeigen (30 gesamt: 1 Pokedex + 3 ExGen + 26 TCG Sets)
+# Verfügbare Scopes anzeigen (31 gesamt: 1 Pokedex + 3 ExGen + 27 TCG Sets)
 ls config/scopes/*.yaml
 
 # Daten für einen Scope holen

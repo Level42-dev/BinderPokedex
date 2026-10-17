@@ -33,6 +33,7 @@ def test_pull_request_release_check_is_read_only_and_never_publishes():
     assert candidate["uses"] == (
         "./.github/workflows/build-release.yml"
     )
+    assert candidate["with"]["release_notes_tag"] == "v10.0"
     condition = candidate["if"]
     assert "github.event_name == 'workflow_dispatch'" in condition
     assert "startsWith(github.head_ref, 'release/')" in condition
@@ -48,11 +49,27 @@ def test_reusable_release_build_only_creates_a_candidate_artifact():
 
     assert set(workflow["on"]) == {"workflow_call"}
     assert workflow["permissions"] == {"contents": "read"}
-    assert "validate_promoted_poster.py --all-enabled" in source
+    validation = next(
+        step for step in workflow["jobs"]["build"]["steps"]
+        if step.get("name") == "Validate promoted posters"
+    )
+    assert validation["run"].split() == [
+        "python",
+        "scripts/poster_assets/validate_promoted_poster.py",
+        "--all-enabled",
+        "--require-current-overlay",
+    ]
     assert "verify_release_candidate.py" in source
     assert "actions/upload-artifact@v4" in source
     assert "contents: write" not in source
     assert "softprops/action-gh-release" not in source
+
+
+def test_release_build_uses_verified_snapshot_instead_of_mutable_fetch():
+    source = (WORKFLOWS / "build-release.yml").read_text(encoding="utf-8")
+
+    assert "fetch.py --scope all" not in source
+    assert "verify_data_snapshot.py" in source
 
 
 def test_tag_release_reuses_candidate_build_before_publishing():
