@@ -66,13 +66,18 @@ are generated and reviewed locally, then promoted as versioned repository
 assets. The shared release build runs:
 
 ```bash
-python scripts/poster_assets/validate_promoted_poster.py --all-enabled
+python scripts/poster_assets/validate_promoted_poster.py --all-enabled --require-current-overlay
 ```
 
 after verifying the reviewed scope data and before generating PDFs. The build fails
 when an enabled bundle has missing files, provenance or manifest drift, changed
 prompt inputs, invalid source-pixel evidence, incorrect dimensions, or wrong
 print metadata.
+
+The release-only overlay gate compares current title-logo pixels and other
+localized overlay inputs with the promoted provenance. A changed remote logo
+stops the build before any PDF is generated; ordinary local validation can
+still report overlay drift while a corrected logo is reviewed.
 
 The normal PDF command then discovers every enabled legacy manifest and every
 enabled aggregate binding from `posters.yaml`, adds localized logo/text, slices

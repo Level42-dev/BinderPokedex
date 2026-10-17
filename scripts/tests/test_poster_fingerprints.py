@@ -2093,6 +2093,77 @@ def test_promotion_rebinds_overlay_and_validator_prefers_fingerprints(
         validator.validate("Example")
 
 
+def test_release_validation_rejects_changed_schema_two_overlay(
+    tmp_path,
+    monkeypatch,
+):
+    (
+        _repository,
+        _assets,
+        _output,
+        scope_dir,
+        candidate,
+        run_metadata,
+        _old_overlay,
+    ) = _promotion_fixture(tmp_path, monkeypatch)
+    promotion.promote(
+        "Example",
+        candidate,
+        language="en",
+        run_metadata_path=run_metadata,
+    )
+    assert validator.validate(
+        "Example", require_current_overlay=True,
+    )["overlay_fingerprint_current"] is True
+
+    manifest_path = scope_dir / "poster.yaml"
+    manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+    manifest["text_cells"]["set_info"]["max_width_ratio"] = 0.79
+    manifest_path.write_text(
+        yaml.safe_dump(manifest, sort_keys=False, allow_unicode=True),
+        encoding="utf-8",
+    )
+    assert validator.validate("Example")["overlay_fingerprint_current"] is False
+    with pytest.raises(ValueError, match="overlay fingerprint drift"):
+        validator.validate("Example", require_current_overlay=True)
+
+
+def test_release_validation_rejects_unpinned_title_logo(
+    tmp_path,
+    monkeypatch,
+):
+    (
+        _repository,
+        _assets,
+        _output,
+        scope_dir,
+        candidate,
+        run_metadata,
+        _old_overlay,
+    ) = _promotion_fixture(tmp_path, monkeypatch)
+    _artwork, _preview, _cards, provenance_path = promotion.promote(
+        "Example",
+        candidate,
+        language="en",
+        run_metadata_path=run_metadata,
+    )
+    promoted = load_json(provenance_path)
+    del promoted["run"]["inputs"]["overlay_fingerprint"]
+    provenance_path.write_text(json.dumps(promoted), encoding="utf-8")
+
+    Image.new("RGBA", (40, 20), "red").save(scope_dir / "logo.png")
+    manifest_path = scope_dir / "poster.yaml"
+    manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+    manifest["title_logo"] = {"file": "logo.png"}
+    manifest_path.write_text(
+        yaml.safe_dump(manifest, sort_keys=False, allow_unicode=True),
+        encoding="utf-8",
+    )
+    assert validator.validate("Example")["overlay_fingerprint_current"] is None
+    with pytest.raises(ValueError, match="lacks overlay fingerprint"):
+        validator.validate("Example", require_current_overlay=True)
+
+
 
 
 def test_promotion_rejects_preview_output_without_300dpi_metadata(

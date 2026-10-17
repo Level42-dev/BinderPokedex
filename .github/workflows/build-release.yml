@@ -56,7 +56,9 @@ jobs:
           --kind logos
 
       - name: Validate promoted posters
-        run: python scripts/poster_assets/validate_promoted_poster.py --all-enabled
+        run: >-
+          python scripts/poster_assets/validate_promoted_poster.py
+          --all-enabled --require-current-overlay
 
       - name: Generate all PDFs
         env:

@@ -423,7 +423,11 @@ def _validate_source_subjects(
                 )
 
 
-def validate(target: str | PosterBundle) -> dict[str, Any]:
+def validate(
+    target: str | PosterBundle,
+    *,
+    require_current_overlay: bool = False,
+) -> dict[str, Any]:
     bundle = (
         poster_bundle(target, poster_assets=POSTER_ASSETS)
         if isinstance(target, str)
@@ -626,6 +630,16 @@ def validate(target: str | PosterBundle) -> dict[str, Any]:
             recorded_overlay_fingerprint.get("sha256")
             == current_overlay_fingerprint["sha256"]
         )
+    if require_current_overlay and bundle.pdf_enabled:
+        if overlay_fingerprint_current is False:
+            raise ValueError(
+                f"Release poster has overlay fingerprint drift: {provenance_path}"
+            )
+        if overlay_fingerprint_current is None and manifest.get("title_logo"):
+            raise ValueError(
+                f"Release poster with title logo lacks overlay fingerprint: "
+                f"{provenance_path}"
+            )
 
     layout = build_generation_output_layout(
         manifest.get("layout", {}).get("name", "standard_3x3"),
@@ -804,6 +818,11 @@ def main() -> int:
         action="store_true",
         help="Validate every poster manifest with pdf.enabled set to true",
     )
+    parser.add_argument(
+        "--require-current-overlay",
+        action="store_true",
+        help="Reject changed or unpinned title-logo overlays in release builds",
+    )
     args = parser.parse_args()
 
     targets: list[str | PosterBundle] = (
@@ -812,7 +831,10 @@ def main() -> int:
         else [args.scope]
     )
     for target_value in targets:
-        _print_result(validate(target_value))
+        _print_result(validate(
+            target_value,
+            require_current_overlay=args.require_current_overlay,
+        ))
     if args.all_enabled:
         print(f"Validated {len(targets)} enabled poster bundle(s).")
     return 0

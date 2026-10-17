@@ -2,6 +2,7 @@
 
 Current v10.0 anniversary extension, 2026-10-16: `30C` and `30CClassic`
 each have a distinct, source-compared and agent-reviewed one-shot panorama.
+The operator visually approved both exact promoted candidates on 2026-10-17.
 The first attempts with a duplicated Feelinara or an edge-close Lugia tail
 were rejected; only accepted candidates C and B were promoted. Both new
 poster routes are PDF-enabled, independently validate at 2368×3268 px and

@@ -49,7 +49,16 @@ def test_reusable_release_build_only_creates_a_candidate_artifact():
 
     assert set(workflow["on"]) == {"workflow_call"}
     assert workflow["permissions"] == {"contents": "read"}
-    assert "validate_promoted_poster.py --all-enabled" in source
+    validation = next(
+        step for step in workflow["jobs"]["build"]["steps"]
+        if step.get("name") == "Validate promoted posters"
+    )
+    assert validation["run"].split() == [
+        "python",
+        "scripts/poster_assets/validate_promoted_poster.py",
+        "--all-enabled",
+        "--require-current-overlay",
+    ]
     assert "verify_release_candidate.py" in source
     assert "actions/upload-artifact@v4" in source
     assert "contents: write" not in source

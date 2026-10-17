@@ -1,8 +1,10 @@
 # 30 Jahre panoramas · v10.0 candidate
 
-On 2026-10-16 the two newly published anniversary scopes were reviewed as
-separate 3×3 panoramas. This is an **agent visual review**, not a claim of human
-approval. The original raw output, complete remote `run.json`, `comfyui.log`,
+On 2026-10-16 the two newly added anniversary scopes were reviewed as
+separate 3×3 panoramas by the agent. On 2026-10-17 the operator explicitly
+approved both exact promoted candidates shown below. That later visual
+approval does not itself approve code changes or publish a release. The
+original raw output, complete remote `run.json`, `comfyui.log`,
 every output image, source cutouts, deterministic print master, localized
 preview, and nine physical card crops per scope remain in the ignored local
 review workspace. No connection settings or downloaded source assets are
