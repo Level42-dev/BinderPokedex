@@ -7,7 +7,7 @@ Print 1,025+ Pokémon across 9 generations in 9 languages. All variants, all for
 [![Code: MIT](https://img.shields.io/badge/Code-MIT-yellow.svg)](LICENSE-CODE)
 [![Selected content: CC BY-NC 4.0](https://img.shields.io/badge/Selected_content-CC_BY--NC_4.0-lightgrey.svg)](LICENSE-CONTENT.md)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
-![v9.0](https://img.shields.io/badge/version-v9.0-green.svg)
+![v10.0](https://img.shields.io/badge/version-v10.0-green.svg)
 
 ---
 
@@ -29,18 +29,17 @@ This Primal start page comes straight from BinderPokedex and is ready to print
 as nine physical cards.
 
 <!-- release-news:start -->
-### New in v9.0: One Artwork. Nine Cards. Your Binder.
+### New in v10.0: 30 Years. Complete Panoramas. Correct Card Lists.
 
-Turn your binder into a showcase: every collection now opens with a unique Pokémon panorama spanning nine card pockets.
+The 30 Years collections join corrected card lists, new Mega Evolution sets, and a panorama for every binder section.
 
-- A continuous scene unfolds across nine card pockets and turns the first page into a true centerpiece.
-- Every set, Pokédex generation, and EX chapter opens with artwork created for its own world and featured Pokémon.
-- Each card works on its own; together, all nine reveal the complete panorama.
-- Set logos and key collection facts appear in your selected language.
-- Cut and sleeve the nine cards, or keep the same artwork as a full-page print.
-- Download, print, and slide it into your binder — nothing else required.
+- 30 Jahre and its separate Klassische Sammlung now have complete card lists and their own anniversary panoramas. The available German, English, French, Spanish, and Italian editions keep their original card numbers.
+- Every included collection and section opens with a panorama, including Stellarkrone and the newest Mega Evolution set Dunkelnacht.
+- German Basic Energy labels match the physical cards, and trainer-owned names such as Ns Zoroark-ex remain intact in their TCG sets.
+- The German promo selection keeps original numbers: 216 numbered SVP cards plus the unnumbered Terapagos & Freunde, and 88 MEP cards.
+- Schwarze Blitze and Weiße Flammen use their German set logos, while long Trainer card names stay inside their cutting areas.
 
-**[Explore v9.0 and download the PDFs](https://github.com/DerFlash/BinderPokedex/releases/tag/v9.0)**
+**[Explore v10.0 and download the PDFs](https://github.com/Level42-dev/BinderPokedex/releases/tag/v10.0)**
 
 Technical details: [full changelog](CHANGELOG.md).
 <!-- release-news:end -->
@@ -63,7 +62,7 @@ Technical details: [full changelog](CHANGELOG.md).
   - **17 Scarlet & Violet Sets:** Full Scarlet & Violet era (SV01-SV10 + specials)
   - **Mega Evolution Era:** ME01, ME02, ME02.5, ME03, ME04, ME05, MEP
   - Auto-discovery and batch generation
-- **Scope-Based System** with 31 total scopes
+- **Scope-Based System** with 33 total scopes
 - **Sectioned PDFs** with themed dividers and featured Pokémon headers
 - **Modular pipeline** for data fetching with flexible configuration
 - **Print-ready A4** - just download, print, and bind! 📎
@@ -79,18 +78,18 @@ Check the notices supplied with your download. The code and content have
 change valid permissions for earlier releases, including the v9.0 files linked
 below. Download availability and personal use do not clear third-party rights.
 
-**Latest (v9.0):** [All 167 PDFs](https://github.com/DerFlash/BinderPokedex/releases/tag/v9.0) ✨ *New: Turn your binder into a showcase: every collection now opens with a unique Pokémon panorama spanning nine card pockets!*
+**Latest (v10.0):** [All 178 PDFs](https://github.com/Level42-dev/BinderPokedex/releases/tag/v10.0) ✨ *New: The 30 Years collections join corrected card lists, new Mega Evolution sets, and a panorama for every binder section!*
 
-**By Language (v9.0):**
-🇩🇪 [Deutsch](https://github.com/DerFlash/BinderPokedex/releases/download/v9.0/binder-pokedex-de.zip) |
-🇬🇧 [English](https://github.com/DerFlash/BinderPokedex/releases/download/v9.0/binder-pokedex-en.zip) |
-🇫🇷 [Français](https://github.com/DerFlash/BinderPokedex/releases/download/v9.0/binder-pokedex-fr.zip) |
-🇪🇸 [Español](https://github.com/DerFlash/BinderPokedex/releases/download/v9.0/binder-pokedex-es.zip) |
-🇮🇹 [Italiano](https://github.com/DerFlash/BinderPokedex/releases/download/v9.0/binder-pokedex-it.zip) |
-🇯🇵 [日本語](https://github.com/DerFlash/BinderPokedex/releases/download/v9.0/binder-pokedex-ja.zip) |
-🇰🇷 [한국어](https://github.com/DerFlash/BinderPokedex/releases/download/v9.0/binder-pokedex-ko.zip) |
-🇨🇳 [简体中文](https://github.com/DerFlash/BinderPokedex/releases/download/v9.0/binder-pokedex-zh_hans.zip) |
-🇹🇼 [繁體中文](https://github.com/DerFlash/BinderPokedex/releases/download/v9.0/binder-pokedex-zh_hant.zip)
+**By Language (v10.0):**
+🇩🇪 [Deutsch](https://github.com/DerFlash/BinderPokedex/releases/download/v10.0/binder-pokedex-de.zip) |
+🇬🇧 [English](https://github.com/DerFlash/BinderPokedex/releases/download/v10.0/binder-pokedex-en.zip) |
+🇫🇷 [Français](https://github.com/DerFlash/BinderPokedex/releases/download/v10.0/binder-pokedex-fr.zip) |
+🇪🇸 [Español](https://github.com/DerFlash/BinderPokedex/releases/download/v10.0/binder-pokedex-es.zip) |
+🇮🇹 [Italiano](https://github.com/DerFlash/BinderPokedex/releases/download/v10.0/binder-pokedex-it.zip) |
+🇯🇵 [日本語](https://github.com/DerFlash/BinderPokedex/releases/download/v10.0/binder-pokedex-ja.zip) |
+🇰🇷 [한국어](https://github.com/DerFlash/BinderPokedex/releases/download/v10.0/binder-pokedex-ko.zip) |
+🇨🇳 [简体中文](https://github.com/DerFlash/BinderPokedex/releases/download/v10.0/binder-pokedex-zh_hans.zip) |
+🇹🇼 [繁體中文](https://github.com/DerFlash/BinderPokedex/releases/download/v10.0/binder-pokedex-zh_hant.zip)
 ---
 
 ## 📝 Release History
@@ -136,7 +135,7 @@ cd BinderPokedex
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
-# List available scopes (31 total: 1 Pokedex + 3 ExGen + 27 TCG sets)
+# List available scopes (33 total: 1 Pokedex + 3 ExGen + 29 TCG sets)
 ls config/scopes/*.yaml
 
 # Fetch data for a scope
