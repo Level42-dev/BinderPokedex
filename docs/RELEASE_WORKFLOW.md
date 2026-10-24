@@ -132,6 +132,10 @@ it is not hard-coded in the workflow.
 
 After publication, `.github/workflows/announce-release.yml` consumes the
 release manifest and prepares the separate README announcement pull request.
+It does not enable auto-merge. The announcement remains open until its final
+head commit has been checked, `@codex review` has completed without unresolved
+findings, and the operator has explicitly approved that commit for a manual
+merge. The agent checks the head SHA again immediately before merging.
 
 ## Release-candidate verification
 

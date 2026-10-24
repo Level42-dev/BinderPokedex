@@ -27,7 +27,7 @@ def test_announcement_updates_current_readmes_once(tmp_path, monkeypatch):
     manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
     args = [
         "announce_release.py", "--manifest", str(manifest_path),
-        "--release-url", "https://github.com/DerFlash/BinderPokedex/releases/tag/v9.0",
+        "--release-url", "https://github.com/Level42-dev/BinderPokedex/releases/tag/v9.0",
         "--project-dir", str(tmp_path),
     ]
 
@@ -48,6 +48,13 @@ def test_announcement_updates_current_readmes_once(tmp_path, monkeypatch):
     assert "Technische Details: [vollständiges Changelog](CHANGELOG.md)." in readme_de
     assert "**Latest (v9.0):** [All 167 PDFs]" in readme_en
     assert "**Aktuelle Version (v9.0):** [Alle 167 PDFs]" in readme_de
+    for language in ("de", "en", "fr", "es", "it", "ja", "ko", "zh_hans", "zh_hant"):
+        expected = (
+            "https://github.com/Level42-dev/BinderPokedex/releases/download/v9.0/"
+            f"binder-pokedex-{language}.zip"
+        )
+        assert expected in readme_en
+        assert expected in readme_de
     assert "*New: Poster artwork!*" in readme_en
     assert "*Neu: Poster-Artwork!*" in readme_de
     assert ".!*" not in readme_en

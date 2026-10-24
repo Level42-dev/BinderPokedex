@@ -1,5 +1,13 @@
 # Repository agent guidance
 
+## Pull request review and merge
+
+Keep auto-merge disabled. For a PR you intend to merge, check the applicable
+tests and request `@codex review` on the final head commit. Check for unresolved
+review findings and confirm the PR head has not changed. Merge only after the
+operator explicitly approves that PR and final commit in the chat; then read
+back the merged state. A clean Codex review alone is not merge authorization.
+
 ## Poster artwork generation
 
 Before starting GPU-intensive poster artwork generation, resolve the active

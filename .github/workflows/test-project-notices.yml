@@ -32,6 +32,7 @@ jobs:
           python -m pytest -q
           scripts/tests/test_project_notices.py
           scripts/tests/test_release_candidate.py
+          scripts/tests/test_announce_release.py
           scripts/tests/test_release_workflows.py
           scripts/tests/test_pdf_rendering.py
           scripts/tests/test_pdf_generation_options.py

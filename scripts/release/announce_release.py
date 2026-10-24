@@ -54,18 +54,27 @@ def release_url(manifest: dict[str, Any], explicit_url: str | None) -> str:
     if explicit_url:
         return explicit_url
     tag = manifest["tag"]
-    return f"https://github.com/DerFlash/BinderPokedex/releases/tag/{tag}"
+    return f"https://github.com/Level42-dev/BinderPokedex/releases/tag/{tag}"
 
 
-def download_url(tag: str, asset: str) -> str:
-    return f"https://github.com/DerFlash/BinderPokedex/releases/download/{tag}/{asset}"
+def download_url(tag: str, asset: str, release_page_url: str) -> str:
+    release_suffix = f"/releases/tag/{tag}"
+    if not release_page_url.endswith(release_suffix):
+        raise ValueError(f"Unexpected release URL: {release_page_url}")
+    repository_url = release_page_url[: -len(release_suffix)]
+    return f"{repository_url}/releases/download/{tag}/{asset}"
 
 
-def language_links(tag: str, links: list[tuple[str, str, str]], separator: str) -> str:
+def language_links(
+    tag: str,
+    links: list[tuple[str, str, str]],
+    separator: str,
+    release_page_url: str,
+) -> str:
     parts = []
     for language, flag, label in links:
         asset = f"binder-pokedex-{language}.zip"
-        parts.append(f"{flag} [{label}]({download_url(tag, asset)})")
+        parts.append(f"{flag} [{label}]({download_url(tag, asset, release_page_url)})")
     return separator.join(parts)
 
 
@@ -157,7 +166,7 @@ def update_readme_en(path: Path, manifest: dict[str, Any], explicit_url: str | N
     text = replace_one(
         text,
         r"\*\*By Language \(v[^)]+\):\*\*\n(?:.+\n){8}.+",
-        f"**By Language ({tag}):**\n{language_links(tag, LANGUAGE_LINKS_EN, language_separator)}",
+        f"**By Language ({tag}):**\n{language_links(tag, LANGUAGE_LINKS_EN, language_separator, release_url(manifest, explicit_url))}",
         path,
     )
     text = replace_release_news(text, path, "en", manifest, explicit_url)
@@ -192,7 +201,7 @@ def update_readme_de(path: Path, manifest: dict[str, Any], explicit_url: str | N
     text = replace_one(
         text,
         r"\*\*Nach Sprache \(v[^)]+\):\*\* .+",
-        f"**Nach Sprache ({tag}):** {language_links(tag, LANGUAGE_LINKS_DE, ' | ')}",
+        f"**Nach Sprache ({tag}):** {language_links(tag, LANGUAGE_LINKS_DE, ' | ', release_url(manifest, explicit_url))}",
         path,
     )
     text = replace_release_news(text, path, "de", manifest, explicit_url)
