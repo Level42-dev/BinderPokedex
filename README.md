@@ -81,15 +81,15 @@ below. Download availability and personal use do not clear third-party rights.
 **Latest (v10.0):** [All 178 PDFs](https://github.com/Level42-dev/BinderPokedex/releases/tag/v10.0) ✨ *New: The 30 Years collections join corrected card lists, new Mega Evolution sets, and a panorama for every binder section!*
 
 **By Language (v10.0):**
-🇩🇪 [Deutsch](https://github.com/DerFlash/BinderPokedex/releases/download/v10.0/binder-pokedex-de.zip) |
-🇬🇧 [English](https://github.com/DerFlash/BinderPokedex/releases/download/v10.0/binder-pokedex-en.zip) |
-🇫🇷 [Français](https://github.com/DerFlash/BinderPokedex/releases/download/v10.0/binder-pokedex-fr.zip) |
-🇪🇸 [Español](https://github.com/DerFlash/BinderPokedex/releases/download/v10.0/binder-pokedex-es.zip) |
-🇮🇹 [Italiano](https://github.com/DerFlash/BinderPokedex/releases/download/v10.0/binder-pokedex-it.zip) |
-🇯🇵 [日本語](https://github.com/DerFlash/BinderPokedex/releases/download/v10.0/binder-pokedex-ja.zip) |
-🇰🇷 [한국어](https://github.com/DerFlash/BinderPokedex/releases/download/v10.0/binder-pokedex-ko.zip) |
-🇨🇳 [简体中文](https://github.com/DerFlash/BinderPokedex/releases/download/v10.0/binder-pokedex-zh_hans.zip) |
-🇹🇼 [繁體中文](https://github.com/DerFlash/BinderPokedex/releases/download/v10.0/binder-pokedex-zh_hant.zip)
+🇩🇪 [Deutsch](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.0/binder-pokedex-de.zip) |
+🇬🇧 [English](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.0/binder-pokedex-en.zip) |
+🇫🇷 [Français](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.0/binder-pokedex-fr.zip) |
+🇪🇸 [Español](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.0/binder-pokedex-es.zip) |
+🇮🇹 [Italiano](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.0/binder-pokedex-it.zip) |
+🇯🇵 [日本語](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.0/binder-pokedex-ja.zip) |
+🇰🇷 [한국어](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.0/binder-pokedex-ko.zip) |
+🇨🇳 [简体中文](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.0/binder-pokedex-zh_hans.zip) |
+🇹🇼 [繁體中文](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.0/binder-pokedex-zh_hant.zip)
 ---
 
 ## 📝 Release History

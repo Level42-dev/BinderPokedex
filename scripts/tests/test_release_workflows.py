@@ -86,3 +86,19 @@ def test_tag_release_reuses_candidate_build_before_publishing():
     assert publish["permissions"] == {"contents": "write"}
     assert "actions/download-artifact@v4" in source
     assert "softprops/action-gh-release@v2" in source
+
+
+def test_release_announcement_creates_a_pr_without_scheduling_a_merge():
+    workflow = _load_workflow("announce-release.yml")
+    steps = workflow["jobs"]["announce"]["steps"]
+    source = (WORKFLOWS / "announce-release.yml").read_text(encoding="utf-8")
+
+    assert any("peter-evans/create-pull-request" in step.get("uses", "") for step in steps)
+    assert "gh pr merge" not in source
+
+
+def test_notices_ci_exercises_announcement_links():
+    workflow = _load_workflow("test-project-notices.yml")
+    run = workflow["jobs"]["test"]["steps"][-1]["run"]
+
+    assert "scripts/tests/test_announce_release.py" in run
