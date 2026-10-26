@@ -2276,6 +2276,543 @@
           "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/893.png"
         },
         {
+          "id": "mep-089",
+          "localId": "089",
+          "printed_number": "089",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Zeraora"
+          },
+          "type": "pokemon",
+          "pokemon_id": 807,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10319.png",
+          "suffix": "[EX_NEW]",
+          "prefix": "Mega"
+        },
+        {
+          "id": "mep-090",
+          "localId": "090",
+          "printed_number": "090",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Darkrai"
+          },
+          "type": "pokemon",
+          "pokemon_id": 491,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10312.png",
+          "suffix": "[EX_NEW]",
+          "prefix": "Mega"
+        },
+        {
+          "id": "mep-091",
+          "localId": "091",
+          "printed_number": "091",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Dragonite"
+          },
+          "type": "pokemon",
+          "pokemon_id": 149,
+          "types": [
+            "Dragon"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10281.png",
+          "suffix": "[EX_NEW]",
+          "prefix": "Mega"
+        },
+        {
+          "id": "mep-092",
+          "localId": "092",
+          "printed_number": "092",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Paradise Resort"
+          },
+          "type": "trainer",
+          "trainer_type": "Stadium",
+          "types": [],
+          "pokemon_id": null,
+          "image_url": "images/special_cards/stadium.png"
+        },
+        {
+          "id": "mep-093",
+          "localId": "093",
+          "printed_number": "093",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
+          "id": "mep-094",
+          "localId": "094",
+          "printed_number": "094",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Alolan Exeggutor"
+          },
+          "type": "pokemon",
+          "pokemon_id": 103,
+          "types": [
+            "Grass"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10114.png"
+        },
+        {
+          "id": "mep-095",
+          "localId": "095",
+          "printed_number": "095",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Lucario"
+          },
+          "type": "pokemon",
+          "pokemon_id": 448,
+          "types": [
+            "Fighting"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png"
+        },
+        {
+          "id": "mep-096",
+          "localId": "096",
+          "printed_number": "096",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Moltres"
+          },
+          "type": "pokemon",
+          "pokemon_id": 146,
+          "types": [
+            "Fire"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/146.png"
+        },
+        {
+          "id": "mep-097",
+          "localId": "097",
+          "printed_number": "097",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Articuno"
+          },
+          "type": "pokemon",
+          "pokemon_id": 144,
+          "types": [
+            "Water"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/144.png"
+        },
+        {
+          "id": "mep-098",
+          "localId": "098",
+          "printed_number": "098",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Zapdos"
+          },
+          "type": "pokemon",
+          "pokemon_id": 145,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/145.png"
+        },
+        {
+          "id": "mep-099",
+          "localId": "099",
+          "printed_number": "099",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Greninja"
+          },
+          "type": "pokemon",
+          "pokemon_id": 658,
+          "types": [
+            "Water"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/658.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "mep-100",
+          "localId": "100",
+          "printed_number": "100",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Sylveon"
+          },
+          "type": "pokemon",
+          "pokemon_id": 700,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/700.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "mep-101",
+          "localId": "101",
+          "printed_number": "101",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Nidorina"
+          },
+          "type": "pokemon",
+          "pokemon_id": 30,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/30.png"
+        },
+        {
+          "id": "mep-102",
+          "localId": "102",
+          "printed_number": "102",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Victini"
+          },
+          "type": "pokemon",
+          "pokemon_id": 494,
+          "types": [
+            "Fire"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/494.png"
+        },
+        {
+          "id": "mep-103",
+          "localId": "103",
+          "printed_number": "103",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Zeraora"
+          },
+          "type": "pokemon",
+          "pokemon_id": 807,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/807.png"
+        },
+        {
+          "id": "mep-104",
+          "localId": "104",
+          "printed_number": "104",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Mewtwo"
+          },
+          "type": "pokemon",
+          "pokemon_id": 150,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png"
+        },
+        {
+          "id": "mep-105",
+          "localId": "105",
+          "printed_number": "105",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Mew"
+          },
+          "type": "pokemon",
+          "pokemon_id": 151,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png"
+        },
+        {
+          "id": "mep-106",
+          "localId": "106",
+          "printed_number": "106",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Ditto"
+          },
+          "type": "pokemon",
+          "pokemon_id": 132,
+          "types": [
+            "Colorless"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png"
+        },
+        {
+          "id": "mep-107",
+          "localId": "107",
+          "printed_number": "107",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "mep-108",
+          "localId": "108",
+          "printed_number": "108",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Espeon"
+          },
+          "type": "pokemon",
+          "pokemon_id": 196,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/196.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "mep-109",
+          "localId": "109",
+          "printed_number": "109",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "mep-110",
+          "localId": "110",
+          "printed_number": "110",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Umbreon"
+          },
+          "type": "pokemon",
+          "pokemon_id": 197,
+          "types": [
+            "Darkness"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/197.png",
+          "suffix": "[EX_NEW]"
+        },
+        {
+          "id": "mep-111",
+          "localId": "111",
+          "printed_number": "111",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Masquerain"
+          },
+          "type": "pokemon",
+          "pokemon_id": 284,
+          "types": [
+            "Grass"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/284.png"
+        },
+        {
+          "id": "mep-112",
+          "localId": "112",
+          "printed_number": "112",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Magmortar"
+          },
+          "type": "pokemon",
+          "pokemon_id": 467,
+          "types": [
+            "Fire"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/467.png"
+        },
+        {
+          "id": "mep-113",
+          "localId": "113",
+          "printed_number": "113",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Enamorus"
+          },
+          "type": "pokemon",
+          "pokemon_id": 905,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/905.png"
+        },
+        {
+          "id": "mep-114",
+          "localId": "114",
+          "printed_number": "114",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Kommo-o"
+          },
+          "type": "pokemon",
+          "pokemon_id": 784,
+          "types": [
+            "Dragon"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/784.png"
+        },
+        {
+          "id": "mep-115",
+          "localId": "115",
+          "printed_number": "115",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Spritzee"
+          },
+          "type": "pokemon",
+          "pokemon_id": 682,
+          "types": [
+            "Psychic"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/682.png"
+        },
+        {
+          "id": "mep-116",
+          "localId": "116",
+          "printed_number": "116",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Seel"
+          },
+          "type": "pokemon",
+          "pokemon_id": 86,
+          "types": [
+            "Water"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/86.png"
+        },
+        {
+          "id": "mep-117",
+          "localId": "117",
+          "printed_number": "117",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Kyogre"
+          },
+          "type": "pokemon",
+          "pokemon_id": 382,
+          "types": [
+            "Water"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/382.png"
+        },
+        {
+          "id": "mep-120",
+          "localId": "120",
+          "printed_number": "120",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Celebratory Fanfare"
+          },
+          "type": "trainer",
+          "trainer_type": "Stadium",
+          "types": [],
+          "pokemon_id": null,
+          "image_url": "images/special_cards/stadium.png"
+        },
+        {
+          "id": "mep-131",
+          "localId": "131",
+          "printed_number": "131",
+          "available_languages": [
+            "en"
+          ],
+          "name": {
+            "en": "Pokémon RUN Pikachu"
+          },
+          "type": "pokemon",
+          "pokemon_id": 25,
+          "types": [
+            "Lightning"
+          ],
+          "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        },
+        {
           "id": "mep-Museum",
           "localId": "Museum",
           "printed_number": "Museum",

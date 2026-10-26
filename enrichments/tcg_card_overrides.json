@@ -66,6 +66,74 @@
           "printed_number": null
         }
       }
+    },
+    "mep": {
+      "cards": {
+        "005": {
+          "names": {
+            "de": "Driftlon",
+            "fr": "Baudrive",
+            "es": "Drifloon",
+            "it": "Drifloon"
+          }
+        },
+        "006": {
+          "names": {
+            "de": "Drifzepeli",
+            "fr": "Grodrive",
+            "es": "Drifblim",
+            "it": "Drifblim"
+          }
+        },
+        "018": {
+          "names": {
+            "de": "Waumboll",
+            "fr": "Doudouvet",
+            "es": "Cottonee",
+            "it": "Cottonee"
+          }
+        },
+        "019": {
+          "names": {
+            "de": "Elfun",
+            "fr": "Farfaduvet",
+            "es": "Whimsicott",
+            "it": "Whimsicott"
+          }
+        },
+        "028": {
+          "names": {
+            "de": "Festliche Fanfare",
+            "fr": "Fanfare de Fête",
+            "es": "Algarabía Celebratoria",
+            "it": "Fanfara di Celebrazione"
+          }
+        },
+        "068": {
+          "names": {
+            "de": "Makuhita",
+            "fr": "Makuhita",
+            "es": "Makuhita",
+            "it": "Makuhita"
+          }
+        },
+        "078": {
+          "names": {
+            "de": "Toxel",
+            "fr": "Toxizap",
+            "es": "Toxel",
+            "it": "Toxel"
+          }
+        },
+        "086": {
+          "names": {
+            "de": "Flegmon",
+            "fr": "Ramoloss",
+            "es": "Slowpoke",
+            "it": "Slowpoke"
+          }
+        }
+      }
     }
   }
 }

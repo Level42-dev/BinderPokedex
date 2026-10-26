@@ -2,7 +2,7 @@
   "set_id": "mep",
   "source": "Bulbapedia",
   "source_url": "https://bulbapedia.bulbagarden.net/wiki/MEP_Black_Star_Promos_(TCG)",
-  "date_fetched": "2026-04-01T18:22:40.859819+00:00",
+  "date_fetched": "2026-10-26T12:21:00.775188+00:00",
   "from_card": 11,
   "cards": [
     {
@@ -620,6 +620,118 @@
       ],
       "dexId": [
         5
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-111",
+      "localId": "111",
+      "name": "Masquerain",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Grass"
+      ],
+      "dexId": [
+        284
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-112",
+      "localId": "112",
+      "name": "Magmortar",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        467
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-113",
+      "localId": "113",
+      "name": "Enamorus",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Psychic"
+      ],
+      "dexId": [
+        905
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-114",
+      "localId": "114",
+      "name": "Kommo-o",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Dragon"
+      ],
+      "dexId": [
+        784
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-115",
+      "localId": "115",
+      "name": "Spritzee",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Psychic"
+      ],
+      "dexId": [
+        682
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-116",
+      "localId": "116",
+      "name": "Seel",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Water"
+      ],
+      "dexId": [
+        86
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-117",
+      "localId": "117",
+      "name": "Kyogre",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Water"
+      ],
+      "dexId": [
+        382
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-131",
+      "localId": "131",
+      "name": "Pokémon RUN Pikachu",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Lightning"
+      ],
+      "dexId": [
+        25
       ],
       "trainerType": ""
     }

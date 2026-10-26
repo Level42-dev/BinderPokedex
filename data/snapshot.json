@@ -1,6 +1,6 @@
 {
-  "boundary": "2026-10-16",
-  "fetched_at": "2026-10-16T19:09:03Z",
+  "boundary": "2026-10-26",
+  "fetched_at": "2026-10-26T12:23:11Z",
   "file_count": 67,
   "files": [
     {
@@ -75,8 +75,8 @@
     },
     {
       "path": "data/output/MEP.json",
-      "sha256": "d7a72e603ba1d5448c288c24e9882d6c2a7b26a990255f44fbbc9869a0d17107",
-      "size_bytes": 64161
+      "sha256": "11b4665e966d667fb0d38619672643d6b2e63f0b008008bac4c1c2c639712849",
+      "size_bytes": 79315
     },
     {
       "path": "data/output/Pokedex.json",
@@ -225,13 +225,13 @@
     },
     {
       "path": "data/source/mep.json",
-      "sha256": "0f580f72063b48ea181a866c9b0695756f86bf9268d4f29ee90a678e13c0810a",
-      "size_bytes": 21871
+      "sha256": "d8be23dad2a4f5d532c138472d65c5769c108142f04f04f4bf3df48e93f96574",
+      "size_bytes": 27364
     },
     {
       "path": "data/source/mep_supplement.json",
-      "sha256": "85897f8e008c9ecc51da3d03bba736e65335a1ecec1f4b91fe12aad896436658",
-      "size_bytes": 10984
+      "sha256": "709ef96e627f0a7e7af14f0a9de978846da727c487e4dfe59619790e62a20ef0",
+      "size_bytes": 12903
     },
     {
       "path": "data/source/pokedex.json",

@@ -17,8 +17,8 @@
     }
   },
   "poster_id": "MEP",
-  "promoted_at": "2026-09-24T07:13:49.858984+00:00",
-  "review_language": "de",
+  "promoted_at": "2026-10-26T12:23:03.167790+00:00",
+  "review_language": "en",
   "run": {
     "created_at": "2026-09-22T21:47:03.256108+00:00",
     "generation": {
@@ -289,7 +289,7 @@
             "en": {
               "information": [
                 "MEP Black Star Promos",
-                "89 cards",
+                "120 cards",
                 "Released",
                 "September 26, 2025"
               ],
@@ -435,7 +435,7 @@
           "text_content": {}
         },
         "schema_version": 1,
-        "sha256": "9985a7a6a78614e78064785f278cb26527dbd31a434fd54a51160eae90dc659e"
+        "sha256": "cbf3c703c2a50101a0c2097844e6395d930f0963c78e5cebd9f01eb234e0d019"
       },
       "prompt": {
         "bytes": 4777,

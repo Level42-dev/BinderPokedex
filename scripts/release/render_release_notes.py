@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Any
 
 
-REPOSITORY = "DerFlash/BinderPokedex"
+REPOSITORY = "Level42-dev/BinderPokedex"
 LANGUAGE_LABELS = {
     "de": ("🇩🇪", "Deutsch"),
     "en": ("🇬🇧", "English"),
