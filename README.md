@@ -7,7 +7,7 @@ Print 1,025+ Pokémon across 9 generations in 9 languages. All variants, all for
 [![Code: MIT](https://img.shields.io/badge/Code-MIT-yellow.svg)](LICENSE-CODE)
 [![Selected content: CC BY-NC 4.0](https://img.shields.io/badge/Selected_content-CC_BY--NC_4.0-lightgrey.svg)](LICENSE-CONTENT.md)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
-![v10.0](https://img.shields.io/badge/version-v10.0-green.svg)
+![v10.1](https://img.shields.io/badge/version-v10.1-green.svg)
 
 ---
 
@@ -29,17 +29,16 @@ This Primal start page comes straight from BinderPokedex and is ready to print
 as nine physical cards.
 
 <!-- release-news:start -->
-### New in v10.0: 30 Years. Complete Panoramas. Correct Card Lists.
+### New in v10.1: 31 More MEP Promos for Your Binder
 
-The 30 Years collections join corrected card lists, new Mega Evolution sets, and a panorama for every binder section.
+The English MEP promo collection grows to 120 entries, with original promo numbers and the existing localized collections preserved.
 
-- 30 Jahre and its separate Klassische Sammlung now have complete card lists and their own anniversary panoramas. The available German, English, French, Spanish, and Italian editions keep their original card numbers.
-- Every included collection and section opens with a panorama, including Stellarkrone and the newest Mega Evolution set Dunkelnacht.
-- German Basic Energy labels match the physical cards, and trainer-owned names such as Ns Zoroark-ex remain intact in their TCG sets.
-- The German promo selection keeps original numbers: 216 numbered SVP cards plus the unnumbered Terapagos & Freunde, and 88 MEP cards.
-- Schwarze Blitze and Weiße Flammen use their German set logos, while long Trainer card names stay inside their cutting areas.
+- The English MEP collection grows from 89 to 120 entries, including Mega Zeraora ex, Mega Darkrai ex, Mega Dragonite ex, the four Delta Reign prerelease promos, and Pokémon RUN Pikachu #131.
+- Each insert keeps its original promo number, including gaps between confirmed cards. The English panorama opening now shows the matching 120-card count.
+- German, French, Spanish, and Italian collections keep their existing 88 cards. New entries are included in English until their localized editions are confirmed.
+- The collection also includes confirmed promos announced for upcoming products; inclusion does not mean every product is already on sale.
 
-**[Explore v10.0 and download the PDFs](https://github.com/Level42-dev/BinderPokedex/releases/tag/v10.0)**
+**[Explore v10.1 and download the PDFs](https://github.com/Level42-dev/BinderPokedex/releases/tag/v10.1)**
 
 Technical details: [full changelog](CHANGELOG.md).
 <!-- release-news:end -->
@@ -78,18 +77,18 @@ Check the notices supplied with your download. The code and content have
 change valid permissions for earlier releases, including the v9.0 files linked
 below. Download availability and personal use do not clear third-party rights.
 
-**Latest (v10.0):** [All 178 PDFs](https://github.com/Level42-dev/BinderPokedex/releases/tag/v10.0) ✨ *New: The 30 Years collections join corrected card lists, new Mega Evolution sets, and a panorama for every binder section!*
+**Latest (v10.1):** [All 178 PDFs](https://github.com/Level42-dev/BinderPokedex/releases/tag/v10.1) ✨ *New: The English MEP promo collection grows to 120 entries, with original promo numbers and the existing localized collections preserved!*
 
-**By Language (v10.0):**
-🇩🇪 [Deutsch](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.0/binder-pokedex-de.zip) |
-🇬🇧 [English](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.0/binder-pokedex-en.zip) |
-🇫🇷 [Français](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.0/binder-pokedex-fr.zip) |
-🇪🇸 [Español](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.0/binder-pokedex-es.zip) |
-🇮🇹 [Italiano](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.0/binder-pokedex-it.zip) |
-🇯🇵 [日本語](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.0/binder-pokedex-ja.zip) |
-🇰🇷 [한국어](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.0/binder-pokedex-ko.zip) |
-🇨🇳 [简体中文](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.0/binder-pokedex-zh_hans.zip) |
-🇹🇼 [繁體中文](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.0/binder-pokedex-zh_hant.zip)
+**By Language (v10.1):**
+🇩🇪 [Deutsch](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.1/binder-pokedex-de.zip) |
+🇬🇧 [English](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.1/binder-pokedex-en.zip) |
+🇫🇷 [Français](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.1/binder-pokedex-fr.zip) |
+🇪🇸 [Español](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.1/binder-pokedex-es.zip) |
+🇮🇹 [Italiano](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.1/binder-pokedex-it.zip) |
+🇯🇵 [日本語](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.1/binder-pokedex-ja.zip) |
+🇰🇷 [한국어](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.1/binder-pokedex-ko.zip) |
+🇨🇳 [简体中文](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.1/binder-pokedex-zh_hans.zip) |
+🇹🇼 [繁體中文](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.1/binder-pokedex-zh_hant.zip)
 ---
 
 ## 📝 Release History
