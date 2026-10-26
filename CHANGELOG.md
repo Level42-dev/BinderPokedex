@@ -21,6 +21,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   transferred or directly bootstrapped runtimes can be removed without touching
   the external models.
 
+## [10.1.0] - 2026-10-26
+
+### 🎴 MEP Promo Data
+
+- Expanded the English MEP collection from 89 to 120 cards: 23 additional
+  TCGdex records and eight confirmed supplemental promos, including the four
+  Delta Reign prerelease cards and Pokémon RUN Pikachu #131.
+- Preserved original promo numbers and the existing 88 German, French,
+  Spanish, and Italian records. Reviewed localization overrides retain eight
+  earlier observed cards that the current upstream language lists omit; newly
+  added cards remain English-only until their localized records are verified.
+- Refreshed the reproducible data snapshot for the bounded MEP update and the
+  English poster's card-count overlay while keeping its reviewed artwork.
+- Updated release download links to the current Level42-dev repository and
+  made the full pull-request rehearsal exercise the v10.1 release news.
+
 ## [10.0.0] - 2026-10-16
 
 ### ✨ Current Collections and Data

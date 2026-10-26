@@ -5,11 +5,11 @@
     "release_date": "2025-09-26",
     "card_count": {
       "firstEd": 0,
-      "holo": 113,
+      "holo": 143,
       "normal": 1,
       "official": 0,
       "reverse": 0,
-      "total": 89
+      "total": 112
     },
     "logo": "",
     "symbol": "",
@@ -1246,6 +1246,320 @@
       "trainerType": ""
     },
     {
+      "id": "mep-089",
+      "localId": "089",
+      "name": "Mega Zeraora ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Lightning"
+      ],
+      "dexId": [
+        807
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-090",
+      "localId": "090",
+      "name": "Mega Darkrai ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Darkness"
+      ],
+      "dexId": [
+        491
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-091",
+      "localId": "091",
+      "name": "Mega Dragonite ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Dragon"
+      ],
+      "dexId": [
+        149
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-092",
+      "localId": "092",
+      "name": "Paradise Resort",
+      "image": "",
+      "category": "Trainer",
+      "types": [],
+      "dexId": [],
+      "trainerType": "Stadium"
+    },
+    {
+      "id": "mep-093",
+      "localId": "093",
+      "name": "Pikachu",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Lightning"
+      ],
+      "dexId": [
+        25
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-094",
+      "localId": "094",
+      "name": "Alolan Exeggutor",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Grass"
+      ],
+      "dexId": [
+        103
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-095",
+      "localId": "095",
+      "name": "Lucario",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fighting"
+      ],
+      "dexId": [
+        448
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-096",
+      "localId": "096",
+      "name": "Moltres",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        146
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-097",
+      "localId": "097",
+      "name": "Articuno",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Water"
+      ],
+      "dexId": [
+        144
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-098",
+      "localId": "098",
+      "name": "Zapdos",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Lightning"
+      ],
+      "dexId": [
+        145
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-099",
+      "localId": "099",
+      "name": "Greninja ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Water"
+      ],
+      "dexId": [
+        658
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-100",
+      "localId": "100",
+      "name": "Sylveon ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Psychic"
+      ],
+      "dexId": [
+        700
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-101",
+      "localId": "101",
+      "name": "Nidorina",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Darkness"
+      ],
+      "dexId": [
+        30
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-102",
+      "localId": "102",
+      "name": "Victini",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Fire"
+      ],
+      "dexId": [
+        494
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-103",
+      "localId": "103",
+      "name": "Zeraora",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Lightning"
+      ],
+      "dexId": [
+        807
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-104",
+      "localId": "104",
+      "name": "Mewtwo",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Psychic"
+      ],
+      "dexId": [
+        150
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-105",
+      "localId": "105",
+      "name": "Mew",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Psychic"
+      ],
+      "dexId": [
+        151
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-106",
+      "localId": "106",
+      "name": "Ditto",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Colorless"
+      ],
+      "dexId": [
+        132
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-107",
+      "localId": "107",
+      "name": "Pikachu ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Lightning"
+      ],
+      "dexId": [
+        25
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-108",
+      "localId": "108",
+      "name": "Espeon ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Psychic"
+      ],
+      "dexId": [
+        196
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-109",
+      "localId": "109",
+      "name": "Pikachu ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Lightning"
+      ],
+      "dexId": [
+        25
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-110",
+      "localId": "110",
+      "name": "Umbreon ex",
+      "image": "",
+      "category": "Pokemon",
+      "types": [
+        "Darkness"
+      ],
+      "dexId": [
+        197
+      ],
+      "trainerType": ""
+    },
+    {
+      "id": "mep-120",
+      "localId": "120",
+      "name": "Celebratory Fanfare",
+      "image": "",
+      "category": "Trainer",
+      "types": [],
+      "dexId": [],
+      "trainerType": "Stadium"
+    },
+    {
       "id": "mep-Museum",
       "localId": "Museum",
       "name": "Pikachu at the Museum",
@@ -1261,9 +1575,9 @@
     }
   ],
   "metadata": {
-    "total_cards": 89,
+    "total_cards": 112,
     "set_id": "mep",
-    "date_fetched": "2026-09-12T02:40:23.760883Z",
+    "date_fetched": "2026-10-26T12:18:41.805688Z",
     "source": "TCGdex API v2",
     "language": "en"
   }

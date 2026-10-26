@@ -46,6 +46,11 @@ def test_render_release_notes_builds_bilingual_versioned_body():
     assert "Poster-Artwork für jeden Binder" in result
     for info in LANGUAGES.values():
         assert info["zip"] in result
+        assert (
+            "https://github.com/Level42-dev/BinderPokedex/releases/download/"
+            f"v9.0/{info['zip']}"
+        ) in result
+    assert "DerFlash/BinderPokedex" not in result
 
 
 def test_build_manifest_can_exercise_planned_news_for_a_pr(tmp_path: Path, monkeypatch):
