@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import contextlib
+import fcntl
 import hashlib
 import json
 import os
@@ -11,6 +12,7 @@ import platform
 import re
 import shutil
 import socket
+import stat
 import subprocess
 import tempfile
 import time
@@ -332,6 +334,27 @@ def wait_for_server(server: str, log_path: Path, process: subprocess.Popen) -> N
     raise TimeoutError(f"Timed out waiting for ComfyUI; inspect {log_path}")
 
 
+@contextlib.contextmanager
+def gpu_lock():
+    """Share native GPU use; the render child retains the lock if we exit."""
+    configured = os.environ.get("COMFYUI_GPU_LOCK")
+    cache = Path.home() / "Library" / "Caches" if platform.system() == "Darwin" else Path(os.environ.get("XDG_CACHE_HOME", Path.home() / ".cache"))
+    path = Path(configured).expanduser().absolute() if configured else cache / "comfyui-worker" / "gpu.lock"
+    if any(part.is_symlink() for part in [path, *path.parents]):
+        raise RuntimeError("Unsafe GPU lock")
+    path.parent.mkdir(parents=True, exist_ok=True, mode=0o700)
+    fd = os.open(path, os.O_CREAT | os.O_RDWR | os.O_NOFOLLOW, 0o600)
+    try:
+        info = os.fstat(fd)
+        if not stat.S_ISREG(info.st_mode) or info.st_uid != os.getuid() or info.st_nlink != 1:
+            raise RuntimeError("Unsafe GPU lock")
+        os.fchmod(fd, 0o600)
+        fcntl.flock(fd, fcntl.LOCK_EX)
+        yield fd
+    finally:
+        os.close(fd)
+
+
 def run_job(
     job_dir: Path,
     comfyui_root: Path,
@@ -339,6 +362,19 @@ def run_job(
     models_root: Path,
     port: int,
     timeout: int,
+) -> Path:
+    with gpu_lock() as lock_fd:
+        return _run_job_locked(job_dir, comfyui_root, python_bin, models_root, port, timeout, lock_fd)
+
+
+def _run_job_locked(
+    job_dir: Path,
+    comfyui_root: Path,
+    python_bin: Path,
+    models_root: Path,
+    port: int,
+    timeout: int,
+    lock_fd: int,
 ) -> Path:
     job_dir = job_dir.expanduser().resolve()
     comfyui_root = comfyui_root.expanduser().resolve()
@@ -408,6 +444,7 @@ def run_job(
                 stdout=log,
                 stderr=subprocess.STDOUT,
                 text=True,
+                pass_fds=(lock_fd,),
             )
             try:
                 wait_for_server(server, log_path, process)

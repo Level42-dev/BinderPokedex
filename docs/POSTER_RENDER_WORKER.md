@@ -42,6 +42,21 @@ it does not prove that every auxiliary model used MPS. For example, a text
 encoder may run once on CPU while the diffusion model samples on MPS. Keep and
 review `comfyui.log` whenever per-stage device placement matters.
 
+## Shared GPU scheduling
+
+Current render jobs acquire a per-user, per-host file lock before starting
+ComfyUI. The private image worker uses the same lock, so both entry points can
+accept work while native rendering proceeds one job at a time. The default is
+the user's native cache directory under `comfyui-worker/gpu.lock`;
+`COMFYUI_GPU_LOCK` can select one common private path for controlled operations.
+Do not point the two clients at different locks.
+
+The ComfyUI child inherits the locked descriptor. A runner crash therefore
+does not release the GPU while that child still runs. Jobs retain their
+isolated input/output directories, loopback listener, pinned models and
+complete returned evidence. Existing immutable job packages are not modified;
+ensure older uncoordinated runs have completed before activating a new client.
+
 ## Agent/operator handshake
 
 Each poster-assets workspace chooses **local** or **remote** generation once.
