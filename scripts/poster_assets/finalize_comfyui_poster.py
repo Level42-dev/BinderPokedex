@@ -7,7 +7,7 @@ import re
 from datetime import date
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFilter
+from PIL import Image, ImageColor, ImageDraw, ImageFilter, ImageFont
 
 try:
     from .layout import build_image_layout
@@ -98,6 +98,18 @@ INLINE_TITLE_LOGOS = {
     "[M]": ROOT / "images" / "logos" / "m_pokemon" / "default.png",
 }
 PLAIN_TITLE_RENDERER_CONTRACT = "direct_outlined_v1"
+TITLE_STYLE_FONTS = {
+    "cinzel_decorative": ROOT / "assets/fonts/cinzel-decorative/CinzelDecorative-Black.ttf",
+    "lilita_one": ROOT / "assets/fonts/lilita-one/LilitaOne-Regular.ttf",
+}
+
+
+def title_style_font(style: str | None) -> Path | None:
+    if style is None:
+        return None
+    if isinstance(style, str) and style in TITLE_STYLE_FONTS:
+        return TITLE_STYLE_FONTS[style]
+    raise ValueError(f"Unsupported text_content.title_style: {style!r}")
 
 
 def readable_overlay_text(value: object) -> str:
@@ -280,6 +292,11 @@ def info_panel_values(
             f"{section_card_count} {POKEMON_LABELS[language]}",
             localized_value(section.get("description"), language),
         )
+    elif content_mode == "collection_profile":
+        description = localized_value(selected_section(scope_data).get("description"), language)
+        if not description.strip():
+            raise ValueError("collection_profile requires source.collection.description")
+        return (description,)
     else:
         raise ValueError(f"Unsupported text_content.mode: {content_mode}")
     if (
@@ -317,12 +334,17 @@ def fitted_font(
     bold: bool,
     language: str | None = None,
     avoid_short_last_line: bool = False,
+    font_path: Path | None = None,
 ):
     """Choose the largest font whose wrapped text stays inside ``box``."""
     max_width = box[2] - box[0]
     max_height = box[3] - box[1]
     for size in range(preferred_size, minimum_size - 1, -1):
-        font = load_font(size, bold=bold, language=language)
+        font = (
+            ImageFont.truetype(str(font_path), size)
+            if font_path is not None
+            else load_font(size, bold=bold, language=language)
+        )
         lines = wrap_text(text, font, max_width)
         if (
             avoid_short_last_line
@@ -371,7 +393,11 @@ def draw_info_panel(
     draw.rounded_rectangle(box, radius=radius, fill=(18, 50, 43, 226), outline=(224, 190, 98, 245), width=max(2, round(3 * scale)))
     inner = (box[0] + max(3, round(7 * scale)), box[1] + max(3, round(7 * scale)), box[2] - max(3, round(7 * scale)), box[3] - max(3, round(7 * scale)))
     draw.rounded_rectangle(inner, radius=max(5, radius - 5), outline=(255, 244, 190, 75), width=max(1, round(2 * scale)))
-    canvas.alpha_composite(overlay)
+    if content_mode == "collection_profile":
+        bounds = (cell.x, cell.y, cell.x + cell.width, cell.y + cell.height)
+        canvas.alpha_composite(overlay, dest=(cell.x, cell.y), source=bounds)
+    else:
+        canvas.alpha_composite(overlay)
 
     values = info_panel_values(
         scope_data,
@@ -384,7 +410,18 @@ def draw_info_panel(
     text_draw = ImageDraw.Draw(canvas, "RGBA")
     pad_x = max(5, round((box[2] - box[0]) * 0.04))
     height = box[3] - box[1]
-    if content_mode == "set_summary" and len(values) == 4:
+    if content_mode == "collection_profile":
+        body_box = (
+            box[0] + 2 * pad_x,
+            box[1] + round(height * 0.09),
+            box[2] - 2 * pad_x,
+            box[3] - round(height * 0.09),
+        )
+        rows = (
+            (values[0], body_box, max(10, cell.height // 18),
+             max(7, cell.height // 30), False, (244, 238, 207, 255)),
+        )
+    elif content_mode == "set_summary" and len(values) == 4:
         rows = (
             (values[0], (box[0] + pad_x, box[1] + round(height * 0.05), box[2] - pad_x, box[1] + round(height * 0.34)), max(11, cell.height // 13), max(9, cell.height // 20), True, (255, 244, 190, 255)),
             (values[1], (box[0] + pad_x, box[1] + round(height * 0.34), box[2] - pad_x, box[1] + round(height * 0.57)), max(9, cell.height // 18), max(8, cell.height // 24), True, (232, 213, 151, 255)),
@@ -447,28 +484,45 @@ def draw_title_text(
     title_cell,
     title: str,
     language: str,
+    *,
+    title_style: str | None = None,
+    title_colors: dict[str, str] | None = None,
 ) -> tuple[int, int, int, int]:
     """Draw a localized, outlined title directly on the artwork."""
     text_box = title_cell.inset(0.05, 0.31)
+    font_path = title_style_font(title_style)
+    colors = {} if title_colors is None else title_colors
+    if not isinstance(colors, dict) or any(
+        key not in ("fill", "outline") or not isinstance(value, str)
+        for key, value in colors.items()
+    ):
+        raise ValueError("text_content.title_colors supports fill and outline color strings")
+    fill = ImageColor.getcolor(colors.get("fill", "#ffe0a0" if font_path else "#fff8d7"), "RGBA")
+    outline = (
+        ImageColor.getcolor(colors["outline"], "RGBA")
+        if "outline" in colors
+        else (118, 48, 23, 255) if font_path else (32, 68, 57, 245)
+    )
     font = fitted_font(
         title,
         text_box,
-        preferred_size=max(14, title_cell.height // 7),
+        preferred_size=max(14, title_cell.height // (6 if font_path else 7)),
         minimum_size=max(10, title_cell.height // 24),
         bold=True,
         language=language,
         avoid_short_last_line=True,
+        font_path=font_path,
     )
-    stroke_width = max(1, round(font.size / 28))
+    stroke_width = max(1, round(font.size / (23 if font_path else 28)))
     draw_text_centered(
         ImageDraw.Draw(canvas, "RGBA"),
         title,
         text_box,
         font,
-        (255, 248, 215, 255),
-        shadow_fill=(5, 16, 22, 145),
+        fill,
+        shadow_fill=(19, 6, 14, 190) if font_path else (5, 16, 22, 145),
         stroke_width=stroke_width,
-        stroke_fill=(32, 68, 57, 245),
+        stroke_fill=outline,
         shadow_offset=max(2, round(canvas.width / 390)),
     )
     return text_box
@@ -590,12 +644,11 @@ def draw_inline_logo_title(
 def draw_final_text_cells(canvas, layout, manifest, scope_data, scope_dir: Path, language: str) -> None:
     text_cells = manifest.get("text_cells", {})
     title_cfg = text_cells.get("title", {"row": 1, "column": 2})
-    info_cfg = text_cells.get("set_info", {"row": 2, "column": 2})
     title_cell = layout.cell(int(title_cfg["row"]), int(title_cfg["column"]))
-    info_cell = layout.cell(int(info_cfg["row"]), int(info_cfg["column"]))
     content_config = manifest.get("text_content", {})
     if not isinstance(content_config, dict):
         raise ValueError("text_content must be a mapping")
+    content_mode = content_config.get("mode", "set_summary")
     logo_file = title_logo_file(manifest, language)
     header_text: str | None = None
     if logo_file:
@@ -618,18 +671,25 @@ def draw_final_text_cells(canvas, layout, manifest, scope_data, scope_dir: Path,
                 title_cell,
                 readable_overlay_text(header_text),
                 language,
+                title_style=content_config.get("title_style"),
+                title_colors=content_config.get("title_colors"),
             )
+    if content_mode == "title_only":
+        return
+    info_cfg = text_cells.get("set_info", {"row": 2, "column": 2})
+    info_cell = layout.cell(int(info_cfg["row"]), int(info_cfg["column"]))
     draw_info_panel(
         canvas,
         info_cell,
         scope_data,
         language,
         info_cfg,
-        content_mode=content_config.get("mode", "set_summary"),
+        content_mode=content_mode,
         header_text=header_text,
         text_content=content_config,
     )
-    draw_project_signature(canvas)
+    if content_mode != "collection_profile":
+        draw_project_signature(canvas)
 
 
 def finalize(scope: str, input_path: Path, output_path: Path | None = None, language: str = "en") -> Path:

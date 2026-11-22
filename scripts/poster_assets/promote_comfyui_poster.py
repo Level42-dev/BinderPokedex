@@ -514,6 +514,7 @@ def promote(
     cards_dir = qa_dir / f"poster-{name}-cards"
     provenance_path = scope_dir / f"poster-{name}-provenance.json"
 
+    scope_dir.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(
         prefix=".poster-promotion-",
         dir=scope_dir,

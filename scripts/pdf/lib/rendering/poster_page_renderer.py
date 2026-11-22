@@ -225,10 +225,12 @@ class PosterPageRenderer:
         )
         return self._card_paths
 
-    def render_page(self, canvas_obj, page_renderer: PageRenderer) -> None:
+    def render_page(
+        self, canvas_obj, page_renderer: PageRenderer, *, include_footer: bool = True
+    ) -> None:
         """Render one poster, adding page breaks when its cards exceed A4."""
         if self.page_mode == "full-page":
-            self._render_full_page(canvas_obj, page_renderer)
+            self._render_full_page(canvas_obj, page_renderer, include_footer=include_footer)
             return
         card_paths = self._prepare_cards()
         layout = resolve_layout_name(self.layout_name)
@@ -264,7 +266,8 @@ class PosterPageRenderer:
                     mask="auto",
                 )
             page_renderer.draw_cutting_guides(canvas_obj)
-            page_renderer.add_footer(canvas_obj)
+            if include_footer:
+                page_renderer.add_footer(canvas_obj)
             if page_number + 1 < len(pages):
                 canvas_obj.showPage()
 
@@ -272,6 +275,8 @@ class PosterPageRenderer:
         self,
         canvas_obj,
         page_renderer: PageRenderer,
+        *,
+        include_footer: bool = True,
     ) -> None:
         """Draw one continuous poster at its exact physical layout size."""
         width_mm, height_mm = physical_layout_size_mm(self.layout_name)
@@ -298,7 +303,8 @@ class PosterPageRenderer:
             preserveAspectRatio=False,
             mask="auto",
         )
-        page_renderer.add_footer(canvas_obj)
+        if include_footer:
+            page_renderer.add_footer(canvas_obj)
 
     def cleanup(self) -> None:
         if self._temp_dir is not None:

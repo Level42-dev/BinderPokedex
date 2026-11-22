@@ -1,0 +1,130 @@
+schema_version: 2
+asset_key: glurak-sammlung
+scope: glurak-sammlung
+layout:
+  name: standard_3x3
+text_cells:
+  title:
+    row: 1
+    column: 2
+artwork:
+  scene:
+    concept: An unmistakably volcanic collector's panorama. An active erupting volcano
+      dominates the middle-left distance. Lava is a major source of light and color.
+    setting: A single connected volcanic caldera at late dusk. At the left third of
+      the middle distance, show an entire tall black volcanic cone in active eruption,
+      with a sharply visible summit crater, blazing red-orange magma spilling over
+      its flank and a rolling plume of ash behind it. A wide molten lava river winds
+      down from the volcano along the left valley, reappearing between broken dark
+      basalt terraces toward the lower-right edge. Show incandescent cracks, sparks
+      and bright orange reflections on rough volcanic rock. The three foreground figures
+      stand on one connected dark raised basalt shelf above the lava.
+    lighting: Strong molten amber and vermilion light from the eruption and the lava
+      river, reflected on basalt and along the edges of the orange figures. A restrained
+      cool blue glow stays around the center dragon. Dark violet ash, charcoal silhouette
+      and visible gold-orange magma create a clear volcanic palette.
+    rendering: Premium hand-painted fantasy gouache, thick black basalt shapes, luminous
+      lava with defined channels, volumetric ash, very clear silhouettes and atmospheric
+      depth. Detailed volcanic landscape instead of ordinary mountain scenery.
+    ground_noun: connected raised basalt shelf over glowing lava
+    safe_areas: Leave the upper-center dark plum-blue and low-detail for a future
+      wordmark. Keep the center of the middle distance smoky and subdued for a future
+      information panel. The visible erupting cone and its glowing crater sit clearly
+      left of that central panel in the middle-left area. Keep lava mostly behind
+      and around the three silhouettes; their feet and wings stay visually clear.
+      Keep all three entire figures in one bottom row.
+    constraints:
+    - 'Exactly three figures, clearly distinct and independently readable from left
+      to right: Charizard, Mega Charizard X and Mega Charizard Y. Each keeps its own
+      exact signature anatomy, wing shape, and one tail.'
+    - Charizard at left is orange, with broad teal wings and one warm tail flame.
+      Mega Charizard X at center is black with a cyan chest, swept-back horns and
+      two little blue flames at the jaw. Mega Charizard Y at right is slender orange
+      with a long central crown horn, taller wings and forearm winglets.
+    - Exactly one whole silhouette at each left, center and right position, on one
+      shallow dark shelf with a shared baseline. Bare rock with no figures behind
+      or above. Do not repeat, mirror, reflect or echo any figure. No panels, frames,
+      gutters, letters or logos.
+    - The scene must include a visibly erupting summit and broad visibly glowing molten
+      lava. No ordinary river water, plants, grassy meadows, or cold daylight.
+    - Preserve the exact three characters, distinct left, center and right. Ambient
+      magma, smoke or sparks must never hide or replace body parts.
+  generation:
+    engine: flux
+    model: flux-2-klein-4b.safetensors
+    model_sha256: ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343
+    encoder: qwen_3_4b.safetensors
+    encoder_sha256: 6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a
+    vae: flux2-vae.safetensors
+    vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
+    mode: joint_scene
+    reference_mode: spatial_source_detail_joint
+    seed: 261122318
+    steps: 4
+    generation_megapixels: 2.0
+    output_dpi: 300
+    output_method: lanczos
+  source_details:
+    pokeapi:official-artwork:6:
+      sha256: c1b2a39cd44c5aa183feb06db190fc987d86f5f8af7b342c1e82778f3193f580
+      traits: Only this one orange Charizard at left. Wide single pair of wings with
+        teal inner membranes, smooth head with two short swept horns, cream lower
+        body and exactly one warm tail flame.
+    pokeapi:official-artwork:10034:
+      sha256: 5277f426038f6f9155ba81fd776b5be0757010f1d6f22980ee2047772de97655
+      traits: Only this one Mega Charizard X in the center. Black body with exact
+        cyan underbelly, angular navy-black wings with long pointed sections, cyan
+        swept horns, two blue jaw flames and one cyan tail flame.
+    pokeapi:official-artwork:10035:
+      sha256: be2115bbfc69e00dce93a7d688e959d270a4ee0b130d7d59c1f05f16cf42df9b
+      traits: Only this one Mega Charizard Y at right, with the tall swept-back crown,
+        long angled orange wings with teal membranes, small forearm winglets, cream
+        underside and a single orange tail flame. Entire space directly behind and
+        above this sole creature is bare scenery.
+  promoted_file: poster-flux2-artwork.png
+  provenance_file: poster-flux2-provenance.json
+pokemon:
+  strategy: featured_from_scope
+  count: 3
+  row: bottom
+  cutout_source: pokeapi_official_artwork
+pdf:
+  enabled: false
+source:
+  collection:
+    title:
+      de: Glurak
+    featured_elements:
+    - pokemon_id: 6
+      pokemon_name: Charizard
+      poster_subject:
+        source: pokeapi_official_artwork
+        species_id: 6
+        official_artwork_id: 6
+        subject_key: pokeapi:official-artwork:6
+        image_url: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png
+    - pokemon_id: 6
+      pokemon_name: Mega Charizard X
+      poster_subject:
+        source: pokeapi_official_artwork
+        species_id: 6
+        official_artwork_id: 10034
+        subject_key: pokeapi:official-artwork:10034
+        image_url: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10034.png
+    - pokemon_id: 6
+      pokemon_name: Mega Charizard Y
+      poster_subject:
+        source: pokeapi_official_artwork
+        species_id: 6
+        official_artwork_id: 10035
+        subject_key: pokeapi:official-artwork:10035
+        image_url: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10035.png
+    description:
+      de: Glurak ist ein Sturkopf und sucht sich im Gebirge seinen eigenen Weg. Selbst
+        zwischen steilen Felswänden findet es Aufwind und steigt mit wenigen Flügelschlägen
+        über den Kamm. Wittert es eine Herausforderung, lodert seine Schwanzflamme
+        auf. Mit einer kleinen Flamme entfacht es ein Lagerfeuer. Ein voller Feuerstoß
+        bringt blanken Fels zum Glühen.
+text_content:
+  mode: collection_profile
+  title_style: cinzel_decorative

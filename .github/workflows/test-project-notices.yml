@@ -36,6 +36,7 @@ jobs:
           scripts/tests/test_release_workflows.py
           scripts/tests/test_pdf_rendering.py
           scripts/tests/test_pdf_generation_options.py
+          scripts/tests/test_collection_artwork_pdf.py
           scripts/tests/test_poster_pdf.py::test_aggregate_posters_render_into_a_real_two_page_pdf
           scripts/tests/test_poster_pdf.py::test_wide_poster_renders_into_a_real_two_page_a4_pdf
           scripts/tests/test_poster_pdf.py::test_failed_pdf_build_preserves_previous_output_and_cleans_temp

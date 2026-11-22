@@ -1,0 +1,553 @@
+{
+  "asset_name": "flux2",
+  "kind": "promoted_poster",
+  "outputs": {
+    "artwork": {
+      "bytes": 7303891,
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "file": "assets/posters/glurak-sammlung/poster-flux2-artwork.png",
+      "height": 3268,
+      "mode": "RGBA",
+      "pixel_sha256": "ba1b7f317ac0728c863c55b6065cc0d2c830fc7d04eb32c5492761f3a1a7f8fc",
+      "sha256": "4fb40b3a6ff54c0a30e56170a813a202ff3915fc06e1bc0dabe62d5d829dc85d",
+      "width": 2368
+    }
+  },
+  "poster_id": "glurak-sammlung",
+  "promoted_at": "2026-11-22T16:49:59.940286+00:00",
+  "review_language": "de",
+  "run": {
+    "created_at": "2026-11-22T16:49:41.739127+00:00",
+    "generation": {
+      "encoder": "qwen_3_4b.safetensors",
+      "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
+      "engine": "flux",
+      "generation_megapixels": 2.0,
+      "mode": "joint_scene",
+      "model": "flux-2-klein-4b.safetensors",
+      "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
+      "output_dpi": 300,
+      "output_method": "lanczos",
+      "reference_mode": "spatial_source_detail_joint",
+      "seed": 261122318,
+      "steps": 4,
+      "vae": "flux2-vae.safetensors",
+      "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
+    },
+    "inputs": {
+      "cutout_manifest": {
+        "bytes": 2477,
+        "file": "tmp/poster-workspaces/glurak-sammlung/sources/cutouts/manifest.json",
+        "sha256": "e448c214be8ac96bc29f89aae216ecda5240005bea8a68a3d73ccaf828b1418a"
+      },
+      "cutouts": [
+        {
+          "bytes": 145456,
+          "file": "tmp/poster-workspaces/glurak-sammlung/sources/cutouts/pokemon_006_charizard.png",
+          "height": 475,
+          "mode": "RGBA",
+          "pixel_sha256": "74d958bd46f9b6a472286dd53c1daf9bab39856f498b9b061829cba5691425d3",
+          "sha256": "c1b2a39cd44c5aa183feb06db190fc987d86f5f8af7b342c1e82778f3193f580",
+          "width": 475
+        },
+        {
+          "bytes": 172410,
+          "file": "tmp/poster-workspaces/glurak-sammlung/sources/cutouts/pokemon_006_artwork_10034_mega_charizard_x.png",
+          "height": 475,
+          "mode": "RGBA",
+          "pixel_sha256": "e76956abd1fee6c29ff1345fd64c8fce8b1671a50947414f75461afe1b75d33f",
+          "sha256": "5277f426038f6f9155ba81fd776b5be0757010f1d6f22980ee2047772de97655",
+          "width": 475
+        },
+        {
+          "bytes": 154108,
+          "file": "tmp/poster-workspaces/glurak-sammlung/sources/cutouts/pokemon_006_artwork_10035_mega_charizard_y.png",
+          "height": 475,
+          "mode": "RGBA",
+          "pixel_sha256": "f2c8406ddca316fc91d537cc29afd3096bd2a50bfa7211b445a43918e81ac3d6",
+          "sha256": "be2115bbfc69e00dce93a7d688e959d270a4ee0b130d7d59c1f05f16cf42df9b",
+          "width": 475
+        }
+      ],
+      "generation_fingerprint": {
+        "components": {
+          "cutouts": [
+            {
+              "height": 475,
+              "mode": "RGBA",
+              "pixel_sha256": "74d958bd46f9b6a472286dd53c1daf9bab39856f498b9b061829cba5691425d3",
+              "pokemon_id": 6,
+              "width": 475
+            },
+            {
+              "height": 475,
+              "mode": "RGBA",
+              "pixel_sha256": "e76956abd1fee6c29ff1345fd64c8fce8b1671a50947414f75461afe1b75d33f",
+              "pokemon_id": 6,
+              "poster_subject": {
+                "official_artwork_id": 10034,
+                "source": "pokeapi_official_artwork"
+              },
+              "width": 475
+            },
+            {
+              "height": 475,
+              "mode": "RGBA",
+              "pixel_sha256": "f2c8406ddca316fc91d537cc29afd3096bd2a50bfa7211b445a43918e81ac3d6",
+              "pokemon_id": 6,
+              "poster_subject": {
+                "official_artwork_id": 10035,
+                "source": "pokeapi_official_artwork"
+              },
+              "width": 475
+            }
+          ],
+          "effective_prompt": {
+            "encoding": "utf-8",
+            "sha256": "cf7e49d8c70bdcbc5802f5803c1ccc5f55cf60b7cb7954db1d25daaa49f83cb9"
+          },
+          "generation": {
+            "encoder": "qwen_3_4b.safetensors",
+            "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
+            "engine": "flux",
+            "generation_megapixels": 2.0,
+            "mode": "joint_scene",
+            "model": "flux-2-klein-4b.safetensors",
+            "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
+            "output_dpi": 300,
+            "output_method": "lanczos",
+            "reference_mode": "spatial_source_detail_joint",
+            "seed": 261122318,
+            "steps": 4,
+            "vae": "flux2-vae.safetensors",
+            "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
+          },
+          "joint_scene_conditioning": {
+            "cast_max_megapixels": 0.5,
+            "identity_canvas_px": 512,
+            "identity_source_resampling": "none",
+            "reference_neutral_rgb": [
+              226,
+              224,
+              211
+            ],
+            "reference_strategy": "spatial_cast_plus_unscaled_identity"
+          },
+          "layout": {
+            "columns": 3,
+            "name": "standard_3x3",
+            "raster_geometry": {
+              "generation_canvas_px": [
+                1200,
+                1664
+              ],
+              "generation_column_spans_px": [
+                [
+                  0,
+                  380
+                ],
+                [
+                  410,
+                  790
+                ],
+                [
+                  820,
+                  1200
+                ]
+              ],
+              "generation_row_spans_px": [
+                [
+                  0,
+                  535
+                ],
+                [
+                  565,
+                  1099
+                ],
+                [
+                  1129,
+                  1664
+                ]
+              ],
+              "name": "cumulative_physical_endpoints",
+              "output_canvas_px": [
+                2368,
+                3268
+              ],
+              "output_column_spans_px": [
+                [
+                  0,
+                  750
+                ],
+                [
+                  809,
+                  1559
+                ],
+                [
+                  1618,
+                  2368
+                ]
+              ],
+              "output_row_spans_px": [
+                [
+                  0,
+                  1050
+                ],
+                [
+                  1109,
+                  2159
+                ],
+                [
+                  2218,
+                  3268
+                ]
+              ],
+              "version": 2
+            },
+            "rows": 3,
+            "safe_cells": {
+              "set_info": {
+                "column": 2,
+                "row": 2
+              },
+              "title": {
+                "column": 2,
+                "row": 1
+              }
+            }
+          },
+          "pipeline_contract": {
+            "name": "poster_generation",
+            "version": 11
+          },
+          "pokemon": {
+            "count": 3,
+            "cutout_source": "pokeapi_official_artwork",
+            "row": "bottom",
+            "strategy": "featured_from_scope"
+          },
+          "scene": {
+            "concept": "An unmistakably volcanic collector's panorama. An active erupting volcano dominates the middle-left distance. Lava is a major source of light and color.",
+            "constraints": [
+              "Exactly three figures, clearly distinct and independently readable from left to right: Charizard, Mega Charizard X and Mega Charizard Y. Each keeps its own exact signature anatomy, wing shape, and one tail.",
+              "Charizard at left is orange, with broad teal wings and one warm tail flame. Mega Charizard X at center is black with a cyan chest, swept-back horns and two little blue flames at the jaw. Mega Charizard Y at right is slender orange with a long central crown horn, taller wings and forearm winglets.",
+              "Exactly one whole silhouette at each left, center and right position, on one shallow dark shelf with a shared baseline. Bare rock with no figures behind or above. Do not repeat, mirror, reflect or echo any figure. No panels, frames, gutters, letters or logos.",
+              "The scene must include a visibly erupting summit and broad visibly glowing molten lava. No ordinary river water, plants, grassy meadows, or cold daylight.",
+              "Preserve the exact three characters, distinct left, center and right. Ambient magma, smoke or sparks must never hide or replace body parts."
+            ],
+            "ground_noun": "connected raised basalt shelf over glowing lava",
+            "lighting": "Strong molten amber and vermilion light from the eruption and the lava river, reflected on basalt and along the edges of the orange figures. A restrained cool blue glow stays around the center dragon. Dark violet ash, charcoal silhouette and visible gold-orange magma create a clear volcanic palette.",
+            "rendering": "Premium hand-painted fantasy gouache, thick black basalt shapes, luminous lava with defined channels, volumetric ash, very clear silhouettes and atmospheric depth. Detailed volcanic landscape instead of ordinary mountain scenery.",
+            "safe_areas": "Leave the upper-center dark plum-blue and low-detail for a future wordmark. Keep the center of the middle distance smoky and subdued for a future information panel. The visible erupting cone and its glowing crater sit clearly left of that central panel in the middle-left area. Keep lava mostly behind and around the three silhouettes; their feet and wings stay visually clear. Keep all three entire figures in one bottom row.",
+            "setting": "A single connected volcanic caldera at late dusk. At the left third of the middle distance, show an entire tall black volcanic cone in active eruption, with a sharply visible summit crater, blazing red-orange magma spilling over its flank and a rolling plume of ash behind it. A wide molten lava river winds down from the volcano along the left valley, reappearing between broken dark basalt terraces toward the lower-right edge. Show incandescent cracks, sparks and bright orange reflections on rough volcanic rock. The three foreground figures stand on one connected dark raised basalt shelf above the lava."
+          },
+          "source_details": {
+            "pokeapi:official-artwork:10034": {
+              "sha256": "5277f426038f6f9155ba81fd776b5be0757010f1d6f22980ee2047772de97655",
+              "traits": "Only this one Mega Charizard X in the center. Black body with exact cyan underbelly, angular navy-black wings with long pointed sections, cyan swept horns, two blue jaw flames and one cyan tail flame."
+            },
+            "pokeapi:official-artwork:10035": {
+              "sha256": "be2115bbfc69e00dce93a7d688e959d270a4ee0b130d7d59c1f05f16cf42df9b",
+              "traits": "Only this one Mega Charizard Y at right, with the tall swept-back crown, long angled orange wings with teal membranes, small forearm winglets, cream underside and a single orange tail flame. Entire space directly behind and above this sole creature is bare scenery."
+            },
+            "pokeapi:official-artwork:6": {
+              "sha256": "c1b2a39cd44c5aa183feb06db190fc987d86f5f8af7b342c1e82778f3193f580",
+              "traits": "Only this one orange Charizard at left. Wide single pair of wings with teal inner membranes, smooth head with two short swept horns, cream lower body and exactly one warm tail flame."
+            }
+          },
+          "source_subject_ids": [
+            6,
+            {
+              "pokemon_id": 6,
+              "poster_subject": {
+                "official_artwork_id": 10034,
+                "source": "pokeapi_official_artwork"
+              }
+            },
+            {
+              "pokemon_id": 6,
+              "poster_subject": {
+                "official_artwork_id": 10035,
+                "source": "pokeapi_official_artwork"
+              }
+            }
+          ]
+        },
+        "schema_version": 1,
+        "sha256": "fe2bbb24e9340dabdd7846ff5e1ec5a5efe5b022aeb805e0f3cfa3bdf9acea53"
+      },
+      "overlay_fingerprint": {
+        "components": {
+          "languages": {
+            "de": {
+              "information": [
+                "Glurak ist ein Sturkopf und sucht sich im Gebirge seinen eigenen Weg. Selbst zwischen steilen Felswänden findet es Aufwind und steigt mit wenigen Flügelschlägen über den Kamm. Wittert es eine Herausforderung, lodert seine Schwanzflamme auf. Mit einer kleinen Flamme entfacht es ein Lagerfeuer. Ein voller Feuerstoß bringt blanken Fels zum Glühen."
+              ],
+              "title": {
+                "font_sha256": "a6c1eb3e228f639a98aafd8a8e8a035582dd50ad5f8a84e9dcbc8664e7457114",
+                "kind": "text",
+                "renderer": "cinzel_decorative_v1",
+                "value": "Glurak"
+              }
+            },
+            "en": {
+              "information": [
+                "Glurak ist ein Sturkopf und sucht sich im Gebirge seinen eigenen Weg. Selbst zwischen steilen Felswänden findet es Aufwind und steigt mit wenigen Flügelschlägen über den Kamm. Wittert es eine Herausforderung, lodert seine Schwanzflamme auf. Mit einer kleinen Flamme entfacht es ein Lagerfeuer. Ein voller Feuerstoß bringt blanken Fels zum Glühen."
+              ],
+              "title": {
+                "font_sha256": "a6c1eb3e228f639a98aafd8a8e8a035582dd50ad5f8a84e9dcbc8664e7457114",
+                "kind": "text",
+                "renderer": "cinzel_decorative_v1",
+                "value": "Glurak"
+              }
+            },
+            "es": {
+              "information": [
+                "Glurak ist ein Sturkopf und sucht sich im Gebirge seinen eigenen Weg. Selbst zwischen steilen Felswänden findet es Aufwind und steigt mit wenigen Flügelschlägen über den Kamm. Wittert es eine Herausforderung, lodert seine Schwanzflamme auf. Mit einer kleinen Flamme entfacht es ein Lagerfeuer. Ein voller Feuerstoß bringt blanken Fels zum Glühen."
+              ],
+              "title": {
+                "font_sha256": "a6c1eb3e228f639a98aafd8a8e8a035582dd50ad5f8a84e9dcbc8664e7457114",
+                "kind": "text",
+                "renderer": "cinzel_decorative_v1",
+                "value": "Glurak"
+              }
+            },
+            "fr": {
+              "information": [
+                "Glurak ist ein Sturkopf und sucht sich im Gebirge seinen eigenen Weg. Selbst zwischen steilen Felswänden findet es Aufwind und steigt mit wenigen Flügelschlägen über den Kamm. Wittert es eine Herausforderung, lodert seine Schwanzflamme auf. Mit einer kleinen Flamme entfacht es ein Lagerfeuer. Ein voller Feuerstoß bringt blanken Fels zum Glühen."
+              ],
+              "title": {
+                "font_sha256": "a6c1eb3e228f639a98aafd8a8e8a035582dd50ad5f8a84e9dcbc8664e7457114",
+                "kind": "text",
+                "renderer": "cinzel_decorative_v1",
+                "value": "Glurak"
+              }
+            },
+            "it": {
+              "information": [
+                "Glurak ist ein Sturkopf und sucht sich im Gebirge seinen eigenen Weg. Selbst zwischen steilen Felswänden findet es Aufwind und steigt mit wenigen Flügelschlägen über den Kamm. Wittert es eine Herausforderung, lodert seine Schwanzflamme auf. Mit einer kleinen Flamme entfacht es ein Lagerfeuer. Ein voller Feuerstoß bringt blanken Fels zum Glühen."
+              ],
+              "title": {
+                "font_sha256": "a6c1eb3e228f639a98aafd8a8e8a035582dd50ad5f8a84e9dcbc8664e7457114",
+                "kind": "text",
+                "renderer": "cinzel_decorative_v1",
+                "value": "Glurak"
+              }
+            },
+            "ja": {
+              "information": [
+                "Glurak ist ein Sturkopf und sucht sich im Gebirge seinen eigenen Weg. Selbst zwischen steilen Felswänden findet es Aufwind und steigt mit wenigen Flügelschlägen über den Kamm. Wittert es eine Herausforderung, lodert seine Schwanzflamme auf. Mit einer kleinen Flamme entfacht es ein Lagerfeuer. Ein voller Feuerstoß bringt blanken Fels zum Glühen."
+              ],
+              "title": {
+                "font_sha256": "a6c1eb3e228f639a98aafd8a8e8a035582dd50ad5f8a84e9dcbc8664e7457114",
+                "kind": "text",
+                "renderer": "cinzel_decorative_v1",
+                "value": "Glurak"
+              }
+            },
+            "ko": {
+              "information": [
+                "Glurak ist ein Sturkopf und sucht sich im Gebirge seinen eigenen Weg. Selbst zwischen steilen Felswänden findet es Aufwind und steigt mit wenigen Flügelschlägen über den Kamm. Wittert es eine Herausforderung, lodert seine Schwanzflamme auf. Mit einer kleinen Flamme entfacht es ein Lagerfeuer. Ein voller Feuerstoß bringt blanken Fels zum Glühen."
+              ],
+              "title": {
+                "font_sha256": "a6c1eb3e228f639a98aafd8a8e8a035582dd50ad5f8a84e9dcbc8664e7457114",
+                "kind": "text",
+                "renderer": "cinzel_decorative_v1",
+                "value": "Glurak"
+              }
+            },
+            "zh_hans": {
+              "information": [
+                "Glurak ist ein Sturkopf und sucht sich im Gebirge seinen eigenen Weg. Selbst zwischen steilen Felswänden findet es Aufwind und steigt mit wenigen Flügelschlägen über den Kamm. Wittert es eine Herausforderung, lodert seine Schwanzflamme auf. Mit einer kleinen Flamme entfacht es ein Lagerfeuer. Ein voller Feuerstoß bringt blanken Fels zum Glühen."
+              ],
+              "title": {
+                "font_sha256": "a6c1eb3e228f639a98aafd8a8e8a035582dd50ad5f8a84e9dcbc8664e7457114",
+                "kind": "text",
+                "renderer": "cinzel_decorative_v1",
+                "value": "Glurak"
+              }
+            },
+            "zh_hant": {
+              "information": [
+                "Glurak ist ein Sturkopf und sucht sich im Gebirge seinen eigenen Weg. Selbst zwischen steilen Felswänden findet es Aufwind und steigt mit wenigen Flügelschlägen über den Kamm. Wittert es eine Herausforderung, lodert seine Schwanzflamme auf. Mit einer kleinen Flamme entfacht es ein Lagerfeuer. Ein voller Feuerstoß bringt blanken Fels zum Glühen."
+              ],
+              "title": {
+                "font_sha256": "a6c1eb3e228f639a98aafd8a8e8a035582dd50ad5f8a84e9dcbc8664e7457114",
+                "kind": "text",
+                "renderer": "cinzel_decorative_v1",
+                "value": "Glurak"
+              }
+            }
+          },
+          "layout_name": "standard_3x3",
+          "logo_pixels": {},
+          "pipeline_contract": {
+            "name": "poster_overlay",
+            "version": 3
+          },
+          "text_cells": {
+            "title": {
+              "column": 2,
+              "row": 1
+            }
+          },
+          "text_content": {
+            "mode": "collection_profile",
+            "title_style": "cinzel_decorative"
+          }
+        },
+        "schema_version": 1,
+        "sha256": "ad8d3dfd673dc2546b7cc15646a874c6fd0f0c44d4d90a04a3fc6784376e5708"
+      },
+      "prompt": {
+        "bytes": 5573,
+        "file": "tmp/poster-workspaces/glurak-sammlung/comfyui_poster/volcano-revision/source_detail_joint_prompt.generated.txt",
+        "sha256": "cb0b436a644c9ea5553e9646d2656aa77bf79d89f2542bfe58877cfa6abc3295"
+      },
+      "references": [
+        {
+          "bytes": 74253,
+          "file": "tmp/poster-workspaces/glurak-sammlung/comfyui_poster/joint_scene_cast_reference.png",
+          "height": 832,
+          "mode": "RGBA",
+          "pixel_sha256": "8eb2a0cd4b65bc20106cf7b9f8a6d9c5d6fb010893f771b48cc2ef2b151079b0",
+          "sha256": "3c6d3cfdbac1273b0173f99e935f7a014aff1eb40b1874f0df4b897024139049",
+          "width": 608
+        },
+        {
+          "bytes": 122814,
+          "file": "tmp/poster-workspaces/glurak-sammlung/comfyui_poster/identity_reference_1.png",
+          "height": 512,
+          "mode": "RGBA",
+          "pixel_sha256": "368b25a09432383c82765b5830abf999cee00e21236a167adced69b7a4daf863",
+          "sha256": "064118f5c020d7af932e562e9079cde140e6ecf2fdf9e5d4b8aef9c94aac36ee",
+          "width": 512
+        },
+        {
+          "bytes": 134616,
+          "file": "tmp/poster-workspaces/glurak-sammlung/comfyui_poster/identity_reference_2.png",
+          "height": 512,
+          "mode": "RGBA",
+          "pixel_sha256": "8ada56c30737c49dc2ed9a9cfcb8cdfd84b7dff1a0387217d7ca438e25dbb7af",
+          "sha256": "15ce6d322ed8485d2fd86d604f78c850622902a0d7d2ae0a41a06d4cc4545f5e",
+          "width": 512
+        },
+        {
+          "bytes": 119067,
+          "file": "tmp/poster-workspaces/glurak-sammlung/comfyui_poster/identity_reference_3.png",
+          "height": 512,
+          "mode": "RGBA",
+          "pixel_sha256": "38b5b9393a52e7f78aba6e3d678cd4acee3d30d4547ac5a8faf1465ac57ae5b7",
+          "sha256": "1d21fd5ec6e92d78426d3899bb6b52a43ea3ffc300448cfae993c6aac83f013f",
+          "width": 512
+        }
+      ],
+      "scope_manifest": {
+        "bytes": 6790,
+        "file": "config/posters/glurak-sammlung/poster.yaml",
+        "sha256": "f35b334d8e865317ee2333d044b72e271dde71468e0a3a1f50132cc699daff60"
+      },
+      "workflow": {
+        "bytes": 10229,
+        "file": "tmp/poster-workspaces/glurak-sammlung/comfyui_poster/volcano-revision/workflow_api_joint_scene_spatial_source_detail_joint_2mp_261122318.json",
+        "sha256": "6e1f1c7e4b9ed70f5d3414fa0ca52d9cf767c2c0b1f6b25d0d94cabdb63b9dba"
+      }
+    },
+    "kind": "poster_generation_run",
+    "poster_id": "glurak-sammlung",
+    "raw_artwork": {
+      "bytes": 2896898,
+      "file": "tmp/artwork-volcano/raw.png",
+      "height": 1664,
+      "mode": "RGBA",
+      "pixel_sha256": "efd1d451924e79589e33c9a28818592c859de83546795eab7a6d8debef79d17d",
+      "sha256": "e3a9881dca4abb6e1ab5b43d9073a0427f4f76590d250c3a3daffa88c71f3d60",
+      "width": 1200
+    },
+    "schema_version": 1,
+    "scope": "glurak-sammlung",
+    "section_id": null,
+    "source_artwork": {
+      "bytes": 7303891,
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "file": "tmp/artwork-volcano/master.png",
+      "height": 3268,
+      "mode": "RGBA",
+      "pixel_sha256": "ba1b7f317ac0728c863c55b6065cc0d2c830fc7d04eb32c5492761f3a1a7f8fc",
+      "sha256": "4fb40b3a6ff54c0a30e56170a813a202ff3915fc06e1bc0dabe62d5d829dc85d",
+      "width": 2368
+    },
+    "source_scope": "glurak-sammlung",
+    "validation": {
+      "joint_scene_visual_review": {
+        "approval_source": "explicit_promotion_flag",
+        "criteria": [
+          "exact_cast_count",
+          "raw_generation_identity",
+          "text_free_output_identity",
+          "identity_and_form",
+          "silhouette_and_stature",
+          "anatomy_and_face",
+          "colors_and_markings",
+          "placement_and_card_safety",
+          "natural_scene_integration",
+          "coherent_landscape_occlusion"
+        ],
+        "generation_fingerprint_sha256": "fe2bbb24e9340dabdd7846ff5e1ec5a5efe5b022aeb805e0f3cfa3bdf9acea53",
+        "method": "agent_identity_and_scene_review",
+        "passed": true,
+        "raw_artwork_pixel_sha256": "efd1d451924e79589e33c9a28818592c859de83546795eab7a6d8debef79d17d",
+        "raw_artwork_sha256": "e3a9881dca4abb6e1ab5b43d9073a0427f4f76590d250c3a3daffa88c71f3d60",
+        "reviewed_artwork_pixel_sha256": "ba1b7f317ac0728c863c55b6065cc0d2c830fc7d04eb32c5492761f3a1a7f8fc",
+        "reviewed_artwork_sha256": "4fb40b3a6ff54c0a30e56170a813a202ff3915fc06e1bc0dabe62d5d829dc85d",
+        "reviewed_at": "2026-11-22T16:49:42.701098+00:00",
+        "source_cutout_pixel_sha256": [
+          "74d958bd46f9b6a472286dd53c1daf9bab39856f498b9b061829cba5691425d3",
+          "e76956abd1fee6c29ff1345fd64c8fce8b1671a50947414f75461afe1b75d33f",
+          "f2c8406ddca316fc91d537cc29afd3096bd2a50bfa7211b445a43918e81ac3d6"
+        ],
+        "source_cutout_sha256": [
+          "c1b2a39cd44c5aa183feb06db190fc987d86f5f8af7b342c1e82778f3193f580",
+          "5277f426038f6f9155ba81fd776b5be0757010f1d6f22980ee2047772de97655",
+          "be2115bbfc69e00dce93a7d688e959d270a4ee0b130d7d59c1f05f16cf42df9b"
+        ],
+        "source_subject_ids": [
+          6,
+          {
+            "pokemon_id": 6,
+            "poster_subject": {
+              "official_artwork_id": 10034,
+              "source": "pokeapi_official_artwork"
+            }
+          },
+          {
+            "pokemon_id": 6,
+            "poster_subject": {
+              "official_artwork_id": 10035,
+              "source": "pokeapi_official_artwork"
+            }
+          }
+        ],
+        "stage": "raw_and_text_free_print_artwork"
+      }
+    }
+  },
+  "schema_version": 2,
+  "scope": "glurak-sammlung",
+  "section_id": null,
+  "source_scope": "glurak-sammlung",
+  "storage": {
+    "derivatives": "regenerated_in_ignored_workspace",
+    "durable_outputs": [
+      "artwork"
+    ],
+    "reproducible_sources": "downloaded_to_ignored_workspace",
+    "schema_version": 1
+  }
+}

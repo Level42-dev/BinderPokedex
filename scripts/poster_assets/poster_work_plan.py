@@ -351,6 +351,11 @@ def _expected_scene(
     *,
     scene_catalog_path: Path,
 ) -> dict[str, Any]:
+    if "collection" in bundle.manifest.get("source", {}):
+        scene = bundle.manifest.get("artwork", {}).get("scene")
+        if not isinstance(scene, dict) or not scene.get("setting"):
+            raise ValueError(f"{bundle.asset_key} collection needs an artwork.scene setting")
+        return scene
     if bundle.section_id is None:
         return scene_for_scope(
             bundle.scope,
@@ -433,7 +438,10 @@ def _validate_source_contract(
                         f"{bundle.asset_key} lacks {field} translations for "
                         f"{', '.join(missing)}"
                     )
-    else:
+    elif content_mode == "collection_profile":
+        if not next(iter(sections.values())).get("description"):
+            raise ValueError(f"{bundle.asset_key} collection profile needs a description")
+    elif content_mode != "title_only":
         raise ValueError(
             f"Unsupported text_content.mode: {content_mode!r}"
         )
@@ -1200,6 +1208,28 @@ def _plan_bundle(
         masked_fallback
         and validation_result.get("localized_overlay_approved") is False
     )
+    if "collection" in bundle.manifest.get("source", {}):
+        language = next(
+            (value for value in scope_data["name"] if value in POSTER_LANGUAGES),
+            "en",
+        )
+        export_command = (
+            "python -m scripts.pdf.generate_artwork_pdf "
+            f"--scope {bundle.asset_key} --language {language}"
+        )
+        return WorkItem(
+            **base,
+            state="current",
+            reason_codes=_unique(
+                ("promotion_current", "standalone_artwork", *overlay_drift, *pipeline_notes)
+            ),
+            next_actions=(
+                *overlay_actions,
+                *pipeline_actions,
+                *(("export_artwork_pdf",) if not overlay_drift else ()),
+            ),
+            commands=(export_command,) if not overlay_drift else (),
+        )
     if bundle.pdf_enabled:
         return WorkItem(
             **base,

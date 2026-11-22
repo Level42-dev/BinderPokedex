@@ -745,6 +745,47 @@ The output receives a `_NO_POSTER.pdf` suffix.
 exclusive: once poster discovery is bypassed, the section cover is the only
 introductory page and no poster presentation mode applies.
 
+
+## Standalone collection artwork
+
+A collection uses the normal poster manifest, render workflow, review and
+promotion. Start from `config/posters/glurak-sammlung/poster.yaml`. Define
+`source.collection.title` by language and list the selected Pokémon in
+`source.collection.featured_elements`. Use the exact Official Artwork IDs
+for special forms. The collection manifest is the source for the scene and
+title.
+
+Use `text_content.mode: title_only` for a title without a set summary. The
+standard 3×3 layout uses `text_cells.title` at row 1, column 2. The same
+bounded overlay is used for review crops and for the continuous PDF.
+Choose `text_content.mode: collection_profile` and provide localized
+`source.collection.description` text to use the center info panel for a
+Pokémon profile. The optional `text_content.title_style: cinzel_decorative`
+uses the bundled [Cinzel Decorative Black](../assets/fonts/cinzel-decorative/OFL.txt)
+font from its [upstream release](https://github.com/google/fonts/tree/3dd78844021e948ceb633d1dcee3f7885561b5d9/ofl/cinzeldecorative)
+for a warm gold wordmark. Choose `title_style: lilita_one` for the rounded
+[Lilita One](../assets/fonts/lilita-one/OFL.txt) wordmark from its
+[pinned source revision](https://github.com/google/fonts/tree/0b03411188731f960e8fa7064e940407ade0e6d4/ofl/lilitaone).
+Optional `text_content.title_colors.fill` and `.outline` accept color values
+such as `"#FFE3F2"` and `"#783465"`.
+
+Fetch cutouts through the regular workflow, render and review the candidate
+and card crops, then promote and validate the text-free master as described
+above. Export the promoted master as a single A4 artwork page:
+
+```sh
+python -m scripts.pdf.generate_artwork_pdf --scope glurak-sammlung --language de
+```
+
+Add `--poster-page-mode cards` to export the artwork at the standard physical
+card size with the BinderPokedex cutting grid. The Glurak cuttable PDF is
+`output/artwork/glurak-sammlung-de-a4-cards.pdf`.
+
+Use `--artwork <text-free-candidate.png>` for an unpromoted local proof or
+`--output-dir` to choose another destination. The default output is
+`output/artwork/glurak-sammlung-de-a4.pdf`. Print in A4 portrait at
+**100% / Actual size**.
+
 ## Local custom layouts without release-asset changes
 
 Custom layouts use an isolated poster-assets root below ignored `tmp/`. This

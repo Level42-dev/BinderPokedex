@@ -1,0 +1,91 @@
+schema_version: 2
+asset_key: tragosso-sammlung
+scope: tragosso-sammlung
+layout:
+  name: standard_3x3
+text_cells:
+  title:
+    row: 1
+    column: 2
+artwork:
+  scene:
+    concept: A collector's panorama centered on one Cubone in its own atmospheric
+      habitat
+    setting: A remote sandstone canyon at moonrise. Weathered cliffs and winding apricot-colored
+      strata, great distances in slaty blue haze, a bright full moon off to the upper
+      left, fine ochre dust still glowing near a far canyon bend. Keep upper center
+      muted navy for the title. The near ground is warm dark ochre, flat and clear
+      in the bottom-center where the single small figure stands.
+    lighting: Warm muted clay and cool slate-blue night, silvery angled rim light.
+      Keep the white skull and ochre body clearly distinct from the rock.
+    rendering: High-quality hand-painted fantasy gouache, clean anime-compatible outlines
+      for the one foreground subject, broad matte landscape strokes, texture and atmospheric
+      depth. Landscape as one continuous panorama.
+    ground_noun: a flat dark sandstone ledge in a moonlit canyon
+    safe_areas: Upper-center sky and mid-center distance are dark, subdued and free
+      of bright details for separately typeset title and information panel. Keep the
+      entire Pokemon at bottom-center, inside the one central bottom card, with safe
+      padding at every visible limb.
+    constraints:
+    - Exactly one Cubone in the bottom center, following the single shared spatial
+      reference. Keep its full outline, anatomy, colors and pose. No additional Pokemon,
+      creatures, mirrors, silhouettes or statues.
+    - Keep attached appendages correct. Preserve clear dark ground, natural contact
+      shadow and open space around the single subject. The landscape occupies the
+      rest of the frame.
+    - No generated text, symbols, lettering, grids, panels, borders, logos or watermarks.
+  generation:
+    engine: flux
+    model: flux-2-klein-4b.safetensors
+    model_sha256: ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343
+    encoder: qwen_3_4b.safetensors
+    encoder_sha256: 6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a
+    vae: flux2-vae.safetensors
+    vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
+    mode: joint_scene
+    reference_mode: spatial_source_detail_joint
+    seed: 261122104
+    steps: 4
+    generation_megapixels: 2.0
+    output_dpi: 300
+    output_method: lanczos
+  promoted_file: poster-flux2-artwork.png
+  provenance_file: poster-flux2-provenance.json
+  source_details:
+    pokeapi:official-artwork:104:
+      sha256: 39f9d23ac092aea4ad0fb1a1062f89698efab9c67771f14398bdfa4cb5e9e54d
+      traits: One compact warm brown Cubone wearing its distinctive pale-grey skull.
+        Preserve two upper skull projections, the outlet of the snout, a dark recessed
+        eye socket with the visible eye, angular grey edges, and the same simple bone
+        held at image left pointing downward. Two feet, beige belly and original short
+        arms, without additional horns, bone props or characters.
+pokemon:
+  strategy: featured_from_scope
+  count: 1
+  row: bottom
+  cutout_source: pokeapi_official_artwork
+pdf:
+  enabled: false
+source:
+  collection:
+    title:
+      de: Tragosso
+    description:
+      de: Tragosso trägt den Schädel seiner Mutter und gibt den Blick auf sein Gesicht
+        kaum frei. Seinen Knochen wirft es mit bemerkenswerter Treffsicherheit. In
+        Vollmondnächten hallt sein Rufen durch die Felsen.
+    featured_elements:
+    - pokemon_id: 104
+      pokemon_name: Cubone
+      poster_subject:
+        source: pokeapi_official_artwork
+        species_id: 104
+        official_artwork_id: 104
+        subject_key: pokeapi:official-artwork:104
+        image_url: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/104.png
+text_content:
+  mode: collection_profile
+  title_style: cinzel_decorative
+  title_colors:
+    fill: '#F9E4B9'
+    outline: '#673F36'

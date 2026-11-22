@@ -218,7 +218,8 @@ def _safe_area_sentence(
         )
 
     title_region, information_region = _safe_area_regions(manifest)
-    if title_region == information_region:
+    content = _mapping(manifest.get("text_content"), "text_content")
+    if title_region == information_region or content.get("mode") == "title_only":
         return (
             f"Keep the entire {title_region} cell as uninterrupted, "
             "low-detail atmosphere with no object, emblem, signage, "

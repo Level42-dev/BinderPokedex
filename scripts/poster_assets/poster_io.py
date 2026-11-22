@@ -450,10 +450,41 @@ def load_poster_scope_data(
     *,
     scope_data_dir: Path = SCOPE_DATA,
 ) -> dict[str, Any]:
-    """Load only the source section that conditions and labels a poster bundle."""
+    """Load the set section or standalone collection that owns this poster."""
     source = bundle.manifest.get("source", {})
     if not isinstance(source, dict):
         raise ValueError(f"{bundle.manifest_path}: source must be a mapping")
+    if "collection" in source:
+        collection = source["collection"]
+        if not isinstance(collection, dict) or set(source) != {"collection"}:
+            raise ValueError("source.collection must be a mapping and the sole poster source")
+        titles = collection.get("title")
+        if not isinstance(titles, dict) or not titles or any(
+            not isinstance(language, str)
+            or not isinstance(title, str)
+            or not title.strip()
+            for language, title in titles.items()
+        ):
+            raise ValueError("source.collection.title must map languages to non-empty titles")
+        featured = collection.get("featured_elements", [])
+        if not isinstance(featured, list) or not all(
+            isinstance(subject, dict) for subject in featured
+        ):
+            raise ValueError("source.collection.featured_elements must be a list of mappings")
+        section = {"title": titles, "featured_elements": featured}
+        if "description" in collection:
+            descriptions = collection["description"]
+            if not isinstance(descriptions, dict) or not descriptions or any(
+                not isinstance(language, str)
+                or not isinstance(description, str)
+                or not description.strip()
+                for language, description in descriptions.items()
+            ):
+                raise ValueError(
+                    "source.collection.description must map languages to non-empty descriptions"
+                )
+            section["description"] = descriptions
+        return {"name": titles, "sections": {"collection": section}}
     source_scope = _safe_key(
         source.get("scope", bundle.scope),
         "poster source.scope",

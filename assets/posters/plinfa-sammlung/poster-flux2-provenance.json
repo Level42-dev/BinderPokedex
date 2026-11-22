@@ -1,0 +1,457 @@
+{
+  "asset_name": "flux2",
+  "kind": "promoted_poster",
+  "outputs": {
+    "artwork": {
+      "bytes": 7563411,
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "file": "assets/posters/plinfa-sammlung/poster-flux2-artwork.png",
+      "height": 3268,
+      "mode": "RGBA",
+      "pixel_sha256": "28c8b5fac51498b036983b7072ebae8d7b9727e0dac5013956996cdc0f6618f6",
+      "sha256": "0f936e2de85349219334f9e590a1d7cbba7d16cd69009025071b259437ed5d0c",
+      "width": 2368
+    }
+  },
+  "poster_id": "plinfa-sammlung",
+  "promoted_at": "2026-11-22T18:13:34.905546+00:00",
+  "review_language": "de",
+  "run": {
+    "created_at": "2026-11-22T18:12:19.585838+00:00",
+    "generation": {
+      "encoder": "qwen_3_4b.safetensors",
+      "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
+      "engine": "flux",
+      "generation_megapixels": 2.0,
+      "mode": "joint_scene",
+      "model": "flux-2-klein-4b.safetensors",
+      "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
+      "output_dpi": 300,
+      "output_method": "lanczos",
+      "reference_mode": "spatial_source_detail_joint",
+      "seed": 261122393,
+      "steps": 4,
+      "vae": "flux2-vae.safetensors",
+      "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
+    },
+    "inputs": {
+      "cutout_manifest": {
+        "bytes": 793,
+        "file": "tmp/poster-workspaces/plinfa-sammlung/sources/cutouts/manifest.json",
+        "sha256": "750d9ed790de745bb7f0fd1a91f1b9d1b2e59aa26e4d56dadb1a2c0c3ba040ea"
+      },
+      "cutouts": [
+        {
+          "bytes": 137695,
+          "file": "tmp/poster-workspaces/plinfa-sammlung/sources/cutouts/pokemon_393_piplup.png",
+          "height": 475,
+          "mode": "RGBA",
+          "pixel_sha256": "101b477012d5a1ec1b882746723807bb1c1214ec7fb4b8114f5b25348f6bce24",
+          "sha256": "84895daf63236a40d6061af37739908b5256876c96a4a34b9f354df5f1ec2ca0",
+          "width": 475
+        }
+      ],
+      "generation_fingerprint": {
+        "components": {
+          "cutouts": [
+            {
+              "height": 475,
+              "mode": "RGBA",
+              "pixel_sha256": "101b477012d5a1ec1b882746723807bb1c1214ec7fb4b8114f5b25348f6bce24",
+              "pokemon_id": 393,
+              "width": 475
+            }
+          ],
+          "effective_prompt": {
+            "encoding": "utf-8",
+            "sha256": "d541dd637d3bd7a0f218e0b9f64d771fe4a6bc89626c456c69171d25482f2bac"
+          },
+          "generation": {
+            "encoder": "qwen_3_4b.safetensors",
+            "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
+            "engine": "flux",
+            "generation_megapixels": 2.0,
+            "mode": "joint_scene",
+            "model": "flux-2-klein-4b.safetensors",
+            "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
+            "output_dpi": 300,
+            "output_method": "lanczos",
+            "reference_mode": "spatial_source_detail_joint",
+            "seed": 261122393,
+            "steps": 4,
+            "vae": "flux2-vae.safetensors",
+            "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
+          },
+          "joint_scene_conditioning": {
+            "cast_max_megapixels": 0.5,
+            "identity_canvas_px": 512,
+            "identity_source_resampling": "none",
+            "reference_neutral_rgb": [
+              226,
+              224,
+              211
+            ],
+            "reference_strategy": "spatial_cast_plus_unscaled_identity"
+          },
+          "layout": {
+            "columns": 3,
+            "name": "standard_3x3",
+            "raster_geometry": {
+              "generation_canvas_px": [
+                1200,
+                1664
+              ],
+              "generation_column_spans_px": [
+                [
+                  0,
+                  380
+                ],
+                [
+                  410,
+                  790
+                ],
+                [
+                  820,
+                  1200
+                ]
+              ],
+              "generation_row_spans_px": [
+                [
+                  0,
+                  535
+                ],
+                [
+                  565,
+                  1099
+                ],
+                [
+                  1129,
+                  1664
+                ]
+              ],
+              "name": "cumulative_physical_endpoints",
+              "output_canvas_px": [
+                2368,
+                3268
+              ],
+              "output_column_spans_px": [
+                [
+                  0,
+                  750
+                ],
+                [
+                  809,
+                  1559
+                ],
+                [
+                  1618,
+                  2368
+                ]
+              ],
+              "output_row_spans_px": [
+                [
+                  0,
+                  1050
+                ],
+                [
+                  1109,
+                  2159
+                ],
+                [
+                  2218,
+                  3268
+                ]
+              ],
+              "version": 2
+            },
+            "rows": 3,
+            "safe_cells": {
+              "set_info": {
+                "column": 2,
+                "row": 2
+              },
+              "title": {
+                "column": 2,
+                "row": 1
+              }
+            }
+          },
+          "pipeline_contract": {
+            "name": "poster_generation",
+            "version": 11
+          },
+          "pokemon": {
+            "count": 1,
+            "cutout_source": "pokeapi_official_artwork",
+            "row": "bottom",
+            "strategy": "featured_from_scope"
+          },
+          "scene": {
+            "concept": "A collector's panorama centered on one Piplup in its own atmospheric habitat",
+            "constraints": [
+              "Exactly one Piplup in the bottom center, following the single shared spatial reference. Keep its full outline, anatomy, colors and pose. No additional Pokemon, creatures, mirrors, silhouettes or statues.",
+              "Keep attached appendages correct. Preserve clear dark ground, natural contact shadow and open space around the single subject. The landscape occupies the rest of the frame.",
+              "No generated text, symbols, lettering, grids, panels, borders, logos or watermarks."
+            ],
+            "ground_noun": "a flat frost-covered slate rock at the ice edge",
+            "lighting": "Moon-blue ice and sea, restrained pale mint reflections from the aurora, deep cobalt shadows. Plinfa's navy hood stays distinct against the frosted base.",
+            "rendering": "High-quality hand-painted fantasy gouache, clean anime-compatible outlines for the one foreground subject, broad matte landscape strokes, texture and atmospheric depth. Landscape as one continuous panorama.",
+            "safe_areas": "Upper-center sky and mid-center distance are dark, subdued and free of bright details for separately typeset title and information panel. Keep the entire Pokemon at bottom-center, inside the one central bottom card, with safe padding at every visible limb.",
+            "setting": "A dramatic icy coast with distant blue glaciers and clear dark water, fragmented sea ice and crystalline shoreline rocks. Silvery-blue waves lap under a deep cobalt sky. A pale mint aurora appears far left and right above the horizon, while the upper and middle center remain dark indigo. Slate-blue flat icy rock provides clear foreground at bottom-center."
+          },
+          "source_details": {
+            "pokeapi:official-artwork:393": {
+              "sha256": "84895daf63236a40d6061af37739908b5256876c96a4a34b9f354df5f1ec2ca0",
+              "traits": "One Piplup in the exact three-quarter posture facing image right. A smooth navy and medium-blue head, a crisp white face mask, one readable dark oval eye, a small yellow beak, cyan underside, exactly two white oval chest marks, small blue flippers, a single upward tail and two yellow webbed feet. Preserve the whole rounded contour and side-facing gaze."
+            }
+          },
+          "source_subject_ids": [
+            393
+          ]
+        },
+        "schema_version": 1,
+        "sha256": "2ae8d9a9e98abd9d8197769caff556dd1a82b01a069fb70d7d1ca89bd05fde88"
+      },
+      "overlay_fingerprint": {
+        "components": {
+          "languages": {
+            "de": {
+              "information": [
+                "Plinfa nimmt Hilfe nur ungern an. An Land stolpert es leicht, im Wasser bewegt es sich flink und sicher. Beim Jagen kann es mehrere Minuten unter Wasser bleiben."
+              ],
+              "title": {
+                "font_sha256": "f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59",
+                "kind": "text",
+                "renderer": "lilita_one_v1",
+                "value": "Plinfa"
+              }
+            },
+            "en": {
+              "information": [
+                "Plinfa nimmt Hilfe nur ungern an. An Land stolpert es leicht, im Wasser bewegt es sich flink und sicher. Beim Jagen kann es mehrere Minuten unter Wasser bleiben."
+              ],
+              "title": {
+                "font_sha256": "f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59",
+                "kind": "text",
+                "renderer": "lilita_one_v1",
+                "value": "Plinfa"
+              }
+            },
+            "es": {
+              "information": [
+                "Plinfa nimmt Hilfe nur ungern an. An Land stolpert es leicht, im Wasser bewegt es sich flink und sicher. Beim Jagen kann es mehrere Minuten unter Wasser bleiben."
+              ],
+              "title": {
+                "font_sha256": "f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59",
+                "kind": "text",
+                "renderer": "lilita_one_v1",
+                "value": "Plinfa"
+              }
+            },
+            "fr": {
+              "information": [
+                "Plinfa nimmt Hilfe nur ungern an. An Land stolpert es leicht, im Wasser bewegt es sich flink und sicher. Beim Jagen kann es mehrere Minuten unter Wasser bleiben."
+              ],
+              "title": {
+                "font_sha256": "f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59",
+                "kind": "text",
+                "renderer": "lilita_one_v1",
+                "value": "Plinfa"
+              }
+            },
+            "it": {
+              "information": [
+                "Plinfa nimmt Hilfe nur ungern an. An Land stolpert es leicht, im Wasser bewegt es sich flink und sicher. Beim Jagen kann es mehrere Minuten unter Wasser bleiben."
+              ],
+              "title": {
+                "font_sha256": "f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59",
+                "kind": "text",
+                "renderer": "lilita_one_v1",
+                "value": "Plinfa"
+              }
+            },
+            "ja": {
+              "information": [
+                "Plinfa nimmt Hilfe nur ungern an. An Land stolpert es leicht, im Wasser bewegt es sich flink und sicher. Beim Jagen kann es mehrere Minuten unter Wasser bleiben."
+              ],
+              "title": {
+                "font_sha256": "f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59",
+                "kind": "text",
+                "renderer": "lilita_one_v1",
+                "value": "Plinfa"
+              }
+            },
+            "ko": {
+              "information": [
+                "Plinfa nimmt Hilfe nur ungern an. An Land stolpert es leicht, im Wasser bewegt es sich flink und sicher. Beim Jagen kann es mehrere Minuten unter Wasser bleiben."
+              ],
+              "title": {
+                "font_sha256": "f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59",
+                "kind": "text",
+                "renderer": "lilita_one_v1",
+                "value": "Plinfa"
+              }
+            },
+            "zh_hans": {
+              "information": [
+                "Plinfa nimmt Hilfe nur ungern an. An Land stolpert es leicht, im Wasser bewegt es sich flink und sicher. Beim Jagen kann es mehrere Minuten unter Wasser bleiben."
+              ],
+              "title": {
+                "font_sha256": "f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59",
+                "kind": "text",
+                "renderer": "lilita_one_v1",
+                "value": "Plinfa"
+              }
+            },
+            "zh_hant": {
+              "information": [
+                "Plinfa nimmt Hilfe nur ungern an. An Land stolpert es leicht, im Wasser bewegt es sich flink und sicher. Beim Jagen kann es mehrere Minuten unter Wasser bleiben."
+              ],
+              "title": {
+                "font_sha256": "f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59",
+                "kind": "text",
+                "renderer": "lilita_one_v1",
+                "value": "Plinfa"
+              }
+            }
+          },
+          "layout_name": "standard_3x3",
+          "logo_pixels": {},
+          "pipeline_contract": {
+            "name": "poster_overlay",
+            "version": 3
+          },
+          "text_cells": {
+            "title": {
+              "column": 2,
+              "row": 1
+            }
+          },
+          "text_content": {
+            "mode": "collection_profile",
+            "title_colors": {
+              "fill": "#D5F6FF",
+              "outline": "#274F83"
+            },
+            "title_style": "lilita_one"
+          }
+        },
+        "schema_version": 1,
+        "sha256": "f0a38eb95d29231339fe519861818422a30da1d83f9c9fd92c88a6c1ac0954e3"
+      },
+      "prompt": {
+        "bytes": 3726,
+        "file": "tmp/poster-workspaces/plinfa-sammlung/comfyui_poster/source_detail_joint_prompt.generated.txt",
+        "sha256": "04f56c56166189223f6ad97893e7726f090b2789dd8482e0e587e99e8135bb1c"
+      },
+      "references": [
+        {
+          "bytes": 25268,
+          "file": "tmp/poster-workspaces/plinfa-sammlung/comfyui_poster/joint_scene_cast_reference.png",
+          "height": 832,
+          "mode": "RGBA",
+          "pixel_sha256": "df29226d6fe62528c20c8679b57a533ca51c56aceb2aee7fedffad312413fbbc",
+          "sha256": "2e2c20e2a3e01ae6a1b4505ae9f1e330c7a215882decda6a4a2022a031e6898e",
+          "width": 608
+        },
+        {
+          "bytes": 118306,
+          "file": "tmp/poster-workspaces/plinfa-sammlung/comfyui_poster/identity_reference_1.png",
+          "height": 512,
+          "mode": "RGBA",
+          "pixel_sha256": "69bb9b3e91aa9d02aae212307bd9817680a6e63734b964b099d94a292b5ceaa1",
+          "sha256": "be6836efb6bef6e4e1d38a698640e8b36d77b4a25d0c3dc0e301f209126243e7",
+          "width": 512
+        }
+      ],
+      "scope_manifest": {
+        "bytes": 4000,
+        "file": "config/posters/plinfa-sammlung/poster.yaml",
+        "sha256": "70e176ce17094779fcc5b155c18e73f9507c9299d86cba9080f551f407baee90"
+      },
+      "workflow": {
+        "bytes": 7092,
+        "file": "tmp/poster-workspaces/plinfa-sammlung/comfyui_poster/workflow_api_joint_scene_spatial_source_detail_joint_2mp_261122393.json",
+        "sha256": "ef365cef2cf830b59633dbe765a782f943c0a8222d777b2d785edd86b45617a4"
+      }
+    },
+    "kind": "poster_generation_run",
+    "poster_id": "plinfa-sammlung",
+    "raw_artwork": {
+      "bytes": 2957673,
+      "file": "tmp/six-collection-posters/plinfa-sammlung/raw.png",
+      "height": 1664,
+      "mode": "RGBA",
+      "pixel_sha256": "dcb8fba02c9feafa5a3bbfc2f8070bb773786fcbfe599f31282f7292ad0b2d83",
+      "sha256": "8761ca88f01d67fb3353078a8f980711655b4621b80b5722227f1dbb68b163d9",
+      "width": 1200
+    },
+    "schema_version": 1,
+    "scope": "plinfa-sammlung",
+    "section_id": null,
+    "source_artwork": {
+      "bytes": 7563411,
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "file": "tmp/six-collection-posters/plinfa-sammlung/master.png",
+      "height": 3268,
+      "mode": "RGBA",
+      "pixel_sha256": "28c8b5fac51498b036983b7072ebae8d7b9727e0dac5013956996cdc0f6618f6",
+      "sha256": "0f936e2de85349219334f9e590a1d7cbba7d16cd69009025071b259437ed5d0c",
+      "width": 2368
+    },
+    "source_scope": "plinfa-sammlung",
+    "validation": {
+      "joint_scene_visual_review": {
+        "approval_source": "explicit_promotion_flag",
+        "criteria": [
+          "exact_cast_count",
+          "raw_generation_identity",
+          "text_free_output_identity",
+          "identity_and_form",
+          "silhouette_and_stature",
+          "anatomy_and_face",
+          "colors_and_markings",
+          "placement_and_card_safety",
+          "natural_scene_integration",
+          "coherent_landscape_occlusion"
+        ],
+        "generation_fingerprint_sha256": "2ae8d9a9e98abd9d8197769caff556dd1a82b01a069fb70d7d1ca89bd05fde88",
+        "method": "agent_identity_and_scene_review",
+        "passed": true,
+        "raw_artwork_pixel_sha256": "dcb8fba02c9feafa5a3bbfc2f8070bb773786fcbfe599f31282f7292ad0b2d83",
+        "raw_artwork_sha256": "8761ca88f01d67fb3353078a8f980711655b4621b80b5722227f1dbb68b163d9",
+        "reviewed_artwork_pixel_sha256": "28c8b5fac51498b036983b7072ebae8d7b9727e0dac5013956996cdc0f6618f6",
+        "reviewed_artwork_sha256": "0f936e2de85349219334f9e590a1d7cbba7d16cd69009025071b259437ed5d0c",
+        "reviewed_at": "2026-11-22T18:13:02.230846+00:00",
+        "source_cutout_pixel_sha256": [
+          "101b477012d5a1ec1b882746723807bb1c1214ec7fb4b8114f5b25348f6bce24"
+        ],
+        "source_cutout_sha256": [
+          "84895daf63236a40d6061af37739908b5256876c96a4a34b9f354df5f1ec2ca0"
+        ],
+        "source_subject_ids": [
+          393
+        ],
+        "stage": "raw_and_text_free_print_artwork"
+      }
+    }
+  },
+  "schema_version": 2,
+  "scope": "plinfa-sammlung",
+  "section_id": null,
+  "source_scope": "plinfa-sammlung",
+  "storage": {
+    "derivatives": "regenerated_in_ignored_workspace",
+    "durable_outputs": [
+      "artwork"
+    ],
+    "reproducible_sources": "downloaded_to_ignored_workspace",
+    "schema_version": 1
+  }
+}

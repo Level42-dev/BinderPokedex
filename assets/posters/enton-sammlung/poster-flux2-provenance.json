@@ -1,0 +1,457 @@
+{
+  "asset_name": "flux2",
+  "kind": "promoted_poster",
+  "outputs": {
+    "artwork": {
+      "bytes": 8588656,
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "file": "assets/posters/enton-sammlung/poster-flux2-artwork.png",
+      "height": 3268,
+      "mode": "RGBA",
+      "pixel_sha256": "5073eb4c2cbc470010a4bbe3b73425fa2c818a62137fa2546f6c91815858a3e0",
+      "sha256": "4044ceb17aa355c1c97a98221c98e9a4c443e791c38479b0dc90f24044803e3a",
+      "width": 2368
+    }
+  },
+  "poster_id": "enton-sammlung",
+  "promoted_at": "2026-11-22T18:12:52.581574+00:00",
+  "review_language": "de",
+  "run": {
+    "created_at": "2026-11-22T18:11:30.747954+00:00",
+    "generation": {
+      "encoder": "qwen_3_4b.safetensors",
+      "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
+      "engine": "flux",
+      "generation_megapixels": 2.0,
+      "mode": "joint_scene",
+      "model": "flux-2-klein-4b.safetensors",
+      "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
+      "output_dpi": 300,
+      "output_method": "lanczos",
+      "reference_mode": "spatial_source_detail_joint",
+      "seed": 261122054,
+      "steps": 4,
+      "vae": "flux2-vae.safetensors",
+      "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
+    },
+    "inputs": {
+      "cutout_manifest": {
+        "bytes": 789,
+        "file": "tmp/poster-workspaces/enton-sammlung/sources/cutouts/manifest.json",
+        "sha256": "9ee46390001cbb8805f66098e925513079593c883139ece7d6f623eb6f6ef816"
+      },
+      "cutouts": [
+        {
+          "bytes": 120182,
+          "file": "tmp/poster-workspaces/enton-sammlung/sources/cutouts/pokemon_054_psyduck.png",
+          "height": 475,
+          "mode": "RGBA",
+          "pixel_sha256": "019b2fe6c8c917c5dab50b4ac87116110a068bef918a1d69d05150e2cfea7d14",
+          "sha256": "c0ee2c137cf35b23ce789c6d9924c262b714381adf60a0d3a94af994d6f70b5d",
+          "width": 475
+        }
+      ],
+      "generation_fingerprint": {
+        "components": {
+          "cutouts": [
+            {
+              "height": 475,
+              "mode": "RGBA",
+              "pixel_sha256": "019b2fe6c8c917c5dab50b4ac87116110a068bef918a1d69d05150e2cfea7d14",
+              "pokemon_id": 54,
+              "width": 475
+            }
+          ],
+          "effective_prompt": {
+            "encoding": "utf-8",
+            "sha256": "a58626ff1c205aba548d1af8518df0e05de48165086fd64dc22a313ceca3ff3c"
+          },
+          "generation": {
+            "encoder": "qwen_3_4b.safetensors",
+            "encoder_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
+            "engine": "flux",
+            "generation_megapixels": 2.0,
+            "mode": "joint_scene",
+            "model": "flux-2-klein-4b.safetensors",
+            "model_sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343",
+            "output_dpi": 300,
+            "output_method": "lanczos",
+            "reference_mode": "spatial_source_detail_joint",
+            "seed": 261122054,
+            "steps": 4,
+            "vae": "flux2-vae.safetensors",
+            "vae_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5"
+          },
+          "joint_scene_conditioning": {
+            "cast_max_megapixels": 0.5,
+            "identity_canvas_px": 512,
+            "identity_source_resampling": "none",
+            "reference_neutral_rgb": [
+              226,
+              224,
+              211
+            ],
+            "reference_strategy": "spatial_cast_plus_unscaled_identity"
+          },
+          "layout": {
+            "columns": 3,
+            "name": "standard_3x3",
+            "raster_geometry": {
+              "generation_canvas_px": [
+                1200,
+                1664
+              ],
+              "generation_column_spans_px": [
+                [
+                  0,
+                  380
+                ],
+                [
+                  410,
+                  790
+                ],
+                [
+                  820,
+                  1200
+                ]
+              ],
+              "generation_row_spans_px": [
+                [
+                  0,
+                  535
+                ],
+                [
+                  565,
+                  1099
+                ],
+                [
+                  1129,
+                  1664
+                ]
+              ],
+              "name": "cumulative_physical_endpoints",
+              "output_canvas_px": [
+                2368,
+                3268
+              ],
+              "output_column_spans_px": [
+                [
+                  0,
+                  750
+                ],
+                [
+                  809,
+                  1559
+                ],
+                [
+                  1618,
+                  2368
+                ]
+              ],
+              "output_row_spans_px": [
+                [
+                  0,
+                  1050
+                ],
+                [
+                  1109,
+                  2159
+                ],
+                [
+                  2218,
+                  3268
+                ]
+              ],
+              "version": 2
+            },
+            "rows": 3,
+            "safe_cells": {
+              "set_info": {
+                "column": 2,
+                "row": 2
+              },
+              "title": {
+                "column": 2,
+                "row": 1
+              }
+            }
+          },
+          "pipeline_contract": {
+            "name": "poster_generation",
+            "version": 11
+          },
+          "pokemon": {
+            "count": 1,
+            "cutout_source": "pokeapi_official_artwork",
+            "row": "bottom",
+            "strategy": "featured_from_scope"
+          },
+          "scene": {
+            "concept": "A collector's panorama centered on one Psyduck in its own atmospheric habitat",
+            "constraints": [
+              "Exactly one Psyduck in the bottom center, following the single shared spatial reference. Keep its full outline, anatomy, colors and pose. No additional Pokemon, creatures, mirrors, silhouettes or statues.",
+              "Keep attached appendages correct. Preserve clear dark ground, natural contact shadow and open space around the single subject. The landscape occupies the rest of the frame.",
+              "No generated text, symbols, lettering, grids, panels, borders, logos or watermarks."
+            ],
+            "ground_noun": "a dark wet muddy bank beside the pond",
+            "lighting": "Desaturated blue-green dawn, patches of soft gold in the water, charcoal reeds. The lemon-yellow subject has a clearly readable outline.",
+            "rendering": "High-quality hand-painted fantasy gouache, clean anime-compatible outlines for the one foreground subject, broad matte landscape strokes, texture and atmospheric depth. Landscape as one continuous panorama.",
+            "safe_areas": "Upper-center sky and mid-center distance are dark, subdued and free of bright details for separately typeset title and information panel. Keep the entire Pokemon at bottom-center, inside the one central bottom card, with safe padding at every visible limb.",
+            "setting": "A reed-ringed pond in soft dawn fog with dark water, amber glints, lily pads, old willows and a silvery misted treeline. A narrow muddy bank in the foreground and broad mysterious jade water in the center distance. Keep the upper center deep blue-green; bank foreground at bottom-center is clear. Tiny circular ripples sit in the water beside the bank, with still water extending beyond."
+          },
+          "source_details": {
+            "pokeapi:official-artwork:54": {
+              "sha256": "c0ee2c137cf35b23ce789c6d9924c262b714381adf60a0d3a94af994d6f70b5d",
+              "traits": "One warm yellow Psyduck with its cream-colored broad bill and exactly three short black feathers on top. Two tiny pupils in widely open white eyes, exactly two arms holding the sides of its head, one raised webbed foot with a visibly pale sole, the other foot down and one yellow tail. Preserve the puzzled tilt and whole silhouette from the source, no accessories and no extra feathers."
+            }
+          },
+          "source_subject_ids": [
+            54
+          ]
+        },
+        "schema_version": 1,
+        "sha256": "12206fc1cdd588ae3615bce4445e5cf91c93101d10bc71420c6c7b1664fa66a1"
+      },
+      "overlay_fingerprint": {
+        "components": {
+          "languages": {
+            "de": {
+              "information": [
+                "Enton hält sich oft mit beiden Händen den Kopf. Wenn die Kopfschmerzen zu stark werden, brechen seine Psychokräfte plötzlich hervor. Hinterher weiß es meist selbst nicht, was gerade passiert ist."
+              ],
+              "title": {
+                "font_sha256": "f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59",
+                "kind": "text",
+                "renderer": "lilita_one_v1",
+                "value": "Enton"
+              }
+            },
+            "en": {
+              "information": [
+                "Enton hält sich oft mit beiden Händen den Kopf. Wenn die Kopfschmerzen zu stark werden, brechen seine Psychokräfte plötzlich hervor. Hinterher weiß es meist selbst nicht, was gerade passiert ist."
+              ],
+              "title": {
+                "font_sha256": "f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59",
+                "kind": "text",
+                "renderer": "lilita_one_v1",
+                "value": "Enton"
+              }
+            },
+            "es": {
+              "information": [
+                "Enton hält sich oft mit beiden Händen den Kopf. Wenn die Kopfschmerzen zu stark werden, brechen seine Psychokräfte plötzlich hervor. Hinterher weiß es meist selbst nicht, was gerade passiert ist."
+              ],
+              "title": {
+                "font_sha256": "f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59",
+                "kind": "text",
+                "renderer": "lilita_one_v1",
+                "value": "Enton"
+              }
+            },
+            "fr": {
+              "information": [
+                "Enton hält sich oft mit beiden Händen den Kopf. Wenn die Kopfschmerzen zu stark werden, brechen seine Psychokräfte plötzlich hervor. Hinterher weiß es meist selbst nicht, was gerade passiert ist."
+              ],
+              "title": {
+                "font_sha256": "f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59",
+                "kind": "text",
+                "renderer": "lilita_one_v1",
+                "value": "Enton"
+              }
+            },
+            "it": {
+              "information": [
+                "Enton hält sich oft mit beiden Händen den Kopf. Wenn die Kopfschmerzen zu stark werden, brechen seine Psychokräfte plötzlich hervor. Hinterher weiß es meist selbst nicht, was gerade passiert ist."
+              ],
+              "title": {
+                "font_sha256": "f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59",
+                "kind": "text",
+                "renderer": "lilita_one_v1",
+                "value": "Enton"
+              }
+            },
+            "ja": {
+              "information": [
+                "Enton hält sich oft mit beiden Händen den Kopf. Wenn die Kopfschmerzen zu stark werden, brechen seine Psychokräfte plötzlich hervor. Hinterher weiß es meist selbst nicht, was gerade passiert ist."
+              ],
+              "title": {
+                "font_sha256": "f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59",
+                "kind": "text",
+                "renderer": "lilita_one_v1",
+                "value": "Enton"
+              }
+            },
+            "ko": {
+              "information": [
+                "Enton hält sich oft mit beiden Händen den Kopf. Wenn die Kopfschmerzen zu stark werden, brechen seine Psychokräfte plötzlich hervor. Hinterher weiß es meist selbst nicht, was gerade passiert ist."
+              ],
+              "title": {
+                "font_sha256": "f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59",
+                "kind": "text",
+                "renderer": "lilita_one_v1",
+                "value": "Enton"
+              }
+            },
+            "zh_hans": {
+              "information": [
+                "Enton hält sich oft mit beiden Händen den Kopf. Wenn die Kopfschmerzen zu stark werden, brechen seine Psychokräfte plötzlich hervor. Hinterher weiß es meist selbst nicht, was gerade passiert ist."
+              ],
+              "title": {
+                "font_sha256": "f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59",
+                "kind": "text",
+                "renderer": "lilita_one_v1",
+                "value": "Enton"
+              }
+            },
+            "zh_hant": {
+              "information": [
+                "Enton hält sich oft mit beiden Händen den Kopf. Wenn die Kopfschmerzen zu stark werden, brechen seine Psychokräfte plötzlich hervor. Hinterher weiß es meist selbst nicht, was gerade passiert ist."
+              ],
+              "title": {
+                "font_sha256": "f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59",
+                "kind": "text",
+                "renderer": "lilita_one_v1",
+                "value": "Enton"
+              }
+            }
+          },
+          "layout_name": "standard_3x3",
+          "logo_pixels": {},
+          "pipeline_contract": {
+            "name": "poster_overlay",
+            "version": 3
+          },
+          "text_cells": {
+            "title": {
+              "column": 2,
+              "row": 1
+            }
+          },
+          "text_content": {
+            "mode": "collection_profile",
+            "title_colors": {
+              "fill": "#FFDF78",
+              "outline": "#375C55"
+            },
+            "title_style": "lilita_one"
+          }
+        },
+        "schema_version": 1,
+        "sha256": "8fc9a4ed460473f3a6dca8536a66a5f3ac5603652ec17ca204955de8874da6d9"
+      },
+      "prompt": {
+        "bytes": 3775,
+        "file": "tmp/poster-workspaces/enton-sammlung/comfyui_poster/source_detail_joint_prompt.generated.txt",
+        "sha256": "035e224793ff231c52af1fb9a238b5d81e68a4e22b98eaa6d07aee39b69e9c92"
+      },
+      "references": [
+        {
+          "bytes": 23827,
+          "file": "tmp/poster-workspaces/enton-sammlung/comfyui_poster/joint_scene_cast_reference.png",
+          "height": 832,
+          "mode": "RGBA",
+          "pixel_sha256": "be980ac88370434a06ad7e803127652477ee6d26cc411264ab54f23b54c89346",
+          "sha256": "d3da0eb4ac0f091c684ebca5187edf9eed53de53aac47aac0cc018e6f24255e0",
+          "width": 608
+        },
+        {
+          "bytes": 107957,
+          "file": "tmp/poster-workspaces/enton-sammlung/comfyui_poster/identity_reference_1.png",
+          "height": 512,
+          "mode": "RGBA",
+          "pixel_sha256": "b4df006813c4e1a105a4810e0e5507fb69b5b8759cfe1ddecdd440a2c24de9ec",
+          "sha256": "77cc779a8d83243ab9eb8d3900583ee58cffe7f7b370bce7f8b50320254c0b50",
+          "width": 512
+        }
+      ],
+      "scope_manifest": {
+        "bytes": 4083,
+        "file": "config/posters/enton-sammlung/poster.yaml",
+        "sha256": "9490073d8bd55e3571b9ee420b6c226442cf1d52a2ceb8ad8310b82bba24fb4b"
+      },
+      "workflow": {
+        "bytes": 7140,
+        "file": "tmp/poster-workspaces/enton-sammlung/comfyui_poster/workflow_api_joint_scene_spatial_source_detail_joint_2mp_261122054.json",
+        "sha256": "756ccb729ac6479169c6395f948154bcce5a3abb27d59d69461fb578a7223e36"
+      }
+    },
+    "kind": "poster_generation_run",
+    "poster_id": "enton-sammlung",
+    "raw_artwork": {
+      "bytes": 3189523,
+      "file": "tmp/six-collection-posters/enton-sammlung/raw.png",
+      "height": 1664,
+      "mode": "RGBA",
+      "pixel_sha256": "a37ad0ae1334e37799103962d789cbc3ef0d0794b2eed5cddd405be43c019b07",
+      "sha256": "2e866fba21ad0ca68a8bbccb0e3983b57eea98e7df338a232ad937334a66e730",
+      "width": 1200
+    },
+    "schema_version": 1,
+    "scope": "enton-sammlung",
+    "section_id": null,
+    "source_artwork": {
+      "bytes": 8588656,
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "file": "tmp/six-collection-posters/enton-sammlung/master.png",
+      "height": 3268,
+      "mode": "RGBA",
+      "pixel_sha256": "5073eb4c2cbc470010a4bbe3b73425fa2c818a62137fa2546f6c91815858a3e0",
+      "sha256": "4044ceb17aa355c1c97a98221c98e9a4c443e791c38479b0dc90f24044803e3a",
+      "width": 2368
+    },
+    "source_scope": "enton-sammlung",
+    "validation": {
+      "joint_scene_visual_review": {
+        "approval_source": "explicit_promotion_flag",
+        "criteria": [
+          "exact_cast_count",
+          "raw_generation_identity",
+          "text_free_output_identity",
+          "identity_and_form",
+          "silhouette_and_stature",
+          "anatomy_and_face",
+          "colors_and_markings",
+          "placement_and_card_safety",
+          "natural_scene_integration",
+          "coherent_landscape_occlusion"
+        ],
+        "generation_fingerprint_sha256": "12206fc1cdd588ae3615bce4445e5cf91c93101d10bc71420c6c7b1664fa66a1",
+        "method": "agent_identity_and_scene_review",
+        "passed": true,
+        "raw_artwork_pixel_sha256": "a37ad0ae1334e37799103962d789cbc3ef0d0794b2eed5cddd405be43c019b07",
+        "raw_artwork_sha256": "2e866fba21ad0ca68a8bbccb0e3983b57eea98e7df338a232ad937334a66e730",
+        "reviewed_artwork_pixel_sha256": "5073eb4c2cbc470010a4bbe3b73425fa2c818a62137fa2546f6c91815858a3e0",
+        "reviewed_artwork_sha256": "4044ceb17aa355c1c97a98221c98e9a4c443e791c38479b0dc90f24044803e3a",
+        "reviewed_at": "2026-11-22T18:12:40.258185+00:00",
+        "source_cutout_pixel_sha256": [
+          "019b2fe6c8c917c5dab50b4ac87116110a068bef918a1d69d05150e2cfea7d14"
+        ],
+        "source_cutout_sha256": [
+          "c0ee2c137cf35b23ce789c6d9924c262b714381adf60a0d3a94af994d6f70b5d"
+        ],
+        "source_subject_ids": [
+          54
+        ],
+        "stage": "raw_and_text_free_print_artwork"
+      }
+    }
+  },
+  "schema_version": 2,
+  "scope": "enton-sammlung",
+  "section_id": null,
+  "source_scope": "enton-sammlung",
+  "storage": {
+    "derivatives": "regenerated_in_ignored_workspace",
+    "durable_outputs": [
+      "artwork"
+    ],
+    "reproducible_sources": "downloaded_to_ignored_workspace",
+    "schema_version": 1
+  }
+}

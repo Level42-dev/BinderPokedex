@@ -1,0 +1,93 @@
+schema_version: 2
+asset_key: hopplo-sammlung
+scope: hopplo-sammlung
+layout:
+  name: standard_3x3
+text_cells:
+  title:
+    row: 1
+    column: 2
+artwork:
+  scene:
+    concept: A collector's panorama centered on one Scorbunny in its own atmospheric
+      habitat
+    setting: Wind-swept terracotta sandstone foothills with an open trail, gold dry
+      grasses at the far left and right, layered red cliffs and small curls of copper
+      dust in the distance. Strong luminous late-afternoon side light and an umber
+      sky, with quiet dark rust color in the upper and middle center. A flat sweep
+      of dark red sand runs across the bottom with a strong, uninterrupted central
+      silhouette zone.
+    lighting: Warm copper and golden side light, ochre and vermilion rock, plum shadows.
+      Subtle dry sand in the air stays in the distance.
+    rendering: High-quality hand-painted fantasy gouache, clean anime-compatible outlines
+      for the one foreground subject, broad matte landscape strokes, texture and atmospheric
+      depth. Landscape as one continuous panorama.
+    ground_noun: open dark red sand on a wind-swept trail
+    safe_areas: Upper-center sky and mid-center distance are dark, subdued and free
+      of bright details for separately typeset title and information panel. Keep the
+      entire Pokemon at bottom-center, inside the one central bottom card, with safe
+      padding at every visible limb.
+    constraints:
+    - Exactly one Scorbunny in the bottom center, following the single shared spatial
+      reference. Keep its full outline, anatomy, colors and pose. No additional Pokemon,
+      creatures, mirrors, silhouettes or statues.
+    - Keep attached appendages correct. Preserve clear dark ground, natural contact
+      shadow and open space around the single subject. The landscape occupies the
+      rest of the frame.
+    - No generated text, symbols, lettering, grids, panels, borders, logos or watermarks.
+  generation:
+    engine: flux
+    model: flux-2-klein-4b.safetensors
+    model_sha256: ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343
+    encoder: qwen_3_4b.safetensors
+    encoder_sha256: 6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a
+    vae: flux2-vae.safetensors
+    vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
+    mode: joint_scene
+    reference_mode: spatial_source_detail_joint
+    seed: 261122813
+    steps: 4
+    generation_megapixels: 2.0
+    output_dpi: 300
+    output_method: lanczos
+  promoted_file: poster-flux2-artwork.png
+  provenance_file: poster-flux2-provenance.json
+  source_details:
+    pokeapi:official-artwork:813:
+      sha256: 0099f4bb576966efc872c03c69616f954c8474d12608a2fd7e91304a9d271167
+      traits: One energetic white Scorbunny matching the original lifted-knee running
+        pose and wide open smile. Preserve its two full long ears with orange tips
+        and yellow accents, tiny orange eyes, gold rectangular nose patch, orange
+        collar, two arms, and two legs with exactly the source's orange and ochre
+        sole markings. Keep both ear tips and its only raised kicking foot in frame,
+        with no appendages or props added.
+pokemon:
+  strategy: featured_from_scope
+  count: 1
+  row: bottom
+  cutout_source: pokeapi_official_artwork
+pdf:
+  enabled: false
+source:
+  collection:
+    title:
+      de: Hopplo
+    description:
+      de: Hopplo steckt voller Energie und nimmt selbst kurze Wege im Sprint. Beim
+        Laufen heizen sich die Ballen unter seinen Füßen auf. Ist es richtig in Fahrt,
+        sprühen bei seinen Tritten die Funken.
+    featured_elements:
+    - pokemon_id: 813
+      pokemon_name: Scorbunny
+      poster_subject:
+        source: pokeapi_official_artwork
+        species_id: 813
+        official_artwork_id: 813
+        subject_key: pokeapi:official-artwork:813
+        image_url: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/813.png
+text_content:
+  mode: collection_profile
+  title_style: lilita_one
+  title_colors:
+    fill: '#FFF0DA'
+    outline: '#9D3F1F'

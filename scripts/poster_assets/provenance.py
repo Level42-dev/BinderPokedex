@@ -1436,6 +1436,7 @@ def build_overlay_fingerprint(
             readable_overlay_text,
             resolved_title_text,
             title_logo_file,
+            title_style_font,
         )
     except ImportError:
         from finalize_comfyui_poster import (
@@ -1446,6 +1447,7 @@ def build_overlay_fingerprint(
             readable_overlay_text,
             resolved_title_text,
             title_logo_file,
+            title_style_font,
         )
 
     bundle, scope_data = _bundle_and_scope_data(
@@ -1509,9 +1511,16 @@ def build_overlay_fingerprint(
                     "renderer": PLAIN_TITLE_RENDERER_CONTRACT,
                     "value": readable_overlay_text(header_text),
                 }
+                style = content.get("title_style")
+                font_path = title_style_font(style)
+                if font_path is not None:
+                    title.update(
+                        renderer=f"{style}_v1",
+                        font_sha256=sha256_file(font_path),
+                    )
         language_components[language] = {
             "title": title,
-            "information": list(
+            "information": [] if content_mode == "title_only" else list(
                 info_panel_values(
                     scope_data,
                     language,
