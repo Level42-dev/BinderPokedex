@@ -13,8 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added 141 numbered binder inserts in German, English, French, Spanish, and
   Italian, with original printed numbering and localized Special Energy names.
-- Added official localized set logos and a panorama configuration. The PDF
-  opens with the standard set cover while the panorama awaits artwork review.
+- Opened all five Delta Reign PDFs with the approved nine-card panorama of
+  Kyogre, Mega Rayquaza, and Groudon, with localized set logos and set details.
 
 ### 🔧 Renderer Infrastructure
 
