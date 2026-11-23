@@ -325,8 +325,10 @@ class TransformTCGSetStep(BaseStep):
         # Clean each language
         for lang, name in name_dict.items():
             cleaned_name = name
+            # TCGdex uses a nonbreaking hyphen in some localized ex labels.
+            comparable_name = name.replace('\u2011', '-')
             for pattern in patterns_to_remove:
-                if cleaned_name.endswith(pattern):
+                if comparable_name.endswith(pattern):
                     cleaned_name = cleaned_name[:-len(pattern)]
                     break  # Only remove first match
             cleaned[lang] = cleaned_name

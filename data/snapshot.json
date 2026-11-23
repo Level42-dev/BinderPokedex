@@ -1,7 +1,7 @@
 {
-  "boundary": "2026-10-26",
-  "fetched_at": "2026-10-26T12:23:11Z",
-  "file_count": 67,
+  "boundary": "2026-11-23",
+  "fetched_at": "2026-11-23T20:47:27Z",
+  "file_count": 69,
   "files": [
     {
       "path": "data/output/30C.json",
@@ -72,6 +72,11 @@
       "path": "data/output/ME05.json",
       "sha256": "07dee751625a950c6908aa83702664e7217673ea2f23d75d156662b3abf17ab7",
       "size_bytes": 85111
+    },
+    {
+      "path": "data/output/ME06.json",
+      "sha256": "fd7dace5691d5301a3a9a3f80611b21e77e35d8241fd0c33c20e20aa8531bbd1",
+      "size_bytes": 101364
     },
     {
       "path": "data/output/MEP.json",
@@ -222,6 +227,11 @@
       "path": "data/source/me05.json",
       "sha256": "14f8c210362259d61d6372aa343732cd369b0bbe2547c7ab41d738df5c1bd7a3",
       "size_bytes": 33665
+    },
+    {
+      "path": "data/source/me06.json",
+      "sha256": "8d23ff4bb02a6dbd2208746b2301b34c4775693a271723d396312ae6aa25779e",
+      "size_bytes": 37296
     },
     {
       "path": "data/source/mep.json",

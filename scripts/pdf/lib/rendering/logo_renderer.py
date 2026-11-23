@@ -117,7 +117,9 @@ class LogoRenderer:
         
         # Generate filename from URL hash
         url_hash = hashlib.md5(url.encode()).hexdigest()
-        file_extension = Path(url).suffix or '.png'
+        is_remote = url.startswith(('http://', 'https://'))
+        image_path = url.partition('?')[0].partition('#')[0] if is_remote else url
+        file_extension = Path(image_path).suffix or '.png'
         cache_file = cache_dir / f"{url_hash}{file_extension}"
         
         # Return cached file if it exists
@@ -125,7 +127,7 @@ class LogoRenderer:
             return cache_file
         
         # Check if it's a local file path (relative or absolute)
-        if not url.startswith(('http://', 'https://')):
+        if not is_remote:
             # Try to find the file relative to project root
             # Get project root (5 levels up from this file: scripts/pdf/lib/rendering/logo_renderer.py)
             project_root = Path(__file__).parent.parent.parent.parent.parent

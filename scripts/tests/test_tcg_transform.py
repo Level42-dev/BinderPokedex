@@ -204,6 +204,7 @@ class TestCardTransformation:
         [
             (901, 'Bloodmoon Ursaluna', 10272),
             (646, 'Black Kyurem ex', 10022),
+            (479, 'Heat Rotom ex', 10008),
             (1017, 'Hearthflame Mask Ogerpon ex', 10274),
         ],
     )
@@ -230,6 +231,19 @@ class TestCardTransformation:
         ).image_url
         assert poster_subject_from_card(card)['official_artwork_id'] == artwork_id
     
+    def test_transform_removes_localized_nonbreaking_ex_suffix(self):
+        [card] = self.step._transform_cards([{
+            'localId': '023',
+            'name': 'Heat Rotom ex',
+            'name_fr': 'Motisma Chaleur\u2011ex',
+            'card_type': 'pokemon',
+            'pokemon_id': 479,
+            'types': ['Fire'],
+        }])
+
+        assert card['name']['fr'] == 'Motisma Chaleur'
+        assert card['suffix'] == '[EX_NEW]'
+
     def test_transform_variant_pokemon_card(self, monkeypatch):
         """Test transformation of variant Pokemon card."""
         monkeypatch.setattr(

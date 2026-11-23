@@ -529,7 +529,7 @@ def test_every_generated_pdf_language_has_complete_poster_copy():
                     ) == 1
                 checked.append(f"{bundle.asset_key}/{language}")
 
-    assert len(checked) == 277
+    assert len(checked) == 282
 
 
 def test_standalone_poster_manifests_remain_isolated_single_bundles():

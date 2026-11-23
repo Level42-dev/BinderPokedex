@@ -52,6 +52,34 @@
         }
       }
     },
+    "me06": {
+      "cards": {
+        "132": {
+          "names": {
+            "de": "Sprudelnde Wasser-Energie",
+            "fr": "Énergie Eau Pétillante",
+            "es": "Energía Agua Burbujeante",
+            "it": "Energia Acqua Frizzante"
+          }
+        },
+        "133": {
+          "names": {
+            "de": "Wachsende Pflanzen-Energie",
+            "fr": "Énergie Plante Croissante",
+            "es": "Energía Planta Creciente",
+            "it": "Energia Erba Rigogliosa"
+          }
+        },
+        "134": {
+          "names": {
+            "de": "Nitro-Feuer-Energie",
+            "fr": "Énergie Feu Nitro",
+            "es": "Energía Fuego Nitro",
+            "it": "Energia Fuoco Propulsiva"
+          }
+        }
+      }
+    },
     "svp": {
       "cards": {
         "500": {
