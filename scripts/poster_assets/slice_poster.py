@@ -24,11 +24,23 @@ def slice_poster(scope: str, source: Path, output_dir: Path | None = None) -> li
         scope,
         poster_assets=POSTER_ASSETS,
     ).manifest
+    paths = slice_artwork(source, manifest.get("layout", {}).get("name", "standard_3x3"), output_dir)
+    return [path for path in paths if path is not None]
+
+
+def slice_artwork(
+    source: Path,
+    layout_name: str,
+    output_dir: Path | None = None,
+    *,
+    skip: frozenset[tuple[int, int]] = frozenset(),
+) -> list[Path | None]:
+    """Crop a row-major physical layout, leaving skipped slots empty."""
     with Image.open(source) as loaded:
         source_dpi = loaded.info.get("dpi")
         image = loaded.convert("RGB")
     layout = build_image_layout(
-        manifest.get("layout", {}).get("name", "standard_3x3"),
+        layout_name,
         width_px=image.width,
         height_px=image.height,
         dpi=source_dpi,
@@ -38,9 +50,12 @@ def slice_poster(scope: str, source: Path, output_dir: Path | None = None) -> li
     target_dir.mkdir(parents=True, exist_ok=True)
     for stale_path in target_dir.glob("card_r*_c*.png"):
         stale_path.unlink()
-    outputs: list[Path] = []
+    outputs: list[Path | None] = []
     for row in range(1, layout.rows + 1):
         for column in range(1, layout.columns + 1):
+            if (row, column) in skip:
+                outputs.append(None)
+                continue
             cell = layout.cell(row, column)
             card = image.crop(
                 (

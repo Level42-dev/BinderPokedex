@@ -5,6 +5,7 @@ import logging
 import json
 import sys
 import tempfile
+from collections.abc import Sequence
 from pathlib import Path
 
 from reportlab.lib.utils import ImageReader
@@ -95,6 +96,60 @@ def card_page_assignments(
         ]
         for page_start in range(0, expected, cards_per_page)
     ]
+
+
+def draw_poster_cards(
+    canvas_obj,
+    page_renderer: PageRenderer,
+    card_paths: Sequence[Path | None],
+    poster_grid: tuple[int, int],
+    *,
+    include_footer: bool,
+    trim_marks: bool = False,
+) -> None:
+    """Render physical card crops with the standard layout and cutting guides."""
+    expected = poster_grid[0] * poster_grid[1]
+    if len(card_paths) != expected:
+        raise ValueError(
+            f"Poster layout produced {len(card_paths)} cards, expected {expected}"
+        )
+    page_grid = (
+        int(page_renderer.style.CARDS_PER_ROW),
+        int(page_renderer.style.CARDS_PER_COLUMN),
+    )
+    cards_per_page = int(page_renderer.style.CARDS_PER_PAGE)
+    if cards_per_page <= 0:
+        raise ValueError("PDF page renderer must accept at least one card")
+    if page_grid[0] * page_grid[1] != cards_per_page:
+        raise ValueError("PDF page card grid does not match CARDS_PER_PAGE")
+
+    pages = card_page_assignments(poster_grid, page_grid)
+    for page_number, page_assignments in enumerate(pages):
+        page_renderer.create_page(canvas_obj)
+        occupied_slots = []
+        for source_index, page_index in page_assignments:
+            card_path = card_paths[source_index]
+            if card_path is None:
+                continue
+            occupied_slots.append(page_index)
+            x, y = page_renderer.calculate_card_position(page_index)
+            canvas_obj.drawImage(
+                ImageReader(str(card_path)),
+                x,
+                y,
+                width=page_renderer.style.CARD_WIDTH,
+                height=page_renderer.style.CARD_HEIGHT,
+                preserveAspectRatio=False,
+                mask="auto",
+            )
+        if trim_marks:
+            page_renderer.draw_card_trim_marks(canvas_obj, occupied_slots)
+        else:
+            page_renderer.draw_cutting_guides(canvas_obj)
+        if include_footer:
+            page_renderer.add_footer(canvas_obj)
+        if page_number + 1 < len(pages):
+            canvas_obj.showPage()
 
 
 class PosterPageRenderer:
@@ -235,41 +290,9 @@ class PosterPageRenderer:
         card_paths = self._prepare_cards()
         layout = resolve_layout_name(self.layout_name)
         poster_grid = (int(layout["columns"]), int(layout["rows"]))
-        expected = poster_grid[0] * poster_grid[1]
-        if len(card_paths) != expected:
-            raise ValueError(
-                f"Poster layout produced {len(card_paths)} cards, expected {expected}"
-            )
-        page_grid = (
-            int(page_renderer.style.CARDS_PER_ROW),
-            int(page_renderer.style.CARDS_PER_COLUMN),
+        draw_poster_cards(
+            canvas_obj, page_renderer, card_paths, poster_grid, include_footer=include_footer,
         )
-        cards_per_page = int(page_renderer.style.CARDS_PER_PAGE)
-        if cards_per_page <= 0:
-            raise ValueError("PDF page renderer must accept at least one card")
-        if page_grid[0] * page_grid[1] != cards_per_page:
-            raise ValueError("PDF page card grid does not match CARDS_PER_PAGE")
-
-        pages = card_page_assignments(poster_grid, page_grid)
-        for page_number, page_assignments in enumerate(pages):
-            page_renderer.create_page(canvas_obj)
-            for source_index, page_index in page_assignments:
-                card_path = card_paths[source_index]
-                x, y = page_renderer.calculate_card_position(page_index)
-                canvas_obj.drawImage(
-                    ImageReader(str(card_path)),
-                    x,
-                    y,
-                    width=page_renderer.style.CARD_WIDTH,
-                    height=page_renderer.style.CARD_HEIGHT,
-                    preserveAspectRatio=False,
-                    mask="auto",
-                )
-            page_renderer.draw_cutting_guides(canvas_obj)
-            if include_footer:
-                page_renderer.add_footer(canvas_obj)
-            if page_number + 1 < len(pages):
-                canvas_obj.showPage()
 
     def _render_full_page(
         self,

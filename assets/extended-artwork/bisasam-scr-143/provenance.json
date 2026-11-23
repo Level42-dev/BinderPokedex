@@ -1,0 +1,16 @@
+{
+  "artwork_sha256": "307d82ff9eb2fe45ed37be8a0f29fda27cc5afe4ac9b6894e5944f70f09f6e8c",
+  "card": {
+    "id": "sv07-143",
+    "sha256": "f9187be490359a2d5d1ef9c0ee1bfbc2e345cad5349a87bce3ea4a4514facb99",
+    "url": "https://assets.tcgdex.net/de/sv/sv07/143/high.png"
+  },
+  "generator": "OpenAI Image Generation",
+  "guide": {
+    "description": "BinderPokedex kitchen layout with the middle card area masked to white",
+    "sha256": "55508a3ee17ca87c1628c4654830ac559e3bd20f6b914c48d96844546e61b018",
+    "source_artwork_sha256": "64c39f143f9798cef4bf33437d9f80e5193c7dc372fac2be52a1541a6dd57dca"
+  },
+  "recipe_sha256": "0725e89d65c809889f33d46bd36ff650798ac518228a96819d93323f1d5157ae",
+  "render_sha256": "3690587d8f23405d5dbee6968c4f6cface8ebdf55f43a831e40468b10484d95d"
+}

@@ -300,6 +300,33 @@ def _build_full_frame_reference_workflow(
     return workflow
 
 
+def build_outpaint_workflow(
+    *,
+    prompt: str,
+    stage_name: str,
+    mask_name: str,
+    width: int,
+    height: int,
+    seed: int,
+    unet_name: str,
+    clip_name: str,
+    vae_name: str,
+    steps: int,
+    filename_prefix: str,
+) -> dict[str, object]:
+    """Condition on the card art and only sample the editable surroundings."""
+    workflow = _build_full_frame_reference_workflow(
+        prompt=prompt, reference_names=(stage_name,), width=width, height=height,
+        seed=seed, unet_name=unet_name, clip_name=clip_name, vae_name=vae_name,
+        steps=steps, filename_prefix=filename_prefix,
+    )
+    del workflow["6"]
+    workflow["74"] = node("LoadImage", image=mask_name)
+    workflow["76"] = node("SetLatentNoiseMask", samples=["31", 0], mask=["74", 1])
+    workflow["71"]["inputs"]["latent_image"] = ["76", 0]
+    return workflow
+
+
 def build_joint_scene_workflow(
     scope: str,
     seed: int,

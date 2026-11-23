@@ -51,6 +51,7 @@ data/poster_training/
 
 # Generated files (keep data, ignore PDFs)
 output/**/*.pdf
+/output/extended-artwork/vergleich/
 !output/.gitkeep
 data/pokemon_images/
 data/pokemon_images_cache/

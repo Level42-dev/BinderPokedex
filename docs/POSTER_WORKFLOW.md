@@ -786,6 +786,71 @@ Use `--artwork <text-free-candidate.png>` for an unpromoted local proof or
 `output/artwork/glurak-sammlung-de-a4.pdf`. Print in A4 portrait at
 **100% / Actual size**.
 
+## Extended Artwork Pages
+
+An Extended Artwork Page expands one specific card's illustration across eight
+cards. The original card goes in the middle sleeve. Bisasam from Stellarkrone
+(`SCR 143/142`) is configured in
+[`config/extended-artwork/bisasam-scr-143.yaml`](../config/extended-artwork/bisasam-scr-143.yaml).
+The checked-in master for this card uses OpenAI image generation with the
+BinderPokedex kitchen layout as its geometry reference. The reference leaves
+the middle card area blank so the generator paints the eight surrounding
+crops. The bundle's provenance records the source and output checksums.
+Exporting a reviewed master uses the same layout for either generator.
+
+To render an extension in ComfyUI, create a recipe with a new ID, the card
+scan's URL and SHA-256, its border insets, pinned model settings, and a prompt
+describing how the scene continues at the edges. Use the recipe's optional
+`guide` to trace contours such as furniture, frames and walls in the original
+scan's pixel coordinates.
+The guide can extend past the scan on each side. The renderer positions it
+relative to the fixed middle card and uses it to condition the artwork.
+Use `guide.fixed_regions` for cutouts, architectural occlusions or other shapes
+whose positions must stay fixed during sampling. List polygons in the same
+card coordinates. Keep the unregistered scenery editable.
+For a color adjustment after rendering, `guide.palette_matches` specifies a
+polygon in the same coordinates, source and target RGB values, and contrast.
+An optional dominant RGB channel limits the adjustment to that material.
+When only one part of a page needs a new render, use an existing reviewed
+region for the rest. In `render_composition`, list the `painting` base and any
+overlays with their output hashes. Each overlay has a polygon and feather in
+render-canvas pixels. Optional cutout polygons retain foreground objects
+from the base when replacing a surface behind them.
+Run `compose --layer painting=... --layer <name>=...`
+with the same scan and job options as `prepare`. Collect the composition with
+the same command and review it with the original card centered.
+
+1. Cache the exact card scan from the recipe URL under the ignored
+   `tmp/extended-artwork/<id>/` directory. Prepare an immutable render job with
+   the recipe, scan and a new job directory.
+2. Follow [Poster Render Worker](POSTER_RENDER_WORKER.md) with the current
+   workspace's renderer settings. Retrieve the job, output image, `run.json`
+   and `comfyui.log`.
+3. Collect the returned job for review. Inspect the full scene and the preview
+   with the original centered in the physical 3×3 grid. Check all four card
+   edges for alignment. An object cut by the original card must resume in the
+   corresponding neighboring crop at the same scale and angle. Promote only
+   the reviewed `master.png` and `provenance.json` to `assets/extended-artwork/<id>/`. Keep
+   the scan and the preview with the original card in the ignored workspace.
+
+```sh
+recipe=config/extended-artwork/bisasam-scr-143.yaml
+work=tmp/extended-artwork/bisasam-scr-143
+python -m scripts.poster_assets.extended_artwork --recipe "$recipe" prepare \
+    --scan "$work/card.png" --job-dir "$work/job"
+# Run and retrieve the immutable job with the configured poster renderer.
+python -m scripts.poster_assets.extended_artwork --recipe "$recipe" collect \
+    --scan "$work/card.png" --job-dir "$work/returned" --output-dir "$work/review"
+# Review and place the master and provenance in assets/extended-artwork/<id>/.
+python -m scripts.poster_assets.extended_artwork --recipe "$recipe" export
+```
+
+Export checks the reviewed recipe and master hashes, then uses the standard
+BinderPokedex card dimensions with trim marks aligned to the artwork edges.
+The print file is
+`output/extended-artwork/bisasam-scr-143-de-a4-cards.pdf`. It contains eight
+63.5 × 88.9 mm cards on one A4 page. Print in portrait at **100% / Actual size**.
+
 ## Local custom layouts without release-asset changes
 
 Custom layouts use an isolated poster-assets root below ignored `tmp/`. This

@@ -161,6 +161,28 @@ class PageRenderer:
             canvas_obj.line(left, y, right, y)
 
         canvas_obj.setDash()  # Reset to solid line
+
+    def draw_card_trim_marks(self, canvas_obj, card_indices: list[int]) -> None:
+        """Mark the exact edges of each printed card from outside its artwork."""
+        gap = min(self.style.GAP_X, self.style.GAP_Y)
+        inset, extent = gap / 20, gap / 3
+        canvas_obj.saveState()
+        canvas_obj.setLineWidth(self.style.GUIDE_LINE_WIDTH)
+        canvas_obj.setStrokeColor(HexColor(self.style.GUIDE_COLOR))
+        canvas_obj.setDash()
+        marks = canvas_obj.beginPath()
+        for index in card_indices:
+            left, bottom = self.calculate_card_position(index)
+            right = left + self.style.CARD_WIDTH
+            top = bottom + self.style.CARD_HEIGHT
+            for x, dx in ((left, -1), (right, 1)):
+                for y, dy in ((bottom, -1), (top, 1)):
+                    marks.moveTo(x + dx * inset, y)
+                    marks.lineTo(x + dx * extent, y)
+                    marks.moveTo(x, y + dy * inset)
+                    marks.lineTo(x, y + dy * extent)
+        canvas_obj.drawPath(marks)
+        canvas_obj.restoreState()
     
     def add_footer(self, canvas_obj, footer_text: str = None) -> None:
         """
