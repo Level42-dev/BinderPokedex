@@ -103,6 +103,14 @@ Gewicht:   80-90 g/m² (Standard)
 
 ## ✂️ Nach dem Drucken: Ausschneiden
 
+### Extended Artwork Pages
+
+[Erzeuge das separate Schnitt-PDF](USAGE.de.md#eigenständige-artwork-pdfs) und
+drucke es auf **A4 im Hochformat bei 100 % / Tatsächliche Größe**. Schneide die
+acht Einleger entlang der Eckmarkierungen aus. Jeder Einleger misst
+**63,5 × 88,9 mm**. Sortiere sie in derselben 3×3-Anordnung wie auf dem PDF
+ein. Die Originalkarte kommt ins mittlere Fach.
+
 ### Lokale 2×2-Poster auf einer A4-Seite
 
 Ein mit `standard_2x2` erzeugtes Motiv liegt in den vier Feldern links oben:

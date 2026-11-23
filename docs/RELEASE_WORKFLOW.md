@@ -84,6 +84,11 @@ enabled aggregate binding from `posters.yaml`, adds localized logo/text, slices
 the text-free masters, and embeds the cards at their configured section
 positions. It never starts ComfyUI.
 
+Standalone collection posters and Extended Artwork Pages use separate
+[export commands](USAGE.md#standalone-artwork-pdfs). Their PDFs are written to
+`output/artwork/` and `output/extended-artwork/`. The current release build
+packages PDFs from the language directories `output/<language>/`.
+
 ## Pull-request release rehearsal
 
 `.github/workflows/verify-release.yml` listens to pull requests targeting

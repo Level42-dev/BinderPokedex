@@ -151,6 +151,26 @@ Daten-Fetch. Die Anleitung
 set-spezifische Szenen, lokale ComfyUI-Erzeugung, Review, Promotion und
 PDF-Aktivierung.
 
+## Eigenständige Artwork-PDFs
+
+Führe die Befehle im Projektordner mit der BinderPokedex-Python-Umgebung aus.
+Beide Exporte verwenden Bilder aus dem Repository.
+
+```sh
+python -m scripts.pdf.generate_artwork_pdf --scope glurak-sammlung --language de --poster-page-mode cards
+python -m scripts.poster_assets.extended_artwork --recipe config/extended-artwork/bisasam-scr-143.yaml export
+```
+
+- **Sammlungsposter.** Der Glurak-Export schreibt
+  `output/artwork/glurak-sammlung-de-a4-cards.pdf`. Das Motiv füllt alle neun
+  Fächer. Weitere Motive findest du in der
+  [Liste der verfügbaren Sammlungen](POSTER_WORKFLOW.md#standalone-collection-artwork).
+- **Extended Artwork Page.** Der Bisasam-Export schreibt
+  `output/extended-artwork/bisasam-scr-143-de-a4-cards.pdf`. Die acht
+  Einleger ergänzen die Originalkarte Stellarkrone 143/142. Die
+  [Druckanleitung](PRINTING_GUIDE.de.md#extended-artwork-pages) zeigt, wie du
+  sie ausschneidest und einsortierst.
+
 ## Unterstützte Sprachen
 
 ```bash

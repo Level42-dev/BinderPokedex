@@ -786,19 +786,59 @@ Use `--artwork <text-free-candidate.png>` for an unpromoted local proof or
 `output/artwork/glurak-sammlung-de-a4.pdf`. Print in A4 portrait at
 **100% / Actual size**.
 
+The checked-in German collection scopes are `glurak-sammlung`,
+`schlaraffel-sammlung`, `pummeluff-sammlung`, `hopplo-sammlung`,
+`enton-sammlung`, `plinfa-sammlung` and `tragosso-sammlung`.
+Substitute any of these for `--scope` and use `--language de`.
+
 ## Extended Artwork Pages
 
 An Extended Artwork Page expands one specific card's illustration across eight
-cards. The original card goes in the middle sleeve. Bisasam from Stellarkrone
-(`SCR 143/142`) is configured in
-[`config/extended-artwork/bisasam-scr-143.yaml`](../config/extended-artwork/bisasam-scr-143.yaml).
-The checked-in master for this card uses OpenAI image generation with the
-BinderPokedex kitchen layout as its geometry reference. The reference leaves
-the middle card area blank so the generator paints the eight surrounding
-crops. The bundle's provenance records the source and output checksums.
-Exporting a reviewed master uses the same layout for either generator.
+cards. The original card goes in the middle sleeve. The example is Bisasam
+(Bulbasaur), Stellarkrone (Stellar Crown) 143/142, with its
+[recipe](../config/extended-artwork/bisasam-scr-143.yaml) and
+[reviewed master](../assets/extended-artwork/bisasam-scr-143/master.png).
 
-To render an extension in ComfyUI, create a recipe with a new ID, the card
+### Export a reviewed page
+
+From the repository root, use the project's Python environment with the
+dependencies in `requirements.txt`:
+
+```sh
+python -m scripts.poster_assets.extended_artwork \
+    --recipe config/extended-artwork/bisasam-scr-143.yaml export
+```
+
+This command reads the checked-in master. It works without the reference card
+scan, a model or a render worker. It verifies the master and recipe against
+`provenance.json` and writes `output/extended-artwork/bisasam-scr-143-de-a4-cards.pdf`.
+Print in A4 portrait at **100% / Actual size**. Cut along the marks to get eight
+63.5 × 88.9 mm cards and place the original in the middle sleeve. Use
+`export --output-dir <directory>` to choose a different destination.
+
+### Review and register an externally generated extension
+
+The Bisasam master uses OpenAI image generation with the BinderPokedex kitchen
+layout as its reference. The reference holds the perspective and scale around
+a blank middle slot so the generator paints the eight surrounding areas.
+
+1. Establish the scene's geometry on the 3×3 page. Match the contours that
+   reach the card's edges. Leave the card area blank in the image sent to the
+   generator. For Bisasam, the reference used the existing kitchen layout.
+2. Register the resulting image to the 3×3 layout at 300 dpi (2368 × 3268 px).
+   Keep the central slot pure white. Use a local preview with the exact
+   original scan to judge the four joins, including scale and line direction.
+   Check the eight crops for detail, continuity and repeated objects.
+3. Version the reviewed `master.png` and `provenance.json` in
+   `assets/extended-artwork/<id>/`. Record the generator and SHA-256 checksums
+   of the reference inputs, raw render, print master and recipe as shown in
+   the [Bisasam provenance](../assets/extended-artwork/bisasam-scr-143/provenance.json).
+   Keep the scan and previews using it in the ignored workspace. Use the same
+   export command for a master produced by either workflow.
+
+### Render a new extension in ComfyUI
+
+ComfyUI generation is available per card. Create a recipe with a new ID, the card
 scan's URL and SHA-256, its border insets, pinned model settings, and a prompt
 describing how the scene continues at the edges. Use the recipe's optional
 `guide` to trace contours such as furniture, frames and walls in the original
@@ -841,15 +881,8 @@ python -m scripts.poster_assets.extended_artwork --recipe "$recipe" prepare \
 # Run and retrieve the immutable job with the configured poster renderer.
 python -m scripts.poster_assets.extended_artwork --recipe "$recipe" collect \
     --scan "$work/card.png" --job-dir "$work/returned" --output-dir "$work/review"
-# Review and place the master and provenance in assets/extended-artwork/<id>/.
-python -m scripts.poster_assets.extended_artwork --recipe "$recipe" export
+# Review the eight crops with the original card in the center before promotion.
 ```
-
-Export checks the reviewed recipe and master hashes, then uses the standard
-BinderPokedex card dimensions with trim marks aligned to the artwork edges.
-The print file is
-`output/extended-artwork/bisasam-scr-143-de-a4-cards.pdf`. It contains eight
-63.5 × 88.9 mm cards on one A4 page. Print in portrait at **100% / Actual size**.
 
 ## Local custom layouts without release-asset changes
 

@@ -103,6 +103,14 @@ Weight:     80-90 g/m² (Standard)
 
 ## ✂️ After Printing: Cutting
 
+### Extended Artwork Pages
+
+[Generate the standalone cutting PDF](USAGE.md#standalone-artwork-pdfs) and
+print it on **A4 in portrait at 100% / Actual size**. Cut the eight inserts
+using the marks at their corners. Each insert measures **63.5 × 88.9 mm**.
+Place them around the original card in the same 3×3 order as on the PDF.
+The original card goes in the middle sleeve.
+
 ### Local 2×2 posters on one A4 sheet
 
 A `standard_2x2` artwork uses the upper-left four slots: title at upper left,

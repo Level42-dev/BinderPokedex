@@ -127,6 +127,25 @@ Poster artwork is an explicit optional post-fetch workflow. See
 set-specific scene catalog, local ComfyUI generation, review, promotion, and
 PDF activation.
 
+## Standalone artwork PDFs
+
+From the repository root, run the export in your BinderPokedex Python
+environment. Both commands use checked-in artwork.
+
+```sh
+python -m scripts.pdf.generate_artwork_pdf --scope glurak-sammlung --language de --poster-page-mode cards
+python -m scripts.poster_assets.extended_artwork --recipe config/extended-artwork/bisasam-scr-143.yaml export
+```
+
+- **Collection poster.** The Glurak (Charizard) command writes
+  `output/artwork/glurak-sammlung-de-a4-cards.pdf`. The poster fills all nine
+  slots. For other subjects, see the
+  [available collection scopes](POSTER_WORKFLOW.md#standalone-collection-artwork).
+- **Extended Artwork Page.** The Bisasam (Bulbasaur) command writes
+  `output/extended-artwork/bisasam-scr-143-de-a4-cards.pdf`. The eight
+  illustrated inserts surround the original Stellarkrone (Stellar Crown)
+  143/142 card. See the [printing guide](PRINTING_GUIDE.md#extended-artwork-pages).
+
 ## Supported Languages
 
 ```bash

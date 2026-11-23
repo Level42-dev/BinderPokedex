@@ -9,6 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Printable Artwork
+
+- Added seven standalone Pokémon collection posters with German titles and
+  A4 exports for whole-sheet viewing or cutting into nine cards.
+- Added Extended Artwork Pages with eight cuttable inserts around the original
+  card. The first page uses the reviewed Bisasam (Bulbasaur) illustration for
+  Stellarkrone (Stellar Crown) 143/142. BinderPokedex exports the selected
+  artwork and supports ComfyUI generation for additional pages.
+
 ### 🔧 Renderer Infrastructure
 
 - Added a disposable native Apple-Silicon renderer runtime built from
