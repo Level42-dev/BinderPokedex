@@ -18,6 +18,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   card. The first page uses the reviewed Bisasam (Bulbasaur) illustration for
   Stellarkrone (Stellar Crown) 143/142. BinderPokedex exports the selected
   artwork and supports ComfyUI generation for additional pages.
+- Publish the standalone artwork cutting PDFs as individual downloads
+  alongside the language ZIPs in future releases.
 
 ### 🔧 Renderer Infrastructure
 

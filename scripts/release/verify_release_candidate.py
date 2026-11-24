@@ -10,11 +10,15 @@ from pathlib import Path
 from typing import Any
 
 try:
+    from .artwork_pdfs import artwork_pdf_records
     from .build_manifest import LANGUAGES
     from .package_archives import verify_archive_notices
+    from .render_release_notes import _asset_url
 except ImportError:
+    from artwork_pdfs import artwork_pdf_records
     from build_manifest import LANGUAGES
     from package_archives import verify_archive_notices
+    from render_release_notes import _asset_url
 
 
 def _load_manifest(path: Path) -> dict[str, Any]:
@@ -65,6 +69,9 @@ def _verify_release_notes(payload: dict[str, Any], release_notes_path: Path) -> 
     for info in LANGUAGES.values():
         if str(info["zip"]) not in text:
             raise ValueError("Release notes do not link every language archive")
+    for record in payload.get("artwork_pdfs", []):
+        if f"]({_asset_url(tag, record['name'])})" not in text:
+            raise ValueError(f"Release notes are missing the artwork PDF link: {record['name']}")
 
 
 def verify(
@@ -127,6 +134,9 @@ def verify(
                 f"expected {expected_count}"
             )
         verified_counts[language] = expected_count
+
+    if payload.get("artwork_pdfs", []) != artwork_pdf_records(project_dir):
+        raise ValueError("Standalone artwork PDFs do not match the release manifest")
 
     if release_notes_path is not None:
         _verify_release_notes(payload, release_notes_path.resolve())

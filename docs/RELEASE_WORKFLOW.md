@@ -14,6 +14,7 @@ Build Release Candidate (reusable, read-only)
   -> fetch only reproducible poster logo sources
   -> validate every PDF-enabled promoted poster
   -> generate every scope in every supported language
+  -> export the standalone artwork cutting PDFs
   -> create all language ZIP archives
   -> build and verify release-manifest.json
   -> render and verify versioned GitHub release notes
@@ -84,10 +85,12 @@ enabled aggregate binding from `posters.yaml`, adds localized logo/text, slices
 the text-free masters, and embeds the cards at their configured section
 positions. It never starts ComfyUI.
 
-Standalone collection posters and Extended Artwork Pages use separate
-[export commands](USAGE.md#standalone-artwork-pdfs). Their PDFs are written to
-`output/artwork/` and `output/extended-artwork/`. The current release build
-packages PDFs from the language directories `output/<language>/`.
+Standalone collection posters and Extended Artwork Pages use the same
+[exporters](USAGE.md#standalone-artwork-pdfs) locally and in releases.
+The shared build discovers the collection manifests and Extended Artwork
+recipes, then exports their cuttable A4 PDFs to `output/release-artwork/`.
+The release notes list each PDF individually alongside the language ZIPs.
+The manifest records the expected files, sizes and SHA-256 digests.
 
 ## Pull-request release rehearsal
 
@@ -114,6 +117,7 @@ and therefore builds:
 - all configured scopes;
 - all nine release languages;
 - every language-specific ZIP;
+- every standalone collection and Extended Artwork cutting PDF;
 - the release manifest;
 - the exact file set consumed by the publish job.
 
@@ -150,9 +154,10 @@ merge. The agent checks the head SHA again immediately before merging.
 - every language has at least one PDF;
 - total and per-language PDF counts agree;
 - all nine expected ZIP files exist and match their manifest sizes;
-- every ZIP is readable and contains the expected number of PDFs.
+- every ZIP is readable and contains the expected number of PDFs;
+- the standalone cutting PDFs match the expected list, sizes and SHA-256 digests;
 - the rendered release notes match the tag, contain English and German feature
-  titles, and link all nine language archives.
+  titles, and link the language archives and the standalone cutting PDFs.
 
 `--skip-poster` remains a local diagnostic option. Official PR rehearsals and
 tagged releases do not use it; an invalid enabled poster must fail the build

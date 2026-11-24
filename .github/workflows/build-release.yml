@@ -66,6 +66,12 @@ jobs:
           BINDER_POKEDEX_BUILD_REF: ${{ github.sha }}
         run: python scripts/pdf/generate_pdf.py --scope all
 
+      - name: Generate standalone artwork PDFs
+        env:
+          BINDER_POKEDEX_BUILD_VERSION: ${{ inputs.release_tag }}
+          BINDER_POKEDEX_BUILD_REF: ${{ github.sha }}
+        run: python -m scripts.release.artwork_pdfs
+
       - name: Create language-specific PDF archives
         env:
           RELEASE_TAG: ${{ inputs.release_tag }}
@@ -100,6 +106,7 @@ jobs:
           name: release-candidate
           path: |
             binder-pokedex-*.zip
+            output/release-artwork/
             release-manifest.json
             release-notes.md
           if-no-files-found: error

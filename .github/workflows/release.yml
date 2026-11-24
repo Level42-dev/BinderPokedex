@@ -29,6 +29,24 @@ jobs:
           name: release-candidate
           path: release-candidate
 
+      - name: List expected artwork PDFs
+        id: artwork
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          candidate = Path("release-candidate")
+          manifest = json.loads((candidate / "release-manifest.json").read_text())
+          output_dir = candidate / "output/release-artwork"
+          paths = [output_dir / item["name"] for item in manifest["artwork_pdfs"]]
+          if not paths or set(paths) != set(output_dir.glob("*-a4-cards.pdf")):
+              raise SystemExit("Downloaded artwork PDFs do not match the verified manifest")
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
+              print("files<<ARTWORK_PDFS", *paths, "ARTWORK_PDFS", sep="\n", file=output)
+          PY
+
       - name: Create Release with Assets
         uses: softprops/action-gh-release@v2
         with:
@@ -45,6 +63,8 @@ jobs:
             release-candidate/binder-pokedex-zh_hans.zip
             release-candidate/binder-pokedex-zh_hant.zip
             release-candidate/release-manifest.json
+            ${{ steps.artwork.outputs.files }}
+          fail_on_unmatched_files: true
           body_path: release-candidate/release-notes.md
           draft: false
           prerelease: false

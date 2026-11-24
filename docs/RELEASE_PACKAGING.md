@@ -1,6 +1,6 @@
 # Release packages and provenance
 
-The current renderer appends one A4 notice page to each PDF, with a
+The current renderer appends one A4 notice page to each binder PDF, with a
 63.5 × 88.9 mm cuttable source card. It also records the project source in PDF
 metadata and page footers. The German edition has German introductory notes;
 other editions use English. The detailed legal summary is English in every
@@ -22,6 +22,7 @@ set these before generating the PDFs:
 export BINDER_POKEDEX_BUILD_VERSION="candidate-name"
 export BINDER_POKEDEX_BUILD_REF="$(git rev-parse HEAD)"
 python scripts/pdf/generate_pdf.py --scope all
+python -m scripts.release.artwork_pdfs
 python scripts/release/package_archives.py \
   --tag "$BINDER_POKEDEX_BUILD_VERSION" \
   --source-ref "$BINDER_POKEDEX_BUILD_REF"
@@ -39,6 +40,10 @@ folder. Build the manifest and render release notes after packaging, then run
 `scripts/release/verify_release_candidate.py` as in the workflow. Current
 candidate verification rejects missing/empty notices or inconsistent source
 identity; it is not a verifier for historical archives lacking those files.
+
+Standalone collection posters and Extended Artwork Pages ship as individual
+A4 cutting PDFs. The release build writes them to `output/release-artwork/`,
+adds their SHA-256 digests to the manifest and links them in the release notes.
 
 ## Focused checks without downloading Pokémon data
 

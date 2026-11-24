@@ -11,6 +11,11 @@ from typing import Any
 
 import yaml
 
+try:
+    from .artwork_pdfs import artwork_pdf_records
+except ImportError:
+    from artwork_pdfs import artwork_pdf_records
+
 
 LANGUAGES = {
     "de": {"name": "Deutsch", "zip": "binder-pokedex-de.zip"},
@@ -115,6 +120,7 @@ def main() -> int:
         "card_counts": count_cards(project_dir, scopes),
         "pdfs": count_pdfs(project_dir),
         "assets": list_assets(project_dir),
+        "artwork_pdfs": artwork_pdf_records(project_dir),
         "release_notes": release_notes,
     }
 

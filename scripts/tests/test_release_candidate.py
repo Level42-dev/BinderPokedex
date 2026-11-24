@@ -5,8 +5,10 @@ from pathlib import Path
 
 import pytest
 
+from scripts.release.artwork_pdfs import artwork_pdf_records
 from scripts.release.build_manifest import LANGUAGES
 from scripts.release.package_archives import package_archives
+from scripts.release.render_release_notes import render_release_notes
 from scripts.release.verify_release_candidate import verify
 
 
@@ -146,3 +148,69 @@ def test_packaging_refuses_missing_license_before_writing_archives(tmp_path):
     with pytest.raises(ValueError, match="Missing or empty notice"):
         package_archives(tmp_path, "test", "b" * 40)
     assert not list(tmp_path.glob("*.zip"))
+
+
+def _with_artwork(tmp_path: Path) -> tuple[Path, Path, dict]:
+    manifest_path = _release_candidate(tmp_path)
+    poster = tmp_path / "config/posters/rayquaza-sammlung/poster.yaml"
+    poster.parent.mkdir(parents=True)
+    poster.write_text("source:\n  collection:\n    title:\n      de: Rayquaza\n", encoding="utf-8")
+    recipe = tmp_path / "config/extended-artwork/bisasam-scr-143.yaml"
+    recipe.parent.mkdir(parents=True)
+    recipe.write_text(
+        "id: bisasam-scr-143\nlanguage: de\ntitle: Bisasam SCR 143/142\n", encoding="utf-8",
+    )
+    output_dir = tmp_path / "output/release-artwork"
+    output_dir.mkdir()
+    for name in ("rayquaza-sammlung-de-a4-cards.pdf", "bisasam-scr-143-de-a4-cards.pdf"):
+        (output_dir / name).write_bytes(b"%PDF-1.4\n%%EOF\n")
+    payload = json.loads(manifest_path.read_text(encoding="utf-8"))
+    payload["artwork_pdfs"] = artwork_pdf_records(tmp_path)
+    payload["languages"] = LANGUAGES
+    payload["release_notes"] = {
+        "whats_new": {
+            "en": {"title": "Collection artwork"},
+            "de": {"title": "Sammlungsposter"},
+        }
+    }
+    manifest_path.write_text(json.dumps(payload), encoding="utf-8")
+    notes = tmp_path / "release-notes.md"
+    notes.write_text(render_release_notes(payload), encoding="utf-8")
+    return manifest_path, notes, payload
+
+
+def test_verify_standalone_artwork_and_download_links(tmp_path: Path):
+    manifest, notes, payload = _with_artwork(tmp_path)
+    assert [record["name"] for record in payload["artwork_pdfs"]] == [
+        "rayquaza-sammlung-de-a4-cards.pdf", "bisasam-scr-143-de-a4-cards.pdf",
+    ]
+    assert verify(manifest, notes)
+    archive = tmp_path / LANGUAGES["de"]["zip"]
+    with zipfile.ZipFile(archive) as packaged:
+        assert all("a4-cards.pdf" not in filename for filename in packaged.namelist())
+
+
+@pytest.mark.parametrize("change, error", [
+    ("missing_file", "Unexpected standalone artwork PDF set"),
+    ("extra_file", "Unexpected standalone artwork PDF set"),
+    ("changed_bytes", "do not match the release manifest"),
+    ("missing_record", "do not match the release manifest"),
+    ("missing_link", "missing the artwork PDF link"),
+])
+def test_rejects_incomplete_or_changed_standalone_artwork(tmp_path: Path, change: str, error: str):
+    manifest, notes, payload = _with_artwork(tmp_path)
+    output = tmp_path / "output/release-artwork"
+    name = payload["artwork_pdfs"][0]["name"]
+    if change == "missing_file":
+        (output / name).unlink()
+    elif change == "extra_file":
+        (output / "unreviewed.pdf").write_bytes(b"%PDF-1.4\n%%EOF\n")
+    elif change == "changed_bytes":
+        (output / name).write_bytes(b"%PDF-1.5\n%%EOF\n")
+    elif change == "missing_record":
+        del payload["artwork_pdfs"][0]
+        manifest.write_text(json.dumps(payload), encoding="utf-8")
+    else:
+        notes.write_text(notes.read_text(encoding="utf-8").replace(name, "other.pdf"), encoding="utf-8")
+    with pytest.raises(ValueError, match=error):
+        verify(manifest, notes)

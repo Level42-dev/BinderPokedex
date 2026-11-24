@@ -81,6 +81,12 @@ def render_release_notes(manifest: dict[str, Any]) -> str:
             raise ValueError(f"Release manifest has no archive for {language}")
         lines.append(f"- {flag} [{label}]({_asset_url(tag, asset)})")
 
+    artwork = manifest.get("artwork_pdfs", [])
+    if artwork:
+        lines.extend(["", "### Artwork PDFs for cutting · Artwork-PDFs zum Ausschneiden", ""])
+        for record in artwork:
+            lines.append(f"- [{record['title']}]({_asset_url(tag, record['name'])})")
+
     lines.extend(
         [
             "",

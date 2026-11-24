@@ -384,6 +384,17 @@ def export_artwork(
     return target
 
 
+def export_reviewed_artwork(recipe_path: Path, output_dir: Path) -> Path:
+    """Verify and export a checked-in Extended Artwork Page."""
+    recipe = _read_recipe(recipe_path)
+    bundle = ROOT / "assets" / "extended-artwork" / recipe["id"]
+    master = bundle / "master.png"
+    provenance = load_json(bundle / "provenance.json")
+    verify_file(master, provenance["artwork_sha256"], label="Reviewed artwork")
+    verify_file(recipe_path, provenance["recipe_sha256"], label="Reviewed recipe")
+    return export_artwork(recipe["id"], recipe["language"], recipe["title"], master, output_dir)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--recipe", type=Path, required=True)
@@ -415,13 +426,7 @@ def main() -> int:
     elif args.command == "collect":
         result = collect(args.recipe, args.job_dir, args.scan, args.output_dir)
     else:
-        recipe = _read_recipe(args.recipe)
-        bundle = ROOT / "assets" / "extended-artwork" / recipe["id"]
-        master = bundle / "master.png"
-        provenance = load_json(bundle / "provenance.json")
-        verify_file(master, provenance["artwork_sha256"], label="Reviewed artwork")
-        verify_file(args.recipe, provenance["recipe_sha256"], label="Reviewed recipe")
-        result = export_artwork(recipe["id"], recipe["language"], recipe["title"], master, args.output_dir)
+        result = export_reviewed_artwork(args.recipe, args.output_dir)
     print(result)
     return 0
 

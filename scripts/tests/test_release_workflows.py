@@ -102,3 +102,18 @@ def test_notices_ci_exercises_announcement_links():
     run = workflow["jobs"]["test"]["steps"][-1]["run"]
 
     assert "scripts/tests/test_announce_release.py" in run
+
+
+
+def test_candidate_and_publish_share_the_standalone_artwork_assets():
+    build = _load_workflow("build-release.yml")["jobs"]["build"]["steps"]
+    generate = next(i for i, step in enumerate(build) if step.get("name") == "Generate standalone artwork PDFs")
+    verify = next(i for i, step in enumerate(build) if step.get("name") == "Verify release candidate")
+    assert build[generate]["run"] == "python -m scripts.release.artwork_pdfs"
+    assert generate < verify
+    assert "output/release-artwork/" in build[-1]["with"]["path"].splitlines()
+
+    publish = _load_workflow("release.yml")["jobs"]["publish"]["steps"]
+    assert publish[1]["id"] == "artwork"
+    assert "${{ steps.artwork.outputs.files }}" in publish[-1]["with"]["files"].splitlines()
+    assert publish[-1]["with"]["fail_on_unmatched_files"] == "true"
