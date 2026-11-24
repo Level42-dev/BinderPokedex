@@ -7,7 +7,7 @@ Drucke 1.025+ Pokémon über 9 Generationen in 9 Sprachen. Alle Varianten, alle 
 [![Code: MIT](https://img.shields.io/badge/Code-MIT-yellow.svg)](LICENSE-CODE)
 [![Ausgewählte Inhalte: CC BY-NC 4.0](https://img.shields.io/badge/Ausgew%C3%A4hlte_Inhalte-CC_BY--NC_4.0-lightgrey.svg)](LICENSE-CONTENT.md)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
-![v10.1](https://img.shields.io/badge/Version-v10.1-green.svg)
+![v10.2](https://img.shields.io/badge/Version-v10.2-green.svg)
 
 ---
 
@@ -29,16 +29,14 @@ Diese Primal-Startseite stammt direkt aus BinderPokedex und kann als neun
 physische Karten gedruckt werden.
 
 <!-- release-news:start -->
-### Neu in v10.1: 31 weitere MEP-Promos für deinen Binder
+### Neu in v10.2: Delta-Herrschaft und der smaragdgrüne Sturm
 
-Die englische MEP-Promosammlung wächst auf 120 Einträge. Originalnummern und die bisherigen lokalisierten Sammlungen bleiben erhalten.
+Delta-Herrschaft ist mit 141 nummerierten Einlegern in fünf Sprachen und einem Panorama aus neun Karten dabei.
 
-- Die englische MEP-Sammlung wächst von 89 auf 120 Einträge – darunter Mega-Zeraora-ex, Mega-Darkrai-ex, Mega-Dragoran-ex, die vier Prerelease-Promos zu Delta-Herrschaft und Pokémon RUN Pikachu #131.
-- Jeder Einleger behält seine ursprüngliche Promonummer, einschließlich der Lücken zwischen bestätigten Karten. Die englische Panorama-Startseite zeigt jetzt passend 120 Karten.
-- Die deutschen, französischen, spanischen und italienischen Sammlungen behalten ihre bisherigen 88 Karten. Neue Einträge sind zunächst auf Englisch enthalten, bis ihre lokalisierten Ausgaben bestätigt sind.
-- Die Sammlung enthält auch bestätigte Promos für angekündigte Produkte. Die Aufnahme bedeutet daher nicht, dass jedes Produkt bereits erhältlich ist.
+- Drucke alle 141 Einleger zu Delta-Herrschaft in ihrer ursprünglichen Nummernfolge von #001 bis #141. Den Satz gibt es auf Deutsch, Englisch, Französisch, Spanisch und Italienisch.
+- Aus den neun Karten der Startseite setzt du ein 3×3-Panorama mit Kyogre, Mega-Rayquaza und Groudon zusammen. Setlogo und Set-Infos passen zur Sprache des jeweiligen PDFs.
 
-**[v10.1 ansehen und PDFs herunterladen](https://github.com/Level42-dev/BinderPokedex/releases/tag/v10.1)**
+**[v10.2 ansehen und PDFs herunterladen](https://github.com/Level42-dev/BinderPokedex/releases/tag/v10.2)**
 
 Technische Details: [vollständiges Changelog](CHANGELOG.md).
 <!-- release-news:end -->
@@ -77,9 +75,9 @@ Beachte die Hinweise in deinem Download. Für Code und Inhalte gelten
 Erlaubnisse nicht rückwirkend, auch nicht für die unten verlinkten v9.0-Dateien.
 Ein verfügbarer Download oder Privatnutzung bedeutet keine Freigabe fremder Rechte.
 
-**Aktuelle Version (v10.1):** [Alle 178 PDFs](https://github.com/Level42-dev/BinderPokedex/releases/tag/v10.1) ✨ *Neu: Die englische MEP-Promosammlung wächst auf 120 Einträge. Originalnummern und die bisherigen lokalisierten Sammlungen bleiben erhalten!*
+**Aktuelle Version (v10.2):** [Alle 183 PDFs](https://github.com/Level42-dev/BinderPokedex/releases/tag/v10.2) ✨ *Neu: Delta-Herrschaft ist mit 141 nummerierten Einlegern in fünf Sprachen und einem Panorama aus neun Karten dabei!*
 
-**Nach Sprache (v10.1):** 🇩🇪 [DE](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.1/binder-pokedex-de.zip) | 🇬🇧 [EN](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.1/binder-pokedex-en.zip) | 🇫🇷 [FR](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.1/binder-pokedex-fr.zip) | 🇪🇸 [ES](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.1/binder-pokedex-es.zip) | 🇮🇹 [IT](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.1/binder-pokedex-it.zip) | 🇯🇵 [JA](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.1/binder-pokedex-ja.zip) | 🇰🇷 [KO](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.1/binder-pokedex-ko.zip) | 🇨🇳 [ZH](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.1/binder-pokedex-zh_hans.zip) | 🇹🇼 [ZH-T](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.1/binder-pokedex-zh_hant.zip)
+**Nach Sprache (v10.2):** 🇩🇪 [DE](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.2/binder-pokedex-de.zip) | 🇬🇧 [EN](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.2/binder-pokedex-en.zip) | 🇫🇷 [FR](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.2/binder-pokedex-fr.zip) | 🇪🇸 [ES](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.2/binder-pokedex-es.zip) | 🇮🇹 [IT](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.2/binder-pokedex-it.zip) | 🇯🇵 [JA](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.2/binder-pokedex-ja.zip) | 🇰🇷 [KO](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.2/binder-pokedex-ko.zip) | 🇨🇳 [ZH](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.2/binder-pokedex-zh_hans.zip) | 🇹🇼 [ZH-T](https://github.com/Level42-dev/BinderPokedex/releases/download/v10.2/binder-pokedex-zh_hant.zip)
 ---
 
 ## 📝 Release-Verlauf
@@ -119,7 +117,7 @@ cd BinderPokedex
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
-# Verfügbare Scopes anzeigen (33 gesamt: 1 Pokedex + 3 ExGen + 29 TCG Sets)
+# Verfügbare Scopes anzeigen (34 gesamt: 1 Pokedex + 3 ExGen + 30 TCG Sets)
 ls config/scopes/*.yaml
 
 # Daten für einen Scope holen
