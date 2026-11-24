@@ -1124,6 +1124,7 @@ def test_every_release_enabled_poster_passes_production_validation():
             "ExGen3/sections/mega",  # Exact historically accepted C master, revalidated.
             "ME03",  # Exact P37-A master, visually accepted and pixel-verified.
         "ME05",
+    "ME06",  # Entwurf 260762107, operator-approved.
         "Pokedex/sections/gen1",
         "Pokedex/sections/gen3",
         "Pokedex/sections/gen7",

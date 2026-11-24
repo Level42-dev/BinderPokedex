@@ -4,12 +4,18 @@
     "30th-c": {
       "fr": "Collection Classique 30ᵉ Anniversaire",
       "it": "Collezione Classica del 30°"
+    },
+    "me06": {
+      "it": "Dominio Delta"
     }
   },
   "sources": {
     "30th-c": {
       "fr": "https://www.pokemon.com/fr/jcc-pokemon/cartes-pokemon/series/30th-c/10/",
       "it": "https://www.pokemon.com/it/gcc/archivio-carte/series/30th-c/2/"
+    },
+    "me06": {
+      "it": "https://pokemon.gamespress.com/it/AVVISO-STAMPA-il-Pokemon-leggendario-Mega-Rayquaza-ex-scende-in-campo-"
     }
   }
 }

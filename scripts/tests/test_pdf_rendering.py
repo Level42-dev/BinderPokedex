@@ -276,6 +276,23 @@ def run_all_tests():
     return passed == total
 
 
+def test_remote_logo_cache_uses_image_extension_without_query(tmp_path, monkeypatch):
+    import io
+
+    from scripts.pdf.lib.rendering import logo_renderer
+
+    url = "https://example.com/logo.webp?width=360&signature=abcd"
+    monkeypatch.setattr(logo_renderer.tempfile, "gettempdir", lambda: str(tmp_path))
+    monkeypatch.setattr(
+        logo_renderer.urllib.request, "urlopen",
+        lambda address, timeout: io.BytesIO(address.encode()),
+    )
+
+    cached = logo_renderer.LogoRenderer.download_image(url)
+
+    assert cached.suffix == ".webp"
+    assert cached.read_bytes() == url.encode()
+
 if __name__ == '__main__':
     success = run_all_tests()
     sys.exit(0 if success else 1)

@@ -59,9 +59,9 @@ Technische Details: [vollständiges Changelog](CHANGELOG.md).
 - **Komplette TCG-Unterstützung** 🎴
   - **3 EX-Generationen:** ExGen1 (2003-2007), ExGen2 (2012-2016), ExGen3 (2023+)
   - **17 Karmesin-&-Purpur-Sets:** Komplette Karmesin & Purpur-Ära (SV01-SV10 + Spezial-Sets)
-  - **Mega-Evolution-Ära:** ME01, ME02, ME02.5, ME03, ME04, ME05, MEP
+  - **Mega-Evolution-Ära:** ME01, ME02, ME02.5, ME03, ME04, ME05, ME06, MEP
   - Auto-Discovery und Batch-Generierung
-- **Scope-basiertes System** mit 33 Scopes insgesamt
+- **Scope-basiertes System** mit 34 Scopes insgesamt
 - **Strukturierte PDFs** mit thematischen Trennern und Featured-Pokémon-Headern
 - **Modulare Pipeline** zum Daten-Fetching mit flexibler Konfiguration
 - **Druckfertig A4** - einfach laden, drucken und binden! 📎

@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### 🎴 Delta Reign (ME06)
+
+- Added 141 numbered binder inserts in German, English, French, Spanish, and
+  Italian, with original printed numbering and localized Special Energy names.
+- Opened all five Delta Reign PDFs with the approved nine-card panorama of
+  Kyogre, Mega Rayquaza, and Groudon, with localized set logos and set details.
+
 ### 🔧 Renderer Infrastructure
 
 - Added a disposable native Apple-Silicon renderer runtime built from

@@ -161,6 +161,17 @@ scopes:
       but readable nocturnal colors, and spacious atmospheric depth.
     ground_noun: moonlit grass
 
+  ME06:
+    concept: the Delta Reign expansion and its emerald storms
+    setting: >-
+      The artwork contains a broad coastal delta with branching tidal channels,
+      grassy basalt banks and distant volcanic ridges under an emerald storm.
+    lighting: Soft daylight breaks through green clouds over the open foreground.
+    rendering: >-
+      Use clear trading-card illustration, layered coastal depth, and restrained
+      emerald highlights against a readable foreground.
+    ground_noun: coastal grass
+
   MEP:
     concept: the Mega Evolution Black Star Promo collection
     setting: >-

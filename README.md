@@ -59,9 +59,9 @@ Technical details: [full changelog](CHANGELOG.md).
 - **Complete TCG Support** 🎴
   - **3 EX Generations:** ExGen1 (2003-2007), ExGen2 (2012-2016), ExGen3 (2023+)
   - **17 Scarlet & Violet Sets:** Full Scarlet & Violet era (SV01-SV10 + specials)
-  - **Mega Evolution Era:** ME01, ME02, ME02.5, ME03, ME04, ME05, MEP
+  - **Mega Evolution Era:** ME01, ME02, ME02.5, ME03, ME04, ME05, ME06, MEP
   - Auto-discovery and batch generation
-- **Scope-Based System** with 33 total scopes
+- **Scope-Based System** with 34 total scopes
 - **Sectioned PDFs** with themed dividers and featured Pokémon headers
 - **Modular pipeline** for data fetching with flexible configuration
 - **Print-ready A4** - just download, print, and bind! 📎

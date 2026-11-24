@@ -20,6 +20,13 @@
     },
     "sv10.5w": {
       "de": "https://www.pokemon.com/static-assets/content-assets/cms2-de-de/img/trading-card-game/series/sv_series/sv10pt5/wht/sv10pt5_logo_169_de.png"
+    },
+    "me06": {
+      "de": "https://imgeucdn.gamespress.com/cdn/files/Pokemon/2026/11/051404-138211ec/Pokemon_TCG_Mega_Evolution%E2%80%94Delta_Reign_Logo_DE.png?w=360&mode=max&otf=y&quality=90&format=png&bgcolor=transparent&sky=bb93ba6ef6f4541672b2a5893ff271408f54a42d77bdbb76defe5ecb965f00d6",
+      "en": "https://imguscdn.gamespress.com/cdn/files/PokemonAmerica/2026/08/191449-f66f3776/Pokemon_TCG_Mega_Evolution%E2%80%94Delta_Reign_Logo.png?w=240&mode=max&otf=y&quality=90&format=png&bgcolor=transparent&sky=fbf270e9b848a4f003dd252b6da97a776d6fe7be4eae668215bddf4e3434bc2a",
+      "fr": "https://imgeucdn.gamespress.com/cdn/files/Pokemon/2026/11/051339-a3ed3c34/Pokemon_TCG_Mega_Evolution%E2%80%94Delta_Reign_Logo_FR.png?w=360&mode=max&otf=y&quality=90&format=png&bgcolor=transparent&sky=ee2da9d7d56d203e48fff30f0ddde296f267a11e5627c64f4330ea902a8a3e0b",
+      "es": "https://imgeucdn.gamespress.com/cdn/files/Pokemon/2026/08/201059-64e094c5/Pokemon_TCG_Mega_Evolution%E2%80%94Delta_Reign_Logo_ES.png?w=360&mode=max&otf=y&quality=90&format=png&bgcolor=transparent&sky=b706958f3372817a17d733474fa63cc89130860773984eeed1941f657dccc51d",
+      "it": "https://imgeucdn.gamespress.com/cdn/files/Pokemon/2026/11/051349-2bbcf496/Pokemon_TCG_Mega_Evolution%E2%80%94Delta_Reign_Logo_IT.png?w=360&mode=max&otf=y&quality=90&format=png&bgcolor=transparent&sky=642be2e42d43ebac32f068376c9737dd9acbaff166d470735c17860db6057016"
     }
   }
 }
