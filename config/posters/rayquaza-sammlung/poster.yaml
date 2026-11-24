@@ -1,0 +1,95 @@
+schema_version: 2
+asset_key: rayquaza-sammlung
+scope: rayquaza-sammlung
+layout:
+  name: standard_3x3
+text_cells:
+  title:
+    row: 1
+    column: 2
+artwork:
+  scene:
+    concept: A legendary sky-dragon collector panorama above a towering storm at twilight.
+    setting: A vast atmospheric sky at the edge of the ozone layer. Thick violet,
+      indigo and silver thunderclouds build up on the right and left. A luminous emerald
+      opening in the high atmosphere and thin meteor trails convey enormous height.
+      Below, a wide layer of luminous storm haze slopes inward between soft cloud
+      towers. The foreground is open air above the cloud sea, no dry land or mountains.
+    lighting: Cool indigo blue hour with controlled emerald light from a clearing
+      high behind the cloud banks. Thin warm silver dusk rims trace the cloud edges.
+      Small lightning forks at the far sides above the bottom row. Green light reflects
+      softly inside the blue clouds. Good value separation against deep blue in the
+      lower outer cells.
+    rendering: High quality hand-painted fantasy gouache, believable vapor depth,
+      brushed cloud forms, broad tonal shapes and crisp tiny stars. Majestic and otherworldly,
+      with a restrained viridian, indigo, lavender and pale warm silver palette. One
+      continuous edge-to-edge sky.
+    ground_noun: an open, unobstructed layer of deep indigo air above a sea of clouds
+    safe_areas: Use calm dark indigo in the upper center for the wordmark and in the
+      middle center for the profile panel. In the bottom third, keep the two places
+      for the source figures fully clear of lightning or bright detail. Give them
+      a deep quiet blue air background for contrast.
+    constraints:
+    - Only sky, clouds, meteor traces and light. No living figures, silhouettes, symbols,
+      words, logos, panels or borders.
+    - Cloud layers must remain vertically and horizontally continuous across the entire
+      portrait page, with no dividing lines.
+    - Use fine sidelight and high altitude haze, with richly painted dark blues, soft
+      luminous edges and an uncluttered sky around the title and lower figures.
+  generation:
+    engine: flux
+    model: flux-2-klein-4b.safetensors
+    model_sha256: ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343
+    encoder: qwen_3_4b.safetensors
+    encoder_sha256: 6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a
+    vae: flux2-vae.safetensors
+    vae_sha256: d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5
+    mode: identity_lock
+    reference_mode: two_pass_source_pixels
+    seed: 261123384
+    steps: 4
+    generation_megapixels: 2.0
+    output_dpi: 300
+    output_method: model_upscale
+    upscale_model: RealESRGAN_x4plus_anime_6B.pth
+    upscale_model_sha256: f872d837d3c90ed2e05227bed711af5671a6fd1c9f7d7e91c911a61f155e99da
+  promoted_file: poster-flux2-artwork.png
+  provenance_file: poster-flux2-provenance.json
+pokemon:
+  strategy: featured_from_scope
+  count: 2
+  row: bottom
+  cutout_source: pokeapi_official_artwork
+pdf:
+  enabled: false
+source:
+  collection:
+    title:
+      de: Rayquaza
+    description:
+      de: Rayquaza zieht seine Bahnen so hoch, dass selbst Gewitter unter ihm liegen.
+        In der Ozonschicht fängt es Meteoroiden ab und nimmt ihre Energie auf. Legenden
+        erzählen, dass es einst den Kampf zwischen Kyogre und Groudon beendete.
+    featured_elements:
+    - pokemon_id: 384
+      pokemon_name: Rayquaza
+      poster_subject:
+        source: pokeapi_official_artwork
+        species_id: 384
+        official_artwork_id: 384
+        subject_key: pokeapi:official-artwork:384
+        image_url: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/384.png
+    - pokemon_id: 384
+      pokemon_name: Mega Rayquaza
+      poster_subject:
+        source: pokeapi_official_artwork
+        species_id: 384
+        official_artwork_id: 10079
+        subject_key: pokeapi:official-artwork:10079
+        image_url: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10079.png
+text_content:
+  mode: collection_profile
+  title_style: cinzel_decorative
+  title_colors:
+    fill: '#C9FFD6'
+    outline: '#174333'

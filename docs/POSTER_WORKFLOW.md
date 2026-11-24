@@ -788,8 +788,10 @@ Use `--artwork <text-free-candidate.png>` for an unpromoted local proof or
 
 The checked-in German collection scopes are `glurak-sammlung`,
 `schlaraffel-sammlung`, `pummeluff-sammlung`, `hopplo-sammlung`,
-`enton-sammlung`, `plinfa-sammlung` and `tragosso-sammlung`.
-Substitute any of these for `--scope` and use `--language de`.
+`enton-sammlung`, `plinfa-sammlung`, `tragosso-sammlung` and
+[`rayquaza-sammlung`](../config/posters/rayquaza-sammlung/poster.yaml).
+Substitute any of these for `--scope` and use `--language de`. The Rayquaza
+poster places Rayquaza and Mega Rayquaza in the lower left and right slots.
 
 ## Extended Artwork Pages
 

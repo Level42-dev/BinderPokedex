@@ -11,8 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Printable Artwork
 
-- Added seven standalone Pokémon collection posters with German titles and
-  A4 exports for whole-sheet viewing or cutting into nine cards.
+- Added eight standalone Pokémon collection posters with German titles and
+  A4 exports for whole-sheet viewing or cutting into nine cards. The Rayquaza
+  poster features Rayquaza and Mega Rayquaza above a storm.
 - Added Extended Artwork Pages with eight cuttable inserts around the original
   card. The first page uses the reviewed Bisasam (Bulbasaur) illustration for
   Stellarkrone (Stellar Crown) 143/142. BinderPokedex exports the selected
