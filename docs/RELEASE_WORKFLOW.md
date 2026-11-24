@@ -113,9 +113,9 @@ and therefore builds:
 - the exact file set consumed by the publish job.
 
 The temporary manifest keeps its `pr-<number>-<sha>` build label while loading
-the explicitly configured upcoming release-news contract (`v10.1` for the
-current feature branch). A tagged release instead uses its own tag for both
-fields. This makes missing or malformed major-release news fail before merge.
+the release notes selected by `release_notes_tag` in `verify-release.yml`.
+A tagged release uses its own tag for both fields. A release PR checks that
+the versioned notes exist and that they render before merge.
 
 The resulting `release-candidate` is an ordinary short-lived Actions artifact,
 not a GitHub Release. Its purpose is inspection and proof that publication

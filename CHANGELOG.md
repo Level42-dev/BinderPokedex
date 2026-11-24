@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [10.2.0] - 2026-11-24
+
 ### 🎴 Delta Reign (ME06)
 
 - Added 141 numbered binder inserts in German, English, French, Spanish, and
@@ -622,7 +624,4 @@ See git history for details.
 - **MINOR:** New features, backwards compatible
 - **PATCH:** Bug fixes, documentation updates
 
-**Current:** 4.3.0
-- Major version 4: Current architecture with pipeline system
-- Minor version 3: Image cache and name enrichment fixes
-- Patch version 0: Initial release of this version
+**Latest documented version** 10.2.0
